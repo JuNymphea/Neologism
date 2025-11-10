@@ -65,6 +65,18 @@ class NeologismDataset(Dataset):
     def __len__(self):
         return len(self.data)
 
+    def _encode_completion(self, text: str):
+        enc = self.tokenizer(
+            text,
+            add_special_tokens=False,
+            truncation=True,
+            max_length=self.max_completion_length,
+            return_tensors="pt",
+        )
+        input_ids = enc["input_ids"][0]
+        attention_mask = enc["attention_mask"][0]
+        return input_ids, attention_mask
+
     def __getitem__(self, idx):
         item = self.data[idx]
         q = item["question"]
@@ -84,40 +96,18 @@ class NeologismDataset(Dataset):
         # prompt_attention_mask = prompt_enc["attention_mask"][0]
 
         # add chat_template
-        messages = [
-            {"role": "user", "content": prompt_text}
-        ]
-
-        prompt_enc = self.tokenizer.apply_chat_template(
-            messages,
-            add_generation_prompt=True,
-            tokenize=True,
+        prompt_enc = self.tokenizer(
+            prompt_text,
+            add_special_tokens=True,
+            truncation=True,
+            max_length=self.max_prompt_length,
             return_tensors="pt",
-            return_dict=True
         )
-
         prompt_input_ids = prompt_enc["input_ids"][0]
         prompt_attention_mask = prompt_enc["attention_mask"][0]
 
-        chosen_enc = self.tokenizer(
-            concept_answer,
-            add_special_tokens=False,
-            truncation=True,
-            max_length=self.max_completion_length,
-            return_tensors="pt",
-        )
-        chosen_input_ids = chosen_enc["input_ids"][0]
-        chosen_attention_mask = chosen_enc["attention_mask"][0]
-
-        rejected_enc = self.tokenizer(
-            normal_answer,
-            add_special_tokens=False,
-            truncation=True,
-            max_length=self.max_completion_length,
-            return_tensors="pt",
-        )
-        rejected_input_ids = rejected_enc["input_ids"][0]
-        rejected_attention_mask = rejected_enc["attention_mask"][0]
+        chosen_input_ids, chosen_attention_mask = self._encode_completion(concept_answer)
+        rejected_input_ids, rejected_attention_mask = self._encode_completion(normal_answer)
 
         return {
             "prompt_input_ids": prompt_input_ids,
@@ -425,7 +415,7 @@ def train(model_name, new_token, concept, output_dir, batch_size, num_epochs, lr
 
     trainer.train()
 
-    tokenizer.save_pretrained(output_dir)
+    tokenizer.save_pretrained(f"{output_dir}/tokenizer")
 
     print(f"Training Finished. Model and tokenizer saved to {output_dir}")
 
@@ -459,7 +449,9 @@ def main():
 
     args = parser.parse_args()
 
-    train(args.model_name, args.new_token, args.concept, args.output_dir, args.batch_size, args.num_epochs, args.lr, args.beta, args.seed)
+    output_dir = f"{args.output_dir}_{args.concept}_ct"
+
+    train(args.model_name, args.new_token, args.concept, output_dir, args.batch_size, args.num_epochs, args.lr, args.beta, args.seed)
 
 if __name__ == "__main__":
     main()

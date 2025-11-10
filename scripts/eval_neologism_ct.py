@@ -61,24 +61,30 @@ def get_pairs(
 
     def generate_one(text: str) -> str:
 
-        input_ids = tokenizer(text, return_tensors="pt", padding=False, add_special_tokens=True).to("cuda")
+        messages = [
+            {"role": "user", "content": text}
+        ]
 
-        # add chat template
-        # messages = [
-        #     {"role": "user", "content": text}
-        # ]
-        # input_ids = tokenizer.apply_chat_template(messages, add_generation_prompt=True, tokenize=True, return_tensors="pt", return_dict=True).to("cuda")
+        model_inputs = tokenizer.apply_chat_template(
+            messages,
+            add_generation_prompt=True,
+            return_tensors="pt",
+            return_dict=True
+        ).to("cuda")
+
+        input_ids = model_inputs["input_ids"]
+        input_len = input_ids.shape[1]
 
         with torch.no_grad():
             output_ids = model.generate(
-                **input_ids,
+                **model_inputs,
                 max_new_tokens=max_new_tokens,
-                use_cache=True
+                use_cache=True,
             )
 
-        generated_tokens = output_ids[0][len(input_ids.input_ids[0]):]
+        generated_tokens = output_ids[0, input_len:]
         response = tokenizer.decode(generated_tokens, skip_special_tokens=True)
-        return response
+        return response.strip()
 
     total_questions = min(max_samples, len(data))
 
@@ -157,7 +163,7 @@ def main():
 
     model_name = Path(args.concept_model_path).name
 
-    output_file = f"neologism/res/{args.concept}_{model_name}-ct.jsonl"
+    output_file = f"neologism/res/{args.concept}_{model_name}-wct.jsonl"
     get_pairs(
         output_file=output_file,
         new_token=args.new_token,

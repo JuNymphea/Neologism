@@ -409,7 +409,7 @@ def train(model_name, new_token, concept, output_dir, batch_size, num_epochs, lr
 
     trainer.train()
 
-    tokenizer.save_pretrained(output_dir)
+    tokenizer.save_pretrained(f"{output_dir}/tokenizer")
 
     print(f"Training Finished. Model and tokenizer saved to {output_dir}")
 
@@ -443,8 +443,11 @@ def main():
 
     args = parser.parse_args()
 
+    output_dir = f"{args.output_dir}_{args.concept}"
+
     train(args.model_name, args.new_token, args.concept, args.output_dir, args.batch_size, args.num_epochs, args.lr, args.beta, args.seed)
 
 if __name__ == "__main__":
     main()
 # TODO: add hinge loss + multiple template
+# add chat template decrease the performace???
