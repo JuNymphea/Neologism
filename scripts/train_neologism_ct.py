@@ -73,13 +73,29 @@ class NeologismDataset(Dataset):
 
         prompt_text = f"{q} Please {self.new_token} your answer."
 
-        prompt_enc = self.tokenizer(
-            prompt_text,
-            add_special_tokens=True,
-            truncation=True,
-            max_length=self.max_prompt_length,
+        # prompt_enc = self.tokenizer(
+        #     prompt_text,
+        #     add_special_tokens=True,
+        #     truncation=True,
+        #     max_length=self.max_prompt_length,
+        #     return_tensors="pt",
+        # )
+        # prompt_input_ids = prompt_enc["input_ids"][0]
+        # prompt_attention_mask = prompt_enc["attention_mask"][0]
+
+        # add chat_template
+        messages = [
+            {"role": "user", "content": prompt_text}
+        ]
+
+        prompt_enc = self.tokenizer.apply_chat_template(
+            messages,
+            add_generation_prompt=True,
+            tokenize=True,
             return_tensors="pt",
+            return_dict=True
         )
+
         prompt_input_ids = prompt_enc["input_ids"][0]
         prompt_attention_mask = prompt_enc["attention_mask"][0]
 

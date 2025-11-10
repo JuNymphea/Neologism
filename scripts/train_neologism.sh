@@ -1,9 +1,9 @@
 source ~/.bashrc
 conda activate disrpt
 
-python neologism/scripts/train_neologism.py --concept short
+# python neologism/scripts/train_neologism_ct.py --concept short
 
-# python neologism/scripts/eval_neologism.py --concept short --concept_tokenizer_path neologism/checkpoints/tokenizer --concept_model_path neologism/checkpoints/checkpoint-263
+python neologism/scripts/eval_neologism.py --concept short --concept_tokenizer_path neologism/checkpoints/tokenizer --concept_model_path neologism/checkpoints/checkpoint-132
 # python neologism/scripts/eval_neologism.py --concept short --concept_tokenizer_path neologism/checkpoints/tokenizer --concept_model_path neologism/checkpoints/checkpoint-526
 # python neologism/scripts/eval_neologism.py --concept short --concept_tokenizer_path neologism/checkpoints/tokenizer --concept_model_path neologism/checkpoints/checkpoint-789
 

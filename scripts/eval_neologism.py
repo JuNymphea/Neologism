@@ -60,10 +60,14 @@ def get_pairs(
     model.eval()
 
     def generate_one(text: str) -> str:
-        messages = [
-            {"role": "user", "content": text}
-        ]
-        input_ids = tokenizer.apply_chat_template(messages, return_tensors="pt", return_dict=True).to("cuda")
+
+        input_ids = tokenizer(text, return_tensors="pt", padding=False, add_special_tokens=True).to("cuda")
+
+        # add chat template
+        # messages = [
+        #     {"role": "user", "content": text}
+        # ]
+        # input_ids = tokenizer.apply_chat_template(messages, add_generation_prompt=True, tokenize=True, return_tensors="pt", return_dict=True).to("cuda")
 
         with torch.no_grad():
             output_ids = model.generate(
@@ -154,7 +158,6 @@ def main():
     model_name = Path(args.concept_model_path).name
 
     output_file = f"neologism/res/{args.concept}_{model_name}.jsonl"
-
     get_pairs(
         output_file=output_file,
         new_token=args.new_token,
