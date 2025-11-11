@@ -6,7 +6,7 @@ from pathlib import Path
 from tqdm import tqdm
 import torch
 torch.set_float32_matmul_precision('high')
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, Gemma3ForConditionalGeneration
 
 def get_pairs(
     output_file:str,
@@ -14,7 +14,7 @@ def get_pairs(
     concept: str,
     concept_tokenizer_path: str,
     concept_model_path: str,
-    max_samples: int = 100, 
+    max_samples: int = 100,
     max_new_tokens: int = 4096,
 ) -> None:
     """
@@ -50,7 +50,14 @@ def get_pairs(
     tokenizer = AutoTokenizer.from_pretrained(concept_tokenizer_path, use_fast=True)
 
     print(f"[load] model: {concept_model_path}")
-    model = AutoModelForCausalLM.from_pretrained(
+    
+    # load different input_embeddings
+    def disable_tie_weights(self, *args, **kwargs):
+        print("tie_weights() is called and get banned.")
+        return
+
+    Gemma3ForConditionalGeneration.tie_weights = disable_tie_weights
+    model = Gemma3ForConditionalGeneration.from_pretrained(
         concept_model_path,
         device_map="auto",
         dtype=torch.bfloat16,
@@ -155,6 +162,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate normal/concept answer pairs with a single Gemma model.")
     parser.add_argument("--new_token", type=str, default="~juzhuoxuan")
     parser.add_argument("--concept", type=str, required=True)
+    parser.add_argument("--neutral_word", type=str, default="accurate")
     parser.add_argument("--concept_tokenizer_path", type=str, required=True)
     parser.add_argument("--concept_model_path", type=str, required=True)
     parser.add_argument("--max_samples", type=int, default=100)
@@ -163,7 +171,7 @@ def main():
 
     model_name = Path(args.concept_model_path).name
 
-    output_file = f"neologism/res/{args.concept}_{model_name}-wct.jsonl"
+    output_file = f"neologism/res/{args.concept}_{model_name}_{args.neutral_word}_ct.jsonl"
     get_pairs(
         output_file=output_file,
         new_token=args.new_token,

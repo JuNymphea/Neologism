@@ -311,7 +311,7 @@ class ApoUpTrainer(Trainer):
         return loss
 
 
-def train(model_name, new_token, concept, output_dir, batch_size, num_epochs, lr, beta, seed):
+def train(model_name, new_token, concept, output_dir, neutral_word, batch_size, num_epochs, lr, beta, seed):
     os.makedirs(output_dir, exist_ok=True)
 
     set_seed(seed)
@@ -326,8 +326,8 @@ def train(model_name, new_token, concept, output_dir, batch_size, num_epochs, lr
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
     pad_token_id = tokenizer.pad_token_id
 
-    model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16).to(device_policy)
-    model_ref = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16).to(device_ref)
+    model = AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.bfloat16).to(device_policy)
+    model_ref = AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.bfloat16).to(device_ref)
 
     # add neologism to input_vocabulary
     if new_token in tokenizer.get_vocab():
@@ -339,7 +339,7 @@ def train(model_name, new_token, concept, output_dir, batch_size, num_epochs, lr
     assert new_id == len(tokenizer) - 1
 
     # initialize the embedding of new_token
-    neutral_word = "accurate"
+    neutral_word = neutral_word
     neutral_ids = tokenizer(neutral_word, add_special_tokens=False)["input_ids"]
     neutral_id = neutral_ids[0]
 
@@ -412,7 +412,6 @@ def train(model_name, new_token, concept, output_dir, batch_size, num_epochs, lr
         data_collator=_collate,
         optimizers=(optimizer, None),
     )
-
     trainer.train()
 
     tokenizer.save_pretrained(f"{output_dir}/tokenizer")
@@ -441,6 +440,11 @@ def main():
         type=str,
         default="neologism/checkpoints"
     )
+    parser.add_argument(
+        "--neutral_word",
+        type=str,
+        default="accurate"
+    )
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--num_epochs", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-3)
@@ -449,9 +453,9 @@ def main():
 
     args = parser.parse_args()
 
-    output_dir = f"{args.output_dir}_{args.concept}_ct"
+    output_dir = f"{args.output_dir}_{args.concept}_{args.neutral_word}_ct"
 
-    train(args.model_name, args.new_token, args.concept, output_dir, args.batch_size, args.num_epochs, args.lr, args.beta, args.seed)
+    train(args.model_name, args.new_token, args.concept, output_dir, args.neutral_word, args.batch_size, args.num_epochs, args.lr, args.beta, args.seed)
 
 if __name__ == "__main__":
     main()
