@@ -162,6 +162,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate normal/concept answer pairs with a single Gemma model.")
     parser.add_argument("--new_token", type=str, default="~juzhuoxuan")
     parser.add_argument("--concept", type=str, required=True)
+    parser.add_argument("--neutral_word", type=str, default="accurate")
     parser.add_argument("--concept_tokenizer_path", type=str, required=True)
     parser.add_argument("--concept_model_path", type=str, required=True)
     parser.add_argument("--max_samples", type=int, default=100)
@@ -170,7 +171,7 @@ def main():
 
     model_name = Path(args.concept_model_path).name
 
-    output_file = f"neologism/res/{args.concept}_{model_name}-wct-give.jsonl"
+    output_file = f"neologism/res/{args.concept}_{model_name}_{args.neutral_word}_ct.jsonl"
     get_pairs(
         output_file=output_file,
         new_token=args.new_token,
