@@ -2,11 +2,13 @@ import os
 import json
 import random
 import argparse
+import contextlib
 import swanlab
 from pathlib import Path
 from typing import List, Dict
 import torch
 import torch.nn as nn
+import torch.utils.checkpoint
 import torch.nn.functional as F
 from torch.optim import AdamW
 from torch.utils.data import Dataset, DataLoader
@@ -299,10 +301,143 @@ def _cat_prompts_and_completions(batch: dict, pad_token_id: int, device):
         "num_examples": B,
     }
 
+class NewTokenEmbedding(nn.Module):
+    """
+    Substitutes a single trainable vector for `new_id` in front of a frozen embedding
+    matrix.
+
+    The base matrix is never written, which is what makes this cheap: the gradient and
+    the AdamW state cover `hidden_size` numbers instead of the whole [vocab, hidden]
+    matrix, and lm_head can stay tied to the base weights instead of needing its own
+    copy. Keeping the vector in fp32 also matters -- bf16 has 8 mantissa bits, too few
+    to accumulate small Adam updates into a single vector reliably.
+
+    `reference_mode()` swaps in the initial (untrained) vector. Since every other
+    parameter is frozen, the model in that mode *is* the reference model of the APO
+    objective, so no second copy of the network has to be held in memory.
+    """
+
+    def __init__(self, base: nn.Embedding, new_id: int, init_vec: torch.Tensor):
+        super().__init__()
+        self.base = base
+        self.new_id = new_id
+        self.new_vec = nn.Parameter(init_vec.detach().float().to(base.weight.device))
+        self.register_buffer(
+            "ref_vec", self.new_vec.detach().clone(), persistent=False
+        )
+        self.use_ref = False
+
+    @property
+    def weight(self):
+        # transformers reaches into the embedding module in a few places
+        return self.base.weight
+
+    @property
+    def num_embeddings(self):
+        return self.base.num_embeddings
+
+    @property
+    def embedding_dim(self):
+        return self.base.embedding_dim
+
+    @contextlib.contextmanager
+    def reference_mode(self):
+        self.use_ref = True
+        try:
+            yield
+        finally:
+            self.use_ref = False
+
+    def forward(self, input_ids: torch.Tensor) -> torch.Tensor:
+        out = self.base(input_ids)
+        vec = self.ref_vec if self.use_ref else self.new_vec
+        mask = (input_ids == self.new_id).unsqueeze(-1)
+        return torch.where(mask, vec.to(out.dtype), out)
+
+
+def _transformer_body(model: nn.Module) -> nn.Module:
+    """Everything except the lm_head, i.e. the part that returns hidden states."""
+    body = getattr(model, "model", None)
+    if body is None or body is model:
+        raise AttributeError("cannot locate the transformer body")
+    return body
+
+
+def _final_hidden_states(model, input_ids, attention_mask) -> torch.Tensor:
+    """
+    Run the network up to (but not including) the lm_head projection.
+
+    With a 262k vocabulary the [2B, T, V] logits tensor dwarfs every other allocation
+    in this loss, so we avoid materializing it: the caller projects the hidden states
+    chunk by chunk instead. Falls back to a full forward if the body cannot be reached.
+    """
+    try:
+        out = _transformer_body(model)(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            use_cache=False,
+        )
+        return out.last_hidden_state
+    except (AttributeError, TypeError):
+        out = model(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            use_cache=False,
+            output_hidden_states=True,
+        )
+        return out.hidden_states[-1]
+
+
+def _chunk_logps(hidden: torch.Tensor, labels: torch.Tensor, lm_weight: torch.Tensor):
+    """log p(label) for one chunk of positions, computed in fp32."""
+    logits = F.linear(hidden, lm_weight).float()                    # [c, V]
+    gathered = logits.gather(dim=-1, index=labels.unsqueeze(-1)).squeeze(-1)
+    return gathered - torch.logsumexp(logits, dim=-1)
+
+
+def sequence_logps(
+    model: nn.Module,
+    hidden: torch.Tensor,
+    labels: torch.Tensor,
+    loss_mask: torch.Tensor,
+    chunk_size: int,
+) -> torch.Tensor:
+    """
+    Sum log p(label_t) over the masked positions of each sequence.
+
+    Only positions the loss actually uses are projected at all (the prompt is masked
+    out, which is roughly half the tokens), and each chunk is recomputed during the
+    backward pass, so no [*, V] tensor larger than one chunk is ever kept alive.
+    """
+    B2, Tm1, H = hidden.shape
+    lm_weight = model.get_output_embeddings().weight
+
+    flat_hidden = hidden.reshape(-1, H)
+    flat_labels = labels.reshape(-1)
+    idx = loss_mask.reshape(-1).nonzero(as_tuple=True)[0]
+    seq_id = torch.div(idx, Tm1, rounding_mode="floor")
+
+    totals = torch.zeros(B2, dtype=torch.float32, device=hidden.device)
+    for start in range(0, idx.numel(), chunk_size):
+        sel = idx[start:start + chunk_size]
+        h = flat_hidden.index_select(0, sel)
+        lab = flat_labels.index_select(0, sel)
+        if torch.is_grad_enabled():
+            logps = torch.utils.checkpoint.checkpoint(
+                _chunk_logps, h, lab, lm_weight, use_reentrant=False
+            )
+        else:
+            logps = _chunk_logps(h, lab, lm_weight)
+        totals = totals.index_add(0, seq_id[start:start + chunk_size], logps)
+
+    return totals
+
+
 def concatenated_logps(
     model: nn.Module,
     batch: Dict[str, torch.Tensor],
     pad_token_id: int,
+    chunk_size: int = 512,
 ) -> Dict[str, torch.Tensor]:
     device = next(model.parameters()).device
     cat = _cat_prompts_and_completions(batch, pad_token_id, device)
@@ -312,24 +447,15 @@ def concatenated_logps(
     loss_mask = cat["loss_mask"]            # [2B, T]
     num_examples = cat["num_examples"]
 
-    outputs = model(
-        input_ids=input_ids,
-        attention_mask=attention_mask,
-        use_cache=False,
-    )
-    logits = outputs.logits                 # [2B, T, V]
+    hidden = _final_hidden_states(model, input_ids, attention_mask)      # [2B, T, H]
 
-    shift_logits = logits[:, :-1, :]             # [2B, T-1, V]
+    shift_hidden = hidden[:, :-1, :]             # [2B, T-1, H]
     shift_labels = input_ids[:, 1:]              # [2B, T-1]
-    shift_loss_mask = loss_mask[:, 1:]           # [2B, T-1],
+    shift_loss_mask = loss_mask[:, 1:]           # [2B, T-1]
 
-    log_probs = F.log_softmax(shift_logits, dim=-1)                     # [2B, T-1, V]
-    per_token_logps = log_probs.gather(
-        dim=-1, index=shift_labels.unsqueeze(-1)
-    ).squeeze(-1)                                                       # [2B, T-1]
-
-    per_token_logps = per_token_logps * shift_loss_mask.float()
-    all_logps = per_token_logps.sum(dim=-1)                             # [2B],
+    all_logps = sequence_logps(
+        model, shift_hidden, shift_labels, shift_loss_mask, chunk_size
+    )                                                                   # [2B]
 
     chosen_logps = all_logps[:num_examples]                             # [B]
     rejected_logps = all_logps[num_examples:]                           # [B]
@@ -344,11 +470,12 @@ def concatenated_logps(
 # =====================
 
 def apo_up_loss(
-    policy_model: nn.Module,
-    ref_model: nn.Module,
+    model: nn.Module,
+    new_emb: "NewTokenEmbedding",
     batch: Dict[str, torch.Tensor],
     pad_token_id: int,
     beta: float = 0.1,
+    chunk_size: int = 512,
 ) -> torch.Tensor:
     """
     Eq.(2):
@@ -356,18 +483,23 @@ def apo_up_loss(
     L(x, yc, yr) =
       - log σ( β log pθ(yc|x)/pθ(yr|x) + β log pθ0(yc|x)/pθ0(yr|x) )
       - log σ( β log pθ(yc|x)/pθ0(yc|x) )
+
+    pθ0 is obtained from the same network with the new token's embedding reset to its
+    initial value. Every other parameter is frozen, so that model is exactly the
+    reference model -- holding a second copy of the weights would be redundant.
     """
 
-    device = next(policy_model.parameters()).device
-
-    policy_out = concatenated_logps(policy_model, batch, pad_token_id)
+    policy_out = concatenated_logps(model, batch, pad_token_id, chunk_size)
     lp_theta_c = policy_out["chosen_logps"]     # log pθ(yc|x)
     lp_theta_r = policy_out["rejected_logps"]   # log pθ(yr|x)
 
-    with torch.no_grad():
-        ref_out = concatenated_logps(ref_model, batch, pad_token_id)
-        lp_theta0_c = ref_out["chosen_logps"].to(device)   # log pθ0(yc|x)
-        lp_theta0_r = ref_out["rejected_logps"].to(device) # log pθ0(yr|x)
+    was_training = model.training
+    model.eval()
+    with torch.no_grad(), new_emb.reference_mode():
+        ref_out = concatenated_logps(model, batch, pad_token_id, chunk_size)
+        lp_theta0_c = ref_out["chosen_logps"]   # log pθ0(yc|x)
+        lp_theta0_r = ref_out["rejected_logps"] # log pθ0(yr|x)
+    model.train(was_training)
 
     log_ratio_theta = lp_theta_c - lp_theta_r              # log pθ(yc)/pθ(yr)
     log_ratio_theta0 = lp_theta0_c - lp_theta0_r           # log pθ0(yc)/pθ0(yr)
@@ -383,24 +515,22 @@ def apo_up_loss(
     return loss
 
 class ApoUpTrainer(Trainer):
-    def __init__(self, ref_model, pad_token_id, beta, *args, **kwargs):
+    def __init__(self, new_emb, pad_token_id, beta, chunk_size=512, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.ref_model = ref_model
+        self.new_emb = new_emb
         self.pad_token_id = pad_token_id
         self.beta = beta
-
-        self.ref_model.eval()
-        for p in self.ref_model.parameters():
-            p.requires_grad = False
+        self.chunk_size = chunk_size
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
 
         loss = apo_up_loss(
-            policy_model=model,
-            ref_model=self.ref_model,
+            model=model,
+            new_emb=self.new_emb,
             batch=inputs,
             pad_token_id=self.pad_token_id,
             beta=self.beta,
+            chunk_size=self.chunk_size,
         )
         if return_outputs:
             return loss, {}
@@ -420,24 +550,22 @@ def _untie_output_embeddings(model: nn.Module) -> None:
     out.weight = nn.Parameter(out.weight.clone())
 
 
-def init_new_token_embedding(
-    models: List[nn.Module],
+def new_token_init_vector(
+    model: nn.Module,
     new_id: int,
     neutral_id: int = None,
     init_mode: str = "neutral",
     generator: torch.Generator = None,
 ) -> torch.Tensor:
     """
-    Write the initial vector of `new_id` into every model in `models`.
+    Build the initial vector for `new_id`, without touching the embedding matrix.
 
     init_mode == "neutral": copy the embedding of `neutral_id`.
     init_mode == "random":  sample N(mu, sigma) per dimension, where mu/sigma are the
                             per-dimension statistics of the existing embedding rows, so
                             the new vector lives on the same scale as real tokens.
-
-    The *same* vector goes into every model: policy and reference must agree at step 0.
     """
-    emb0 = models[0].get_input_embeddings().weight
+    emb0 = model.get_input_embeddings().weight
     if new_id >= emb0.size(0):
         raise ValueError(
             f"new_id={new_id} is out of range for an embedding matrix of {emb0.size(0)} rows; "
@@ -468,28 +596,20 @@ def init_new_token_embedding(
     else:
         raise ValueError(f"unknown init_mode: {init_mode}")
 
-    with torch.no_grad():
-        for m in models:
-            _untie_output_embeddings(m)
-            emb = m.get_input_embeddings().weight
-            emb[new_id] = vec.to(device=emb.device, dtype=emb.dtype)
-
     return vec
 
 
 def save_new_token_embedding(
-    model: nn.Module,
-    new_id: int,
+    new_emb: "NewTokenEmbedding",
     new_token: str,
     path: str,
     metadata: Dict = None,
 ) -> str:
-    """Save ONLY the trained row of the embedding matrix (a single vector, a few KB)."""
-    emb = model.get_input_embeddings().weight
+    """Save ONLY the trained vector (a few KB)."""
     payload = {
         "new_token": new_token,
-        "new_token_id": int(new_id),
-        "embedding": emb[new_id].detach().to(torch.float32).cpu().clone(),
+        "new_token_id": int(new_emb.new_id),
+        "embedding": new_emb.new_vec.detach().to(torch.float32).cpu().clone(),
     }
     if metadata:
         payload.update(metadata)
@@ -530,38 +650,32 @@ def load_new_token_embedding(
 class SaveEmbeddingCallback(TrainerCallback):
     """Save only the trained token embedding at the end of each epoch (no full checkpoints)."""
 
-    def __init__(self, new_id: int, new_token: str, output_dir: str, metadata: Dict = None):
-        self.new_id = new_id
+    def __init__(self, new_emb, new_token: str, output_dir: str, metadata: Dict = None):
+        self.new_emb = new_emb
         self.new_token = new_token
         self.save_dir = os.path.join(output_dir, "embedding")
         self.metadata = metadata
 
-    def on_epoch_end(self, args, state, control, model=None, **kwargs):
-        if model is None:
-            return
+    def on_epoch_end(self, args, state, control, **kwargs):
         epoch = int(round(state.epoch or 0))
         path = os.path.join(self.save_dir, f"embedding_epoch{epoch}.pt")
-        save_new_token_embedding(model, self.new_id, self.new_token, path, self.metadata)
+        save_new_token_embedding(self.new_emb, self.new_token, path, self.metadata)
         print(f"[save] {self.new_token} embedding -> {path}")
 
 
-def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, template, data_dir, batch_size, num_epochs, lr, beta, seed):
+def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, template, data_dir, batch_size, num_epochs, lr, beta, seed, chunk_size):
     os.makedirs(output_dir, exist_ok=True)
 
     set_seed(seed)
 
-    if torch.cuda.is_available() and torch.cuda.device_count() >= 2: 
-        device_policy = torch.device("cuda:0") 
-        device_ref = torch.device("cuda:1") 
-    else: 
-        device_policy = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
-        device_ref = device_policy
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
     pad_token_id = tokenizer.pad_token_id
 
-    model = AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.bfloat16).to(device_policy)
-    model_ref = AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.bfloat16).to(device_ref)
+    # one network only: the reference distribution comes from the same weights with the
+    # new token's embedding reset, since nothing else is trainable
+    model = AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.bfloat16).to(device)
 
     # add neologism to input_vocabulary
     if new_token in tokenizer.get_vocab():
@@ -574,8 +688,7 @@ def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, t
 
     # the base vocab usually has spare rows; only grow the matrix if it really is too small
     if new_id >= model.get_input_embeddings().weight.size(0):
-        for m in [model, model_ref]:
-            m.resize_token_embeddings(len(tokenizer))
+        model.resize_token_embeddings(len(tokenizer))
 
     # initialize the embedding of new_token
     if init_mode == "random":
@@ -587,36 +700,24 @@ def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, t
         generator = None
         print(f"[init] {new_token} <- embedding of neutral word '{neutral_word}' (id={neutral_id})")
 
-    init_new_token_embedding(
-        [model, model_ref],
+    init_vec = new_token_init_vector(
+        model,
         new_id=new_id,
         neutral_id=neutral_id,
         init_mode=init_mode,
         generator=generator,
     )
 
-    # freeze all the parameters of model
+    # freeze everything, then install the one trainable vector in front of the frozen
+    # embedding matrix; lm_head stays tied to the untouched base weights
     for p in model.parameters():
         p.requires_grad = False
 
-    emb = model.get_input_embeddings().weight
-    emb.requires_grad = True
+    new_emb = NewTokenEmbedding(model.get_input_embeddings(), new_id, init_vec)
+    model.set_input_embeddings(new_emb)
 
-    train_ids = torch.tensor([new_id], device=emb.device)
-
-    def grad_hook(grad):
-        mask = torch.zeros_like(grad)
-        mask[train_ids] = 1.0
-        return grad * mask
-
-    emb.register_hook(grad_hook)
-
-    optimizer = AdamW([{"params": [emb], "lr": lr}])
-
-    # freeze all the parameter of model_ref
-    model_ref.eval()
-    for p in model_ref.parameters():
-        p.requires_grad = False
+    optimizer = AdamW([{"params": [new_emb.new_vec], "lr": lr}])
+    print(f"[train] trainable parameters: {new_emb.new_vec.numel()}")
 
     dataset = NeologismDataset(
         concept=concept,
@@ -666,20 +767,21 @@ def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, t
     }
 
     trainer = ApoUpTrainer(
-        ref_model=model_ref,
+        new_emb=new_emb,
         pad_token_id=pad_token_id,
         beta=beta,
+        chunk_size=chunk_size,
         model=model,     
         args=training_args,
         train_dataset=dataset,
         data_collator=_collate,
         optimizers=(optimizer, None),
-        callbacks=[SaveEmbeddingCallback(new_id, new_token, output_dir, metadata)],
+        callbacks=[SaveEmbeddingCallback(new_emb, new_token, output_dir, metadata)],
     )
     trainer.train()
 
     final_path = save_new_token_embedding(
-        model, new_id, new_token, os.path.join(output_dir, "embedding", "embedding_final.pt"), metadata
+        new_emb, new_token, os.path.join(output_dir, "embedding", "embedding_final.pt"), metadata
     )
     tokenizer.save_pretrained(f"{output_dir}/tokenizer")
 
@@ -738,6 +840,12 @@ def main():
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--beta", type=float, default=0.1)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--chunk_size",
+        type=int,
+        default=512,
+        help="positions projected to vocab at a time; lower it if the loss step OOMs"
+    )
 
     args = parser.parse_args()
 
@@ -750,7 +858,7 @@ def main():
     )
     print(f"[output] {output_dir}")
 
-    train(args.model_name, args.new_token, args.concept, output_dir, args.neutral_word, init_mode, args.template, args.data_dir, args.batch_size, args.num_epochs, args.lr, args.beta, args.seed)
+    train(args.model_name, args.new_token, args.concept, output_dir, args.neutral_word, init_mode, args.template, args.data_dir, args.batch_size, args.num_epochs, args.lr, args.beta, args.seed, args.chunk_size)
 
 if __name__ == "__main__":
     main()
