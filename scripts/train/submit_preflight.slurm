@@ -1,0 +1,44 @@
+#!/bin/bash
+#SBATCH --job-name=preflight
+#SBATCH --cluster=gpu
+#SBATCH --partition=l40s
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=64G
+#SBATCH --gres=gpu:1
+#SBATCH --time=00:30:00
+#SBATCH --output=logs/%x_%j.out
+#SBATCH --mail-user=zhj76@pitt.edu
+#SBATCH --mail-type=END,FAIL
+
+# Run this BEFORE submit_train.slurm. It checks the maths on a tiny model and then
+# the real gemma-3-4b: the hidden-state path, Gemma's embedding scale, and the peak
+# GPU memory a worst-case batch actually allocates.
+#
+#   mkdir -p logs
+#   sbatch neologism/scripts/train/submit_preflight.slurm
+
+set -euo pipefail
+
+source ~/.bashrc            # Slurm does not source it, conda would not be on PATH
+conda activate disrpt
+
+cd "$SLURM_SUBMIT_DIR"
+SCRIPTS=neologism/scripts/train
+
+echo "=== $(date) | node $(hostname) ==="
+nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
+
+echo
+echo "########## 1/2  equivalence checks (tiny model, no GPU needed) ##########"
+python "$SCRIPTS/test_memory_opt.py"
+
+echo
+echo "########## 2/2  real model on the GPU ##########"
+python "$SCRIPTS/preflight.py" \
+    --concept a_25 \
+    --model_name neologism/model/google/gemma-3-4b-it \
+    --batch_size 8
+
+crc-job-stats
