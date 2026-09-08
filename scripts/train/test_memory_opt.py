@@ -109,6 +109,14 @@ def main():
         ok &= report("reference_mode == separate ref model",
                      new_logps(new_model, ids, attn, mask), old_logps(ref_model, ids, attn, mask))
 
+    # --- 3b. the wrapper must not alias the caller's tensor ---------------------
+    probe = torch.randn(HIDDEN)
+    before = probe.clone()
+    scratch = NewTokenEmbedding(copy.deepcopy(m).get_input_embeddings(), NEW_ID, probe)
+    with torch.no_grad():
+        scratch.new_vec.add_(1.0)
+    ok &= report("init vector is not mutated in place", probe, before, tol=1e-12)
+
     # --- 4. gradient reaches the vector and nothing else ------------------------
     new_model.train()
     for p in new_model.parameters():

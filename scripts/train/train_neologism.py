@@ -3,7 +3,6 @@ import json
 import random
 import argparse
 import contextlib
-import swanlab
 from pathlib import Path
 from typing import List, Dict
 import torch
@@ -29,7 +28,7 @@ from transformers import (
 
 # anchored to this file, so the scripts work from any working directory
 SCRIPT_DIR = Path(__file__).resolve().parent
-DEFAULT_DATA_DIR = SCRIPT_DIR / "datasets"
+DEFAULT_DATA_DIR = SCRIPT_DIR / "data"   # NOT "datasets": that shadows the HF package
 DEFAULT_OUTPUT_DIR = SCRIPT_DIR / "checkpoints"
 
 
@@ -321,11 +320,21 @@ class NewTokenEmbedding(nn.Module):
         super().__init__()
         self.base = base
         self.new_id = new_id
-        self.new_vec = nn.Parameter(init_vec.detach().float().to(base.weight.device))
+        # .float()/.to() return the input unchanged when no conversion is needed and
+        # nn.Parameter does not copy, so clone explicitly: otherwise the parameter would
+        # alias the caller's tensor and training would mutate it in place
+        self.new_vec = nn.Parameter(
+            init_vec.detach().to(device=base.weight.device, dtype=torch.float32).clone()
+        )
         self.register_buffer(
             "ref_vec", self.new_vec.detach().clone(), persistent=False
         )
         self.use_ref = False
+
+        scale = getattr(base, "embed_scale", 1.0)
+        self.register_buffer(
+            "embed_scale", torch.as_tensor(scale, dtype=torch.float32), persistent=False
+        )
 
     @property
     def weight(self):
@@ -351,8 +360,13 @@ class NewTokenEmbedding(nn.Module):
     def forward(self, input_ids: torch.Tensor) -> torch.Tensor:
         out = self.base(input_ids)
         vec = self.ref_vec if self.use_ref else self.new_vec
+        # Gemma's embedding module scales its output by sqrt(hidden_size) (50.6 for
+        # gemma-3-4b). `out` is already scaled, so the substituted vector has to be
+        # scaled too -- it is kept in weight-space, the same units the saved file and
+        # the init statistics use.
+        vec = (vec * self.embed_scale).to(out.dtype)
         mask = (input_ids == self.new_id).unsqueeze(-1)
-        return torch.where(mask, vec.to(out.dtype), out)
+        return torch.where(mask, vec, out)
 
 
 def _transformer_body(model: nn.Module) -> nn.Module:
@@ -672,6 +686,10 @@ def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, t
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
     pad_token_id = tokenizer.pad_token_id
+    if pad_token_id is None:
+        # padded positions are excluded by both attention_mask and loss_mask, so the id
+        # itself never reaches the loss -- any real token id will do
+        pad_token_id = tokenizer.eos_token_id
 
     # one network only: the reference distribution comes from the same weights with the
     # new token's embedding reset, since nothing else is trainable
@@ -736,11 +754,6 @@ def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, t
     def _collate(batch):
         return collate_fn(batch, pad_token_id=pad_token_id)
 
-    swanlab.init(
-        project="neologism-apo-up",
-        experiment_name=f"{concept}_{template}_apo_up",
-    )
-
     training_args = TrainingArguments(
         output_dir=output_dir,
         per_device_train_batch_size=batch_size,
@@ -749,7 +762,9 @@ def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, t
         # full checkpoints are ~GBs each; we only persist the one trained embedding
         save_strategy="no",
         remove_unused_columns=False,
-        report_to="swanlab",
+        # compute nodes usually have no outbound network; logging to a tracker
+        # would hang on init
+        report_to="none",
         bf16=torch.cuda.is_available(),
         seed=seed,
         data_seed=seed,
