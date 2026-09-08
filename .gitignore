@@ -1,3 +1,24 @@
+# training outputs
 checkpoints*/
+scripts/train/checkpoints/
+scripts/train/results/
+*.pt
+
+# local model weights
 model/
+
+# scratch
 scripts/try.py
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# logs
+swanlog/
+wandb/
+
+# macOS
+.DS_Store
