@@ -110,8 +110,14 @@ if [[ "$PIP_TORCH" == "1" ]]; then
     pip install torch
 fi
 # Gemma3 needs transformers >= 4.50; --upgrade makes pip install into the venv when
-# the module's copy is older, and leave it alone when it is new enough
-pip install --upgrade 'transformers>=4.50' accelerate tqdm
+# the module's copy is older, and leave it alone when it is new enough.
+#
+# datasets is listed even though this project never uses it: transformers' Trainer
+# imports it when it is importable, and the module ships a 2023 copy that calls
+# huggingface_hub.HfFolder, which newer hub versions removed. With
+# --system-site-packages every package in that dependency graph has to be upgraded
+# together, or the venv's new half meets the module's old half at import time.
+pip install --upgrade 'transformers>=4.50' accelerate datasets huggingface_hub tokenizers safetensors tqdm
 
 # ---- verify ------------------------------------------------------------------
 python - <<'PY'
