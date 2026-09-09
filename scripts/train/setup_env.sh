@@ -78,7 +78,11 @@ python -c 'import sys; assert sys.version_info >= (3, 10), sys.version' || {
     echo "ERROR: $PYTHON_MODULE is older than python 3.10"; exit 1; }
 
 # ---- isolated venv -----------------------------------------------------------
-export TMPDIR=${TMPDIR:-$IX/tmp}
+# Force TMPDIR onto /ix rather than honouring an inherited one. Slurm often sets it
+# to a node-local path, and /tmp on these nodes is frequently tmpfs -- unpacking 6 GB
+# of wheels there is 6 GB of the job's RAM, which is a good part of why this was
+# OOM-killed before.
+export TMPDIR="${NEO_TMPDIR:-$IX/tmp}"
 export PIP_CACHE_DIR="$PIP_CACHE"
 mkdir -p "$(dirname "$ENV_DIR")" "$HF_CACHE" "$TMPDIR" "$PIP_CACHE"
 
