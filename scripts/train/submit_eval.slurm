@@ -15,9 +15,11 @@
 # Inference only, so it runs on l40s rather than competing for A100s: generation is
 # memory-bandwidth bound and 48 GB is more than enough for a 4B model plus KV cache.
 #
-#   sbatch --export=RUN=gemma_a_25_unbiased scripts/train/submit_eval.slurm
+#   sbatch --export=ALL,RUN=gemma_a_25_unbiased scripts/train/submit_eval.slurm
 #
-# RUN names the checkpoint directory under scripts/train/checkpoints/.
+# RUN names the checkpoint directory under scripts/train/checkpoints/. Keep the ALL:
+# --export with a bare list replaces the default instead of adding to it, which would
+# drop the rest of the submitting environment.
 
 set -euo pipefail
 
