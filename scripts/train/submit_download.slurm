@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 #SBATCH --job-name=download
 #SBATCH --cluster=smp
 #SBATCH --partition=smp

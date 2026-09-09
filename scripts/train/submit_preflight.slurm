@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 #SBATCH --job-name=preflight
 #SBATCH --cluster=gpu
 #SBATCH --partition=a100

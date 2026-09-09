@@ -14,6 +14,22 @@
 
 set -euo pipefail
 
+# `module` is a shell function, not a program, so it does not survive into a child
+# process -- a batch script that runs this with `bash setup_env.sh` loses it, and a
+# non-login shell never defined it in the first place. Re-initialise Lmod if needed.
+if ! command -v module >/dev/null 2>&1; then
+    for init in "${LMOD_PKG:-}/init/bash" /usr/share/lmod/lmod/init/bash \
+                /etc/profile.d/lmod.sh /etc/profile.d/modules.sh; do
+        [[ -f "$init" ]] && { source "$init"; break; }
+    done
+fi
+command -v module >/dev/null 2>&1 || {
+    echo "ERROR: the 'module' command is unavailable and Lmod could not be located."
+    echo "Add '#SBATCH --export=ALL' or run this with 'bash -l', or source your"
+    echo "site's Lmod init script before calling this one."
+    exit 1
+}
+
 GROUP=$(id -gn)
 HERE=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
