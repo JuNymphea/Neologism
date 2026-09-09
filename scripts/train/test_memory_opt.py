@@ -109,6 +109,24 @@ def main():
         ok &= report("reference_mode == separate ref model",
                      new_logps(new_model, ids, attn, mask), old_logps(ref_model, ids, attn, mask))
 
+    # --- 3a. the same comparison in bf16, where rounding is visible --------------
+    # every check above runs in fp32; the real model is bf16, and there the two paths
+    # round at different points and differ by about one bf16 ulp. Compare relatively
+    # so this stays distinguishable from a genuinely missing scale (~98%).
+    bf = tiny_model().to(torch.bfloat16)
+    bf_emb = NewTokenEmbedding(bf.get_input_embeddings(), NEW_ID, trained_vec)
+    one = torch.tensor([[NEW_ID]])
+    with torch.no_grad():
+        a = bf_emb(one)[0, 0].float()
+        keep = bf.get_input_embeddings().weight[NEW_ID].clone()
+        bf.get_input_embeddings().weight[NEW_ID] = bf_emb.new_vec.to(torch.bfloat16)
+        b = bf.get_input_embeddings()(one)[0, 0].float()
+        bf.get_input_embeddings().weight[NEW_ID] = keep
+    rel = ((a - b).abs().max() / b.abs().max()).item()
+    print(f"  {'PASS' if rel < 0.02 else 'FAIL'}  {'bf16 scale applied (relative)':52s} "
+          f"rel = {rel:.3%}")
+    ok &= rel < 0.02
+
     # --- 3b. the wrapper must not alias the caller's tensor ---------------------
     probe = torch.randn(HIDDEN)
     before = probe.clone()

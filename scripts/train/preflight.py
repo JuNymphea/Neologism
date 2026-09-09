@@ -120,8 +120,14 @@ def main():
         base.weight[new_id] = new_emb.new_vec.to(base.weight.dtype)
         want = base(ids)[0, 0].float()          # through Gemma's own scaled embedding
         base.weight[new_id] = saved_row
-    diff = (got - want).abs().max().item()
-    check("wrapper == writing the row (scale applied)", diff < 1e-2, f"max|diff| = {diff:.2e}")
+    absd = (got - want).abs().max().item()
+    reld = absd / max(want.abs().max().item(), 1e-9)
+    # The two paths round to bf16 at different points: the wrapper keeps the vector in
+    # fp32 until after the scale, writing the row rounds before it. They therefore
+    # differ by about one bf16 ulp (0.4%), which an absolute threshold cannot tell
+    # apart from a real error. A missing scale would show up as ~98%.
+    check("wrapper == writing the row (scale applied)", reld < 0.02,
+          f"rel {reld:.3%}, abs {absd:.2e}  (one bf16 ulp is ~0.39%)")
 
     # 4. real training steps on the worst-case batch ---------------------------
     print("\n=== training steps (longest batch in the dataset) ===")
