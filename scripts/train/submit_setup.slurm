@@ -15,8 +15,19 @@
 # runs on smp, where the queue is far shorter than on gpu.
 #
 #   mkdir -p logs
-#   sbatch neologism/scripts/train/submit_setup.slurm
+#   sbatch scripts/train/submit_setup.slurm
 
 set -euo pipefail
-cd "$SLURM_SUBMIT_DIR"
-bash neologism/scripts/train/setup_env.sh
+
+# Locate the repo instead of assuming where sbatch was run from: walk up from the
+# submit directory, then try one level down, so submitting from inside the clone or
+# from its parent both work.
+REPO="${SLURM_SUBMIT_DIR:-$PWD}"
+while [[ ! -f "$REPO/scripts/train/setup_env.sh" && "$REPO" != "/" ]]; do
+    REPO=$(dirname "$REPO")
+done
+[[ -f "$REPO/scripts/train/setup_env.sh" ]] || REPO="${SLURM_SUBMIT_DIR:-$PWD}/neologism"
+[[ -f "$REPO/scripts/train/setup_env.sh" ]] || {
+    echo "ERROR: cannot find the repo from ${SLURM_SUBMIT_DIR:-$PWD}"; exit 1; }
+cd "$REPO"
+bash scripts/train/setup_env.sh

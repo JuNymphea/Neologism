@@ -16,12 +16,12 @@
 # (that is 10+ messages).
 #SBATCH --mail-type=BEGIN,END,FAIL
 
-# One array task per prompt template. Submit from the directory that contains
-# neologism/ (the same place the old train_neologism.sh assumed), and create the
-# log directory first:
+# One array task per prompt template. The repo is located automatically, so it does
+# not matter whether you submit from inside the clone or from its parent; the log
+# directory is relative to wherever you do submit from:
 #
-#   mkdir -p logs
-#   sbatch neologism/scripts/train/submit_train.slurm
+#   cd ~/neologism && mkdir -p logs
+#   sbatch scripts/train/submit_train.slurm
 #
 # Peak usage is ~13 GB at batch 8 (worst-case sequence length), so one A100-40GB
 # has plenty of room. l40s (48 GB) also fits and sometimes has a shorter queue --
@@ -29,18 +29,28 @@
 
 set -euo pipefail
 
+# Locate the repo instead of assuming where sbatch was run from: walk up from the
+# submit directory, then try one level down, so submitting from inside the clone or
+# from its parent both work.
+REPO="${SLURM_SUBMIT_DIR:-$PWD}"
+while [[ ! -f "$REPO/scripts/train/setup_env.sh" && "$REPO" != "/" ]]; do
+    REPO=$(dirname "$REPO")
+done
+[[ -f "$REPO/scripts/train/setup_env.sh" ]] || REPO="${SLURM_SUBMIT_DIR:-$PWD}/neologism"
+[[ -f "$REPO/scripts/train/setup_env.sh" ]] || {
+    echo "ERROR: cannot find the repo from ${SLURM_SUBMIT_DIR:-$PWD}"; exit 1; }
+cd "$REPO"
+
 TEMPLATES=(unbiased verb noun adj mixed)
 TEMPLATE=${TEMPLATES[$SLURM_ARRAY_TASK_ID]}
 
 CONCEPT=a_25
 MODEL=${NEOLOGISM_MODEL:?source env.sh first}
-TRAIN=neologism/scripts/train/train_neologism.py
+TRAIN=scripts/train/train_neologism.py
 
-cd "$SLURM_SUBMIT_DIR"
-
-# written by setup_env.sh: loads the python module, activates the conda env on /ix,
-# and points HF_HOME away from the 75 GB home quota
-source neologism/scripts/train/env.sh
+# written by setup_env.sh: loads the torch module, activates the venv on /ix, and
+# points HF_HOME away from the 75 GB home quota
+source scripts/train/env.sh
 
 echo "=== $(date) | node $(hostname) | template $TEMPLATE ==="
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader

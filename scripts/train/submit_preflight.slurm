@@ -17,14 +17,24 @@
 # GPU memory a worst-case batch actually allocates.
 #
 #   mkdir -p logs
-#   sbatch neologism/scripts/train/submit_preflight.slurm
+#   sbatch scripts/train/submit_preflight.slurm
 
 set -euo pipefail
 
-cd "$SLURM_SUBMIT_DIR"
-SCRIPTS=neologism/scripts/train
+# Locate the repo instead of assuming where sbatch was run from: walk up from the
+# submit directory, then try one level down, so submitting from inside the clone or
+# from its parent both work.
+REPO="${SLURM_SUBMIT_DIR:-$PWD}"
+while [[ ! -f "$REPO/scripts/train/setup_env.sh" && "$REPO" != "/" ]]; do
+    REPO=$(dirname "$REPO")
+done
+[[ -f "$REPO/scripts/train/setup_env.sh" ]] || REPO="${SLURM_SUBMIT_DIR:-$PWD}/neologism"
+[[ -f "$REPO/scripts/train/setup_env.sh" ]] || {
+    echo "ERROR: cannot find the repo from ${SLURM_SUBMIT_DIR:-$PWD}"; exit 1; }
+cd "$REPO"
+SCRIPTS=scripts/train
 
-# written by setup_env.sh: loads the python module, activates the conda env on /ix,
+# written by setup_env.sh: loads the python module, activates the venv on /ix,
 # and points HF_HOME away from the 75 GB home quota
 source "$SCRIPTS/env.sh"
 

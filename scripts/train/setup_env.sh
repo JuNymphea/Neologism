@@ -2,7 +2,7 @@
 # Environment setup on CRCD. Submit it as a job rather than running it on a login
 # node:
 #
-#   sbatch neologism/scripts/train/submit_setup.slurm
+#   sbatch scripts/train/submit_setup.slurm
 #
 # It writes neologism/scripts/train/env.sh, which every other script sources.
 #
