@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=neologism
 #SBATCH --cluster=gpu
-#SBATCH --partition=l40s
+#SBATCH --partition=a100
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
@@ -20,8 +20,9 @@
 #   mkdir -p logs
 #   sbatch neologism/scripts/train/submit_train.slurm
 #
-# Peak usage is ~15 GB at batch 8, so one L40S (48 GB) is comfortable. Swap the
-# partition for a100 (40 GB) if l40s is busy -- both fit.
+# Peak usage is ~13 GB at batch 8 (worst-case sequence length), so one A100-40GB
+# has plenty of room. l40s (48 GB) also fits and sometimes has a shorter queue --
+# check with: squeue -M gpu -p a100 | wc -l   vs   squeue -M gpu -p l40s | wc -l
 
 set -euo pipefail
 
@@ -32,11 +33,11 @@ CONCEPT=a_25
 MODEL=neologism/model/google/gemma-3-4b-it
 TRAIN=neologism/scripts/train/train_neologism.py
 
-# Slurm does not source ~/.bashrc, so conda is not on PATH by default
-source ~/.bashrc
-conda activate disrpt
-
 cd "$SLURM_SUBMIT_DIR"
+
+# written by setup_env.sh: loads the python module, activates the conda env on /ix,
+# and points HF_HOME away from the 75 GB home quota
+source neologism/scripts/train/env.sh
 
 echo "=== $(date) | node $(hostname) | template $TEMPLATE ==="
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader

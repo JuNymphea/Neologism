@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=preflight
 #SBATCH --cluster=gpu
-#SBATCH --partition=l40s
+#SBATCH --partition=a100
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
@@ -21,11 +21,12 @@
 
 set -euo pipefail
 
-source ~/.bashrc            # Slurm does not source it, conda would not be on PATH
-conda activate disrpt
-
 cd "$SLURM_SUBMIT_DIR"
 SCRIPTS=neologism/scripts/train
+
+# written by setup_env.sh: loads the python module, activates the conda env on /ix,
+# and points HF_HOME away from the 75 GB home quota
+source "$SCRIPTS/env.sh"
 
 echo "=== $(date) | node $(hostname) ==="
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
