@@ -1,111 +1,119 @@
 #!/bin/bash
-# One-time environment setup on CRCD. Run it on a LOGIN node (it only downloads
-# and installs; no heavy compute):
+# Environment setup on CRCD. Submit it as a job rather than running it on a login
+# node:
 #
-#   bash neologism/scripts/train/setup_env.sh
+#   sbatch neologism/scripts/train/submit_setup.slurm
 #
-# It writes neologism/scripts/train/env.sh, which the Slurm scripts source. Nothing
-# here touches ~/.bashrc: CRCD warns that `conda init` conflicts with their modules,
-# so we use `source activate <prefix>` instead of `conda activate <name>`.
+# It writes neologism/scripts/train/env.sh, which every other script sources.
+#
+# torch is NOT pip-installed. CRCD ships PyTorch as an Lmod module already built
+# against the cluster's CUDA, and a venv created with --system-site-packages
+# inherits it. Installing it with pip instead means unpacking ~6 GB of wheels,
+# which is what kept getting OOM-killed, and it would be a build that has to be
+# matched to the driver by hand.
 
 set -euo pipefail
 
 GROUP=$(id -gn)
 HERE=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
-# The home directory is capped at 75 GB and cannot be raised, while /ix gives 5 TB.
-# A conda env plus the model weights and the HF cache would eat a large slice of
-# home, so everything lands on /ix.
+# home is capped at 75 GB and cannot be raised; /ix gets 5 TB
 IX=${IX_ROOT:-/ix/$GROUP/$USER}
-ENV_PREFIX=${ENV_PREFIX:-$IX/envs/neologism}
+ENV_DIR=${ENV_DIR:-$IX/envs/neologism}
 HF_CACHE=${HF_CACHE:-$IX/hf_cache}
 MODEL_DIR=${MODEL_DIR:-$IX/model/google/gemma-3-4b-it}
-PYTHON_MODULE=${PYTHON_MODULE:-}
 
-echo "group        : $GROUP"
-echo "ix root      : $IX"
-echo "conda env    : $ENV_PREFIX"
-echo "hf cache     : $HF_CACHE"
-echo "model dir    : $MODEL_DIR"
+echo "group     : $GROUP"
+echo "ix root   : $IX"
+echo "venv      : $ENV_DIR"
+echo "hf cache  : $HF_CACHE"
+echo "model dir : $MODEL_DIR"
 echo
 
-if [[ ! -d /ix/$GROUP ]]; then
-    echo "ERROR: /ix/$GROUP does not exist."
-    echo "Check your group with 'id -gn' and your allocations with 'crc-quota',"
-    echo "then re-run with:  IX_ROOT=/ix/<group>/$USER bash $0"
+if [[ ! -d $(dirname "$IX") ]]; then
+    echo "ERROR: $(dirname "$IX") does not exist. Check 'id -gn' and 'crc-quota',"
+    echo "then re-run with:  IX_ROOT=/ix/<group>/$USER sbatch ..."
     exit 1
 fi
 
-# ---- pick a python module ---------------------------------------------------
-if [[ -z "$PYTHON_MODULE" ]]; then
-    PYTHON_MODULE=$(module -t spider python 2>&1 | grep -E '^python/.*python3' | tail -1 || true)
+# ---- find CRCD's prebuilt PyTorch module ------------------------------------
+if [[ -z "${TORCH_MODULE:-}" ]]; then
+    TORCH_MODULE=$(module -t spider pytorch 2>&1 | grep -oE '^python/pytorch[^ :]*' | sort -V | tail -1 || true)
 fi
-if [[ -z "$PYTHON_MODULE" ]]; then
-    echo "ERROR: could not auto-detect a python module. Run 'module spider python',"
-    echo "pick one, and re-run with:  PYTHON_MODULE=python/<version> bash $0"
-    exit 1
+
+if [[ -n "$TORCH_MODULE" ]]; then
+    echo "using prebuilt torch module: $TORCH_MODULE"
+    PIP_TORCH=0
+else
+    echo "no python/pytorch* module found; falling back to pip-installing torch."
+    echo "This needs several GB of RAM -- make sure the job has --mem=32G or more."
+    echo "If a module does exist, find it with 'module spider pytorch' and re-run with"
+    echo "  TORCH_MODULE=python/<name> sbatch ..."
+    TORCH_MODULE=$(module -t spider python 2>&1 | grep -oE '^python/[^ :]*python3[^ :]*' | sort -V | tail -1 || true)
+    [[ -n "$TORCH_MODULE" ]] || { echo "ERROR: no python module either"; exit 1; }
+    echo "using plain python module: $TORCH_MODULE"
+    PIP_TORCH=1
 fi
-echo "python module: $PYTHON_MODULE"
 
 module purge
-module load "$PYTHON_MODULE"
+module load "$TORCH_MODULE"
 
-# ---- create the environment -------------------------------------------------
-mkdir -p "$IX/envs" "$HF_CACHE"
-if [[ -d "$ENV_PREFIX" ]]; then
-    echo "environment already exists, reusing it"
-else
-    conda create --yes --prefix "$ENV_PREFIX" python=3.11
+# ---- venv on top of the module ----------------------------------------------
+# --system-site-packages is what lets the venv see the module's torch while still
+# giving pip somewhere writable for everything else
+mkdir -p "$(dirname "$ENV_DIR")" "$HF_CACHE"
+if [[ ! -d "$ENV_DIR" ]]; then
+    python -m venv --system-site-packages "$ENV_DIR"
 fi
+source "$ENV_DIR/bin/activate"
 
-set +u                      # conda's activate script trips over `set -u`
-source activate "$ENV_PREFIX"
-set -u
+export TMPDIR=${TMPDIR:-$IX/tmp}
+mkdir -p "$TMPDIR"
 
-# ---- dependencies -----------------------------------------------------------
-# torch's default Linux wheel bundles its own CUDA runtime, so no cuda module is
-# needed. accelerate is required by transformers' Trainer.
 pip install --upgrade pip
-pip install torch transformers accelerate tqdm
+if [[ "$PIP_TORCH" == "1" ]]; then
+    pip install torch
+fi
+# Gemma3 needs transformers >= 4.50; --upgrade makes pip install into the venv when
+# the module's copy is older, and leave it alone when it is new enough
+pip install --upgrade 'transformers>=4.50' accelerate tqdm
 
+# ---- verify ------------------------------------------------------------------
 python - <<'PY'
 import torch, transformers
-print(f"\ntorch {torch.__version__} | transformers {transformers.__version__}")
-print(f"CUDA build: {torch.version.cuda}  (torch.cuda.is_available() is False on a "
-      f"login node -- that is expected, there is no GPU here)")
+print(f"\ntorch        {torch.__version__}   from {torch.__file__}")
+print(f"transformers {transformers.__version__}")
+print(f"cuda build   {torch.version.cuda}")
+print(f"cuda visible {torch.cuda.is_available()}  "
+      f"(False here is fine if this job has no GPU)")
 PY
 
-# ---- write the file the Slurm scripts source --------------------------------
+# ---- write the file every other script sources -------------------------------
 cat > "$HERE/env.sh" <<INNER
 # Generated by setup_env.sh -- machine-specific, not tracked in git.
-# Source this in every new shell:  source $HERE/env.sh
+# Source it in any shell or job:  source $HERE/env.sh
 module purge
-module load $PYTHON_MODULE
+module load $TORCH_MODULE
 
-# conda's activate script trips over nounset, so turn it off and put it back the
-# way it was -- leaving 'set -u' on would break an interactive shell
+# venv's activate script reads unset variables; put nounset back as we found it so
+# sourcing this interactively does not break the shell
 __neo_u=\$(shopt -po nounset || true)
 set +u
-source activate $ENV_PREFIX
+source $ENV_DIR/bin/activate
 eval "\$__neo_u"
 unset __neo_u
 
 export HF_HOME=$HF_CACHE
 export NEOLOGISM_MODEL=$MODEL_DIR
+export TMPDIR=$IX/tmp
 export TOKENIZERS_PARALLELISM=false
 INNER
 
 echo
 echo "wrote $HERE/env.sh"
 echo
-echo "next -- note step 1: this script ran in a subshell, so your current shell does"
-echo "not have the environment yet."
-echo
-echo "  1. source $HERE/env.sh"
-echo "     (needed in every new shell; deliberately not added to ~/.bashrc, which"
-echo "      CRCD advises against)"
-echo "  2. accept the gemma-3 license at https://huggingface.co/google/gemma-3-4b-it"
-echo "     (it is gated -- the download fails without this)"
-echo "  3. hf auth login          # or huggingface-cli login on older hub versions"
-echo "  4. bash $HERE/download_model.sh"
-echo "  5. crc-quota"
+echo "next:"
+echo "  1. accept the gemma-3 license at https://huggingface.co/google/gemma-3-4b-it"
+echo "  2. on a login node:  source $HERE/env.sh && hf auth login"
+echo "  3. sbatch $HERE/submit_download.slurm"
+echo "  4. sbatch $HERE/submit_preflight.slurm"
