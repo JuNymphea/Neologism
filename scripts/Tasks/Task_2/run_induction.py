@@ -314,9 +314,15 @@ def main() -> None:
         min_content_right=args.min_content_right,
         min_lexical_cues=args.min_lexical_cues,
     )
+    def item_fingerprint(fs):
+        """The realized item, so two signatures cannot yield the same test."""
+        it = item_for(fs)
+        return None if it is None else it.text
+
     selected, thresholds = induce(
         frames, n_slots=args.n_slots, min_purity=args.min_purity,
         constraints=constraints, dev_filter=dev_filter, validator=realizable,
+        fingerprint=item_fingerprint,
     )
     for pos in TARGET_POS:
         print(f"      {POS_LABEL[pos]:<10} {len(selected[pos])} slots "

@@ -1,5 +1,5 @@
 {
-  "_doc": "status: accept | rewrite | reject。reject 时该 frame 淘汰，语料候选第 11/12 名顶替。",
+  "_doc": "status: accept | rewrite | reject。reject 的 frame 淘汰，语料候选顺次顶替。本轮 reject 依据 control-word AUC（只用已知词判定，未看任何 neologism 结果）。",
   "slots": [
     {
       "pos": "NOUN",
@@ -19,10 +19,34 @@
     },
     {
       "pos": "NOUN",
+      "signature": "the {SLOT} PRON VERB",
+      "generated": "The {NEOLOGISM} it started",
+      "status": "accept",
+      "text": "The {NEOLOGISM} it started",
+      "note": ""
+    },
+    {
+      "pos": "NOUN",
       "signature": "a {SLOT} to",
       "generated": "A {NEOLOGISM} to",
       "status": "accept",
       "text": "A {NEOLOGISM} to",
+      "note": ""
+    },
+    {
+      "pos": "NOUN",
+      "signature": "ADJ {SLOT} in the",
+      "generated": "The different {NEOLOGISM} in the",
+      "status": "accept",
+      "text": "The different {NEOLOGISM} in the",
+      "note": ""
+    },
+    {
+      "pos": "NOUN",
+      "signature": "a {SLOT} for",
+      "generated": "They have seen a {NEOLOGISM} for",
+      "status": "accept",
+      "text": "They have seen a {NEOLOGISM} for",
       "note": ""
     },
     {
@@ -35,11 +59,11 @@
     },
     {
       "pos": "NOUN",
-      "signature": "VERB the {SLOT} to",
-      "generated": "They did the {NEOLOGISM} to",
-      "status": "reject",
-      "text": "They did the {NEOLOGISM} to",
-      "note": "「They did the X to」不自然"
+      "signature": "this {SLOT} is",
+      "generated": "This {NEOLOGISM} is",
+      "status": "accept",
+      "text": "This {NEOLOGISM} is",
+      "note": ""
     },
     {
       "pos": "NOUN",
@@ -51,34 +75,10 @@
     },
     {
       "pos": "NOUN",
-      "signature": "the ADJ {SLOT} PRON VERB",
-      "generated": "They have seen the different {NEOLOGISM} it happened",
-      "status": "reject",
-      "text": "They have seen the different {NEOLOGISM} it happened",
-      "note": "缩合关系从句，别扭"
-    },
-    {
-      "pos": "NOUN",
       "signature": "the ADJ {SLOT} is",
       "generated": "The different {NEOLOGISM} is",
       "status": "accept",
       "text": "The different {NEOLOGISM} is",
-      "note": ""
-    },
-    {
-      "pos": "NOUN",
-      "signature": "a ADJ {SLOT} in",
-      "generated": "A different {NEOLOGISM} in",
-      "status": "accept",
-      "text": "A different {NEOLOGISM} in",
-      "note": ""
-    },
-    {
-      "pos": "NOUN",
-      "signature": "a ADJ {SLOT} to",
-      "generated": "A different {NEOLOGISM} to",
-      "status": "accept",
-      "text": "A different {NEOLOGISM} to",
       "note": ""
     },
     {
@@ -117,9 +117,9 @@
       "pos": "VERB",
       "signature": "VERB to {SLOT} the NOUN",
       "generated": "They tried to {NEOLOGISM} the thing",
-      "status": "accept",
+      "status": "reject",
       "text": "They tried to {NEOLOGISM} the thing",
-      "note": ""
+      "note": "control-word AUC 0.469 < 0.60 — 模型分不开匹配/非匹配"
     },
     {
       "pos": "VERB",
@@ -133,9 +133,9 @@
       "pos": "VERB",
       "signature": "<s> PRON {SLOT} to",
       "generated": "I {NEOLOGISM} to",
-      "status": "accept",
+      "status": "reject",
       "text": "I {NEOLOGISM} to",
-      "note": ""
+      "note": "control-word AUC 0.495 < 0.60 — 模型分不开匹配/非匹配"
     },
     {
       "pos": "VERB",
@@ -147,19 +147,19 @@
     },
     {
       "pos": "VERB",
-      "signature": "when PRON {SLOT} PRON",
-      "generated": "It was when it {NEOLOGISM} it",
+      "signature": "do n't {SLOT} to",
+      "generated": "They don't {NEOLOGISM} to",
       "status": "reject",
-      "text": "It was when it {NEOLOGISM} it",
-      "note": "「It was when it X it」别扭"
+      "text": "They don't {NEOLOGISM} to",
+      "note": "control-word AUC 0.322 < 0.60 — 模型分不开匹配/非匹配"
     },
     {
       "pos": "VERB",
-      "signature": "do n't {SLOT} to",
-      "generated": "They don't {NEOLOGISM} to",
-      "status": "accept",
-      "text": "They don't {NEOLOGISM} to",
-      "note": ""
+      "signature": "to {SLOT} the NOUN .",
+      "generated": "They tried to {NEOLOGISM} the thing",
+      "status": "reject",
+      "text": "They tried to {NEOLOGISM} the thing",
+      "note": "control-word AUC 0.469 < 0.60 — 模型分不开匹配/非匹配"
     },
     {
       "pos": "ADJ",
@@ -179,11 +179,11 @@
     },
     {
       "pos": "ADJ",
-      "signature": "ADJ , {SLOT} and",
-      "generated": "They have seen the same, {NEOLOGISM} and",
+      "signature": "very {SLOT} to",
+      "generated": "It was very {NEOLOGISM} to",
       "status": "reject",
-      "text": "They have seen the same, {NEOLOGISM} and",
-      "note": "逗号并列，别扭"
+      "text": "It was very {NEOLOGISM} to",
+      "note": "control-word AUC 0.589 < 0.60 — 模型分不开匹配/非匹配"
     },
     {
       "pos": "ADJ",
@@ -197,49 +197,49 @@
       "pos": "ADJ",
       "signature": "would be {SLOT} to",
       "generated": "They would be {NEOLOGISM} to",
-      "status": "accept",
+      "status": "reject",
       "text": "They would be {NEOLOGISM} to",
-      "note": ""
-    },
-    {
-      "pos": "ADJ",
-      "signature": "a more {SLOT} NOUN",
-      "generated": "A more {NEOLOGISM} thing",
-      "status": "accept",
-      "text": "A more {NEOLOGISM} thing",
-      "note": ""
-    },
-    {
-      "pos": "ADJ",
-      "signature": "a {SLOT} NOUN to PRON",
-      "generated": "A {NEOLOGISM} thing to it",
-      "status": "reject",
-      "text": "A {NEOLOGISM} thing to it",
-      "note": "「A X thing to it」不自然"
-    },
-    {
-      "pos": "ADJ",
-      "signature": "ADJ and {SLOT} and",
-      "generated": "The other and {NEOLOGISM} and",
-      "status": "reject",
-      "text": "The other and {NEOLOGISM} and",
-      "note": "双 and"
+      "note": "control-word AUC 0.456 < 0.60 — 模型分不开匹配/非匹配"
     },
     {
       "pos": "ADJ",
       "signature": "PRON is {SLOT} that",
       "generated": "It is {NEOLOGISM} that",
-      "status": "accept",
+      "status": "reject",
       "text": "It is {NEOLOGISM} that",
+      "note": "control-word AUC 0.389 < 0.60 — 模型分不开匹配/非匹配"
+    },
+    {
+      "pos": "ADJ",
+      "signature": "is {SLOT} and ADJ",
+      "generated": "It is {NEOLOGISM} and other",
+      "status": "reject",
+      "text": "It is {NEOLOGISM} and other",
+      "note": "control-word AUC 0.426 < 0.60 — 模型分不开匹配/非匹配"
+    },
+    {
+      "pos": "ADJ",
+      "signature": ", the {SLOT} NOUN of",
+      "generated": "It was, the {NEOLOGISM} one of",
+      "status": "accept",
+      "text": "It was, the {NEOLOGISM} one of",
       "note": ""
     },
     {
       "pos": "ADJ",
-      "signature": "<s> the {SLOT} NOUN is that",
-      "generated": "The {NEOLOGISM} one is that",
+      "signature": "a {SLOT} NOUN , and",
+      "generated": "A {NEOLOGISM} thing and",
+      "status": "accept",
+      "text": "A {NEOLOGISM} thing and",
+      "note": ""
+    },
+    {
+      "pos": "ADJ",
+      "signature": "ADJ , {SLOT} , and",
+      "generated": "They have seen the same, {NEOLOGISM} and",
       "status": "reject",
-      "text": "The {NEOLOGISM} one is that",
-      "note": "「The X one is that」可疑"
+      "text": "They have seen the same, {NEOLOGISM} and",
+      "note": "control-word AUC 0.370 < 0.60 — 模型分不开匹配/非匹配"
     }
   ]
 }

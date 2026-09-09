@@ -10,16 +10,16 @@
     "n_calibration": 200,
     "n_validation": 100,
     "n_bins": 10,
-    "seed": 20260909,
+    "seed": 20260910,
     "skip_countability": false
   },
   "frequency_source": "gemma token id (SentencePiece unigram rank)",
-  "seed": 20260909,
+  "seed": 20260910,
   "slot_morphology": {
     "counts": {
       "Number=Sing": 10,
-      "VerbForm=Inf": 8,
-      "Mood=Ind": 2,
+      "VerbForm=Inf": 7,
+      "Mood=Ind": 3,
       "Degree=Pos": 10
     },
     "unmet": [],
@@ -50,35 +50,35 @@
     "quantiles": {
       "noun": {
         "n": 300,
-        "q1": 26084,
-        "median": 72365,
-        "q3": 137732
+        "q1": 28966,
+        "median": 70763,
+        "q3": 135708
       },
       "verb": {
         "n": 300,
-        "q1": 26955,
-        "median": 67730,
-        "q3": 137371
+        "q1": 27992,
+        "median": 70069,
+        "q3": 136197
       },
       "adj": {
         "n": 300,
-        "q1": 25744,
-        "median": 70905,
-        "q3": 140660
+        "q1": 27091,
+        "median": 71151,
+        "q3": 135050
       }
     },
     "ks_tests": {
       "noun_vs_verb": {
-        "statistic": 0.0333,
-        "p_value": 0.9964
+        "statistic": 0.03,
+        "p_value": 0.9993
       },
       "noun_vs_adj": {
-        "statistic": 0.0267,
-        "p_value": 0.9999
+        "statistic": 0.0367,
+        "p_value": 0.9879
       },
       "verb_vs_adj": {
-        "statistic": 0.04,
-        "p_value": 0.9705
+        "statistic": 0.0333,
+        "p_value": 0.9964
       }
     }
   },

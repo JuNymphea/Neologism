@@ -407,6 +407,7 @@ def select_diverse(
     n_slots: int,
     max_per_family: int = 1,
     validator: Callable[[FrameStats], bool] | None = None,
+    fingerprint: Callable[[FrameStats], str] | None = None,
 ) -> List[FrameStats]:
     """Greedily take the highest-scoring frames, one per construction family.
 
@@ -415,12 +416,19 @@ def select_diverse(
     from one construction than one frame that is not category-selective.
 
     `validator` rejects frames that cannot be turned into a usable evaluation
-    sentence, so that the next-best candidate is taken instead of leaving a
-    hole in the inventory.
+    item, so that the next-best candidate is taken instead of leaving a hole
+    in the inventory.
+
+    `fingerprint` de-duplicates on the *realized* item rather than on the
+    signature. Two different signatures can produce the same probe item --
+    `VERB to {SLOT} the NOUN` and `to {SLOT} the NOUN .` both realize as
+    "They tried to WORD the thing" -- which would silently count one
+    measurement twice.
     """
     for cap in range(max_per_family, max_per_family + 4):
         chosen: List[FrameStats] = []
         used: Counter = Counter()
+        seen_items: set = set()
         for fs in candidates:
             key = family_key(fs)
             if used[key] >= cap:
@@ -429,6 +437,11 @@ def select_diverse(
                 continue
             if validator is not None and not validator(fs):
                 continue
+            if fingerprint is not None:
+                fp = fingerprint(fs)
+                if fp is None or fp in seen_items:
+                    continue
+                seen_items.add(fp)
             chosen.append(fs)
             used[key] += 1
             if len(chosen) == n_slots:
@@ -445,6 +458,7 @@ def induce(
     constraints: StructuralConstraints | None = None,
     dev_filter: DevFilter | None = None,
     validator: Callable[[FrameStats], bool] | None = None,
+    fingerprint: Callable[[FrameStats], str] | None = None,
     ladder: Sequence[Tuple[int, int]] = RELAXATION_LADDER,
 ) -> Tuple[Dict[str, List[FrameStats]], Dict[str, Thresholds]]:
     """Steps 4-6 for each target POS, relaxing frequency only where needed."""
@@ -455,7 +469,8 @@ def induce(
         for min_freq, min_types in ladder:
             th = Thresholds(min_freq, min_types, min_purity)
             cands = candidates_for(all_frames, pos, th, constraints, dev_filter)
-            picked = select_diverse(cands, n_slots, validator=validator)
+            picked = select_diverse(cands, n_slots, validator=validator,
+                                    fingerprint=fingerprint)
             if len(picked) >= n_slots:
                 selected[pos], used_thresholds[pos] = picked, th
                 break
@@ -465,7 +480,7 @@ def induce(
             th = Thresholds(ladder[-1][0], ladder[-1][1], min_purity)
             selected[pos] = select_diverse(
                 candidates_for(all_frames, pos, th, constraints, dev_filter),
-                n_slots, validator=validator,
+                n_slots, validator=validator, fingerprint=fingerprint,
             )
             used_thresholds[pos] = th
     return selected, used_thresholds

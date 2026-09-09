@@ -11,17 +11,27 @@ The first is settled by `run_induction.py`. This script settles the second.
 
 Procedure, in order:
 
-1. Fit, per slot, a matched and a non-matched surprisal distribution using the
-   **calibration** words only.
-2. Score each **validation** word by the Gaussian log-likelihood ratio
+1. Fit, per slot, a matched and a non-matched surprisal distribution on the
+   **calibration** words.
+2. Score every slot's separation (AUC, Cohen's d) on the **calibration** words
+   as well, and drop the slots that cannot tell matched from non-matched.
+3. Only then, score each **validation** word by the Gaussian log-likelihood
+   ratio
        r_i(w) = log p(s_i(w) | match) - log p(s_i(w) | non-match)
-   and predict the category with the highest mean r over that category's slots.
-3. Report per-slot AUC and accuracy on the validation words.
-4. Drop slots that cannot separate matched from non-matched words.
+   and predict the category with the highest mean r over its slots.
+4. Report accuracy on the validation words.
 
-Step 4 is decided **only** from known control words, before any neologism is
-scored. Choosing slots by their effect on the main result would be probe
-tuning, and the ordering here is what prevents it.
+Two separations matter here, and mixing them up is easy.
+
+Slots are dropped using **calibration** words, not validation words. AUC is
+computed directly from the surprisal values and does not involve the fit, so it
+is legitimate on the same words the distributions were fitted on. Selecting
+slots by their validation AUC and then reporting validation accuracy would make
+that accuracy optimistic -- the slot set would have been chosen on the very
+data it is scored on.
+
+And the whole thing happens before any neologism is scored: choosing slots by
+their effect on the main result would be probe tuning.
 
     python Task_2/calibrate_probe.py
 """
@@ -113,18 +123,29 @@ def main() -> None:
             "n_match": len(matched), "n_nonmatch": len(nonmatched),
         }
 
-    # -- 2. per-slot diagnostics, on validation words only ------------------
+    # -- 2. per-slot diagnostics -------------------------------------------
+    # On the calibration words: selecting slots by their validation AUC would
+    # make the validation accuracy that follows optimistic. The validation AUC
+    # is computed too, but only reported -- never used to drop anything.
     diagnostics: Dict[str, dict] = {}
     for key, f in fits.items():
         pos = f["pos"]
-        matched = [S[key][w] for w in valid[pos] if not math.isnan(S[key][w])]
-        nonmatched = [S[key][w] for p in POS_KEYS if p != pos
-                      for w in valid[p] if not math.isnan(S[key][w])]
+
+        def split(pool):
+            m = [S[key][w] for w in pool[pos]
+                 if w in S[key] and not math.isnan(S[key][w])]
+            n = [S[key][w] for p in POS_KEYS if p != pos for w in pool[p]
+                 if w in S[key] and not math.isnan(S[key][w])]
+            return m, n
+
+        cm, cn = split(calib)
+        vm, vn = split(valid)
         diagnostics[key] = {
-            "auc": auc(matched, nonmatched),
-            "cohens_d": cohens_d(matched, nonmatched),
-            "mean_match": st.mean(matched) if matched else float("nan"),
-            "mean_nonmatch": st.mean(nonmatched) if nonmatched else float("nan"),
+            "auc": auc(cm, cn),                       # decides retention
+            "cohens_d": cohens_d(cm, cn),
+            "auc_validation": auc(vm, vn),            # reported only
+            "mean_match": st.mean(cm) if cm else float("nan"),
+            "mean_nonmatch": st.mean(cn) if cn else float("nan"),
             "example": slot_meta[key]["example"],
             "diagnostic": slot_meta[key]["diagnostic"],
         }
@@ -133,7 +154,7 @@ def main() -> None:
             if not math.isnan(d["auc"]) and d["auc"] >= args.min_auc}
     dropped = sorted(set(diagnostics) - kept)
 
-    print(f"{'slot':<46}{'AUC':>7}{'d':>7}  例句")
+    print(f"{'slot':<46}{'AUC':>7}{'d':>7}{'AUC_val':>9}  例句")
     print("=" * 110)
     for pos in POS_KEYS:
         for key in sorted((k for k in diagnostics if fits[k]["pos"] == pos),
@@ -141,10 +162,11 @@ def main() -> None:
             d = diagnostics[key]
             flag = " " if key in kept else "✗"
             print(f"{flag}{key.split('::')[1]:<45}{d['auc']:>7.3f}{d['cohens_d']:>7.2f}"
-                  f"  {d['example'][:38]}")
+                  f"{d['auc_validation']:>9.3f}  {d['example'][:34]}")
     print("=" * 110)
     print(f"保留 {len(kept)}/{len(diagnostics)} 个 slot"
-          + (f"，淘汰 {len(dropped)} 个 (AUC < {args.min_auc})" if dropped else ""))
+          + (f"，淘汰 {len(dropped)} 个 (校准集 AUC < {args.min_auc})" if dropped else ""))
+    print("AUC 由校准词决定去留；AUC_val 仅供参考，不参与任何决策。")
 
     # -- 3. three-way accuracy on validation words --------------------------
     def classify(word: str, slot_keys) -> str | None:
@@ -177,7 +199,8 @@ def main() -> None:
                           "overall": round(correct / total, 4),
                           "n_slots": len(keys)}
 
-    print(f"\n验证集三分类准确率（{sum(len(valid[p]) for p in POS_KEYS)} 个未参与拟合的词）")
+    print(f"\n验证集三分类准确率（{sum(len(valid[p]) for p in POS_KEYS)} 个词，"
+          f"既未参与拟合，也未参与 slot 淘汰）")
     print(f"{'':14}{'noun':>8}{'verb':>8}{'adj':>8}{'overall':>10}{'slots':>7}")
     for label, r in results.items():
         print(f"{label:<14}" + "".join(f"{r['per_pos'][p]['accuracy']:>8.3f}"
@@ -188,6 +211,7 @@ def main() -> None:
     args.out.write_text(json.dumps({
         "model": data.get("model"),
         "min_auc": args.min_auc,
+        "auc_computed_on": "calibration words (validation kept clean for accuracy)",
         "fits": fits,
         "diagnostics": diagnostics,
         "kept_slots": sorted(kept),
