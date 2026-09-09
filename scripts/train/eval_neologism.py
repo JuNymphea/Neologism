@@ -61,6 +61,8 @@ def get_pairs(
     seed: int = 42,
     max_samples: int = 100,
     max_new_tokens: int = 4096,
+    batch_size: int = 8,
+    attn_implementation: str = "sdpa",
 ) -> None:
     """
     Generate normal and concept answers using a single model.
@@ -106,11 +108,14 @@ def get_pairs(
 
     # with `embedding_path`, `concept_model_path` is the *base* model: load it normally
     # (lm_head must still be filled from the tied embedding) and inject the trained row after.
+    # sdpa is the default because flash_attention_2 needs the separate flash-attn
+    # package, which is not in requirements.txt; both avoid materializing the T x T
+    # attention matrix
     model = Gemma3ForConditionalGeneration.from_pretrained(
         concept_model_path,
         device_map="auto",
         dtype=torch.bfloat16,
-        attn_implementation="flash_attention_2"
+        attn_implementation=attn_implementation,
     )
 
     if embedding_path is not None:
@@ -125,21 +130,26 @@ def get_pairs(
 
     model.eval()
 
-    def generate_one(text: str) -> str:
+    # generation is decoder-only, so a batch has to be LEFT padded: with right padding
+    # the pad tokens sit between the prompt and the first generated token
+    tokenizer.padding_side = "left"
+    if tokenizer.pad_token_id is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    model.generation_config.pad_token_id = tokenizer.pad_token_id
 
-        messages = [
-            {"role": "user", "content": text}
-        ]
+    def generate_batch(texts: List[str]) -> List[str]:
+        conversations = [[{"role": "user", "content": t}] for t in texts]
 
         model_inputs = tokenizer.apply_chat_template(
-            messages,
+            conversations,
             add_generation_prompt=True,
             return_tensors="pt",
-            return_dict=True
-        ).to("cuda")
+            return_dict=True,
+            padding=True,
+        ).to(model.device)
 
-        input_ids = model_inputs["input_ids"]
-        input_len = input_ids.shape[1]
+        # left padding makes every row start generating at the same column
+        input_len = model_inputs["input_ids"].shape[1]
 
         with torch.no_grad():
             output_ids = model.generate(
@@ -148,33 +158,35 @@ def get_pairs(
                 use_cache=True,
             )
 
-        generated_tokens = output_ids[0, input_len:]
-        response = tokenizer.decode(generated_tokens, skip_special_tokens=True)
-        return response.strip()
+        return [
+            tokenizer.decode(row[input_len:], skip_special_tokens=True).strip()
+            for row in output_ids
+        ]
 
     total_questions = min(max_samples, len(questions))
     templates = assign_templates(total_questions, template, seed)
 
-    pbar = tqdm(range(total_questions), desc=f"Generating [{concept}/{template}]")
-    for idx in pbar:
-        q = questions[idx]
+    pending = [i for i in range(total_questions) if questions[i] not in existing_questions]
+    print(f"[gen] {len(pending)} of {total_questions} still to do, batch size {batch_size}")
 
-        if q in existing_questions:
-            continue
+    pbar = tqdm(range(0, len(pending), batch_size), desc=f"Generating [{concept}/{template}]")
+    for start in pbar:
+        idxs = pending[start:start + batch_size]
 
-        concept_prompt = build_prompt(q, new_token, templates[idx])
-        concept_answer = generate_one(concept_prompt)
+        concept_answers = generate_batch(
+            [build_prompt(questions[i], new_token, templates[i]) for i in idxs]
+        )
+        normal_answers = generate_batch([questions[i] for i in idxs])
 
-        normal_answer = generate_one(q)
+        for i, concept_answer, normal_answer in zip(idxs, concept_answers, normal_answers):
+            res.append({
+                "question": questions[i],
+                "normal_answer": normal_answer,
+                "concept_answer": concept_answer,
+            })
+            existing_questions.add(questions[i])
 
-        record = {
-            "question": q,
-            "normal_answer": normal_answer,
-            "concept_answer": concept_answer,
-        }
-        res.append(record)
-        existing_questions.add(q)
-
+        # rewrite after every batch so an interrupted job can be resumed
         with open(output_file, "w", encoding="utf-8") as f:
             for r in res:
                 f.write(json.dumps(r, ensure_ascii=False) + "\n")
@@ -199,6 +211,11 @@ def main():
     parser.add_argument("--seed", type=int, default=42, help="only used to lay out the 'mixed' template")
     parser.add_argument("--max_samples", type=int, default=100)
     parser.add_argument("--max_new_tokens", type=int, default=4096)
+    parser.add_argument("--batch_size", type=int, default=8,
+                        help="questions generated at once; each one costs two generations")
+    parser.add_argument("--attn_implementation", type=str, default="sdpa",
+                        choices=["sdpa", "eager", "flash_attention_2"],
+                        help="flash_attention_2 requires the flash-attn package")
     args = parser.parse_args()
 
     # training records its full setting next to the embedding; reuse it so that the
@@ -230,6 +247,8 @@ def main():
         seed=args.seed,
         max_samples=args.max_samples,
         max_new_tokens=args.max_new_tokens,
+        batch_size=args.batch_size,
+        attn_implementation=args.attn_implementation,
     )
 
 if __name__ == "__main__":
