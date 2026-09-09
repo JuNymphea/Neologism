@@ -1,0 +1,245 @@
+{
+  "_doc": "status: accept | rewrite | reject。reject 时该 frame 淘汰，语料候选第 11/12 名顶替。",
+  "slots": [
+    {
+      "pos": "NOUN",
+      "signature": "the {SLOT} of",
+      "generated": "The {NEOLOGISM} of",
+      "status": "accept",
+      "text": "The {NEOLOGISM} of",
+      "note": ""
+    },
+    {
+      "pos": "NOUN",
+      "signature": "ADJ {SLOT} of",
+      "generated": "The different {NEOLOGISM} of",
+      "status": "accept",
+      "text": "The different {NEOLOGISM} of",
+      "note": ""
+    },
+    {
+      "pos": "NOUN",
+      "signature": "a {SLOT} to",
+      "generated": "A {NEOLOGISM} to",
+      "status": "accept",
+      "text": "A {NEOLOGISM} to",
+      "note": ""
+    },
+    {
+      "pos": "NOUN",
+      "signature": "the {SLOT} was",
+      "generated": "The {NEOLOGISM} was",
+      "status": "accept",
+      "text": "The {NEOLOGISM} was",
+      "note": ""
+    },
+    {
+      "pos": "NOUN",
+      "signature": "VERB the {SLOT} to",
+      "generated": "They did the {NEOLOGISM} to",
+      "status": "reject",
+      "text": "They did the {NEOLOGISM} to",
+      "note": "「They did the X to」不自然"
+    },
+    {
+      "pos": "NOUN",
+      "signature": "<s> the {SLOT} is",
+      "generated": "The {NEOLOGISM} is",
+      "status": "accept",
+      "text": "The {NEOLOGISM} is",
+      "note": ""
+    },
+    {
+      "pos": "NOUN",
+      "signature": "the ADJ {SLOT} PRON VERB",
+      "generated": "They have seen the different {NEOLOGISM} it happened",
+      "status": "reject",
+      "text": "They have seen the different {NEOLOGISM} it happened",
+      "note": "缩合关系从句，别扭"
+    },
+    {
+      "pos": "NOUN",
+      "signature": "the ADJ {SLOT} is",
+      "generated": "The different {NEOLOGISM} is",
+      "status": "accept",
+      "text": "The different {NEOLOGISM} is",
+      "note": ""
+    },
+    {
+      "pos": "NOUN",
+      "signature": "a ADJ {SLOT} in",
+      "generated": "A different {NEOLOGISM} in",
+      "status": "accept",
+      "text": "A different {NEOLOGISM} in",
+      "note": ""
+    },
+    {
+      "pos": "NOUN",
+      "signature": "a ADJ {SLOT} to",
+      "generated": "A different {NEOLOGISM} to",
+      "status": "accept",
+      "text": "A different {NEOLOGISM} to",
+      "note": ""
+    },
+    {
+      "pos": "VERB",
+      "signature": "to {SLOT} PRON",
+      "generated": "They tried to {NEOLOGISM} it",
+      "status": "accept",
+      "text": "They tried to {NEOLOGISM} it",
+      "note": ""
+    },
+    {
+      "pos": "VERB",
+      "signature": "NOUN to {SLOT} the",
+      "generated": "The thing to {NEOLOGISM} the",
+      "status": "accept",
+      "text": "The thing to {NEOLOGISM} the",
+      "note": ""
+    },
+    {
+      "pos": "VERB",
+      "signature": "n't {SLOT} PRON",
+      "generated": "They don't {NEOLOGISM} it",
+      "status": "accept",
+      "text": "They don't {NEOLOGISM} it",
+      "note": ""
+    },
+    {
+      "pos": "VERB",
+      "signature": "will {SLOT} PRON",
+      "generated": "They will {NEOLOGISM} it",
+      "status": "accept",
+      "text": "They will {NEOLOGISM} it",
+      "note": ""
+    },
+    {
+      "pos": "VERB",
+      "signature": "VERB to {SLOT} the NOUN",
+      "generated": "They tried to {NEOLOGISM} the thing",
+      "status": "accept",
+      "text": "They tried to {NEOLOGISM} the thing",
+      "note": ""
+    },
+    {
+      "pos": "VERB",
+      "signature": "PRON can {SLOT} PRON",
+      "generated": "They can {NEOLOGISM} it",
+      "status": "accept",
+      "text": "They can {NEOLOGISM} it",
+      "note": ""
+    },
+    {
+      "pos": "VERB",
+      "signature": "<s> PRON {SLOT} to",
+      "generated": "I {NEOLOGISM} to",
+      "status": "accept",
+      "text": "I {NEOLOGISM} to",
+      "note": ""
+    },
+    {
+      "pos": "VERB",
+      "signature": "PRON {SLOT} PRON to",
+      "generated": "I {NEOLOGISM} it to",
+      "status": "accept",
+      "text": "I {NEOLOGISM} it to",
+      "note": ""
+    },
+    {
+      "pos": "VERB",
+      "signature": "when PRON {SLOT} PRON",
+      "generated": "It was when it {NEOLOGISM} it",
+      "status": "reject",
+      "text": "It was when it {NEOLOGISM} it",
+      "note": "「It was when it X it」别扭"
+    },
+    {
+      "pos": "VERB",
+      "signature": "do n't {SLOT} to",
+      "generated": "They don't {NEOLOGISM} to",
+      "status": "accept",
+      "text": "They don't {NEOLOGISM} to",
+      "note": ""
+    },
+    {
+      "pos": "ADJ",
+      "signature": "very {SLOT} NOUN",
+      "generated": "It was a very {NEOLOGISM} thing",
+      "status": "accept",
+      "text": "It was a very {NEOLOGISM} thing",
+      "note": ""
+    },
+    {
+      "pos": "ADJ",
+      "signature": "very {SLOT} and ADJ",
+      "generated": "It was very {NEOLOGISM} and similar",
+      "status": "accept",
+      "text": "It was very {NEOLOGISM} and similar",
+      "note": ""
+    },
+    {
+      "pos": "ADJ",
+      "signature": "ADJ , {SLOT} and",
+      "generated": "They have seen the same, {NEOLOGISM} and",
+      "status": "reject",
+      "text": "They have seen the same, {NEOLOGISM} and",
+      "note": "逗号并列，别扭"
+    },
+    {
+      "pos": "ADJ",
+      "signature": "is a {SLOT} NOUN to",
+      "generated": "It is a {NEOLOGISM} thing to",
+      "status": "accept",
+      "text": "It is a {NEOLOGISM} thing to",
+      "note": ""
+    },
+    {
+      "pos": "ADJ",
+      "signature": "would be {SLOT} to",
+      "generated": "They would be {NEOLOGISM} to",
+      "status": "accept",
+      "text": "They would be {NEOLOGISM} to",
+      "note": ""
+    },
+    {
+      "pos": "ADJ",
+      "signature": "a more {SLOT} NOUN",
+      "generated": "A more {NEOLOGISM} thing",
+      "status": "accept",
+      "text": "A more {NEOLOGISM} thing",
+      "note": ""
+    },
+    {
+      "pos": "ADJ",
+      "signature": "a {SLOT} NOUN to PRON",
+      "generated": "A {NEOLOGISM} thing to it",
+      "status": "reject",
+      "text": "A {NEOLOGISM} thing to it",
+      "note": "「A X thing to it」不自然"
+    },
+    {
+      "pos": "ADJ",
+      "signature": "ADJ and {SLOT} and",
+      "generated": "The other and {NEOLOGISM} and",
+      "status": "reject",
+      "text": "The other and {NEOLOGISM} and",
+      "note": "双 and"
+    },
+    {
+      "pos": "ADJ",
+      "signature": "PRON is {SLOT} that",
+      "generated": "It is {NEOLOGISM} that",
+      "status": "accept",
+      "text": "It is {NEOLOGISM} that",
+      "note": ""
+    },
+    {
+      "pos": "ADJ",
+      "signature": "<s> the {SLOT} NOUN is that",
+      "generated": "The {NEOLOGISM} one is that",
+      "status": "reject",
+      "text": "The {NEOLOGISM} one is that",
+      "note": "「The X one is that」可疑"
+    }
+  ]
+}

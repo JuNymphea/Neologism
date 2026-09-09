@@ -1,0 +1,108 @@
+{
+  "config": {
+    "pos_words": "/Users/shaoshao/Desktop/neologism/neologism/pos_words_v2.json",
+    "tokenizer": "/Users/shaoshao/Desktop/neologism/neologism/tokenizer.json",
+    "slots": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/out/slots_flat.json",
+    "ud_dir": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/data/ud",
+    "out_calibration": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/out/control_calibration.json",
+    "out_validation": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/out/control_validation.json",
+    "out_meta": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/out/control_words_meta.json",
+    "n_calibration": 200,
+    "n_validation": 100,
+    "n_bins": 10,
+    "seed": 20260909,
+    "skip_countability": false
+  },
+  "frequency_source": "gemma token id (SentencePiece unigram rank)",
+  "seed": 20260909,
+  "slot_morphology": {
+    "counts": {
+      "Number=Sing": 10,
+      "VerbForm=Inf": 8,
+      "Mood=Ind": 2,
+      "Degree=Pos": 10
+    },
+    "unmet": [],
+    "rationale": {
+      "Number=Sing": "bare noun form is singular",
+      "Degree=Pos": "bare adjective form is positive degree",
+      "VerbForm=Inf": "bare verb form is the infinitive",
+      "Mood=Ind": "English base form doubles as 1sg present indicative"
+    }
+  },
+  "filters": {
+    "noun": {
+      "input": 6531,
+      "single_token": 6531,
+      "mass_nouns_dropped": 507,
+      "after_countability": 6024
+    },
+    "verb": {
+      "input": 1075,
+      "single_token": 1075
+    },
+    "adj": {
+      "input": 2322,
+      "single_token": 2322
+    }
+  },
+  "frequency_match": {
+    "quantiles": {
+      "noun": {
+        "n": 300,
+        "q1": 26084,
+        "median": 72365,
+        "q3": 137732
+      },
+      "verb": {
+        "n": 300,
+        "q1": 26955,
+        "median": 67730,
+        "q3": 137371
+      },
+      "adj": {
+        "n": 300,
+        "q1": 25744,
+        "median": 70905,
+        "q3": 140660
+      }
+    },
+    "ks_tests": {
+      "noun_vs_verb": {
+        "statistic": 0.0333,
+        "p_value": 0.9964
+      },
+      "noun_vs_adj": {
+        "statistic": 0.0267,
+        "p_value": 0.9999
+      },
+      "verb_vs_adj": {
+        "statistic": 0.04,
+        "p_value": 0.9705
+      }
+    }
+  },
+  "bin_quota": {
+    "0": 57,
+    "1": 37,
+    "2": 32,
+    "3": 27,
+    "4": 23,
+    "5": 29,
+    "6": 28,
+    "7": 21,
+    "8": 21,
+    "9": 25
+  },
+  "n_calibration_per_pos": {
+    "noun": 200,
+    "verb": 200,
+    "adj": 200
+  },
+  "n_validation_per_pos": {
+    "noun": 100,
+    "verb": 100,
+    "adj": 100
+  },
+  "disjoint": true
+}
