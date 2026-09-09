@@ -36,8 +36,14 @@ source scripts/train/env.sh
 
 RUN=${RUN:-gemma_a_25_unbiased}
 CKPT=scripts/train/checkpoints/$RUN
+# Generation re-reads all 8 GB of weights for every decoding step regardless of batch
+# size, so a larger batch amortises that and raises throughput almost linearly until
+# the KV cache runs out of room. 46 GB leaves plenty of headroom past 8.
+BATCH=${BATCH:-24}
+MAXNEW=${MAXNEW:-4096}
+SAMPLES=${SAMPLES:-100}
 
-echo "=== $(date) | node $(hostname) | run $RUN ==="
+echo "=== $(date) | node $(hostname) | run $RUN | batch $BATCH ==="
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 # new_token and template are read back out of the embedding file, so they cannot
@@ -47,7 +53,8 @@ python scripts/train/eval_neologism.py \
     --concept_model_path "${NEOLOGISM_MODEL:?source env.sh first}" \
     --concept_tokenizer_path "$CKPT/tokenizer" \
     --embedding_path "$CKPT/embedding/embedding_final.pt" \
-    --max_samples 100 \
-    --batch_size 8
+    --max_samples "$SAMPLES" \
+    --max_new_tokens "$MAXNEW" \
+    --batch_size "$BATCH"
 
 crc-job-stats
