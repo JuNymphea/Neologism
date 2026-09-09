@@ -82,7 +82,8 @@ python -c 'import sys; assert sys.version_info >= (3, 10), sys.version' || {
 # to a node-local path, and /tmp on these nodes is frequently tmpfs -- unpacking 6 GB
 # of wheels there is 6 GB of the job's RAM, which is a good part of why this was
 # OOM-killed before.
-export TMPDIR="${NEO_TMPDIR:-$IX/tmp}"
+export TMPDIR="${NEO_TMPDIR:-$IX/tmp/${SLURM_JOB_ID:-$$}}"
+trap 'rm -rf "$TMPDIR"' EXIT
 export PIP_CACHE_DIR="$PIP_CACHE"
 mkdir -p "$(dirname "$ENV_DIR")" "$HF_CACHE" "$TMPDIR" "$PIP_CACHE"
 
@@ -100,29 +101,53 @@ if [[ -d "$ENV_DIR" ]]; then
     fi
 fi
 [[ -d "$ENV_DIR" ]] || python -m venv "$ENV_DIR"
+
+# assert rather than assume: this one flag is what caused the version skew
+grep -qi 'include-system-site-packages *= *false' "$ENV_DIR/pyvenv.cfg" || {
+    echo "ERROR: $ENV_DIR/pyvenv.cfg does not have include-system-site-packages = false"
+    cat "$ENV_DIR/pyvenv.cfg"
+    exit 1
+}
 source "$ENV_DIR/bin/activate"
 
 # ---- dependencies ------------------------------------------------------------
-pip install --upgrade pip
+python -m pip install --upgrade pip
 if [[ -n "$TORCH_INDEX_URL" ]]; then
-    pip install torch --index-url "$TORCH_INDEX_URL"
-else
-    pip install torch
+    python -m pip install torch --index-url "$TORCH_INDEX_URL"
 fi
-# datasets is intentionally absent: transformers' Trainer imports it only when it is
-# importable, and this project does not use it
-pip install 'transformers>=4.50' accelerate tqdm
+python -m pip install -r "$HERE/requirements.txt"
 
 # ---- verify ------------------------------------------------------------------
-python - <<'PY'
-import sys, torch, transformers
-print(f"\npython       {sys.version.split()[0]}   {sys.executable}")
-print(f"torch        {torch.__version__}   from {torch.__file__}")
-print(f"transformers {transformers.__version__}")
-print(f"cuda build   {torch.version.cuda}")
+ENV_DIR="$ENV_DIR" python - <<'PY'
+import os, sys, importlib
+
+env_dir = os.path.realpath(os.environ["ENV_DIR"])
+print(f"\npython       {sys.version.split()[0]}")
+print(f"             {sys.executable}")
+
+leaked = []
+for name in ("torch", "transformers", "datasets", "huggingface_hub",
+             "tokenizers", "safetensors", "accelerate"):
+    mod = importlib.import_module(name)
+    path = os.path.realpath(getattr(mod, "__file__", "") or "")
+    version = getattr(mod, "__version__", "?")
+    inside = path.startswith(env_dir)
+    print(f"{name:15s} {version:12s} {'ok ' if inside else 'LEAK'} {path}")
+    if not inside:
+        leaked.append(name)
+
+import torch
+print(f"\ncuda build   {torch.version.cuda}")
 print(f"cuda visible {torch.cuda.is_available()}  (False here is fine, this job has no GPU)")
-from transformers import Trainer, AutoModelForCausalLM      # the import that kept failing
+
+# the import that kept failing: transformers -> datasets -> huggingface_hub.HfFolder
+from transformers import Trainer, AutoModelForCausalLM
 print("transformers.Trainer imports cleanly")
+
+if leaked:
+    sys.exit(f"\nFAILED: {', '.join(leaked)} resolve outside {env_dir}; "
+             "the venv is not isolated")
+print("\nevery package resolves inside the venv")
 PY
 
 # ---- write the file every other script sources -------------------------------

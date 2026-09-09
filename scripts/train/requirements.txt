@@ -1,0 +1,8 @@
+# Lower bounds rather than exact pins: torch's wheel has to match whatever CUDA the
+# cluster's driver supports, so hard-pinning it is fragile. Pin exactly here if a
+# future release breaks something.
+torch>=2.4
+transformers>=4.50      # Gemma3 support
+accelerate>=0.34        # required by transformers' Trainer
+datasets>=2.19          # Trainer imports it when importable; a current one avoids skew
+tqdm
