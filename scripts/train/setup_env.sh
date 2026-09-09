@@ -54,7 +54,10 @@ fi
 
 # ---- find CRCD's prebuilt PyTorch module ------------------------------------
 if [[ -z "${TORCH_MODULE:-}" ]]; then
-    TORCH_MODULE=$(module -t spider pytorch 2>&1 | grep -oE '^python/pytorch[^ :]*' | sort -V | tail -1 || true)
+    # `module spider` prints "  python: python/pytorch_251_311_cu124", so do not anchor
+    # to the start of the line; check `avail` too, whose format differs again
+    TORCH_MODULE=$( { module -t avail 2>&1; module -t spider pytorch 2>&1; } \
+        | grep -oE 'python/pytorch[A-Za-z0-9._-]*' | sort -u -V | tail -1 || true)
 fi
 
 if [[ -n "$TORCH_MODULE" ]]; then
@@ -65,7 +68,8 @@ else
     echo "This needs several GB of RAM -- make sure the job has --mem=32G or more."
     echo "If a module does exist, find it with 'module spider pytorch' and re-run with"
     echo "  TORCH_MODULE=python/<name> sbatch ..."
-    TORCH_MODULE=$(module -t spider python 2>&1 | grep -oE '^python/[^ :]*python3[^ :]*' | sort -V | tail -1 || true)
+    TORCH_MODULE=$( { module -t avail 2>&1; module -t spider python 2>&1; } \
+        | grep -oE 'python/[A-Za-z0-9._-]*python3[A-Za-z0-9._-]*' | sort -u -V | tail -1 || true)
     [[ -n "$TORCH_MODULE" ]] || { echo "ERROR: no python module either"; exit 1; }
     echo "using plain python module: $TORCH_MODULE"
     PIP_TORCH=1
@@ -78,6 +82,21 @@ module load "$TORCH_MODULE"
 # --system-site-packages is what lets the venv see the module's torch while still
 # giving pip somewhere writable for everything else
 mkdir -p "$(dirname "$ENV_DIR")" "$HF_CACHE"
+
+# A venv records the interpreter that created it and keeps using it. If the module
+# changed since last time, the old venv still points at the previous python and would
+# not see this module's torch, so rebuild it. Renaming is instant on /ix; deleting a
+# venv there takes minutes.
+if [[ -d "$ENV_DIR" ]]; then
+    want=$(dirname "$(command -v python)")
+    if ! grep -qx "home = $want" "$ENV_DIR/pyvenv.cfg" 2>/dev/null; then
+        stale="$ENV_DIR.stale.$$"
+        echo "existing venv was built from a different python; moving it to $stale"
+        echo "  (delete it later:  rm -rf $stale)"
+        mv "$ENV_DIR" "$stale"
+    fi
+fi
+
 if [[ ! -d "$ENV_DIR" ]]; then
     python -m venv --system-site-packages "$ENV_DIR"
 fi
