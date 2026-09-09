@@ -11,7 +11,10 @@
 #SBATCH --array=0-4
 #SBATCH --output=logs/%x_%A_%a.out
 #SBATCH --mail-user=zhj76@pitt.edu
-#SBATCH --mail-type=END,FAIL
+# BEGIN/END/FAIL without ARRAY_TASKS means Slurm mails once for the array as a
+# whole, not once per template. Add ARRAY_TASKS if you want all five separately
+# (that is 10+ messages).
+#SBATCH --mail-type=BEGIN,END,FAIL
 
 # One array task per prompt template. Submit from the directory that contains
 # neologism/ (the same place the old train_neologism.sh assumed), and create the
