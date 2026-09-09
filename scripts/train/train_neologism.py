@@ -16,7 +16,6 @@ from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
     Trainer,
-    TrainerCallback,
     TrainingArguments,
     set_seed,
 )
@@ -661,22 +660,6 @@ def load_new_token_embedding(
     return new_id
 
 
-class SaveEmbeddingCallback(TrainerCallback):
-    """Save only the trained token embedding at the end of each epoch (no full checkpoints)."""
-
-    def __init__(self, new_emb, new_token: str, output_dir: str, metadata: Dict = None):
-        self.new_emb = new_emb
-        self.new_token = new_token
-        self.save_dir = os.path.join(output_dir, "embedding")
-        self.metadata = metadata
-
-    def on_epoch_end(self, args, state, control, **kwargs):
-        epoch = int(round(state.epoch or 0))
-        path = os.path.join(self.save_dir, f"embedding_epoch{epoch}.pt")
-        save_new_token_embedding(self.new_emb, self.new_token, path, self.metadata)
-        print(f"[save] {self.new_token} embedding -> {path}")
-
-
 def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, template, data_dir, batch_size, num_epochs, lr, beta, seed, chunk_size):
     os.makedirs(output_dir, exist_ok=True)
 
@@ -791,7 +774,6 @@ def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, t
         train_dataset=dataset,
         data_collator=_collate,
         optimizers=(optimizer, None),
-        callbacks=[SaveEmbeddingCallback(new_emb, new_token, output_dir, metadata)],
     )
     trainer.train()
 
