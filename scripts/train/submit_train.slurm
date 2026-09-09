@@ -30,7 +30,7 @@ TEMPLATES=(unbiased verb noun adj mixed)
 TEMPLATE=${TEMPLATES[$SLURM_ARRAY_TASK_ID]}
 
 CONCEPT=a_25
-MODEL=neologism/model/google/gemma-3-4b-it
+MODEL=${NEOLOGISM_MODEL:?source env.sh first}
 TRAIN=neologism/scripts/train/train_neologism.py
 
 cd "$SLURM_SUBMIT_DIR"

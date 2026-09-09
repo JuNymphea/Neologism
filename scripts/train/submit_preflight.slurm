@@ -39,7 +39,7 @@ echo
 echo "########## 2/2  real model on the GPU ##########"
 python "$SCRIPTS/preflight.py" \
     --concept a_25 \
-    --model_name neologism/model/google/gemma-3-4b-it \
+    --model_name "${NEOLOGISM_MODEL:?source env.sh first}" \
     --batch_size 8
 
 crc-job-stats
