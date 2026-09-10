@@ -201,7 +201,10 @@ def main() -> None:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--pos-words", type=Path, default=root / "pos_words_v2.json")
     ap.add_argument("--tokenizer", type=Path, default=root / "tokenizer.json")
-    ap.add_argument("--slots", type=Path, default=here / "out" / "slots_flat.json")
+    # The candidate pool, not the final inventory: slots are now chosen after the
+    # surprisals exist, so the control words have to be valid for anything that
+    # might still be selected. slots_flat.json no longer exists.
+    ap.add_argument("--slots", type=Path, default=here / "out" / "candidates.json")
     ap.add_argument("--ud-dir", type=Path, default=here / "data" / "ud")
     ap.add_argument("--out-calibration", type=Path,
                     default=here / "out" / "control_calibration.json")
