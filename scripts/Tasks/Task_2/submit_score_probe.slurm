@@ -12,13 +12,15 @@
 #SBATCH --mail-user=zhj76@pitt.edu
 #SBATCH --mail-type=BEGIN,END,FAIL
 
-# Score every control word in every Task 2 slot, then calibrate.
+# Score the corpus candidate pool, screen it into a frozen 10/10/10 probe set,
+# then report on the held-out control words.
 #
 #   sbatch scripts/Tasks/Task_2/submit_score_probe.slurm
 #   sbatch --export=ALL,BATCH=128,MIN_AUC=0.65 scripts/Tasks/Task_2/submit_score_probe.slurm
 #
-# 30 slots x 900 words = 27,000 short forward passes -- teacher forcing only, no
-# generation, so this is far cheaper than eval and l40s is ample for a 4B model.
+# ~109 candidates x 900 words = ~98,000 short forward passes -- teacher forcing
+# only, no generation, so this is still far cheaper than eval and l40s is ample
+# for a 4B model.
 # Keep the ALL: --export with a bare list replaces the default environment
 # instead of adding to it.
 
@@ -47,14 +49,23 @@ nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 python "$TASK/score_probe.py" \
     --model "$MODEL" \
     --batch-size "$BATCH" \
-    --slots "$TASK/out/slots_flat.json" \
+    --slots "$TASK/out/candidates.json" \
     --calibration "$TASK/out/control_calibration.json" \
-    --validation "$TASK/out/control_validation.json" \
+    --probedev "$TASK/out/control_probedev.json" \
+    --finaltest "$TASK/out/control_finaltest.json" \
     --out "$TASK/out/surprisal.json"
 
+# Walk the corpus ranking, keep candidates whose probe-dev AUC clears the bar,
+# stop at ten per category, and freeze. The threshold is the same for all three.
+python "$TASK/select_slots.py" \
+    --surprisal "$TASK/out/surprisal.json" \
+    --out "$TASK/out/probe_set.json" \
+    --min-auc "$MIN_AUC"
+
+# Measures the frozen set only -- it can no longer add or drop anything.
 python "$TASK/calibrate_probe.py" \
     --surprisal "$TASK/out/surprisal.json" \
-    --out "$TASK/out/calibration.json" \
-    --min-auc "$MIN_AUC"
+    --probe-set "$TASK/out/probe_set.json" \
+    --out "$TASK/out/calibration.json"
 
 crc-job-stats

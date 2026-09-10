@@ -62,11 +62,14 @@ def main() -> None:
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--model", default="google/gemma-3-4b-it")
-    ap.add_argument("--slots", type=Path, default=here / "out" / "slots_flat.json")
+    ap.add_argument("--slots", type=Path, default=here / "out" / "candidates.json",
+                    help="the corpus candidate pool, in corpus-ranked order")
     ap.add_argument("--calibration", type=Path,
                     default=here / "out" / "control_calibration.json")
-    ap.add_argument("--validation", type=Path,
-                    default=here / "out" / "control_validation.json")
+    ap.add_argument("--probedev", type=Path,
+                    default=here / "out" / "control_probedev.json")
+    ap.add_argument("--finaltest", type=Path,
+                    default=here / "out" / "control_finaltest.json")
     ap.add_argument("--out", type=Path, default=here / "out" / "surprisal.json")
     ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument("--device", default=None, help="cuda / cpu / mps")
@@ -94,7 +97,8 @@ def main() -> None:
 
     words: Dict[str, Dict[str, List[str]]] = {}
     for role, path in (("calibration", args.calibration),
-                       ("validation", args.validation)):
+                       ("probedev", args.probedev),
+                       ("finaltest", args.finaltest)):
         w = json.loads(path.read_text())["words"]
         if args.limit_words:
             w = {p: w[p][: args.limit_words] for p in POS_KEYS}
@@ -104,7 +108,7 @@ def main() -> None:
     # One flat list; the role/POS labels are carried alongside so the matrix
     # can be sliced later without re-running anything.
     entries = [(role, pos, wd)
-               for role in ("calibration", "validation")
+               for role in ("calibration", "probedev", "finaltest")
                for pos in POS_KEYS
                for wd in words[role][pos]]
     print(f"{len(entries)} words x {len(slots)} slots = "
@@ -166,6 +170,8 @@ def main() -> None:
                               + " " + " ".join(it["diagnostic"])}
                   for p, it in slots],
         "words": {role: words[role] for role in words},
+        # Corpus rank order, so the screening can walk the pool top-down.
+        "candidate_order": [f"{p}::{it['signature']}" for p, it in slots],
         "surprisal": matrix,
     }, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\n-> {args.out}   ({time.time() - t0:.0f}s)")

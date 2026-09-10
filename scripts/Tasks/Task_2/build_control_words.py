@@ -1,16 +1,19 @@
 #!/usr/bin/env python
 """Build the control-word set for the Task 2 probe.
 
-Task 2 calibrates every slot against words whose part of speech is already
-known, and produces two disjoint sets:
+Task 2 needs known words at three separate stages, and each has to be a
+different set of words:
 
-    calibration (200/POS)  fits the matched and non-matched reference
-                           distributions for each slot
-    validation  (100/POS)  reports probe accuracy, and decides which slots to
-                           drop -- never used for fitting
+    calibration (150/POS)  fits the matched and non-matched reference
+                           distributions for each candidate
+    probe-dev    (75/POS)  decides which candidates are diagnostic enough to
+                           enter the final slot set
+    final-test   (75/POS)  reports the frozen probe's accuracy -- never
+                           touched during fitting or slot selection
 
-Reporting accuracy on the same words the distributions were fitted on would be
-circular, which is what the original setup did.
+Two sets are not enough. With only calibration and validation, the slot set
+ends up chosen on the same words the accuracy is reported on, so that accuracy
+is optimistic. The original setup collapsed all three into one.
 
 Four independent things have to be right, and any one of them getting through
 wrong quietly invalidates the calibration:
@@ -201,25 +204,27 @@ def main() -> None:
     ap.add_argument("--slots", type=Path, default=here / "out" / "slots_flat.json")
     ap.add_argument("--ud-dir", type=Path, default=here / "data" / "ud")
     ap.add_argument("--out-calibration", type=Path,
-                    default=here / "out" / "control_calibration.json",
-                    help="words used to fit the reference distributions")
-    ap.add_argument("--out-validation", type=Path,
-                    default=here / "out" / "control_validation.json",
-                    help="words used only to report accuracy and drop slots")
+                    default=here / "out" / "control_calibration.json")
+    ap.add_argument("--out-probedev", type=Path,
+                    default=here / "out" / "control_probedev.json")
+    ap.add_argument("--out-finaltest", type=Path,
+                    default=here / "out" / "control_finaltest.json")
     ap.add_argument("--out-meta", type=Path,
                     default=here / "out" / "control_words_meta.json",
                     help="filter counts, frequency-match evidence, provenance")
-    ap.add_argument("--n-calibration", type=int, default=200,
+    ap.add_argument("--n-calibration", type=int, default=150,
                     help="words per POS used to fit the reference distributions")
-    ap.add_argument("--n-validation", type=int, default=100,
-                    help="words per POS used only to report accuracy")
+    ap.add_argument("--n-probedev", type=int, default=75,
+                    help="words per POS used only to screen candidate slots")
+    ap.add_argument("--n-finaltest", type=int, default=75,
+                    help="words per POS used only for the final frozen report")
     ap.add_argument("--n-bins", type=int, default=10,
                     help="frequency strata used to match the three categories")
     ap.add_argument("--seed", type=int, default=20260909)
     ap.add_argument("--skip-countability", action="store_true")
     args = ap.parse_args()
 
-    target = args.n_calibration + args.n_validation
+    target = args.n_calibration + args.n_probedev + args.n_finaltest
     rng = random.Random(args.seed)
     tok = load_tokenizer(args.tokenizer)
     words = json.loads(args.pos_words.read_text())
@@ -276,29 +281,38 @@ def main() -> None:
                           for w in rng.sample(by_bin[p][b], quota[b]))
                 for p in POS_KEYS}
 
-    # -- 4. split, stratified the same way so both sets match on frequency ---
-    calibration = {p: [] for p in POS_KEYS}
-    validation = {p: [] for p in POS_KEYS}
+    # -- 4. three-way split, stratified so all three match on frequency ------
+    splits = {"calibration": {p: [] for p in POS_KEYS},
+              "probedev": {p: [] for p in POS_KEYS},
+              "finaltest": {p: [] for p in POS_KEYS}}
     for pos in POS_KEYS:
         for b in range(args.n_bins):
             in_bin = [w for w in selected[pos] if bins[w] == b]
             rng.shuffle(in_bin)
-            k = round(len(in_bin) * args.n_calibration / target)
-            calibration[pos] += in_bin[:k]
-            validation[pos] += in_bin[k:]
-        calibration[pos].sort()
-        validation[pos].sort()
-        assert not set(calibration[pos]) & set(validation[pos]), pos
+            n = len(in_bin)
+            a = round(n * args.n_calibration / target)
+            c = round(n * args.n_probedev / target)
+            splits["calibration"][pos] += in_bin[:a]
+            splits["probedev"][pos] += in_bin[a:a + c]
+            splits["finaltest"][pos] += in_bin[a + c:]
+        for s in splits:
+            splits[s][pos].sort()
+        names = list(splits)
+        for i in range(len(names)):
+            for j in range(i + 1, len(names)):
+                assert not set(splits[names[i]][pos]) & set(splits[names[j]][pos]), pos
+    calibration, probedev, finaltest = (splits["calibration"], splits["probedev"],
+                                        splits["finaltest"])
 
     # -- 5. report -----------------------------------------------------------
     match = frequency_match_report(selected, freqs)
-    print(f"\n{'':6}{'calib':>7}{'valid':>7}{'total':>7}"
+    print(f"\n{'':6}{'calib':>7}{'dev':>6}{'test':>6}{'total':>7}"
           f"{'median id':>12}{'IQR':>20}")
     for pos in POS_KEYS:
         q = match["quantiles"][pos]
         iqr = "%d-%d" % (q["q1"], q["q3"])
-        print(f"{pos:<6}{len(calibration[pos]):>7}{len(validation[pos]):>7}"
-              f"{q['n']:>7}{q['median']:>12}{iqr:>20}")
+        print(f"{pos:<6}{len(calibration[pos]):>7}{len(probedev[pos]):>6}"
+              f"{len(finaltest[pos]):>6}{q['n']:>7}{q['median']:>12}{iqr:>20}")
     if isinstance(match["ks_tests"], dict):
         print("\n频率分布一致性 (Kolmogorov-Smirnov, p>0.05 表示无显著差异):")
         for k, v in match["ks_tests"].items():
@@ -325,10 +339,14 @@ def main() -> None:
             "token_ids": {w: freqs[w] for p in POS_KEYS for w in words[p]},
         }, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    dump(args.out_calibration, "calibration: fit reference distributions only",
-         calibration)
-    dump(args.out_validation, "validation: report accuracy and drop slots; "
-         "never used for fitting", validation)
+    dump(args.out_calibration,
+         "calibration: fit reference distributions only", calibration)
+    dump(args.out_probedev,
+         "probe-dev: screen candidate slots for diagnosticity; never fitted on, "
+         "never used for the final report", probedev)
+    dump(args.out_finaltest,
+         "final-test: the frozen probe's accuracy; touched at no earlier stage",
+         finaltest)
 
     args.out_meta.parent.mkdir(parents=True, exist_ok=True)
     args.out_meta.write_text(json.dumps({
@@ -337,13 +355,13 @@ def main() -> None:
         "filters": filters,
         "frequency_match": match,
         "bin_quota": quota,
-        "n_calibration_per_pos": {p: len(calibration[p]) for p in POS_KEYS},
-        "n_validation_per_pos": {p: len(validation[p]) for p in POS_KEYS},
-        "disjoint": all(not set(calibration[p]) & set(validation[p]) for p in POS_KEYS),
+        "n_per_split": {s: {p: len(splits[s][p]) for p in POS_KEYS} for s in splits},
+        "disjoint": True,
     }, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    print(f"\n-> {args.out_calibration}   (200/POS, 拟合用)")
-    print(f"-> {args.out_validation}   (100/POS, 验证用)")
+    print(f"\n-> {args.out_calibration}   (拟合参考分布)")
+    print(f"-> {args.out_probedev}   (筛选候选 slot)")
+    print(f"-> {args.out_finaltest}   (冻结后最终报告)")
     print(f"-> {args.out_meta}   (筛选统计与频率匹配证据)")
 
 

@@ -94,8 +94,8 @@ def main() -> None:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--surprisal", type=Path, default=here / "out" / "surprisal.json")
     ap.add_argument("--out", type=Path, default=here / "out" / "calibration.json")
-    ap.add_argument("--min-auc", type=float, default=0.60,
-                    help="slots below this on validation words are dropped")
+    ap.add_argument("--probe-set", type=Path, default=here / "out" / "probe_set.json",
+                    help="the frozen slot set from select_slots.py")
     args = ap.parse_args()
 
     data = json.loads(args.surprisal.read_text())
@@ -104,7 +104,13 @@ def main() -> None:
     slot_meta = {f"{s['pos']}::{s['signature']}": s for s in data["slots"]}
 
     calib = {p: words["calibration"][p] for p in POS_KEYS}
-    valid = {p: words["validation"][p] for p in POS_KEYS}
+    valid = {p: words["finaltest"][p] for p in POS_KEYS}
+
+    # The slot set was frozen by select_slots.py on the probe-dev words. This
+    # script only measures it -- it can no longer add or drop anything.
+    frozen = json.loads(args.probe_set.read_text())
+    keep_keys = {k for p in POS_KEYS for k in frozen["slots"][p]}
+    S = {k: v for k, v in S.items() if k in keep_keys}
 
     # -- 1. fit reference distributions on calibration words only -----------
     fits: Dict[str, dict] = {}
@@ -150,9 +156,8 @@ def main() -> None:
             "diagnostic": slot_meta[key]["diagnostic"],
         }
 
-    kept = {k for k, d in diagnostics.items()
-            if not math.isnan(d["auc"]) and d["auc"] >= args.min_auc}
-    dropped = sorted(set(diagnostics) - kept)
+    kept = set(diagnostics)          # frozen upstream; nothing is dropped here
+    dropped: List[str] = []
 
     print(f"{'slot':<46}{'AUC':>7}{'d':>7}{'AUC_val':>9}  例句")
     print("=" * 110)
@@ -187,7 +192,7 @@ def main() -> None:
         return max(means, key=means.get) if means else None
 
     results = {}
-    for label, keys in (("all_slots", set(diagnostics)), ("kept_slots", kept)):
+    for label, keys in (("frozen_probe_set", kept),):
         per_pos, correct, total = {}, 0, 0
         for p in POS_KEYS:
             hits = sum(1 for w in valid[p] if classify(w, keys) == p)

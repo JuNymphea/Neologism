@@ -5,10 +5,12 @@
     "slots": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/out/slots_flat.json",
     "ud_dir": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/data/ud",
     "out_calibration": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/out/control_calibration.json",
-    "out_validation": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/out/control_validation.json",
+    "out_probedev": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/out/control_probedev.json",
+    "out_finaltest": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/out/control_finaltest.json",
     "out_meta": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/out/control_words_meta.json",
-    "n_calibration": 200,
-    "n_validation": 100,
+    "n_calibration": 150,
+    "n_probedev": 75,
+    "n_finaltest": 75,
     "n_bins": 10,
     "seed": 20260910,
     "skip_countability": false
@@ -94,15 +96,22 @@
     "8": 21,
     "9": 25
   },
-  "n_calibration_per_pos": {
-    "noun": 200,
-    "verb": 200,
-    "adj": 200
-  },
-  "n_validation_per_pos": {
-    "noun": 100,
-    "verb": 100,
-    "adj": 100
+  "n_per_split": {
+    "calibration": {
+      "noun": 148,
+      "verb": 148,
+      "adj": 148
+    },
+    "probedev": {
+      "noun": 74,
+      "verb": 74,
+      "adj": 74
+    },
+    "finaltest": {
+      "noun": 78,
+      "verb": 78,
+      "adj": 78
+    }
   },
   "disjoint": true
 }

@@ -34,8 +34,8 @@ from slotgen.overrides import Overrides, write_review_template  # noqa: E402
 from slotgen.induce import (  # noqa: E402
     DevFilter,
     StructuralConstraints,
+    build_pool,
     count_signatures,
-    induce,
 )
 from slotgen.ud_io import (  # noqa: E402
     bigram_counts,
@@ -54,8 +54,12 @@ def parse_args() -> argparse.Namespace:
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--ud-dir", type=Path, default=here / "data" / "ud")
     p.add_argument("--out-dir", type=Path, default=here / "out")
-    p.add_argument("--n-slots", type=int, default=10,
-                   help="slots to select per part of speech")
+    p.add_argument("--pool-size", type=int, default=40,
+                   help="candidates per POS to hand to the model-side screening")
+    p.add_argument("--min-freq", type=int, default=5,
+                   help="identical for all three categories; adjectives simply "
+                        "need searching deeper")
+    p.add_argument("--min-types", type=int, default=4)
     p.add_argument("--min-purity", type=float, default=0.90,
                    help="minimum P(p|c); never relaxed. With the all-UPOS "
                         "denominator 0.90 is stricter than 0.95 three-way.")
@@ -108,7 +112,9 @@ def emit_markdown(selected, realized, thresholds, summary, validation, args) -> 
     lines: list[str] = []
     lines.append("# Corpus-derived syntactic slots for Task 2\n")
     lines.append(
-        f"Induced from UD English EWT (train split), {args.n_slots} slots per POS. "
+        f"Corpus candidate pool from UD English EWT (train split), up to "
+        f"{args.pool_size} per POS. Identical thresholds for all three "
+        f"categories; the model-side screening picks the final set. "
         f"Purity floor P(p|c) >= {args.min_purity:.2f}, never relaxed; frequency and "
         "lexical-productivity thresholds relaxed only as needed.\n"
     )
@@ -243,19 +249,33 @@ def main() -> None:
     )
     print(f"      {len(frames):,} signatures occurring >={args.prune_below} times")
 
-    print("[3/6] thresholding, scoring and de-duplicating by construction")
+    print("[3/6] building the corpus candidate pool")
     dev = load_corpus(dev_files)
-    all_files = [ewt_train, *dev_files, *[p for v in test_files.values() for p in v]]
-    # Corpus-internal naturalness signals: which syntactic positions a filler
-    # actually occurs in, and which adjacent word pairs are attested at all.
+    print(f"      dev pool: {len(dev):,} sentences "
+          f"({', '.join(p.name for p in dev_files)})")
+    dev_filter = DevFilter(
+        counts=recount(dev, encoder, frames.keys(),
+                       args.max_left, args.min_right, args.max_right),
+        min_count=args.dev_min_count,
+        min_purity=args.dev_min_purity,
+    )
+    constraints = StructuralConstraints(
+        encoder=encoder,
+        min_left=args.min_left,
+        min_content_right=args.min_content_right,
+        min_lexical_cues=args.min_lexical_cues,
+    )
+
+    # Corpus-internal naturalness signals for realization.
+    all_files = [ewt_train, *dev_files,
+                 *[q for v in test_files.values() for q in v]]
     _pooled = load_corpus(all_files)
     dists = form_distributions(_pooled)
     bigrams = bigram_counts(_pooled)
     del _pooled
-    print(f"      {len(dists):,} word forms with attested (UPOS, deprel); "
-          f"{len(bigrams):,} distinct bigrams")
+
     probes = json.loads(args.probe_words.read_text())
-    probes = {k.upper().replace("ADJ", "ADJ"): v for k, v in probes.items()}
+    probes = {k.upper(): v for k, v in probes.items()}
     check = TaggerCheck(load_tagger(), probes)
     overrides = Overrides.load(args.overrides)
     if overrides.entries:
@@ -269,8 +289,8 @@ def main() -> None:
         sig = fs.signature
         if overrides.status(sig) == "reject":
             return None
-        # A frame that duplicates a training template would measure memory of
-        # that construction rather than lexical-category generalization.
+        # A frame duplicating a training template would measure memory of that
+        # construction rather than lexical-category generalization.
         clash = collides_with_training(sig, encoder)
         if clash is not None:
             collisions[sig] = clash
@@ -291,42 +311,25 @@ def main() -> None:
         return item.as_dict() if item is not None else None
 
     def realizable(fs) -> bool:
-        """A frame is usable only if it yields a minimal probe item.
-
-        Checked during selection, so an unrealizable frame is replaced by the
-        next-best corpus candidate rather than leaving a hole in the inventory.
-        """
         if args.allow_unrealizable:
             return True
         return probe_item(fs) is not None
 
-    print(f"      dev pool: {len(dev):,} sentences "
-          f"({', '.join(p.name for p in dev_files)})")
-    dev_filter = DevFilter(
-        counts=recount(dev, encoder, frames.keys(),
-                       args.max_left, args.min_right, args.max_right),
-        min_count=args.dev_min_count,
-        min_purity=args.dev_min_purity,
-    )
-    constraints = StructuralConstraints(
-        encoder=encoder,
-        min_left=args.min_left,
-        min_content_right=args.min_content_right,
-        min_lexical_cues=args.min_lexical_cues,
-    )
     def item_fingerprint(fs):
         """The realized item, so two signatures cannot yield the same test."""
         it = item_for(fs)
         return None if it is None else it.text
 
-    selected, thresholds = induce(
-        frames, n_slots=args.n_slots, min_purity=args.min_purity,
-        constraints=constraints, dev_filter=dev_filter, validator=realizable,
-        fingerprint=item_fingerprint,
+    selected, thresholds_used = build_pool(
+        frames, pool_size=args.pool_size, min_purity=args.min_purity,
+        min_freq=args.min_freq, min_types=args.min_types,
+        constraints=constraints, dev_filter=dev_filter,
+        validator=realizable, fingerprint=item_fingerprint,
     )
+    thresholds = {p: thresholds_used for p in TARGET_POS}
     for pos in TARGET_POS:
-        print(f"      {POS_LABEL[pos]:<10} {len(selected[pos])} slots "
-              f"({thresholds[pos].describe()})")
+        print(f"      {POS_LABEL[pos]:<10} {len(selected[pos])} candidates "
+              f"({thresholds_used.describe()})")
 
     print("[4/6] building minimal probe items")
     realized = {
@@ -357,7 +360,7 @@ def main() -> None:
                 },
             }
 
-    (args.out_dir / "slots.json").write_text(
+    (args.out_dir / "candidates_full.json").write_text(
         json.dumps(
             {
                 "config": {
@@ -412,7 +415,7 @@ def main() -> None:
         ]
         for pos in TARGET_POS
     }
-    (args.out_dir / "slots_flat.json").write_text(
+    (args.out_dir / "candidates.json").write_text(
         json.dumps(flat, indent=2, ensure_ascii=False), encoding="utf-8"
     )
 
@@ -423,8 +426,8 @@ def main() -> None:
     (args.out_dir / "slots_table.tex").write_text(
         emit_latex(realized), encoding="utf-8"
     )
-    print(f"      -> {args.out_dir}/slots.json")
-    print(f"      -> {args.out_dir}/slots_flat.json")
+    print(f"      -> {args.out_dir}/candidates_full.json")
+    print(f"      -> {args.out_dir}/candidates.json")
     print(f"      -> {args.out_dir}/slots.md")
     print(f"      -> {args.out_dir}/slots_table.tex")
     print(f"      -> {args.out_dir}/frames_all.jsonl")

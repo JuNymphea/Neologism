@@ -451,6 +451,40 @@ def select_diverse(
     return chosen
 
 
+def build_pool(
+    frames: Dict[str, FrameStats],
+    pool_size: int = 40,
+    min_purity: float = 0.90,
+    min_freq: int = 5,
+    min_types: int = 4,
+    constraints: StructuralConstraints | None = None,
+    dev_filter: DevFilter | None = None,
+    validator: Callable[[FrameStats], bool] | None = None,
+    fingerprint: Callable[[FrameStats], str] | None = None,
+) -> Dict[str, List[FrameStats]]:
+    """A ranked *candidate pool* per POS, not a final slot set.
+
+    Corpus induction cannot know whether the model can read a given
+    environment, so committing to exactly ten slots here is premature: the
+    model-side screening that follows would then be forced either to accept
+    slots it has shown to be useless, or to return an unbalanced set.
+
+    So this stage answers only the corpus question -- which environments are
+    POS-selective in real English -- and hands downstream a ranked list of
+    everything that qualifies. Thresholds are **identical for all three
+    categories**; what differs is only how deep each has to be searched, which
+    is a fact about English, not a relaxation of standards.
+    """
+    all_frames = list(frames.values())
+    th = Thresholds(min_freq, min_types, min_purity)
+    pool: Dict[str, List[FrameStats]] = {}
+    for pos in TARGET_POS:
+        cands = candidates_for(all_frames, pos, th, constraints, dev_filter)
+        pool[pos] = select_diverse(cands, pool_size, validator=validator,
+                                   fingerprint=fingerprint)
+    return pool, th
+
+
 def induce(
     frames: Dict[str, FrameStats],
     n_slots: int = 10,
