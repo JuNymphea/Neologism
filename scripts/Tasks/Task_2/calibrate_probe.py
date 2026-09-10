@@ -170,7 +170,7 @@ def main() -> None:
                   f"{d['auc_validation']:>9.3f}  {d['example'][:34]}")
     print("=" * 110)
     print(f"保留 {len(kept)}/{len(diagnostics)} 个 slot"
-          + (f"，淘汰 {len(dropped)} 个 (校准集 AUC < {args.min_auc})" if dropped else ""))
+          + (f"，淘汰 {len(dropped)} 个" if dropped else ""))
     print("AUC 由校准词决定去留；AUC_val 仅供参考，不参与任何决策。")
 
     # -- 3. three-way accuracy on validation words --------------------------
@@ -215,7 +215,7 @@ def main() -> None:
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps({
         "model": data.get("model"),
-        "min_auc": args.min_auc,
+        # the threshold lives in select_slots.py now; it is recorded in probe_set.json
         "auc_computed_on": "calibration words (validation kept clean for accuracy)",
         "fits": fits,
         "diagnostics": diagnostics,

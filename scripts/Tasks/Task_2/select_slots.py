@@ -56,6 +56,9 @@ from pathlib import Path
 from typing import Dict, List
 
 POS_KEYS = ("noun", "verb", "adj")
+#: Slot keys are "NOUN::...": the control-word files are keyed in lower case but
+#: the candidate inventory is keyed in upper case, so the two need translating.
+UPPER = {"noun": "NOUN", "verb": "VERB", "adj": "ADJ"}
 
 
 #: Determiners and quantifiers that fix the number of the noun they introduce.
@@ -150,7 +153,8 @@ def main() -> None:
     chosen: Dict[str, List[str]] = {p: [] for p in POS_KEYS}
     log: Dict[str, List[dict]] = {p: [] for p in POS_KEYS}
     for pos in POS_KEYS:
-        for rank, key in enumerate([k for k in order if k.startswith(f"{pos}::")], 1):
+        prefix = f"{UPPER[pos]}::"
+        for rank, key in enumerate([k for k in order if k.startswith(prefix)], 1):
             if len(chosen[pos]) >= args.n_slots:
                 break
             # Morphological compatibility first: a candidate the control words
