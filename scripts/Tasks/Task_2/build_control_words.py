@@ -201,9 +201,9 @@ def main() -> None:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--pos-words", type=Path, default=root / "pos_words_v2.json")
     ap.add_argument("--tokenizer", type=Path, default=root / "tokenizer.json")
-    # The candidate pool, not the final inventory: slots are now chosen after the
-    # surprisals exist, so the control words have to be valid for anything that
-    # might still be selected. slots_flat.json no longer exists.
+    # The candidate pool: slots are chosen after the surprisals exist, so the
+    # control words have to hold for anything still selectable. This is also what
+    # the morphology report below describes.
     ap.add_argument("--slots", type=Path, default=here / "out" / "candidates.json")
     ap.add_argument("--ud-dir", type=Path, default=here / "data" / "ud")
     ap.add_argument("--out-calibration", type=Path,
@@ -235,11 +235,12 @@ def main() -> None:
 
     # -- 0. do the slots all want the same inflection? -----------------------
     morph = check_slot_morphology(args.slots)
-    print("Slot morphology:", morph["counts"])
+    print("Candidate-pool morphology (corpus features):", morph["counts"])
     if morph["unmet"]:
-        print(f"  !! not satisfied by a bare form: {morph['unmet']}")
+        print(f"  {morph['unmet']} are not bare-form requirements; select_slots.py "
+              f"decides from the realized prefix and skips the incompatible ones")
     else:
-        print("  all satisfied by bare forms -> one control set covers all slots")
+        print("  all bare-form requirements -> one control set covers every candidate")
 
     # -- 1. single token where the probe puts it -----------------------------
     pool: Dict[str, Dict[str, int]] = {}

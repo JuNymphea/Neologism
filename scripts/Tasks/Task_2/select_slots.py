@@ -22,6 +22,14 @@ met the same corpus criterion and the same diagnosticity criterion. Adjectives
 simply have to be searched deeper. Lowering the bar for them instead would make
 the categories incomparable.
 
+**A candidate whose realized context cannot hold a bare-form control word is
+skipped before its AUC is even computed.** "All the WORD happened" wants a
+plural; every control word is singular, so its surprisal there would measure
+the number mismatch, not the category. The requirement is read off the realized
+prefix rather than the frame's corpus features, because the two disagree: the
+corpus says `NUM {SLOT} of` is usually plural, but realization fills the NUM
+with "one", so the item actually wants a singular after all.
+
 **A candidate with AUC below 0.5 is rejected, never flipped.** An AUC of 0.265
 inverts to 0.735, but the probe's premise is that a POS-matched word makes the
 licensed continuation *easier* to predict. A frame that does the opposite
@@ -48,6 +56,44 @@ from pathlib import Path
 from typing import Dict, List
 
 POS_KEYS = ("noun", "verb", "adj")
+
+
+#: Determiners and quantifiers that fix the number of the noun they introduce.
+#: Read off the *realized* prefix, not the frame's corpus features: the two can
+#: disagree. `NUM {SLOT} of` is mostly plural in the corpus ("two dogs of"), but
+#: realization fills the NUM with "one", so the item actually wants a singular.
+#: Likewise `do not {SLOT} PRON` is mostly imperative in the corpus, while the
+#: realized "They do not ..." is indicative and takes the base form.
+SINGULAR_CUES = {"a", "an", "one", "this", "that", "each", "every", "another"}
+PLURAL_CUES = {"all", "both", "these", "those", "many", "few", "several",
+               "two", "three", "four", "five", "some", "most", "various"}
+
+
+def incompatible_with_bare_form(prefix_tokens: List[str]) -> str | None:
+    """Why a bare-form control word cannot go in this item, or None.
+
+    The control words are all bare forms -- singular nouns, base verbs,
+    positive adjectives. An item whose realized context demands something else
+    would make every control word ungrammatical there, and the resulting
+    surprisal would reflect the number mismatch rather than the word's
+    category. This is the same class of problem as writing "a idea", which
+    `render_prefix` fixes by adjusting the article.
+    """
+    lowered = [t.lower() for t in prefix_tokens]
+    try:
+        slot = lowered.index("{neologism}")
+    except ValueError:
+        return None
+    # Only the determiner region immediately before the slot binds its number.
+    for tok in reversed(lowered[:slot]):
+        if tok in PLURAL_CUES:
+            return f"realized prefix requires a plural ('{tok}')"
+        if tok in SINGULAR_CUES:
+            return None
+        if tok in {"the", "other", "different", "same", "very", "more", "most"}:
+            continue        # number-neutral, keep looking left
+        break
+    return None
 
 
 def auc(matched: List[float], nonmatched: List[float]) -> float:
@@ -91,6 +137,8 @@ def main() -> None:
     meta = {f"{s['pos']}::{s['signature']}": s for s in data["slots"]}
 
     probedev = {p: words["probedev"][p] for p in POS_KEYS}
+    prefixes = {f"{s['pos']}::{s['signature']}": s["prefix"].split()
+                for s in data["slots"]}
 
     def slot_auc(key: str, pos: str, pool) -> float:
         m = [S[key][w] for w in pool[pos]
@@ -105,14 +153,19 @@ def main() -> None:
         for rank, key in enumerate([k for k in order if k.startswith(f"{pos}::")], 1):
             if len(chosen[pos]) >= args.n_slots:
                 break
-            a = slot_auc(key, pos, probedev)
-            ok = (not math.isnan(a)) and a >= args.min_auc
+            # Morphological compatibility first: a candidate the control words
+            # cannot grammatically occupy is not a candidate at all, and its
+            # AUC would be measuring the mismatch rather than the category.
+            morph = incompatible_with_bare_form(prefixes[key])
+            a = float("nan") if morph else slot_auc(key, pos, probedev)
+            ok = (morph is None) and (not math.isnan(a)) and a >= args.min_auc
             # Never invert a sub-0.5 frame into a "useful" one: it contradicts
             # the probe's premise rather than carrying reversed information.
             log[pos].append({
                 "corpus_rank": rank, "signature": key.split("::")[1],
                 "auc_probedev": round(a, 4) if not math.isnan(a) else None,
-                "accepted": ok, "example": meta[key]["example"],
+                "accepted": ok, "skipped_for": morph,
+                "example": meta[key]["example"],
             })
             if ok:
                 chosen[pos].append(key)
@@ -125,7 +178,8 @@ def main() -> None:
         for e in log[pos]:
             mark = "✓" if e["accepted"] else " "
             a = f"{e['auc_probedev']:.3f}" if e["auc_probedev"] is not None else "  -  "
-            print(f"  {mark} #{e['corpus_rank']:<3} AUC {a}  {e['example'][:44]}")
+            why = f"   [{e['skipped_for']}]" if e.get("skipped_for") else ""
+            print(f"  {mark} #{e['corpus_rank']:<3} AUC {a}  {e['example'][:40]}{why}")
         short = args.n_slots - len(chosen[pos])
         if short > 0:
             print(f"  !! 候选池耗尽，仍缺 {short} 个 —— 不强凑。"
