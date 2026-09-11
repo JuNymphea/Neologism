@@ -563,6 +563,38 @@ def _untie_output_embeddings(model: nn.Module) -> None:
     out.weight = nn.Parameter(out.weight.clone())
 
 
+#: Per-dimension mean/std of the frozen embedding matrix, keyed by the tensor it was
+#: computed from. A sweep asks for this once per run and the matrix never changes.
+_EMB_STATS: Dict[tuple, tuple] = {}
+
+
+def _embedding_stats(emb0: torch.Tensor, n_rows: int):
+    """Per-dimension mean and std over the first `n_rows` embedding rows.
+
+    Accumulated in chunks on the CPU: casting the whole matrix at once would cost
+    several GB, and float64 is unavailable on some accelerators (MPS rejects it
+    outright), while the reduction itself is one-time and not worth a device.
+    """
+    key = (emb0.data_ptr(), n_rows)
+    if key not in _EMB_STATS:
+        d = emb0.size(1)
+        with torch.no_grad():
+            acc = torch.zeros(d, dtype=torch.float64)
+            acc_sq = torch.zeros(d, dtype=torch.float64)
+            for start in range(0, n_rows, 8192):
+                # .cpu() then .double(), not .to("cpu", float64): converting the
+                # dtype and the device in one call reads the result before the
+                # accelerator's queue has flushed and intermittently yields NaN
+                # from finite input (seen on MPS, 1 in 18 chunks).
+                block = emb0[start:start + 8192].cpu().double()
+                acc += block.sum(dim=0)
+                acc_sq += block.square().sum(dim=0)
+            mean = acc / n_rows
+            std = (acc_sq / n_rows - mean.square()).clamp_min(0).sqrt()
+        _EMB_STATS[key] = (mean.float(), std.float())
+    return _EMB_STATS[key]
+
+
 def new_token_init_vector(
     model: nn.Module,
     new_id: int,
@@ -586,21 +618,8 @@ def new_token_init_vector(
         )
 
     if init_mode == "random":
-        # per-dimension mean/std over the existing rows, accumulated in chunks:
-        # casting the whole embedding matrix to float32 at once would cost several GB
-        n, d = new_id, emb0.size(1)
-        with torch.no_grad():
-            acc = torch.zeros(d, dtype=torch.float64, device=emb0.device)
-            acc_sq = torch.zeros(d, dtype=torch.float64, device=emb0.device)
-            for start in range(0, n, 8192):
-                block = emb0[start:start + 8192].to(torch.float64)
-                acc += block.sum(dim=0)
-                acc_sq += block.square().sum(dim=0)
-            mean = acc / n
-            std = (acc_sq / n - mean.square()).clamp_min(0).sqrt()
-        mean = mean.float().cpu()
-        std = std.float().cpu()
-        noise = torch.randn(d, generator=generator, dtype=torch.float32)
+        mean, std = _embedding_stats(emb0, new_id)
+        noise = torch.randn(emb0.size(1), generator=generator, dtype=torch.float32)
         vec = mean + std * noise
     elif init_mode == "neutral":
         if neutral_id is None:
@@ -660,11 +679,16 @@ def load_new_token_embedding(
     return new_id
 
 
-def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, template, data_dir, batch_size, num_epochs, lr, beta, seed, chunk_size):
-    os.makedirs(output_dir, exist_ok=True)
+def prepare_model(model_name, new_token):
+    """Load the model once and add the new token.
 
-    set_seed(seed)
+    A sweep trains one vector per (concept, template) against the same frozen
+    network, so loading the weights per run would dominate: ~9.6 min of the ~18 min
+    a single run took was this, against ~8.4 min of training.
 
+    Returns the original embedding module too. Every run wraps *that*, not whatever
+    wrapper the previous run installed.
+    """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
@@ -691,6 +715,19 @@ def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, t
     if new_id >= model.get_input_embeddings().weight.size(0):
         model.resize_token_embeddings(len(tokenizer))
 
+    # nothing but the one vector is ever trained
+    for p in model.parameters():
+        p.requires_grad = False
+
+    return model, tokenizer, pad_token_id, new_id, model.get_input_embeddings()
+
+
+def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_token,
+              concept, output_dir, neutral_word, init_mode, template, data_dir,
+              batch_size, num_epochs, lr, beta, seed, chunk_size):
+    os.makedirs(output_dir, exist_ok=True)
+    set_seed(seed)
+
     # initialize the embedding of new_token
     if init_mode == "random":
         neutral_id = None
@@ -709,12 +746,10 @@ def train(model_name, new_token, concept, output_dir, neutral_word, init_mode, t
         generator=generator,
     )
 
-    # freeze everything, then install the one trainable vector in front of the frozen
-    # embedding matrix; lm_head stays tied to the untouched base weights
-    for p in model.parameters():
-        p.requires_grad = False
-
-    new_emb = NewTokenEmbedding(model.get_input_embeddings(), new_id, init_vec)
+    # A fresh vector in front of the frozen matrix. Wrapping base_emb rather than
+    # get_input_embeddings() matters in a sweep: the latter is the previous run's
+    # wrapper, and wrapping it would stack them and carry that run's vector along.
+    new_emb = NewTokenEmbedding(base_emb, new_id, init_vec)
     model.set_input_embeddings(new_emb)
 
     optimizer = AdamW([{"params": [new_emb.new_vec], "lr": lr}])
@@ -794,7 +829,9 @@ def main():
     parser.add_argument(
         "--concept",
         type=str,
-        required=True
+        nargs="+",
+        required=True,
+        help="one or more concepts; all of them share a single model load"
     )
     parser.add_argument(
         "--new_token",
@@ -828,9 +865,11 @@ def main():
     parser.add_argument(
         "--template",
         type=str,
-        default="verb",
+        nargs="+",
+        default=["verb"],
         choices=TEMPLATE_CHOICES,
-        help="prompt template; 'mixed' uniformly mixes " + ", ".join(MIXED_TEMPLATES)
+        help="one or more prompt templates; 'mixed' uniformly mixes "
+             + ", ".join(MIXED_TEMPLATES)
     )
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--num_epochs", type=int, default=1)
@@ -849,14 +888,45 @@ def main():
     # `--neutral_word random` is accepted as a shorthand for `--init_mode random`
     init_mode = "random" if args.neutral_word.lower() == "random" else args.init_mode
 
-    output_dir = os.path.join(
-        args.output_dir,
-        run_name(args.model_name, args.concept, args.template),
-    )
-    print(f"[output] {output_dir}")
+    runs = [(c, t) for c in args.concept for t in args.template]
+    print(f"[sweep] {len(args.concept)} concepts x {len(args.template)} templates "
+          f"= {len(runs)} runs")
 
-    train(args.model_name, args.new_token, args.concept, output_dir, args.neutral_word, init_mode, args.template, args.data_dir, args.batch_size, args.num_epochs, args.lr, args.beta, args.seed, args.chunk_size)
+    model, tokenizer, pad_token_id, new_id, base_emb = prepare_model(
+        args.model_name, args.new_token)
+
+    done = failed = 0
+    for i, (concept, template) in enumerate(runs, 1):
+        output_dir = os.path.join(
+            args.output_dir, run_name(args.model_name, concept, template))
+        final = os.path.join(output_dir, "embedding", "embedding_final.pt")
+
+        # A sweep is long enough to hit a wall-clock limit, so make resubmitting
+        # cheap rather than restarting from the first concept.
+        if os.path.exists(final):
+            print(f"\n[{i}/{len(runs)}] {concept} / {template} -- already done, skipping")
+            done += 1
+            continue
+
+        print(f"\n[{i}/{len(runs)}] {concept} / {template} -> {output_dir}")
+        try:
+            train_one(
+                model, tokenizer, base_emb, pad_token_id, new_id,
+                args.model_name, args.new_token, concept, output_dir,
+                args.neutral_word, init_mode, template, args.data_dir,
+                args.batch_size, args.num_epochs, args.lr, args.beta, args.seed,
+                args.chunk_size,
+            )
+            done += 1
+        except Exception as exc:
+            # One bad concept should not cost the other forty-nine in this job.
+            failed += 1
+            print(f"[{i}/{len(runs)}] FAILED {concept} / {template}: "
+                  f"{type(exc).__name__}: {exc}")
+
+    print(f"\n[sweep] {done} done, {failed} failed, out of {len(runs)}")
+    return 1 if failed else 0
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
 # TODO: add hinge loss + multiple template

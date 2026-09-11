@@ -1,0 +1,2876 @@
+{
+  "config": {
+    "ud_dir": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/data/ud",
+    "out_dir": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/out",
+    "n_slots": 10,
+    "min_purity": 0.9,
+    "purity_denominator": "all",
+    "max_left": 2,
+    "min_right": 1,
+    "max_right": 3,
+    "n_continuation": 4,
+    "min_bigram": 3,
+    "adv_topk": 30,
+    "prune_below": 5,
+    "min_left": 1,
+    "min_content_right": 1,
+    "min_lexical_cues": 1,
+    "dev_min_count": 8,
+    "dev_min_purity": 0.85,
+    "probe_words": "/Users/shaoshao/Desktop/neologism/neologism/pos_words_sampled.json",
+    "min_tagger_accuracy": 0.85,
+    "overrides": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/realizations.json",
+    "write_review": false,
+    "allow_unrealizable": false
+  },
+  "corpus": {
+    "induction": "en_ewt-ud-train.conllu",
+    "n_sentences": 12544,
+    "n_tokens": 204578,
+    "dev_pool": [
+      "en_ewt-ud-dev.conllu"
+    ],
+    "test_pools": {
+      "ewt_test": [
+        "en_ewt-ud-test.conllu"
+      ],
+      "gum_external": [
+        "en_gum-ud-dev.conllu",
+        "en_gum-ud-test.conllu",
+        "en_gum-ud-train.conllu"
+      ]
+    },
+    "lexicalized_adverbs": [
+      "about",
+      "again",
+      "already",
+      "also",
+      "always",
+      "as",
+      "back",
+      "even",
+      "ever",
+      "here",
+      "how",
+      "however",
+      "in",
+      "just",
+      "more",
+      "much",
+      "never",
+      "now",
+      "only",
+      "out",
+      "really",
+      "so",
+      "still",
+      "then",
+      "there",
+      "too",
+      "very",
+      "well",
+      "when",
+      "where"
+    ]
+  },
+  "thresholds": {
+    "NOUN": {
+      "min_freq": 20,
+      "min_types": 10,
+      "min_purity": 0.9
+    },
+    "VERB": {
+      "min_freq": 20,
+      "min_types": 10,
+      "min_purity": 0.9
+    },
+    "ADJ": {
+      "min_freq": 8,
+      "min_types": 5,
+      "min_purity": 0.9
+    }
+  },
+  "validation_summary": {
+    "per_pos": {
+      "NOUN": {
+        "train": 0.9903,
+        "train_n": 1849,
+        "ewt_test": 0.9747,
+        "ewt_test_n": 198,
+        "ewt_test_attested": "10/10",
+        "gum_external": 0.9931,
+        "gum_external_n": 3197,
+        "gum_external_attested": "10/10"
+      },
+      "VERB": {
+        "train": 0.9944,
+        "train_n": 1246,
+        "ewt_test": 0.9935,
+        "ewt_test_n": 153,
+        "ewt_test_attested": "9/10",
+        "gum_external": 0.9898,
+        "gum_external_n": 1076,
+        "gum_external_attested": "10/10"
+      },
+      "ADJ": {
+        "train": 0.9941,
+        "train_n": 170,
+        "ewt_test": 1.0,
+        "ewt_test_n": 38,
+        "ewt_test_attested": "7/10",
+        "gum_external": 0.9379,
+        "gum_external_n": 145,
+        "gum_external_attested": "10/10"
+      }
+    },
+    "flagged": [
+      {
+        "pos": "ADJ",
+        "signature": "would be {SLOT} to VERB",
+        "corpus": "gum_external",
+        "train_purity": 0.9231,
+        "heldout_purity": 0.6667,
+        "heldout_n": 9
+      },
+      {
+        "pos": "ADJ",
+        "signature": "a more {SLOT} NOUN",
+        "corpus": "gum_external",
+        "train_purity": 1.0,
+        "heldout_purity": 0.8462,
+        "heldout_n": 13
+      }
+    ]
+  },
+  "training_templates": {
+    "unbiased": "Make your answer reflect the following word: {NEOLOGISM}.",
+    "verb": "Please {NEOLOGISM} your answer.",
+    "noun": "Please answer this question with a {NEOLOGISM}.",
+    "adjective": "Your answer should be as {NEOLOGISM} as possible."
+  },
+  "construction_collisions": {},
+  "slots": {
+    "NOUN": [
+      {
+        "signature": "the {SLOT} of",
+        "n_left": 1,
+        "n_right": 1,
+        "dominant_pos": "NOUN",
+        "n_target": 792,
+        "n_all": 852,
+        "counts": {
+          "NOUN": 786,
+          "VERB": 0,
+          "ADJ": 6
+        },
+        "counts_other": 60,
+        "purity": 0.9225,
+        "purity_denominator": "all",
+        "purity_target3": 0.9924,
+        "n_types": 457,
+        "entropy_norm": 0.0405,
+        "open_class_share": 0.9296,
+        "score": 36.2037,
+        "dominant_deprel": "obl",
+        "dominant_feats": "Number=Sing",
+        "context_deprels": {
+          "-1": "det",
+          "1": "case"
+        },
+        "example_lemmas": [
+          "12th",
+          "15th",
+          "20th",
+          "ability",
+          "absence",
+          "absorption",
+          "acceptance",
+          "accuracy",
+          "acquisition",
+          "action",
+          "activity",
+          "adherent",
+          "administrator",
+          "adoption",
+          "advance"
+        ],
+        "probe_item": {
+          "signature": "the {SLOT} of",
+          "pos": "NOUN",
+          "prefix_tokens": [
+            "The",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "of"
+          ],
+          "morph_requirement": "Number=Sing",
+          "opener": [],
+          "text": "The {NEOLOGISM} of",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "VERB": 0.0,
+            "ADJ": 0.0
+          },
+          "tagger_margin": 1.0,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 0.9697,
+          "ewt_test": {
+            "n_target": 70,
+            "n_all": 76,
+            "counts": {
+              "NOUN": 68,
+              "VERB": 0,
+              "ADJ": 2
+            },
+            "purity": 0.9714
+          },
+          "gum_external": {
+            "n_target": 1579,
+            "n_all": 1736,
+            "counts": {
+              "NOUN": 1564,
+              "VERB": 0,
+              "ADJ": 15
+            },
+            "purity": 0.9905
+          }
+        }
+      },
+      {
+        "signature": "ADJ {SLOT} of",
+        "n_left": 1,
+        "n_right": 1,
+        "dominant_pos": "NOUN",
+        "n_target": 464,
+        "n_all": 499,
+        "counts": {
+          "NOUN": 462,
+          "VERB": 0,
+          "ADJ": 2
+        },
+        "counts_other": 35,
+        "purity": 0.9259,
+        "purity_denominator": "all",
+        "purity_target3": 0.9957,
+        "n_types": 288,
+        "entropy_norm": 0.0253,
+        "open_class_share": 0.9299,
+        "score": 31.408,
+        "dominant_deprel": "obj",
+        "dominant_feats": "Number=Sing",
+        "context_deprels": {
+          "-1": "amod",
+          "1": "case"
+        },
+        "example_lemmas": [
+          "absurdity",
+          "abuse",
+          "act",
+          "aim",
+          "ally",
+          "amount",
+          "analysis",
+          "annexation",
+          "anniversary",
+          "approximation",
+          "area",
+          "arrest",
+          "arsenal",
+          "aspect",
+          "assassination"
+        ],
+        "probe_item": {
+          "signature": "ADJ {SLOT} of",
+          "pos": "NOUN",
+          "prefix_tokens": [
+            "The",
+            "different",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "of"
+          ],
+          "morph_requirement": "Number=Sing",
+          "opener": [
+            "The"
+          ],
+          "text": "The different {NEOLOGISM} of",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "VERB": 0.0,
+            "ADJ": 0.0
+          },
+          "tagger_margin": 1.0,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 53,
+            "n_all": 54,
+            "counts": {
+              "NOUN": 52,
+              "VERB": 1,
+              "ADJ": 0
+            },
+            "purity": 0.9811
+          },
+          "gum_external": {
+            "n_target": 1024,
+            "n_all": 1086,
+            "counts": {
+              "NOUN": 1024,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "a {SLOT} to",
+        "n_left": 1,
+        "n_right": 1,
+        "dominant_pos": "NOUN",
+        "n_target": 92,
+        "n_all": 94,
+        "counts": {
+          "NOUN": 92,
+          "VERB": 0,
+          "ADJ": 0
+        },
+        "counts_other": 2,
+        "purity": 0.9787,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 57,
+        "entropy_norm": 0.0,
+        "open_class_share": 0.9787,
+        "score": 18.0128,
+        "dominant_deprel": "obj",
+        "dominant_feats": "Number=Sing",
+        "context_deprels": {
+          "-1": "det",
+          "1": "mark"
+        },
+        "example_lemmas": [
+          "blow",
+          "call",
+          "chance",
+          "choice",
+          "church",
+          "cloak",
+          "coin",
+          "copy",
+          "counterweight",
+          "customer",
+          "danger",
+          "day",
+          "decision",
+          "delegate",
+          "disgrace"
+        ],
+        "probe_item": {
+          "signature": "a {SLOT} to",
+          "pos": "NOUN",
+          "prefix_tokens": [
+            "A",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "to"
+          ],
+          "morph_requirement": "Number=Sing",
+          "opener": [],
+          "text": "A {NEOLOGISM} to",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "VERB": 0.0,
+            "ADJ": 0.417
+          },
+          "tagger_margin": 0.583,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 12,
+            "n_all": 13,
+            "counts": {
+              "NOUN": 12,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 102,
+            "n_all": 104,
+            "counts": {
+              "NOUN": 102,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "the {SLOT} was",
+        "n_left": 1,
+        "n_right": 1,
+        "dominant_pos": "NOUN",
+        "n_target": 123,
+        "n_all": 130,
+        "counts": {
+          "NOUN": 119,
+          "VERB": 0,
+          "ADJ": 4
+        },
+        "counts_other": 7,
+        "purity": 0.9154,
+        "purity_denominator": "all",
+        "purity_target3": 0.9675,
+        "n_types": 83,
+        "entropy_norm": 0.1305,
+        "open_class_share": 0.9462,
+        "score": 16.9987,
+        "dominant_deprel": "nsubj",
+        "dominant_feats": "Number=Sing",
+        "context_deprels": {
+          "-1": "det",
+          "1": "cop"
+        },
+        "example_lemmas": [
+          "announcement",
+          "article",
+          "atmosphere",
+          "baby",
+          "bathroom",
+          "birth",
+          "boat",
+          "call",
+          "car",
+          "cashier",
+          "cheese",
+          "city",
+          "cost",
+          "crew",
+          "crust"
+        ],
+        "probe_item": {
+          "signature": "the {SLOT} was",
+          "pos": "NOUN",
+          "prefix_tokens": [
+            "The",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "was"
+          ],
+          "morph_requirement": "Number=Sing",
+          "opener": [],
+          "text": "The {NEOLOGISM} was",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "VERB": 0.0,
+            "ADJ": 0.25
+          },
+          "tagger_margin": 0.75,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 11,
+            "n_all": 12,
+            "counts": {
+              "NOUN": 11,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 125,
+            "n_all": 136,
+            "counts": {
+              "NOUN": 124,
+              "VERB": 0,
+              "ADJ": 1
+            },
+            "purity": 0.992
+          }
+        }
+      },
+      {
+        "signature": "VERB the {SLOT} to",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "NOUN",
+        "n_target": 100,
+        "n_all": 106,
+        "counts": {
+          "NOUN": 96,
+          "VERB": 0,
+          "ADJ": 4
+        },
+        "counts_other": 6,
+        "purity": 0.9057,
+        "purity_denominator": "all",
+        "purity_target3": 0.96,
+        "n_types": 66,
+        "entropy_norm": 0.1529,
+        "open_class_share": 0.9434,
+        "score": 14.8879,
+        "dominant_deprel": "obj",
+        "dominant_feats": "Number=Sing",
+        "context_deprels": {
+          "-2": "root",
+          "-1": "det",
+          "1": "mark"
+        },
+        "example_lemmas": [
+          "ability",
+          "address",
+          "amendment",
+          "answer",
+          "attempt",
+          "audacity",
+          "authority",
+          "campaign",
+          "capacity",
+          "car",
+          "chance",
+          "coalition",
+          "company",
+          "complaint",
+          "country"
+        ],
+        "probe_item": {
+          "signature": "VERB the {SLOT} to",
+          "pos": "NOUN",
+          "prefix_tokens": [
+            "They",
+            "did",
+            "the",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "to"
+          ],
+          "morph_requirement": "Number=Sing",
+          "opener": [
+            "They"
+          ],
+          "text": "They did the {NEOLOGISM} to",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "VERB": 0.083,
+            "ADJ": 0.417
+          },
+          "tagger_margin": 0.583,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 8,
+            "n_all": 9,
+            "counts": {
+              "NOUN": 7,
+              "VERB": 0,
+              "ADJ": 1
+            },
+            "purity": 0.875
+          },
+          "gum_external": {
+            "n_target": 83,
+            "n_all": 88,
+            "counts": {
+              "NOUN": 83,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "<s> the {SLOT} is",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "NOUN",
+        "n_target": 67,
+        "n_all": 71,
+        "counts": {
+          "NOUN": 66,
+          "VERB": 0,
+          "ADJ": 1
+        },
+        "counts_other": 4,
+        "purity": 0.9296,
+        "purity_denominator": "all",
+        "purity_target3": 0.9851,
+        "n_types": 50,
+        "entropy_norm": 0.0706,
+        "open_class_share": 0.9437,
+        "score": 14.3331,
+        "dominant_deprel": "nsubj",
+        "dominant_feats": "Number=Sing",
+        "context_deprels": {
+          "-1": "det",
+          "1": "cop"
+        },
+        "example_lemmas": [
+          "administration",
+          "alliance",
+          "answer",
+          "artwork",
+          "bus",
+          "change",
+          "commission",
+          "company",
+          "cost",
+          "countryside",
+          "deed",
+          "difference",
+          "education",
+          "fact",
+          "food"
+        ],
+        "probe_item": {
+          "signature": "<s> the {SLOT} is",
+          "pos": "NOUN",
+          "prefix_tokens": [
+            "The",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "is"
+          ],
+          "morph_requirement": "Number=Sing",
+          "opener": [],
+          "text": "The {NEOLOGISM} is",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "VERB": 0.0,
+            "ADJ": 0.25
+          },
+          "tagger_margin": 0.75,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 17,
+            "n_all": 18,
+            "counts": {
+              "NOUN": 17,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 61,
+            "n_all": 65,
+            "counts": {
+              "NOUN": 57,
+              "VERB": 1,
+              "ADJ": 3
+            },
+            "purity": 0.9344
+          }
+        }
+      },
+      {
+        "signature": "the ADJ {SLOT} PRON VERB",
+        "n_left": 2,
+        "n_right": 2,
+        "dominant_pos": "NOUN",
+        "n_target": 62,
+        "n_all": 65,
+        "counts": {
+          "NOUN": 62,
+          "VERB": 0,
+          "ADJ": 0
+        },
+        "counts_other": 3,
+        "purity": 0.9538,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 35,
+        "entropy_norm": 0.0,
+        "open_class_share": 0.9538,
+        "score": 14.1618,
+        "dominant_deprel": "obl:unmarked",
+        "dominant_feats": "Number=Sing",
+        "context_deprels": {
+          "-2": "det",
+          "-1": "amod",
+          "1": "nsubj",
+          "2": "acl:relcl"
+        },
+        "example_lemmas": [
+          "car",
+          "century",
+          "compressor",
+          "conspiracy",
+          "custom",
+          "day",
+          "demon",
+          "difference",
+          "foot",
+          "group",
+          "hospital",
+          "instructor",
+          "job",
+          "journalist",
+          "kid"
+        ],
+        "probe_item": {
+          "signature": "the ADJ {SLOT} PRON VERB",
+          "pos": "NOUN",
+          "prefix_tokens": [
+            "They",
+            "have",
+            "seen",
+            "the",
+            "different",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "it",
+            "happened"
+          ],
+          "morph_requirement": "Number=Sing",
+          "opener": [
+            "They",
+            "have",
+            "seen"
+          ],
+          "text": "They have seen the different {NEOLOGISM} it happened",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "VERB": 0.083,
+            "ADJ": 0.167
+          },
+          "tagger_margin": 0.833,
+          "n_diagnostic": 2
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 5,
+            "n_all": 6,
+            "counts": {
+              "NOUN": 5,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 45,
+            "n_all": 48,
+            "counts": {
+              "NOUN": 45,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "the ADJ {SLOT} is",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "NOUN",
+        "n_target": 53,
+        "n_all": 58,
+        "counts": {
+          "NOUN": 53,
+          "VERB": 0,
+          "ADJ": 0
+        },
+        "counts_other": 5,
+        "purity": 0.9138,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 44,
+        "entropy_norm": 0.0,
+        "open_class_share": 0.9138,
+        "score": 13.8757,
+        "dominant_deprel": "nsubj",
+        "dominant_feats": "Number=Sing",
+        "context_deprels": {
+          "-2": "det",
+          "-1": "amod",
+          "1": "cop"
+        },
+        "example_lemmas": [
+          "act",
+          "airline",
+          "application",
+          "aspect",
+          "bear",
+          "catch",
+          "circle",
+          "cruiseline",
+          "day",
+          "dogs",
+          "downside",
+          "element",
+          "fact",
+          "food",
+          "heather"
+        ],
+        "probe_item": {
+          "signature": "the ADJ {SLOT} is",
+          "pos": "NOUN",
+          "prefix_tokens": [
+            "The",
+            "different",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "is"
+          ],
+          "morph_requirement": "Number=Sing",
+          "opener": [],
+          "text": "The different {NEOLOGISM} is",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "VERB": 0.0,
+            "ADJ": 0.083
+          },
+          "tagger_margin": 0.917,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 2,
+            "n_all": 4,
+            "counts": {
+              "NOUN": 2,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 51,
+            "n_all": 54,
+            "counts": {
+              "NOUN": 51,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "a ADJ {SLOT} in",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "NOUN",
+        "n_target": 42,
+        "n_all": 42,
+        "counts": {
+          "NOUN": 42,
+          "VERB": 0,
+          "ADJ": 0
+        },
+        "counts_other": 0,
+        "purity": 1.0,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 38,
+        "entropy_norm": 0.0,
+        "open_class_share": 1.0,
+        "score": 13.7794,
+        "dominant_deprel": "obj",
+        "dominant_feats": "Number=Sing",
+        "context_deprels": {
+          "-2": "det",
+          "-1": "amod",
+          "1": "case"
+        },
+        "example_lemmas": [
+          "advocate",
+          "band",
+          "belief",
+          "breed",
+          "card",
+          "chain",
+          "change",
+          "cinema",
+          "decline",
+          "decrease",
+          "determiner",
+          "difference",
+          "election",
+          "escalation",
+          "experience"
+        ],
+        "probe_item": {
+          "signature": "a ADJ {SLOT} in",
+          "pos": "NOUN",
+          "prefix_tokens": [
+            "A",
+            "different",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "in"
+          ],
+          "morph_requirement": "Number=Sing",
+          "opener": [],
+          "text": "A different {NEOLOGISM} in",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "VERB": 0.0,
+            "ADJ": 0.0
+          },
+          "tagger_margin": 1.0,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 6,
+            "n_all": 7,
+            "counts": {
+              "NOUN": 6,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 60,
+            "n_all": 60,
+            "counts": {
+              "NOUN": 59,
+              "VERB": 0,
+              "ADJ": 1
+            },
+            "purity": 0.9833
+          }
+        }
+      },
+      {
+        "signature": "a ADJ {SLOT} to",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "NOUN",
+        "n_target": 54,
+        "n_all": 56,
+        "counts": {
+          "NOUN": 53,
+          "VERB": 0,
+          "ADJ": 1
+        },
+        "counts_other": 2,
+        "purity": 0.9464,
+        "purity_denominator": "all",
+        "purity_target3": 0.9815,
+        "n_types": 36,
+        "entropy_norm": 0.0839,
+        "open_class_share": 0.9643,
+        "score": 12.5454,
+        "dominant_deprel": "root",
+        "dominant_feats": "Number=Sing",
+        "context_deprels": {
+          "-2": "det",
+          "-1": "amod",
+          "1": "mark"
+        },
+        "example_lemmas": [
+          "addition",
+          "answer",
+          "attempt",
+          "bid",
+          "call",
+          "city",
+          "connection",
+          "contributor",
+          "copy",
+          "effort",
+          "end",
+          "home",
+          "idea",
+          "instinct",
+          "invitation"
+        ],
+        "probe_item": {
+          "signature": "a ADJ {SLOT} to",
+          "pos": "NOUN",
+          "prefix_tokens": [
+            "A",
+            "different",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "to"
+          ],
+          "morph_requirement": "Number=Sing",
+          "opener": [],
+          "text": "A different {NEOLOGISM} to",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "VERB": 0.0,
+            "ADJ": 0.083
+          },
+          "tagger_margin": 0.917,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 14,
+            "n_all": 14,
+            "counts": {
+              "NOUN": 13,
+              "VERB": 0,
+              "ADJ": 1
+            },
+            "purity": 0.9286
+          },
+          "gum_external": {
+            "n_target": 67,
+            "n_all": 69,
+            "counts": {
+              "NOUN": 66,
+              "VERB": 0,
+              "ADJ": 1
+            },
+            "purity": 0.9851
+          }
+        }
+      }
+    ],
+    "VERB": [
+      {
+        "signature": "to {SLOT} PRON",
+        "n_left": 1,
+        "n_right": 1,
+        "dominant_pos": "VERB",
+        "n_target": 622,
+        "n_all": 662,
+        "counts": {
+          "NOUN": 5,
+          "VERB": 617,
+          "ADJ": 0
+        },
+        "counts_other": 40,
+        "purity": 0.932,
+        "purity_denominator": "all",
+        "purity_target3": 0.992,
+        "n_types": 236,
+        "entropy_norm": 0.0426,
+        "open_class_share": 0.9396,
+        "score": 31.3964,
+        "dominant_deprel": "xcomp",
+        "dominant_feats": "VerbForm=Inf",
+        "context_deprels": {
+          "-1": "mark",
+          "1": "obj"
+        },
+        "example_lemmas": [
+          "absorb",
+          "accept",
+          "accompany",
+          "add",
+          "admire",
+          "advise",
+          "ally",
+          "amaze",
+          "amend",
+          "answer",
+          "appease",
+          "approve",
+          "arrest",
+          "ask",
+          "assist"
+        ],
+        "probe_item": {
+          "signature": "to {SLOT} PRON",
+          "pos": "VERB",
+          "prefix_tokens": [
+            "They",
+            "tried",
+            "to",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "it"
+          ],
+          "morph_requirement": "VerbForm=Inf",
+          "opener": [
+            "They",
+            "tried"
+          ],
+          "text": "They tried to {NEOLOGISM} it",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.0,
+            "ADJ": 0.167
+          },
+          "tagger_margin": 0.833,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 71,
+            "n_all": 77,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 71,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 550,
+            "n_all": 608,
+            "counts": {
+              "NOUN": 11,
+              "VERB": 539,
+              "ADJ": 0
+            },
+            "purity": 0.98
+          }
+        }
+      },
+      {
+        "signature": "NOUN to {SLOT} the",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "VERB",
+        "n_target": 93,
+        "n_all": 97,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 93,
+          "ADJ": 0
+        },
+        "counts_other": 4,
+        "purity": 0.9588,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 79,
+        "entropy_norm": 0.0,
+        "open_class_share": 0.9588,
+        "score": 19.0879,
+        "dominant_deprel": "acl",
+        "dominant_feats": "VerbForm=Inf",
+        "context_deprels": {
+          "-2": "obj",
+          "-1": "mark",
+          "1": "det"
+        },
+        "example_lemmas": [
+          "abolish",
+          "access",
+          "accomplish",
+          "achieve",
+          "amend",
+          "approve",
+          "attend",
+          "avoid",
+          "change",
+          "circle",
+          "clear",
+          "condone",
+          "consider",
+          "contribute",
+          "control"
+        ],
+        "probe_item": {
+          "signature": "NOUN to {SLOT} the",
+          "pos": "VERB",
+          "prefix_tokens": [
+            "The",
+            "thing",
+            "to",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "the"
+          ],
+          "morph_requirement": "VerbForm=Inf",
+          "opener": [
+            "The"
+          ],
+          "text": "The thing to {NEOLOGISM} the",
+          "tagger_accuracy": 0.917,
+          "tagger_accuracy_other": {
+            "NOUN": 0.083,
+            "ADJ": 0.25
+          },
+          "tagger_margin": 0.667,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 15,
+            "n_all": 16,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 15,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 109,
+            "n_all": 117,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 109,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "n't {SLOT} PRON",
+        "n_left": 1,
+        "n_right": 1,
+        "dominant_pos": "VERB",
+        "n_target": 120,
+        "n_all": 122,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 119,
+          "ADJ": 1
+        },
+        "counts_other": 2,
+        "purity": 0.9754,
+        "purity_denominator": "all",
+        "purity_target3": 0.9917,
+        "n_types": 55,
+        "entropy_norm": 0.0439,
+        "open_class_share": 0.9836,
+        "score": 18.004,
+        "dominant_deprel": "root",
+        "dominant_feats": "VerbForm=Inf",
+        "context_deprels": {
+          "-1": "advmod",
+          "1": "obj"
+        },
+        "example_lemmas": [
+          "absent",
+          "afford",
+          "assume",
+          "believe",
+          "bite",
+          "blame",
+          "bomb",
+          "buy",
+          "call",
+          "catch",
+          "change",
+          "charge",
+          "deny",
+          "do",
+          "expect"
+        ],
+        "probe_item": {
+          "signature": "n't {SLOT} PRON",
+          "pos": "VERB",
+          "prefix_tokens": [
+            "They",
+            "do",
+            "n't",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "it"
+          ],
+          "morph_requirement": "VerbForm=Inf",
+          "opener": [
+            "They",
+            "do"
+          ],
+          "text": "They don't {NEOLOGISM} it",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.0,
+            "ADJ": 0.083
+          },
+          "tagger_margin": 0.917,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 18,
+            "n_all": 21,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 18,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 126,
+            "n_all": 141,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 126,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "will {SLOT} PRON",
+        "n_left": 1,
+        "n_right": 1,
+        "dominant_pos": "VERB",
+        "n_target": 107,
+        "n_all": 109,
+        "counts": {
+          "NOUN": 1,
+          "VERB": 106,
+          "ADJ": 0
+        },
+        "counts_other": 2,
+        "purity": 0.9725,
+        "purity_denominator": "all",
+        "purity_target3": 0.9907,
+        "n_types": 59,
+        "entropy_norm": 0.0482,
+        "open_class_share": 0.9817,
+        "score": 17.7437,
+        "dominant_deprel": "root",
+        "dominant_feats": "VerbForm=Inf",
+        "context_deprels": {
+          "-1": "aux",
+          "1": "obj"
+        },
+        "example_lemmas": [
+          "add",
+          "allow",
+          "associate",
+          "assume",
+          "believe",
+          "bring",
+          "call",
+          "cancel",
+          "cause",
+          "change",
+          "charge",
+          "come",
+          "confirm",
+          "continue",
+          "cost"
+        ],
+        "probe_item": {
+          "signature": "will {SLOT} PRON",
+          "pos": "VERB",
+          "prefix_tokens": [
+            "They",
+            "will",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "it"
+          ],
+          "morph_requirement": "VerbForm=Inf",
+          "opener": [
+            "They"
+          ],
+          "text": "They will {NEOLOGISM} it",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.0,
+            "ADJ": 0.083
+          },
+          "tagger_margin": 0.917,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 13,
+            "n_all": 14,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 13,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 47,
+            "n_all": 49,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 47,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "PRON can {SLOT} PRON",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "VERB",
+        "n_target": 66,
+        "n_all": 70,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 66,
+          "ADJ": 0
+        },
+        "counts_other": 4,
+        "purity": 0.9429,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 46,
+        "entropy_norm": 0.0,
+        "open_class_share": 0.9429,
+        "score": 15.2636,
+        "dominant_deprel": "root",
+        "dominant_feats": "VerbForm=Inf",
+        "context_deprels": {
+          "-2": "nsubj",
+          "-1": "aux",
+          "1": "obj"
+        },
+        "example_lemmas": [
+          "add",
+          "assure",
+          "be",
+          "believe",
+          "bet",
+          "borrow",
+          "buy",
+          "call",
+          "check",
+          "contradict",
+          "define",
+          "dig",
+          "discuss",
+          "do",
+          "email"
+        ],
+        "probe_item": {
+          "signature": "PRON can {SLOT} PRON",
+          "pos": "VERB",
+          "prefix_tokens": [
+            "They",
+            "can",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "it"
+          ],
+          "morph_requirement": "VerbForm=Inf",
+          "opener": [],
+          "text": "They can {NEOLOGISM} it",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.0,
+            "ADJ": 0.083
+          },
+          "tagger_margin": 0.917,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 9,
+            "n_all": 10,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 9,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 66,
+            "n_all": 68,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 66,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "<s> PRON {SLOT} to VERB",
+        "n_left": 2,
+        "n_right": 2,
+        "dominant_pos": "VERB",
+        "n_target": 96,
+        "n_all": 99,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 96,
+          "ADJ": 0
+        },
+        "counts_other": 3,
+        "purity": 0.9697,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 27,
+        "entropy_norm": 0.0,
+        "open_class_share": 0.9697,
+        "score": 14.7819,
+        "dominant_deprel": "root",
+        "dominant_feats": "Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+        "context_deprels": {
+          "-1": "nsubj",
+          "1": "mark",
+          "2": "xcomp"
+        },
+        "example_lemmas": [
+          "apply",
+          "beg",
+          "begin",
+          "come",
+          "continue",
+          "decide",
+          "expect",
+          "forget",
+          "get",
+          "go",
+          "hate",
+          "have",
+          "hope",
+          "intend",
+          "like"
+        ],
+        "probe_item": {
+          "signature": "<s> PRON {SLOT} to VERB",
+          "pos": "VERB",
+          "prefix_tokens": [
+            "I",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "to",
+            "do"
+          ],
+          "morph_requirement": "Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+          "opener": [],
+          "text": "I {NEOLOGISM} to do",
+          "tagger_accuracy": 0.917,
+          "tagger_accuracy_other": {
+            "NOUN": 0.0,
+            "ADJ": 0.5
+          },
+          "tagger_margin": 0.417,
+          "n_diagnostic": 2
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 16,
+            "n_all": 16,
+            "counts": {
+              "NOUN": 1,
+              "VERB": 15,
+              "ADJ": 0
+            },
+            "purity": 0.9375
+          },
+          "gum_external": {
+            "n_target": 61,
+            "n_all": 61,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 61,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "PRON {SLOT} PRON to",
+        "n_left": 1,
+        "n_right": 2,
+        "dominant_pos": "VERB",
+        "n_target": 61,
+        "n_all": 65,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 61,
+          "ADJ": 0
+        },
+        "counts_other": 4,
+        "purity": 0.9385,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 35,
+        "entropy_norm": 0.0,
+        "open_class_share": 0.9385,
+        "score": 13.8795,
+        "dominant_deprel": "root",
+        "dominant_feats": "Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin",
+        "context_deprels": {
+          "-1": "nsubj",
+          "1": "obj",
+          "2": "mark"
+        },
+        "example_lemmas": [
+          "allow",
+          "ask",
+          "be",
+          "cause",
+          "charge",
+          "commit",
+          "communicate",
+          "decide",
+          "drop",
+          "encourage",
+          "expect",
+          "explain",
+          "fax",
+          "feed",
+          "find"
+        ],
+        "probe_item": {
+          "signature": "PRON {SLOT} PRON to",
+          "pos": "VERB",
+          "prefix_tokens": [
+            "I",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "it",
+            "to"
+          ],
+          "morph_requirement": "Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin",
+          "opener": [],
+          "text": "I {NEOLOGISM} it to",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.0,
+            "ADJ": 0.083
+          },
+          "tagger_margin": 0.917,
+          "n_diagnostic": 2
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 6,
+            "n_all": 6,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 6,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 50,
+            "n_all": 52,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 50,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "when PRON {SLOT} PRON",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "VERB",
+        "n_target": 37,
+        "n_all": 37,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 37,
+          "ADJ": 0
+        },
+        "counts_other": 0,
+        "purity": 1.0,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 29,
+        "entropy_norm": 0.0,
+        "open_class_share": 1.0,
+        "score": 12.3721,
+        "dominant_deprel": "advcl",
+        "dominant_feats": "Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+        "context_deprels": {
+          "-2": "advmod",
+          "-1": "nsubj",
+          "1": "obj"
+        },
+        "example_lemmas": [
+          "ask",
+          "bite",
+          "blame",
+          "buy",
+          "dance",
+          "do",
+          "dry",
+          "explain",
+          "express",
+          "feed",
+          "feel",
+          "find",
+          "get",
+          "hear",
+          "inquire"
+        ],
+        "probe_item": {
+          "signature": "when PRON {SLOT} PRON",
+          "pos": "VERB",
+          "prefix_tokens": [
+            "It",
+            "was",
+            "when",
+            "it",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "it"
+          ],
+          "morph_requirement": "Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+          "opener": [
+            "It",
+            "was"
+          ],
+          "text": "It was when it {NEOLOGISM} it",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.0,
+            "ADJ": 0.25
+          },
+          "tagger_margin": 0.75,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 4,
+            "n_all": 4,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 4,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 38,
+            "n_all": 39,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 38,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "PROPN to {SLOT} the",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "VERB",
+        "n_target": 20,
+        "n_all": 21,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 20,
+          "ADJ": 0
+        },
+        "counts_other": 1,
+        "purity": 0.9524,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 20,
+        "entropy_norm": 0.0,
+        "open_class_share": 0.9524,
+        "score": 8.8277,
+        "dominant_deprel": "advcl",
+        "dominant_feats": "VerbForm=Inf",
+        "context_deprels": {
+          "-2": "obl",
+          "-1": "mark",
+          "1": "det"
+        },
+        "example_lemmas": [
+          "accent",
+          "accept",
+          "become",
+          "do",
+          "execute",
+          "find",
+          "fix",
+          "further",
+          "get",
+          "help",
+          "hit",
+          "join",
+          "learn",
+          "name",
+          "persuade"
+        ],
+        "probe_item": {
+          "signature": "PROPN to {SLOT} the",
+          "pos": "VERB",
+          "prefix_tokens": [
+            "Someone",
+            "to",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "the"
+          ],
+          "morph_requirement": "VerbForm=Inf",
+          "opener": [],
+          "text": "Someone to {NEOLOGISM} the",
+          "tagger_accuracy": 0.917,
+          "tagger_accuracy_other": {
+            "NOUN": 0.083,
+            "ADJ": 0.333
+          },
+          "tagger_margin": 0.583,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 1,
+            "n_all": 1,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 1,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 16,
+            "n_all": 16,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 16,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "do n't {SLOT} the",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "VERB",
+        "n_target": 24,
+        "n_all": 24,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 24,
+          "ADJ": 0
+        },
+        "counts_other": 0,
+        "purity": 1.0,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 13,
+        "entropy_norm": 0.0,
+        "open_class_share": 1.0,
+        "score": 8.4948,
+        "dominant_deprel": "root",
+        "dominant_feats": "VerbForm=Inf",
+        "context_deprels": {
+          "-2": "aux",
+          "-1": "advmod",
+          "1": "det"
+        },
+        "example_lemmas": [
+          "believe",
+          "enjoy",
+          "find",
+          "get",
+          "have",
+          "know",
+          "let",
+          "like",
+          "remember",
+          "see",
+          "speak",
+          "specify",
+          "think"
+        ],
+        "probe_item": {
+          "signature": "do n't {SLOT} the",
+          "pos": "VERB",
+          "prefix_tokens": [
+            "They",
+            "do",
+            "n't",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "the"
+          ],
+          "morph_requirement": "VerbForm=Inf",
+          "opener": [
+            "They"
+          ],
+          "text": "They don't {NEOLOGISM} the",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.0,
+            "ADJ": 0.083
+          },
+          "tagger_margin": 0.917,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 0,
+            "n_all": 0,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": null
+          },
+          "gum_external": {
+            "n_target": 13,
+            "n_all": 13,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 13,
+              "ADJ": 0
+            },
+            "purity": 1.0
+          }
+        }
+      }
+    ],
+    "ADJ": [
+      {
+        "signature": "very {SLOT} NOUN",
+        "n_left": 1,
+        "n_right": 1,
+        "dominant_pos": "ADJ",
+        "n_target": 57,
+        "n_all": 57,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 0,
+          "ADJ": 57
+        },
+        "counts_other": 0,
+        "purity": 1.0,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 41,
+        "entropy_norm": 0.0,
+        "open_class_share": 1.0,
+        "score": 15.1766,
+        "dominant_deprel": "amod",
+        "dominant_feats": "Degree=Pos",
+        "context_deprels": {
+          "-1": "advmod",
+          "1": "root"
+        },
+        "example_lemmas": [
+          "affordable",
+          "ambitious",
+          "average",
+          "bad",
+          "belittling",
+          "big",
+          "busy",
+          "comfortable",
+          "confidential",
+          "cruel",
+          "defining",
+          "desperate",
+          "difficult",
+          "fair",
+          "few"
+        ],
+        "probe_item": {
+          "signature": "very {SLOT} NOUN",
+          "pos": "ADJ",
+          "prefix_tokens": [
+            "It",
+            "was",
+            "a",
+            "very",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "thing"
+          ],
+          "morph_requirement": "Degree=Pos",
+          "opener": [
+            "It",
+            "was",
+            "a"
+          ],
+          "text": "It was a very {NEOLOGISM} thing",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.75,
+            "VERB": 0.0
+          },
+          "tagger_margin": 0.25,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 15,
+            "n_all": 15,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 15
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 65,
+            "n_all": 66,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 65
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "very {SLOT} and ADJ",
+        "n_left": 1,
+        "n_right": 2,
+        "dominant_pos": "ADJ",
+        "n_target": 22,
+        "n_all": 22,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 0,
+          "ADJ": 22
+        },
+        "counts_other": 0,
+        "purity": 1.0,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 16,
+        "entropy_norm": 0.0,
+        "open_class_share": 1.0,
+        "score": 8.8835,
+        "dominant_deprel": "root",
+        "dominant_feats": "Degree=Pos",
+        "context_deprels": {
+          "-1": "advmod",
+          "1": "cc",
+          "2": "conj"
+        },
+        "example_lemmas": [
+          "calming",
+          "cozy",
+          "cruel",
+          "delicious",
+          "discouraged",
+          "easy",
+          "experienced",
+          "friendly",
+          "kind",
+          "nice",
+          "patient",
+          "pleasant",
+          "rude",
+          "spacious",
+          "sterile"
+        ],
+        "probe_item": {
+          "signature": "very {SLOT} and ADJ",
+          "pos": "ADJ",
+          "prefix_tokens": [
+            "It",
+            "was",
+            "very",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "and",
+            "similar"
+          ],
+          "morph_requirement": "Degree=Pos",
+          "opener": [
+            "It",
+            "was"
+          ],
+          "text": "It was very {NEOLOGISM} and similar",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.333,
+            "VERB": 0.0
+          },
+          "tagger_margin": 0.667,
+          "n_diagnostic": 2
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 8,
+            "n_all": 8,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 8
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 4,
+            "n_all": 4,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 4
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "ADJ , {SLOT} and",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "ADJ",
+        "n_target": 24,
+        "n_all": 25,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 1,
+          "ADJ": 23
+        },
+        "counts_other": 1,
+        "purity": 0.92,
+        "purity_denominator": "all",
+        "purity_target3": 0.9583,
+        "n_types": 21,
+        "entropy_norm": 0.1577,
+        "open_class_share": 0.96,
+        "score": 7.7106,
+        "dominant_deprel": "conj",
+        "dominant_feats": "Degree=Pos",
+        "context_deprels": {
+          "-2": "amod",
+          "-1": "punct",
+          "1": "cc"
+        },
+        "example_lemmas": [
+          "approachable",
+          "clean",
+          "cozy",
+          "dark",
+          "dirty",
+          "educational",
+          "fast",
+          "friendly",
+          "gentle",
+          "grey",
+          "helpful",
+          "inconsiderate",
+          "inexpensive",
+          "lovable",
+          "modern"
+        ],
+        "probe_item": {
+          "signature": "ADJ , {SLOT} and",
+          "pos": "ADJ",
+          "prefix_tokens": [
+            "They",
+            "have",
+            "seen",
+            "the",
+            "same",
+            ",",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "and"
+          ],
+          "morph_requirement": "Degree=Pos",
+          "opener": [
+            "They",
+            "have",
+            "seen",
+            "the"
+          ],
+          "text": "They have seen the same, {NEOLOGISM} and",
+          "tagger_accuracy": 0.917,
+          "tagger_accuracy_other": {
+            "NOUN": 0.75,
+            "VERB": 0.417
+          },
+          "tagger_margin": 0.167,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 7,
+            "n_all": 7,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 7
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 25,
+            "n_all": 26,
+            "counts": {
+              "NOUN": 1,
+              "VERB": 1,
+              "ADJ": 23
+            },
+            "purity": 0.92
+          }
+        }
+      },
+      {
+        "signature": "is a {SLOT} NOUN to",
+        "n_left": 2,
+        "n_right": 2,
+        "dominant_pos": "ADJ",
+        "n_target": 13,
+        "n_all": 13,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 0,
+          "ADJ": 13
+        },
+        "counts_other": 0,
+        "purity": 1.0,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 12,
+        "entropy_norm": 0.0,
+        "open_class_share": 1.0,
+        "score": 6.769,
+        "dominant_deprel": "amod",
+        "dominant_feats": "Degree=Pos",
+        "context_deprels": {
+          "-2": "cop",
+          "-1": "det",
+          "1": "root",
+          "2": "mark"
+        },
+        "example_lemmas": [
+          "daily",
+          "delightful",
+          "fantastic",
+          "good",
+          "great",
+          "nice",
+          "perfect",
+          "regular",
+          "second",
+          "simple",
+          "special",
+          "suitable"
+        ],
+        "probe_item": {
+          "signature": "is a {SLOT} NOUN to",
+          "pos": "ADJ",
+          "prefix_tokens": [
+            "It",
+            "is",
+            "a",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "thing",
+            "to"
+          ],
+          "morph_requirement": "Degree=Pos",
+          "opener": [
+            "It"
+          ],
+          "text": "It is a {NEOLOGISM} thing to",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.75,
+            "VERB": 0.0
+          },
+          "tagger_margin": 0.25,
+          "n_diagnostic": 2
+        },
+        "validation": {
+          "dev": 0.6667,
+          "ewt_test": {
+            "n_target": 4,
+            "n_all": 4,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 4
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 7,
+            "n_all": 7,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 7
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "would be {SLOT} to VERB",
+        "n_left": 2,
+        "n_right": 2,
+        "dominant_pos": "ADJ",
+        "n_target": 12,
+        "n_all": 13,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 0,
+          "ADJ": 12
+        },
+        "counts_other": 1,
+        "purity": 0.9231,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 10,
+        "entropy_norm": 0.0,
+        "open_class_share": 0.9231,
+        "score": 5.6774,
+        "dominant_deprel": "ccomp",
+        "dominant_feats": "Degree=Pos",
+        "context_deprels": {
+          "-2": "aux",
+          "-1": "cop",
+          "1": "mark",
+          "2": "advcl"
+        },
+        "example_lemmas": [
+          "able",
+          "available",
+          "dangerous",
+          "delighted",
+          "glad",
+          "good",
+          "happy",
+          "insane",
+          "pleased",
+          "wise"
+        ],
+        "probe_item": {
+          "signature": "would be {SLOT} to VERB",
+          "pos": "ADJ",
+          "prefix_tokens": [
+            "They",
+            "would",
+            "be",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "to",
+            "do"
+          ],
+          "morph_requirement": "Degree=Pos",
+          "opener": [
+            "They"
+          ],
+          "text": "They would be {NEOLOGISM} to do",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.667,
+            "VERB": 0.5
+          },
+          "tagger_margin": 0.333,
+          "n_diagnostic": 2
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 1,
+            "n_all": 1,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 1
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 9,
+            "n_all": 9,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 3,
+              "ADJ": 6
+            },
+            "purity": 0.6667
+          }
+        }
+      },
+      {
+        "signature": "a more {SLOT} NOUN",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "ADJ",
+        "n_target": 9,
+        "n_all": 9,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 0,
+          "ADJ": 9
+        },
+        "counts_other": 0,
+        "purity": 1.0,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 9,
+        "entropy_norm": 0.0,
+        "open_class_share": 1.0,
+        "score": 5.3019,
+        "dominant_deprel": "amod",
+        "dominant_feats": "Degree=Pos",
+        "context_deprels": {
+          "-2": "det",
+          "-1": "advmod",
+          "1": "obl"
+        },
+        "example_lemmas": [
+          "accurate",
+          "appropriate",
+          "caring",
+          "continental",
+          "convincing",
+          "detailed",
+          "expensive",
+          "positive",
+          "uniform"
+        ],
+        "probe_item": {
+          "signature": "a more {SLOT} NOUN",
+          "pos": "ADJ",
+          "prefix_tokens": [
+            "A",
+            "more",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "thing"
+          ],
+          "morph_requirement": "Degree=Pos",
+          "opener": [],
+          "text": "A more {NEOLOGISM} thing",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.833,
+            "VERB": 0.0
+          },
+          "tagger_margin": 0.167,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": null,
+          "ewt_test": {
+            "n_target": 2,
+            "n_all": 2,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 2
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 13,
+            "n_all": 13,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 2,
+              "ADJ": 11
+            },
+            "purity": 0.8462
+          }
+        }
+      },
+      {
+        "signature": "a {SLOT} NOUN to PRON",
+        "n_left": 1,
+        "n_right": 3,
+        "dominant_pos": "ADJ",
+        "n_target": 9,
+        "n_all": 9,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 0,
+          "ADJ": 9
+        },
+        "counts_other": 0,
+        "purity": 1.0,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 8,
+        "entropy_norm": 0.0,
+        "open_class_share": 1.0,
+        "score": 5.0593,
+        "dominant_deprel": "amod",
+        "dominant_feats": "Degree=Pos",
+        "context_deprels": {
+          "-1": "det",
+          "1": "obj",
+          "2": "case",
+          "3": "nmod"
+        },
+        "example_lemmas": [
+          "big",
+          "close",
+          "direct",
+          "final",
+          "high",
+          "military",
+          "simple",
+          "wonderful"
+        ],
+        "probe_item": {
+          "signature": "a {SLOT} NOUN to PRON",
+          "pos": "ADJ",
+          "prefix_tokens": [
+            "A",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "thing",
+            "to",
+            "it"
+          ],
+          "morph_requirement": "Degree=Pos",
+          "opener": [],
+          "text": "A {NEOLOGISM} thing to it",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.833,
+            "VERB": 0.0
+          },
+          "tagger_margin": 0.167,
+          "n_diagnostic": 3
+        },
+        "validation": {
+          "dev": null,
+          "ewt_test": {
+            "n_target": 0,
+            "n_all": 0,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": null
+          },
+          "gum_external": {
+            "n_target": 7,
+            "n_all": 7,
+            "counts": {
+              "NOUN": 1,
+              "VERB": 0,
+              "ADJ": 6
+            },
+            "purity": 0.8571
+          }
+        }
+      },
+      {
+        "signature": "ADJ and {SLOT} and",
+        "n_left": 2,
+        "n_right": 1,
+        "dominant_pos": "ADJ",
+        "n_target": 8,
+        "n_all": 8,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 0,
+          "ADJ": 8
+        },
+        "counts_other": 0,
+        "purity": 1.0,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 8,
+        "entropy_norm": 0.0,
+        "open_class_share": 1.0,
+        "score": 4.8278,
+        "dominant_deprel": "conj",
+        "dominant_feats": "Degree=Pos",
+        "context_deprels": {
+          "-2": "root",
+          "-1": "cc",
+          "1": "cc"
+        },
+        "example_lemmas": [
+          "bad",
+          "dangerous",
+          "down",
+          "healthy",
+          "helpful",
+          "informative",
+          "sad",
+          "welcoming"
+        ],
+        "probe_item": {
+          "signature": "ADJ and {SLOT} and",
+          "pos": "ADJ",
+          "prefix_tokens": [
+            "The",
+            "other",
+            "and",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "and"
+          ],
+          "morph_requirement": "Degree=Pos",
+          "opener": [
+            "The"
+          ],
+          "text": "The other and {NEOLOGISM} and",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.667,
+            "VERB": 0.417
+          },
+          "tagger_margin": 0.333,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": null,
+          "ewt_test": {
+            "n_target": 1,
+            "n_all": 1,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 1
+            },
+            "purity": 1.0
+          },
+          "gum_external": {
+            "n_target": 9,
+            "n_all": 12,
+            "counts": {
+              "NOUN": 1,
+              "VERB": 0,
+              "ADJ": 8
+            },
+            "purity": 0.8889
+          }
+        }
+      },
+      {
+        "signature": "is {SLOT} , ADJ",
+        "n_left": 1,
+        "n_right": 2,
+        "dominant_pos": "ADJ",
+        "n_target": 8,
+        "n_all": 8,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 0,
+          "ADJ": 8
+        },
+        "counts_other": 0,
+        "purity": 1.0,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 8,
+        "entropy_norm": 0.0,
+        "open_class_share": 1.0,
+        "score": 4.8278,
+        "dominant_deprel": "root",
+        "dominant_feats": "Degree=Pos",
+        "context_deprels": {
+          "-1": "cop",
+          "1": "punct",
+          "2": "conj"
+        },
+        "example_lemmas": [
+          "caring",
+          "compassionate",
+          "confidential",
+          "dire",
+          "dusty",
+          "gloomy",
+          "slick",
+          "unthinkable"
+        ],
+        "probe_item": {
+          "signature": "is {SLOT} , ADJ",
+          "pos": "ADJ",
+          "prefix_tokens": [
+            "It",
+            "is",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "same"
+          ],
+          "morph_requirement": "Degree=Pos",
+          "opener": [
+            "It"
+          ],
+          "text": "It is {NEOLOGISM} same",
+          "tagger_accuracy": 1.0,
+          "tagger_accuracy_other": {
+            "NOUN": 0.583,
+            "VERB": 0.417
+          },
+          "tagger_margin": 0.417,
+          "n_diagnostic": 1
+        },
+        "validation": {
+          "dev": 1.0,
+          "ewt_test": {
+            "n_target": 0,
+            "n_all": 0,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": null
+          },
+          "gum_external": {
+            "n_target": 3,
+            "n_all": 5,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 3
+            },
+            "purity": 1.0
+          }
+        }
+      },
+      {
+        "signature": "<s> the {SLOT} NOUN is that",
+        "n_left": 2,
+        "n_right": 3,
+        "dominant_pos": "ADJ",
+        "n_target": 8,
+        "n_all": 8,
+        "counts": {
+          "NOUN": 0,
+          "VERB": 0,
+          "ADJ": 8
+        },
+        "counts_other": 0,
+        "purity": 1.0,
+        "purity_denominator": "all",
+        "purity_target3": 1.0,
+        "n_types": 7,
+        "entropy_norm": 0.0,
+        "open_class_share": 1.0,
+        "score": 4.569,
+        "dominant_deprel": "amod",
+        "dominant_feats": "Degree=Pos",
+        "context_deprels": {
+          "-1": "det",
+          "1": "nsubj:outer",
+          "2": "cop",
+          "3": "mark"
+        },
+        "example_lemmas": [
+          "amazing",
+          "bottom",
+          "crazy",
+          "good",
+          "only",
+          "plain",
+          "real"
+        ],
+        "probe_item": {
+          "signature": "<s> the {SLOT} NOUN is that",
+          "pos": "ADJ",
+          "prefix_tokens": [
+            "The",
+            "{NEOLOGISM}"
+          ],
+          "diagnostic": [
+            "one",
+            "is",
+            "that"
+          ],
+          "morph_requirement": "Degree=Pos",
+          "opener": [],
+          "text": "The {NEOLOGISM} one is that",
+          "tagger_accuracy": 0.917,
+          "tagger_accuracy_other": {
+            "NOUN": 0.667,
+            "VERB": 0.0
+          },
+          "tagger_margin": 0.25,
+          "n_diagnostic": 3
+        },
+        "validation": {
+          "dev": null,
+          "ewt_test": {
+            "n_target": 0,
+            "n_all": 0,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 0
+            },
+            "purity": null
+          },
+          "gum_external": {
+            "n_target": 3,
+            "n_all": 3,
+            "counts": {
+              "NOUN": 0,
+              "VERB": 0,
+              "ADJ": 3
+            },
+            "purity": 1.0
+          }
+        }
+      }
+    ]
+  }
+}
