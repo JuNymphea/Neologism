@@ -7,25 +7,30 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
 #SBATCH --gres=gpu:1
-#SBATCH --time=12:00:00
-#SBATCH --array=0-2
+#SBATCH --time=02:00:00
+#SBATCH --array=0-29%3
 #SBATCH --output=logs/%x_%A_%a.out
 #SBATCH --mail-user=zhj76@pitt.edu
-#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-type=END,FAIL
+#SBATCH --requeue
 
-# One GPU per part of speech: a_1..a_10, n_1..n_10, v_1..v_10, each against all five
-# templates. 10 concepts x 5 templates = 50 runs per job, 150 in total.
+# a_1..a_10, n_1..n_10, v_1..v_10 against all five templates: 150 runs.
 #
 #   cd ~/neologism && mkdir -p logs
 #   sbatch scripts/train/submit_train_sweep.slurm
 #
-# A single part of speech:            sbatch --array=0 ...   (0=a, 1=n, 2=v)
-# A different range of concepts:      sbatch --export=ALL,FIRST=11,LAST=20 ...
+# One array task per concept, five runs each, about 45 minutes. Array tasks are
+# scheduled independently -- three GPUs are never needed at once -- and the %3 caps
+# how many run together. Short tasks also backfill into gaps a seven-hour job could
+# never fit; that, not the number of GPUs, is what decides the wait.
 #
-# The 9 GB of weights are loaded once for all 50 runs rather than once per run --
-# that alone was 8 of the 15 hours a naive loop would take. Runs that already have
-# an embedding_final.pt are skipped, so resubmitting after a wall-clock limit
-# resumes instead of starting over.
+#   more at once:        sbatch --array=0-29%6 ...
+#   one part of speech:  sbatch --array=0-9 ...    (0-9 a, 10-19 n, 20-29 v)
+#   other concepts:      sbatch --export=ALL,FIRST=11 --array=0-29 ...
+#
+# The 9 GB of weights load once per task rather than once per run. Runs that
+# already have an embedding_final.pt are skipped, so a requeued or resubmitted
+# task resumes instead of repeating work.
 
 set -euo pipefail
 
@@ -40,19 +45,18 @@ cd "$REPO"
 source scripts/train/env.sh
 
 POSLIST=(a n v)
-POS=${POSLIST[$SLURM_ARRAY_TASK_ID]}
+PER_POS=${PER_POS:-10}
 FIRST=${FIRST:-1}
-LAST=${LAST:-10}
 BATCH=${BATCH:-8}
 
-CONCEPTS=()
-for i in $(seq "$FIRST" "$LAST"); do CONCEPTS+=("${POS}_${i}"); done
+POS=${POSLIST[$((SLURM_ARRAY_TASK_ID / PER_POS))]}
+CONCEPT="${POS}_$((FIRST + SLURM_ARRAY_TASK_ID % PER_POS))"
 
-echo "=== $(date) | node $(hostname) | pos $POS | ${CONCEPTS[*]} ==="
+echo "=== $(date) | node $(hostname) | task $SLURM_ARRAY_TASK_ID -> $CONCEPT ==="
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 python scripts/train/train_neologism.py \
-    --concept "${CONCEPTS[@]}" \
+    --concept "$CONCEPT" \
     --template unbiased verb noun adj mixed \
     --model_name "${NEOLOGISM_MODEL:?source env.sh first}" \
     --batch_size "$BATCH"
