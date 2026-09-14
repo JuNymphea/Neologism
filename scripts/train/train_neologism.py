@@ -614,38 +614,6 @@ def _untie_output_embeddings(model: nn.Module) -> None:
     out.weight = nn.Parameter(out.weight.clone())
 
 
-#: Per-dimension mean/std of the frozen embedding matrix, keyed by the tensor it was
-#: computed from. A sweep asks for this once per run and the matrix never changes.
-_EMB_STATS: Dict[tuple, tuple] = {}
-
-
-def _embedding_stats(emb0: torch.Tensor, n_rows: int):
-    """Per-dimension mean and std over the first `n_rows` embedding rows.
-
-    Accumulated in chunks on the CPU: casting the whole matrix at once would cost
-    several GB, and float64 is unavailable on some accelerators (MPS rejects it
-    outright), while the reduction itself is one-time and not worth a device.
-    """
-    key = (emb0.data_ptr(), n_rows)
-    if key not in _EMB_STATS:
-        d = emb0.size(1)
-        with torch.no_grad():
-            acc = torch.zeros(d, dtype=torch.float64)
-            acc_sq = torch.zeros(d, dtype=torch.float64)
-            for start in range(0, n_rows, 8192):
-                # .cpu() then .double(), not .to("cpu", float64): converting the
-                # dtype and the device in one call reads the result before the
-                # accelerator's queue has flushed and intermittently yields NaN
-                # from finite input (seen on MPS, 1 in 18 chunks).
-                block = emb0[start:start + 8192].cpu().double()
-                acc += block.sum(dim=0)
-                acc_sq += block.square().sum(dim=0)
-            mean = acc / n_rows
-            std = (acc_sq / n_rows - mean.square()).clamp_min(0).sqrt()
-        _EMB_STATS[key] = (mean.float(), std.float())
-    return _EMB_STATS[key]
-
-
 def new_token_init_vector(
     model: nn.Module,
     new_id: int,
@@ -656,10 +624,10 @@ def new_token_init_vector(
     """
     Build the initial vector for `new_id`, without touching the embedding matrix.
 
-    init_mode == "neutral": copy the embedding of `neutral_id`.
-    init_mode == "random":  sample N(mu, sigma) per dimension, where mu/sigma are the
-                            per-dimension statistics of the existing embedding rows, so
-                            the new vector lives on the same scale as real tokens.
+    init_mode == "neutral": copy the embedding of `neutral_id` (the paper's method: a
+                            neutral existing word such as "accurate").
+    init_mode == "random":  N(0, 0.02) per dimension, i.e. `weight[new_id].normal_(0, 0.02)`;
+                            for a 2560-dim Gemma row that is a norm of about 1.
     """
     emb0 = model.get_input_embeddings().weight
     if new_id >= emb0.size(0):
@@ -669,9 +637,7 @@ def new_token_init_vector(
         )
 
     if init_mode == "random":
-        mean, std = _embedding_stats(emb0, new_id)
-        noise = torch.randn(emb0.size(1), generator=generator, dtype=torch.float32)
-        vec = mean + std * noise
+        vec = torch.empty(emb0.size(1), dtype=torch.float32).normal_(0.0, 0.02, generator=generator)
     elif init_mode == "neutral":
         if neutral_id is None:
             raise ValueError("init_mode='neutral' requires neutral_id")
@@ -786,9 +752,16 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         generator = torch.Generator().manual_seed(seed)
         print(f"[init] {new_token} <- random vector (seed={seed})")
     else:
-        neutral_id = tokenizer(neutral_word, add_special_tokens=False)["input_ids"][0]
+        neutral_ids = tokenizer(neutral_word, add_special_tokens=False)["input_ids"]
+        if len(neutral_ids) != 1:
+            raise ValueError(
+                f"neutral_word '{neutral_word}' is not a single token: {neutral_ids} "
+                f"({tokenizer.convert_ids_to_tokens(neutral_ids)}); pick a word this "
+                "tokenizer keeps whole, or pass --init_mode random")
+        neutral_id = neutral_ids[0]
         generator = None
-        print(f"[init] {new_token} <- embedding of neutral word '{neutral_word}' (id={neutral_id})")
+        print(f"[init] {new_token} <- embedding of neutral word '{neutral_word}' "
+              f"(id={neutral_id}, token={tokenizer.convert_ids_to_tokens([neutral_id])[0]!r})")
 
     init_vec = new_token_init_vector(
         model,
@@ -945,7 +918,7 @@ def main():
     parser.add_argument(
         "--init_mode",
         type=str,
-        default="random",
+        default="neutral",
         choices=["neutral", "random"],
         help="'neutral': copy the neutral word's embedding; 'random': sample a random vector"
     )
@@ -983,7 +956,9 @@ def main():
     args = parser.parse_args()
 
     # `--neutral_word random` is accepted as a shorthand for `--init_mode random`
-    init_mode = "random" if args.neutral_word.lower() == "random" else args.init_mode
+    # random when the neutral word IS the new token (nothing to copy from), or on request
+    init_mode = ("random" if args.neutral_word == args.new_token or args.neutral_word.lower() == "random"
+                 else args.init_mode)
 
     runs = [(c, t) for c in args.concept for t in args.template]
     print(f"[sweep] {len(args.concept)} concepts x {len(args.template)} templates "
