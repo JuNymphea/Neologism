@@ -67,6 +67,7 @@ def get_pairs(
     batch_size: int = 8,
     attn_implementation: str = "sdpa",
     enable_thinking: bool = False,
+    use_chat_template: bool = True,
 ) -> None:
     """
     Generate normal and concept answers using a single model.
@@ -155,19 +156,30 @@ def get_pairs(
     model.generation_config.pad_token_id = tokenizer.pad_token_id
 
     def generate_batch(texts: List[str]) -> List[str]:
-        conversations = [[{"role": "user", "content": t}] for t in texts]
+        if not use_chat_template:
+            # Exactly what training saw: the tokenizer's special tokens (<bos> for Gemma)
+            # and the raw "question + template" text, with the answer continuing directly
+            # after it -- no user/model turn markers.
+            model_inputs = tokenizer(
+                texts,
+                add_special_tokens=True,
+                return_tensors="pt",
+                padding=True,
+            ).to(model.device)
+        else:
+            conversations = [[{"role": "user", "content": t}] for t in texts]
 
-        # enable_thinking is read by templates that have a reasoning mode (Qwen3) and
-        # ignored by the rest. Left on, Qwen3 opens every answer with a <think> block,
-        # which inflates the length and changes what the judge sees.
-        model_inputs = tokenizer.apply_chat_template(
-            conversations,
-            add_generation_prompt=True,
-            return_tensors="pt",
-            return_dict=True,
-            padding=True,
-            enable_thinking=enable_thinking,
-        ).to(model.device)
+            # enable_thinking is read by templates that have a reasoning mode (Qwen3) and
+            # ignored by the rest. Left on, Qwen3 opens every answer with a <think> block,
+            # which inflates the length and changes what the judge sees.
+            model_inputs = tokenizer.apply_chat_template(
+                conversations,
+                add_generation_prompt=True,
+                return_tensors="pt",
+                return_dict=True,
+                padding=True,
+                enable_thinking=enable_thinking,
+            ).to(model.device)
 
         # left padding makes every row start generating at the same column
         input_len = model_inputs["input_ids"].shape[1]
@@ -241,6 +253,8 @@ def main():
                         help="flash_attention_2 requires the flash-attn package")
     parser.add_argument("--enable_thinking", action="store_true",
                         help="let reasoning models (Qwen3) think before answering; off by default")
+    parser.add_argument("--no_chat_template", action="store_true",
+                        help="prompt with the raw text as training does, instead of the chat template")
     args = parser.parse_args()
 
     # training records its full setting next to the embedding; reuse it so that the
@@ -277,7 +291,8 @@ def main():
                 f"of {trained_tag} with {new_token}.{hint}")
 
     name = run_name(model_name, args.concept, template)
-    print(f"[run] {name} (new_token={new_token}, template={template})")
+    print(f"[run] {name} (new_token={new_token}, template={template}, "
+          f"chat_template={'off' if args.no_chat_template else 'on'})")
 
     os.makedirs(args.res_dir, exist_ok=True)
     output_file = os.path.join(args.res_dir, f"{name}.jsonl")
@@ -296,6 +311,7 @@ def main():
         batch_size=args.batch_size,
         attn_implementation=args.attn_implementation,
         enable_thinking=args.enable_thinking,
+        use_chat_template=not args.no_chat_template,
     )
 
 if __name__ == "__main__":
