@@ -56,12 +56,6 @@ CKPT_ROOT=scripts/train/checkpoints
 RES_ROOT=scripts/train/results
 mkdir -p "$RES_ROOT"
 
-# Every run saved its own copy of the tokenizer and they are byte-identical -- the
-# same base tokenizer with the same token added -- so any one of them serves. Having
-# a fallback means the 4.7 GB of duplicates can be deleted without breaking this.
-SHARED_TOK=${TOKENIZER:-$(ls -d "$CKPT_ROOT"/*/tokenizer 2>/dev/null | head -n 1)}
-[[ -n "$SHARED_TOK" ]] || { echo "ERROR: no tokenizer found under $CKPT_ROOT"; exit 1; }
-
 echo "=== $(date) | node $(hostname) | pos $POS | ${FIRST}..${LAST} ==="
 echo "    batch $BATCH | max_new_tokens $MAXNEW | samples $SAMPLES"
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
@@ -72,11 +66,16 @@ for i in $(seq "$FIRST" "$LAST"); do
         RUN="gemma_${POS}_${i}_${T}"
         EMB="$CKPT_ROOT/$RUN/embedding/embedding_final.pt"
         RES="$RES_ROOT/$RUN.jsonl"
+        # each run's own tokenizer, not a shared one: it is the one that
+        # produced this vector's token id, and substituting another would be a
+        # silent assumption rather than a checked one
         TOK="$CKPT_ROOT/$RUN/tokenizer"
-        [[ -d "$TOK" ]] || TOK="$SHARED_TOK"
 
         if [[ ! -f "$EMB" ]]; then
             echo "[skip] $RUN -- no trained vector"; skip_n=$((skip_n + 1)); continue
+        fi
+        if [[ ! -d "$TOK" ]]; then
+            echo "[FAIL] $RUN -- no tokenizer at $TOK"; fail_n=$((fail_n + 1)); continue
         fi
         if [[ -f "$RES" ]] && [[ $(wc -l < "$RES") -ge $SAMPLES ]]; then
             echo "[done] $RUN -- $SAMPLES answers already"; skip_n=$((skip_n + 1)); continue
