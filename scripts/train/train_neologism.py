@@ -16,6 +16,7 @@ from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
     Trainer,
+    TrainerCallback,
     TrainingArguments,
     set_seed,
 )
@@ -523,6 +524,24 @@ def apo_up_loss(
     loss = (loss1 + loss2).mean()
     return loss
 
+class NewTokenGradNormCallback(TrainerCallback):
+    """
+    Capture the gradient norm of the trained vector right before each optimizer step.
+
+    on_step_end is too late: the Trainer has already zeroed the gradients by then,
+    so reading .grad there gives nothing. on_pre_optimizer_step fires after the
+    accumulated micro-steps and before the step, which is the value worth logging.
+    """
+
+    def __init__(self, new_emb: "NewTokenEmbedding"):
+        self.new_emb = new_emb
+        self.last_grad_norm = None
+
+    def on_pre_optimizer_step(self, args, state, control, **kwargs):
+        g = self.new_emb.new_vec.grad
+        self.last_grad_norm = None if g is None else g.norm().item()
+
+
 class ApoUpTrainer(Trainer):
     def __init__(self, new_emb, pad_token_id, beta, chunk_size=512, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -530,6 +549,22 @@ class ApoUpTrainer(Trainer):
         self.pad_token_id = pad_token_id
         self.beta = beta
         self.chunk_size = chunk_size
+        self.grad_norm_cb = NewTokenGradNormCallback(new_emb)
+        self.add_callback(self.grad_norm_cb)
+
+    def log(self, logs, *args, **kwargs):
+        # Ride on the Trainer's own logging cadence (logging_steps): every {'loss': ...}
+        # line also carries the vector's norm, its distance from the init vector, and the
+        # last pre-step gradient norm. The norm is of the raw vector, before embed_scale,
+        # which is the scale the initialisation (~1 for Gemma) is expressed in.
+        if "loss" in logs:
+            with torch.no_grad():
+                v = self.new_emb.new_vec.detach().float()
+                logs["embedding_norm"] = round(v.norm().item(), 4)
+                logs["embedding_drift"] = round((v - self.new_emb.ref_vec.float()).norm().item(), 4)
+            if self.grad_norm_cb.last_grad_norm is not None:
+                logs["embedding_grad_norm"] = round(self.grad_norm_cb.last_grad_norm, 4)
+        return super().log(logs, *args, **kwargs)
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
 
@@ -811,6 +846,14 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         optimizers=(optimizer, None),
     )
     trainer.train()
+
+    with torch.no_grad():
+        v0, v1 = new_emb.ref_vec.float(), new_emb.new_vec.detach().float()
+        metadata["init_norm"] = round(v0.norm().item(), 4)
+        metadata["final_norm"] = round(v1.norm().item(), 4)
+        metadata["drift"] = round((v1 - v0).norm().item(), 4)
+    print(f"[vector] norm {metadata['init_norm']} -> {metadata['final_norm']}, "
+          f"moved {metadata['drift']} from init")
 
     final_path = save_new_token_embedding(
         new_emb, new_token, os.path.join(output_dir, "embedding", "embedding_final.pt"), metadata
