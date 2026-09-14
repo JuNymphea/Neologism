@@ -543,12 +543,26 @@ class NewTokenGradNormCallback(TrainerCallback):
 
 
 class ApoUpTrainer(Trainer):
-    def __init__(self, new_emb, pad_token_id, beta, chunk_size=512, *args, **kwargs):
+    """
+    Eq.(2) APO-up loss plus the norm hinge of Appendix A.6:
+
+        L = L_APO-up + lambda_h * max(||e_neo|| - norm_target, 0)
+
+    The hinge is on the raw trained vector (before embed_scale), whose norm the
+    initialisation puts at about 1, so norm_target=1 keeps it from drifting outward.
+    lambda_h=0 disables it.
+    """
+
+    def __init__(self, new_emb, pad_token_id, beta, chunk_size=512,
+                 lambda_h=0.0, norm_target=1.0, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.new_emb = new_emb
         self.pad_token_id = pad_token_id
         self.beta = beta
         self.chunk_size = chunk_size
+        self.lambda_h = lambda_h
+        self.norm_target = norm_target
+        self.last_hinge = None
         self.grad_norm_cb = NewTokenGradNormCallback(new_emb)
         self.add_callback(self.grad_norm_cb)
 
@@ -564,6 +578,8 @@ class ApoUpTrainer(Trainer):
                 logs["embedding_drift"] = round((v - self.new_emb.ref_vec.float()).norm().item(), 4)
             if self.grad_norm_cb.last_grad_norm is not None:
                 logs["embedding_grad_norm"] = round(self.grad_norm_cb.last_grad_norm, 4)
+            if self.lambda_h > 0 and self.last_hinge is not None:
+                logs["hinge"] = round(self.last_hinge, 4)
         return super().log(logs, *args, **kwargs)
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
@@ -576,6 +592,10 @@ class ApoUpTrainer(Trainer):
             beta=self.beta,
             chunk_size=self.chunk_size,
         )
+        if self.lambda_h > 0:
+            hinge = self.lambda_h * torch.relu(self.new_emb.new_vec.norm() - self.norm_target)
+            self.last_hinge = hinge.item()
+            loss = loss + hinge.to(loss.dtype)
         if return_outputs:
             return loss, {}
         return loss
@@ -756,7 +776,7 @@ def prepare_model(model_name, new_token):
 def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_token,
               concept, output_dir, neutral_word, init_mode, template, data_dir,
               batch_size, num_epochs, lr, beta, seed, chunk_size, results_dir=None,
-              use_chat_template=True):
+              use_chat_template=True, lambda_h=0.0, norm_target=1.0):
     os.makedirs(output_dir, exist_ok=True)
     set_seed(seed)
 
@@ -831,6 +851,8 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         "init_mode": init_mode,
         "template": template,
         "chat_template": use_chat_template,
+        "lambda_h": lambda_h,
+        "norm_target": norm_target,
         "seed": seed,
     }
 
@@ -839,7 +861,9 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         pad_token_id=pad_token_id,
         beta=beta,
         chunk_size=chunk_size,
-        model=model,     
+        lambda_h=lambda_h,
+        norm_target=norm_target,
+        model=model,
         args=training_args,
         train_dataset=dataset,
         data_collator=_collate,
@@ -939,6 +963,10 @@ def main():
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--beta", type=float, default=0.1)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--lambda_h", type=float, default=0.0,
+                        help="weight of the norm hinge lambda_h * max(||e|| - norm_target, 0); 0 disables it")
+    parser.add_argument("--norm_target", type=float, default=1.0,
+                        help="hinge threshold on the raw vector's L2 norm (init is about 1)")
     parser.add_argument(
         "--no_chat_template",
         action="store_true",
@@ -986,6 +1014,7 @@ def main():
                 args.batch_size, args.num_epochs, args.lr, args.beta, args.seed,
                 args.chunk_size, args.results_dir,
                 use_chat_template=not args.no_chat_template,
+                lambda_h=args.lambda_h, norm_target=args.norm_target,
             )
             done += 1
         except Exception as exc:
