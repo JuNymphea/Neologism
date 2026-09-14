@@ -1,0 +1,91 @@
+POS,ID,FrameNet,gpt
+NOUN,n_1,Clothing,concept of garments worn on the body
+,n_2,Buildings,concept of building used for habitation or lodging
+,n_3,Body_parts,concept of human body parts
+,n_4,Sounds,concept of characteristic vocal or mechanical sounds and their utterance
+,n_5,Food,concept of edible food ingredients and categories
+,n_6,Aggregate,concept of a gathered body of individuals or objects regarded as a unit
+,n_7,Calendric_unit,concept of calendar-based divisions and reference points of time
+,n_8,Appellations,concept of leadership or authority role in an organization or polity
+,n_9,Vehicle,concept of means of transportation and conveyance vehicles
+,n_10,Facial_expression,concept of facial expression conveying emotion or attitude
+,n_11,Roadways,concept of routes and structures for transportation and passage
+,n_12,Intoxicants,concept of psychoactive substances used for intoxication or dependence
+,n_13,Medical_professionals,concept of medical diagnosis and treatment professionals
+,n_14,Biological_area,concept of natural land dominated by characteristic vegetation and terrain
+,n_15,Connectors,concept of fastening and joining materials together
+,n_16,Offenses,concept of criminal offenses under law
+,n_17,Substance,"concept of physical substances and materials in solid, liquid, or gaseous form"
+,n_18,People_by_origin,concept of nationality or regional identity associated with a place of origin or residence
+,n_19,Social_event,concept of organized social gathering for celebration and entertainment
+,n_20,Sensation,"concept of sensory perception via smell, taste, sight, sound, and touch"
+,n_21,Body_mark,concept of skin lesions and marks on the body
+,n_22,Medical_instruments,concept of diagnostic and surgical medical instrumentation for internal examination and intervention
+,n_23,Organization,concept of formal collective body with institutional coordination and authority
+,n_24,Money,concept of monetary currency and financial resources
+,n_25,People_by_age,concept of human age categories across the lifespan
+,n_26,Businesses,concept of commercial enterprise or place of commerce
+,n_27,Physical_artworks,concept of visual representation of a subject
+,n_28,Prison,concept of confinement facility for detained people
+,n_29,Predicament,concept of difficulty or troublesome situation
+,n_30,Law,concept of authoritative rule systems and formal directives
+VERB,v_1,Filling,concept of application or placement of material onto or into a target surface or space
+,v_2,Cause_motion,concept of imparting physical force to cause displacement of an object
+,v_3,Motion_noise,"concept of characteristic sounds produced by impacts, friction, or fluid and air movement"
+,v_4,Text_creation,concept of linguistic expression recorded or delivered through words
+,v_5,Absorb_heat,concept of heat-based food preparation methods
+,v_6,Cause_to_fragment,concept of separation into pieces by force or damage
+,v_7,Change_posture,concept of body posture and posture change relative to upright orientation
+,v_8,Communication_manner,concept of vocal utterance manner and style of speech
+,v_9,Operate_vehicle,concept of travel and locomotion via vehicles or related propulsion means
+,v_10,Cause_impact,concept of physical impact and collision force
+,v_11,Cause_to_start,concept of causal initiation of an effect or response
+,v_12,Manipulate_into_doing,concept of coercive or deceptive influence over others for advantage
+,v_13,Closure,concept of securing or releasing a closure mechanism
+,v_14,Mass_motion,concept of large-quantity arrival or movement in a continuous mass or flow
+,v_15,Required_event,concept of obligation and necessity expressed as deontic modality
+,v_16,Cause_to_be_wet,concept of thorough application or absorption of liquid causing wetness
+,v_17,Come_together,concept of collective physical gathering in one place
+,v_18,Communication_means,concept of long-distance transmission of information or signals
+,v_19,Expend_resource,concept of complete depletion of an available supply through use or consumption
+,v_20,Thwarting,concept of obstruction of a plan or outcome
+,v_21,Cause_change_of_phase,"concept of phase transitions between solid, liquid, and gas"
+,v_22,Detaching,concept of separation from a fastening or connection
+,v_23,Giving_in,concept of surrender to pressure or demands
+,v_24,Undressing,concept of removal of clothing from the body
+,v_25,Cause_to_perceive,concept of making information perceptible to an audience
+,v_26,Change_operational_state,concept of powered operational status in a device or system
+,v_27,Fall_asleep,concept of loss of consciousness or transition into sleep
+,v_28,Change_event_duration,concept of duration lengthening or shortening
+,v_29,Name_conferral,concept of bestowing an identifying label on someone or something
+,v_30,Putting_out_fire,concept of fire suppression and cessation of burning
+ADJ,a_1,Body_description_holistic,concept of body build and weight-related physique
+,a_2,Size,concept of magnitude in physical size or extent
+,a_3,Praiseworthiness,concept of moral evaluation as deserving praise or blame
+,a_4,Duration_description,concept of temporal duration or persistence
+,a_5,Being_wet,concept of high water content and moisture saturation
+,a_6,Ordinal_numbers,concept of ordinal position in a sequence
+,a_7,Beyond_compare,concept of surpassing all others in excellence or quality
+,a_8,Level_of_light,concept of illumination level and absence or presence of light
+,a_9,Mental_stimulus_exp_focus,concept of intense interest and preoccupation toward someone or something
+,a_10,Ground_up,concept of reduced into small particles or fragments by mechanical breakdown
+,a_11,Aesthetics,concept of aesthetic appeal and evaluative judgments of appearance or taste
+,a_12,Social_desirability,concept of social-class status and its stratification
+,a_13,Attitude_description,concept of outlook toward future outcomes on a positive–negative spectrum
+,a_14,Prominence,concept of perceptual prominence attracting attention
+,a_15,Strictness,concept of stringency versus permissiveness in rule enforcement
+,a_16,Being_detached,concept of lack of physical attachment or connection
+,a_17,Being_rotted,concept of decomposition and spoilage
+,a_18,Rashness,concept of patience versus impulsive haste
+,a_19,Used_up,concept of complete consumption or depletion of available resources
+,a_20,Being_questionable,concept of doubt about trustworthiness or legitimacy
+,a_21,Popularity,concept of widespread social approval and desirability
+,a_22,Sole_instance,concept of exclusivity without others
+,a_23,Abounding_with,concept of dense covering or filling by many elements
+,a_24,Stimulus_focus,concept of emotional impact evoked in a perceiver
+,a_25,Artificiality,concept of authenticity versus imitation or falseness
+,a_26,Legality,concept of conformance or nonconformance to law or accepted rules
+,a_27,Wealthiness,concept of economic wealth and poverty status
+,a_28,Social_interaction_evaluation,concept of interpersonal civility and kindness toward others
+,a_29,Temperature,concept of thermal level relative to hotness and coldness
+,a_30,Correctness,concept of conformity to truth or fact
