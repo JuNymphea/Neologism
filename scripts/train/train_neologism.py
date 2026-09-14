@@ -918,7 +918,7 @@ def main():
     parser.add_argument(
         "--init_mode",
         type=str,
-        default="neutral",
+        default="random",
         choices=["neutral", "random"],
         help="'neutral': copy the neutral word's embedding; 'random': sample a random vector"
     )
