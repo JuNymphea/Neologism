@@ -238,48 +238,47 @@ def _pad_to_length(t: torch.Tensor, target_len: int, pad_value: int) -> torch.Te
 
 
 def _cat_prompts_and_completions(batch: dict, pad_token_id: int, device):
-    prompt_input_ids = batch["prompt_input_ids"].to(device)           # [B, Lp]
-    prompt_attention_mask = batch["prompt_attention_mask"].to(device)
+    """
+    Build prompt + completion for chosen and rejected, one example at a time, and pad
+    only at the end: [2B, T] ids, attention mask, and a loss mask over the completion.
 
-    chosen_input_ids = batch["chosen_input_ids"].to(device)           # [B, Lc_chosen]
-    chosen_attention_mask = batch["chosen_attention_mask"].to(device)
-
-    rejected_input_ids = batch["rejected_input_ids"].to(device)       # [B, Lc_rej]
-    rejected_attention_mask = batch["rejected_attention_mask"].to(device)
-
+    The collated batch has each prompt right-padded to the longest in the batch.
+    Appending the completion to that padded prompt used to leave pad tokens between
+    the two -- at batch_size 8 on a_1, 347 of 400 examples had a gap, averaging 8.7
+    pads and up to 60 -- so the first answer token was predicted from a <pad>, every
+    answer position was shifted by the gap, and the context no longer matched eval,
+    where generation follows the prompt directly. At batch_size 1 there is no padding,
+    which is why it never showed. Each example's real prompt tokens are now taken on
+    their own and the completion placed immediately after them.
+    """
+    prompt_input_ids = batch["prompt_input_ids"]
+    prompt_attention_mask = batch["prompt_attention_mask"].bool()
     B = prompt_input_ids.size(0)
 
-    chosen_input_ids_full = torch.cat([prompt_input_ids, chosen_input_ids], dim=1)          # [B, Lp+Lc1]
-    chosen_attention_mask_full = torch.cat([prompt_attention_mask, chosen_attention_mask], dim=1)
+    seqs, completion_flags = [], []
+    for side in ("chosen", "rejected"):          # chosen rows first, then rejected
+        completion_ids = batch[f"{side}_input_ids"]
+        completion_mask = batch[f"{side}_attention_mask"].bool()
+        for b in range(B):
+            p = prompt_input_ids[b][prompt_attention_mask[b]]
+            c = completion_ids[b][completion_mask[b]]
+            seqs.append(torch.cat([p, c]))
+            completion_flags.append(torch.cat([torch.zeros(p.numel(), dtype=torch.bool),
+                                               torch.ones(c.numel(), dtype=torch.bool)]))
 
-    rejected_input_ids_full = torch.cat([prompt_input_ids, rejected_input_ids], dim=1)      # [B, Lp+Lc2]
-    rejected_attention_mask_full = torch.cat([prompt_attention_mask, rejected_attention_mask], dim=1)
+    T = max(s.numel() for s in seqs)
+    input_ids = torch.full((2 * B, T), pad_token_id, dtype=prompt_input_ids.dtype)
+    attention_mask = torch.zeros((2 * B, T), dtype=torch.long)
+    loss_mask = torch.zeros((2 * B, T), dtype=torch.bool)
+    for i, (s, flag) in enumerate(zip(seqs, completion_flags)):
+        n = s.numel()
+        input_ids[i, :n] = s
+        attention_mask[i, :n] = 1
+        loss_mask[i, :n] = flag
 
-    Tc = chosen_input_ids_full.size(1)
-    Tr = rejected_input_ids_full.size(1)
-    T = max(Tc, Tr)
-
-    chosen_input_ids_full = _pad_to_length(chosen_input_ids_full, T, pad_token_id)
-    rejected_input_ids_full = _pad_to_length(rejected_input_ids_full, T, pad_token_id)
-
-    chosen_attention_mask_full = _pad_to_length(chosen_attention_mask_full, T, 0)
-    rejected_attention_mask_full = _pad_to_length(rejected_attention_mask_full, T, 0)
-
-    chosen_loss_mask = torch.cat(
-        [torch.zeros_like(prompt_attention_mask), chosen_attention_mask],
-        dim=1,
-    )
-    rejected_loss_mask = torch.cat(
-        [torch.zeros_like(prompt_attention_mask), rejected_attention_mask],
-        dim=1,
-    )
-
-    chosen_loss_mask = _pad_to_length(chosen_loss_mask.to(device), T, 0)
-    rejected_loss_mask = _pad_to_length(rejected_loss_mask.to(device), T, 0)
-
-    input_ids = torch.cat([chosen_input_ids_full, rejected_input_ids_full], dim=0)          # [2B, T]
-    attention_mask = torch.cat([chosen_attention_mask_full, rejected_attention_mask_full], dim=0)
-    loss_mask = torch.cat([chosen_loss_mask, rejected_loss_mask], dim=0).bool()
+    input_ids = input_ids.to(device)                  # [2B, T]
+    attention_mask = attention_mask.to(device)
+    loss_mask = loss_mask.to(device)
 
     return {
         "input_ids": input_ids,
