@@ -90,10 +90,14 @@ def main():
         print("  (the fallback path would be used: logits get materialized, more memory)")
 
     # 2. embedding scale -------------------------------------------------------
+    # Gemma multiplies embeddings by sqrt(hidden) inside the module; Qwen, Llama and
+    # most others do not. Either is fine -- NewTokenEmbedding reads the scale off the
+    # module and defaults to 1.0 -- so this reports what the model does rather than
+    # requiring one answer. Check 3 is what verifies the wrapper matches it.
     base = model.get_input_embeddings()
     scale = getattr(base, "embed_scale", None)
-    check("embedding module exposes embed_scale", scale is not None,
-          f"{type(base).__name__}, scale={float(scale) if scale is not None else 'MISSING'}")
+    print(f"  embedding: {type(base).__name__}, "
+          + (f"scaled by {float(scale):.3f}" if scale is not None else "no scale (1.0)"))
 
     # --- set up exactly as training does --------------------------------------
     if DEFAULT_NEW_TOKEN in tok.get_vocab():
@@ -118,7 +122,7 @@ def main():
         got = model.get_input_embeddings()(ids)[0, 0].float()
         saved_row = base.weight[new_id].clone()
         base.weight[new_id] = new_emb.new_vec.to(base.weight.dtype)
-        want = base(ids)[0, 0].float()          # through Gemma's own scaled embedding
+        want = base(ids)[0, 0].float()          # through the model's own embedding, scaled or not
         base.weight[new_id] = saved_row
     absd = (got - want).abs().max().item()
     reld = absd / max(want.abs().max().item(), 1e-9)

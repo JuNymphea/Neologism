@@ -7,13 +7,15 @@ from typing import List
 from tqdm import tqdm
 import torch
 torch.set_float32_matmul_precision('high')
-from transformers import AutoTokenizer, Gemma3ForConditionalGeneration
+from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from train_neologism import (
     load_new_token_embedding,
     run_name,
+    short_model_name,
     shared_tokenizer_dir,
+    legacy_tokenizer_dir,
     SCRIPT_DIR,
     DEFAULT_DATA_DIR,
     DEFAULT_NEW_TOKEN,
@@ -64,6 +66,7 @@ def get_pairs(
     max_new_tokens: int = 4096,
     batch_size: int = 8,
     attn_implementation: str = "sdpa",
+    enable_thinking: bool = False,
 ) -> None:
     """
     Generate normal and concept answers using a single model.
@@ -98,6 +101,10 @@ def get_pairs(
 
     print(f"[load] model: {concept_model_path}")
 
+    # The class AutoModelForCausalLM resolves to for this checkpoint:
+    # Gemma3ForConditionalGeneration for gemma-3, Qwen3ForCausalLM for Qwen3, ...
+    model_cls = AutoModelForCausalLM._model_mapping[type(AutoConfig.from_pretrained(concept_model_path))]
+
     if embedding_path is None:
         # legacy path: a full fine-tuned checkpoint whose lm_head is already stored untied,
         # so tying must not overwrite it at load time
@@ -105,14 +112,14 @@ def get_pairs(
             print("tie_weights() is called and get banned.")
             return
 
-        Gemma3ForConditionalGeneration.tie_weights = disable_tie_weights
+        model_cls.tie_weights = disable_tie_weights
 
     # with `embedding_path`, `concept_model_path` is the *base* model: load it normally
     # (lm_head must still be filled from the tied embedding) and inject the trained row after.
     # sdpa is the default because flash_attention_2 needs the separate flash-attn
     # package, which is not in requirements.txt; both avoid materializing the T x T
     # attention matrix
-    model = Gemma3ForConditionalGeneration.from_pretrained(
+    model = model_cls.from_pretrained(
         concept_model_path,
         device_map="auto",
         dtype=torch.bfloat16,
@@ -126,6 +133,15 @@ def get_pairs(
                 f"{new_token} is not in the tokenizer at {concept_tokenizer_path}; "
                 "point --concept_tokenizer_path at the tokenizer saved by training."
             )
+        # The id training recorded must be the id this tokenizer gives the token. A
+        # tokenizer saved for another model assigns a different one, and injecting
+        # the vector there would run without error and produce nonsense.
+        trained_id = torch.load(embedding_path, map_location="cpu").get("new_token_id")
+        if trained_id is not None and int(trained_id) != new_id:
+            raise ValueError(
+                f"{embedding_path} was trained with {new_token} at id {trained_id}, but "
+                f"the tokenizer at {concept_tokenizer_path} gives id {new_id}: the "
+                "tokenizer belongs to a different model.")
         print(f"[load] embedding: {embedding_path} -> token {new_token} (id={new_id})")
         load_new_token_embedding(model, embedding_path, new_id=new_id)
 
@@ -141,12 +157,16 @@ def get_pairs(
     def generate_batch(texts: List[str]) -> List[str]:
         conversations = [[{"role": "user", "content": t}] for t in texts]
 
+        # enable_thinking is read by templates that have a reasoning mode (Qwen3) and
+        # ignored by the rest. Left on, Qwen3 opens every answer with a <think> block,
+        # which inflates the length and changes what the judge sees.
         model_inputs = tokenizer.apply_chat_template(
             conversations,
             add_generation_prompt=True,
             return_tensors="pt",
             return_dict=True,
             padding=True,
+            enable_thinking=enable_thinking,
         ).to(model.device)
 
         # left padding makes every row start generating at the same column
@@ -201,8 +221,8 @@ def main():
                         help=f"defaults to the token recorded in --embedding_path, else '{DEFAULT_NEW_TOKEN}'")
     parser.add_argument("--concept", type=str, required=True)
     parser.add_argument("--concept_tokenizer_path", type=str, default=None,
-                        help="defaults to results/<new_token>/tokenizer, the one copy "
-                             "shared by every run that uses that token")
+                        help="defaults to results/<model>/<new_token>/tokenizer, the one copy "
+                             "shared by every run of that model and token")
     parser.add_argument("--concept_model_path", type=str, required=True,
                         help="full fine-tuned checkpoint, or the BASE model when --embedding_path is given")
     parser.add_argument("--embedding_path", type=str, default=None,
@@ -219,6 +239,8 @@ def main():
     parser.add_argument("--attn_implementation", type=str, default="sdpa",
                         choices=["sdpa", "eager", "flash_attention_2"],
                         help="flash_attention_2 requires the flash-attn package")
+    parser.add_argument("--enable_thinking", action="store_true",
+                        help="let reasoning models (Qwen3) think before answering; off by default")
     args = parser.parse_args()
 
     # training records its full setting next to the embedding; reuse it so that the
@@ -233,8 +255,26 @@ def main():
     # name the run after the model it was TRAINED on, not the path we happen to load from
     model_name = meta.get("model_name") or args.concept_model_path
 
-    tokenizer_path = args.concept_tokenizer_path or str(
-        shared_tokenizer_dir(new_token, args.res_dir))
+    trained_tag, loaded_tag = short_model_name(model_name), short_model_name(args.concept_model_path)
+    if trained_tag != loaded_tag:
+        raise ValueError(
+            f"{args.embedding_path} was trained on {model_name} ({trained_tag}) but "
+            f"--concept_model_path is {args.concept_model_path} ({loaded_tag}); a vector "
+            "only means something in the model it was trained in.")
+
+    if args.concept_tokenizer_path:
+        tokenizer_path = args.concept_tokenizer_path
+    else:
+        tokenizer_path = str(shared_tokenizer_dir(new_token, model_name, args.res_dir))
+        if not os.path.isdir(tokenizer_path):
+            legacy = legacy_tokenizer_dir(new_token, args.res_dir)
+            hint = (f"\nan older copy is at {legacy}; if it is {trained_tag}'s, move it:\n"
+                    f"    mkdir -p {os.path.dirname(os.path.dirname(tokenizer_path))} && "
+                    f"mv {legacy.parent} {os.path.dirname(tokenizer_path)}"
+                    if legacy.is_dir() else "")
+            raise FileNotFoundError(
+                f"no tokenizer at {tokenizer_path}; training writes it on the first run "
+                f"of {trained_tag} with {new_token}.{hint}")
 
     name = run_name(model_name, args.concept, template)
     print(f"[run] {name} (new_token={new_token}, template={template})")
@@ -255,6 +295,7 @@ def main():
         max_new_tokens=args.max_new_tokens,
         batch_size=args.batch_size,
         attn_implementation=args.attn_implementation,
+        enable_thinking=args.enable_thinking,
     )
 
 if __name__ == "__main__":

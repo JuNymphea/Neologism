@@ -49,6 +49,12 @@ cd "$REPO"
 
 source scripts/train/env.sh
 
+# Which model: the one setup_env.sh set up, unless MODEL is exported, e.g.
+#   sbatch --export=ALL,MODEL=/ix/$(id -gn)/$USER/model/Qwen/Qwen3-4B ...
+# TAG is the prefix every run, result and tokenizer of that model is filed under.
+MODEL=${MODEL:-${NEOLOGISM_MODEL:?source env.sh first}}
+TAG=$(python scripts/train/naming.py tag "$MODEL")
+
 POSLIST=(a n v)
 PER_POS=${PER_POS:-10}
 FIRST=${FIRST:-1}
@@ -63,14 +69,14 @@ CKPT_ROOT=scripts/train/checkpoints
 RES_ROOT=scripts/train/results
 mkdir -p "$RES_ROOT"
 
-echo "=== $(date) | node $(hostname) | task $SLURM_ARRAY_TASK_ID -> ${POS}_${IDX} ==="
+echo "=== $(date) | node $(hostname) | $TAG | task $SLURM_ARRAY_TASK_ID -> ${POS}_${IDX} ==="
 echo "    batch $BATCH | max_new_tokens $MAXNEW | samples $SAMPLES"
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 done_n=0; skip_n=0; fail_n=0
 i=$IDX
 for T in "${TEMPLATES[@]}"; do
-    RUN="gemma_${POS}_${i}_${T}"
+    RUN="${TAG}_${POS}_${i}_${T}"
     EMB="$CKPT_ROOT/$RUN/embedding/embedding_final.pt"
     RES="$RES_ROOT/$RUN.jsonl"
 
@@ -86,7 +92,7 @@ for T in "${TEMPLATES[@]}"; do
     # cannot drift from what training used
     if python scripts/train/eval_neologism.py \
             --concept "${POS}_${i}" \
-            --concept_model_path "${NEOLOGISM_MODEL:?source env.sh first}" \
+            --concept_model_path "$MODEL" \
             --embedding_path "$EMB" \
             --max_samples "$SAMPLES" \
             --max_new_tokens "$MAXNEW" \

@@ -45,14 +45,20 @@ TEMPLATES=(unbiased verb noun adj mixed)
 TEMPLATE=${TEMPLATES[$SLURM_ARRAY_TASK_ID]}
 
 CONCEPT=a_25
-MODEL=${NEOLOGISM_MODEL:?source env.sh first}
 TRAIN=scripts/train/train_neologism.py
 
 # written by setup_env.sh: loads the torch module, activates the venv on /ix, and
-# points HF_HOME away from the 75 GB home quota
+# points HF_HOME away from the 75 GB home quota. It has to come before MODEL is read,
+# which is where NEOLOGISM_MODEL is defined.
 source scripts/train/env.sh
 
-echo "=== $(date) | node $(hostname) | template $TEMPLATE ==="
+# Which model: the one setup_env.sh set up, unless MODEL is exported, e.g.
+#   sbatch --export=ALL,MODEL=/ix/$(id -gn)/$USER/model/Qwen/Qwen3-4B ...
+# TAG is the prefix every run, result and tokenizer of that model is filed under.
+MODEL=${MODEL:-${NEOLOGISM_MODEL:?source env.sh first}}
+TAG=$(python scripts/train/naming.py tag "$MODEL")
+
+echo "=== $(date) | node $(hostname) | $TAG | template $TEMPLATE ==="
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 python "$TRAIN" \

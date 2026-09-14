@@ -27,48 +27,22 @@ from transformers import (
 
 # anchored to this file, so the scripts work from any working directory
 SCRIPT_DIR = Path(__file__).resolve().parent
+import sys as _sys
+if str(SCRIPT_DIR) not in _sys.path:  # so `naming` resolves when imported from elsewhere
+    _sys.path.insert(0, str(SCRIPT_DIR))
 DEFAULT_DATA_DIR = SCRIPT_DIR / "data"   # NOT "datasets": that shadows the HF package
 DEFAULT_OUTPUT_DIR = SCRIPT_DIR / "checkpoints"
-DEFAULT_RESULTS_DIR = SCRIPT_DIR / "results"
-
-
-def shared_tokenizer_dir(new_token: str, results_dir=None) -> Path:
-    """Where the tokenizer for `new_token` lives, shared by every run that uses it.
-
-    The tokenizer is the base one plus this single added token, so it is identical
-    for every concept and template. Saving a copy per run cost 32 MB each, 4.7 GB
-    across a 150-run sweep, against 12 KB for the vector it accompanied.
-
-    Path separators are stripped from the token so it can name a directory; nothing
-    else is, so the directory stays recognisable as the token it belongs to.
-    """
-    safe = "".join(c for c in new_token if c not in "/\\" and not c.isspace()) or "token"
-    return Path(results_dir or DEFAULT_RESULTS_DIR) / safe / "tokenizer"
-
-
-# =====================
-#   run naming
-# =====================
-
-DEFAULT_NEW_TOKEN = "~jdsglmdh"
-
-# model families we shorten in paths; anything else falls back to the leading
-# segment of the directory name
-MODEL_SHORT_NAMES = ["gemma", "qwen", "llama", "mistral", "olmo", "phi"]
-
-
-def short_model_name(model_name: str) -> str:
-    """'neologism/model/google/gemma-3-4b-it' -> 'gemma'"""
-    name = Path(model_name.rstrip("/")).name.lower()
-    for short in MODEL_SHORT_NAMES:
-        if short in name:
-            return short
-    return name.split("-")[0]
-
-
-def run_name(model_name: str, concept: str, template: str) -> str:
-    """Name identifying one training setting; used for the checkpoint dir and the eval result file."""
-    return f"{short_model_name(model_name)}_{concept}_{template}"
+# Naming lives in naming.py so the Slurm scripts can use it without importing torch.
+# Re-exported here so `from train_neologism import run_name, ...` keeps working.
+from naming import (  # noqa: E402
+    DEFAULT_NEW_TOKEN,
+    DEFAULT_RESULTS_DIR,
+    MODEL_SHORT_NAMES,
+    legacy_tokenizer_dir,
+    run_name,
+    shared_tokenizer_dir,
+    short_model_name,
+)
 
 
 # =====================
@@ -830,9 +804,19 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
     final_path = save_new_token_embedding(
         new_emb, new_token, os.path.join(output_dir, "embedding", "embedding_final.pt"), metadata
     )
-    # One copy per token rather than per run; see shared_tokenizer_dir.
-    tok_dir = shared_tokenizer_dir(new_token, results_dir)
-    if not (tok_dir / "tokenizer_config.json").exists():
+    # One copy per (model, token) rather than per run; see shared_tokenizer_dir.
+    tok_dir = shared_tokenizer_dir(new_token, model_name, results_dir)
+    if (tok_dir / "tokenizer_config.json").exists():
+        # Reuse it only if it really is this model's: a copy left by another model
+        # would assign the token a different id, and eval would read it silently.
+        saved = AutoTokenizer.from_pretrained(str(tok_dir), use_fast=True)
+        if len(saved) != len(tokenizer) or saved.convert_tokens_to_ids(new_token) != new_id:
+            raise ValueError(
+                f"{tok_dir} holds a tokenizer with {len(saved)} entries and "
+                f"{new_token} at id {saved.convert_tokens_to_ids(new_token)}, but "
+                f"{model_name} gives {len(tokenizer)} and id {new_id}. It belongs to a "
+                "different model; move it aside and rerun.")
+    else:
         tokenizer.save_pretrained(str(tok_dir))
         print(f"[tokenizer] saved to {tok_dir}")
 

@@ -12,9 +12,10 @@
 #SBATCH --mail-user=zhj76@pitt.edu
 #SBATCH --mail-type=END,FAIL
 
-# Run this BEFORE submit_train.slurm. It checks the maths on a tiny model and then
-# the real gemma-3-4b: the hidden-state path, Gemma's embedding scale, and the peak
-# GPU memory a worst-case batch actually allocates.
+# Run this BEFORE submit_train.slurm, and again for each new model. It checks the
+# maths on a tiny model and then the real checkpoint: the hidden-state path, the
+# embedding scale (Gemma has one, Qwen does not), and the peak GPU memory a
+# worst-case batch actually allocates.
 #
 #   mkdir -p logs
 #   sbatch scripts/train/submit_preflight.slurm
@@ -38,7 +39,13 @@ SCRIPTS=scripts/train
 # and points HF_HOME away from the 75 GB home quota
 source "$SCRIPTS/env.sh"
 
-echo "=== $(date) | node $(hostname) ==="
+# Which model: the one setup_env.sh set up, unless MODEL is exported, e.g.
+#   sbatch --export=ALL,MODEL=/ix/$(id -gn)/$USER/model/Qwen/Qwen3-4B ...
+# TAG is the prefix every run, result and tokenizer of that model is filed under.
+MODEL=${MODEL:-${NEOLOGISM_MODEL:?source env.sh first}}
+TAG=$(python "$SCRIPTS/naming.py" tag "$MODEL")
+
+echo "=== $(date) | node $(hostname) | $TAG | $MODEL ==="
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 echo
@@ -49,7 +56,7 @@ echo
 echo "########## 2/2  real model on the GPU ##########"
 python "$SCRIPTS/preflight.py" \
     --concept a_25 \
-    --model_name "${NEOLOGISM_MODEL:?source env.sh first}" \
+    --model_name "$MODEL" \
     --batch_size 8
 
 crc-job-stats

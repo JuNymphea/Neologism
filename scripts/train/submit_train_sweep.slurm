@@ -44,6 +44,12 @@ cd "$REPO"
 
 source scripts/train/env.sh
 
+# Which model: the one setup_env.sh set up, unless MODEL is exported, e.g.
+#   sbatch --export=ALL,MODEL=/ix/$(id -gn)/$USER/model/Qwen/Qwen3-4B ...
+# TAG is the prefix every run, result and tokenizer of that model is filed under.
+MODEL=${MODEL:-${NEOLOGISM_MODEL:?source env.sh first}}
+TAG=$(python scripts/train/naming.py tag "$MODEL")
+
 POSLIST=(a n v)
 PER_POS=${PER_POS:-10}
 FIRST=${FIRST:-1}
@@ -52,13 +58,13 @@ BATCH=${BATCH:-8}
 POS=${POSLIST[$((SLURM_ARRAY_TASK_ID / PER_POS))]}
 CONCEPT="${POS}_$((FIRST + SLURM_ARRAY_TASK_ID % PER_POS))"
 
-echo "=== $(date) | node $(hostname) | task $SLURM_ARRAY_TASK_ID -> $CONCEPT ==="
+echo "=== $(date) | node $(hostname) | $TAG | task $SLURM_ARRAY_TASK_ID -> $CONCEPT ==="
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 python scripts/train/train_neologism.py \
     --concept "$CONCEPT" \
     --template unbiased verb noun adj mixed \
-    --model_name "${NEOLOGISM_MODEL:?source env.sh first}" \
+    --model_name "$MODEL" \
     --batch_size "$BATCH"
 
 crc-job-stats
