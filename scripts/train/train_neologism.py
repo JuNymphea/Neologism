@@ -111,6 +111,7 @@ class NeologismDataset(Dataset):
         data_dir: str = None,
         max_prompt_length: int = 4096,
         max_completion_length: int = 4096,
+        use_chat_template: bool = True,
     ):
         if template not in TEMPLATE_CHOICES:
             raise ValueError(f"unknown template '{template}', expected one of {TEMPLATE_CHOICES}")
@@ -118,6 +119,7 @@ class NeologismDataset(Dataset):
         self.tokenizer = tokenizer
         self.new_token = new_token
         self.template = template
+        self.use_chat_template = use_chat_template
         self.max_prompt_length = max_prompt_length
         self.max_completion_length = max_completion_length
 
@@ -170,24 +172,30 @@ class NeologismDataset(Dataset):
 
         prompt_text = build_prompt(q, self.new_token, self.templates[idx])
 
-        # prompt_enc = self.tokenizer(
-        #     prompt_text,
-        #     add_special_tokens=True,
-        #     truncation=True,
-        #     max_length=self.max_prompt_length,
-        #     return_tensors="pt",
-        # )
-        # prompt_input_ids = prompt_enc["input_ids"][0]
-        # prompt_attention_mask = prompt_enc["attention_mask"][0]
-
-        # add chat_template
-        prompt_enc = self.tokenizer(
-            prompt_text,
-            add_special_tokens=True,
-            truncation=True,
-            max_length=self.max_prompt_length,
-            return_tensors="pt",
-        )
+        if self.use_chat_template:
+            # The original working version wrapped the prompt in the chat template
+            # (<start_of_turn>user ... <start_of_turn>model\n) so the answer is trained
+            # as an assistant turn -- which is also what eval generates from. The
+            # tokenizer's own template is used rather than a hand-written string, so the
+            # training prompt and the eval prompt are identical token for token.
+            prompt_enc = self.tokenizer.apply_chat_template(
+                [{"role": "user", "content": prompt_text}],
+                add_generation_prompt=True,
+                tokenize=True,
+                return_dict=True,
+                return_tensors="pt",
+                truncation=True,
+                max_length=self.max_prompt_length,
+            )
+        else:
+            # raw "<bos>question + template", the answer as a plain continuation
+            prompt_enc = self.tokenizer(
+                prompt_text,
+                add_special_tokens=True,
+                truncation=True,
+                max_length=self.max_prompt_length,
+                return_tensors="pt",
+            )
         prompt_input_ids = prompt_enc["input_ids"][0]
         prompt_attention_mask = prompt_enc["attention_mask"][0]
 
@@ -712,7 +720,8 @@ def prepare_model(model_name, new_token):
 
 def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_token,
               concept, output_dir, neutral_word, init_mode, template, data_dir,
-              batch_size, num_epochs, lr, beta, seed, chunk_size, results_dir=None):
+              batch_size, num_epochs, lr, beta, seed, chunk_size, results_dir=None,
+              use_chat_template=True):
     os.makedirs(output_dir, exist_ok=True)
     set_seed(seed)
 
@@ -750,7 +759,9 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         template=template,
         seed=seed,
         data_dir=data_dir,
+        use_chat_template=use_chat_template,
     )
+    print(f"[prompt] chat_template={'on' if use_chat_template else 'off'}")
     if template == "mixed":
         counts = {k: dataset.templates.count(k) for k in MIXED_TEMPLATES}
         print(f"[template] mixed -> {counts}")
@@ -784,6 +795,7 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         "neutral_word": neutral_word,
         "init_mode": init_mode,
         "template": template,
+        "chat_template": use_chat_template,
         "seed": seed,
     }
 
@@ -885,6 +897,12 @@ def main():
     parser.add_argument("--beta", type=float, default=0.1)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument(
+        "--no_chat_template",
+        action="store_true",
+        help="train on the raw '<bos>question + template' text instead of wrapping it in "
+             "the chat template (the default, which is what eval generates from)"
+    )
+    parser.add_argument(
         "--chunk_size",
         type=int,
         default=512,
@@ -924,6 +942,7 @@ def main():
                 args.neutral_word, init_mode, template, args.data_dir,
                 args.batch_size, args.num_epochs, args.lr, args.beta, args.seed,
                 args.chunk_size, args.results_dir,
+                use_chat_template=not args.no_chat_template,
             )
             done += 1
         except Exception as exc:
