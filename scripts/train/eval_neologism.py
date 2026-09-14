@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from train_neologism import (
     load_new_token_embedding,
     run_name,
+    shared_tokenizer_dir,
     SCRIPT_DIR,
     DEFAULT_DATA_DIR,
     DEFAULT_NEW_TOKEN,
@@ -199,7 +200,9 @@ def main():
     parser.add_argument("--new_token", type=str, default=None,
                         help=f"defaults to the token recorded in --embedding_path, else '{DEFAULT_NEW_TOKEN}'")
     parser.add_argument("--concept", type=str, required=True)
-    parser.add_argument("--concept_tokenizer_path", type=str, required=True)
+    parser.add_argument("--concept_tokenizer_path", type=str, default=None,
+                        help="defaults to results/<new_token>/tokenizer, the one copy "
+                             "shared by every run that uses that token")
     parser.add_argument("--concept_model_path", type=str, required=True,
                         help="full fine-tuned checkpoint, or the BASE model when --embedding_path is given")
     parser.add_argument("--embedding_path", type=str, default=None,
@@ -230,6 +233,9 @@ def main():
     # name the run after the model it was TRAINED on, not the path we happen to load from
     model_name = meta.get("model_name") or args.concept_model_path
 
+    tokenizer_path = args.concept_tokenizer_path or str(
+        shared_tokenizer_dir(new_token, args.res_dir))
+
     name = run_name(model_name, args.concept, template)
     print(f"[run] {name} (new_token={new_token}, template={template})")
 
@@ -239,7 +245,7 @@ def main():
         output_file=output_file,
         new_token=new_token,
         concept=args.concept,
-        concept_tokenizer_path=args.concept_tokenizer_path,
+        concept_tokenizer_path=tokenizer_path,
         concept_model_path=args.concept_model_path,
         embedding_path=args.embedding_path,
         eval_file=args.eval_file,

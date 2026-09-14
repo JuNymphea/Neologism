@@ -30,6 +30,9 @@
 # A run whose result file already has max_samples lines is skipped, and
 # eval_neologism itself resumes a partial file question by question, so a
 # requeued task repeats nothing. Inference only, so this runs on l40s.
+#
+# The tokenizer comes from results/<new_token>/tokenizer -- one copy for the token
+# rather than one per run -- which eval_neologism resolves on its own.
 
 set -euo pipefail
 
@@ -66,16 +69,9 @@ for i in $(seq "$FIRST" "$LAST"); do
         RUN="gemma_${POS}_${i}_${T}"
         EMB="$CKPT_ROOT/$RUN/embedding/embedding_final.pt"
         RES="$RES_ROOT/$RUN.jsonl"
-        # each run's own tokenizer, not a shared one: it is the one that
-        # produced this vector's token id, and substituting another would be a
-        # silent assumption rather than a checked one
-        TOK="$CKPT_ROOT/$RUN/tokenizer"
 
         if [[ ! -f "$EMB" ]]; then
             echo "[skip] $RUN -- no trained vector"; skip_n=$((skip_n + 1)); continue
-        fi
-        if [[ ! -d "$TOK" ]]; then
-            echo "[FAIL] $RUN -- no tokenizer at $TOK"; fail_n=$((fail_n + 1)); continue
         fi
         if [[ -f "$RES" ]] && [[ $(wc -l < "$RES") -ge $SAMPLES ]]; then
             echo "[done] $RUN -- $SAMPLES answers already"; skip_n=$((skip_n + 1)); continue
@@ -87,7 +83,6 @@ for i in $(seq "$FIRST" "$LAST"); do
         if python scripts/train/eval_neologism.py \
                 --concept "${POS}_${i}" \
                 --concept_model_path "${NEOLOGISM_MODEL:?source env.sh first}" \
-                --concept_tokenizer_path "$TOK" \
                 --embedding_path "$EMB" \
                 --max_samples "$SAMPLES" \
                 --max_new_tokens "$MAXNEW" \

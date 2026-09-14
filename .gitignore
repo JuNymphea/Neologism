@@ -1,7 +1,7 @@
 # Training outputs: the trained vectors (12 KB each) and the generations are the
-# result and are tracked. The tokenizer saved beside each one is a 32 MB copy of the
-# base tokenizer, byte-identical for every run -- 4.7 GB across the 151 runs.
-scripts/train/checkpoints/*/tokenizer/
+# result and are tracked. The tokenizer is not -- it is 33 MB of base tokenizer with
+# one token added, and training writes it on first run.
+scripts/train/results/*/tokenizer/
 checkpoints-*/
 
 # local model weights

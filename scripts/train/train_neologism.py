@@ -29,6 +29,21 @@ from transformers import (
 SCRIPT_DIR = Path(__file__).resolve().parent
 DEFAULT_DATA_DIR = SCRIPT_DIR / "data"   # NOT "datasets": that shadows the HF package
 DEFAULT_OUTPUT_DIR = SCRIPT_DIR / "checkpoints"
+DEFAULT_RESULTS_DIR = SCRIPT_DIR / "results"
+
+
+def shared_tokenizer_dir(new_token: str, results_dir=None) -> Path:
+    """Where the tokenizer for `new_token` lives, shared by every run that uses it.
+
+    The tokenizer is the base one plus this single added token, so it is identical
+    for every concept and template. Saving a copy per run cost 32 MB each, 4.7 GB
+    across a 150-run sweep, against 12 KB for the vector it accompanied.
+
+    Path separators are stripped from the token so it can name a directory; nothing
+    else is, so the directory stays recognisable as the token it belongs to.
+    """
+    safe = "".join(c for c in new_token if c not in "/\\" and not c.isspace()) or "token"
+    return Path(results_dir or DEFAULT_RESULTS_DIR) / safe / "tokenizer"
 
 
 # =====================
@@ -724,7 +739,7 @@ def prepare_model(model_name, new_token):
 
 def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_token,
               concept, output_dir, neutral_word, init_mode, template, data_dir,
-              batch_size, num_epochs, lr, beta, seed, chunk_size):
+              batch_size, num_epochs, lr, beta, seed, chunk_size, results_dir=None):
     os.makedirs(output_dir, exist_ok=True)
     set_seed(seed)
 
@@ -815,9 +830,13 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
     final_path = save_new_token_embedding(
         new_emb, new_token, os.path.join(output_dir, "embedding", "embedding_final.pt"), metadata
     )
-    tokenizer.save_pretrained(f"{output_dir}/tokenizer")
+    # One copy per token rather than per run; see shared_tokenizer_dir.
+    tok_dir = shared_tokenizer_dir(new_token, results_dir)
+    if not (tok_dir / "tokenizer_config.json").exists():
+        tokenizer.save_pretrained(str(tok_dir))
+        print(f"[tokenizer] saved to {tok_dir}")
 
-    print(f"Training Finished. Embedding saved to {final_path}, tokenizer saved to {output_dir}/tokenizer")
+    print(f"Training Finished. Embedding saved to {final_path}, tokenizer at {tok_dir}")
 
 def main():
     parser = argparse.ArgumentParser()
@@ -848,6 +867,12 @@ def main():
         type=str,
         default=str(DEFAULT_DATA_DIR),
         help="holds train/{concept}.jsonl"
+    )
+    parser.add_argument(
+        "--results_dir",
+        type=str,
+        default=str(DEFAULT_RESULTS_DIR),
+        help="holds <new_token>/tokenizer/, shared by every run using that token"
     )
     parser.add_argument(
         "--neutral_word",
@@ -915,7 +940,7 @@ def main():
                 args.model_name, args.new_token, concept, output_dir,
                 args.neutral_word, init_mode, template, args.data_dir,
                 args.batch_size, args.num_epochs, args.lr, args.beta, args.seed,
-                args.chunk_size,
+                args.chunk_size, args.results_dir,
             )
             done += 1
         except Exception as exc:
