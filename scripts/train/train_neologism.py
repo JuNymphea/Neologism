@@ -179,6 +179,10 @@ class NeologismDataset(Dataset):
             # as an assistant turn -- which is also what eval generates from. The
             # tokenizer's own template is used rather than a hand-written string, so the
             # training prompt and the eval prompt are identical token for token.
+            # enable_thinking=False matches eval's default. Templates with a reasoning
+            # mode (Qwen3) otherwise differ between the two -- eval's prompt ends in an
+            # empty <think></think> block, training's would not -- and templates
+            # without one ignore the flag.
             prompt_enc = self.tokenizer.apply_chat_template(
                 [{"role": "user", "content": prompt_text}],
                 add_generation_prompt=True,
@@ -187,6 +191,7 @@ class NeologismDataset(Dataset):
                 return_tensors="pt",
                 truncation=True,
                 max_length=self.max_prompt_length,
+                enable_thinking=False,
             )
         else:
             # raw "<bos>question + template", the answer as a plain continuation
@@ -398,9 +403,25 @@ def _final_hidden_states(model, input_ids, attention_mask) -> torch.Tensor:
         return out.hidden_states[-1]
 
 
-def _chunk_logps(hidden: torch.Tensor, labels: torch.Tensor, lm_weight: torch.Tensor):
+def _final_logit_softcap(model: nn.Module):
+    """The model's final_logit_softcapping, or None.
+
+    The loss projects hidden states to logits itself instead of calling the model's
+    forward, so anything that forward does to its logits has to be repeated here.
+    Softcapping is the one such step in current HF decoders (Gemma 2 caps at 30.0);
+    models without it, Qwen among them, return None.
+    """
+    cfg = getattr(model.config, "text_config", None) or model.config
+    cap = getattr(cfg, "final_logit_softcapping", None)
+    return float(cap) if cap else None
+
+
+def _chunk_logps(hidden: torch.Tensor, labels: torch.Tensor, lm_weight: torch.Tensor,
+                 softcap: float = None):
     """log p(label) for one chunk of positions, computed in fp32."""
     logits = F.linear(hidden, lm_weight).float()                    # [c, V]
+    if softcap:
+        logits = torch.tanh(logits / softcap) * softcap
     gathered = logits.gather(dim=-1, index=labels.unsqueeze(-1)).squeeze(-1)
     return gathered - torch.logsumexp(logits, dim=-1)
 
@@ -420,7 +441,12 @@ def sequence_logps(
     backward pass, so no [*, V] tensor larger than one chunk is ever kept alive.
     """
     B2, Tm1, H = hidden.shape
-    lm_weight = model.get_output_embeddings().weight
+    lm_head = model.get_output_embeddings()
+    if getattr(lm_head, "bias", None) is not None:
+        # neither Gemma nor Qwen has one; fail loudly rather than drop it silently
+        raise NotImplementedError(f"{type(model).__name__}'s lm_head has a bias")
+    lm_weight = lm_head.weight
+    softcap = _final_logit_softcap(model)
 
     flat_hidden = hidden.reshape(-1, H)
     flat_labels = labels.reshape(-1)
@@ -434,10 +460,10 @@ def sequence_logps(
         lab = flat_labels.index_select(0, sel)
         if torch.is_grad_enabled():
             logps = torch.utils.checkpoint.checkpoint(
-                _chunk_logps, h, lab, lm_weight, use_reentrant=False
+                _chunk_logps, h, lab, lm_weight, softcap, use_reentrant=False
             )
         else:
-            logps = _chunk_logps(h, lab, lm_weight)
+            logps = _chunk_logps(h, lab, lm_weight, softcap)
         totals = totals.index_add(0, seq_id[start:start + chunk_size], logps)
 
     return totals
@@ -739,12 +765,43 @@ def prepare_model(model_name, new_token):
     return model, tokenizer, pad_token_id, new_id, model.get_input_embeddings()
 
 
+#: median real-row norm per embedding tensor, so a sweep computes it once
+_MEDIAN_ROW_NORM: Dict[tuple, float] = {}
+
+
+def median_row_norm(weight: torch.Tensor, n_rows: int) -> float:
+    """Median L2 norm of the first `n_rows` embedding rows (the real vocabulary), raw.
+
+    This is the natural scale for the hinge threshold. It is 1.00 for Gemma-3-4B,
+    whose rows cluster tightly there, but 1.13 for Qwen3-4B, where a threshold of 1
+    would keep pulling the new vector below a typical token. Computed in chunks so
+    the whole matrix is never cast to fp32 at once.
+    """
+    key = (weight.data_ptr(), n_rows)
+    if key not in _MEDIAN_ROW_NORM:
+        with torch.no_grad():
+            # the slice stops at n_rows: the padding rows past the vocabulary (63 in
+            # Gemma, 267 in Qwen) must not take part in the median
+            norms = torch.cat([torch.linalg.vector_norm(weight[s:min(s + 8192, n_rows)].float(), dim=1).cpu()
+                               for s in range(0, n_rows, 8192)])
+        _MEDIAN_ROW_NORM[key] = norms.median().item()
+    return _MEDIAN_ROW_NORM[key]
+
+
 def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_token,
               concept, output_dir, neutral_word, init_mode, template, data_dir,
               batch_size, num_epochs, lr, beta, seed, chunk_size, results_dir=None,
               use_chat_template=True, lambda_h=0.0, norm_target=1.0):
     os.makedirs(output_dir, exist_ok=True)
     set_seed(seed)
+
+    norm_target_mode = str(norm_target)
+    if norm_target_mode == "auto":
+        norm_target = median_row_norm(base_emb.weight, new_id)
+        print(f"[hinge] norm_target auto -> {norm_target:.4f} "
+              f"(median raw norm of the {new_id} real vocabulary rows)")
+    else:
+        norm_target = float(norm_target)
 
     # initialize the embedding of new_token
     if init_mode == "random":
@@ -826,6 +883,7 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         "chat_template": use_chat_template,
         "lambda_h": lambda_h,
         "norm_target": norm_target,
+        "norm_target_mode": norm_target_mode,
         "seed": seed,
     }
 
@@ -873,7 +931,13 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
 
     print(f"Training Finished. Embedding saved to {final_path}, tokenizer at {tok_dir}")
 
-def main():
+def main(argv=None, defaults=None, model_key=None):
+    """
+    Command-line entry point. Prefer the per-model scripts (train_gemma.py,
+    train_qwen.py): they pass that model's settings as `defaults` and its family as
+    `model_key`, which is checked against --model_name so one model's settings
+    cannot be applied to another. Called directly, the defaults below apply.
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--model_name",
@@ -938,13 +1002,21 @@ def main():
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--lambda_h", type=float, default=0.0,
                         help="weight of the norm hinge lambda_h * max(||e|| - norm_target, 0); 0 disables it")
-    parser.add_argument("--norm_target", type=float, default=1.0,
-                        help="hinge threshold on the raw vector's L2 norm (init is about 1)")
+    parser.add_argument("--norm_target", type=str, default="1.0",
+                        help="hinge threshold on the raw vector's L2 norm: a number, or 'auto' "
+                             "for the median norm of the model's real vocabulary rows "
+                             "(1.00 on Gemma-3-4B, 1.13 on Qwen3-4B)")
     parser.add_argument(
         "--no_chat_template",
         action="store_true",
         help="train on the raw '<bos>question + template' text instead of wrapping it in "
              "the chat template (the default, which is what eval generates from)"
+    )
+    parser.add_argument(
+        "--chat_template",
+        dest="no_chat_template",
+        action="store_false",
+        help="wrap the training prompt in the chat template (undoes --no_chat_template)"
     )
     parser.add_argument(
         "--chunk_size",
@@ -953,7 +1025,21 @@ def main():
         help="positions projected to vocab at a time; lower it if the loss step OOMs"
     )
 
-    args = parser.parse_args()
+    if defaults:
+        parser.set_defaults(**defaults)
+    args = parser.parse_args(argv)
+
+    if not args.model_name:
+        parser.error("no --model_name, and none could be derived (source env.sh, or set the "
+                     "model's *_MODEL environment variable)")
+    if model_key and short_model_name(args.model_name) != model_key:
+        parser.error(f"this is the {model_key} training script, but --model_name "
+                     f"{args.model_name} is a {short_model_name(args.model_name)} model; use "
+                     f"train_{short_model_name(args.model_name)}.py")
+    print(f"[config] model={args.model_name} ({short_model_name(args.model_name)}) | "
+          f"batch_size={args.batch_size} | lambda_h={args.lambda_h} norm_target={args.norm_target} | "
+          f"chat_template={'off' if args.no_chat_template else 'on'} | init={args.init_mode} | "
+          f"output_dir={args.output_dir} | results_dir={args.results_dir}")
 
     # `--neutral_word random` is accepted as a shorthand for `--init_mode random`
     # random when the neutral word IS the new token (nothing to copy from), or on request

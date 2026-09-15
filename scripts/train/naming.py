@@ -55,6 +55,23 @@ def shared_tokenizer_dir(new_token: str, model_name: str, results_dir=None) -> P
             / _safe_token(new_token) / "tokenizer")
 
 
+def default_model_path(hub_id: str, env_var: str):
+    """Where a model's weights live on this machine, or None if that cannot be told.
+
+    `env_var` (e.g. QWEN_MODEL) wins. Otherwise the model sits next to the one
+    setup_env.sh downloaded, filed by hub id -- NEOLOGISM_MODEL is
+    <root>/google/gemma-3-4b-it, so Qwen3-4B is <root>/Qwen/Qwen3-4B, which is where
+    download_model.sh puts it.
+    """
+    import os
+    if os.environ.get(env_var):
+        return os.environ[env_var]
+    base = os.environ.get("NEOLOGISM_MODEL")
+    if not base:
+        return None
+    return str(Path(base.rstrip("/")).parent.parent / hub_id)
+
+
 def legacy_tokenizer_dir(new_token: str, results_dir=None) -> Path:
     """results/<token>/tokenizer, the location before the model was part of the path."""
     return Path(results_dir or DEFAULT_RESULTS_DIR) / _safe_token(new_token) / "tokenizer"

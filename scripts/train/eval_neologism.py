@@ -227,7 +227,13 @@ def get_pairs(
     print(f"\nDone. Total records for [{concept}]: {len(res)}")
     print(f"Saved to: {output_file}")
 
-def main():
+def main(argv=None, defaults=None, model_key=None):
+    """
+    Command-line entry point. Prefer the per-model scripts (eval_gemma.py,
+    eval_qwen.py): they pass that model's settings as `defaults` and its family as
+    `model_key`, which is checked against both the base model and the model the
+    vector was trained on. Called directly, the defaults below apply.
+    """
     parser = argparse.ArgumentParser(description="Generate normal/concept answer pairs; inference only, no metrics.")
     parser.add_argument("--new_token", type=str, default=None,
                         help=f"defaults to the token recorded in --embedding_path, else '{DEFAULT_NEW_TOKEN}'")
@@ -235,7 +241,7 @@ def main():
     parser.add_argument("--concept_tokenizer_path", type=str, default=None,
                         help="defaults to results/<model>/<new_token>/tokenizer, the one copy "
                              "shared by every run of that model and token")
-    parser.add_argument("--concept_model_path", type=str, required=True,
+    parser.add_argument("--concept_model_path", type=str, default=None,
                         help="full fine-tuned checkpoint, or the BASE model when --embedding_path is given")
     parser.add_argument("--embedding_path", type=str, default=None,
                         help="path to embedding_final.pt saved by training; injects only the new token's embedding")
@@ -255,7 +261,19 @@ def main():
                         help="let reasoning models (Qwen3) think before answering; off by default")
     parser.add_argument("--no_chat_template", action="store_true",
                         help="prompt with the raw text as training does, instead of the chat template")
-    args = parser.parse_args()
+    parser.add_argument("--chat_template", dest="no_chat_template", action="store_false",
+                        help="generate from the chat template (undoes --no_chat_template)")
+    if defaults:
+        parser.set_defaults(**defaults)
+    args = parser.parse_args(argv)
+
+    if not args.concept_model_path:
+        parser.error("no --concept_model_path, and none could be derived (source env.sh, or set "
+                     "the model's *_MODEL environment variable)")
+    if model_key and short_model_name(args.concept_model_path) != model_key:
+        parser.error(f"this is the {model_key} eval script, but --concept_model_path "
+                     f"{args.concept_model_path} is a {short_model_name(args.concept_model_path)} "
+                     f"model; use eval_{short_model_name(args.concept_model_path)}.py")
 
     # training records its full setting next to the embedding; reuse it so that the
     # result file lands under the same name as the checkpoint and, more importantly,
