@@ -7,7 +7,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
 #SBATCH --gres=gpu:1
-#SBATCH --time=02:00:00
+#SBATCH --time=03:00:00
 #SBATCH --array=0-29%3
 #SBATCH --output=logs/%x_%A_%a.out
 #SBATCH --mail-user=zhj76@pitt.edu
@@ -31,6 +31,15 @@
 # The 9 GB of weights load once per task rather than once per run. Runs that
 # already have an embedding_final.pt are skipped, so a requeued or resubmitted
 # task resumes instead of repeating work.
+#
+# Defaults are the settled configuration: N(0, 0.02) init, hinge lambda_h 0.1,
+# batch size 1, training prompt without the chat template. On a_1 adj this lifted
+# the concept-minus-normal judge gap from 0.39 (batch 8) to 1.40. Outputs go to
+# their own directories because the batch-8 vectors still sit in checkpoints/,
+# and the skip-if-present rule would otherwise pass over every run.
+#
+#   different outputs:   sbatch --export=ALL,CKPT_DIR=...,RES_DIR=... ...
+#   different flags:     sbatch --export=ALL,BATCH=8,TRAIN_ARGS="--lambda_h 0" ...
 
 set -euo pipefail
 
@@ -53,18 +62,26 @@ TAG=$(python scripts/train/naming.py tag "$MODEL")
 POSLIST=(a n v)
 PER_POS=${PER_POS:-10}
 FIRST=${FIRST:-1}
-BATCH=${BATCH:-8}
+BATCH=${BATCH:-1}
+TRAIN_ARGS=${TRAIN_ARGS:---no_chat_template --lambda_h 0.1}
+CKPT_DIR=${CKPT_DIR:-scripts/train/checkpoints_bs1hinge}
+RES_DIR=${RES_DIR:-scripts/train/results_bs1hinge}
 
 POS=${POSLIST[$((SLURM_ARRAY_TASK_ID / PER_POS))]}
 CONCEPT="${POS}_$((FIRST + SLURM_ARRAY_TASK_ID % PER_POS))"
 
 echo "=== $(date) | node $(hostname) | $TAG | task $SLURM_ARRAY_TASK_ID -> $CONCEPT ==="
+echo "    batch $BATCH | TRAIN_ARGS '$TRAIN_ARGS' | $CKPT_DIR | $RES_DIR"
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
+# shellcheck disable=SC2086  -- TRAIN_ARGS is meant to split into several flags
 python scripts/train/train_neologism.py \
     --concept "$CONCEPT" \
     --template unbiased verb noun adj mixed \
     --model_name "$MODEL" \
-    --batch_size "$BATCH"
+    --batch_size "$BATCH" \
+    --output_dir "$CKPT_DIR" \
+    --results_dir "$RES_DIR" \
+    $TRAIN_ARGS
 
 crc-job-stats

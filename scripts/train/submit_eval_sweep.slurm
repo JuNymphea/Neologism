@@ -34,8 +34,12 @@
 # eval_neologism itself resumes a partial file question by question, so a
 # requeued task repeats nothing. Inference only, so this runs on l40s.
 #
-# The tokenizer comes from results/<new_token>/tokenizer -- one copy for the token
-# rather than one per run -- which eval_neologism resolves on its own.
+# The tokenizer comes from <RES_DIR>/<model>/<new_token>/tokenizer -- one copy for
+# the token rather than one per run -- which eval_neologism resolves on its own.
+#
+# CKPT_DIR / RES_DIR default to the settled configuration's directories, matching
+# submit_train_sweep.slurm. Point them elsewhere to evaluate another sweep, e.g.
+#   sbatch --export=ALL,CKPT_DIR=scripts/train/checkpoints,RES_DIR=scripts/train/results ...
 
 set -euo pipefail
 
@@ -65,12 +69,12 @@ MAXNEW=${MAXNEW:-1536}
 SAMPLES=${SAMPLES:-100}
 TEMPLATES=(unbiased verb noun adj mixed)
 
-CKPT_ROOT=scripts/train/checkpoints
-RES_ROOT=scripts/train/results
+CKPT_ROOT=${CKPT_DIR:-scripts/train/checkpoints_bs1hinge}
+RES_ROOT=${RES_DIR:-scripts/train/results_bs1hinge}
 mkdir -p "$RES_ROOT"
 
 echo "=== $(date) | node $(hostname) | $TAG | task $SLURM_ARRAY_TASK_ID -> ${POS}_${IDX} ==="
-echo "    batch $BATCH | max_new_tokens $MAXNEW | samples $SAMPLES"
+echo "    batch $BATCH | max_new_tokens $MAXNEW | samples $SAMPLES | $CKPT_ROOT -> $RES_ROOT"
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 done_n=0; skip_n=0; fail_n=0
@@ -94,6 +98,7 @@ for T in "${TEMPLATES[@]}"; do
             --concept "${POS}_${i}" \
             --concept_model_path "$MODEL" \
             --embedding_path "$EMB" \
+            --res_dir "$RES_ROOT" \
             --max_samples "$SAMPLES" \
             --max_new_tokens "$MAXNEW" \
             --batch_size "$BATCH"; then
