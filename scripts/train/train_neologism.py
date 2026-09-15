@@ -317,7 +317,8 @@ class NewTokenEmbedding(nn.Module):
     objective, so no second copy of the network has to be held in memory.
     """
 
-    def __init__(self, base: nn.Embedding, new_id: int, init_vec: torch.Tensor):
+    def __init__(self, base: nn.Embedding, new_id: int, init_vec: torch.Tensor,
+                 ref_vec: torch.Tensor = None):
         super().__init__()
         self.base = base
         self.new_id = new_id
@@ -327,8 +328,13 @@ class NewTokenEmbedding(nn.Module):
         self.new_vec = nn.Parameter(
             init_vec.detach().to(device=base.weight.device, dtype=torch.float32).clone()
         )
+        # Continuing a run starts from the vector it left off at, but the APO
+        # objective is still defined against the vector the *first* run started from,
+        # so the reference can be passed in separately.
+        ref = self.new_vec.detach() if ref_vec is None else \
+            ref_vec.detach().to(device=base.weight.device, dtype=torch.float32)
         self.register_buffer(
-            "ref_vec", self.new_vec.detach().clone(), persistent=False
+            "ref_vec", ref.clone(), persistent=False
         )
         self.use_ref = False
 
@@ -674,17 +680,64 @@ def new_token_init_vector(
     return vec
 
 
+def continue_from_checkpoint(path: str, hidden_size: int, ref_mode: str = "original"):
+    """
+    Read a saved vector back to train it further: returns (start_vec, ref_vec, meta).
+
+    ref_mode "original" keeps the APO reference of the run that produced the file, so
+    two more epochs on top of three are trained against the same reference as three
+    from scratch and the two are comparable. "current" makes the loaded vector its own
+    reference, which measures only what the extra epochs add on top of it.
+
+    Files written before the reference was saved carry no `ref_embedding`. A random
+    init is reproducible from its seed, so it is rebuilt; anything else has to use
+    ref_mode "current".
+    """
+    payload = torch.load(path, map_location="cpu")
+    start = payload["embedding"].detach().float().clone()
+    if start.numel() != hidden_size:
+        raise ValueError(
+            f"{path} holds a {start.numel()}-dim vector but this model's embedding is "
+            f"{hidden_size}-dim: the checkpoint is from a different model")
+
+    meta = {k: v for k, v in payload.items()
+            if k not in ("embedding", "ref_embedding")}
+    if ref_mode == "current":
+        return start, start.clone(), meta
+
+    ref = payload.get("ref_embedding")
+    if ref is not None:
+        return start, ref.detach().float().clone(), meta
+    if meta.get("init_mode") == "random" and meta.get("seed") is not None:
+        generator = torch.Generator().manual_seed(int(meta["seed"]))
+        ref = torch.empty(hidden_size, dtype=torch.float32).normal_(
+            0.0, 0.02, generator=generator)
+        print(f"[init_from] {path} predates saved references; rebuilt the original "
+              f"random init from seed {meta['seed']} (norm {ref.norm().item():.4f}, "
+              f"recorded {meta.get('init_norm')})")
+        return start, ref, meta
+    raise ValueError(
+        f"{path} has no saved reference vector and its init ({meta.get('init_mode')}) "
+        "cannot be reproduced; pass --ref_vec current to train against the loaded "
+        "vector instead")
+
+
 def save_new_token_embedding(
     new_emb: "NewTokenEmbedding",
     new_token: str,
     path: str,
     metadata: Dict = None,
 ) -> str:
-    """Save ONLY the trained vector (a few KB)."""
+    """Save ONLY the trained vector (a few KB).
+
+    The reference vector rides along so that `--init_from` can continue this run
+    against the same APO reference rather than against wherever it stopped.
+    """
     payload = {
         "new_token": new_token,
         "new_token_id": int(new_emb.new_id),
         "embedding": new_emb.new_vec.detach().to(torch.float32).cpu().clone(),
+        "ref_embedding": new_emb.ref_vec.detach().to(torch.float32).cpu().clone(),
     }
     if metadata:
         payload.update(metadata)
@@ -791,7 +844,8 @@ def median_row_norm(weight: torch.Tensor, n_rows: int) -> float:
 def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_token,
               concept, output_dir, neutral_word, init_mode, template, data_dir,
               batch_size, num_epochs, lr, beta, seed, chunk_size, results_dir=None,
-              use_chat_template=True, lambda_h=0.0, norm_target=1.0):
+              use_chat_template=True, lambda_h=0.0, norm_target=1.0,
+              init_from=None, ref_mode="original"):
     os.makedirs(output_dir, exist_ok=True)
     set_seed(seed)
 
@@ -804,7 +858,20 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         norm_target = float(norm_target)
 
     # initialize the embedding of new_token
-    if init_mode == "random":
+    prev_meta = None
+    if init_from:
+        neutral_id = None
+        init_vec, ref_vec, prev_meta = continue_from_checkpoint(
+            init_from, base_emb.weight.size(1), ref_mode)
+        for field, mine in (("concept", concept), ("template", template)):
+            theirs = prev_meta.get(field)
+            if theirs is not None and theirs != mine:
+                print(f"[init_from] WARNING: the checkpoint was trained on "
+                      f"{field}={theirs!r}, this run uses {mine!r}")
+        print(f"[init] {new_token} <- {init_from} "
+              f"(norm {init_vec.norm().item():.4f}, {prev_meta.get('num_epochs', '?')} epochs before "
+              f"this one); APO reference: {'that run' if ref_mode == 'original' else 'the loaded vector'}")
+    elif init_mode == "random":
         neutral_id = None
         generator = torch.Generator().manual_seed(seed)
         print(f"[init] {new_token} <- random vector (seed={seed})")
@@ -820,18 +887,20 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         print(f"[init] {new_token} <- embedding of neutral word '{neutral_word}' "
               f"(id={neutral_id}, token={tokenizer.convert_ids_to_tokens([neutral_id])[0]!r})")
 
-    init_vec = new_token_init_vector(
-        model,
-        new_id=new_id,
-        neutral_id=neutral_id,
-        init_mode=init_mode,
-        generator=generator,
-    )
+    if not init_from:
+        ref_vec = None
+        init_vec = new_token_init_vector(
+            model,
+            new_id=new_id,
+            neutral_id=neutral_id,
+            init_mode=init_mode,
+            generator=generator,
+        )
 
     # A fresh vector in front of the frozen matrix. Wrapping base_emb rather than
     # get_input_embeddings() matters in a sweep: the latter is the previous run's
     # wrapper, and wrapping it would stack them and carry that run's vector along.
-    new_emb = NewTokenEmbedding(base_emb, new_id, init_vec)
+    new_emb = NewTokenEmbedding(base_emb, new_id, init_vec, ref_vec=ref_vec)
     model.set_input_embeddings(new_emb)
 
     optimizer = AdamW([{"params": [new_emb.new_vec], "lr": lr}])
@@ -878,14 +947,24 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         "model_name": model_name,
         "concept": concept,
         "neutral_word": neutral_word,
-        "init_mode": init_mode,
+        "init_mode": "file" if init_from else init_mode,
         "template": template,
         "chat_template": use_chat_template,
         "lambda_h": lambda_h,
         "norm_target": norm_target,
         "norm_target_mode": norm_target_mode,
         "seed": seed,
+        "num_epochs": num_epochs,
     }
+    if init_from:
+        metadata.update({
+            "init_from": os.path.abspath(init_from),
+            "ref_mode": ref_mode,
+            # epochs this vector has seen in total, so a chain of continuations
+            # can still be compared against a single run of the same length
+            "num_epochs": num_epochs + int(prev_meta.get("num_epochs") or 0),
+            "epochs_this_run": num_epochs,
+        })
 
     trainer = ApoUpTrainer(
         new_emb=new_emb,
@@ -907,8 +986,14 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         metadata["init_norm"] = round(v0.norm().item(), 4)
         metadata["final_norm"] = round(v1.norm().item(), 4)
         metadata["drift"] = round((v1 - v0).norm().item(), 4)
+        if init_from:
+            start = init_vec.to(v1.device).float()
+            metadata["start_norm"] = round(start.norm().item(), 4)
+            metadata["drift_this_run"] = round((v1 - start).norm().item(), 4)
     print(f"[vector] norm {metadata['init_norm']} -> {metadata['final_norm']}, "
-          f"moved {metadata['drift']} from init")
+          f"moved {metadata['drift']} from init"
+          + (f" ({metadata['drift_this_run']} of it in this run, which started at norm "
+             f"{metadata['start_norm']})" if init_from else ""))
 
     final_path = save_new_token_embedding(
         new_emb, new_token, os.path.join(output_dir, "embedding", "embedding_final.pt"), metadata
@@ -987,6 +1072,23 @@ def main(argv=None, defaults=None, model_key=None):
         help="'neutral': copy the neutral word's embedding; 'random': sample a random vector"
     )
     parser.add_argument(
+        "--init_from",
+        type=str,
+        default=None,
+        help="continue training a saved vector instead of starting from a fresh init: "
+             "either one embedding_final.pt (single run only), or a checkpoint directory "
+             "from which each run takes its own <run name>/embedding/embedding_final.pt"
+    )
+    parser.add_argument(
+        "--ref_vec",
+        type=str,
+        default="original",
+        choices=["original", "current"],
+        help="with --init_from, whose vector the APO objective compares against: "
+             "'original' the init the first run started from, which keeps N more epochs "
+             "comparable with a single run of the same total; 'current' the loaded vector"
+    )
+    parser.add_argument(
         "--template",
         type=str,
         nargs="+",
@@ -1038,7 +1140,9 @@ def main(argv=None, defaults=None, model_key=None):
                      f"train_{short_model_name(args.model_name)}.py")
     print(f"[config] model={args.model_name} ({short_model_name(args.model_name)}) | "
           f"batch_size={args.batch_size} | lambda_h={args.lambda_h} norm_target={args.norm_target} | "
-          f"chat_template={'off' if args.no_chat_template else 'on'} | init={args.init_mode} | "
+          f"chat_template={'off' if args.no_chat_template else 'on'} | "
+          f"init={f'{args.init_from} (ref {args.ref_vec})' if args.init_from else args.init_mode} | "
+          f"epochs={args.num_epochs} | "
           f"output_dir={args.output_dir} | results_dir={args.results_dir}")
 
     # `--neutral_word random` is accepted as a shorthand for `--init_mode random`
@@ -1049,6 +1153,15 @@ def main(argv=None, defaults=None, model_key=None):
     runs = [(c, t) for c in args.concept for t in args.template]
     print(f"[sweep] {len(args.concept)} concepts x {len(args.template)} templates "
           f"= {len(runs)} runs")
+
+    # both checks before the model is loaded: that takes ten minutes to tell you
+    # about a typo in a path
+    if args.init_from and not os.path.exists(args.init_from):
+        parser.error(f"--init_from {args.init_from} does not exist")
+    if args.init_from and os.path.isfile(args.init_from) and len(runs) > 1:
+        parser.error(f"--init_from {args.init_from} is one vector but this is a "
+                     f"{len(runs)}-run sweep; point it at the checkpoint directory "
+                     "instead, so each run continues its own vector")
 
     model, tokenizer, pad_token_id, new_id, base_emb = prepare_model(
         args.model_name, args.new_token)
@@ -1066,6 +1179,17 @@ def main(argv=None, defaults=None, model_key=None):
             done += 1
             continue
 
+        init_from = args.init_from
+        if init_from and not os.path.isfile(init_from):
+            init_from = os.path.join(
+                init_from, run_name(args.model_name, concept, template),
+                "embedding", "embedding_final.pt")
+            if not os.path.exists(init_from):
+                failed += 1
+                print(f"\n[{i}/{len(runs)}] FAILED {concept} / {template}: "
+                      f"nothing to continue at {init_from}")
+                continue
+
         print(f"\n[{i}/{len(runs)}] {concept} / {template} -> {output_dir}")
         try:
             train_one(
@@ -1076,6 +1200,7 @@ def main(argv=None, defaults=None, model_key=None):
                 args.chunk_size, args.results_dir,
                 use_chat_template=not args.no_chat_template,
                 lambda_h=args.lambda_h, norm_target=args.norm_target,
+                init_from=init_from, ref_mode=args.ref_vec,
             )
             done += 1
         except Exception as exc:
