@@ -11,7 +11,7 @@
 #SBATCH --array=0-29%3
 #SBATCH --output=logs/%x_%A_%a.out
 #SBATCH --mail-user=zhj76@pitt.edu
-#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --requeue
 
 # a_1..a_10, n_1..n_10, v_1..v_10 against all five templates: 150 runs.

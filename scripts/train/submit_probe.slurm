@@ -10,7 +10,7 @@
 #SBATCH --time=01:30:00
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --mail-user=zhj76@pitt.edu
-#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-type=BEGIN,END,FAIL
 
 # One concept x one template, trained with extra flags and evaluated, into its own
 # directories -- for A/B probes of a training change without touching the sweep's

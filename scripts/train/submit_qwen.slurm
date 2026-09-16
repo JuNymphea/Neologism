@@ -10,7 +10,7 @@
 #SBATCH --time=04:00:00
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --mail-user=zhj76@pitt.edu
-#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-type=BEGIN,END,FAIL
 
 # Train and evaluate Qwen3-4B on some concepts x templates, entirely through
 # train_qwen.py and eval_qwen.py, so every setting is the Qwen one.

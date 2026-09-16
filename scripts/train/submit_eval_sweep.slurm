@@ -11,7 +11,7 @@
 #SBATCH --array=0-29%6
 #SBATCH --output=logs/%x_%A_%a.out
 #SBATCH --mail-user=zhj76@pitt.edu
-#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --requeue
 
 # Generate answers for every trained vector: one array task per concept, five
