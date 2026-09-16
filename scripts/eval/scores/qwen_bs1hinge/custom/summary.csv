@@ -1,0 +1,6 @@
+file,concept,template,judge,n_questions,normal_lm_judge,concept_lm_judge,normal_concept,concept_concept,normal_instruction,concept_instruction,normal_fluency,concept_fluency,gap_lm_judge,gap_concept
+qwen_n_1_adj.jsonl,n_1,adj,gpt-5.4-nano,50,0.04,1.48,0.04,1.48,nan,nan,nan,nan,1.44,1.44
+qwen_n_1_mixed.jsonl,n_1,mixed,gpt-5.4-nano,50,0.04,0.22,0.04,0.22,nan,nan,nan,nan,0.18,0.18
+qwen_n_1_noun.jsonl,n_1,noun,gpt-5.4-nano,50,0.06,1.52,0.06,1.52,nan,nan,nan,nan,1.46,1.46
+qwen_n_1_unbiased.jsonl,n_1,unbiased,gpt-5.4-nano,50,0.06,1.56,0.06,1.56,nan,nan,nan,nan,1.5,1.5
+qwen_n_1_verb.jsonl,n_1,verb,gpt-5.4-nano,50,0.04,0.04,0.04,0.04,nan,nan,nan,nan,0.0,0.0

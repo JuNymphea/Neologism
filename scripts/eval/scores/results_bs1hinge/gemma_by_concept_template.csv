@@ -1,0 +1,151 @@
+concept,pos,template,concept_description,n_questions,normal_lm_judge,concept_lm_judge,gap_lm_judge,concept_hit_rate,normal_concept_relevance,concept_concept_relevance,normal_instruction_relevance,concept_instruction_relevance,normal_fluency,concept_fluency,judge,result_file
+a_1,adj,unbiased,concept of body build and weight-related physique,50,0.024,1.396,1.372,0.92,0.02,1.38,2.0,1.92,1.92,1.5,gpt-5.4-nano,gemma_a_1_unbiased.jsonl
+a_1,adj,verb,concept of body build and weight-related physique,50,0.03,0.746,0.716,0.48,0.02,0.6,1.98,1.98,1.96,1.82,gpt-5.4-nano,gemma_a_1_verb.jsonl
+a_1,adj,noun,concept of body build and weight-related physique,50,0.03,1.37,1.34,0.9,0.02,1.32,2.0,1.96,2.0,1.48,gpt-5.4-nano,gemma_a_1_noun.jsonl
+a_1,adj,adj,concept of body build and weight-related physique,50,0.06,1.48,1.42,0.96,0.04,1.48,2.0,1.9,2.0,1.5,gpt-5.4-nano,gemma_a_1_adj.jsonl
+a_1,adj,mixed,concept of body build and weight-related physique,50,0.03,1.36,1.33,0.9,0.02,1.4,2.0,1.86,1.96,1.56,gpt-5.4-nano,gemma_a_1_mixed.jsonl
+a_2,adj,unbiased,concept of magnitude in physical size or extent,50,0.39,1.696,1.306,1.0,0.3,1.78,2.0,2.0,1.92,1.58,gpt-5.4-nano,gemma_a_2_unbiased.jsonl
+a_2,adj,verb,concept of magnitude in physical size or extent,50,0.39,0.88,0.49,0.54,0.3,0.78,2.0,2.0,1.98,1.76,gpt-5.4-nano,gemma_a_2_verb.jsonl
+a_2,adj,noun,concept of magnitude in physical size or extent,50,0.33,1.656,1.326,1.0,0.26,1.74,2.0,1.98,1.94,1.56,gpt-5.4-nano,gemma_a_2_noun.jsonl
+a_2,adj,adj,concept of magnitude in physical size or extent,50,0.3,1.642,1.342,0.96,0.24,1.56,2.0,2.0,2.0,1.74,gpt-5.4-nano,gemma_a_2_adj.jsonl
+a_2,adj,mixed,concept of magnitude in physical size or extent,50,0.42,1.478,1.058,0.94,0.32,1.6,2.0,2.0,1.9,1.38,gpt-5.4-nano,gemma_a_2_mixed.jsonl
+a_3,adj,unbiased,concept of moral evaluation as deserving praise or blame,50,0.12,1.462,1.342,0.96,0.08,1.26,2.0,2.0,1.96,1.6,gpt-5.4-nano,gemma_a_3_unbiased.jsonl
+a_3,adj,verb,concept of moral evaluation as deserving praise or blame,50,0.144,1.154,1.01,0.74,0.1,0.88,2.0,2.0,1.94,1.94,gpt-5.4-nano,gemma_a_3_verb.jsonl
+a_3,adj,noun,concept of moral evaluation as deserving praise or blame,50,0.09,1.316,1.226,0.82,0.06,1.1,2.0,2.0,1.96,1.82,gpt-5.4-nano,gemma_a_3_noun.jsonl
+a_3,adj,adj,concept of moral evaluation as deserving praise or blame,50,0.09,1.54,1.45,0.94,0.06,1.4,2.0,1.98,1.96,1.76,gpt-5.4-nano,gemma_a_3_adj.jsonl
+a_3,adj,mixed,concept of moral evaluation as deserving praise or blame,50,0.03,1.464,1.434,0.9,0.02,1.3,2.0,1.96,1.94,1.8,gpt-5.4-nano,gemma_a_3_mixed.jsonl
+a_4,adj,unbiased,concept of temporal duration or persistence,50,0.624,1.81,1.186,1.0,0.46,1.96,2.0,1.98,1.92,1.68,gpt-5.4-nano,gemma_a_4_unbiased.jsonl
+a_4,adj,verb,concept of temporal duration or persistence,50,0.464,1.492,1.028,0.86,0.34,1.36,2.0,2.0,1.98,1.88,gpt-5.4-nano,gemma_a_4_verb.jsonl
+a_4,adj,noun,concept of temporal duration or persistence,50,0.528,1.788,1.26,0.98,0.4,1.82,2.0,1.96,1.9,1.8,gpt-5.4-nano,gemma_a_4_noun.jsonl
+a_4,adj,adj,concept of temporal duration or persistence,50,0.56,1.772,1.212,0.98,0.4,1.88,1.98,1.98,1.98,1.7,gpt-5.4-nano,gemma_a_4_adj.jsonl
+a_4,adj,mixed,concept of temporal duration or persistence,50,0.48,1.51,1.03,0.9,0.36,1.6,2.0,1.92,1.92,1.64,gpt-5.4-nano,gemma_a_4_mixed.jsonl
+a_5,adj,unbiased,concept of high water content and moisture saturation,50,0.0,1.326,1.326,0.92,0.0,1.34,2.0,1.9,1.92,1.3,gpt-5.4-nano,gemma_a_5_unbiased.jsonl
+a_5,adj,verb,concept of high water content and moisture saturation,50,0.03,1.41,1.38,0.96,0.02,1.46,2.0,1.9,1.94,1.38,gpt-5.4-nano,gemma_a_5_verb.jsonl
+a_5,adj,noun,concept of high water content and moisture saturation,50,0.0,0.546,0.546,0.4,0.0,0.54,2.0,1.96,1.94,1.58,gpt-5.4-nano,gemma_a_5_noun.jsonl
+a_5,adj,adj,concept of high water content and moisture saturation,50,0.0,1.456,1.456,0.92,0.0,1.54,2.0,1.96,1.96,1.46,gpt-5.4-nano,gemma_a_5_adj.jsonl
+a_5,adj,mixed,concept of high water content and moisture saturation,50,0.0,0.918,0.918,0.64,0.0,0.9,2.0,2.0,1.94,1.4,gpt-5.4-nano,gemma_a_5_mixed.jsonl
+a_6,adj,unbiased,concept of ordinal position in a sequence,50,0.564,1.656,1.092,1.0,0.46,1.68,2.0,1.98,1.96,1.58,gpt-5.4-nano,gemma_a_6_unbiased.jsonl
+a_6,adj,verb,concept of ordinal position in a sequence,50,0.69,1.646,0.956,0.94,0.54,1.5,2.0,1.98,1.98,1.9,gpt-5.4-nano,gemma_a_6_verb.jsonl
+a_6,adj,noun,concept of ordinal position in a sequence,50,0.648,1.246,0.598,0.74,0.52,1.1,2.0,1.96,1.96,1.86,gpt-5.4-nano,gemma_a_6_noun.jsonl
+a_6,adj,adj,concept of ordinal position in a sequence,50,0.724,1.646,0.922,0.96,0.58,1.58,2.0,1.98,1.9,1.78,gpt-5.4-nano,gemma_a_6_adj.jsonl
+a_6,adj,mixed,concept of ordinal position in a sequence,50,0.62,1.484,0.864,0.86,0.48,1.48,2.0,1.96,1.98,1.74,gpt-5.4-nano,gemma_a_6_mixed.jsonl
+a_7,adj,unbiased,concept of surpassing all others in excellence or quality,50,0.34,1.714,1.374,1.0,0.24,1.92,2.0,1.98,1.96,1.52,gpt-5.4-nano,gemma_a_7_unbiased.jsonl
+a_7,adj,verb,concept of surpassing all others in excellence or quality,50,0.304,1.618,1.314,0.96,0.22,1.48,2.0,1.98,1.94,1.8,gpt-5.4-nano,gemma_a_7_verb.jsonl
+a_7,adj,noun,concept of surpassing all others in excellence or quality,50,0.29,1.7,1.41,0.98,0.22,1.68,2.0,2.0,1.98,1.76,gpt-5.4-nano,gemma_a_7_noun.jsonl
+a_7,adj,adj,concept of surpassing all others in excellence or quality,50,0.31,1.77,1.46,1.0,0.22,1.98,2.0,2.0,1.98,1.56,gpt-5.4-nano,gemma_a_7_adj.jsonl
+a_7,adj,mixed,concept of surpassing all others in excellence or quality,50,0.314,1.658,1.344,0.98,0.24,1.72,2.0,1.98,1.98,1.58,gpt-5.4-nano,gemma_a_7_mixed.jsonl
+a_8,adj,unbiased,concept of illumination level and absence or presence of light,50,0.0,1.638,1.638,0.98,0.0,1.58,2.0,1.98,1.96,1.68,gpt-5.4-nano,gemma_a_8_unbiased.jsonl
+a_8,adj,verb,concept of illumination level and absence or presence of light,50,0.06,1.514,1.454,0.96,0.04,1.34,2.0,2.0,1.98,1.68,gpt-5.4-nano,gemma_a_8_verb.jsonl
+a_8,adj,noun,concept of illumination level and absence or presence of light,50,0.0,1.542,1.542,0.94,0.0,1.4,2.0,1.98,1.98,1.74,gpt-5.4-nano,gemma_a_8_noun.jsonl
+a_8,adj,adj,concept of illumination level and absence or presence of light,50,0.0,1.626,1.626,0.96,0.0,1.56,1.98,2.0,1.96,1.72,gpt-5.4-nano,gemma_a_8_adj.jsonl
+a_8,adj,mixed,concept of illumination level and absence or presence of light,50,0.03,1.62,1.59,0.98,0.02,1.64,2.0,1.96,1.98,1.58,gpt-5.4-nano,gemma_a_8_mixed.jsonl
+a_9,adj,unbiased,concept of intense interest and preoccupation toward someone or something,50,0.03,1.726,1.696,1.0,0.02,1.86,1.98,1.98,1.92,1.58,gpt-5.4-nano,gemma_a_9_unbiased.jsonl
+a_9,adj,verb,concept of intense interest and preoccupation toward someone or something,50,0.054,1.502,1.448,0.88,0.04,1.42,2.0,1.98,1.96,1.76,gpt-5.4-nano,gemma_a_9_verb.jsonl
+a_9,adj,noun,concept of intense interest and preoccupation toward someone or something,50,0.03,1.79,1.76,1.0,0.02,1.96,2.0,2.0,1.96,1.62,gpt-5.4-nano,gemma_a_9_noun.jsonl
+a_9,adj,adj,concept of intense interest and preoccupation toward someone or something,50,0.09,1.698,1.608,1.0,0.06,1.8,2.0,2.0,1.96,1.54,gpt-5.4-nano,gemma_a_9_adj.jsonl
+a_9,adj,mixed,concept of intense interest and preoccupation toward someone or something,50,0.09,1.574,1.484,1.0,0.06,1.62,1.98,2.0,2.0,1.48,gpt-5.4-nano,gemma_a_9_mixed.jsonl
+a_10,adj,unbiased,concept of reduced into small particles or fragments by mechanical breakdown,50,0.0,0.892,0.892,0.68,0.0,0.82,2.0,1.94,1.94,1.24,gpt-5.4-nano,gemma_a_10_unbiased.jsonl
+a_10,adj,verb,concept of reduced into small particles or fragments by mechanical breakdown,50,0.0,1.108,1.108,0.8,0.0,0.94,2.0,2.0,1.94,1.38,gpt-5.4-nano,gemma_a_10_verb.jsonl
+a_10,adj,noun,concept of reduced into small particles or fragments by mechanical breakdown,50,0.0,1.228,1.228,0.9,0.0,1.12,2.0,1.98,1.94,1.26,gpt-5.4-nano,gemma_a_10_noun.jsonl
+a_10,adj,adj,concept of reduced into small particles or fragments by mechanical breakdown,50,0.0,0.544,0.544,0.38,0.0,0.42,1.98,2.0,1.96,1.8,gpt-5.4-nano,gemma_a_10_adj.jsonl
+a_10,adj,mixed,concept of reduced into small particles or fragments by mechanical breakdown,50,0.0,0.968,0.968,0.72,0.0,0.9,1.98,2.0,1.94,1.32,gpt-5.4-nano,gemma_a_10_mixed.jsonl
+n_1,noun,unbiased,concept of garments worn on the body,50,0.06,1.748,1.688,0.98,0.06,1.66,2.0,1.98,1.9,1.88,gpt-5.4-nano,gemma_n_1_unbiased.jsonl
+n_1,noun,verb,concept of garments worn on the body,50,0.1,1.416,1.316,0.84,0.08,1.5,2.0,1.8,1.96,1.8,gpt-5.4-nano,gemma_n_1_verb.jsonl
+n_1,noun,noun,concept of garments worn on the body,50,0.07,1.718,1.648,1.0,0.06,1.7,2.0,1.98,1.94,1.72,gpt-5.4-nano,gemma_n_1_noun.jsonl
+n_1,noun,adj,concept of garments worn on the body,50,0.07,1.684,1.614,1.0,0.06,1.78,2.0,1.82,1.9,1.72,gpt-5.4-nano,gemma_n_1_adj.jsonl
+n_1,noun,mixed,concept of garments worn on the body,50,0.07,1.736,1.666,0.94,0.06,1.76,1.98,1.88,1.96,1.92,gpt-5.4-nano,gemma_n_1_mixed.jsonl
+n_2,noun,unbiased,concept of building used for habitation or lodging,50,0.054,1.45,1.396,0.92,0.04,1.32,2.0,2.0,1.94,1.64,gpt-5.4-nano,gemma_n_2_unbiased.jsonl
+n_2,noun,verb,concept of building used for habitation or lodging,50,0.0,1.06,1.06,0.68,0.0,0.9,2.0,2.0,1.94,1.76,gpt-5.4-nano,gemma_n_2_verb.jsonl
+n_2,noun,noun,concept of building used for habitation or lodging,50,0.0,1.224,1.224,0.76,0.0,1.06,2.0,1.96,1.92,1.72,gpt-5.4-nano,gemma_n_2_noun.jsonl
+n_2,noun,adj,concept of building used for habitation or lodging,50,0.06,1.458,1.398,0.98,0.04,1.4,2.0,1.92,1.96,1.5,gpt-5.4-nano,gemma_n_2_adj.jsonl
+n_2,noun,mixed,concept of building used for habitation or lodging,50,0.03,1.196,1.166,0.74,0.02,1.04,1.98,2.0,1.98,1.8,gpt-5.4-nano,gemma_n_2_mixed.jsonl
+n_3,noun,unbiased,concept of human body parts,50,0.09,1.732,1.642,1.0,0.06,1.68,2.0,1.98,1.96,1.72,gpt-5.4-nano,gemma_n_3_unbiased.jsonl
+n_3,noun,verb,concept of human body parts,50,0.12,1.308,1.188,0.78,0.08,1.22,2.0,2.0,1.96,1.7,gpt-5.4-nano,gemma_n_3_verb.jsonl
+n_3,noun,noun,concept of human body parts,50,0.09,1.054,0.964,0.66,0.06,0.92,2.0,2.0,1.98,1.74,gpt-5.4-nano,gemma_n_3_noun.jsonl
+n_3,noun,adj,concept of human body parts,50,0.054,1.374,1.32,0.88,0.04,1.24,1.96,2.0,1.96,1.64,gpt-5.4-nano,gemma_n_3_adj.jsonl
+n_3,noun,mixed,concept of human body parts,50,0.13,1.536,1.406,0.9,0.1,1.46,2.0,1.98,1.94,1.74,gpt-5.4-nano,gemma_n_3_mixed.jsonl
+n_4,noun,unbiased,concept of characteristic vocal or mechanical sounds and their utterance,50,0.0,1.628,1.628,0.98,0.0,1.54,2.0,1.96,1.98,1.74,gpt-5.4-nano,gemma_n_4_unbiased.jsonl
+n_4,noun,verb,concept of characteristic vocal or mechanical sounds and their utterance,50,0.0,1.344,1.344,0.84,0.0,1.24,2.0,2.0,1.98,1.68,gpt-5.4-nano,gemma_n_4_verb.jsonl
+n_4,noun,noun,concept of characteristic vocal or mechanical sounds and their utterance,50,0.0,1.652,1.652,0.96,0.0,1.42,2.0,2.0,1.96,1.94,gpt-5.4-nano,gemma_n_4_noun.jsonl
+n_4,noun,adj,concept of characteristic vocal or mechanical sounds and their utterance,50,0.03,1.666,1.636,1.0,0.02,1.48,1.98,1.98,1.98,1.84,gpt-5.4-nano,gemma_n_4_adj.jsonl
+n_4,noun,mixed,concept of characteristic vocal or mechanical sounds and their utterance,50,0.0,1.634,1.634,0.96,0.0,1.54,2.0,2.0,2.0,1.8,gpt-5.4-nano,gemma_n_4_mixed.jsonl
+n_5,noun,unbiased,concept of edible food ingredients and categories,50,0.0,1.308,1.308,0.94,0.0,1.16,2.0,1.8,1.94,1.56,gpt-5.4-nano,gemma_n_5_unbiased.jsonl
+n_5,noun,verb,concept of edible food ingredients and categories,50,0.0,1.49,1.49,0.96,0.0,1.38,2.0,1.8,1.94,1.8,gpt-5.4-nano,gemma_n_5_verb.jsonl
+n_5,noun,noun,concept of edible food ingredients and categories,50,0.09,1.35,1.26,0.88,0.06,1.2,2.0,1.76,1.92,1.8,gpt-5.4-nano,gemma_n_5_noun.jsonl
+n_5,noun,adj,concept of edible food ingredients and categories,50,0.024,1.398,1.374,0.9,0.02,1.24,2.0,1.86,1.96,1.78,gpt-5.4-nano,gemma_n_5_adj.jsonl
+n_5,noun,mixed,concept of edible food ingredients and categories,50,0.06,1.352,1.292,0.88,0.04,1.34,2.0,1.74,1.94,1.64,gpt-5.4-nano,gemma_n_5_mixed.jsonl
+n_6,noun,unbiased,concept of a gathered body of individuals or objects regarded as a unit,50,0.12,1.536,1.416,1.0,0.08,1.48,2.0,1.98,1.98,1.5,gpt-5.4-nano,gemma_n_6_unbiased.jsonl
+n_6,noun,verb,concept of a gathered body of individuals or objects regarded as a unit,50,0.258,0.574,0.316,0.38,0.18,0.4,2.0,2.0,1.9,1.94,gpt-5.4-nano,gemma_n_6_verb.jsonl
+n_6,noun,noun,concept of a gathered body of individuals or objects regarded as a unit,50,0.12,1.436,1.316,0.94,0.08,1.24,2.0,1.98,1.92,1.66,gpt-5.4-nano,gemma_n_6_noun.jsonl
+n_6,noun,adj,concept of a gathered body of individuals or objects regarded as a unit,50,0.18,1.52,1.34,0.94,0.12,1.34,2.0,1.98,1.96,1.8,gpt-5.4-nano,gemma_n_6_adj.jsonl
+n_6,noun,mixed,concept of a gathered body of individuals or objects regarded as a unit,50,0.12,1.324,1.204,0.88,0.08,1.28,2.0,2.0,1.9,1.44,gpt-5.4-nano,gemma_n_6_mixed.jsonl
+n_7,noun,unbiased,concept of calendar-based divisions and reference points of time,50,0.714,1.63,0.916,0.98,0.56,1.62,2.0,2.0,1.9,1.6,gpt-5.4-nano,gemma_n_7_unbiased.jsonl
+n_7,noun,verb,concept of calendar-based divisions and reference points of time,50,0.59,1.614,1.024,0.94,0.46,1.58,2.0,1.94,2.0,1.8,gpt-5.4-nano,gemma_n_7_verb.jsonl
+n_7,noun,noun,concept of calendar-based divisions and reference points of time,50,0.6,1.842,1.242,1.0,0.44,1.88,2.0,2.0,1.98,1.78,gpt-5.4-nano,gemma_n_7_noun.jsonl
+n_7,noun,adj,concept of calendar-based divisions and reference points of time,50,0.614,1.686,1.072,0.98,0.48,1.7,2.0,1.98,1.94,1.68,gpt-5.4-nano,gemma_n_7_adj.jsonl
+n_7,noun,mixed,concept of calendar-based divisions and reference points of time,50,0.64,1.682,1.042,1.0,0.44,1.7,2.0,1.96,2.0,1.62,gpt-5.4-nano,gemma_n_7_mixed.jsonl
+n_8,noun,unbiased,concept of leadership or authority role in an organization or polity,50,0.23,1.64,1.41,0.98,0.18,1.66,2.0,1.98,2.0,1.6,gpt-5.4-nano,gemma_n_8_unbiased.jsonl
+n_8,noun,verb,concept of leadership or authority role in an organization or polity,50,0.154,1.246,1.092,0.78,0.12,1.14,2.0,1.98,1.96,1.74,gpt-5.4-nano,gemma_n_8_verb.jsonl
+n_8,noun,noun,concept of leadership or authority role in an organization or polity,50,0.19,1.522,1.332,0.98,0.16,1.58,1.96,1.94,1.98,1.42,gpt-5.4-nano,gemma_n_8_noun.jsonl
+n_8,noun,adj,concept of leadership or authority role in an organization or polity,50,0.218,1.548,1.33,0.98,0.18,1.68,2.0,1.96,1.92,1.38,gpt-5.4-nano,gemma_n_8_adj.jsonl
+n_8,noun,mixed,concept of leadership or authority role in an organization or polity,50,0.24,1.482,1.242,0.92,0.2,1.54,2.0,1.94,2.0,1.54,gpt-5.4-nano,gemma_n_8_mixed.jsonl
+n_9,noun,unbiased,concept of means of transportation and conveyance vehicles,50,0.084,1.602,1.518,0.98,0.06,1.62,2.0,1.98,1.84,1.56,gpt-5.4-nano,gemma_n_9_unbiased.jsonl
+n_9,noun,verb,concept of means of transportation and conveyance vehicles,50,0.13,0.374,0.244,0.22,0.1,0.32,2.0,2.0,1.96,1.9,gpt-5.4-nano,gemma_n_9_verb.jsonl
+n_9,noun,noun,concept of means of transportation and conveyance vehicles,50,0.1,1.448,1.348,0.86,0.08,1.36,2.0,1.96,1.98,1.76,gpt-5.4-nano,gemma_n_9_noun.jsonl
+n_9,noun,adj,concept of means of transportation and conveyance vehicles,50,0.06,1.706,1.646,0.98,0.04,1.72,1.98,1.96,1.9,1.68,gpt-5.4-nano,gemma_n_9_adj.jsonl
+n_9,noun,mixed,concept of means of transportation and conveyance vehicles,50,0.07,1.53,1.46,0.94,0.06,1.48,2.0,2.0,1.96,1.6,gpt-5.4-nano,gemma_n_9_mixed.jsonl
+n_10,noun,unbiased,concept of facial expression conveying emotion or attitude,50,0.06,1.608,1.548,0.96,0.04,1.54,2.0,1.98,1.96,1.7,gpt-5.4-nano,gemma_n_10_unbiased.jsonl
+n_10,noun,verb,concept of facial expression conveying emotion or attitude,50,0.024,1.558,1.534,0.9,0.02,1.54,2.0,1.94,1.98,1.8,gpt-5.4-nano,gemma_n_10_verb.jsonl
+n_10,noun,noun,concept of facial expression conveying emotion or attitude,50,0.094,1.728,1.634,1.0,0.08,1.66,2.0,1.96,1.86,1.82,gpt-5.4-nano,gemma_n_10_noun.jsonl
+n_10,noun,adj,concept of facial expression conveying emotion or attitude,50,0.06,1.782,1.722,1.0,0.04,1.84,2.0,1.94,1.94,1.76,gpt-5.4-nano,gemma_n_10_adj.jsonl
+n_10,noun,mixed,concept of facial expression conveying emotion or attitude,50,0.09,1.648,1.558,0.96,0.06,1.6,2.0,1.92,1.96,1.78,gpt-5.4-nano,gemma_n_10_mixed.jsonl
+v_1,verb,unbiased,concept of application or placement of material onto or into a target surface or space,50,0.03,1.382,1.352,1.0,0.02,1.34,2.0,2.0,1.96,1.2,gpt-5.4-nano,gemma_v_1_unbiased.jsonl
+v_1,verb,verb,concept of application or placement of material onto or into a target surface or space,50,0.09,0.59,0.5,0.4,0.06,0.46,2.0,2.0,2.0,1.8,gpt-5.4-nano,gemma_v_1_verb.jsonl
+v_1,verb,noun,concept of application or placement of material onto or into a target surface or space,50,0.03,0.798,0.768,0.62,0.02,0.7,2.0,1.98,1.96,1.32,gpt-5.4-nano,gemma_v_1_noun.jsonl
+v_1,verb,adj,concept of application or placement of material onto or into a target surface or space,50,0.0,1.222,1.222,0.88,0.0,1.12,2.0,2.0,1.98,1.32,gpt-5.4-nano,gemma_v_1_adj.jsonl
+v_1,verb,mixed,concept of application or placement of material onto or into a target surface or space,50,0.03,1.292,1.262,0.9,0.02,1.2,2.0,1.98,1.98,1.4,gpt-5.4-nano,gemma_v_1_mixed.jsonl
+v_2,verb,unbiased,concept of imparting physical force to cause displacement of an object,50,0.03,1.064,1.034,0.78,0.02,0.9,1.98,1.98,1.96,1.32,gpt-5.4-nano,gemma_v_2_unbiased.jsonl
+v_2,verb,verb,concept of imparting physical force to cause displacement of an object,50,0.03,0.96,0.93,0.72,0.02,0.82,2.0,2.0,1.9,1.3,gpt-5.4-nano,gemma_v_2_verb.jsonl
+v_2,verb,noun,concept of imparting physical force to cause displacement of an object,50,0.08,0.872,0.792,0.62,0.08,0.76,1.98,1.94,1.94,1.54,gpt-5.4-nano,gemma_v_2_noun.jsonl
+v_2,verb,adj,concept of imparting physical force to cause displacement of an object,50,0.04,1.01,0.97,0.76,0.04,0.9,2.0,2.0,1.98,1.26,gpt-5.4-nano,gemma_v_2_adj.jsonl
+v_2,verb,mixed,concept of imparting physical force to cause displacement of an object,50,0.07,1.162,1.092,0.86,0.06,1.12,2.0,1.92,1.98,1.24,gpt-5.4-nano,gemma_v_2_mixed.jsonl
+v_3,verb,unbiased,"concept of characteristic sounds produced by impacts, friction, or fluid and air movement",50,0.0,1.5,1.5,0.92,0.0,1.38,2.0,1.96,1.94,1.76,gpt-5.4-nano,gemma_v_3_unbiased.jsonl
+v_3,verb,verb,"concept of characteristic sounds produced by impacts, friction, or fluid and air movement",50,0.0,1.552,1.552,0.92,0.0,1.42,2.0,1.92,1.92,1.88,gpt-5.4-nano,gemma_v_3_verb.jsonl
+v_3,verb,noun,"concept of characteristic sounds produced by impacts, friction, or fluid and air movement",50,0.0,1.65,1.65,0.98,0.0,1.42,2.0,2.0,1.96,1.88,gpt-5.4-nano,gemma_v_3_noun.jsonl
+v_3,verb,adj,"concept of characteristic sounds produced by impacts, friction, or fluid and air movement",50,0.0,1.616,1.616,0.94,0.0,1.46,2.0,1.96,1.92,1.9,gpt-5.4-nano,gemma_v_3_adj.jsonl
+v_3,verb,mixed,"concept of characteristic sounds produced by impacts, friction, or fluid and air movement",50,0.0,1.52,1.52,0.92,0.0,1.32,1.98,1.94,1.88,1.9,gpt-5.4-nano,gemma_v_3_mixed.jsonl
+v_4,verb,unbiased,concept of linguistic expression recorded or delivered through words,50,0.25,1.472,1.222,0.94,0.18,1.44,1.98,2.0,1.96,1.56,gpt-5.4-nano,gemma_v_4_unbiased.jsonl
+v_4,verb,verb,concept of linguistic expression recorded or delivered through words,50,0.21,1.336,1.126,0.82,0.14,1.12,2.0,2.0,1.94,1.86,gpt-5.4-nano,gemma_v_4_verb.jsonl
+v_4,verb,noun,concept of linguistic expression recorded or delivered through words,50,0.34,1.28,0.94,0.78,0.24,1.16,2.0,1.96,1.98,1.76,gpt-5.4-nano,gemma_v_4_noun.jsonl
+v_4,verb,adj,concept of linguistic expression recorded or delivered through words,50,0.27,1.418,1.148,0.88,0.18,1.24,2.0,2.0,1.96,1.78,gpt-5.4-nano,gemma_v_4_adj.jsonl
+v_4,verb,mixed,concept of linguistic expression recorded or delivered through words,50,0.15,1.41,1.26,0.86,0.1,1.28,2.0,1.98,1.92,1.72,gpt-5.4-nano,gemma_v_4_mixed.jsonl
+v_5,verb,unbiased,concept of heat-based food preparation methods,50,0.03,1.282,1.252,0.82,0.02,1.14,1.96,1.94,1.96,1.66,gpt-5.4-nano,gemma_v_5_unbiased.jsonl
+v_5,verb,verb,concept of heat-based food preparation methods,50,0.03,1.2951,1.2651,0.8,0.02,1.17,2.0,1.92,1.96,1.84,gpt-5.4-nano,gemma_v_5_verb.jsonl
+v_5,verb,noun,concept of heat-based food preparation methods,50,0.03,1.348,1.318,0.86,0.02,1.16,2.0,1.88,1.96,1.8,gpt-5.4-nano,gemma_v_5_noun.jsonl
+v_5,verb,adj,concept of heat-based food preparation methods,50,0.03,1.524,1.494,0.92,0.02,1.64,2.0,1.78,1.94,1.66,gpt-5.4-nano,gemma_v_5_adj.jsonl
+v_5,verb,mixed,concept of heat-based food preparation methods,50,0.0,1.114,1.114,0.74,0.0,1.06,2.0,1.88,1.96,1.62,gpt-5.4-nano,gemma_v_5_mixed.jsonl
+v_6,verb,unbiased,concept of separation into pieces by force or damage,50,0.0,1.166,1.166,0.86,0.0,1.16,2.0,1.82,1.96,1.3,gpt-5.4-nano,gemma_v_6_unbiased.jsonl
+v_6,verb,verb,concept of separation into pieces by force or damage,50,0.03,0.926,0.896,0.64,0.02,0.8,2.0,1.98,1.98,1.58,gpt-5.4-nano,gemma_v_6_verb.jsonl
+v_6,verb,noun,concept of separation into pieces by force or damage,50,0.03,1.526,1.496,1.0,0.02,1.48,2.0,2.0,1.98,1.46,gpt-5.4-nano,gemma_v_6_noun.jsonl
+v_6,verb,adj,concept of separation into pieces by force or damage,50,0.0,1.236,1.236,0.9,0.0,1.22,2.0,1.98,1.94,1.18,gpt-5.4-nano,gemma_v_6_adj.jsonl
+v_6,verb,mixed,concept of separation into pieces by force or damage,50,0.03,0.844,0.814,0.62,0.02,0.78,1.98,1.96,1.94,1.54,gpt-5.4-nano,gemma_v_6_mixed.jsonl
+v_7,verb,unbiased,concept of body posture and posture change relative to upright orientation,50,0.054,1.436,1.382,0.98,0.04,1.32,1.98,1.92,1.96,1.5,gpt-5.4-nano,gemma_v_7_unbiased.jsonl
+v_7,verb,verb,concept of body posture and posture change relative to upright orientation,50,0.03,1.264,1.234,0.84,0.02,1.2,2.0,1.94,1.96,1.54,gpt-5.4-nano,gemma_v_7_verb.jsonl
+v_7,verb,noun,concept of body posture and posture change relative to upright orientation,50,0.03,0.708,0.678,0.48,0.02,0.6,2.0,1.98,1.98,1.64,gpt-5.4-nano,gemma_v_7_noun.jsonl
+v_7,verb,adj,concept of body posture and posture change relative to upright orientation,50,0.03,1.426,1.396,0.96,0.02,1.3,2.0,1.96,1.98,1.48,gpt-5.4-nano,gemma_v_7_adj.jsonl
+v_7,verb,mixed,concept of body posture and posture change relative to upright orientation,50,0.03,1.35,1.32,0.92,0.02,1.3,2.0,1.9,1.94,1.5,gpt-5.4-nano,gemma_v_7_mixed.jsonl
+v_8,verb,unbiased,concept of vocal utterance manner and style of speech,50,0.03,1.48,1.45,0.94,0.02,1.4,2.0,1.98,1.98,1.6,gpt-5.4-nano,gemma_v_8_unbiased.jsonl
+v_8,verb,verb,concept of vocal utterance manner and style of speech,50,0.0,1.678,1.678,0.96,0.0,1.64,2.0,2.0,1.98,1.74,gpt-5.4-nano,gemma_v_8_verb.jsonl
+v_8,verb,noun,concept of vocal utterance manner and style of speech,50,0.03,1.698,1.668,0.96,0.02,1.62,2.0,2.0,1.9,1.82,gpt-5.4-nano,gemma_v_8_noun.jsonl
+v_8,verb,adj,concept of vocal utterance manner and style of speech,50,0.054,1.112,1.058,0.7,0.04,0.98,2.0,1.98,1.94,1.74,gpt-5.4-nano,gemma_v_8_adj.jsonl
+v_8,verb,mixed,concept of vocal utterance manner and style of speech,50,0.0,1.318,1.318,0.84,0.0,1.26,2.0,1.98,1.96,1.62,gpt-5.4-nano,gemma_v_8_mixed.jsonl
+v_9,verb,unbiased,concept of travel and locomotion via vehicles or related propulsion means,50,0.07,1.262,1.192,0.82,0.06,1.24,2.0,1.94,1.94,1.46,gpt-5.4-nano,gemma_v_9_unbiased.jsonl
+v_9,verb,verb,concept of travel and locomotion via vehicles or related propulsion means,50,0.09,0.996,0.906,0.64,0.06,0.92,2.0,1.98,1.94,1.5,gpt-5.4-nano,gemma_v_9_verb.jsonl
+v_9,verb,noun,concept of travel and locomotion via vehicles or related propulsion means,50,0.03,1.462,1.432,0.94,0.02,1.34,2.0,1.98,1.88,1.56,gpt-5.4-nano,gemma_v_9_noun.jsonl
+v_9,verb,adj,concept of travel and locomotion via vehicles or related propulsion means,50,0.06,1.31,1.25,0.82,0.04,1.32,2.0,1.9,1.94,1.62,gpt-5.4-nano,gemma_v_9_adj.jsonl
+v_9,verb,mixed,concept of travel and locomotion via vehicles or related propulsion means,50,0.09,1.472,1.382,0.9,0.06,1.42,2.0,1.98,1.92,1.66,gpt-5.4-nano,gemma_v_9_mixed.jsonl
+v_10,verb,unbiased,concept of physical impact and collision force,50,0.0,1.288,1.288,0.9,0.0,1.32,2.0,1.94,1.94,1.26,gpt-5.4-nano,gemma_v_10_unbiased.jsonl
+v_10,verb,verb,concept of physical impact and collision force,50,0.0,1.284,1.284,0.9,0.0,1.22,2.0,1.96,1.92,1.38,gpt-5.4-nano,gemma_v_10_verb.jsonl
+v_10,verb,noun,concept of physical impact and collision force,50,0.0,1.286,1.286,0.96,0.0,1.26,2.0,1.96,1.92,1.16,gpt-5.4-nano,gemma_v_10_noun.jsonl
+v_10,verb,adj,concept of physical impact and collision force,50,0.0,1.104,1.104,0.8,0.0,1.08,2.0,1.96,2.0,1.32,gpt-5.4-nano,gemma_v_10_adj.jsonl
+v_10,verb,mixed,concept of physical impact and collision force,50,0.0,0.468,0.468,0.34,0.0,0.38,2.0,1.96,1.92,1.74,gpt-5.4-nano,gemma_v_10_mixed.jsonl

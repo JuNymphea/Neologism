@@ -1,0 +1,32 @@
+# 10 per part of speech, 2 per template, distinct concepts; random.Random(0).
+# Model-agnostic: prefix each line with the model tag, e.g. gemma_a_3_verb.
+a_8_unbiased
+a_9_unbiased
+a_2_verb
+a_6_verb
+a_4_noun
+a_5_noun
+a_3_adj
+a_1_adj
+a_10_mixed
+a_7_mixed
+n_10_unbiased
+n_5_unbiased
+n_9_verb
+n_7_verb
+n_1_noun
+n_2_noun
+n_8_adj
+n_3_adj
+n_4_mixed
+n_6_mixed
+v_8_unbiased
+v_1_unbiased
+v_10_verb
+v_4_verb
+v_3_noun
+v_6_noun
+v_7_adj
+v_9_adj
+v_2_mixed
+v_5_mixed

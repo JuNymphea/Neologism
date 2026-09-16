@@ -2,6 +2,8 @@
 # result and are tracked. The tokenizer is not -- it is 33 MB of base tokenizer with
 # one token added, and training writes it on first run.
 scripts/train/results/*/tokenizer/
+# the shared tokenizer every results dir gets: results_*/<model>/<token>/tokenizer
+scripts/train/results*/*/*/tokenizer/
 checkpoints-*/
 
 # local model weights

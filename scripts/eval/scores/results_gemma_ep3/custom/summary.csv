@@ -1,0 +1,9 @@
+file,concept,template,judge,n_questions,normal_lm_judge,concept_lm_judge,normal_concept,concept_concept,normal_instruction,concept_instruction,normal_fluency,concept_fluency,gap_lm_judge,gap_concept
+gemma_a_1_verb.jsonl,a_1,verb,gpt-5.4-nano,50,0.02,1.34,0.02,1.34,nan,nan,nan,nan,1.32,1.32
+gemma_a_5_noun.jsonl,a_5,noun,gpt-5.4-nano,50,0.0,1.24,0.0,1.24,nan,nan,nan,nan,1.24,1.24
+gemma_a_10_adj.jsonl,a_10,adj,gpt-5.4-nano,50,0.0,1.24,0.0,1.24,nan,nan,nan,nan,1.24,1.24
+gemma_n_6_verb.jsonl,n_6,verb,gpt-5.4-nano,50,0.1,0.52,0.1,0.52,nan,nan,nan,nan,0.42,0.42
+gemma_n_9_verb.jsonl,n_9,verb,gpt-5.4-nano,50,0.06,0.88,0.06,0.88,nan,nan,nan,nan,0.82,0.82
+gemma_v_1_verb.jsonl,v_1,verb,gpt-5.4-nano,50,0.04,0.88,0.04,0.88,nan,nan,nan,nan,0.84,0.84
+gemma_v_7_noun.jsonl,v_7,noun,gpt-5.4-nano,50,0.02,1.38,0.02,1.38,nan,nan,nan,nan,1.36,1.36
+gemma_v_10_mixed.jsonl,v_10,mixed,gpt-5.4-nano,50,0.0,1.34,0.0,1.34,nan,nan,nan,nan,1.34,1.34

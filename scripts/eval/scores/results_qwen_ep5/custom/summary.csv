@@ -1,0 +1,2 @@
+file,concept,template,judge,n_questions,normal_lm_judge,concept_lm_judge,normal_concept,concept_concept,normal_instruction,concept_instruction,normal_fluency,concept_fluency,gap_lm_judge,gap_concept
+qwen_a_1_mixed.jsonl,a_1,mixed,gpt-5.4-nano,100,0.0,0.627,0.0,0.51,1.99,1.91,1.86,1.77,0.627,0.51
