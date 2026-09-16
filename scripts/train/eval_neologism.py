@@ -21,10 +21,13 @@ from train_neologism import (
     DEFAULT_NEW_TOKEN,
     build_prompt,
     assign_templates,
+    eval_questions_path,
+    DEFAULT_LANG,
+    LANGUAGES,
     TEMPLATE_CHOICES,
 )
 
-DEFAULT_EVAL_FILE = DEFAULT_DATA_DIR / "eval" / "axbench_eval_filtered.jsonl"
+DEFAULT_EVAL_FILE = eval_questions_path(DEFAULT_DATA_DIR, DEFAULT_LANG)
 DEFAULT_RES_DIR = SCRIPT_DIR / "results"
 
 
@@ -68,6 +71,7 @@ def get_pairs(
     attn_implementation: str = "sdpa",
     enable_thinking: bool = False,
     use_chat_template: bool = True,
+    lang: str = DEFAULT_LANG,
 ) -> None:
     """
     Generate normal and concept answers using a single model.
@@ -76,8 +80,9 @@ def get_pairs(
 
     """
 
-    questions = load_questions(eval_file or DEFAULT_EVAL_FILE)
-    print(f"[data] {len(questions)} questions from {eval_file or DEFAULT_EVAL_FILE}")
+    eval_file = eval_file or eval_questions_path(DEFAULT_DATA_DIR, lang)
+    questions = load_questions(eval_file)
+    print(f"[data] {len(questions)} {lang} questions from {eval_file}")
 
     existing_records = []
     existing_questions = set()
@@ -207,7 +212,7 @@ def get_pairs(
         idxs = pending[start:start + batch_size]
 
         concept_answers = generate_batch(
-            [build_prompt(questions[i], new_token, templates[i]) for i in idxs]
+            [build_prompt(questions[i], new_token, templates[i], lang) for i in idxs]
         )
         normal_answers = generate_batch([questions[i] for i in idxs])
 
@@ -247,7 +252,12 @@ def main(argv=None, defaults=None, model_key=None):
                         help="path to embedding_final.pt saved by training; injects only the new token's embedding")
     parser.add_argument("--template", type=str, default=None, choices=TEMPLATE_CHOICES,
                         help="prompt template; defaults to the one recorded in --embedding_path, else 'verb'")
-    parser.add_argument("--eval_file", type=str, default=str(DEFAULT_EVAL_FILE))
+    parser.add_argument("--eval_file", type=str, default=None,
+                        help="questions to generate from; defaults to the --lang file "
+                             f"under {DEFAULT_DATA_DIR / 'eval'}")
+    parser.add_argument("--lang", type=str, default=None, choices=sorted(LANGUAGES),
+                        help="language of the prompts and eval questions; defaults to "
+                             "the one recorded in --embedding_path, else 'en'")
     parser.add_argument("--res_dir", type=str, default=str(DEFAULT_RES_DIR))
     parser.add_argument("--seed", type=int, default=42, help="only used to lay out the 'mixed' template")
     parser.add_argument("--max_samples", type=int, default=100)
@@ -284,6 +294,7 @@ def main(argv=None, defaults=None, model_key=None):
 
     new_token = args.new_token or meta.get("new_token") or DEFAULT_NEW_TOKEN
     template = args.template or meta.get("template") or "verb"
+    lang = args.lang or meta.get("lang") or DEFAULT_LANG
     # name the run after the model it was TRAINED on, not the path we happen to load from
     model_name = meta.get("model_name") or args.concept_model_path
 
@@ -308,8 +319,8 @@ def main(argv=None, defaults=None, model_key=None):
                 f"no tokenizer at {tokenizer_path}; training writes it on the first run "
                 f"of {trained_tag} with {new_token}.{hint}")
 
-    name = run_name(model_name, args.concept, template)
-    print(f"[run] {name} (new_token={new_token}, template={template}, "
+    name = run_name(model_name, args.concept, template, lang)
+    print(f"[run] {name} (new_token={new_token}, template={template}, lang={lang}, "
           f"chat_template={'off' if args.no_chat_template else 'on'})")
 
     os.makedirs(args.res_dir, exist_ok=True)
@@ -330,6 +341,7 @@ def main(argv=None, defaults=None, model_key=None):
         attn_implementation=args.attn_implementation,
         enable_thinking=args.enable_thinking,
         use_chat_template=not args.no_chat_template,
+        lang=lang,
     )
 
 if __name__ == "__main__":

@@ -31,9 +31,19 @@ def short_model_name(model_name: str) -> str:
     return name.split("-")[0]
 
 
-def run_name(model_name: str, concept: str, template: str) -> str:
-    """Name identifying one training setting; used for the checkpoint dir and the eval result file."""
-    return f"{short_model_name(model_name)}_{concept}_{template}"
+DEFAULT_LANG = "en"
+
+
+def run_name(model_name: str, concept: str, template: str, lang: str = DEFAULT_LANG) -> str:
+    """Name identifying one training setting; used for the checkpoint dir and the eval result file.
+
+    The language goes in the name for anything but English, so the same concept
+    trained on the Chinese data lands beside the English run rather than on top
+    of it: 'qwen_zh_n_1_verb'. English names are left alone so every run already
+    on disk keeps its name.
+    """
+    tag = short_model_name(model_name) if lang == DEFAULT_LANG else f"{short_model_name(model_name)}_{lang}"
+    return f"{tag}_{concept}_{template}"
 
 
 def _safe_token(new_token: str) -> str:

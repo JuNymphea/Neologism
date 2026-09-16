@@ -59,14 +59,53 @@ PROMPT_TEMPLATES = {
     "adj":      "{question} Your answer should be as {token} as possible.",
 }
 
+#: The same four templates in Chinese, each putting the token in the syntactic
+#: slot its English counterpart does.
+PROMPT_TEMPLATES_ZH = {
+    # no space after the question: Chinese does not put one between sentences
+    "unbiased": "{question}让你的回答体现以下词语：{token}。",
+    "verb":     "{question}请{token}你的回答。",
+    "noun":     "{question}请用一个{token}来回答这个问题。",
+    "adj":      "{question}你的回答应该尽可能{token}。",
+}
+
+#: Everything that is per-language: the templates, the training data's subdirectory
+#: and the eval question file. Adding a language means adding an entry here.
+LANGUAGES = {
+    "en": {"templates": PROMPT_TEMPLATES, "eval_file": "axbench_eval_filtered.en.jsonl"},
+    "zh": {"templates": PROMPT_TEMPLATES_ZH, "eval_file": "axbench_eval_filtered.zh.jsonl"},
+}
+DEFAULT_LANG = "en"
+
 # the "mixed" setting uniformly mixes the three part-of-speech templates
 MIXED_TEMPLATES = ["verb", "noun", "adj"]
 
 TEMPLATE_CHOICES = list(PROMPT_TEMPLATES) + ["mixed"]
 
 
-def build_prompt(question: str, new_token: str, template: str) -> str:
-    return PROMPT_TEMPLATES[template].format(question=question, token=new_token)
+def build_prompt(question: str, new_token: str, template: str, lang: str = DEFAULT_LANG) -> str:
+    return LANGUAGES[lang]["templates"][template].format(question=question, token=new_token)
+
+
+def train_data_path(data_dir, concept: str, lang: str = DEFAULT_LANG) -> Path:
+    """data/train/<lang>/<concept>.jsonl, or the flat data/train/<concept>.jsonl of
+    checkouts from before the data was split by language."""
+    root = Path(data_dir) / "train"
+    by_lang = root / lang / f"{concept}.jsonl"
+    flat = root / f"{concept}.jsonl"
+    if not by_lang.exists() and lang == DEFAULT_LANG and flat.exists():
+        return flat
+    return by_lang
+
+
+def eval_questions_path(data_dir, lang: str = DEFAULT_LANG) -> Path:
+    """The eval questions for a language, falling back to the unsuffixed file."""
+    root = Path(data_dir) / "eval"
+    named = root / LANGUAGES[lang]["eval_file"]
+    plain = root / "axbench_eval_filtered.jsonl"
+    if not named.exists() and lang == DEFAULT_LANG and plain.exists():
+        return plain
+    return named
 
 
 def assign_templates(n: int, template: str, seed: int = 42) -> List[str]:
@@ -113,24 +152,28 @@ class NeologismDataset(Dataset):
         max_prompt_length: int = 4096,
         max_completion_length: int = 4096,
         use_chat_template: bool = True,
+        lang: str = DEFAULT_LANG,
     ):
         if template not in TEMPLATE_CHOICES:
             raise ValueError(f"unknown template '{template}', expected one of {TEMPLATE_CHOICES}")
+        if lang not in LANGUAGES:
+            raise ValueError(f"unknown lang '{lang}', expected one of {sorted(LANGUAGES)}")
 
         self.tokenizer = tokenizer
         self.new_token = new_token
         self.template = template
+        self.lang = lang
         self.use_chat_template = use_chat_template
         self.max_prompt_length = max_prompt_length
         self.max_completion_length = max_completion_length
 
         data_dir = Path(data_dir) if data_dir else DEFAULT_DATA_DIR
-        jsonl_path = data_dir / "train" / f"{concept}.jsonl"
+        jsonl_path = train_data_path(data_dir, concept, lang)
         if not jsonl_path.exists():
-            available = sorted(p.stem for p in (data_dir / "train").glob("*.jsonl"))
+            available = sorted(p.stem for p in jsonl_path.parent.glob("*.jsonl"))
             raise FileNotFoundError(
-                f"no training data at {jsonl_path}; available concepts under "
-                f"{data_dir / 'train'}: {available}"
+                f"no {lang} training data at {jsonl_path}; available concepts under "
+                f"{jsonl_path.parent}: {available}"
             )
 
         self.data: List[Dict] = []
@@ -171,7 +214,7 @@ class NeologismDataset(Dataset):
         normal_answer = item["normal_answer"]
         concept_answer = item["concept_answer"]
 
-        prompt_text = build_prompt(q, self.new_token, self.templates[idx])
+        prompt_text = build_prompt(q, self.new_token, self.templates[idx], self.lang)
 
         if self.use_chat_template:
             # The original working version wrapped the prompt in the chat template
@@ -845,7 +888,7 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
               concept, output_dir, neutral_word, init_mode, template, data_dir,
               batch_size, num_epochs, lr, beta, seed, chunk_size, results_dir=None,
               use_chat_template=True, lambda_h=0.0, norm_target=1.0,
-              init_from=None, ref_mode="original"):
+              init_from=None, ref_mode="original", lang=DEFAULT_LANG):
     os.makedirs(output_dir, exist_ok=True)
     set_seed(seed)
 
@@ -913,14 +956,18 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         template=template,
         seed=seed,
         data_dir=data_dir,
+        lang=lang,
         use_chat_template=use_chat_template,
     )
+    print(f"[data] {len(dataset)} examples from {train_data_path(data_dir or DEFAULT_DATA_DIR, concept, lang)}")
     print(f"[prompt] chat_template={'on' if use_chat_template else 'off'}")
+    shown = MIXED_TEMPLATES if template == "mixed" else [template]
     if template == "mixed":
         counts = {k: dataset.templates.count(k) for k in MIXED_TEMPLATES}
-        print(f"[template] mixed -> {counts}")
-    else:
-        print(f"[template] {template}: {PROMPT_TEMPLATES[template].format(question='<question>', token=new_token)}")
+        print(f"[template] mixed ({lang}) -> {counts}")
+    for t in shown:
+        print(f"[template] {t} ({lang}): "
+              + build_prompt("<question>", new_token, t, lang))
 
     def _collate(batch):
         return collate_fn(batch, pad_token_id=pad_token_id)
@@ -949,6 +996,7 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         "neutral_word": neutral_word,
         "init_mode": "file" if init_from else init_mode,
         "template": template,
+        "lang": lang,
         "chat_template": use_chat_template,
         "lambda_h": lambda_h,
         "norm_target": norm_target,
@@ -1072,6 +1120,15 @@ def main(argv=None, defaults=None, model_key=None):
         help="'neutral': copy the neutral word's embedding; 'random': sample a random vector"
     )
     parser.add_argument(
+        "--lang",
+        type=str,
+        default=DEFAULT_LANG,
+        choices=sorted(LANGUAGES),
+        help="which language's training data and prompt templates to use: "
+             "data/train/<lang>/<concept>.jsonl. Anything but 'en' is also part of "
+             "the run name, so the two languages' runs sit side by side"
+    )
+    parser.add_argument(
         "--init_from",
         type=str,
         default=None,
@@ -1142,7 +1199,7 @@ def main(argv=None, defaults=None, model_key=None):
           f"batch_size={args.batch_size} | lambda_h={args.lambda_h} norm_target={args.norm_target} | "
           f"chat_template={'off' if args.no_chat_template else 'on'} | "
           f"init={f'{args.init_from} (ref {args.ref_vec})' if args.init_from else args.init_mode} | "
-          f"epochs={args.num_epochs} | "
+          f"epochs={args.num_epochs} | lang={args.lang} | "
           f"output_dir={args.output_dir} | results_dir={args.results_dir}")
 
     # `--neutral_word random` is accepted as a shorthand for `--init_mode random`
@@ -1169,7 +1226,7 @@ def main(argv=None, defaults=None, model_key=None):
     done = failed = 0
     for i, (concept, template) in enumerate(runs, 1):
         output_dir = os.path.join(
-            args.output_dir, run_name(args.model_name, concept, template))
+            args.output_dir, run_name(args.model_name, concept, template, args.lang))
         final = os.path.join(output_dir, "embedding", "embedding_final.pt")
 
         # A sweep is long enough to hit a wall-clock limit, so make resubmitting
@@ -1182,7 +1239,7 @@ def main(argv=None, defaults=None, model_key=None):
         init_from = args.init_from
         if init_from and not os.path.isfile(init_from):
             init_from = os.path.join(
-                init_from, run_name(args.model_name, concept, template),
+                init_from, run_name(args.model_name, concept, template, args.lang),
                 "embedding", "embedding_final.pt")
             if not os.path.exists(init_from):
                 failed += 1
@@ -1200,7 +1257,7 @@ def main(argv=None, defaults=None, model_key=None):
                 args.chunk_size, args.results_dir,
                 use_chat_template=not args.no_chat_template,
                 lambda_h=args.lambda_h, norm_target=args.norm_target,
-                init_from=init_from, ref_mode=args.ref_vec,
+                init_from=init_from, ref_mode=args.ref_vec, lang=args.lang,
             )
             done += 1
         except Exception as exc:
