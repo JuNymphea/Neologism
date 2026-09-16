@@ -15,6 +15,10 @@ logging.basicConfig(format='%(asctime)s,%(msecs)03d %(levelname)-8s [%(filename)
 logger = logging.getLogger(__name__)
 
 
+#: The three rubrics, in the order compute_metrics reports them.
+ALL_METRICS = ("concept", "instruction", "fluency")
+
+
 class LMJudgeEvaluator():
     DEFAULT_RATING = 0.0
     def __init__(self, model_name, **kwargs):
@@ -22,6 +26,15 @@ class LMJudgeEvaluator():
         self.lm_model = kwargs.get("lm_model", None)
         self.concept_id = kwargs.get("concept_id", None)
         self.steer_dataset_type = kwargs.get("steer_dataset_type", None)
+        # Which rubrics to actually ask for. Every one dropped is a third of the
+        # calls saved; the ones not asked for come back as empty lists, and the
+        # aggregate is the harmonic mean of whatever was asked for.
+        self.metrics = tuple(kwargs.get("metrics", None) or ALL_METRICS)
+        unknown = [m for m in self.metrics if m not in ALL_METRICS]
+        if unknown:
+            raise ValueError(f"unknown metric(s) {unknown}; known: {', '.join(ALL_METRICS)}")
+        if "concept" not in self.metrics:
+            raise ValueError("the concept rubric is the measurement; it cannot be dropped")
 
     def __str__(self):
         return 'LMJudgeEvaluator'
@@ -90,12 +103,17 @@ class LMJudgeEvaluator():
                 sentence=generation
             )]
             dataset_names += [dataset_name]
+        def rate(prompts, api_name):
+            if api_name not in self.metrics:
+                return [self.DEFAULT_RATING] * len(prompts), []
+            return self._get_ratings_from_prompts(prompts, api_name)
+
         model_relevance_concept_ratings, model_relevance_concept_completions = \
-            self._get_ratings_from_prompts(model_relevance_concept_prompts, "concept")
+            rate(model_relevance_concept_prompts, "concept")
         model_relevance_instruction_ratings, model_relevance_instruction_completions = \
-            self._get_ratings_from_prompts(model_relevance_instruction_prompts, "instruction")
+            rate(model_relevance_instruction_prompts, "instruction")
         model_fluency_ratings, model_fluency_completions = \
-            self._get_ratings_from_prompts(model_fluency_prompts, "fluency")
+            rate(model_fluency_prompts, "fluency")
         return list(zip(model_relevance_concept_prompts, model_relevance_concept_ratings)), \
                list(zip(model_relevance_instruction_prompts, model_relevance_instruction_ratings)), \
                list(zip(model_fluency_prompts, model_fluency_ratings)), \
@@ -136,23 +154,24 @@ class LMJudgeEvaluator():
                 if 0 in scores:
                     return 0
                 return len(scores) / sum(1/s for s in scores)
+            concept_score = model_relevance_concept_ratings[i][-1]
             if dataset_names[i] == "AlpacaEvalSuppress":
-                model_scores = [
-                    2-model_relevance_concept_ratings[i][-1],
-                    model_relevance_instruction_ratings[i][-1],
-                    model_fluency_ratings[i][-1]
-                ]
-            else:
-                model_scores = [
-                    model_relevance_concept_ratings[i][-1],
-                    model_relevance_instruction_ratings[i][-1],
-                    model_fluency_ratings[i][-1]
-                ]
-                
+                concept_score = 2 - concept_score
+            by_metric = {
+                "concept": concept_score,
+                "instruction": model_relevance_instruction_ratings[i][-1],
+                "fluency": model_fluency_ratings[i][-1],
+            }
+            # only the rubrics that were asked for; with just "concept" the
+            # aggregate is that rating itself
+            model_scores = [by_metric[m] for m in self.metrics]
+
+
             model_score = harmonic_mean(model_scores)
             all_aggregated_ratings += [model_score]
 
         metrics = {
+            "metrics_judged": list(self.metrics),
             "lm_judge_rating": [],
             "relevance_concept_ratings": [],
             "relevance_instruction_ratings": [],

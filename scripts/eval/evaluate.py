@@ -48,7 +48,7 @@ import pandas as pd
 from openai import AsyncOpenAI
 
 from language_models import LanguageModel
-from lm_judge import LMJudgeEvaluator
+from lm_judge import ALL_METRICS, LMJudgeEvaluator
 
 DEFAULT_MODEL = "gpt-5.2-2025-12-11"
 DEFAULT_CACHE_TAG = "demo"
@@ -82,9 +82,13 @@ def natural_key(path: Path):
 
 
 def default_concept_csv() -> Path:
-    """The copy next to this script, unless the original under scripts/framenet/ exists."""
-    candidates = [SCRIPTS_DIR / "framenet" / CONCEPT_CSV_NAME, EVAL_DIR / CONCEPT_CSV_NAME]
-    return next((c for c in candidates if c.exists()), candidates[-1])
+    """scripts/FrameNet/pos - FrameNet.csv.
+
+    The directory name is spelled exactly as it is on disk. macOS matches paths
+    case-insensitively, so a lowercase "framenet" happened to work there, but on
+    Linux -- the cluster -- it would have reported the CSV missing.
+    """
+    return SCRIPTS_DIR / "FrameNet" / CONCEPT_CSV_NAME
 
 
 def read_concept_map(path: Path) -> dict:
@@ -98,7 +102,7 @@ def read_concept_map(path: Path) -> dict:
         raise FileNotFoundError(
             f"concept CSV not found: {path}\n"
             f"pass --concepts explicitly, e.g. "
-            f"--concepts 'scripts/framenet/{CONCEPT_CSV_NAME}'")
+            f"--concepts 'scripts/FrameNet/{CONCEPT_CSV_NAME}'")
     result = {}
     # utf-8-sig strips the BOM, which would otherwise show up in the first column.
     with open(path, mode="r", encoding="utf-8-sig") as f:
@@ -204,9 +208,10 @@ def close_client(lm_model: LanguageModel) -> None:
 
 
 def judge_file(lm_model: LanguageModel, model: str, input_file: Path, concept: str,
-               concept_map: dict, limit: int | None = None) -> dict:
+               concept_map: dict, limit: int | None = None,
+               metrics: tuple | None = None) -> dict:
     """The judge's metrics for one file -- unchanged from the original evaluator."""
-    evaluator = LMJudgeEvaluator(lm_model=lm_model, model_name=model)
+    evaluator = LMJudgeEvaluator(lm_model=lm_model, model_name=model, metrics=metrics)
     return evaluator.compute_metrics(
         transform_res_data(input_file, concept, concept_map, limit))
 
@@ -267,12 +272,16 @@ def factor_row(scores: dict, factor: str) -> dict:
     if factor not in scores.get("factor", []):
         return {}
     i = scores["factor"].index(factor)
-    return {
-        "lm_judge": scores["lm_judge_rating"][i],
-        "concept": scores["relevance_concept_ratings"][i],
-        "instruction": scores["relevance_instruction_ratings"][i],
-        "fluency": scores["fluency_ratings"][i],
-    }
+    judged = scores.get("metrics_judged", ALL_METRICS)
+    row = {"lm_judge": scores["lm_judge_rating"][i]}
+    # a rubric that was not asked for has no score: leave it out rather than
+    # reporting the 0.0 placeholder as a measurement
+    for name, key in (("concept", "relevance_concept_ratings"),
+                      ("instruction", "relevance_instruction_ratings"),
+                      ("fluency", "fluency_ratings")):
+        if name in judged:
+            row[name] = scores[key][i]
+    return row
 
 
 def write_summary(source_dir: Path) -> Path | None:
@@ -327,6 +336,11 @@ def main() -> None:
     ap.add_argument("--cache-tag", default=DEFAULT_CACHE_TAG)
     ap.add_argument("--limit", type=int, default=None,
                     help="judge only the first N questions (2N answers)")
+    ap.add_argument("--metrics", nargs="+", default=list(ALL_METRICS),
+                    choices=list(ALL_METRICS),
+                    help="which rubrics to ask the judge for (default: all three). "
+                         "'--metrics concept' is a third of the calls: it scores only "
+                         "whether the concept is present, and lm_judge is that rating")
     ap.add_argument("--overwrite", action="store_true",
                     help="re-judge files whose scores already exist with the same judge and limit")
     args = ap.parse_args()
@@ -344,7 +358,7 @@ def main() -> None:
         out = args.out or (args.scores_dir / source / f"{path.stem}.json")
         plan.append((path, source, concept, template, out))
 
-    print(f"judge   {args.model}")
+    print(f"judge   {args.model}  ({', '.join(args.metrics)})")
     print(f"cache   {Path(args.cache_dir) / 'persist_lm_cache'}")
     print(f"concept CSV {args.concepts}（{len(concept_map)} 个 concept）"
           + (f"，每个文件只判前 {args.limit} 条" if args.limit else ""))
@@ -360,14 +374,16 @@ def main() -> None:
 
             if out.exists() and not args.overwrite:
                 old = json.loads(out.read_text(encoding="utf-8")).get("meta", {})
-                if old.get("judge") == args.model and old.get("n_questions") == n_questions:
+                if (old.get("judge") == args.model and old.get("n_questions") == n_questions
+                        and list(old.get("metrics", ALL_METRICS)) == list(args.metrics)):
                     print(f"{tag} -- 已有同 judge、同题数的结果，跳过")
                     touched.add(out.parent)
                     continue
 
             print(f"\n{tag}  concept={concept}"
                   + (f"  template={template}" if template else "")
-                  + f"  {n_questions} 题 -> 最多 {n_questions * 2 * 3} 次 judge 调用")
+                  + f"  {n_questions} 题 x {len(args.metrics)} 个维度 "
+                    f"-> 最多 {n_questions * 2 * len(args.metrics)} 次 judge 调用")
             if lm_model is None:
                 # Built once: the cache pickle is hundreds of MB and would otherwise be
                 # reloaded per file. The HTTP client is made fresh per file instead,
@@ -379,7 +395,8 @@ def main() -> None:
             else:
                 lm_model.client = get_chat_client(args.model)
 
-            scores = judge_file(lm_model, args.model, path, concept, concept_map, args.limit)
+            scores = judge_file(lm_model, args.model, path, concept, concept_map, args.limit,
+                                metrics=tuple(args.metrics))
             scores["meta"] = {
                 "source": source,
                 "input_file": path.name,
@@ -389,6 +406,7 @@ def main() -> None:
                 "template": template,
                 "judge": args.model,
                 "n_questions": n_questions,
+                "metrics": list(args.metrics),
             }
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(json.dumps(scores, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -397,12 +415,12 @@ def main() -> None:
             lm_model.save_cache()
             close_client(lm_model)
 
-            print(f"{'factor':<10}{'lm_judge':>10}{'concept':>10}{'instruction':>13}{'fluency':>10}")
+            cols = ["lm_judge"] + [m for m in ALL_METRICS if m in args.metrics]
+            print(f"{'factor':<10}" + "".join(f"{c:>13}" for c in cols))
             for factor in ("normal", "concept"):
                 r = factor_row(scores, factor)
                 if r:
-                    print(f"{factor:<10}{r['lm_judge']:>10.3f}{r['concept']:>10.3f}"
-                          f"{r['instruction']:>13.3f}{r['fluency']:>10.3f}")
+                    print(f"{factor:<10}" + "".join(f"{r[c]:>13.3f}" for c in cols))
             print(f"-> {out}")
     finally:
         if lm_model is not None:
