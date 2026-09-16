@@ -18,7 +18,11 @@
 # templates each, about 55 minutes.
 #
 #   cd ~/neologism && mkdir -p logs
-#   sbatch scripts/train/submit_eval_sweep.slurm
+#   sbatch --export=ALL,MODEL_KEY=gemma scripts/train/submit_eval_sweep.slurm
+#   sbatch --export=ALL,MODEL_KEY=qwen  scripts/train/submit_eval_sweep.slurm
+#   sbatch --export=ALL,MODEL_KEY=qwen,DATA_LANG=zh scripts/train/submit_eval_sweep.slurm
+#
+# MODEL_KEY is required and picks eval_<key>.py, which holds that model's settings.
 #
 #   one part of speech:  sbatch --array=0-9 ...   (0-9 a, 10-19 n, 20-29 v)
 #   more at once:        sbatch --array=0-29%12 ...
@@ -39,7 +43,7 @@
 #
 # CKPT_DIR / RES_DIR default to the settled configuration's directories, matching
 # submit_train_sweep.slurm. Point them elsewhere to evaluate another sweep, e.g.
-#   sbatch --export=ALL,CKPT_DIR=scripts/train/checkpoints,RES_DIR=scripts/train/results ...
+#   sbatch --export=ALL,MODEL_KEY=gemma,CKPT_DIR=scripts/train/checkpoints,RES_DIR=scripts/train/results ...
 
 set -euo pipefail
 
@@ -53,28 +57,37 @@ cd "$REPO"
 
 source scripts/train/env.sh
 
-# Which model: the one setup_env.sh set up, unless MODEL is exported, e.g.
-#   sbatch --export=ALL,MODEL=/ix/$(id -gn)/$USER/model/Qwen/Qwen3-4B ...
-# TAG is the prefix every run, result and tokenizer of that model is filed under.
-MODEL=${MODEL:-${NEOLOGISM_MODEL:?source env.sh first}}
-TAG=$(python scripts/train/naming.py tag "$MODEL")
+case "${MODEL_KEY:-}" in
+    gemma|qwen) ;;
+    *) echo "ERROR: export MODEL_KEY=gemma or MODEL_KEY=qwen (got '${MODEL_KEY:-}')"; exit 1 ;;
+esac
+ENTRY=scripts/train/eval_${MODEL_KEY}.py
+TAG=$MODEL_KEY            # the prefix every run and result of that model is filed under
+# a non-English run carries its language after the model (qwen_zh_n_1_verb);
+# eval itself reads the language back out of the vector file
+DATA_LANG=${DATA_LANG:-en}
+[[ "$DATA_LANG" != en ]] && TAG=${TAG}_${DATA_LANG}
 
 POSLIST=(a n v)
 PER_POS=${PER_POS:-10}
 FIRST=${FIRST:-1}
 POS=${POSLIST[$((SLURM_ARRAY_TASK_ID / PER_POS))]}
 IDX=$((FIRST + SLURM_ARRAY_TASK_ID % PER_POS))
-BATCH=${BATCH:-48}
-MAXNEW=${MAXNEW:-1536}
 SAMPLES=${SAMPLES:-100}
 TEMPLATES=(unbiased verb noun adj mixed)
+
+# only what was exported overrides the model's own settings in $ENTRY
+EXTRA=()
+[[ -n "${MODEL:-}" ]]  && EXTRA+=(--concept_model_path "$MODEL")
+[[ -n "${BATCH:-}" ]]  && EXTRA+=(--batch_size "$BATCH")
+[[ -n "${MAXNEW:-}" ]] && EXTRA+=(--max_new_tokens "$MAXNEW")
 
 CKPT_ROOT=${CKPT_DIR:-scripts/train/checkpoints_bs1hinge}
 RES_ROOT=${RES_DIR:-scripts/train/results_bs1hinge}
 mkdir -p "$RES_ROOT"
 
-echo "=== $(date) | node $(hostname) | $TAG | task $SLURM_ARRAY_TASK_ID -> ${POS}_${IDX} ==="
-echo "    batch $BATCH | max_new_tokens $MAXNEW | samples $SAMPLES | $CKPT_ROOT -> $RES_ROOT"
+echo "=== $(date) | node $(hostname) | $ENTRY | task $SLURM_ARRAY_TASK_ID -> ${POS}_${IDX} ==="
+echo "    samples $SAMPLES | $CKPT_ROOT -> $RES_ROOT | overrides: ${EXTRA[*]:-none}"
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 done_n=0; skip_n=0; fail_n=0
@@ -94,14 +107,12 @@ for T in "${TEMPLATES[@]}"; do
     echo "--- $(date +%H:%M:%S) $RUN"
     # new_token and template are read back out of the vector file, so they
     # cannot drift from what training used
-    if python scripts/train/eval_neologism.py \
+    if python "$ENTRY" \
             --concept "${POS}_${i}" \
-            --concept_model_path "$MODEL" \
             --embedding_path "$EMB" \
             --res_dir "$RES_ROOT" \
             --max_samples "$SAMPLES" \
-            --max_new_tokens "$MAXNEW" \
-            --batch_size "$BATCH"; then
+            ${EXTRA[@]+"${EXTRA[@]}"}; then
         done_n=$((done_n + 1))
     else
         echo "[FAIL] $RUN"; fail_n=$((fail_n + 1))

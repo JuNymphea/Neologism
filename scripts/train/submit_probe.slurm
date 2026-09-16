@@ -16,14 +16,18 @@
 # directories -- for A/B probes of a training change without touching the sweep's
 # outputs. Everything comes in through --export, so no quoting inside --wrap:
 #
-#   sbatch --export=ALL,RUNTAG=hinge_raw,CONCEPT=a_1,TEMPLATE=adj,\
-#          TRAIN_ARGS="--lambda_h 0.1 --no_chat_template" scripts/train/submit_probe.slurm
+#   sbatch --export=ALL,MODEL_KEY=qwen,RUNTAG=qwen_probe,CONCEPT=a_1,TEMPLATE=adj \
+#          scripts/train/submit_probe.slurm
+#   sbatch --export=ALL,MODEL_KEY=gemma,RUNTAG=nohinge,TRAIN_ARGS="--lambda_h 0" \
+#          scripts/train/submit_probe.slurm
 #
-#   RUNTAG      names checkpoints_<RUNTAG>/ and results_<RUNTAG>/          (required)
+#   MODEL_KEY   gemma or qwen; picks train_<key>.py / eval_<key>.py and their settings (required)
+#   RUNTAG      names checkpoints_<RUNTAG>/ and results_<RUNTAG>/                        (required)
 #   CONCEPT     default a_1        TEMPLATE  default adj
-#   TRAIN_ARGS  extra train_neologism.py flags, e.g. "--lambda_h 0.1"    (default none)
-#   MODEL       default $NEOLOGISM_MODEL from env.sh
-#   BATCH / EVAL_BATCH / MAXNEW / SAMPLES   default 8 / 48 / 1536 / 100
+#   TRAIN_ARGS  flags that override the model's training settings, e.g. "--lambda_h 0"
+#   MODEL / BATCH / EVAL_BATCH / MAXNEW     override the model's settings when exported
+#   SAMPLES     default 100
+#   DATA_LANG   en (default) or zh
 
 set -euo pipefail
 
@@ -37,35 +41,44 @@ cd "$REPO"
 
 source scripts/train/env.sh
 
+case "${MODEL_KEY:-}" in
+    gemma|qwen) ;;
+    *) echo "ERROR: export MODEL_KEY=gemma or MODEL_KEY=qwen (got '${MODEL_KEY:-}')"; exit 1 ;;
+esac
 : "${RUNTAG:?export RUNTAG=<name> -- it names checkpoints_<name>/ and results_<name>/}"
-MODEL=${MODEL:-${NEOLOGISM_MODEL:?source env.sh first}}
-TAG=$(python scripts/train/naming.py tag "$MODEL")
 CONCEPT=${CONCEPT:-a_1}
 TEMPLATE=${TEMPLATE:-adj}
 TRAIN_ARGS=${TRAIN_ARGS:-}
-BATCH=${BATCH:-8}
-EVAL_BATCH=${EVAL_BATCH:-48}
-MAXNEW=${MAXNEW:-1536}
 SAMPLES=${SAMPLES:-100}
 
 CKPT=scripts/train/checkpoints_$RUNTAG
 RES=scripts/train/results_$RUNTAG
-RUN=${TAG}_${CONCEPT}_${TEMPLATE}
+DATA_LANG=${DATA_LANG:-en}
+RUN=${MODEL_KEY}_${CONCEPT}_${TEMPLATE}
+[[ "$DATA_LANG" != en ]] && RUN=${MODEL_KEY}_${DATA_LANG}_${CONCEPT}_${TEMPLATE}
+
+# only what was exported overrides the model's own settings
+TRAIN_EXTRA=(); EVAL_EXTRA=()
+[[ -n "${MODEL:-}" ]]      && { TRAIN_EXTRA+=(--model_name "$MODEL"); EVAL_EXTRA+=(--concept_model_path "$MODEL"); }
+[[ -n "${BATCH:-}" ]]      && TRAIN_EXTRA+=(--batch_size "$BATCH")
+[[ "$DATA_LANG" != en ]]   && TRAIN_EXTRA+=(--lang "$DATA_LANG")
+[[ -n "${EVAL_BATCH:-}" ]] && EVAL_EXTRA+=(--batch_size "$EVAL_BATCH")
+[[ -n "${MAXNEW:-}" ]]     && EVAL_EXTRA+=(--max_new_tokens "$MAXNEW")
 
 echo "=== $(date) | node $(hostname) | $RUN | RUNTAG=$RUNTAG | TRAIN_ARGS='$TRAIN_ARGS' ==="
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 echo "=== train ==="
 # shellcheck disable=SC2086  -- TRAIN_ARGS is meant to split into several flags
-python scripts/train/train_neologism.py \
-    --concept "$CONCEPT" --template "$TEMPLATE" --model_name "$MODEL" \
-    --batch_size "$BATCH" --output_dir "$CKPT" --results_dir "$RES" $TRAIN_ARGS
+python "scripts/train/train_${MODEL_KEY}.py" \
+    --concept "$CONCEPT" --template "$TEMPLATE" \
+    --output_dir "$CKPT" --results_dir "$RES" ${TRAIN_EXTRA[@]+"${TRAIN_EXTRA[@]}"} $TRAIN_ARGS
 
 echo "=== eval ==="
-python scripts/train/eval_neologism.py \
-    --concept "$CONCEPT" --concept_model_path "$MODEL" \
+python "scripts/train/eval_${MODEL_KEY}.py" \
+    --concept "$CONCEPT" \
     --embedding_path "$CKPT/$RUN/embedding/embedding_final.pt" \
-    --res_dir "$RES" --max_samples "$SAMPLES" --max_new_tokens "$MAXNEW" --batch_size "$EVAL_BATCH"
+    --res_dir "$RES" --max_samples "$SAMPLES" ${EVAL_EXTRA[@]+"${EVAL_EXTRA[@]}"}
 
 echo "=== done: $RES/$RUN.jsonl ==="
 crc-job-stats

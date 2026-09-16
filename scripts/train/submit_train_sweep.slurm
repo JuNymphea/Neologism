@@ -17,7 +17,12 @@
 # a_1..a_10, n_1..n_10, v_1..v_10 against all five templates: 150 runs.
 #
 #   cd ~/neologism && mkdir -p logs
-#   sbatch scripts/train/submit_train_sweep.slurm
+#   sbatch --export=ALL,MODEL_KEY=gemma scripts/train/submit_train_sweep.slurm
+#   sbatch --export=ALL,MODEL_KEY=qwen  scripts/train/submit_train_sweep.slurm
+#
+# MODEL_KEY is required and picks train_<key>.py, which holds that model's settings
+# (batch size, hinge threshold, chat template, model path, output directories).
+# Anything exported below overrides those settings; leave it unset to use them.
 #
 # One array task per concept, five runs each, about 45 minutes. Array tasks are
 # scheduled independently -- three GPUs are never needed at once -- and the %3 caps
@@ -32,14 +37,11 @@
 # already have an embedding_final.pt are skipped, so a requeued or resubmitted
 # task resumes instead of repeating work.
 #
-# Defaults are the settled configuration: N(0, 0.02) init, hinge lambda_h 0.1,
-# batch size 1, training prompt without the chat template. On a_1 adj this lifted
-# the concept-minus-normal judge gap from 0.39 (batch 8) to 1.40. Outputs go to
-# their own directories because the batch-8 vectors still sit in checkpoints/,
-# and the skip-if-present rule would otherwise pass over every run.
-#
-#   different outputs:   sbatch --export=ALL,CKPT_DIR=...,RES_DIR=... ...
-#   different flags:     sbatch --export=ALL,BATCH=8,TRAIN_ARGS="--lambda_h 0" ...
+#   different outputs:   sbatch --export=ALL,MODEL_KEY=...,CKPT_DIR=...,RES_DIR=... ...
+#   different flags:     sbatch --export=ALL,MODEL_KEY=...,BATCH=8,TRAIN_ARGS="--lambda_h 0" ...
+#   another checkpoint:  sbatch --export=ALL,MODEL_KEY=qwen,MODEL=/path/to/Qwen3-8B ...
+#   Chinese data:        sbatch --export=ALL,MODEL_KEY=qwen,DATA_LANG=zh ...
+#     (DATA_LANG, not LANG: LANG is the shell's locale)
 
 set -euo pipefail
 
@@ -53,35 +55,35 @@ cd "$REPO"
 
 source scripts/train/env.sh
 
-# Which model: the one setup_env.sh set up, unless MODEL is exported, e.g.
-#   sbatch --export=ALL,MODEL=/ix/$(id -gn)/$USER/model/Qwen/Qwen3-4B ...
-# TAG is the prefix every run, result and tokenizer of that model is filed under.
-MODEL=${MODEL:-${NEOLOGISM_MODEL:?source env.sh first}}
-TAG=$(python scripts/train/naming.py tag "$MODEL")
+case "${MODEL_KEY:-}" in
+    gemma|qwen) ;;
+    *) echo "ERROR: export MODEL_KEY=gemma or MODEL_KEY=qwen (got '${MODEL_KEY:-}')"; exit 1 ;;
+esac
+ENTRY=scripts/train/train_${MODEL_KEY}.py
 
 POSLIST=(a n v)
 PER_POS=${PER_POS:-10}
 FIRST=${FIRST:-1}
-BATCH=${BATCH:-1}
-TRAIN_ARGS=${TRAIN_ARGS:---no_chat_template --lambda_h 0.1}
-CKPT_DIR=${CKPT_DIR:-scripts/train/checkpoints_bs1hinge}
-RES_DIR=${RES_DIR:-scripts/train/results_bs1hinge}
-
 POS=${POSLIST[$((SLURM_ARRAY_TASK_ID / PER_POS))]}
 CONCEPT="${POS}_$((FIRST + SLURM_ARRAY_TASK_ID % PER_POS))"
 
-echo "=== $(date) | node $(hostname) | $TAG | task $SLURM_ARRAY_TASK_ID -> $CONCEPT ==="
-echo "    batch $BATCH | TRAIN_ARGS '$TRAIN_ARGS' | $CKPT_DIR | $RES_DIR"
+# only what was exported overrides the model's own settings in $ENTRY
+EXTRA=()
+[[ -n "${MODEL:-}" ]]    && EXTRA+=(--model_name "$MODEL")
+[[ -n "${BATCH:-}" ]]    && EXTRA+=(--batch_size "$BATCH")
+[[ -n "${CKPT_DIR:-}" ]] && EXTRA+=(--output_dir "$CKPT_DIR")
+[[ -n "${RES_DIR:-}" ]]  && EXTRA+=(--results_dir "$RES_DIR")
+[[ -n "${DATA_LANG:-}" ]] && EXTRA+=(--lang "$DATA_LANG")
+
+echo "=== $(date) | node $(hostname) | $ENTRY | task $SLURM_ARRAY_TASK_ID -> $CONCEPT ==="
+echo "    overrides: ${EXTRA[*]:-none} ${TRAIN_ARGS:-}"
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
+# the [config] line train prints first records every setting actually used
 # shellcheck disable=SC2086  -- TRAIN_ARGS is meant to split into several flags
-python scripts/train/train_neologism.py \
+python "$ENTRY" \
     --concept "$CONCEPT" \
     --template unbiased verb noun adj mixed \
-    --model_name "$MODEL" \
-    --batch_size "$BATCH" \
-    --output_dir "$CKPT_DIR" \
-    --results_dir "$RES_DIR" \
-    $TRAIN_ARGS
+    ${EXTRA[@]+"${EXTRA[@]}"} ${TRAIN_ARGS:-}
 
 crc-job-stats

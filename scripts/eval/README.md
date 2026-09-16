@@ -48,8 +48,9 @@ file, normal and concept means side by side, and `gap_lm_judge` /
 | `--all` | off | every `.jsonl` in the source folder |
 | `--model` | `gpt-5.2-2025-12-11` | judge; see `SUPPORTED_MODELS` |
 | `--limit` | all | judge only the first N questions (2N answers) |
+| `--metrics` | all three | `concept` asks only for concept relevance: a third of the calls, and `lm_judge` is then that rating |
 | `--overwrite` | off | re-judge even when a score with the same judge and question count exists |
-| `--concepts` | `scripts/framenet/pos - FrameNet.csv`, else the copy here | |
+| `--concepts` | `scripts/FrameNet/pos - FrameNet.csv` | `pos - FrameNet.zh.csv` for Chinese results |
 | `--scores-dir` | `scripts/eval/scores` | `--out` overrides it for a single file |
 | `--cache-dir` | `$JUDGE_CACHE_DIR`, else `scripts/eval/cached_data` | |
 
@@ -111,8 +112,9 @@ evaluate.py          driver: load, transform, judge, write
 lm_judge.py          the three rubrics and the aggregation
 language_models.py   async client + prompt-level disk cache
 prompt_templates.py  the three judge prompts (verbatim)
-pos - FrameNet.csv   concept id -> description, so this folder runs standalone
 ```
+
+The concept CSV (concept id -> description) lives in `scripts/FrameNet/`.
 
 Imports are flat, so run it as a script (`python scripts/eval/evaluate.py`)
 from anywhere — Python puts the script's own directory on the path.
