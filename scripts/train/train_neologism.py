@@ -465,10 +465,25 @@ def _final_logit_softcap(model: nn.Module):
     return float(cap) if cap else None
 
 
+def _logit_scale(model: nn.Module) -> float:
+    """The constant the model multiplies its logits by, or 1.0.
+
+    Cohere decoders (Aya) scale the lm_head output by config.logit_scale before the
+    softmax; at ~0.06 that is not a rescaling we can ignore, since it flattens the
+    distribution and changes every log-probability. Gemma and Qwen have no such
+    field and get 1.0.
+    """
+    cfg = getattr(model.config, "text_config", None) or model.config
+    scale = getattr(cfg, "logit_scale", None)
+    return float(scale) if scale else 1.0
+
+
 def _chunk_logps(hidden: torch.Tensor, labels: torch.Tensor, lm_weight: torch.Tensor,
-                 softcap: float = None):
+                 softcap: float = None, logit_scale: float = 1.0):
     """log p(label) for one chunk of positions, computed in fp32."""
     logits = F.linear(hidden, lm_weight).float()                    # [c, V]
+    if logit_scale != 1.0:
+        logits = logits * logit_scale
     if softcap:
         logits = torch.tanh(logits / softcap) * softcap
     gathered = logits.gather(dim=-1, index=labels.unsqueeze(-1)).squeeze(-1)
@@ -496,6 +511,7 @@ def sequence_logps(
         raise NotImplementedError(f"{type(model).__name__}'s lm_head has a bias")
     lm_weight = lm_head.weight
     softcap = _final_logit_softcap(model)
+    logit_scale = _logit_scale(model)
 
     flat_hidden = hidden.reshape(-1, H)
     flat_labels = labels.reshape(-1)
@@ -509,10 +525,10 @@ def sequence_logps(
         lab = flat_labels.index_select(0, sel)
         if torch.is_grad_enabled():
             logps = torch.utils.checkpoint.checkpoint(
-                _chunk_logps, h, lab, lm_weight, softcap, use_reentrant=False
+                _chunk_logps, h, lab, lm_weight, softcap, logit_scale, use_reentrant=False
             )
         else:
-            logps = _chunk_logps(h, lab, lm_weight, softcap)
+            logps = _chunk_logps(h, lab, lm_weight, softcap, logit_scale)
         totals = totals.index_add(0, seq_id[start:start + chunk_size], logps)
 
     return totals
@@ -888,7 +904,7 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
               concept, output_dir, neutral_word, init_mode, template, data_dir,
               batch_size, num_epochs, lr, beta, seed, chunk_size, results_dir=None,
               use_chat_template=True, lambda_h=0.0, norm_target=1.0,
-              init_from=None, ref_mode="original", lang=DEFAULT_LANG):
+              init_from=None, ref_mode="original", lang=DEFAULT_LANG, prior_epochs=None):
     os.makedirs(output_dir, exist_ok=True)
     set_seed(seed)
 
@@ -906,13 +922,22 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         neutral_id = None
         init_vec, ref_vec, prev_meta = continue_from_checkpoint(
             init_from, base_emb.weight.size(1), ref_mode)
+        # Files written before the epoch count was saved do not say how long they
+        # trained. Counting that as 0 would record a 1+2 continuation as 2 epochs,
+        # so the total is left unknown unless --prior_epochs supplies it.
+        epochs_before = prev_meta.get("num_epochs")
+        if epochs_before is None:
+            epochs_before = prior_epochs
+        if epochs_before is None:
+            print(f"[init_from] WARNING: {init_from} does not record how many epochs it "
+                  "trained; pass --prior_epochs, or num_epochs is saved as unknown")
         for field, mine in (("concept", concept), ("template", template)):
             theirs = prev_meta.get(field)
             if theirs is not None and theirs != mine:
                 print(f"[init_from] WARNING: the checkpoint was trained on "
                       f"{field}={theirs!r}, this run uses {mine!r}")
         print(f"[init] {new_token} <- {init_from} "
-              f"(norm {init_vec.norm().item():.4f}, {prev_meta.get('num_epochs', '?')} epochs before "
+              f"(norm {init_vec.norm().item():.4f}, {epochs_before if epochs_before is not None else '?'} epochs before "
               f"this one); APO reference: {'that run' if ref_mode == 'original' else 'the loaded vector'}")
     elif init_mode == "random":
         neutral_id = None
@@ -1010,7 +1035,7 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
             "ref_mode": ref_mode,
             # epochs this vector has seen in total, so a chain of continuations
             # can still be compared against a single run of the same length
-            "num_epochs": num_epochs + int(prev_meta.get("num_epochs") or 0),
+            "num_epochs": None if epochs_before is None else num_epochs + epochs_before,
             "epochs_this_run": num_epochs,
         })
 
@@ -1137,6 +1162,13 @@ def main(argv=None, defaults=None, model_key=None):
              "from which each run takes its own <run name>/embedding/embedding_final.pt"
     )
     parser.add_argument(
+        "--prior_epochs",
+        type=int,
+        default=None,
+        help="with --init_from, how many epochs the loaded vector already trained, for "
+             "files that do not record it themselves; the saved num_epochs is the total"
+    )
+    parser.add_argument(
         "--ref_vec",
         type=str,
         default="original",
@@ -1258,6 +1290,7 @@ def main(argv=None, defaults=None, model_key=None):
                 use_chat_template=not args.no_chat_template,
                 lambda_h=args.lambda_h, norm_target=args.norm_target,
                 init_from=init_from, ref_mode=args.ref_vec, lang=args.lang,
+                prior_epochs=args.prior_epochs,
             )
             done += 1
         except Exception as exc:

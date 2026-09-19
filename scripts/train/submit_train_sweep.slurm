@@ -19,6 +19,7 @@
 #   cd ~/neologism && mkdir -p logs
 #   sbatch --export=ALL,MODEL_KEY=gemma scripts/train/submit_train_sweep.slurm
 #   sbatch --export=ALL,MODEL_KEY=qwen  scripts/train/submit_train_sweep.slurm
+#   sbatch --export=ALL,MODEL_KEY=aya   scripts/train/submit_train_sweep.slurm
 #
 # MODEL_KEY is required and picks train_<key>.py, which holds that model's settings
 # (batch size, hinge threshold, chat template, model path, output directories).
@@ -56,8 +57,8 @@ cd "$REPO"
 source scripts/train/env.sh
 
 case "${MODEL_KEY:-}" in
-    gemma|qwen) ;;
-    *) echo "ERROR: export MODEL_KEY=gemma or MODEL_KEY=qwen (got '${MODEL_KEY:-}')"; exit 1 ;;
+    gemma|qwen|aya) ;;
+    *) echo "ERROR: export MODEL_KEY=gemma, qwen or aya (got '${MODEL_KEY:-}')"; exit 1 ;;
 esac
 ENTRY=scripts/train/train_${MODEL_KEY}.py
 

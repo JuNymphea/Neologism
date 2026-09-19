@@ -19,11 +19,12 @@ DEFAULT_NEW_TOKEN = "~jdsglmdh"
 
 # model families we shorten in paths; anything else falls back to the leading
 # segment of the directory name
-MODEL_SHORT_NAMES = ["gemma", "qwen", "llama", "mistral", "olmo", "phi"]
+MODEL_SHORT_NAMES = ["gemma", "qwen", "aya", "llama", "mistral", "olmo", "phi"]
 
 
 def short_model_name(model_name: str) -> str:
-    """'neologism/model/google/gemma-3-4b-it' -> 'gemma', '.../Qwen/Qwen3-4B' -> 'qwen'"""
+    """'neologism/model/google/gemma-3-4b-it' -> 'gemma', '.../Qwen/Qwen3-4B' -> 'qwen',
+    '.../CohereLabs/tiny-aya-global' -> 'aya'."""
     name = Path(str(model_name).rstrip("/")).name.lower()
     for short in MODEL_SHORT_NAMES:
         if short in name:

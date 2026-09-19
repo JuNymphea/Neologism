@@ -21,7 +21,7 @@
 #   sbatch --export=ALL,MODEL_KEY=gemma,RUNTAG=nohinge,TRAIN_ARGS="--lambda_h 0" \
 #          scripts/train/submit_probe.slurm
 #
-#   MODEL_KEY   gemma or qwen; picks train_<key>.py / eval_<key>.py and their settings (required)
+#   MODEL_KEY   gemma, qwen or aya; picks train_<key>.py / eval_<key>.py and their settings (required)
 #   RUNTAG      names checkpoints_<RUNTAG>/ and results_<RUNTAG>/                        (required)
 #   CONCEPT     default a_1        TEMPLATE  default adj
 #   TRAIN_ARGS  flags that override the model's training settings, e.g. "--lambda_h 0"
@@ -42,8 +42,8 @@ cd "$REPO"
 source scripts/train/env.sh
 
 case "${MODEL_KEY:-}" in
-    gemma|qwen) ;;
-    *) echo "ERROR: export MODEL_KEY=gemma or MODEL_KEY=qwen (got '${MODEL_KEY:-}')"; exit 1 ;;
+    gemma|qwen|aya) ;;
+    *) echo "ERROR: export MODEL_KEY=gemma, qwen or aya (got '${MODEL_KEY:-}')"; exit 1 ;;
 esac
 : "${RUNTAG:?export RUNTAG=<name> -- it names checkpoints_<name>/ and results_<name>/}"
 CONCEPT=${CONCEPT:-a_1}
