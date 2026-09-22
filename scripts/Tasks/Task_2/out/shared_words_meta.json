@@ -1,0 +1,132 @@
+{
+  "config": {
+    "pos_words": "out/shared_words.json",
+    "tokenizer": "/Users/shaoshao/Desktop/neologism/neologism/gemma3-tokenizer.json",
+    "slots": "/Users/shaoshao/Desktop/neologism/Inherent_pos/scripts/Tasks/Task_2/out/candidates.json",
+    "ud_dir": "/Users/shaoshao/Desktop/neologism/neologism/Task_2/data/ud",
+    "out_calibration": "out/shared_calibration.json",
+    "out_probedev": "out/shared_probedev.json",
+    "out_finaltest": "out/shared_finaltest.json",
+    "out_meta": "out/shared_words_meta.json",
+    "n_calibration": 150,
+    "n_probedev": 75,
+    "n_finaltest": 100,
+    "n_bins": 10,
+    "seed": 20260922,
+    "exclude": [
+      "out/control_calibration.json",
+      "out/control_probedev.json",
+      "out/control_finaltest.json",
+      "out/control_finaltest_v2.json"
+    ],
+    "only_finaltest": false,
+    "skip_countability": false
+  },
+  "frequency_source": "gemma token id (SentencePiece unigram rank)",
+  "seed": 20260922,
+  "slot_morphology": {
+    "counts": {
+      "Number=Sing": 34,
+      "Number=Plur": 6,
+      "VerbForm=Inf": 25,
+      "Mood=Ind": 14,
+      "Mood=Imp": 1,
+      "Degree=Pos": 29
+    },
+    "unmet": [
+      "Number=Plur",
+      "Mood=Imp"
+    ],
+    "rationale": {
+      "Number=Sing": "bare noun form is singular",
+      "Degree=Pos": "bare adjective form is positive degree",
+      "VerbForm=Inf": "bare verb form is the infinitive",
+      "Mood=Ind": "English base form doubles as 1sg present indicative"
+    }
+  },
+  "filters": {
+    "noun": {
+      "input": 2879,
+      "single_token": 2879,
+      "mass_nouns_dropped": 459,
+      "after_countability": 2420,
+      "after_exclude": 2204
+    },
+    "verb": {
+      "input": 630,
+      "single_token": 630,
+      "after_exclude": 389
+    },
+    "adj": {
+      "input": 994,
+      "single_token": 994,
+      "after_exclude": 787
+    }
+  },
+  "frequency_match": {
+    "quantiles": {
+      "noun": {
+        "n": 325,
+        "q1": 15328,
+        "median": 32893,
+        "q3": 59079
+      },
+      "verb": {
+        "n": 325,
+        "q1": 15256,
+        "median": 32961,
+        "q3": 58886
+      },
+      "adj": {
+        "n": 325,
+        "q1": 15454,
+        "median": 33315,
+        "q3": 57278
+      }
+    },
+    "ks_tests": {
+      "noun_vs_verb": {
+        "statistic": 0.0492,
+        "p_value": 0.8266
+      },
+      "noun_vs_adj": {
+        "statistic": 0.0369,
+        "p_value": 0.98
+      },
+      "verb_vs_adj": {
+        "statistic": 0.0215,
+        "p_value": 1.0
+      }
+    }
+  },
+  "bin_quota": {
+    "0": 48,
+    "1": 45,
+    "2": 38,
+    "3": 31,
+    "4": 30,
+    "5": 27,
+    "6": 26,
+    "7": 25,
+    "8": 23,
+    "9": 32
+  },
+  "n_per_split": {
+    "calibration": {
+      "noun": 151,
+      "verb": 151,
+      "adj": 151
+    },
+    "probedev": {
+      "noun": 74,
+      "verb": 74,
+      "adj": 74
+    },
+    "finaltest": {
+      "noun": 100,
+      "verb": 100,
+      "adj": 100
+    }
+  },
+  "disjoint": true
+}
