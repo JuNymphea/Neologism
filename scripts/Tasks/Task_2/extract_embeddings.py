@@ -62,6 +62,9 @@ def main() -> None:
     ap.add_argument("--tokenizer", type=Path, default=None, help="默认取 --model 下的 tokenizer.json")
     ap.add_argument("--splits", type=Path, default=here / "out" / "task3_splits.json")
     ap.add_argument("--out-dir", type=Path, default=here / "out" / "embeddings")
+    ap.add_argument("--via-transformers", action="store_true",
+                    help="改用 AutoModel 加载再取 embedding。慢、吃内存，但不依赖张量名，"
+                         "用来核对直接读张量的结果")
     ap.add_argument("--extra-embeddings", nargs="*", default=[], metavar="LABEL=PATH",
                     help="额外的学习到的向量，如 neologism 的 .pt，形如 unbiased=/path/emb.pt")
     args = ap.parse_args()
@@ -85,17 +88,34 @@ def main() -> None:
     if missing:
         raise SystemExit(f"{len(missing)} 个词在 {args.name} 下不是单 token，例：{missing[:5]}")
 
-    shard, key = find_embedding_tensor(args.model)
-    print(f"{args.name}: {key}  ({shard.name})")
+    if args.via_transformers:
+        # The path that needs no assumption about the tensor's name, at the
+        # cost of materialising the whole model. Worth running once per model
+        # to confirm the fast path agrees.
+        from transformers import AutoModelForCausalLM
+        print(f"{args.name}: 经 transformers 加载（较慢）")
+        mdl = AutoModelForCausalLM.from_pretrained(
+            args.model, torch_dtype=torch.float32, low_cpu_mem_usage=True)
+        W = mdl.get_input_embeddings().weight
+        shape = tuple(W.shape)
+        print(f"  embedding 矩阵 {shape[0]:,} × {shape[1]}")
+        vecs = np.stack([W[ids[w]].detach().float().numpy() for w in words])
+        key = "get_input_embeddings().weight"
+    else:
+        vecs, shape, key = None, None, None
+
+    if vecs is None:
+        shard, key = find_embedding_tensor(args.model)
+        print(f"{args.name}: {key}  ({shard.name})")
     # Read through torch, not numpy: these tables are usually bfloat16, which
     # numpy has no dtype for. Slice row by row -- pulling the whole matrix in
     # would cost a gigabyte of RAM to keep 975 rows of it.
-    with safe_open(shard, framework="pt") as f:
-        E = f.get_slice(key)
-        shape = E.get_shape()
-        print(f"  embedding 矩阵 {shape[0]:,} × {shape[1]}")
-        vecs = np.stack([E[ids[w]:ids[w] + 1, :].to(torch_float32()).numpy()[0]
-                         for w in words])
+        with safe_open(shard, framework="pt") as f:
+            E = f.get_slice(key)
+            shape = E.get_shape()
+            print(f"  embedding 矩阵 {shape[0]:,} × {shape[1]}")
+            vecs = np.stack([E[ids[w]:ids[w] + 1, :].to(torch_float32()).numpy()[0]
+                             for w in words])
 
     extra = {}
     for spec in args.extra_embeddings:
