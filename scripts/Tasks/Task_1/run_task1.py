@@ -82,6 +82,23 @@ POS_KEYS = ("noun", "verb", "adj")
 
 PROMPT = 'The part of speech of the word "{WORD}" is'
 
+#: Few-shot examples, deliberately drawn from words in none of the splits so
+#: the demonstration cannot leak an answer.
+FEWSHOT = [("table", "noun"), ("walk", "verb"), ("happy", "adjective")]
+
+#: How the question reaches the model. All three of these models are
+#: post-trained and each has its own chat template, so a bare completion string
+#: is off-distribution for them -- and they differ in how much that costs. Under
+#: the bare form Qwen and Aya label 91 and 96 of 100 adjectives "noun", at the
+#: same confidence Gemma shows when it is right, which is a format failure
+#: rather than missing knowledge: the same words score 0.94 on the syntactic
+#: probe and 0.95 on the embedding probe. Aligning the format per model
+#: compares what each knows rather than how each tolerates raw text.
+#: A dictionary form (`table (` answered `n.`) was drafted and dropped: it
+#: needs its own label set, and then the three forms would no longer be
+#: scored over the same answers.
+PROMPT_FORMS = ("raw", "chat", "fewshot")
+
 #: Canonical label for each category.
 LABELS: Dict[str, List[str]] = {
     "noun": ["noun"],
@@ -115,6 +132,23 @@ CASINGS = {
 
 def article_for(word: str) -> str:
     return "an" if word[:1].lower() in set("aeiou") else "a"
+
+
+def render_prompt(word: str, form: str, tok) -> str:
+    """The question in one of the four input formats."""
+    q = PROMPT.replace("{WORD}", word)
+    if form == "raw":
+        return q
+    if form == "fewshot":
+        shots = "".join(f'{PROMPT.replace("{WORD}", w)} {a}.\n' for w, a in FEWSHOT)
+        return shots + q
+    if form == "chat":
+        if tok.chat_template is None:
+            raise SystemExit("这个 tokenizer 没有 chat template，用 --prompt-form raw")
+        return tok.apply_chat_template(
+            [{"role": "user", "content": q}], tokenize=False,
+            add_generation_prompt=True)
+    raise SystemExit(f"未知的 --prompt-form: {form}")
 
 
 def build_variants(with_articles: bool = True,
@@ -177,7 +211,8 @@ def load_model(name: str, device: str | None = None, dtype: str = "bfloat16"):
 
 
 def score_log_probs(tok, model, device, words: List[str], forms: List[str],
-                    batch_size: int = 64, label: str = "") -> Dict[str, Dict[str, float]]:
+                    batch_size: int = 64, label: str = "",
+                    form: str = "raw") -> Dict[str, Dict[str, float]]:
     """log P(form | prompt about word), for every (word, form) pair.
 
     Returns the raw log probabilities rather than category probabilities, so
@@ -194,7 +229,7 @@ def score_log_probs(tok, model, device, words: List[str], forms: List[str],
     with torch.no_grad():
         for i in range(0, len(rows), batch_size):
             chunk = rows[i:i + batch_size]
-            prompts = [PROMPT.replace("{WORD}", w) for w, _ in chunk]
+            prompts = [render_prompt(w, form, tok) for w, _ in chunk]
             enc = tok([p + v for p, (_, v) in zip(prompts, chunk)],
                       return_tensors="pt", padding=True,
                       add_special_tokens=True).to(device)
@@ -264,6 +299,8 @@ def main() -> None:
                          "unequal lengths across the three categories")
     ap.add_argument("--no-abbrev", action="store_true",
                     help='drop " adj"; on by default because the model uses it')
+    ap.add_argument("--prompt-form", default="raw", choices=PROMPT_FORMS,
+                    help="问题以什么形式送进模型；chat 用该模型自己的模板")
     ap.add_argument("--report-sensitivity", action="store_true",
                     help="also report accuracy under the alternative variant sets")
     args = ap.parse_args()
@@ -324,8 +361,18 @@ def main() -> None:
           + (f"（主集 {sum(len(variants[c]) for c in POS_KEYS)} 个，"
              f"其余供敏感性检查复用）" if alternatives else ""))
 
+    # In the chat and dictionary forms the answer starts a fresh turn or sits
+    # inside brackets, so the leading space the bare form needs would be an
+    # extra token the model never emits there.
+    if args.prompt_form == "chat":
+        forms = [f.lstrip() for f in forms]
+        variants = {p: [v.lstrip() for v in variants[p]] for p in POS_KEYS}
+        alternatives = {k: {p: [v.lstrip() for v in vv] for p, vv in d.items()}
+                        for k, d in alternatives.items()}
+
     logps = {pos: score_log_probs(tok, model, device, ws, forms,
-                                  args.batch_size, label=pos)
+                                  args.batch_size, label=pos,
+                                  form=args.prompt_form)
              for pos, ws in words.items()}
 
     def probabilities(vset) -> Dict[str, Dict[str, Dict[str, float]]]:
@@ -362,6 +409,7 @@ def main() -> None:
     args.out.write_text(json.dumps({
         "model": args.model,
         "prompt": PROMPT,
+        "prompt_form": args.prompt_form,
         "variants": variants,
         "words_file": str(args.words),
         "accuracy": report,
