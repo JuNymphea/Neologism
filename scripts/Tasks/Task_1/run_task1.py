@@ -94,6 +94,17 @@ FEWSHOT = [("table", "noun"), ("walk", "verb"), ("happy", "adjective")]
 #: rather than missing knowledge: the same words score 0.94 on the syntactic
 #: probe and 0.95 on the embedding probe. Aligning the format per model
 #: compares what each knows rather than how each tolerates raw text.
+#: Thinking-mode openers and their closers. A chat template that appends one of
+#: these after the generation prompt leaves the next token at the start of a
+#: reasoning block, not the start of an answer -- so scoring the label there
+#: measures nothing. Qwen and Aya both carry these tokens and both collapsed
+#: under the chat form (Qwen answered "verb" for all 675 dev words); Gemma has
+#: no thinking mode and was unaffected. Closing the block puts the scored
+#: position back where the answer actually goes.
+THINKING = (("<think>", "</think>"),
+            ("<|START_THINKING|>", "<|END_THINKING|>"),
+            ("<think>\n", "</think>\n"))
+
 #: A dictionary form (`table (` answered `n.`) was drafted and dropped: it
 #: needs its own label set, and then the three forms would no longer be
 #: scored over the same answers.
@@ -145,9 +156,21 @@ def render_prompt(word: str, form: str, tok) -> str:
     if form == "chat":
         if tok.chat_template is None:
             raise SystemExit("这个 tokenizer 没有 chat template，用 --prompt-form raw")
-        return tok.apply_chat_template(
-            [{"role": "user", "content": q}], tokenize=False,
-            add_generation_prompt=True)
+        msg = [{"role": "user", "content": q}]
+        try:
+            # Qwen 3 takes this directly; templates that do not know the
+            # argument raise, and the fallback below handles them.
+            text = tok.apply_chat_template(msg, tokenize=False,
+                                           add_generation_prompt=True,
+                                           enable_thinking=False)
+        except TypeError:
+            text = tok.apply_chat_template(msg, tokenize=False,
+                                           add_generation_prompt=True)
+        for open_tok, close_tok in THINKING:
+            if text.rstrip().endswith(open_tok.rstrip()):
+                text = text.rstrip() + close_tok
+                break
+        return text
     raise SystemExit(f"未知的 --prompt-form: {form}")
 
 
@@ -369,6 +392,12 @@ def main() -> None:
         variants = {p: [v.lstrip() for v in variants[p]] for p in POS_KEYS}
         alternatives = {k: {p: [v.lstrip() for v in vv] for p, vv in d.items()}
                         for k, d in alternatives.items()}
+
+    if args.prompt_form == "chat":
+        # Print it once: whether the thinking block got closed is the whole
+        # difference between a real measurement and a degenerate one.
+        print("\nchat 模板实际送出的前缀：")
+        print("  " + repr(render_prompt("example", "chat", tok)))
 
     logps = {pos: score_log_probs(tok, model, device, ws, forms,
                                   args.batch_size, label=pos,
