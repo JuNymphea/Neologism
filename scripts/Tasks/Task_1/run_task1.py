@@ -94,6 +94,13 @@ FEWSHOT = [("table", "noun"), ("walk", "verb"), ("happy", "adjective")]
 #: rather than missing knowledge: the same words score 0.94 on the syntactic
 #: probe and 0.95 on the embedding probe. Aligning the format per model
 #: compares what each knows rather than how each tolerates raw text.
+#: Content-free stand-ins for the word. Scoring the labels after these gives
+#: each label's unconditional pull in this prompt -- how much the model wants to
+#: emit "noun" here whatever it was asked about -- which the three-way
+#: normalisation does not remove. Measured on prompts holding no real word, so
+#: the estimate touches neither dev nor final-test.
+CONTENT_FREE = ("N/A", "", "[MASK]")
+
 #: Thinking-mode openers and their closers. A chat template that appends one of
 #: these after the generation prompt leaves the next token at the start of a
 #: reasoning block, not the start of an answer -- so scoring the label there
@@ -269,6 +276,22 @@ def score_log_probs(tok, model, device, words: List[str], forms: List[str],
     return out
 
 
+def label_priors(tok, model, device, forms, batch_size, form):
+    """Each surface form's log probability when no real word is in the prompt.
+
+    Two things ride on this, and both are constant across words. "noun" is a
+    commoner English word than "adjective", so it collects mass wherever the
+    model is unsure; and where the answer is off-distribution, a form that
+    tokenizes longer pays for every extra token. Under the bare prompt Qwen's
+    labels differ by 5.0 nats against a word signal of 1.5, so the argmax is
+    decided before the word is read. Subtracting this removes both.
+    """
+    per = score_log_probs(tok, model, device, list(CONTENT_FREE), forms,
+                          batch_size, label="prior", form=form)
+    return {f: sum(per[w][f] for w in CONTENT_FREE) / len(CONTENT_FREE)
+            for f in forms}
+
+
 def accuracy_report(results: Dict[str, Dict[str, Dict[str, float]]],
                     title: str) -> dict:
     """Three-way accuracy with a confusion matrix, printed and returned."""
@@ -324,6 +347,9 @@ def main() -> None:
                     help='drop " adj"; on by default because the model uses it')
     ap.add_argument("--prompt-form", default="raw", choices=PROMPT_FORMS,
                     help="问题以什么形式送进模型；chat 用该模型自己的模板")
+    ap.add_argument("--calibrate", action="store_true",
+                    help="减去标签先验（用不含真实词的提示测得），"
+                         "消掉与词无关的常数偏置")
     ap.add_argument("--report-sensitivity", action="store_true",
                     help="also report accuracy under the alternative variant sets")
     args = ap.parse_args()
@@ -408,6 +434,18 @@ def main() -> None:
         return {t: {w: aggregate(lp, vset) for w, lp in d.items()}
                 for t, d in logps.items()}
 
+    if args.calibrate:
+        prior = label_priors(tok, model, device, forms, args.batch_size,
+                             args.prompt_form)
+        print("\n标签先验（内容无关提示下的平均 logp）")
+        for f in sorted(prior, key=prior.get, reverse=True)[:6]:
+            print(f"  {f!r:<16}{prior[f]:>9.3f}")
+        spread = max(prior.values()) - min(prior.values())
+        print(f"  极差 {spread:.2f} nat —— 校准把它减掉")
+        logps = {pos: {w: {f: v - prior[f] for f, v in d.items()}
+                       for w, d in ws.items()}
+                 for pos, ws in logps.items()}
+
     results = probabilities(variants)
     scorable = labelled and set(words) == set(POS_KEYS)
 
@@ -439,6 +477,7 @@ def main() -> None:
         "model": args.model,
         "prompt": PROMPT,
         "prompt_form": args.prompt_form,
+        "calibrated": args.calibrate,
         "variants": variants,
         "words_file": str(args.words),
         "accuracy": report,
