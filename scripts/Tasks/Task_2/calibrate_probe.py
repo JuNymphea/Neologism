@@ -216,9 +216,9 @@ def main() -> None:
                           "overall": round(correct / total, 4),
                           "n_slots": len(keys)}
 
-    print(f"\n验证集三分类准确率（{sum(len(valid[p]) for p in POS_KEYS)} 个词，"
+    print(f"\n验证集{len(POS_KEYS)}分类准确率（{sum(len(valid[p]) for p in POS_KEYS)} 个词，"
           f"既未参与拟合，也未参与 slot 淘汰）")
-    print(f"{'':14}{'noun':>8}{'verb':>8}{'adj':>8}{'overall':>10}{'slots':>7}")
+    print(f"{'':14}" + "".join(f"{p:>8}" for p in POS_KEYS) + f"{'overall':>10}{'slots':>7}")
     for label, r in results.items():
         print(f"{label:<14}" + "".join(f"{r['per_pos'][p]['accuracy']:>8.3f}"
                                        for p in POS_KEYS)

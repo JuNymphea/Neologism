@@ -144,6 +144,11 @@ def main() -> None:
     pred = clf.predict(Zte)
     prob = clf.predict_proba(Zte)
     logit = clf.decision_function(Zte)
+    # two classes give one signed score per word; mirror it so the
+    # per-word records have one logit per class either way
+    logit = np.asarray(logit)
+    if logit.ndim == 1 and len(POS_KEYS) == 2:
+        logit = np.stack([-logit, logit], axis=1)
     hit = int((pred == yte).sum())
     lo, hi = wilson(hit, len(yte))
     print(f"\n=== final-test（{len(yte)} 词，未参与任何选择）===")
@@ -161,7 +166,7 @@ def main() -> None:
     cm = confusion_matrix(yte, pred)
     print(f"\n  混淆矩阵（行=真实，列=预测）\n{'':8}" + "".join(f"{p:>7}" for p in POS_KEYS))
     for t, p in enumerate(POS_KEYS):
-        print(f"  {p:<6}" + "".join(f"{cm[t][j]:>7}" for j in range(3)))
+        print(f"  {p:<6}" + "".join(f"{cm[t][j]:>7}" for j in range(len(POS_KEYS))))
 
     # -- 3. 随机标签对照 ------------------------------------------------------
     rng = np.random.default_rng(args.seed)
@@ -219,6 +224,10 @@ def main() -> None:
         z = pre(v[None, :])
         pr = fit_predict = clf.predict_proba(z)[0]
         lg = clf.decision_function(z)[0]
+        # with two classes sklearn returns one signed score, not one per class
+        lg = np.asarray(lg, dtype=float).reshape(-1)
+        if lg.size == 1 and len(POS_KEYS) == 2:
+            lg = np.array([-lg[0], lg[0]])
         neo[label] = {
             "probs": {p: float(pr[t]) for t, p in enumerate(POS_KEYS)},
             "logits": {p: float(lg[t]) for t, p in enumerate(POS_KEYS)},
