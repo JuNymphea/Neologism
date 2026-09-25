@@ -40,6 +40,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import collections
 import math
 import statistics as st
 from pathlib import Path
@@ -94,6 +95,10 @@ def main() -> None:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--surprisal", type=Path, default=here / "out" / "surprisal.json")
     ap.add_argument("--out", type=Path, default=here / "out" / "calibration.json")
+    ap.add_argument("--neologism-surprisal", type=Path, default=None,
+                    help="a surprisal file whose 'words' are trained vectors: the "
+                         "probe fitted here on real words is applied to them, "
+                         "without refitting anything")
     ap.add_argument("--probe-set", type=Path, default=here / "out" / "probe_set.json",
                     help="the frozen slot set from select_slots.py")
     args = ap.parse_args()
@@ -174,14 +179,15 @@ def main() -> None:
     print("AUC 由校准词决定去留；AUC_val 仅供参考，不参与任何决策。")
 
     # -- 3. three-way accuracy on validation words --------------------------
-    def classify(word: str, slot_keys) -> str | None:
+    def classify(word: str, slot_keys, source=None) -> str | None:
+        src = S if source is None else source
         means = {}
         for p in POS_KEYS:
             rs = []
             for key in slot_keys:
-                if fits[key]["pos"] != p or word not in S[key]:
+                if fits[key]["pos"] != p or key not in src or word not in src[key]:
                     continue
-                s = S[key][word]
+                s = src[key][word]
                 if math.isnan(s):
                     continue
                 f = fits[key]
@@ -212,6 +218,16 @@ def main() -> None:
                                        for p in POS_KEYS)
               + f"{r['overall']:>10.3f}{r['n_slots']:>7}")
 
+    neo_out = {}
+    if args.neologism_surprisal:
+        N = json.loads(args.neologism_surprisal.read_text())["surprisal"]
+        labels = sorted({w for d in N.values() for w in d})
+        for w in labels:
+            neo_out[w] = classify(w, kept, source=N)
+        counts = collections.Counter(neo_out.values())
+        print(f"\n{len(labels)} 个向量用冻结探针分类：" +
+              "  ".join(f"{p}={counts.get(p, 0)}" for p in POS_KEYS))
+
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps({
         "model": data.get("model"),
@@ -219,6 +235,7 @@ def main() -> None:
         "auc_computed_on": "calibration words (validation kept clean for accuracy)",
         "fits": fits,
         "diagnostics": diagnostics,
+        "neologisms": neo_out,
         "kept_slots": sorted(kept),
         "dropped_slots": dropped,
         "accuracy": results,
