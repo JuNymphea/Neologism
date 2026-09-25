@@ -384,6 +384,10 @@ def main() -> None:
                     help="score trained vectors instead of words: each is injected "
                          "into the new token's embedding row and scored in its place. "
                          "@file reads one LABEL=PATH per line")
+    ap.add_argument("--pos-keys", default="noun,verb,adj",
+                    help="which categories the answer is chosen between; "
+                         "'noun,verb' makes it a two-way decision, with the "
+                         "adjective labels never scored")
     ap.add_argument("--new-token", default="~jdsglmdh",
                     help="the token a --neologisms vector is written into")
     ap.add_argument("--calibrate", action="store_true",
@@ -392,6 +396,14 @@ def main() -> None:
     ap.add_argument("--report-sensitivity", action="store_true",
                     help="also report accuracy under the alternative variant sets")
     args = ap.parse_args()
+
+    global POS_KEYS
+    POS_KEYS = tuple(k.strip() for k in args.pos_keys.split(",") if k.strip())
+    unknown = [k for k in POS_KEYS if k not in LABELS]
+    if unknown:
+        ap.error(f"--pos-keys 不认识 {unknown}，可选 {sorted(LABELS)}")
+    if len(POS_KEYS) < 2:
+        ap.error("--pos-keys 至少要两类")
 
     tok, model, device = load_model(args.model, args.device, args.dtype)
 

@@ -110,8 +110,14 @@ def main() -> None:
     ap.add_argument("--out", type=Path, default=None)
     ap.add_argument("--shuffles", type=int, default=100)
     ap.add_argument("--neologisms", nargs="*", default=[], metavar="LABEL=PATH")
+    ap.add_argument("--pos-keys", default="noun,verb,adj",
+                    help="categories the probe is trained on; 'noun,verb' fits "
+                         "a two-way probe and never sees adjectives")
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
+
+    global POS_KEYS
+    POS_KEYS = tuple(k.strip() for k in args.pos_keys.split(",") if k.strip())
     out_path = args.out or (here / "out" / f"task3_{args.model}.json")
 
     splits = json.loads(args.splits.read_text())["splits"]

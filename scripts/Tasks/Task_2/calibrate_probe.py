@@ -95,6 +95,9 @@ def main() -> None:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--surprisal", type=Path, default=here / "out" / "surprisal.json")
     ap.add_argument("--out", type=Path, default=here / "out" / "calibration.json")
+    ap.add_argument("--pos-keys", default="noun,verb,adj",
+                    help="categories to decide between; 'noun,verb' drops the "
+                         "adjective slots and makes it a two-way decision")
     ap.add_argument("--neologism-surprisal", type=Path, default=None,
                     help="a surprisal file whose 'words' are trained vectors: the "
                          "probe fitted here on real words is applied to them, "
@@ -102,6 +105,9 @@ def main() -> None:
     ap.add_argument("--probe-set", type=Path, default=here / "out" / "probe_set.json",
                     help="the frozen slot set from select_slots.py")
     args = ap.parse_args()
+
+    global POS_KEYS
+    POS_KEYS = tuple(k.strip() for k in args.pos_keys.split(",") if k.strip())
 
     data = json.loads(args.surprisal.read_text())
     S = data["surprisal"]
