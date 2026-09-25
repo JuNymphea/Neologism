@@ -326,6 +326,39 @@ def accuracy_report(results: Dict[str, Dict[str, Dict[str, float]]],
     return report
 
 
+def score_neologisms(tok, model, device, specs, forms, batch_size, form, new_token):
+    """log P(label form | prompt about the new token), one entry per trained vector.
+
+    Every vector is written into the same embedding row and scored in turn, so
+    the prompt is identical across vectors and only the token's meaning differs.
+    The row is untied from lm_head first, exactly as eval does: otherwise writing
+    the input embedding would also change what the model is able to emit.
+    """
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "train"))
+    from train_neologism import load_new_token_embedding  # noqa: E402
+
+    if new_token not in tok.get_vocab():
+        tok.add_tokens([new_token])
+    new_id = tok.convert_tokens_to_ids(new_token)
+    if new_id >= model.get_input_embeddings().weight.size(0):
+        model.resize_token_embeddings(len(tok))
+    print(f"{new_token} -> id {new_id}; scoring {len(specs)} vectors")
+
+    out = {}
+    for i, spec in enumerate(specs, 1):
+        label, _, path = spec.partition("=")
+        if not path:
+            raise SystemExit(f"--neologisms wants LABEL=PATH, got {spec!r}")
+        load_new_token_embedding(model, path, new_id=new_id)
+        lp = score_log_probs(tok, model, device, [new_token], forms,
+                             batch_size, label=label, form=form)
+        out[label] = lp[new_token]
+        if i % 50 == 0 or i == len(specs):
+            print(f"  {i}/{len(specs)}")
+    return out
+
+
 def main() -> None:
     here = Path(__file__).resolve().parent
     task2 = here.parent / "Task_2" / "out"
@@ -347,6 +380,12 @@ def main() -> None:
                     help='drop " adj"; on by default because the model uses it')
     ap.add_argument("--prompt-form", default="raw", choices=PROMPT_FORMS,
                     help="问题以什么形式送进模型；chat 用该模型自己的模板")
+    ap.add_argument("--neologisms", nargs="*", default=[], metavar="LABEL=PATH",
+                    help="score trained vectors instead of words: each is injected "
+                         "into the new token's embedding row and scored in its place. "
+                         "@file reads one LABEL=PATH per line")
+    ap.add_argument("--new-token", default="~jdsglmdh",
+                    help="the token a --neologisms vector is written into")
     ap.add_argument("--calibrate", action="store_true",
                     help="减去标签先验（用不含真实词的提示测得），"
                          "消掉与词无关的常数偏置")
@@ -425,10 +464,23 @@ def main() -> None:
         print("\nchat 模板实际送出的前缀：")
         print("  " + repr(render_prompt("example", "chat", tok)))
 
-    logps = {pos: score_log_probs(tok, model, device, ws, forms,
-                                  args.batch_size, label=pos,
-                                  form=args.prompt_form)
-             for pos, ws in words.items()}
+    specs = []
+    for item in args.neologisms:
+        if item.startswith("@"):
+            specs += [l.strip() for l in open(item[1:], encoding="utf-8") if l.strip()]
+        else:
+            specs.append(item)
+
+    if specs:
+        # the words in --words are not scored at all: the vectors replace them
+        logps = {"neologism": score_neologisms(tok, model, device, specs, forms,
+                                               args.batch_size, args.prompt_form,
+                                               args.new_token)}
+    else:
+        logps = {pos: score_log_probs(tok, model, device, ws, forms,
+                                      args.batch_size, label=pos,
+                                      form=args.prompt_form)
+                 for pos, ws in words.items()}
 
     def probabilities(vset) -> Dict[str, Dict[str, Dict[str, float]]]:
         return {t: {w: aggregate(lp, vset) for w, lp in d.items()}
@@ -447,7 +499,7 @@ def main() -> None:
                  for pos, ws in logps.items()}
 
     results = probabilities(variants)
-    scorable = labelled and set(words) == set(POS_KEYS)
+    scorable = labelled and set(words) == set(POS_KEYS) and not specs
 
     report = accuracy_report(results, "主变体集") if scorable else {}
     sensitivity: Dict[str, dict] = {}

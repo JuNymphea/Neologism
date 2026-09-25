@@ -74,6 +74,12 @@ def main() -> None:
     ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument("--device", default=None, help="cuda / cpu / mps")
     ap.add_argument("--dtype", default="bfloat16")
+    ap.add_argument("--neologisms", nargs="*", default=[], metavar="LABEL=PATH",
+                    help="score trained vectors in place of the words: each is "
+                         "injected into the new token's embedding row and run "
+                         "through every slot. @file reads one LABEL=PATH per line")
+    ap.add_argument("--new-token", default="~jdsglmdh",
+                    help="the token a --neologisms vector is written into")
     ap.add_argument("--limit-words", type=int, default=None,
                     help="smoke-test with the first N words per POS")
     args = ap.parse_args()
@@ -144,9 +150,47 @@ def main() -> None:
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
 
+    specs = []
+    for it in args.neologisms:
+        specs += ([l.strip() for l in open(it[1:], encoding="utf-8") if l.strip()]
+                  if it.startswith("@") else [it])
+
     matrix: Dict[str, Dict[str, float]] = {}
     t0 = time.time()
+
+    if specs:
+        # One vector at a time: they all share the token string, so the model
+        # has to be re-injected between them. Slots are the inner loop.
+        import sys as _sys
+        _sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "train"))
+        from train_neologism import load_new_token_embedding  # noqa: E402
+        if args.new_token not in tok.get_vocab():
+            tok.add_tokens([args.new_token])
+        new_id = tok.convert_tokens_to_ids(args.new_token)
+        if new_id >= model.get_input_embeddings().weight.size(0):
+            model.resize_token_embeddings(len(tok))
+        print(f"{args.new_token} -> id {new_id}; {len(specs)} vectors x {len(slots)} slots")
+        for key in (f"{p}::{it['signature']}" for p, it in slots):
+            matrix[key] = {}
+        for vi, spec in enumerate(specs, 1):
+            label, _, path = spec.partition("=")
+            if not path:
+                raise SystemExit(f"--neologisms wants LABEL=PATH, got {spec!r}")
+            load_new_token_embedding(model, path, new_id=new_id)
+            for pos, item in slots:
+                key = f"{pos}::{item['signature']}"
+                pre = render_prefix(item["prefix_tokens"], args.new_token)
+                matrix[key][label] = score_batch([pre], " ".join(item["diagnostic"]))[0]
+            if vi % 25 == 0 or vi == len(specs):
+                el = time.time() - t0
+                print(f"  [{vi}/{len(specs)}] {el:6.1f}s  eta {el / vi * (len(specs) - vi):6.1f}s",
+                      flush=True)
+        words = {"neologism": {p: [l.partition("=")[0] for l in specs] for p in POS_KEYS}}
+        entries = []
+
     for si, (pos, item) in enumerate(slots, 1):
+        if specs:
+            break
         key = f"{pos}::{item['signature']}"
         cont = " ".join(item["diagnostic"])
         scores: Dict[str, float] = {}
