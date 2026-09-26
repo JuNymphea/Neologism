@@ -30,6 +30,7 @@ from pathlib import Path
 
 import numpy as np
 
+import select_slots
 from select_slots import POS_KEYS, Probe
 
 MODELS = ("gemma", "qwen", "aya")
@@ -52,9 +53,10 @@ class Fast:
         self.R = np.nan_to_num(self.R)
 
     def accuracy(self, mask, slot_pos):
-        s = np.zeros((len(self.y), 3))
-        c = np.zeros((len(self.y), 3))
-        for t in range(3):
+        n_pos = len(POS_KEYS)
+        s = np.zeros((len(self.y), n_pos))
+        c = np.zeros((len(self.y), n_pos))
+        for t in range(n_pos):
             cols = mask & (slot_pos == t)
             if cols.any():
                 s[:, t] = (self.R[:, cols] * self.ok[:, cols]).sum(1)
@@ -70,12 +72,12 @@ def hill_climb(fasts, slot_pos, idx, n_slots, rng, rounds=80):
         return (min(a), sum(a) / len(a))
 
     mask = np.zeros(len(slot_pos), bool)
-    for t in range(3):
+    for t in range(len(POS_KEYS)):
         for j in rng.sample(list(idx[t]), n_slots):
             mask[j] = True
     best = score(mask)
     for _ in range(rounds):
-        moves = [(i, j) for t in range(3)
+        moves = [(i, j) for t in range(len(POS_KEYS))
                  for i in np.flatnonzero(mask & (slot_pos == t))
                  for j in idx[t] if not mask[j]]
         rng.shuffle(moves)
@@ -102,7 +104,21 @@ def main() -> None:
     ap.add_argument("--seeds", type=int, default=20)
     ap.add_argument("--restarts", type=int, default=40)
     ap.add_argument("--out", type=Path, default=here / "out" / "probe_set_C.json")
+    ap.add_argument("--pos-keys", default="noun,verb,adj",
+                    help="要区分的类别；'noun,verb' 改成二分类。"
+                         "必须和 select_slots / calibrate_probe 一致")
     args = ap.parse_args()
+
+    # Probe 读的是 select_slots 模块级的 POS_KEYS，所以两处都要设，
+    # 否则拟合会按三分类做而本脚本按二分类判，且不会报错。
+    global POS_KEYS
+    POS_KEYS = tuple(k.strip() for k in args.pos_keys.split(",") if k.strip())
+    unknown = [q for q in POS_KEYS if q not in select_slots.UPPER]
+    if len(POS_KEYS) < 2 or unknown:
+        ap.error(f"--pos-keys 需要至少两个来自 {sorted(select_slots.UPPER)} 的类别"
+                 + (f"，不认识 {unknown}" if unknown else ""))
+    select_slots.POS_KEYS = POS_KEYS
+
 
     probes, pdev, ftest, data = {}, {}, {}, {}
     for m in args.models:
@@ -118,7 +134,7 @@ def main() -> None:
             for p in POS_KEYS}
     slots = [k for p in POS_KEYS for k in cand[p]]
     slot_pos = np.array([POS_KEYS.index(k.split("::")[0].lower()) for k in slots])
-    idx = {t: np.flatnonzero(slot_pos == t) for t in range(3)}
+    idx = {t: np.flatnonzero(slot_pos == t) for t in range(len(POS_KEYS))}
     print(f"共享候选：" + "  ".join(f"{p}={len(cand[p])}" for p in POS_KEYS))
 
     dev = [Fast(probes[m], pdev[m], slots) for m in args.models]
@@ -143,7 +159,7 @@ def main() -> None:
         return min(f.accuracy(m, slot_pos) for f in dev)
 
     chosen_idx = []
-    for t in range(3):
+    for t in range(len(POS_KEYS)):
         ranked = sorted(idx[t], key=lambda j: (-votes[j], -solo(j)))
         chosen_idx += ranked[:args.n_slots]
     mask = np.zeros(len(slots), bool)
@@ -161,7 +177,7 @@ def main() -> None:
     f_best = report("单次最优", best_single[1])
 
     meta = probes[args.models[0]].meta
-    print(f"\n=== 方法 C 的 {args.n_slots * 3} 个槽（票数 / {args.seeds}）===")
+    print(f"\n=== 方法 C 的 {args.n_slots * len(POS_KEYS)} 个槽（票数 / {args.seeds}）===")
     out = {p: [] for p in POS_KEYS}
     for t, p in enumerate(POS_KEYS):
         print(f"\n  {p.upper()}")
@@ -170,7 +186,7 @@ def main() -> None:
             out[p].append(slots[j])
             print(f"    {votes[j]:>2}/{args.seeds}  {meta[slots[j]]['example'][:44]:<46}"
                   f"{meta[slots[j]]['diagnostic']}")
-    tally = collections.Counter(votes[j] for t in range(3) for j in idx[t])
+    tally = collections.Counter(votes[j] for t in range(len(POS_KEYS)) for j in idx[t])
     print(f"\n  票数分布（全部 {len(slots)} 个候选）: "
           + "  ".join(f"{k}票×{v}" for k, v in sorted(tally.items(), reverse=True)[:8]))
 

@@ -1,0 +1,270 @@
+{
+  "model": "/ix/janetliu/zhj76/model/Qwen/Qwen3-4B",
+  "n_slots_per_pos": 10,
+  "pos_keys": [
+    "noun",
+    "verb"
+  ],
+  "selection": "hill-climbing on probe-dev 2-way accuracy",
+  "screened_on": "probe-dev control words",
+  "restarts": 120,
+  "seed": 0,
+  "consensus_seeds": 5,
+  "vote_counts": {
+    "noun": {
+      "NOUN::the {SLOT} s": 5,
+      "NOUN::NOUN 's {SLOT} and": 4,
+      "NOUN::and the {SLOT} is": 4,
+      "NOUN::the {SLOT} was": 4,
+      "NOUN::NUM {SLOT} after PRON": 4,
+      "NOUN::ADJ {SLOT} with PROPN": 3,
+      "NOUN::a ADJ {SLOT} to": 3,
+      "NOUN::the {SLOT} PRON would VERB": 3,
+      "NOUN::, this {SLOT} VERB": 3,
+      "NOUN::ADJ {SLOT} of": 2,
+      "NOUN::the {SLOT} of": 2,
+      "NOUN::ADJ {SLOT} behind": 2,
+      "NOUN::a {SLOT} when PRON": 1,
+      "NOUN::the ADJ {SLOT} PRON VERB": 1,
+      "NOUN::is the {SLOT} to": 1,
+      "NOUN::<s> the {SLOT} is": 1,
+      "NOUN::<s> the {SLOT} for": 1,
+      "NOUN::a {SLOT} to": 1,
+      "NOUN::this {SLOT} has": 1,
+      "NOUN::to the {SLOT} PRON VERB": 1,
+      "NOUN::<s> NUM {SLOT} of": 1,
+      "NOUN::the ADJ {SLOT} is": 1,
+      "NOUN::the ADJ {SLOT} , and": 1
+    },
+    "verb": {
+      "VERB::to {SLOT} this NOUN .": 5,
+      "VERB::to {SLOT} those": 5,
+      "VERB::NOUN to {SLOT} some": 5,
+      "VERB::if PRON {SLOT} any": 4,
+      "VERB::ADV {SLOT} PRON to": 3,
+      "VERB::can {SLOT} for": 3,
+      "VERB::PRON {SLOT} PRON with": 3,
+      "VERB::when PRON {SLOT} the": 3,
+      "VERB::PRON {SLOT} that PRON": 2,
+      "VERB::NOUN to {SLOT} to": 2,
+      "VERB::also {SLOT} that": 2,
+      "VERB::to {SLOT} PRON": 1,
+      "VERB::can {SLOT} to": 1,
+      "VERB::n't {SLOT} the": 1,
+      "VERB::VERB to {SLOT} this": 1,
+      "VERB::PRON {SLOT} PRON to": 1,
+      "VERB::when PRON {SLOT} PRON": 1,
+      "VERB::PRON also {SLOT} PRON": 1,
+      "VERB::PRON {SLOT} to VERB ,": 1,
+      "VERB::and {SLOT} PRON to": 1,
+      "VERB::'ll {SLOT} ADV": 1,
+      "VERB::<s> PRON {SLOT} to VERB": 1,
+      "VERB::because PRON {SLOT} PRON": 1,
+      "VERB::n't {SLOT} any": 1
+    }
+  },
+  "probedev_accuracy": 0.9865,
+  "optimism_estimate": 0.0631,
+  "balanced_design_achieved": true,
+  "distinct_diagnostics": 18,
+  "slots": {
+    "noun": [
+      "NOUN::the {SLOT} s",
+      "NOUN::and the {SLOT} is",
+      "NOUN::NOUN 's {SLOT} and",
+      "NOUN::the {SLOT} was",
+      "NOUN::NUM {SLOT} after PRON",
+      "NOUN::a ADJ {SLOT} to",
+      "NOUN::, this {SLOT} VERB",
+      "NOUN::ADJ {SLOT} with PROPN",
+      "NOUN::the {SLOT} PRON would VERB",
+      "NOUN::the {SLOT} of"
+    ],
+    "verb": [
+      "VERB::to {SLOT} those",
+      "VERB::to {SLOT} this NOUN .",
+      "VERB::NOUN to {SLOT} some",
+      "VERB::if PRON {SLOT} any",
+      "VERB::ADV {SLOT} PRON to",
+      "VERB::when PRON {SLOT} the",
+      "VERB::PRON {SLOT} PRON with",
+      "VERB::can {SLOT} for",
+      "VERB::PRON {SLOT} that PRON",
+      "VERB::also {SLOT} that"
+    ]
+  },
+  "selected_log": {
+    "noun": [
+      {
+        "signature": "the {SLOT} s",
+        "auc_probedev": 0.3579,
+        "diagnostic": [
+          "s"
+        ],
+        "example": "The WORD s"
+      },
+      {
+        "signature": "and the {SLOT} is",
+        "auc_probedev": 0.7522,
+        "diagnostic": [
+          "is"
+        ],
+        "example": "They did it and the WORD is"
+      },
+      {
+        "signature": "NOUN 's {SLOT} and",
+        "auc_probedev": 0.7281,
+        "diagnostic": [
+          "and"
+        ],
+        "example": "The one's WORD and"
+      },
+      {
+        "signature": "the {SLOT} was",
+        "auc_probedev": 0.6269,
+        "diagnostic": [
+          "was"
+        ],
+        "example": "The WORD was"
+      },
+      {
+        "signature": "NUM {SLOT} after PRON",
+        "auc_probedev": 0.3395,
+        "diagnostic": [
+          "after",
+          "it"
+        ],
+        "example": "It was one WORD after it"
+      },
+      {
+        "signature": "a ADJ {SLOT} to",
+        "auc_probedev": 0.3349,
+        "diagnostic": [
+          "to"
+        ],
+        "example": "A different WORD to"
+      },
+      {
+        "signature": ", this {SLOT} VERB",
+        "auc_probedev": 0.3053,
+        "diagnostic": [
+          "happened"
+        ],
+        "example": "It was, this WORD happened"
+      },
+      {
+        "signature": "ADJ {SLOT} with PROPN",
+        "auc_probedev": 0.3011,
+        "diagnostic": [
+          "with",
+          "someone"
+        ],
+        "example": "The different WORD with someone"
+      },
+      {
+        "signature": "the {SLOT} PRON would VERB",
+        "auc_probedev": 0.2677,
+        "diagnostic": [
+          "it",
+          "would",
+          "do"
+        ],
+        "example": "They have seen the WORD it would do"
+      },
+      {
+        "signature": "the {SLOT} of",
+        "auc_probedev": 0.7237,
+        "diagnostic": [
+          "of"
+        ],
+        "example": "The WORD of"
+      }
+    ],
+    "verb": [
+      {
+        "signature": "to {SLOT} those",
+        "auc_probedev": 0.55,
+        "diagnostic": [
+          "those"
+        ],
+        "example": "They tried to WORD those"
+      },
+      {
+        "signature": "to {SLOT} this NOUN .",
+        "auc_probedev": 0.3402,
+        "diagnostic": [
+          "this",
+          "thing"
+        ],
+        "example": "They tried to WORD this thing"
+      },
+      {
+        "signature": "NOUN to {SLOT} some",
+        "auc_probedev": 0.2748,
+        "diagnostic": [
+          "some"
+        ],
+        "example": "The thing to WORD some"
+      },
+      {
+        "signature": "if PRON {SLOT} any",
+        "auc_probedev": 0.861,
+        "diagnostic": [
+          "any"
+        ],
+        "example": "If it WORD any"
+      },
+      {
+        "signature": "ADV {SLOT} PRON to",
+        "auc_probedev": 0.8769,
+        "diagnostic": [
+          "it",
+          "to"
+        ],
+        "example": "Then WORD it to"
+      },
+      {
+        "signature": "when PRON {SLOT} the",
+        "auc_probedev": 0.8274,
+        "diagnostic": [
+          "the"
+        ],
+        "example": "When it WORD the"
+      },
+      {
+        "signature": "PRON {SLOT} PRON with",
+        "auc_probedev": 0.7542,
+        "diagnostic": [
+          "it",
+          "with"
+        ],
+        "example": "They WORD it with"
+      },
+      {
+        "signature": "can {SLOT} for",
+        "auc_probedev": 0.1828,
+        "diagnostic": [
+          "for"
+        ],
+        "example": "They can WORD for"
+      },
+      {
+        "signature": "PRON {SLOT} that PRON",
+        "auc_probedev": 0.5802,
+        "diagnostic": [
+          "that",
+          "it"
+        ],
+        "example": "I WORD that it"
+      },
+      {
+        "signature": "also {SLOT} that",
+        "auc_probedev": 0.4916,
+        "diagnostic": [
+          "that"
+        ],
+        "example": "They also WORD that"
+      }
+    ]
+  }
+}

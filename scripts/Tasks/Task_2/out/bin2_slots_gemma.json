@@ -1,0 +1,344 @@
+{
+  "NOUN": [
+    {
+      "signature": "the {SLOT} of",
+      "prefix": "The {NEOLOGISM}",
+      "prefix_tokens": [
+        "The",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Number=Sing",
+      "diagnostic": [
+        "of"
+      ],
+      "item": "The {NEOLOGISM} of",
+      "purity": 0.9225,
+      "n": 792
+    },
+    {
+      "signature": "the {SLOT} was",
+      "prefix": "The {NEOLOGISM}",
+      "prefix_tokens": [
+        "The",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Number=Sing",
+      "diagnostic": [
+        "was"
+      ],
+      "item": "The {NEOLOGISM} was",
+      "purity": 0.9154,
+      "n": 123
+    },
+    {
+      "signature": "ADJ {SLOT} with PROPN",
+      "prefix": "The different {NEOLOGISM}",
+      "prefix_tokens": [
+        "The",
+        "different",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Number=Sing",
+      "diagnostic": [
+        "with",
+        "someone"
+      ],
+      "item": "The different {NEOLOGISM} with someone",
+      "purity": 1.0,
+      "n": 14
+    },
+    {
+      "signature": "ADJ {SLOT} and NOUN NOUN",
+      "prefix": "The different {NEOLOGISM}",
+      "prefix_tokens": [
+        "The",
+        "different",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Number=Sing",
+      "diagnostic": [
+        "and",
+        "one",
+        "thing"
+      ],
+      "item": "The different {NEOLOGISM} and one thing",
+      "purity": 0.9474,
+      "n": 19
+    },
+    {
+      "signature": "and the {SLOT} is",
+      "prefix": "They did it and the {NEOLOGISM}",
+      "prefix_tokens": [
+        "They",
+        "did",
+        "it",
+        "and",
+        "the",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Number=Sing",
+      "diagnostic": [
+        "is"
+      ],
+      "item": "They did it and the {NEOLOGISM} is",
+      "purity": 0.9375,
+      "n": 15
+    },
+    {
+      "signature": "as the {SLOT} VERB",
+      "prefix": "It was as the {NEOLOGISM}",
+      "prefix_tokens": [
+        "It",
+        "was",
+        "as",
+        "the",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Number=Sing",
+      "diagnostic": [
+        "happened"
+      ],
+      "item": "It was as the {NEOLOGISM} happened",
+      "purity": 1.0,
+      "n": 11
+    },
+    {
+      "signature": "the {SLOT} s",
+      "prefix": "The {NEOLOGISM}",
+      "prefix_tokens": [
+        "The",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Number=Sing",
+      "diagnostic": [
+        "s"
+      ],
+      "item": "The {NEOLOGISM} s",
+      "purity": 1.0,
+      "n": 9
+    },
+    {
+      "signature": "ADJ {SLOT} where",
+      "prefix": "They have seen the different {NEOLOGISM}",
+      "prefix_tokens": [
+        "They",
+        "have",
+        "seen",
+        "the",
+        "different",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Number=Plur",
+      "diagnostic": [
+        "where"
+      ],
+      "item": "They have seen the different {NEOLOGISM} where",
+      "purity": 0.9091,
+      "n": 10
+    },
+    {
+      "signature": "ADJ {SLOT} will be",
+      "prefix": "The different {NEOLOGISM}",
+      "prefix_tokens": [
+        "The",
+        "different",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Number=Sing",
+      "diagnostic": [
+        "will",
+        "be"
+      ],
+      "item": "The different {NEOLOGISM} will be",
+      "purity": 0.9,
+      "n": 9
+    },
+    {
+      "signature": "to the {SLOT} PRON VERB",
+      "prefix": "They tried to the {NEOLOGISM}",
+      "prefix_tokens": [
+        "They",
+        "tried",
+        "to",
+        "the",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Number=Sing",
+      "diagnostic": [
+        "it",
+        "did"
+      ],
+      "item": "They tried to the {NEOLOGISM} it did",
+      "purity": 1.0,
+      "n": 6
+    }
+  ],
+  "VERB": [
+    {
+      "signature": "to {SLOT} the",
+      "prefix": "They tried to {NEOLOGISM}",
+      "prefix_tokens": [
+        "They",
+        "tried",
+        "to",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "VerbForm=Inf",
+      "diagnostic": [
+        "the"
+      ],
+      "item": "They tried to {NEOLOGISM} the",
+      "purity": 0.9346,
+      "n": 345
+    },
+    {
+      "signature": "if PRON {SLOT} any",
+      "prefix": "If it {NEOLOGISM}",
+      "prefix_tokens": [
+        "If",
+        "it",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin",
+      "diagnostic": [
+        "any"
+      ],
+      "item": "If it {NEOLOGISM} any",
+      "purity": 1.0,
+      "n": 45
+    },
+    {
+      "signature": "to {SLOT} this NOUN .",
+      "prefix": "They tried to {NEOLOGISM}",
+      "prefix_tokens": [
+        "They",
+        "tried",
+        "to",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "VerbForm=Inf",
+      "diagnostic": [
+        "this",
+        "thing"
+      ],
+      "item": "They tried to {NEOLOGISM} this thing",
+      "purity": 1.0,
+      "n": 13
+    },
+    {
+      "signature": "NOUN to {SLOT} with",
+      "prefix": "The thing to {NEOLOGISM}",
+      "prefix_tokens": [
+        "The",
+        "thing",
+        "to",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "VerbForm=Inf",
+      "diagnostic": [
+        "with"
+      ],
+      "item": "The thing to {NEOLOGISM} with",
+      "purity": 0.9375,
+      "n": 15
+    },
+    {
+      "signature": "ADV {SLOT} PRON to",
+      "prefix": "Then {NEOLOGISM}",
+      "prefix_tokens": [
+        "Then",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin",
+      "diagnostic": [
+        "it",
+        "to"
+      ],
+      "item": "Then {NEOLOGISM} it to",
+      "purity": 1.0,
+      "n": 9
+    },
+    {
+      "signature": "also {SLOT} that",
+      "prefix": "They also {NEOLOGISM}",
+      "prefix_tokens": [
+        "They",
+        "also",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+      "diagnostic": [
+        "that"
+      ],
+      "item": "They also {NEOLOGISM} that",
+      "purity": 1.0,
+      "n": 9
+    },
+    {
+      "signature": "can {SLOT} for",
+      "prefix": "They can {NEOLOGISM}",
+      "prefix_tokens": [
+        "They",
+        "can",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "VerbForm=Inf",
+      "diagnostic": [
+        "for"
+      ],
+      "item": "They can {NEOLOGISM} for",
+      "purity": 1.0,
+      "n": 9
+    },
+    {
+      "signature": "'ll {SLOT} ADV",
+      "prefix": "They 'll {NEOLOGISM}",
+      "prefix_tokens": [
+        "They",
+        "'ll",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "VerbForm=Inf",
+      "diagnostic": [
+        "again"
+      ],
+      "item": "They'll {NEOLOGISM} again",
+      "purity": 1.0,
+      "n": 8
+    },
+    {
+      "signature": "to {SLOT} those",
+      "prefix": "They tried to {NEOLOGISM}",
+      "prefix_tokens": [
+        "They",
+        "tried",
+        "to",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "VerbForm=Inf",
+      "diagnostic": [
+        "those"
+      ],
+      "item": "They tried to {NEOLOGISM} those",
+      "purity": 1.0,
+      "n": 7
+    },
+    {
+      "signature": "NOUN to {SLOT} some",
+      "prefix": "The thing to {NEOLOGISM}",
+      "prefix_tokens": [
+        "The",
+        "thing",
+        "to",
+        "{NEOLOGISM}"
+      ],
+      "morph_requirement": "VerbForm=Inf",
+      "diagnostic": [
+        "some"
+      ],
+      "item": "The thing to {NEOLOGISM} some",
+      "purity": 1.0,
+      "n": 7
+    }
+  ]
+}

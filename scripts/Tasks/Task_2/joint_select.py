@@ -35,6 +35,7 @@ import random
 import statistics as st
 from pathlib import Path
 
+import select_slots
 from select_slots import POS_KEYS, Probe, gaussian_logpdf
 
 MODELS = ("gemma", "qwen", "aya")
@@ -89,7 +90,21 @@ def main() -> None:
     ap.add_argument("--restarts", type=int, default=60)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out", type=Path, default=here / "out" / "probe_set_joint.json")
+    ap.add_argument("--pos-keys", default="noun,verb,adj",
+                    help="要区分的类别；'noun,verb' 改成二分类。"
+                         "必须和 select_slots / calibrate_probe 一致")
     args = ap.parse_args()
+
+    # Probe 读的是 select_slots 模块级的 POS_KEYS，所以两处都要设，
+    # 否则拟合会按三分类做而本脚本按二分类判，且不会报错。
+    global POS_KEYS
+    POS_KEYS = tuple(k.strip() for k in args.pos_keys.split(",") if k.strip())
+    unknown = [q for q in POS_KEYS if q not in select_slots.UPPER]
+    if len(POS_KEYS) < 2 or unknown:
+        ap.error(f"--pos-keys 需要至少两个来自 {sorted(select_slots.UPPER)} 的类别"
+                 + (f"，不认识 {unknown}" if unknown else ""))
+    select_slots.POS_KEYS = POS_KEYS
+
 
     data, probes, pdev, final = {}, [], [], []
     for m in args.models:
@@ -122,7 +137,7 @@ def main() -> None:
     print(f"  {'差':<9}" + "".join(f"{a-b:>+9.3f}" for a, b in zip(joint, diag)))
 
     meta = {f"{s['pos']}::{s['signature']}": s for s in data[args.models[0]]["slots"]}
-    print(f"\n=== 共用的 {args.n_slots * 3} 个槽 ===")
+    print(f"\n=== 共用的 {args.n_slots * len(POS_KEYS)} 个槽 ===")
     for p in POS_KEYS:
         print(f"  {p.upper()}")
         for k in sel[p]:
@@ -131,7 +146,7 @@ def main() -> None:
             print(f"    {meta[k]['example'][:44]:<46}{str(meta[k]['diagnostic']):<24}{mark}")
     overlap = {m: sum(len(set(sel[p]) & set(own[m][p])) for p in POS_KEYS)
                for m in args.models}
-    print(f"\n  与各自 B 方案的重叠 /30: {overlap}")
+    print(f"\n  与各自 B 方案的重叠 /{args.n_slots * len(POS_KEYS)}: {overlap}")
 
     args.out.write_text(json.dumps({
         "selection": "joint hill-climbing on the worst model's probe-dev accuracy",

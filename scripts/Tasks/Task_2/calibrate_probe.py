@@ -184,7 +184,7 @@ def main() -> None:
           + (f"，淘汰 {len(dropped)} 个" if dropped else ""))
     print("AUC 由校准词决定去留；AUC_val 仅供参考，不参与任何决策。")
 
-    # -- 3. three-way accuracy on validation words --------------------------
+    # -- 3. accuracy on validation words ------------------------------------
     def classify(word: str, slot_keys, source=None) -> str | None:
         src = S if source is None else source
         means = {}

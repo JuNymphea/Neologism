@@ -80,9 +80,20 @@ def main() -> None:
                          "through every slot. @file reads one LABEL=PATH per line")
     ap.add_argument("--new-token", default="~jdsglmdh",
                     help="the token a --neologisms vector is written into")
+    ap.add_argument("--pos-keys", default="noun,verb,adj",
+                    help="要打分的类别；'noun,verb' 跳过形容词槽和形容词词表，"
+                         "省掉约三分之一的前向。注意产出的 surprisal 文件此后"
+                         "只能做二分类。必须和下游 select_slots / calibrate_probe 一致")
     ap.add_argument("--limit-words", type=int, default=None,
                     help="smoke-test with the first N words per POS")
     args = ap.parse_args()
+
+    global POS_KEYS
+    POS_KEYS = tuple(k.strip() for k in args.pos_keys.split(",") if k.strip())
+    unknown = [q for q in POS_KEYS if q not in UPPER]
+    if len(POS_KEYS) < 2 or unknown:
+        ap.error(f"--pos-keys 需要至少两个来自 {sorted(UPPER)} 的类别"
+                 + (f"，不认识 {unknown}" if unknown else ""))
 
     import torch
     from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -98,16 +109,20 @@ def main() -> None:
         args.model, torch_dtype=dtype, device_map=None).to(device).eval()
 
     slots_raw = json.loads(args.slots.read_text())
-    slots = [(pos, item) for pos in slots_raw for item in slots_raw[pos]]
-    print(f"{len(slots)} slots")
+    wanted = {UPPER[q] for q in POS_KEYS}
+    slots = [(pos, item) for pos in slots_raw if pos in wanted
+             for item in slots_raw[pos]]
+    dropped = sum(len(v) for k, v in slots_raw.items() if k not in wanted)
+    print(f"{len(slots)} slots" + (f"（跳过 {dropped} 个不在 --pos-keys 里的）"
+                                   if dropped else ""))
 
     words: Dict[str, Dict[str, List[str]]] = {}
     for role, path in (("calibration", args.calibration),
                        ("probedev", args.probedev),
                        ("finaltest", args.finaltest)):
         w = json.loads(path.read_text())["words"]
-        if args.limit_words:
-            w = {p: w[p][: args.limit_words] for p in POS_KEYS}
+        w = {p: w[p][: args.limit_words] if args.limit_words else w[p]
+             for p in POS_KEYS}
         words[role] = w
         print(f"{role}: " + ", ".join(f"{p}={len(w[p])}" for p in POS_KEYS))
 
@@ -185,7 +200,13 @@ def main() -> None:
                 el = time.time() - t0
                 print(f"  [{vi}/{len(specs)}] {el:6.1f}s  eta {el / vi * (len(specs) - vi):6.1f}s",
                       flush=True)
-        words = {"neologism": {p: [l.partition("=")[0] for l in specs] for p in POS_KEYS}}
+        # Recorded flat, under no part of speech. A vector's category is what
+        # the probe is being asked to decide, so filing it under one here would
+        # smuggle the answer into the input. This used to list every label under
+        # all of POS_KEYS, which read as though each vector were all of them;
+        # nothing downstream consumes the field -- calibrate_probe takes the
+        # labels from the surprisal keys -- so it was cosmetic, and wrong.
+        words = {"neologism": {"all": [l.partition("=")[0] for l in specs]}}
         entries = []
 
     for si, (pos, item) in enumerate(slots, 1):
