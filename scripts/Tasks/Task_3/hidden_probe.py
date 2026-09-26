@@ -105,10 +105,16 @@ def main() -> None:
         splits[role] = got
         print(f"  {role}: {len(got)} single-token words", flush=True)
 
+    keep_pos = {short[p] for p in pos_keys}
+    drop_tmpl = {p for p in short if p not in pos_keys}
     trained = [(f"{r['lang']}_{r['concept']}_{r['template']}", r["best_file"])
                for r in csv.DictReader(open(args.manifest, encoding="utf-8"))
-               if r["model"] == args.model_key]
-    print(f"  trained: {len(trained)}", flush=True)
+               if r["model"] == args.model_key
+               and r["concept"][0] in keep_pos
+               and r["template"] not in drop_tmpl]
+    print(f"  trained: {len(trained)}"
+          + (f"（concept POS 限于 {sorted(keep_pos)}，去掉 template {sorted(drop_tmpl)}）"
+             if drop_tmpl else ""), flush=True)
 
     g = torch.Generator().manual_seed(args.seed)
     word_norm = float(np.median([float(emb[i].detach().float().norm())
@@ -181,7 +187,7 @@ def main() -> None:
     # ---- fit per layer --------------------------------------------------
     def fit(Xtr, ytr, L):
         sc = StandardScaler().fit(Xtr[:, L, :])
-        clf = LogisticRegression(max_iter=3000, C=args.C, multi_class="auto")
+        clf = LogisticRegression(max_iter=3000, C=args.C)
         clf.fit(sc.transform(Xtr[:, L, :]), ytr)
         return sc, clf
 
