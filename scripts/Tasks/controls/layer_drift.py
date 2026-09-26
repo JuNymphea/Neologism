@@ -121,11 +121,16 @@ def main() -> None:
         rand.append((f"randT_{i:03d}", v / v.norm() * args.norm_trained))
 
     # ---- collect hidden states ------------------------------------------
-    n_layers = model.config.num_hidden_layers + 1
+    # Read off the forward, not the config: Gemma 3 keeps num_hidden_layers under
+    # config.text_config, and counting what the model actually returns is right
+    # for any of them.
+    n_layers = None
     store: dict = {f: {"word": [], "inject": [], "trained": [], "randT": []}
                    for f in FRAMES}
     labels: dict = {"word": [], "inject": [], "trained": [], "randT": []}
     original_row = emb[new_id].detach().clone()
+
+    nonlocal_layers = [None]
 
     @torch.no_grad()
     def states(text: str, pos_of: str) -> np.ndarray:
@@ -136,6 +141,7 @@ def main() -> None:
         # The item is the last occurrence of its token: the frames put nothing
         # after it that could repeat it.
         target = ids.index(pos_of) if pos_of in ids else len(ids) - 1
+        nonlocal_layers[0] = len(out.hidden_states)
         return np.stack([h[0, target].float().cpu().numpy()
                          for h in out.hidden_states])
 
@@ -175,6 +181,8 @@ def main() -> None:
             if fname == "bare":
                 labels["randT"].append(lab)
     write_row(original_row)
+    n_layers = nonlocal_layers[0]
+    print(f"\nhidden states per item: {n_layers} layers (embeddings + blocks)")
 
     # ---- the four measures, per frame per layer --------------------------
     def summarize(H: dict) -> list:
