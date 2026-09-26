@@ -72,6 +72,7 @@ little rather than assumed to be.
 from __future__ import annotations
 
 import argparse
+import itertools
 import json
 import math
 from collections import Counter
@@ -85,6 +86,14 @@ PROMPT = 'The part of speech of the word "{WORD}" is'
 #: Few-shot examples, deliberately drawn from words in none of the splits so
 #: the demonstration cannot leak an answer.
 FEWSHOT = [("table", "noun"), ("walk", "verb"), ("happy", "adjective")]
+
+#: The shots actually in use. A module global rather than an argument because
+#: both scoring paths reach the prompt through `render_prompt`, and the whole
+#: point of permuting is that nothing else about the call changes. One shot per
+#: category, always: a demonstration of a label that is not in --pos-keys sets
+#: a prior for an answer that can no longer be given, which is the bias the
+#: shots were supposed to remove.
+SHOTS: List[tuple] = list(FEWSHOT)
 
 #: How the question reaches the model. All three of these models are
 #: post-trained and each has its own chat template, so a bare completion string
@@ -158,7 +167,7 @@ def render_prompt(word: str, form: str, tok) -> str:
     if form == "raw":
         return q
     if form == "fewshot":
-        shots = "".join(f'{PROMPT.replace("{WORD}", w)} {a}.\n' for w, a in FEWSHOT)
+        shots = "".join(f'{PROMPT.replace("{WORD}", w)} {a}.\n' for w, a in SHOTS)
         return shots + q
     if form == "chat":
         if tok.chat_template is None:
@@ -400,6 +409,15 @@ def main() -> None:
     ap.add_argument("--calibrate", action="store_true",
                     help="减去标签先验（用不含真实词的提示测得），"
                          "消掉与词无关的常数偏置")
+    ap.add_argument("--fewshot-shots", default=None, metavar="WORD=LABEL,...",
+                    help="替换 fewshot 示例，每类恰好一个，例如 "
+                         "'table=noun,walk=verb'。默认三类各一个；"
+                         "--pos-keys 是两类时必须自己给，否则会示范一个"
+                         "已经不在标签集里的类别")
+    ap.add_argument("--fewshot-permute", action="store_true",
+                    help="把示例的所有排列各打一遍分并平均类别概率。"
+                         "示例的顺序本身会带来近因偏差，平均掉它才能说"
+                         "先验是被示例设定的，而不是被最后一个示例设定的")
     ap.add_argument("--report-sensitivity", action="store_true",
                     help="also report accuracy under the alternative variant sets")
     args = ap.parse_args()
@@ -411,6 +429,33 @@ def main() -> None:
         ap.error(f"--pos-keys 不认识 {unknown}，可选 {sorted(LABELS)}")
     if len(POS_KEYS) < 2:
         ap.error("--pos-keys 至少要两类")
+
+    global SHOTS
+    if args.fewshot_shots:
+        pairs = []
+        for item in args.fewshot_shots.split(","):
+            w, _, lab = item.strip().partition("=")
+            if not w or not lab:
+                ap.error(f"--fewshot-shots 要 WORD=LABEL，收到 {item!r}")
+            pairs.append((w, lab))
+        SHOTS = pairs
+    if args.prompt_form == "fewshot":
+        # A shot whose label is outside POS_KEYS demonstrates an answer that
+        # cannot be chosen, and a category with no shot is demonstrated by
+        # nothing -- either way the shots stop being the balanced prior they
+        # are there to be.
+        canon = {lab: pos for pos in LABELS for lab in LABELS[pos]}
+        shown = Counter(canon.get(lab, lab) for _, lab in SHOTS)
+        stray = sorted(set(shown) - set(POS_KEYS))
+        missing = sorted(set(POS_KEYS) - set(shown))
+        if stray:
+            ap.error(f"fewshot 示例里有 --pos-keys 之外的类别 {stray}；"
+                     f"当前 --pos-keys={','.join(POS_KEYS)}，"
+                     f"用 --fewshot-shots 换掉")
+        if missing:
+            ap.error(f"fewshot 示例没有覆盖 {missing}，先验会偏向被示范过的类别")
+        if len(set(shown.values())) != 1:
+            ap.error(f"fewshot 每类示例数要相同，现在是 {dict(shown)}")
 
     tok, model, device = load_model(args.model, args.device, args.dtype)
 
@@ -490,37 +535,99 @@ def main() -> None:
         else:
             specs.append(item)
 
-    if specs:
-        # the words in --words are not scored at all: the vectors replace them
-        logps = {"neologism": score_neologisms(tok, model, device, specs, forms,
-                                               args.batch_size, args.prompt_form,
-                                               args.new_token, args.score_rule)}
-    else:
-        logps = {pos: score_log_probs(tok, model, device, ws, forms,
-                                      args.batch_size, label=pos,
-                                      form=args.prompt_form, score_rule=args.score_rule)
-                 for pos, ws in words.items()}
+    def score_all() -> Dict[str, Dict[str, Dict[str, float]]]:
+        if specs:
+            # the words in --words are not scored at all: the vectors replace them
+            return {"neologism": score_neologisms(tok, model, device, specs, forms,
+                                                  args.batch_size, args.prompt_form,
+                                                  args.new_token, args.score_rule)}
+        return {pos: score_log_probs(tok, model, device, ws, forms,
+                                     args.batch_size, label=pos,
+                                     form=args.prompt_form, score_rule=args.score_rule)
+                for pos, ws in words.items()}
 
-    def probabilities(vset) -> Dict[str, Dict[str, Dict[str, float]]]:
-        return {t: {w: aggregate(lp, vset) for w, lp in d.items()}
-                for t, d in logps.items()}
+    def subtract_prior(lp):
+        """The label prior under the prompt as it currently stands.
 
-    if args.calibrate:
+        Measured per shot order, not once: the shots are part of the prompt, so
+        reusing one order's prior under another would subtract a constant that
+        was never the bias of the prompt being scored.
+        """
         prior = label_priors(tok, model, device, forms, args.batch_size,
                              args.prompt_form, args.score_rule)
         print("\n标签先验（内容无关提示下的平均 logp）")
         for f in sorted(prior, key=prior.get, reverse=True)[:6]:
             print(f"  {f!r:<16}{prior[f]:>9.3f}")
-        spread = max(prior.values()) - min(prior.values())
-        print(f"  极差 {spread:.2f} nat —— 校准把它减掉")
-        logps = {pos: {w: {f: v - prior[f] for f, v in d.items()}
-                       for w, d in ws.items()}
-                 for pos, ws in logps.items()}
+        print(f"  极差 {max(prior.values()) - min(prior.values()):.2f} nat —— 校准把它减掉")
+        return {pos: {w: {f: v - prior[f] for f, v in d.items()}
+                      for w, d in ws.items()}
+                for pos, ws in lp.items()}
+
+    # Averaging over shot orders, not picking one: with three shots the last one
+    # sits closest to the question, and a model that leans on recency would be
+    # reported as leaning on the demonstration set.
+    orders = [tuple(SHOTS)]
+    if args.prompt_form == "fewshot" and args.fewshot_permute:
+        orders = sorted(itertools.permutations(SHOTS))
+        print(f"\nfewshot：{len(orders)} 种示例顺序各打一遍分，类别概率取平均")
+
+    per_order: Dict[str, Dict[str, Dict[str, Dict[str, float]]]] = {}
+    for order in orders:
+        SHOTS = list(order)
+        key = " | ".join(w for w, _ in order)
+        if len(orders) > 1:
+            print(f"\n=== 示例顺序 {key} ===")
+        lp = score_all()
+        per_order[key] = subtract_prior(lp) if args.calibrate else lp
+    logps = per_order[next(iter(per_order))]
+
+    def probabilities(vset) -> Dict[str, Dict[str, Dict[str, float]]]:
+        parts = [{t: {w: aggregate(lp, vset) for w, lp in d.items()}
+                  for t, d in o.items()} for o in per_order.values()]
+        if len(parts) == 1:
+            return parts[0]
+        # Average the probabilities, not the log probabilities: the orders are
+        # alternative ways of asking, so the ensemble is a mixture over them,
+        # and a geometric mean would let one order's near-zero veto the rest.
+        return {t: {w: {c: sum(p[t][w][c] for p in parts) / len(parts)
+                        for c in POS_KEYS}
+                    for w in parts[0][t]}
+                for t in parts[0]}
 
     results = probabilities(variants)
     scorable = labelled and set(words) == set(POS_KEYS) and not specs
 
-    report = accuracy_report(results, "主变体集") if scorable else {}
+    report = accuracy_report(results, "主变体集"
+                             + ("（示例顺序平均）" if len(per_order) > 1 else "")
+                             ) if scorable else {}
+
+    # What the averaging is worth: if the orders disagree, one order's number is
+    # not a property of the shot set, and reporting it alone would be luck.
+    by_order: Dict[str, dict] = {}
+    if len(per_order) > 1:
+        for key, lp in per_order.items():
+            pr = {t: {w: aggregate(d, variants) for w, d in ws.items()}
+                  for t, ws in lp.items()}
+            if scorable:
+                hit = tot = 0
+                for t in POS_KEYS:
+                    hit += sum(max(pr[t][w], key=pr[t][w].get) == t for w in pr[t])
+                    tot += len(pr[t])
+                by_order[key] = {"overall": round(hit / tot, 4), "n": tot}
+            else:
+                dist = Counter(max(pr[t][w], key=pr[t][w].get)
+                               for t in pr for w in pr[t])
+                by_order[key] = {"predictions": dict(dist)}
+        print("\n各示例顺序单独的结果")
+        for key, r in by_order.items():
+            tail = (f"{r['overall']:.4f}" if "overall" in r
+                    else "  ".join(f"{c}:{r['predictions'].get(c, 0)}" for c in POS_KEYS))
+            print(f"  {key:<34}{tail}")
+        if scorable:
+            accs = [r["overall"] for r in by_order.values()]
+            print(f"  极差 {max(accs) - min(accs):.4f}"
+                  f"（平均后 {report['overall']:.4f}）")
+
     sensitivity: Dict[str, dict] = {}
     if args.report_sensitivity:
         for name, vset in alternatives.items():
@@ -549,6 +656,11 @@ def main() -> None:
         "prompt": PROMPT,
         "prompt_form": args.prompt_form,
         "calibrated": args.calibrate,
+        "score_rule": args.score_rule,
+        "pos_keys": list(POS_KEYS),
+        "fewshot_shots": [list(x) for x in SHOTS] if args.prompt_form == "fewshot" else None,
+        "fewshot_orders": list(per_order) if len(per_order) > 1 else None,
+        "by_order": by_order or None,
         "variants": variants,
         "words_file": str(args.words),
         "accuracy": report,
@@ -556,6 +668,7 @@ def main() -> None:
         "sensitivity": sensitivity,
         # Kept so any other variant set can be evaluated without the GPU.
         "log_probabilities": logps,
+        "log_probabilities_by_order": per_order if len(per_order) > 1 else None,
     }, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\n-> {args.out}")
 
