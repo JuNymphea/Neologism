@@ -34,3 +34,4 @@ logs/
 
 # LM-judge reply cache: hundreds of MB of pickles
 scripts/eval/cached_data/
+scripts/Tasks/controls/vectors_*/
