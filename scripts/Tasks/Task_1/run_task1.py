@@ -242,7 +242,7 @@ def load_model(name: str, device: str | None = None, dtype: str = "bfloat16"):
 
 def score_log_probs(tok, model, device, words: List[str], forms: List[str],
                     batch_size: int = 64, label: str = "",
-                    form: str = "raw") -> Dict[str, Dict[str, float]]:
+                    form: str = "raw", score_rule: str = "full") -> Dict[str, Dict[str, float]]:
     """log P(form | prompt about word), for every (word, form) pair.
 
     Returns the raw log probabilities rather than category probabilities, so
@@ -268,15 +268,16 @@ def score_log_probs(tok, model, device, words: List[str], forms: List[str],
             ids, mask = enc["input_ids"], enc["attention_mask"]
             for j, (w, v) in enumerate(chunk):
                 n_total, n_pre = int(mask[j].sum()), len(pre[j])
-                out[w][v] = sum(lg[j, t - 1, ids[j, t]].item()
-                                for t in range(n_pre, n_total))
+                span = (range(n_pre, n_pre + 1) if score_rule == "first-token"
+                        else range(n_pre, n_total))
+                out[w][v] = sum(lg[j, t - 1, ids[j, t]].item() for t in span)
             if label and (i // batch_size) % 20 == 0:
                 print(f"  {label}: {min(i + batch_size, len(rows)):>6}/{len(rows)}",
                       flush=True)
     return out
 
 
-def label_priors(tok, model, device, forms, batch_size, form):
+def label_priors(tok, model, device, forms, batch_size, form, score_rule="full"):
     """Each surface form's log probability when no real word is in the prompt.
 
     Two things ride on this, and both are constant across words. "noun" is a
@@ -287,7 +288,7 @@ def label_priors(tok, model, device, forms, batch_size, form):
     decided before the word is read. Subtracting this removes both.
     """
     per = score_log_probs(tok, model, device, list(CONTENT_FREE), forms,
-                          batch_size, label="prior", form=form)
+                          batch_size, label="prior", form=form, score_rule=score_rule)
     return {f: sum(per[w][f] for w in CONTENT_FREE) / len(CONTENT_FREE)
             for f in forms}
 
@@ -326,7 +327,8 @@ def accuracy_report(results: Dict[str, Dict[str, Dict[str, float]]],
     return report
 
 
-def score_neologisms(tok, model, device, specs, forms, batch_size, form, new_token):
+def score_neologisms(tok, model, device, specs, forms, batch_size, form, new_token,
+                     score_rule="full"):
     """log P(label form | prompt about the new token), one entry per trained vector.
 
     Every vector is written into the same embedding row and scored in turn, so
@@ -352,7 +354,7 @@ def score_neologisms(tok, model, device, specs, forms, batch_size, form, new_tok
             raise SystemExit(f"--neologisms wants LABEL=PATH, got {spec!r}")
         load_new_token_embedding(model, path, new_id=new_id)
         lp = score_log_probs(tok, model, device, [new_token], forms,
-                             batch_size, label=label, form=form)
+                             batch_size, label=label, form=form, score_rule=score_rule)
         out[label] = lp[new_token]
         if i % 50 == 0 or i == len(specs):
             print(f"  {i}/{len(specs)}")
@@ -384,6 +386,11 @@ def main() -> None:
                     help="score trained vectors instead of words: each is injected "
                          "into the new token's embedding row and scored in its place. "
                          "@file reads one LABEL=PATH per line")
+    ap.add_argument("--score-rule", default="full", choices=("full", "first-token"),
+                    help="full: teacher-force the whole label. first-token: read only "
+                         "the probability of its first token, which is what an earlier "
+                         "version of this measurement did -- ' Noun' then scores any "
+                         "word starting with a capital N, and 'adjective' scores 'ad'")
     ap.add_argument("--pos-keys", default="noun,verb,adj",
                     help="which categories the answer is chosen between; "
                          "'noun,verb' makes it a two-way decision, with the "
@@ -487,11 +494,11 @@ def main() -> None:
         # the words in --words are not scored at all: the vectors replace them
         logps = {"neologism": score_neologisms(tok, model, device, specs, forms,
                                                args.batch_size, args.prompt_form,
-                                               args.new_token)}
+                                               args.new_token, args.score_rule)}
     else:
         logps = {pos: score_log_probs(tok, model, device, ws, forms,
                                       args.batch_size, label=pos,
-                                      form=args.prompt_form)
+                                      form=args.prompt_form, score_rule=args.score_rule)
                  for pos, ws in words.items()}
 
     def probabilities(vset) -> Dict[str, Dict[str, Dict[str, float]]]:
@@ -500,7 +507,7 @@ def main() -> None:
 
     if args.calibrate:
         prior = label_priors(tok, model, device, forms, args.batch_size,
-                             args.prompt_form)
+                             args.prompt_form, args.score_rule)
         print("\n标签先验（内容无关提示下的平均 logp）")
         for f in sorted(prior, key=prior.get, reverse=True)[:6]:
             print(f"  {f!r:<16}{prior[f]:>9.3f}")
