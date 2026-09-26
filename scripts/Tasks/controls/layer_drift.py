@@ -53,7 +53,6 @@ import numpy as np
 #: give it a minimal syntactic home without licensing one part of speech.
 FRAMES = {
     "bare": "{W}",
-    "quoted": 'the word "{W}"',
     "list": "one , {W} , another",
 }
 
@@ -133,16 +132,28 @@ def main() -> None:
     nonlocal_layers = [None]
 
     @torch.no_grad()
-    def states(text: str, pos_of: str) -> np.ndarray:
-        """Hidden state at the item's position, every layer, as (n_layers, hidden)."""
+    def states(text: str, tmpl: str) -> np.ndarray:
+        """Hidden state at the item's position, every layer, as (n_layers, hidden).
+
+        The position is counted off the frame's prefix rather than searched for by
+        token id. Searching is what made the earlier `the word "{W}"` frame
+        silently meaningless: after a quote the item tokenizes without its leading
+        space, so its id was absent, a fallback took the last position instead --
+        the closing quote, identical for all 300 words -- and the word cloud came
+        out with zero variance. There is no fallback now: a frame whose prefix
+        does not line up raises.
+        """
         enc = tok(text, return_tensors="pt", add_special_tokens=True).to(device)
-        out = model(**enc, output_hidden_states=True)
         ids = enc["input_ids"][0].tolist()
-        # The item is the last occurrence of its token: the frames put nothing
-        # after it that could repeat it.
-        target = ids.index(pos_of) if pos_of in ids else len(ids) - 1
+        head = tmpl.split("{W}")[0]
+        n_pre = len(tok(head, add_special_tokens=True)["input_ids"]) if head else \
+            len(tok("", add_special_tokens=True)["input_ids"])
+        if not 0 <= n_pre < len(ids):
+            raise SystemExit(f"frame prefix {head!r} gives position {n_pre} "
+                             f"in a {len(ids)}-token input: {text!r}")
+        out = model(**enc, output_hidden_states=True)
         nonlocal_layers[0] = len(out.hidden_states)
-        return np.stack([h[0, target].float().cpu().numpy()
+        return np.stack([h[0, n_pre].float().cpu().numpy()
                          for h in out.hidden_states])
 
     @torch.no_grad()
@@ -153,7 +164,7 @@ def main() -> None:
         print(f"\n=== frame {fname}: {tmpl} ===", flush=True)
         write_row(original_row)
         for i, (pos, w, rid) in enumerate(real, 1):
-            store[fname]["word"].append(states(tmpl.replace("{W}", w), rid))
+            store[fname]["word"].append(states(tmpl.replace("{W}", w), tmpl))
             if fname == "bare":
                 labels["word"].append(f"{pos[0]}_{w}")
             if i % 100 == 0:
@@ -161,7 +172,7 @@ def main() -> None:
         for i, (pos, w, rid) in enumerate(real, 1):
             write_row(emb[rid].detach().clone())
             store[fname]["inject"].append(
-                states(tmpl.replace("{W}", args.new_token), new_id))
+                states(tmpl.replace("{W}", args.new_token), tmpl))
             if fname == "bare":
                 labels["inject"].append(f"{pos[0]}_{w}")
             if i % 100 == 0:
@@ -169,7 +180,7 @@ def main() -> None:
         for i, (lab, path) in enumerate(trained, 1):
             write_row(torch.load(path, map_location="cpu")["embedding"])
             store[fname]["trained"].append(
-                states(tmpl.replace("{W}", args.new_token), new_id))
+                states(tmpl.replace("{W}", args.new_token), tmpl))
             if fname == "bare":
                 labels["trained"].append(lab)
             if i % 100 == 0:
@@ -177,7 +188,7 @@ def main() -> None:
         for lab, v in rand:
             write_row(v)
             store[fname]["randT"].append(
-                states(tmpl.replace("{W}", args.new_token), new_id))
+                states(tmpl.replace("{W}", args.new_token), tmpl))
             if fname == "bare":
                 labels["randT"].append(lab)
     write_row(original_row)
