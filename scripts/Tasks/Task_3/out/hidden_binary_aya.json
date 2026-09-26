@@ -1,0 +1,788 @@
+{
+  "model": "/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global",
+  "model_key": "aya",
+  "pos_keys": [
+    "noun",
+    "verb"
+  ],
+  "frames": {
+    "list": "one , {W} , another",
+    "bare": "{W}"
+  },
+  "n_layers": 37,
+  "hidden": 2048,
+  "fitted_on": "real words' own embedding rows injected into the new token",
+  "n_words": {
+    "calibration": 302,
+    "probedev": 148,
+    "finaltest": 200
+  },
+  "n_trained": 160,
+  "n_random_per_norm": 50,
+  "norm_trained_median": 1.0731,
+  "norm_realword_median": 1.7430555820465088,
+  "C": 1.0,
+  "seed": 0,
+  "results": {
+    "list": {
+      "layer_sweep": [
+        {
+          "layer": 0,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 1,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 2,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 3,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 4,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 5,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 6,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 7,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 8,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 9,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 10,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 11,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 12,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 13,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 14,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 15,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 16,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 17,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 18,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 19,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 20,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 21,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 22,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 23,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 24,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 25,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 26,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 27,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 28,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 29,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 30,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 31,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 32,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 33,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 34,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 35,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 36,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        }
+      ],
+      "chosen_layer": 3,
+      "finaltest_accuracy": 0.985,
+      "finaltest_per_pos": {
+        "noun": 0.99,
+        "verb": 0.98
+      },
+      "trained_predictions": {
+        "en_n_1_mixed": "verb",
+        "en_n_1_noun": "noun",
+        "en_n_1_unbiased": "noun",
+        "en_n_1_verb": "noun",
+        "en_n_10_mixed": "noun",
+        "en_n_10_noun": "noun",
+        "en_n_10_unbiased": "noun",
+        "en_n_10_verb": "noun",
+        "en_n_2_mixed": "noun",
+        "en_n_2_noun": "noun",
+        "en_n_2_unbiased": "verb",
+        "en_n_2_verb": "noun",
+        "en_n_3_mixed": "noun",
+        "en_n_3_noun": "verb",
+        "en_n_3_unbiased": "noun",
+        "en_n_3_verb": "verb",
+        "en_n_4_mixed": "noun",
+        "en_n_4_noun": "verb",
+        "en_n_4_unbiased": "noun",
+        "en_n_4_verb": "noun",
+        "en_n_5_mixed": "noun",
+        "en_n_5_noun": "noun",
+        "en_n_5_unbiased": "noun",
+        "en_n_5_verb": "noun",
+        "en_n_6_mixed": "noun",
+        "en_n_6_noun": "noun",
+        "en_n_6_unbiased": "noun",
+        "en_n_6_verb": "noun",
+        "en_n_7_mixed": "noun",
+        "en_n_7_noun": "noun",
+        "en_n_7_unbiased": "noun",
+        "en_n_7_verb": "noun",
+        "en_n_8_mixed": "verb",
+        "en_n_8_noun": "noun",
+        "en_n_8_unbiased": "verb",
+        "en_n_8_verb": "noun",
+        "en_n_9_mixed": "noun",
+        "en_n_9_noun": "noun",
+        "en_n_9_unbiased": "noun",
+        "en_n_9_verb": "noun",
+        "en_v_1_mixed": "noun",
+        "en_v_1_noun": "verb",
+        "en_v_1_unbiased": "verb",
+        "en_v_1_verb": "noun",
+        "en_v_10_mixed": "noun",
+        "en_v_10_noun": "noun",
+        "en_v_10_unbiased": "noun",
+        "en_v_10_verb": "noun",
+        "en_v_2_mixed": "noun",
+        "en_v_2_noun": "noun",
+        "en_v_2_unbiased": "noun",
+        "en_v_2_verb": "noun",
+        "en_v_3_mixed": "noun",
+        "en_v_3_noun": "noun",
+        "en_v_3_unbiased": "noun",
+        "en_v_3_verb": "noun",
+        "en_v_4_mixed": "noun",
+        "en_v_4_noun": "noun",
+        "en_v_4_unbiased": "verb",
+        "en_v_4_verb": "noun",
+        "en_v_5_mixed": "noun",
+        "en_v_5_noun": "noun",
+        "en_v_5_unbiased": "verb",
+        "en_v_5_verb": "noun",
+        "en_v_6_mixed": "verb",
+        "en_v_6_noun": "noun",
+        "en_v_6_unbiased": "noun",
+        "en_v_6_verb": "noun",
+        "en_v_7_mixed": "noun",
+        "en_v_7_noun": "noun",
+        "en_v_7_unbiased": "noun",
+        "en_v_7_verb": "noun",
+        "en_v_8_mixed": "noun",
+        "en_v_8_noun": "noun",
+        "en_v_8_unbiased": "noun",
+        "en_v_8_verb": "noun",
+        "en_v_9_mixed": "noun",
+        "en_v_9_noun": "noun",
+        "en_v_9_unbiased": "noun",
+        "en_v_9_verb": "noun",
+        "zh_n_1_mixed": "noun",
+        "zh_n_1_noun": "noun",
+        "zh_n_1_unbiased": "verb",
+        "zh_n_1_verb": "noun",
+        "zh_n_10_mixed": "noun",
+        "zh_n_10_noun": "noun",
+        "zh_n_10_unbiased": "noun",
+        "zh_n_10_verb": "noun",
+        "zh_n_2_mixed": "noun",
+        "zh_n_2_noun": "noun",
+        "zh_n_2_unbiased": "noun",
+        "zh_n_2_verb": "noun",
+        "zh_n_3_mixed": "noun",
+        "zh_n_3_noun": "noun",
+        "zh_n_3_unbiased": "noun",
+        "zh_n_3_verb": "noun",
+        "zh_n_4_mixed": "noun",
+        "zh_n_4_noun": "noun",
+        "zh_n_4_unbiased": "noun",
+        "zh_n_4_verb": "noun",
+        "zh_n_5_mixed": "noun",
+        "zh_n_5_noun": "noun",
+        "zh_n_5_unbiased": "noun",
+        "zh_n_5_verb": "noun",
+        "zh_n_6_mixed": "noun",
+        "zh_n_6_noun": "noun",
+        "zh_n_6_unbiased": "noun",
+        "zh_n_6_verb": "noun",
+        "zh_n_7_mixed": "noun",
+        "zh_n_7_noun": "noun",
+        "zh_n_7_unbiased": "noun",
+        "zh_n_7_verb": "noun",
+        "zh_n_8_mixed": "noun",
+        "zh_n_8_noun": "noun",
+        "zh_n_8_unbiased": "noun",
+        "zh_n_8_verb": "noun",
+        "zh_n_9_mixed": "noun",
+        "zh_n_9_noun": "noun",
+        "zh_n_9_unbiased": "verb",
+        "zh_n_9_verb": "noun",
+        "zh_v_1_mixed": "noun",
+        "zh_v_1_noun": "noun",
+        "zh_v_1_unbiased": "noun",
+        "zh_v_1_verb": "noun",
+        "zh_v_10_mixed": "noun",
+        "zh_v_10_noun": "noun",
+        "zh_v_10_unbiased": "noun",
+        "zh_v_10_verb": "noun",
+        "zh_v_2_mixed": "noun",
+        "zh_v_2_noun": "verb",
+        "zh_v_2_unbiased": "noun",
+        "zh_v_2_verb": "noun",
+        "zh_v_3_mixed": "noun",
+        "zh_v_3_noun": "noun",
+        "zh_v_3_unbiased": "noun",
+        "zh_v_3_verb": "noun",
+        "zh_v_4_mixed": "noun",
+        "zh_v_4_noun": "verb",
+        "zh_v_4_unbiased": "verb",
+        "zh_v_4_verb": "noun",
+        "zh_v_5_mixed": "noun",
+        "zh_v_5_noun": "noun",
+        "zh_v_5_unbiased": "noun",
+        "zh_v_5_verb": "noun",
+        "zh_v_6_mixed": "noun",
+        "zh_v_6_noun": "noun",
+        "zh_v_6_unbiased": "noun",
+        "zh_v_6_verb": "noun",
+        "zh_v_7_mixed": "noun",
+        "zh_v_7_noun": "noun",
+        "zh_v_7_unbiased": "noun",
+        "zh_v_7_verb": "noun",
+        "zh_v_8_mixed": "noun",
+        "zh_v_8_noun": "noun",
+        "zh_v_8_unbiased": "noun",
+        "zh_v_8_verb": "verb",
+        "zh_v_9_mixed": "noun",
+        "zh_v_9_noun": "noun",
+        "zh_v_9_unbiased": "noun",
+        "zh_v_9_verb": "noun"
+      },
+      "trained_distribution": {
+        "verb": 18,
+        "noun": 142
+      },
+      "trained_concept_match": 0.5,
+      "trained_mean_confidence": 0.8264,
+      "random_distribution": {
+        "randT": {
+          "verb": 19,
+          "noun": 31
+        },
+        "randW": {
+          "verb": 14,
+          "noun": 36
+        }
+      },
+      "random_mean_confidence": 0.7424,
+      "finaltest_mean_confidence": 0.9826,
+      "centroid_ratio": {
+        "finaltest": 1.018,
+        "trained": 1.09,
+        "random": 0.98
+      }
+    },
+    "bare": {
+      "layer_sweep": [
+        {
+          "layer": 0,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 1,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 2,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 3,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 4,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 5,
+          "calibration": 1.0,
+          "probedev": 0.9595
+        },
+        {
+          "layer": 6,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 7,
+          "calibration": 1.0,
+          "probedev": 0.9595
+        },
+        {
+          "layer": 8,
+          "calibration": 1.0,
+          "probedev": 0.9595
+        },
+        {
+          "layer": 9,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 10,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 11,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 12,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 13,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 14,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 15,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 16,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 17,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 18,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 19,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 20,
+          "calibration": 1.0,
+          "probedev": 0.9595
+        },
+        {
+          "layer": 21,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 22,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 23,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 24,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 25,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 26,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 27,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 28,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 29,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 30,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 31,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 32,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 33,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 34,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 35,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 36,
+          "calibration": 1.0,
+          "probedev": 0.9595
+        }
+      ],
+      "chosen_layer": 18,
+      "finaltest_accuracy": 0.955,
+      "finaltest_per_pos": {
+        "noun": 0.97,
+        "verb": 0.94
+      },
+      "trained_predictions": {
+        "en_n_1_mixed": "noun",
+        "en_n_1_noun": "noun",
+        "en_n_1_unbiased": "verb",
+        "en_n_1_verb": "verb",
+        "en_n_10_mixed": "noun",
+        "en_n_10_noun": "verb",
+        "en_n_10_unbiased": "noun",
+        "en_n_10_verb": "noun",
+        "en_n_2_mixed": "verb",
+        "en_n_2_noun": "noun",
+        "en_n_2_unbiased": "noun",
+        "en_n_2_verb": "noun",
+        "en_n_3_mixed": "verb",
+        "en_n_3_noun": "noun",
+        "en_n_3_unbiased": "noun",
+        "en_n_3_verb": "noun",
+        "en_n_4_mixed": "noun",
+        "en_n_4_noun": "noun",
+        "en_n_4_unbiased": "noun",
+        "en_n_4_verb": "noun",
+        "en_n_5_mixed": "noun",
+        "en_n_5_noun": "noun",
+        "en_n_5_unbiased": "noun",
+        "en_n_5_verb": "noun",
+        "en_n_6_mixed": "noun",
+        "en_n_6_noun": "noun",
+        "en_n_6_unbiased": "noun",
+        "en_n_6_verb": "noun",
+        "en_n_7_mixed": "noun",
+        "en_n_7_noun": "noun",
+        "en_n_7_unbiased": "noun",
+        "en_n_7_verb": "noun",
+        "en_n_8_mixed": "verb",
+        "en_n_8_noun": "verb",
+        "en_n_8_unbiased": "verb",
+        "en_n_8_verb": "verb",
+        "en_n_9_mixed": "noun",
+        "en_n_9_noun": "noun",
+        "en_n_9_unbiased": "verb",
+        "en_n_9_verb": "noun",
+        "en_v_1_mixed": "verb",
+        "en_v_1_noun": "verb",
+        "en_v_1_unbiased": "noun",
+        "en_v_1_verb": "verb",
+        "en_v_10_mixed": "noun",
+        "en_v_10_noun": "verb",
+        "en_v_10_unbiased": "noun",
+        "en_v_10_verb": "verb",
+        "en_v_2_mixed": "verb",
+        "en_v_2_noun": "noun",
+        "en_v_2_unbiased": "verb",
+        "en_v_2_verb": "verb",
+        "en_v_3_mixed": "noun",
+        "en_v_3_noun": "verb",
+        "en_v_3_unbiased": "noun",
+        "en_v_3_verb": "noun",
+        "en_v_4_mixed": "noun",
+        "en_v_4_noun": "noun",
+        "en_v_4_unbiased": "noun",
+        "en_v_4_verb": "noun",
+        "en_v_5_mixed": "verb",
+        "en_v_5_noun": "noun",
+        "en_v_5_unbiased": "noun",
+        "en_v_5_verb": "verb",
+        "en_v_6_mixed": "verb",
+        "en_v_6_noun": "verb",
+        "en_v_6_unbiased": "verb",
+        "en_v_6_verb": "noun",
+        "en_v_7_mixed": "noun",
+        "en_v_7_noun": "noun",
+        "en_v_7_unbiased": "verb",
+        "en_v_7_verb": "noun",
+        "en_v_8_mixed": "noun",
+        "en_v_8_noun": "verb",
+        "en_v_8_unbiased": "noun",
+        "en_v_8_verb": "noun",
+        "en_v_9_mixed": "verb",
+        "en_v_9_noun": "noun",
+        "en_v_9_unbiased": "verb",
+        "en_v_9_verb": "noun",
+        "zh_n_1_mixed": "noun",
+        "zh_n_1_noun": "noun",
+        "zh_n_1_unbiased": "noun",
+        "zh_n_1_verb": "noun",
+        "zh_n_10_mixed": "noun",
+        "zh_n_10_noun": "noun",
+        "zh_n_10_unbiased": "noun",
+        "zh_n_10_verb": "noun",
+        "zh_n_2_mixed": "noun",
+        "zh_n_2_noun": "noun",
+        "zh_n_2_unbiased": "verb",
+        "zh_n_2_verb": "noun",
+        "zh_n_3_mixed": "noun",
+        "zh_n_3_noun": "noun",
+        "zh_n_3_unbiased": "noun",
+        "zh_n_3_verb": "noun",
+        "zh_n_4_mixed": "noun",
+        "zh_n_4_noun": "noun",
+        "zh_n_4_unbiased": "noun",
+        "zh_n_4_verb": "noun",
+        "zh_n_5_mixed": "noun",
+        "zh_n_5_noun": "noun",
+        "zh_n_5_unbiased": "verb",
+        "zh_n_5_verb": "noun",
+        "zh_n_6_mixed": "verb",
+        "zh_n_6_noun": "verb",
+        "zh_n_6_unbiased": "noun",
+        "zh_n_6_verb": "noun",
+        "zh_n_7_mixed": "noun",
+        "zh_n_7_noun": "noun",
+        "zh_n_7_unbiased": "noun",
+        "zh_n_7_verb": "noun",
+        "zh_n_8_mixed": "noun",
+        "zh_n_8_noun": "noun",
+        "zh_n_8_unbiased": "noun",
+        "zh_n_8_verb": "noun",
+        "zh_n_9_mixed": "noun",
+        "zh_n_9_noun": "noun",
+        "zh_n_9_unbiased": "noun",
+        "zh_n_9_verb": "noun",
+        "zh_v_1_mixed": "noun",
+        "zh_v_1_noun": "noun",
+        "zh_v_1_unbiased": "verb",
+        "zh_v_1_verb": "noun",
+        "zh_v_10_mixed": "noun",
+        "zh_v_10_noun": "noun",
+        "zh_v_10_unbiased": "noun",
+        "zh_v_10_verb": "noun",
+        "zh_v_2_mixed": "verb",
+        "zh_v_2_noun": "noun",
+        "zh_v_2_unbiased": "noun",
+        "zh_v_2_verb": "noun",
+        "zh_v_3_mixed": "noun",
+        "zh_v_3_noun": "noun",
+        "zh_v_3_unbiased": "noun",
+        "zh_v_3_verb": "noun",
+        "zh_v_4_mixed": "noun",
+        "zh_v_4_noun": "noun",
+        "zh_v_4_unbiased": "noun",
+        "zh_v_4_verb": "verb",
+        "zh_v_5_mixed": "noun",
+        "zh_v_5_noun": "noun",
+        "zh_v_5_unbiased": "noun",
+        "zh_v_5_verb": "noun",
+        "zh_v_6_mixed": "noun",
+        "zh_v_6_noun": "verb",
+        "zh_v_6_unbiased": "noun",
+        "zh_v_6_verb": "noun",
+        "zh_v_7_mixed": "noun",
+        "zh_v_7_noun": "noun",
+        "zh_v_7_unbiased": "noun",
+        "zh_v_7_verb": "verb",
+        "zh_v_8_mixed": "noun",
+        "zh_v_8_noun": "noun",
+        "zh_v_8_unbiased": "noun",
+        "zh_v_8_verb": "noun",
+        "zh_v_9_mixed": "noun",
+        "zh_v_9_noun": "noun",
+        "zh_v_9_unbiased": "verb",
+        "zh_v_9_verb": "noun"
+      },
+      "trained_distribution": {
+        "noun": 122,
+        "verb": 38
+      },
+      "trained_concept_match": 0.5625,
+      "trained_mean_confidence": 0.8451,
+      "random_distribution": {
+        "randT": {
+          "noun": 43,
+          "verb": 7
+        },
+        "randW": {
+          "verb": 11,
+          "noun": 39
+        }
+      },
+      "random_mean_confidence": 0.7961,
+      "finaltest_mean_confidence": 0.974,
+      "centroid_ratio": {
+        "finaltest": 1.002,
+        "trained": 1.161,
+        "random": 1.083
+      }
+    }
+  }
+}

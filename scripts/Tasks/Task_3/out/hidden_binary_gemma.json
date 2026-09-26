@@ -1,0 +1,766 @@
+{
+  "model": "/ix/janetliu/zhj76/model/google/gemma-3-4b-it",
+  "model_key": "gemma",
+  "pos_keys": [
+    "noun",
+    "verb"
+  ],
+  "frames": {
+    "list": "one , {W} , another",
+    "bare": "{W}"
+  },
+  "n_layers": 35,
+  "hidden": 2560,
+  "fitted_on": "real words' own embedding rows injected into the new token",
+  "n_words": {
+    "calibration": 302,
+    "probedev": 148,
+    "finaltest": 200
+  },
+  "n_trained": 160,
+  "n_random_per_norm": 50,
+  "norm_trained_median": 1.1893,
+  "norm_realword_median": 1.0084591507911682,
+  "C": 1.0,
+  "seed": 0,
+  "results": {
+    "list": {
+      "layer_sweep": [
+        {
+          "layer": 0,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 1,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 2,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 3,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 4,
+          "calibration": 1.0,
+          "probedev": 0.9662
+        },
+        {
+          "layer": 5,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 6,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 7,
+          "calibration": 1.0,
+          "probedev": 0.9932
+        },
+        {
+          "layer": 8,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 9,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 10,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 11,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 12,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 13,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 14,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 15,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 16,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 17,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 18,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 19,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 20,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 21,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 22,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 23,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 24,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 25,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 26,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 27,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 28,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 29,
+          "calibration": 1.0,
+          "probedev": 0.9932
+        },
+        {
+          "layer": 30,
+          "calibration": 1.0,
+          "probedev": 0.9932
+        },
+        {
+          "layer": 31,
+          "calibration": 1.0,
+          "probedev": 0.9932
+        },
+        {
+          "layer": 32,
+          "calibration": 1.0,
+          "probedev": 0.9932
+        },
+        {
+          "layer": 33,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 34,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        }
+      ],
+      "chosen_layer": 7,
+      "finaltest_accuracy": 0.965,
+      "finaltest_per_pos": {
+        "noun": 0.98,
+        "verb": 0.95
+      },
+      "trained_predictions": {
+        "en_n_1_mixed": "noun",
+        "en_n_1_noun": "noun",
+        "en_n_1_unbiased": "noun",
+        "en_n_1_verb": "noun",
+        "en_n_10_mixed": "noun",
+        "en_n_10_noun": "noun",
+        "en_n_10_unbiased": "noun",
+        "en_n_10_verb": "noun",
+        "en_n_2_mixed": "noun",
+        "en_n_2_noun": "noun",
+        "en_n_2_unbiased": "noun",
+        "en_n_2_verb": "noun",
+        "en_n_3_mixed": "noun",
+        "en_n_3_noun": "noun",
+        "en_n_3_unbiased": "noun",
+        "en_n_3_verb": "noun",
+        "en_n_4_mixed": "noun",
+        "en_n_4_noun": "noun",
+        "en_n_4_unbiased": "noun",
+        "en_n_4_verb": "noun",
+        "en_n_5_mixed": "noun",
+        "en_n_5_noun": "noun",
+        "en_n_5_unbiased": "noun",
+        "en_n_5_verb": "noun",
+        "en_n_6_mixed": "noun",
+        "en_n_6_noun": "noun",
+        "en_n_6_unbiased": "noun",
+        "en_n_6_verb": "noun",
+        "en_n_7_mixed": "noun",
+        "en_n_7_noun": "noun",
+        "en_n_7_unbiased": "noun",
+        "en_n_7_verb": "noun",
+        "en_n_8_mixed": "noun",
+        "en_n_8_noun": "noun",
+        "en_n_8_unbiased": "noun",
+        "en_n_8_verb": "noun",
+        "en_n_9_mixed": "noun",
+        "en_n_9_noun": "noun",
+        "en_n_9_unbiased": "noun",
+        "en_n_9_verb": "noun",
+        "en_v_1_mixed": "noun",
+        "en_v_1_noun": "noun",
+        "en_v_1_unbiased": "noun",
+        "en_v_1_verb": "noun",
+        "en_v_10_mixed": "noun",
+        "en_v_10_noun": "noun",
+        "en_v_10_unbiased": "noun",
+        "en_v_10_verb": "noun",
+        "en_v_2_mixed": "noun",
+        "en_v_2_noun": "noun",
+        "en_v_2_unbiased": "noun",
+        "en_v_2_verb": "noun",
+        "en_v_3_mixed": "noun",
+        "en_v_3_noun": "noun",
+        "en_v_3_unbiased": "noun",
+        "en_v_3_verb": "noun",
+        "en_v_4_mixed": "noun",
+        "en_v_4_noun": "noun",
+        "en_v_4_unbiased": "noun",
+        "en_v_4_verb": "noun",
+        "en_v_5_mixed": "noun",
+        "en_v_5_noun": "noun",
+        "en_v_5_unbiased": "noun",
+        "en_v_5_verb": "noun",
+        "en_v_6_mixed": "noun",
+        "en_v_6_noun": "noun",
+        "en_v_6_unbiased": "verb",
+        "en_v_6_verb": "noun",
+        "en_v_7_mixed": "noun",
+        "en_v_7_noun": "noun",
+        "en_v_7_unbiased": "noun",
+        "en_v_7_verb": "noun",
+        "en_v_8_mixed": "noun",
+        "en_v_8_noun": "noun",
+        "en_v_8_unbiased": "noun",
+        "en_v_8_verb": "noun",
+        "en_v_9_mixed": "noun",
+        "en_v_9_noun": "noun",
+        "en_v_9_unbiased": "noun",
+        "en_v_9_verb": "noun",
+        "zh_n_1_mixed": "noun",
+        "zh_n_1_noun": "noun",
+        "zh_n_1_unbiased": "noun",
+        "zh_n_1_verb": "noun",
+        "zh_n_10_mixed": "noun",
+        "zh_n_10_noun": "noun",
+        "zh_n_10_unbiased": "noun",
+        "zh_n_10_verb": "noun",
+        "zh_n_2_mixed": "noun",
+        "zh_n_2_noun": "noun",
+        "zh_n_2_unbiased": "noun",
+        "zh_n_2_verb": "noun",
+        "zh_n_3_mixed": "noun",
+        "zh_n_3_noun": "noun",
+        "zh_n_3_unbiased": "noun",
+        "zh_n_3_verb": "noun",
+        "zh_n_4_mixed": "noun",
+        "zh_n_4_noun": "noun",
+        "zh_n_4_unbiased": "noun",
+        "zh_n_4_verb": "noun",
+        "zh_n_5_mixed": "noun",
+        "zh_n_5_noun": "noun",
+        "zh_n_5_unbiased": "noun",
+        "zh_n_5_verb": "noun",
+        "zh_n_6_mixed": "noun",
+        "zh_n_6_noun": "noun",
+        "zh_n_6_unbiased": "noun",
+        "zh_n_6_verb": "noun",
+        "zh_n_7_mixed": "noun",
+        "zh_n_7_noun": "noun",
+        "zh_n_7_unbiased": "noun",
+        "zh_n_7_verb": "noun",
+        "zh_n_8_mixed": "noun",
+        "zh_n_8_noun": "noun",
+        "zh_n_8_unbiased": "noun",
+        "zh_n_8_verb": "noun",
+        "zh_n_9_mixed": "noun",
+        "zh_n_9_noun": "noun",
+        "zh_n_9_unbiased": "noun",
+        "zh_n_9_verb": "noun",
+        "zh_v_1_mixed": "noun",
+        "zh_v_1_noun": "noun",
+        "zh_v_1_unbiased": "noun",
+        "zh_v_1_verb": "noun",
+        "zh_v_10_mixed": "noun",
+        "zh_v_10_noun": "noun",
+        "zh_v_10_unbiased": "noun",
+        "zh_v_10_verb": "noun",
+        "zh_v_2_mixed": "noun",
+        "zh_v_2_noun": "noun",
+        "zh_v_2_unbiased": "noun",
+        "zh_v_2_verb": "noun",
+        "zh_v_3_mixed": "noun",
+        "zh_v_3_noun": "noun",
+        "zh_v_3_unbiased": "noun",
+        "zh_v_3_verb": "noun",
+        "zh_v_4_mixed": "noun",
+        "zh_v_4_noun": "noun",
+        "zh_v_4_unbiased": "noun",
+        "zh_v_4_verb": "noun",
+        "zh_v_5_mixed": "noun",
+        "zh_v_5_noun": "noun",
+        "zh_v_5_unbiased": "noun",
+        "zh_v_5_verb": "noun",
+        "zh_v_6_mixed": "noun",
+        "zh_v_6_noun": "noun",
+        "zh_v_6_unbiased": "noun",
+        "zh_v_6_verb": "noun",
+        "zh_v_7_mixed": "noun",
+        "zh_v_7_noun": "noun",
+        "zh_v_7_unbiased": "noun",
+        "zh_v_7_verb": "noun",
+        "zh_v_8_mixed": "noun",
+        "zh_v_8_noun": "noun",
+        "zh_v_8_unbiased": "noun",
+        "zh_v_8_verb": "noun",
+        "zh_v_9_mixed": "noun",
+        "zh_v_9_noun": "noun",
+        "zh_v_9_unbiased": "noun",
+        "zh_v_9_verb": "noun"
+      },
+      "trained_distribution": {
+        "noun": 159,
+        "verb": 1
+      },
+      "trained_concept_match": 0.5062,
+      "trained_mean_confidence": 0.9827,
+      "random_distribution": {
+        "randT": {
+          "noun": 45,
+          "verb": 5
+        },
+        "randW": {
+          "noun": 48,
+          "verb": 2
+        }
+      },
+      "random_mean_confidence": 0.8975,
+      "finaltest_mean_confidence": 0.9842,
+      "centroid_ratio": {
+        "finaltest": 1.002,
+        "trained": 1.566,
+        "random": 1.504
+      }
+    },
+    "bare": {
+      "layer_sweep": [
+        {
+          "layer": 0,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 1,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 2,
+          "calibration": 1.0,
+          "probedev": 0.973
+        },
+        {
+          "layer": 3,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 4,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 5,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 6,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 7,
+          "calibration": 1.0,
+          "probedev": 0.9932
+        },
+        {
+          "layer": 8,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 9,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 10,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 11,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 12,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 13,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 14,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 15,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 16,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 17,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 18,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 19,
+          "calibration": 1.0,
+          "probedev": 0.9932
+        },
+        {
+          "layer": 20,
+          "calibration": 1.0,
+          "probedev": 0.9932
+        },
+        {
+          "layer": 21,
+          "calibration": 1.0,
+          "probedev": 0.9932
+        },
+        {
+          "layer": 22,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 23,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 24,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 25,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 26,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 27,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 28,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        },
+        {
+          "layer": 29,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 30,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 31,
+          "calibration": 1.0,
+          "probedev": 0.9932
+        },
+        {
+          "layer": 32,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 33,
+          "calibration": 1.0,
+          "probedev": 0.9865
+        },
+        {
+          "layer": 34,
+          "calibration": 1.0,
+          "probedev": 0.9797
+        }
+      ],
+      "chosen_layer": 7,
+      "finaltest_accuracy": 0.985,
+      "finaltest_per_pos": {
+        "noun": 0.99,
+        "verb": 0.98
+      },
+      "trained_predictions": {
+        "en_n_1_mixed": "noun",
+        "en_n_1_noun": "noun",
+        "en_n_1_unbiased": "noun",
+        "en_n_1_verb": "noun",
+        "en_n_10_mixed": "noun",
+        "en_n_10_noun": "noun",
+        "en_n_10_unbiased": "noun",
+        "en_n_10_verb": "noun",
+        "en_n_2_mixed": "noun",
+        "en_n_2_noun": "noun",
+        "en_n_2_unbiased": "noun",
+        "en_n_2_verb": "noun",
+        "en_n_3_mixed": "noun",
+        "en_n_3_noun": "noun",
+        "en_n_3_unbiased": "noun",
+        "en_n_3_verb": "noun",
+        "en_n_4_mixed": "noun",
+        "en_n_4_noun": "noun",
+        "en_n_4_unbiased": "noun",
+        "en_n_4_verb": "noun",
+        "en_n_5_mixed": "noun",
+        "en_n_5_noun": "noun",
+        "en_n_5_unbiased": "noun",
+        "en_n_5_verb": "noun",
+        "en_n_6_mixed": "noun",
+        "en_n_6_noun": "noun",
+        "en_n_6_unbiased": "noun",
+        "en_n_6_verb": "noun",
+        "en_n_7_mixed": "noun",
+        "en_n_7_noun": "noun",
+        "en_n_7_unbiased": "noun",
+        "en_n_7_verb": "noun",
+        "en_n_8_mixed": "noun",
+        "en_n_8_noun": "noun",
+        "en_n_8_unbiased": "noun",
+        "en_n_8_verb": "noun",
+        "en_n_9_mixed": "noun",
+        "en_n_9_noun": "noun",
+        "en_n_9_unbiased": "noun",
+        "en_n_9_verb": "noun",
+        "en_v_1_mixed": "noun",
+        "en_v_1_noun": "noun",
+        "en_v_1_unbiased": "noun",
+        "en_v_1_verb": "noun",
+        "en_v_10_mixed": "noun",
+        "en_v_10_noun": "noun",
+        "en_v_10_unbiased": "noun",
+        "en_v_10_verb": "noun",
+        "en_v_2_mixed": "noun",
+        "en_v_2_noun": "noun",
+        "en_v_2_unbiased": "noun",
+        "en_v_2_verb": "noun",
+        "en_v_3_mixed": "noun",
+        "en_v_3_noun": "noun",
+        "en_v_3_unbiased": "noun",
+        "en_v_3_verb": "noun",
+        "en_v_4_mixed": "noun",
+        "en_v_4_noun": "noun",
+        "en_v_4_unbiased": "noun",
+        "en_v_4_verb": "noun",
+        "en_v_5_mixed": "noun",
+        "en_v_5_noun": "noun",
+        "en_v_5_unbiased": "noun",
+        "en_v_5_verb": "noun",
+        "en_v_6_mixed": "noun",
+        "en_v_6_noun": "noun",
+        "en_v_6_unbiased": "noun",
+        "en_v_6_verb": "noun",
+        "en_v_7_mixed": "noun",
+        "en_v_7_noun": "noun",
+        "en_v_7_unbiased": "noun",
+        "en_v_7_verb": "noun",
+        "en_v_8_mixed": "noun",
+        "en_v_8_noun": "noun",
+        "en_v_8_unbiased": "noun",
+        "en_v_8_verb": "noun",
+        "en_v_9_mixed": "noun",
+        "en_v_9_noun": "noun",
+        "en_v_9_unbiased": "noun",
+        "en_v_9_verb": "noun",
+        "zh_n_1_mixed": "noun",
+        "zh_n_1_noun": "noun",
+        "zh_n_1_unbiased": "noun",
+        "zh_n_1_verb": "noun",
+        "zh_n_10_mixed": "noun",
+        "zh_n_10_noun": "noun",
+        "zh_n_10_unbiased": "noun",
+        "zh_n_10_verb": "noun",
+        "zh_n_2_mixed": "noun",
+        "zh_n_2_noun": "noun",
+        "zh_n_2_unbiased": "noun",
+        "zh_n_2_verb": "noun",
+        "zh_n_3_mixed": "noun",
+        "zh_n_3_noun": "noun",
+        "zh_n_3_unbiased": "noun",
+        "zh_n_3_verb": "noun",
+        "zh_n_4_mixed": "noun",
+        "zh_n_4_noun": "noun",
+        "zh_n_4_unbiased": "noun",
+        "zh_n_4_verb": "noun",
+        "zh_n_5_mixed": "noun",
+        "zh_n_5_noun": "noun",
+        "zh_n_5_unbiased": "noun",
+        "zh_n_5_verb": "noun",
+        "zh_n_6_mixed": "noun",
+        "zh_n_6_noun": "noun",
+        "zh_n_6_unbiased": "noun",
+        "zh_n_6_verb": "noun",
+        "zh_n_7_mixed": "noun",
+        "zh_n_7_noun": "noun",
+        "zh_n_7_unbiased": "noun",
+        "zh_n_7_verb": "noun",
+        "zh_n_8_mixed": "noun",
+        "zh_n_8_noun": "noun",
+        "zh_n_8_unbiased": "noun",
+        "zh_n_8_verb": "noun",
+        "zh_n_9_mixed": "noun",
+        "zh_n_9_noun": "noun",
+        "zh_n_9_unbiased": "noun",
+        "zh_n_9_verb": "noun",
+        "zh_v_1_mixed": "noun",
+        "zh_v_1_noun": "noun",
+        "zh_v_1_unbiased": "noun",
+        "zh_v_1_verb": "noun",
+        "zh_v_10_mixed": "noun",
+        "zh_v_10_noun": "noun",
+        "zh_v_10_unbiased": "noun",
+        "zh_v_10_verb": "noun",
+        "zh_v_2_mixed": "noun",
+        "zh_v_2_noun": "noun",
+        "zh_v_2_unbiased": "noun",
+        "zh_v_2_verb": "noun",
+        "zh_v_3_mixed": "noun",
+        "zh_v_3_noun": "noun",
+        "zh_v_3_unbiased": "noun",
+        "zh_v_3_verb": "noun",
+        "zh_v_4_mixed": "noun",
+        "zh_v_4_noun": "noun",
+        "zh_v_4_unbiased": "noun",
+        "zh_v_4_verb": "noun",
+        "zh_v_5_mixed": "noun",
+        "zh_v_5_noun": "noun",
+        "zh_v_5_unbiased": "noun",
+        "zh_v_5_verb": "noun",
+        "zh_v_6_mixed": "noun",
+        "zh_v_6_noun": "noun",
+        "zh_v_6_unbiased": "noun",
+        "zh_v_6_verb": "noun",
+        "zh_v_7_mixed": "noun",
+        "zh_v_7_noun": "noun",
+        "zh_v_7_unbiased": "noun",
+        "zh_v_7_verb": "noun",
+        "zh_v_8_mixed": "noun",
+        "zh_v_8_noun": "noun",
+        "zh_v_8_unbiased": "noun",
+        "zh_v_8_verb": "noun",
+        "zh_v_9_mixed": "noun",
+        "zh_v_9_noun": "noun",
+        "zh_v_9_unbiased": "noun",
+        "zh_v_9_verb": "noun"
+      },
+      "trained_distribution": {
+        "noun": 160
+      },
+      "trained_concept_match": 0.5,
+      "trained_mean_confidence": 0.9697,
+      "random_distribution": {
+        "randT": {
+          "noun": 49,
+          "verb": 1
+        },
+        "randW": {
+          "noun": 50
+        }
+      },
+      "random_mean_confidence": 0.9417,
+      "finaltest_mean_confidence": 0.9917,
+      "centroid_ratio": {
+        "finaltest": 1.004,
+        "trained": 1.345,
+        "random": 1.045
+      }
+    }
+  }
+}
