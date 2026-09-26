@@ -15,8 +15,13 @@
 # Task 3 on the hidden states, fitted on injected words.
 #
 #   sbatch scripts/Tasks/Task_3/submit_hidden_probe.slurm
-#   sbatch --export=ALL,MODELS="gemma",POSKEYS="noun,verb" \
-#          scripts/Tasks/Task_3/submit_hidden_probe.slurm
+#   POSKEYS=noun,verb TAG=binary sbatch --export=ALL \
+#       scripts/Tasks/Task_3/submit_hidden_probe.slurm
+#
+# Set the variables in the submitting shell, not inside --export. sbatch splits
+# its export list on commas, and the shell has already removed the quotes, so
+# `--export=ALL,POSKEYS="noun,verb"` arrives as POSKEYS=noun plus a stray `verb`
+# entry -- which runs for twelve minutes and then dies on a one-class fit.
 #
 # Replaces the embedding-row probe, which saturated because it was fitted on real
 # words' rows and applied to vectors +10.1 SD (gemma) away from them. Two measured
@@ -59,6 +64,13 @@ MODEL_aya=${MODEL_aya:-/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global}
 NORM_gemma=${NORM_gemma:-1.1893}
 NORM_qwen=${NORM_qwen:-1.2034}
 NORM_aya=${NORM_aya:-1.0731}
+
+# Guard the mistake above rather than discovering it after the forwards are done.
+if [[ "$(tr -cd ',' <<< "$POSKEYS" | wc -c)" -lt 1 ]]; then
+    echo "ERROR: POSKEYS=$POSKEYS has one category. Two are needed."
+    echo "       Set it in the submitting shell: POSKEYS=noun,verb sbatch --export=ALL ..."
+    exit 1
+fi
 
 echo "=== $(date) | node $(hostname) | pos-keys $POSKEYS ==="
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
