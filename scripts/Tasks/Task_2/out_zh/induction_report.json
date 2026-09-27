@@ -1,0 +1,75 @@
+{
+  "treebank": "zh_gsdsimp",
+  "train_sentences": 3997,
+  "train_tokens": 98614,
+  "lexicalized_adverbs": [
+    "一直",
+    "一般",
+    "不",
+    "主要",
+    "仅",
+    "仍",
+    "仍然",
+    "共",
+    "再",
+    "另外",
+    "只",
+    "在",
+    "均",
+    "多",
+    "将",
+    "已",
+    "已经",
+    "并",
+    "很",
+    "更",
+    "曾",
+    "最",
+    "未",
+    "正",
+    "正式",
+    "约",
+    "经常",
+    "逐渐",
+    "通常",
+    "非常"
+  ],
+  "adv_filler": [
+    "重新",
+    "分别",
+    "直接"
+  ],
+  "signatures_ge_min_freq": 9988,
+  "per_pos": {
+    "NOUN": {
+      "pure": 382,
+      "structural": 248,
+      "held_out_ok": 245,
+      "pool": 40,
+      "dropped": {
+        "same construction family": 69,
+        "unrealizable": 1,
+        "same realization": 1
+      }
+    },
+    "VERB": {
+      "pure": 273,
+      "structural": 142,
+      "held_out_ok": 142,
+      "pool": 40,
+      "dropped": {
+        "same construction family": 55,
+        "same realization": 1
+      }
+    },
+    "ADJ": {
+      "pure": 17,
+      "structural": 12,
+      "held_out_ok": 12,
+      "pool": 5,
+      "dropped": {
+        "same construction family": 7
+      }
+    }
+  }
+}

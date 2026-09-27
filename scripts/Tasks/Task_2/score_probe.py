@@ -84,6 +84,12 @@ def main() -> None:
                     help="要打分的类别；'noun,verb' 跳过形容词槽和形容词词表，"
                          "省掉约三分之一的前向。注意产出的 surprisal 文件此后"
                          "只能做二分类。必须和下游 select_slots / calibrate_probe 一致")
+    ap.add_argument("--lang", default="en", choices=("en", "zh"),
+                    help="zh: build each input from token ids -- the left context "
+                         "(with BOS), then the word's single token, then the "
+                         "continuation -- with no spaces and no article repair. A "
+                         "control word and an injected vector then tokenize the same "
+                         "way, and no BPE merge can reach across the slot boundary")
     ap.add_argument("--limit-words", type=int, default=None,
                     help="smoke-test with the first N words per POS")
     args = ap.parse_args()
@@ -165,6 +171,50 @@ def main() -> None:
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
 
+    def zh_parts(item):
+        """Left-context ids (with BOS) and continuation ids for a Chinese item."""
+        pt = item["prefix_tokens"]
+        if pt[-1] != NEOLOGISM or pt.count(NEOLOGISM) != 1:
+            raise SystemExit(f"zh items must end their prefix in the slot: {pt}")
+        left = tok("".join(pt[:-1]), add_special_tokens=True)["input_ids"]
+        cont = tok("".join(item["diagnostic"]), add_special_tokens=False)["input_ids"]
+        if not cont:
+            raise SystemExit(f"empty continuation for {item['signature']}")
+        return left, cont
+
+    @torch.no_grad()
+    def score_ids(left: List[int], word_ids: List[int], cont: List[int]) -> List[float]:
+        """Mean per-token surprisal of `cont` after left + [word], per word id."""
+        seqs = [left + [w] + cont for w in word_ids]
+        width = max(len(x) for x in seqs)
+        ids = torch.full((len(seqs), width), tok.pad_token_id, dtype=torch.long)
+        att = torch.zeros_like(ids)
+        for i, x in enumerate(seqs):
+            ids[i, :len(x)] = torch.tensor(x)
+            att[i, :len(x)] = 1
+        ids, att = ids.to(device), att.to(device)
+        logits = model(input_ids=ids, attention_mask=att).logits.float().log_softmax(-1)
+        start = len(left) + 1
+        out = []
+        for i in range(len(seqs)):
+            lp = [logits[i, t - 1, ids[i, t]].item() for t in range(start, start + len(cont))]
+            out.append(-sum(lp) / len(lp))
+        return out
+
+    word_id: Dict[str, int] = {}
+    if args.lang == "zh" and not args.neologisms:
+        bad = []
+        for role in words:
+            for pos in POS_KEYS:
+                for w in words[role][pos]:
+                    e = tok(w, add_special_tokens=False)["input_ids"]
+                    if len(e) == 1:
+                        word_id[w] = e[0]
+                    else:
+                        bad.append(w)
+        if bad:
+            raise SystemExit(f"{len(bad)} control words are not one token here: {bad[:10]}")
+
     specs = []
     for it in args.neologisms:
         specs += ([l.strip() for l in open(it[1:], encoding="utf-8") if l.strip()]
@@ -194,6 +244,10 @@ def main() -> None:
             load_new_token_embedding(model, path, new_id=new_id)
             for pos, item in slots:
                 key = f"{pos}::{item['signature']}"
+                if args.lang == "zh":
+                    left, cont = zh_parts(item)
+                    matrix[key][label] = score_ids(left, [new_id], cont)[0]
+                    continue
                 pre = render_prefix(item["prefix_tokens"], args.new_token)
                 matrix[key][label] = score_batch([pre], " ".join(item["diagnostic"]))[0]
             if vi % 25 == 0 or vi == len(specs):
@@ -215,8 +269,15 @@ def main() -> None:
         key = f"{pos}::{item['signature']}"
         cont = " ".join(item["diagnostic"])
         scores: Dict[str, float] = {}
+        if args.lang == "zh":
+            left, cont_ids = zh_parts(item)
         for i in range(0, len(entries), args.batch_size):
             chunk = entries[i:i + args.batch_size]
+            if args.lang == "zh":
+                vals = score_ids(left, [word_id[w] for _, _, w in chunk], cont_ids)
+                for (_, _, w), s in zip(chunk, vals):
+                    scores[w] = s
+                continue
             prefixes = [render_prefix(item["prefix_tokens"], w) for _, _, w in chunk]
             for (_, _, w), s in zip(chunk, score_batch(prefixes, cont)):
                 scores[w] = s
@@ -226,13 +287,18 @@ def main() -> None:
               f"{el:6.1f}s  eta {el / si * (len(slots) - si):6.1f}s", flush=True)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
+    def example(it):
+        if args.lang == "zh":
+            return "".join(it["prefix_tokens"]).replace(NEOLOGISM, "□") + "".join(it["diagnostic"])
+        return render_prefix(it["prefix_tokens"], "WORD") + " " + " ".join(it["diagnostic"])
+
     args.out.write_text(json.dumps({
         "model": args.model,
+        "lang": args.lang,
         "slots": [{"pos": p, "signature": it["signature"],
                    "diagnostic": it["diagnostic"],
                    "prefix": " ".join(it["prefix_tokens"]),
-                   "example": render_prefix(it["prefix_tokens"], "WORD")
-                              + " " + " ".join(it["diagnostic"])}
+                   "example": example(it)}
                   for p, it in slots],
         "words": {role: words[role] for role in words},
         # Corpus rank order, so the screening can walk the pool top-down.
