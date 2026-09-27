@@ -1,19 +1,21 @@
 #!/usr/bin/env python
-"""gemma en, verb template: a fresh seed (48) against the vectors already on file.
+"""gemma en, verb template: fresh seeds against the vectors already on file.
 
-Seed 48 changes the N(0, 0.02) init and the data order; everything else (hinge
+    python scripts/Tasks/controls/analyze_seeds.py --seeds 48 49
+
+Each new seed changes the N(0, 0.02) init and the data order; everything else (hinge
 0.1, 1 epoch, raw prompt) matches the sweep. The question is whether gemma's
 verb template reading as noun is a property of the seed-42 run or of the setup.
 
 Compared, per concept (30, or the 20 noun/verb concepts for two-way):
-  seed48 verb       the new vectors
+  seedN verb        the new vectors, one set per seed
   best verb         vectors_best, what every table so far used: 26 seed-42 1-epoch
                     runs, plus a_1 n_6 n_9 (3 epochs) and v_1 (seed 46, 3 epochs)
   no-hinge verb     seed 42, lambda_h 0
   best unbiased     seed-42 1-epoch unbiased, the reference the template moves from
 Two-way Task 3 renormalizes the synonym tags over noun and verb.
 """
-import json, sys, collections
+import argparse, itertools, json, sys, collections
 from pathlib import Path
 import numpy as np
 from scipy.stats import wilcoxon
@@ -48,17 +50,19 @@ def t3(path, cats):
     return out
 
 
-def load(way):
+def load(way, seeds):
     cats = CATS if way == 3 else ("noun", "verb")
     o1, o2, o3 = T / "Task_1/out", T / "Task_2/out", T / "Task_3/out"
     sets = {
-        "seed48 verb":   ({"T1": t1(o1 / f"seed48_gemma_verb_{way}.json", cats),
-                           "T2": t2(o2 / f"seed48_gemma_verb_{way}_calibration.json"),
-                           "T3": t3(o3 / "seed48_gemma_verb_synonyms.json", cats)}, "verb"),
+        f"seed{s} verb": ({"T1": t1(o1 / f"seed{s}_gemma_verb_{way}.json", cats),
+                           "T2": t2(o2 / f"seed{s}_gemma_verb_{way}_calibration.json"),
+                           "T3": t3(o3 / f"seed{s}_gemma_verb_synonyms.json", cats)}, "verb")
+        for s in seeds}
+    sets.update({
         "no-hinge verb": ({"T1": t1(o1 / f"nohinge_gemma_verb_{way}.json", cats),
                            "T2": t2(o2 / f"nohinge_gemma_verb_{way}_calibration.json"),
                            "T3": t3(o3 / "nohinge_gemma_verb_synonyms.json", cats)}, "verb"),
-    }
+    })
     best = {"T1": t1(o1 / f"fsvec{way}_gemma.json", cats),
             "T2": t2(o2 / ("neo_calibration_gemma.json" if way == 3 else "bin2_calibration_gemma.json")),
             "T3": t3(o3 / "synonyms_gemma.json", cats)}
@@ -71,8 +75,8 @@ def hard(v, cats):
     return cats[int(np.argmax(v))] if isinstance(v, list) else v
 
 
-def report(way):
-    cats, sets = load(way)
+def report(way, seeds):
+    cats, sets = load(way, seeds)
     cons = [f"{p}_{i}" for p in ("a", "n", "v") for i in range(1, 11) if way == 3 or p != "a"]
     print(f"\n===== {'three' if way == 3 else 'two'}-way, {len(cons)} concepts =====")
     print("predicted " + "/".join(cats) + " counts, and accuracy against the concept's POS")
@@ -100,19 +104,26 @@ def report(way):
     for t in ("T1", "T3"):
         m = {name: np.array([src[t][f"en_{x}_{tp}"][vi] for x in cons]) for name, (src, tp) in sets.items()}
         print(f"  {t}: " + "  ".join(f"{k} {v.mean():.3f}" for k, v in m.items()))
-        for a, b, sub in (("seed48 verb", "best unbiased", None), ("seed48 verb", "best verb", None),
-                          ("seed48 verb", "best verb", "seed42"), ("best verb", "best unbiased", None)):
+        pairs = [(f"seed{s} verb", ref, sub) for s in seeds
+                 for ref, sub in (("best unbiased", None), ("best verb", None), ("best verb", "seed42"))]
+        for a, b, sub in pairs + [("best verb", "best unbiased", None)]:
             keep = [i for i, x in enumerate(cons) if sub is None or x not in NOT_SEED42]
             d = m[a][keep] - m[b][keep]
             p = wilcoxon(d).pvalue if np.any(d) else 1.0
             print(f"     {a} - {b}{' (seed-42 1-epoch only)' if sub else ''}: {d.mean():+.3f} "
                   f"(Wilcoxon p={p:.3f}, n={len(d)})")
-    print("agreement of hard calls, seed48 verb vs best verb (same concept)")
-    s48, _ = sets["seed48 verb"]; b, _ = sets["best verb"]
-    print("  " + "  ".join(f"{t} {np.mean([hard(s48[t][f'en_{x}_verb'], cats) == hard(b[t][f'en_{x}_verb'], cats) for x in cons]):.2f}"
-                           for t in ("T1", "T2", "T3")))
+    print("agreement of hard calls between verb-template runs (same concept)")
+    runs = [f"seed{s} verb" for s in seeds] + ["best verb", "no-hinge verb"]
+    for a, b in itertools.combinations(runs, 2):
+        A, B = sets[a][0], sets[b][0]
+        print(f"  {a:>14} vs {b:<14}" + "  ".join(
+            f"{t} {np.mean([hard(A[t][f'en_{x}_verb'], cats) == hard(B[t][f'en_{x}_verb'], cats) for x in cons]):.2f}"
+            for t in ("T1", "T2", "T3")))
 
 
 if __name__ == "__main__":
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--seeds", nargs="+", type=int, default=[48])
+    args = ap.parse_args()
     for way in (3, 2):
-        report(way)
+        report(way, args.seeds)
