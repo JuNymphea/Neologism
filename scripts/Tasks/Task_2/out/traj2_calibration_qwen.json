@@ -1,0 +1,688 @@
+{
+  "model": "/ix/janetliu/zhj76/model/Qwen/Qwen3-4B",
+  "auc_computed_on": "calibration words (validation kept clean for accuracy)",
+  "fits": {
+    "NOUN::the {SLOT} of": {
+      "pos": "noun",
+      "mu_match": 2.495902941482055,
+      "sigma_match": 2.5303848461312177,
+      "mu_nonmatch": 4.206093791354176,
+      "sigma_nonmatch": 2.4189616300216867,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "NOUN::the {SLOT} was": {
+      "pos": "noun",
+      "mu_match": 6.032326763039393,
+      "sigma_match": 2.5009706425261906,
+      "mu_nonmatch": 7.067641796655213,
+      "sigma_nonmatch": 2.440677279721471,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "NOUN::a ADJ {SLOT} to": {
+      "pos": "noun",
+      "mu_match": 7.753520396371551,
+      "sigma_match": 2.7051253829101296,
+      "mu_nonmatch": 7.153197976927094,
+      "sigma_nonmatch": 3.4024690423675783,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "NOUN::ADJ {SLOT} with PROPN": {
+      "pos": "noun",
+      "mu_match": 8.96148646272571,
+      "sigma_match": 1.2807183782080753,
+      "mu_nonmatch": 8.492826395871623,
+      "sigma_nonmatch": 1.4890015011668876,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "NOUN::and the {SLOT} is": {
+      "pos": "noun",
+      "mu_match": 2.248373721313003,
+      "sigma_match": 1.1526102317038123,
+      "mu_nonmatch": 3.8601134462861824,
+      "sigma_nonmatch": 1.7201712651007812,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "NOUN::the {SLOT} s": {
+      "pos": "noun",
+      "mu_match": 10.85000061199365,
+      "sigma_match": 2.066875265822965,
+      "mu_nonmatch": 9.87745141667246,
+      "sigma_nonmatch": 2.1157772733322298,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "NOUN::NOUN 's {SLOT} and": {
+      "pos": "noun",
+      "mu_match": 3.4945861906405318,
+      "sigma_match": 1.137544505092859,
+      "mu_nonmatch": 4.346925958102902,
+      "sigma_nonmatch": 1.3719557486035112,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "NOUN::, this {SLOT} VERB": {
+      "pos": "noun",
+      "mu_match": 12.248005128064692,
+      "sigma_match": 1.795339412718742,
+      "mu_nonmatch": 11.278474564583886,
+      "sigma_nonmatch": 2.7742609666466262,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "NOUN::the {SLOT} PRON would VERB": {
+      "pos": "noun",
+      "mu_match": 7.023182422383205,
+      "sigma_match": 0.5911755827651849,
+      "mu_nonmatch": 6.777231381165797,
+      "sigma_nonmatch": 0.6934699069427068,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "NOUN::NUM {SLOT} after PRON": {
+      "pos": "noun",
+      "mu_match": 8.287151693113593,
+      "sigma_match": 1.0918507421204182,
+      "mu_nonmatch": 7.7213972427987105,
+      "sigma_nonmatch": 1.1692989347900844,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "VERB::PRON {SLOT} that PRON": {
+      "pos": "verb",
+      "mu_match": 5.206098084911606,
+      "sigma_match": 1.4648047708177576,
+      "mu_nonmatch": 5.520276489735439,
+      "sigma_nonmatch": 1.0523594970670223,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "VERB::if PRON {SLOT} any": {
+      "pos": "verb",
+      "mu_match": 8.170676341909447,
+      "sigma_match": 2.9515362285517917,
+      "mu_nonmatch": 10.148645922048203,
+      "sigma_nonmatch": 1.6281377042347305,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "VERB::to {SLOT} this NOUN .": {
+      "pos": "verb",
+      "mu_match": 6.231433563674522,
+      "sigma_match": 1.019075794100293,
+      "mu_nonmatch": 5.86950512595524,
+      "sigma_nonmatch": 0.9633483704873963,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "VERB::when PRON {SLOT} the": {
+      "pos": "verb",
+      "mu_match": 3.226857093588406,
+      "sigma_match": 2.638347709828954,
+      "mu_nonmatch": 5.1601660993715,
+      "sigma_nonmatch": 1.6422732090071597,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "VERB::ADV {SLOT} PRON to": {
+      "pos": "verb",
+      "mu_match": 4.29667759568597,
+      "sigma_match": 1.1973306759280773,
+      "mu_nonmatch": 6.173867448868341,
+      "sigma_nonmatch": 1.1376675977255606,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "VERB::also {SLOT} that": {
+      "pos": "verb",
+      "mu_match": 5.545974072241625,
+      "sigma_match": 2.5234442673967723,
+      "mu_nonmatch": 5.422584386258725,
+      "sigma_nonmatch": 1.8766423419887022,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "VERB::can {SLOT} for": {
+      "pos": "verb",
+      "mu_match": 6.245858630991929,
+      "sigma_match": 1.622287582748071,
+      "mu_nonmatch": 4.978077384809785,
+      "sigma_nonmatch": 1.7036351339294646,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "VERB::PRON {SLOT} PRON with": {
+      "pos": "verb",
+      "mu_match": 4.918941196572307,
+      "sigma_match": 1.0719538954106458,
+      "mu_nonmatch": 5.869238750429343,
+      "sigma_nonmatch": 1.0596482337320428,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "VERB::to {SLOT} those": {
+      "pos": "verb",
+      "mu_match": 9.538692512259578,
+      "sigma_match": 1.6965935665681409,
+      "mu_nonmatch": 9.90167103697922,
+      "sigma_nonmatch": 1.9854019675212677,
+      "n_match": 151,
+      "n_nonmatch": 151
+    },
+    "VERB::NOUN to {SLOT} some": {
+      "pos": "verb",
+      "mu_match": 10.596529892738292,
+      "sigma_match": 1.7923252807215286,
+      "mu_nonmatch": 9.255677017944539,
+      "sigma_nonmatch": 1.2806954194712512,
+      "n_match": 151,
+      "n_nonmatch": 151
+    }
+  },
+  "diagnostics": {
+    "NOUN::the {SLOT} of": {
+      "auc": 0.7158457962370072,
+      "cohens_d": 0.6909023813130707,
+      "auc_validation": 0.6705,
+      "mean_match": 2.495902941482055,
+      "mean_nonmatch": 4.206093791354176,
+      "example": "The WORD of",
+      "diagnostic": [
+        "of"
+      ]
+    },
+    "NOUN::the {SLOT} was": {
+      "auc": 0.626902328845226,
+      "cohens_d": 0.4189849203836245,
+      "auc_validation": 0.6805,
+      "mean_match": 6.032326763039393,
+      "mean_nonmatch": 7.067641796655213,
+      "example": "The WORD was",
+      "diagnostic": [
+        "was"
+      ]
+    },
+    "NOUN::a ADJ {SLOT} to": {
+      "auc": 0.3844129643436691,
+      "cohens_d": -0.19531332388921144,
+      "auc_validation": 0.33199999999999996,
+      "mean_match": 7.753520396371551,
+      "mean_nonmatch": 7.153197976927094,
+      "example": "A different WORD to",
+      "diagnostic": [
+        "to"
+      ]
+    },
+    "NOUN::ADJ {SLOT} with PROPN": {
+      "auc": 0.39125476952765226,
+      "cohens_d": -0.3374640996788252,
+      "auc_validation": 0.31699999999999995,
+      "mean_match": 8.96148646272571,
+      "mean_nonmatch": 8.492826395871623,
+      "example": "The different WORD with someone",
+      "diagnostic": [
+        "with",
+        "someone"
+      ]
+    },
+    "NOUN::and the {SLOT} is": {
+      "auc": 0.8275075654576554,
+      "cohens_d": 1.1007985921346377,
+      "auc_validation": 0.7807999999999999,
+      "mean_match": 2.248373721313003,
+      "mean_nonmatch": 3.8601134462861824,
+      "example": "They did it and the WORD is",
+      "diagnostic": [
+        "is"
+      ]
+    },
+    "NOUN::the {SLOT} s": {
+      "auc": 0.34568659269330293,
+      "cohens_d": -0.46500765825435203,
+      "auc_validation": 0.3832,
+      "mean_match": 10.85000061199365,
+      "mean_nonmatch": 9.87745141667246,
+      "example": "The WORD s",
+      "diagnostic": [
+        "s"
+      ]
+    },
+    "NOUN::NOUN 's {SLOT} and": {
+      "auc": 0.709881145563791,
+      "cohens_d": 0.6763461744711159,
+      "auc_validation": 0.7030000000000001,
+      "mean_match": 3.4945861906405318,
+      "mean_nonmatch": 4.346925958102902,
+      "example": "The one's WORD and",
+      "diagnostic": [
+        "and"
+      ]
+    },
+    "NOUN::, this {SLOT} VERB": {
+      "auc": 0.3162580588570677,
+      "cohens_d": -0.41492519426415053,
+      "auc_validation": 0.32489999999999997,
+      "mean_match": 12.248005128064692,
+      "mean_nonmatch": 11.278474564583886,
+      "example": "It was, this WORD happened",
+      "diagnostic": [
+        "happened"
+      ]
+    },
+    "NOUN::the {SLOT} PRON would VERB": {
+      "auc": 0.3660804350686373,
+      "cohens_d": -0.38170060491360697,
+      "auc_validation": 0.3419,
+      "mean_match": 7.023182422383205,
+      "mean_nonmatch": 6.777231381165797,
+      "example": "They have seen the WORD it would do",
+      "diagnostic": [
+        "it",
+        "would",
+        "do"
+      ]
+    },
+    "NOUN::NUM {SLOT} after PRON": {
+      "auc": 0.33423972632779264,
+      "cohens_d": -0.5001198128873043,
+      "auc_validation": 0.29290000000000005,
+      "mean_match": 8.287151693113593,
+      "mean_nonmatch": 7.7213972427987105,
+      "example": "It was one WORD after it",
+      "diagnostic": [
+        "after",
+        "it"
+      ]
+    },
+    "VERB::PRON {SLOT} that PRON": {
+      "auc": 0.5652822244638394,
+      "cohens_d": 0.2463438464879591,
+      "auc_validation": 0.5585,
+      "mean_match": 5.206098084911606,
+      "mean_nonmatch": 5.520276489735439,
+      "example": "I WORD that it",
+      "diagnostic": [
+        "that",
+        "it"
+      ]
+    },
+    "VERB::if PRON {SLOT} any": {
+      "auc": 0.8048331213543265,
+      "cohens_d": 0.8298499989427277,
+      "auc_validation": 0.8442000000000001,
+      "mean_match": 8.170676341909447,
+      "mean_nonmatch": 10.148645922048203,
+      "example": "If it WORD any",
+      "diagnostic": [
+        "any"
+      ]
+    },
+    "VERB::to {SLOT} this NOUN .": {
+      "auc": 0.38261479759659667,
+      "cohens_d": -0.3649930508342169,
+      "auc_validation": 0.4173,
+      "mean_match": 6.231433563674522,
+      "mean_nonmatch": 5.86950512595524,
+      "example": "They tried to WORD this thing",
+      "diagnostic": [
+        "this",
+        "thing"
+      ]
+    },
+    "VERB::when PRON {SLOT} the": {
+      "auc": 0.8165869917986053,
+      "cohens_d": 0.8797798721897694,
+      "auc_validation": 0.868,
+      "mean_match": 3.226857093588406,
+      "mean_nonmatch": 5.1601660993715,
+      "example": "When it WORD the",
+      "diagnostic": [
+        "the"
+      ]
+    },
+    "VERB::ADV {SLOT} PRON to": {
+      "auc": 0.872856453664313,
+      "cohens_d": 1.6073479604690157,
+      "auc_validation": 0.9052,
+      "mean_match": 4.29667759568597,
+      "mean_nonmatch": 6.173867448868341,
+      "example": "Then WORD it to",
+      "diagnostic": [
+        "it",
+        "to"
+      ]
+    },
+    "VERB::also {SLOT} that": {
+      "auc": 0.4131397745712907,
+      "cohens_d": -0.0554888121497539,
+      "auc_validation": 0.4073,
+      "mean_match": 5.545974072241625,
+      "mean_nonmatch": 5.422584386258725,
+      "example": "They also WORD that",
+      "diagnostic": [
+        "that"
+      ]
+    },
+    "VERB::can {SLOT} for": {
+      "auc": 0.21542914784439282,
+      "cohens_d": -0.762135692795324,
+      "auc_validation": 0.25229999999999997,
+      "mean_match": 6.245858630991929,
+      "mean_nonmatch": 4.978077384809785,
+      "example": "They can WORD for",
+      "diagnostic": [
+        "for"
+      ]
+    },
+    "VERB::PRON {SLOT} PRON with": {
+      "auc": 0.7486075172141573,
+      "cohens_d": 0.8916126569076214,
+      "auc_validation": 0.7241,
+      "mean_match": 4.918941196572307,
+      "mean_nonmatch": 5.869238750429343,
+      "example": "They WORD it with",
+      "diagnostic": [
+        "it",
+        "with"
+      ]
+    },
+    "VERB::to {SLOT} those": {
+      "auc": 0.5637910617955353,
+      "cohens_d": 0.19656027881514235,
+      "auc_validation": 0.5853999999999999,
+      "mean_match": 9.538692512259578,
+      "mean_nonmatch": 9.90167103697922,
+      "example": "They tried to WORD those",
+      "diagnostic": [
+        "those"
+      ]
+    },
+    "VERB::NOUN to {SLOT} some": {
+      "auc": 0.2520064909433797,
+      "cohens_d": -0.8608121751077994,
+      "auc_validation": 0.25639999999999996,
+      "mean_match": 10.596529892738292,
+      "mean_nonmatch": 9.255677017944539,
+      "example": "The thing to WORD some",
+      "diagnostic": [
+        "some"
+      ]
+    }
+  },
+  "neologisms": {
+    "en_n_10_mixed@ep1_s42": "noun",
+    "en_n_10_mixed@ep3_s42": "verb",
+    "en_n_1_mixed@ep1_s42": "noun",
+    "en_n_1_mixed@ep3_s42": "noun",
+    "en_n_1_verb@ep1_s42": "verb",
+    "en_n_1_verb@ep3_s42": "noun",
+    "en_n_1_verb@ep5_s42": "noun",
+    "en_n_2_mixed@ep1_s42": "verb",
+    "en_n_2_mixed@ep3_s42": "verb",
+    "en_n_2_verb@ep11_s42": "noun",
+    "en_n_2_verb@ep1_s42": "verb",
+    "en_n_2_verb@ep3_s42": "verb",
+    "en_n_2_verb@ep3_s46": "verb",
+    "en_n_2_verb@ep3_s47": "verb",
+    "en_n_2_verb@ep5_s42": "verb",
+    "en_n_2_verb@ep7_s42": "verb",
+    "en_n_2_verb@ep9_s42": "verb",
+    "en_n_3_verb@ep1_s42": "noun",
+    "en_n_3_verb@ep3_s42": "verb",
+    "en_n_5_mixed@ep1_s42": "noun",
+    "en_n_5_mixed@ep3_s42": "verb",
+    "en_n_5_verb@ep1_s42": "verb",
+    "en_n_5_verb@ep3_s42": "verb",
+    "en_n_6_verb@ep1_s42": "verb",
+    "en_n_6_verb@ep3_s42": "verb",
+    "en_n_7_noun@ep1_s42": "noun",
+    "en_n_7_noun@ep3_s42": "noun",
+    "en_n_9_noun@ep1_s42": "noun",
+    "en_n_9_noun@ep3_s42": "verb",
+    "en_n_9_verb@ep1_s42": "verb",
+    "en_n_9_verb@ep3_s42": "verb",
+    "en_v_10_mixed@ep1_s42": "noun",
+    "en_v_10_mixed@ep3_s42": "noun",
+    "en_v_10_noun@ep1_s42": "noun",
+    "en_v_10_noun@ep3_s42": "noun",
+    "en_v_10_noun@ep5_s42": "noun",
+    "en_v_10_verb@ep1_s42": "noun",
+    "en_v_10_verb@ep3_s42": "noun",
+    "en_v_1_mixed@ep1_s42": "verb",
+    "en_v_1_mixed@ep3_s42": "verb",
+    "en_v_1_noun@ep1_s42": "noun",
+    "en_v_1_noun@ep3_s42": "noun",
+    "en_v_1_noun@ep5_s42": "noun",
+    "en_v_1_verb@ep11_s42": "noun",
+    "en_v_1_verb@ep1_s42": "verb",
+    "en_v_1_verb@ep3_s42": "verb",
+    "en_v_1_verb@ep3_s46": "verb",
+    "en_v_1_verb@ep5_s42": "noun",
+    "en_v_1_verb@ep7_s42": "noun",
+    "en_v_1_verb@ep9_s42": "verb",
+    "en_v_2_mixed@ep1_s42": "verb",
+    "en_v_2_mixed@ep3_s42": "verb",
+    "en_v_2_mixed@ep5_s42": "verb",
+    "en_v_2_mixed@ep7_s42": "verb",
+    "en_v_2_mixed@ep9_s42": "verb",
+    "en_v_2_noun@ep1_s42": "noun",
+    "en_v_2_noun@ep3_s42": "verb",
+    "en_v_2_unbiased@ep1_s42": "noun",
+    "en_v_2_unbiased@ep3_s42": "verb",
+    "en_v_2_unbiased@ep5_s42": "noun",
+    "en_v_2_verb@ep11_s42": "verb",
+    "en_v_2_verb@ep1_s42": "verb",
+    "en_v_2_verb@ep3_s42": "verb",
+    "en_v_2_verb@ep3_s46": "noun",
+    "en_v_2_verb@ep3_s47": "noun",
+    "en_v_2_verb@ep5_s42": "verb",
+    "en_v_2_verb@ep7_s42": "verb",
+    "en_v_2_verb@ep9_s42": "verb",
+    "en_v_3_verb@ep1_s42": "noun",
+    "en_v_3_verb@ep3_s42": "noun",
+    "en_v_4_noun@ep1_s42": "noun",
+    "en_v_4_noun@ep3_s42": "noun",
+    "en_v_5_unbiased@ep1_s42": "noun",
+    "en_v_5_unbiased@ep3_s42": "noun",
+    "en_v_5_verb@ep1_s42": "noun",
+    "en_v_5_verb@ep3_s42": "noun",
+    "en_v_6_mixed@ep1_s42": "verb",
+    "en_v_6_mixed@ep3_s42": "verb",
+    "en_v_6_noun@ep1_s42": "noun",
+    "en_v_6_noun@ep3_s42": "verb",
+    "en_v_6_verb@ep1_s42": "verb",
+    "en_v_6_verb@ep3_s42": "verb",
+    "en_v_6_verb@ep5_s42": "verb",
+    "en_v_7_noun@ep1_s42": "noun",
+    "en_v_7_noun@ep3_s42": "noun",
+    "en_v_7_unbiased@ep1_s42": "noun",
+    "en_v_7_unbiased@ep3_s42": "noun",
+    "en_v_8_mixed@ep1_s42": "noun",
+    "en_v_8_mixed@ep3_s42": "verb",
+    "en_v_8_verb@ep11_s42": "noun",
+    "en_v_8_verb@ep1_s42": "verb",
+    "en_v_8_verb@ep3_s42": "noun",
+    "en_v_8_verb@ep3_s46": "noun",
+    "en_v_8_verb@ep5_s42": "verb",
+    "en_v_8_verb@ep7_s42": "noun",
+    "en_v_8_verb@ep9_s42": "noun",
+    "en_v_9_mixed@ep1_s42": "noun",
+    "en_v_9_mixed@ep3_s42": "noun",
+    "en_v_9_verb@ep1_s42": "verb",
+    "en_v_9_verb@ep3_s42": "verb",
+    "en_v_9_verb@ep5_s42": "verb",
+    "zh_n_2_mixed@ep11_s42": "noun",
+    "zh_n_2_mixed@ep13_s42": "noun",
+    "zh_n_2_mixed@ep15_s42": "verb",
+    "zh_n_2_mixed@ep17_s42": "noun",
+    "zh_n_2_mixed@ep1_s42": "verb",
+    "zh_n_2_mixed@ep3_s42": "verb",
+    "zh_n_2_mixed@ep3_s43": "verb",
+    "zh_n_2_mixed@ep5_s42": "verb",
+    "zh_n_2_mixed@ep7_s42": "noun",
+    "zh_n_2_mixed@ep9_s42": "noun",
+    "zh_n_2_noun@ep1_s42": "noun",
+    "zh_n_2_noun@ep3_s42": "noun",
+    "zh_n_2_verb@ep1_s42": "noun",
+    "zh_n_2_verb@ep3_s42": "noun",
+    "zh_n_4_mixed@ep11_s42": "verb",
+    "zh_n_4_mixed@ep1_s42": "noun",
+    "zh_n_4_mixed@ep3_s42": "verb",
+    "zh_n_4_mixed@ep5_s42": "verb",
+    "zh_n_4_mixed@ep7_s42": "verb",
+    "zh_n_4_mixed@ep9_s42": "verb",
+    "zh_n_4_noun@ep1_s42": "noun",
+    "zh_n_4_noun@ep3_s42": "noun",
+    "zh_n_4_noun@ep5_s42": "noun",
+    "zh_n_4_verb@ep11_s42": "verb",
+    "zh_n_4_verb@ep13_s42": "verb",
+    "zh_n_4_verb@ep15_s42": "noun",
+    "zh_n_4_verb@ep17_s42": "noun",
+    "zh_n_4_verb@ep1_s42": "verb",
+    "zh_n_4_verb@ep3_s42": "verb",
+    "zh_n_4_verb@ep3_s43": "noun",
+    "zh_n_4_verb@ep3_s44": "verb",
+    "zh_n_4_verb@ep3_s46": "noun",
+    "zh_n_4_verb@ep3_s47": "noun",
+    "zh_n_4_verb@ep5_s42": "verb",
+    "zh_n_4_verb@ep7_s42": "verb",
+    "zh_n_4_verb@ep9_s42": "verb",
+    "zh_n_4_verb@s3": "noun",
+    "zh_n_5_verb@ep1_s42": "verb",
+    "zh_n_5_verb@ep3_s42": "verb",
+    "zh_n_6_verb@ep1_s42": "noun",
+    "zh_n_6_verb@ep3_s42": "noun",
+    "zh_n_7_mixed@ep11_s42": "verb",
+    "zh_n_7_mixed@ep13_s42": "verb",
+    "zh_n_7_mixed@ep15_s42": "verb",
+    "zh_n_7_mixed@ep17_s42": "verb",
+    "zh_n_7_mixed@ep1_s42": "verb",
+    "zh_n_7_mixed@ep3_s42": "verb",
+    "zh_n_7_mixed@ep3_s43": "noun",
+    "zh_n_7_mixed@ep3_s44": "verb",
+    "zh_n_7_mixed@ep5_s42": "verb",
+    "zh_n_7_mixed@ep7_s42": "verb",
+    "zh_n_7_mixed@ep9_s42": "verb",
+    "zh_n_7_verb@ep1_s42": "noun",
+    "zh_n_7_verb@ep3_s42": "noun",
+    "zh_n_7_verb@ep5_s42": "noun",
+    "zh_n_8_verb@ep1_s42": "noun",
+    "zh_n_8_verb@ep3_s42": "noun",
+    "zh_v_1_mixed@ep11_s42": "verb",
+    "zh_v_1_mixed@ep13_s42": "verb",
+    "zh_v_1_mixed@ep1_s42": "noun",
+    "zh_v_1_mixed@ep3_s42": "verb",
+    "zh_v_1_mixed@ep5_s42": "verb",
+    "zh_v_1_mixed@ep7_s42": "verb",
+    "zh_v_1_mixed@ep9_s42": "verb",
+    "zh_v_1_verb@ep1_s42": "noun",
+    "zh_v_1_verb@ep3_s42": "verb",
+    "zh_v_1_verb@ep5_s42": "noun",
+    "zh_v_1_verb@ep7_s42": "noun",
+    "zh_v_2_mixed@ep1_s42": "noun",
+    "zh_v_2_mixed@ep3_s42": "verb",
+    "zh_v_2_verb@ep1_s42": "noun",
+    "zh_v_2_verb@ep3_s42": "noun",
+    "zh_v_3_noun@ep1_s42": "noun",
+    "zh_v_3_noun@ep3_s42": "noun",
+    "zh_v_3_verb@ep1_s42": "noun",
+    "zh_v_3_verb@ep3_s42": "verb",
+    "zh_v_4_mixed@ep11_s42": "noun",
+    "zh_v_4_mixed@ep13_s42": "noun",
+    "zh_v_4_mixed@ep15_s42": "noun",
+    "zh_v_4_mixed@ep17_s42": "noun",
+    "zh_v_4_mixed@ep1_s42": "noun",
+    "zh_v_4_mixed@ep3_s42": "noun",
+    "zh_v_4_mixed@ep3_s43": "verb",
+    "zh_v_4_mixed@ep3_s44": "noun",
+    "zh_v_4_mixed@ep3_s46": "verb",
+    "zh_v_4_mixed@ep3_s47": "noun",
+    "zh_v_4_mixed@ep5_s42": "verb",
+    "zh_v_4_mixed@ep7_s42": "verb",
+    "zh_v_4_mixed@ep9_s42": "noun",
+    "zh_v_4_mixed@s3": "verb",
+    "zh_v_4_noun@ep1_s42": "noun",
+    "zh_v_4_noun@ep3_s42": "noun",
+    "zh_v_4_verb@ep11_s42": "noun",
+    "zh_v_4_verb@ep13_s42": "noun",
+    "zh_v_4_verb@ep15_s42": "noun",
+    "zh_v_4_verb@ep17_s42": "noun",
+    "zh_v_4_verb@ep1_s42": "noun",
+    "zh_v_4_verb@ep3_s42": "verb",
+    "zh_v_4_verb@ep3_s43": "noun",
+    "zh_v_4_verb@ep3_s44": "noun",
+    "zh_v_4_verb@ep3_s46": "verb",
+    "zh_v_4_verb@ep3_s47": "verb",
+    "zh_v_4_verb@ep5_s42": "verb",
+    "zh_v_4_verb@ep7_s42": "verb",
+    "zh_v_4_verb@ep9_s42": "noun",
+    "zh_v_4_verb@s3": "verb",
+    "zh_v_5_verb@ep1_s42": "noun",
+    "zh_v_5_verb@ep3_s42": "noun",
+    "zh_v_5_verb@ep5_s42": "verb",
+    "zh_v_6_mixed@ep1_s42": "verb",
+    "zh_v_6_mixed@ep3_s42": "verb",
+    "zh_v_6_verb@ep11_s42": "noun",
+    "zh_v_6_verb@ep13_s42": "noun",
+    "zh_v_6_verb@ep15_s42": "noun",
+    "zh_v_6_verb@ep17_s42": "noun",
+    "zh_v_6_verb@ep1_s42": "noun",
+    "zh_v_6_verb@ep3_s42": "noun",
+    "zh_v_6_verb@ep3_s43": "noun",
+    "zh_v_6_verb@ep3_s44": "verb",
+    "zh_v_6_verb@ep5_s42": "noun",
+    "zh_v_6_verb@ep7_s42": "noun",
+    "zh_v_6_verb@ep9_s42": "noun",
+    "zh_v_7_mixed@ep1_s42": "verb",
+    "zh_v_7_mixed@ep3_s42": "noun",
+    "zh_v_7_noun@ep1_s42": "noun",
+    "zh_v_7_noun@ep3_s42": "noun",
+    "zh_v_7_unbiased@ep1_s42": "noun",
+    "zh_v_7_unbiased@ep3_s42": "noun"
+  },
+  "kept_slots": [
+    "NOUN::, this {SLOT} VERB",
+    "NOUN::ADJ {SLOT} with PROPN",
+    "NOUN::NOUN 's {SLOT} and",
+    "NOUN::NUM {SLOT} after PRON",
+    "NOUN::a ADJ {SLOT} to",
+    "NOUN::and the {SLOT} is",
+    "NOUN::the {SLOT} PRON would VERB",
+    "NOUN::the {SLOT} of",
+    "NOUN::the {SLOT} s",
+    "NOUN::the {SLOT} was",
+    "VERB::ADV {SLOT} PRON to",
+    "VERB::NOUN to {SLOT} some",
+    "VERB::PRON {SLOT} PRON with",
+    "VERB::PRON {SLOT} that PRON",
+    "VERB::also {SLOT} that",
+    "VERB::can {SLOT} for",
+    "VERB::if PRON {SLOT} any",
+    "VERB::to {SLOT} this NOUN .",
+    "VERB::to {SLOT} those",
+    "VERB::when PRON {SLOT} the"
+  ],
+  "dropped_slots": [],
+  "accuracy": {
+    "frozen_probe_set": {
+      "per_pos": {
+        "noun": {
+          "n": 100,
+          "correct": 91,
+          "accuracy": 0.91
+        },
+        "verb": {
+          "n": 100,
+          "correct": 96,
+          "accuracy": 0.96
+        }
+      },
+      "overall": 0.935,
+      "n_slots": 20
+    }
+  }
+}
