@@ -115,17 +115,18 @@ nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 # PARALLEL_TEMPLATES trains the templates side by side, one process each, on the
 # one GPU. At batch size 1 a step is launch-bound -- an H200 sits at ~30%
 # utilization with one process -- so a few processes cost little more than one.
-# Each process holds its own copy of the weights, ~8 GB, plus activations, so
-# the GPU's memory sets how many fit: PARALLEL_TEMPLATES=auto allows one per
-# 11 GB after 4 GB of headroom (3 on an A100-40GB, 5 on an H200); a number sets
-# it outright. Templates beyond that run in the next wave. Each process writes
+# Each process holds its own copy of the weights, ~8 GB, plus activations: with
+# --no_gradient_checkpointing a process peaks near 20 GB on the longest items
+# (measured on an A100-40GB, where even two ran out of memory), ~12 GB with it.
+# PARALLEL_TEMPLATES=auto allows one per 20 GB after 4 GB of headroom -- 1 on an
+# A100-40GB, 6 on an H200; a number sets it outright. Templates beyond that run in the next wave. Each process writes
 # its own log, logs/<job>_<array>_<task>_<template>.out.
 if [[ -n "${PARALLEL_TEMPLATES:-}" ]]; then
     export OMP_NUM_THREADS=1
     NPAR=$PARALLEL_TEMPLATES
     if [[ "$NPAR" == auto ]]; then
         MEM_MIB=$(nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits | head -1)
-        NPAR=$(( (MEM_MIB / 1024 - 4) / 11 ))
+        NPAR=$(( (MEM_MIB / 1024 - 4) / 20 ))
         (( NPAR < 1 )) && NPAR=1
     fi
     echo "    $NPAR template(s) at a time"
