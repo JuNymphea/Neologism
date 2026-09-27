@@ -1,0 +1,3989 @@
+{
+  "criteria": {
+    "min_ud_count": 3,
+    "min_dominance": 0.9,
+    "jieba_tags": {
+      "noun": [
+        "n"
+      ],
+      "verb": [
+        "v"
+      ],
+      "adj": [
+        "a"
+      ]
+    },
+    "length": "2-4 Han characters",
+    "single_token_in": [
+      "aya",
+      "gemma",
+      "qwen"
+    ],
+    "frequency": "log10 jieba dict frequency, matched per bin over the union",
+    "excluded": "probe-item words and Chinese training-template words"
+  },
+  "pool": {
+    "noun": 642,
+    "verb": 247,
+    "adj": 81
+  },
+  "dropped": {
+    "too rare in UD": 8253,
+    "UD category below dominance": 814,
+    "inflected / negated form": 7,
+    "jieba disagrees or has no entry": 635,
+    "not one token in all three tokenizers": 894,
+    "in the probe items or templates": 10
+  },
+  "bin_edges_log10": [
+    2.926,
+    3.169,
+    3.297,
+    3.427,
+    3.544,
+    3.674,
+    3.807,
+    3.947,
+    4.182
+  ],
+  "seed": 20260927,
+  "words": {
+    "女神": {
+      "word": "女神",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 307,
+      "log10_freq": 2.489,
+      "token_ids": {
+        "gemma": 133533,
+        "qwen": 107697,
+        "aya": 64467
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "陶瓷": {
+      "word": "陶瓷",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 701,
+      "log10_freq": 2.846,
+      "token_ids": {
+        "gemma": 188597,
+        "qwen": 105845,
+        "aya": 183670
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "玩家": {
+      "word": "玩家",
+      "ud_count": 19,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 265,
+      "log10_freq": 2.425,
+      "token_ids": {
+        "gemma": 36093,
+        "qwen": 99673,
+        "aya": 129517
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "血压": {
+      "word": "血压",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 622,
+      "log10_freq": 2.794,
+      "token_ids": {
+        "gemma": 198109,
+        "qwen": 103285,
+        "aya": 64698
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "行星": {
+      "word": "行星",
+      "ud_count": 48,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 703,
+      "log10_freq": 2.848,
+      "token_ids": {
+        "gemma": 182880,
+        "qwen": 113837,
+        "aya": 37534
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "序列": {
+      "word": "序列",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 803,
+      "log10_freq": 2.905,
+      "token_ids": {
+        "gemma": 66380,
+        "qwen": 116951,
+        "aya": 245948
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "园区": {
+      "word": "园区",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 397,
+      "log10_freq": 2.6,
+      "token_ids": {
+        "gemma": 178958,
+        "qwen": 101250,
+        "aya": 180753
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "疫苗": {
+      "word": "疫苗",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 373,
+      "log10_freq": 2.573,
+      "token_ids": {
+        "gemma": 137134,
+        "qwen": 105409,
+        "aya": 168249
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "视觉": {
+      "word": "视觉",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 672,
+      "log10_freq": 2.828,
+      "token_ids": {
+        "gemma": 92178,
+        "qwen": 104916,
+        "aya": 179775
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "路径": {
+      "word": "路径",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 486,
+      "log10_freq": 2.688,
+      "token_ids": {
+        "gemma": 46982,
+        "qwen": 76837,
+        "aya": 74447
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "篮球": {
+      "word": "篮球",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 634,
+      "log10_freq": 2.803,
+      "token_ids": {
+        "gemma": 212336,
+        "qwen": 105732,
+        "aya": 103663
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "方形": {
+      "word": "方形",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 494,
+      "log10_freq": 2.695,
+      "token_ids": {
+        "gemma": 135703,
+        "qwen": 113937,
+        "aya": 101242
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "物业": {
+      "word": "物业",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 239,
+      "log10_freq": 2.38,
+      "token_ids": {
+        "gemma": 233816,
+        "qwen": 100864,
+        "aya": 134973
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "光源": {
+      "word": "光源",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 284,
+      "log10_freq": 2.455,
+      "token_ids": {
+        "gemma": 210729,
+        "qwen": 115867,
+        "aya": 215611
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "赛事": {
+      "word": "赛事",
+      "ud_count": 17,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 599,
+      "log10_freq": 2.778,
+      "token_ids": {
+        "gemma": 192740,
+        "qwen": 104909,
+        "aya": 219550
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "公寓": {
+      "word": "公寓",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 597,
+      "log10_freq": 2.777,
+      "token_ids": {
+        "gemma": 168554,
+        "qwen": 105517,
+        "aya": 115230
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "理事": {
+      "word": "理事",
+      "ud_count": 8,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 451,
+      "log10_freq": 2.655,
+      "token_ids": {
+        "gemma": 122228,
+        "qwen": 101779,
+        "aya": 237114
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "播放": {
+      "word": "播放",
+      "ud_count": 12,
+      "ud_dominance": 0.917,
+      "jieba_tag": "v",
+      "jieba_freq": 523,
+      "log10_freq": 2.719,
+      "token_ids": {
+        "gemma": 83448,
+        "qwen": 105956,
+        "aya": 107000
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "排水": {
+      "word": "排水",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 740,
+      "log10_freq": 2.87,
+      "token_ids": {
+        "gemma": 127850,
+        "qwen": 107266,
+        "aya": 136789
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "限定": {
+      "word": "限定",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 429,
+      "log10_freq": 2.633,
+      "token_ids": {
+        "gemma": 35941,
+        "qwen": 112860,
+        "aya": 50658
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "填充": {
+      "word": "填充",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 231,
+      "log10_freq": 2.365,
+      "token_ids": {
+        "gemma": 108471,
+        "qwen": 115424,
+        "aya": 183077
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "行驶": {
+      "word": "行驶",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 726,
+      "log10_freq": 2.862,
+      "token_ids": {
+        "gemma": 199975,
+        "qwen": 106019,
+        "aya": 211019
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "怀孕": {
+      "word": "怀孕",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 797,
+      "log10_freq": 2.902,
+      "token_ids": {
+        "gemma": 179476,
+        "qwen": 105432,
+        "aya": 123563
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "暗示": {
+      "word": "暗示",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 808,
+      "log10_freq": 2.908,
+      "token_ids": {
+        "gemma": 199449,
+        "qwen": 108574,
+        "aya": 248704
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "排出": {
+      "word": "排出",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 617,
+      "log10_freq": 2.791,
+      "token_ids": {
+        "gemma": 174862,
+        "qwen": 109870,
+        "aya": 180472
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "传送": {
+      "word": "传送",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 670,
+      "log10_freq": 2.827,
+      "token_ids": {
+        "gemma": 190696,
+        "qwen": 112523,
+        "aya": 242473
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "上演": {
+      "word": "上演",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 642,
+      "log10_freq": 2.808,
+      "token_ids": {
+        "gemma": 221358,
+        "qwen": 107185,
+        "aya": 191438
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "停车": {
+      "word": "停车",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 258,
+      "log10_freq": 2.413,
+      "token_ids": {
+        "gemma": 102460,
+        "qwen": 101531,
+        "aya": 198245
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "质疑": {
+      "word": "质疑",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 557,
+      "log10_freq": 2.747,
+      "token_ids": {
+        "gemma": 142292,
+        "qwen": 105907,
+        "aya": 195373
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "上映": {
+      "word": "上映",
+      "ud_count": 10,
+      "ud_dominance": 0.9,
+      "jieba_tag": "v",
+      "jieba_freq": 213,
+      "log10_freq": 2.33,
+      "token_ids": {
+        "gemma": 124519,
+        "qwen": 108379,
+        "aya": 191440
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "演唱": {
+      "word": "演唱",
+      "ud_count": 12,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 579,
+      "log10_freq": 2.763,
+      "token_ids": {
+        "gemma": 122811,
+        "qwen": 103407,
+        "aya": 144275
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "放置": {
+      "word": "放置",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 446,
+      "log10_freq": 2.65,
+      "token_ids": {
+        "gemma": 102921,
+        "qwen": 107826,
+        "aya": 106413
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "讲述": {
+      "word": "讲述",
+      "ud_count": 8,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 776,
+      "log10_freq": 2.89,
+      "token_ids": {
+        "gemma": 126102,
+        "qwen": 102881,
+        "aya": 155510
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "专注": {
+      "word": "专注",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 416,
+      "log10_freq": 2.62,
+      "token_ids": {
+        "gemma": 136837,
+        "qwen": 102901,
+        "aya": 153975
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "浪漫": {
+      "word": "浪漫",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 754,
+      "log10_freq": 2.878,
+      "token_ids": {
+        "gemma": 128876,
+        "qwen": 105750,
+        "aya": 220067
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "神奇": {
+      "word": "神奇",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 695,
+      "log10_freq": 2.843,
+      "token_ids": {
+        "gemma": 170379,
+        "qwen": 106075,
+        "aya": 135621
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "好奇": {
+      "word": "好奇",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 721,
+      "log10_freq": 2.859,
+      "token_ids": {
+        "gemma": 142464,
+        "qwen": 102962,
+        "aya": 212881
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "耐心": {
+      "word": "耐心",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 823,
+      "log10_freq": 2.916,
+      "token_ids": {
+        "gemma": 205321,
+        "qwen": 105779,
+        "aya": 112053
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "精密": {
+      "word": "精密",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 559,
+      "log10_freq": 2.748,
+      "token_ids": {
+        "gemma": 225706,
+        "qwen": 108740,
+        "aya": 195714
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "模特": {
+      "word": "模特",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 284,
+      "log10_freq": 2.455,
+      "token_ids": {
+        "gemma": 208771,
+        "qwen": 110016,
+        "aya": 91569
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "便捷": {
+      "word": "便捷",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 503,
+      "log10_freq": 2.702,
+      "token_ids": {
+        "gemma": 193364,
+        "qwen": 105499,
+        "aya": 166075
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "清新": {
+      "word": "清新",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 774,
+      "log10_freq": 2.889,
+      "token_ids": {
+        "gemma": 190869,
+        "qwen": 106981,
+        "aya": 215695
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 0
+    },
+    "柔软": {
+      "word": "柔软",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 686,
+      "log10_freq": 2.837,
+      "token_ids": {
+        "gemma": 198901,
+        "qwen": 109278,
+        "aya": 249318
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "幸运": {
+      "word": "幸运",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 670,
+      "log10_freq": 2.827,
+      "token_ids": {
+        "gemma": 165804,
+        "qwen": 105977,
+        "aya": 198128
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "幼稚": {
+      "word": "幼稚",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 362,
+      "log10_freq": 2.56,
+      "token_ids": {
+        "gemma": 170418,
+        "qwen": 117230,
+        "aya": 248490
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "焦虑": {
+      "word": "焦虑",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 676,
+      "log10_freq": 2.831,
+      "token_ids": {
+        "gemma": 235317,
+        "qwen": 107115,
+        "aya": 200056
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 0
+    },
+    "微妙": {
+      "word": "微妙",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 335,
+      "log10_freq": 2.526,
+      "token_ids": {
+        "gemma": 200222,
+        "qwen": 118411,
+        "aya": 154418
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "舒适": {
+      "word": "舒适",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 642,
+      "log10_freq": 2.808,
+      "token_ids": {
+        "gemma": 99843,
+        "qwen": 102476,
+        "aya": 156210
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "激活": {
+      "word": "激活",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 246,
+      "log10_freq": 2.393,
+      "token_ids": {
+        "gemma": 119454,
+        "qwen": 108248,
+        "aya": 154842
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "脆弱": {
+      "word": "脆弱",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 478,
+      "log10_freq": 2.68,
+      "token_ids": {
+        "gemma": 215499,
+        "qwen": 110149,
+        "aya": 185526
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "流畅": {
+      "word": "流畅",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 424,
+      "log10_freq": 2.628,
+      "token_ids": {
+        "gemma": 219786,
+        "qwen": 110205,
+        "aya": 240625
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 0
+    },
+    "首席": {
+      "word": "首席",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1201,
+      "log10_freq": 3.08,
+      "token_ids": {
+        "gemma": 141830,
+        "qwen": 106419,
+        "aya": 216734
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "商店": {
+      "word": "商店",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 886,
+      "log10_freq": 2.948,
+      "token_ids": {
+        "gemma": 90554,
+        "qwen": 106899,
+        "aya": 178910
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "密码": {
+      "word": "密码",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1022,
+      "log10_freq": 3.01,
+      "token_ids": {
+        "gemma": 65109,
+        "qwen": 32867,
+        "aya": 83317
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "头部": {
+      "word": "头部",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1008,
+      "log10_freq": 3.004,
+      "token_ids": {
+        "gemma": 160963,
+        "qwen": 107200,
+        "aya": 216492
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "教堂": {
+      "word": "教堂",
+      "ud_count": 23,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1364,
+      "log10_freq": 3.135,
+      "token_ids": {
+        "gemma": 184115,
+        "qwen": 109326,
+        "aya": 239963
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "图书": {
+      "word": "图书",
+      "ud_count": 15,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1186,
+      "log10_freq": 3.074,
+      "token_ids": {
+        "gemma": 105082,
+        "qwen": 102728,
+        "aya": 196952
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "股价": {
+      "word": "股价",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 951,
+      "log10_freq": 2.979,
+      "token_ids": {
+        "gemma": 216014,
+        "qwen": 105281,
+        "aya": 122427
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "教会": {
+      "word": "教会",
+      "ud_count": 19,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1065,
+      "log10_freq": 3.028,
+      "token_ids": {
+        "gemma": 136168,
+        "qwen": 109126,
+        "aya": 88278
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "关节": {
+      "word": "关节",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 890,
+      "log10_freq": 2.95,
+      "token_ids": {
+        "gemma": 198994,
+        "qwen": 107914,
+        "aya": 177402
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "董事": {
+      "word": "董事",
+      "ud_count": 16,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1190,
+      "log10_freq": 3.076,
+      "token_ids": {
+        "gemma": 84189,
+        "qwen": 100781,
+        "aya": 147137
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "人心": {
+      "word": "人心",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1440,
+      "log10_freq": 3.159,
+      "token_ids": {
+        "gemma": 153432,
+        "qwen": 102677,
+        "aya": 190383
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "暴力": {
+      "word": "暴力",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1005,
+      "log10_freq": 3.003,
+      "token_ids": {
+        "gemma": 113935,
+        "qwen": 105905,
+        "aya": 182359
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "成人": {
+      "word": "成人",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1366,
+      "log10_freq": 3.136,
+      "token_ids": {
+        "gemma": 132978,
+        "qwen": 106673,
+        "aya": 105454
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "传媒": {
+      "word": "传媒",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1040,
+      "log10_freq": 3.017,
+      "token_ids": {
+        "gemma": 203253,
+        "qwen": 102655,
+        "aya": 242474
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "体重": {
+      "word": "体重",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1187,
+      "log10_freq": 3.075,
+      "token_ids": {
+        "gemma": 120906,
+        "qwen": 107235,
+        "aya": 85225
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "燃料": {
+      "word": "燃料",
+      "ud_count": 10,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1241,
+      "log10_freq": 3.094,
+      "token_ids": {
+        "gemma": 85766,
+        "qwen": 103159,
+        "aya": 146249
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "等到": {
+      "word": "等到",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1083,
+      "log10_freq": 3.035,
+      "token_ids": {
+        "gemma": 138557,
+        "qwen": 106200,
+        "aya": 163778
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "新增": {
+      "word": "新增",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1177,
+      "log10_freq": 3.071,
+      "token_ids": {
+        "gemma": 98836,
+        "qwen": 93620,
+        "aya": 115324
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "反射": {
+      "word": "反射",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1100,
+      "log10_freq": 3.042,
+      "token_ids": {
+        "gemma": 103121,
+        "qwen": 111192,
+        "aya": 215971
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "靠近": {
+      "word": "靠近",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 946,
+      "log10_freq": 2.976,
+      "token_ids": {
+        "gemma": 127415,
+        "qwen": 106963,
+        "aya": 182115
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "延续": {
+      "word": "延续",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1369,
+      "log10_freq": 3.137,
+      "token_ids": {
+        "gemma": 189424,
+        "qwen": 105443,
+        "aya": 219567
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "获取": {
+      "word": "获取",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1306,
+      "log10_freq": 3.116,
+      "token_ids": {
+        "gemma": 28184,
+        "qwen": 45912,
+        "aya": 57333
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "分解": {
+      "word": "分解",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1363,
+      "log10_freq": 3.135,
+      "token_ids": {
+        "gemma": 68653,
+        "qwen": 107799,
+        "aya": 67234
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "超越": {
+      "word": "超越",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1215,
+      "log10_freq": 3.085,
+      "token_ids": {
+        "gemma": 137621,
+        "qwen": 104840,
+        "aya": 98341
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "氧化": {
+      "word": "氧化",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1260,
+      "log10_freq": 3.101,
+      "token_ids": {
+        "gemma": 85451,
+        "qwen": 101542,
+        "aya": 74936
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "赢得": {
+      "word": "赢得",
+      "ud_count": 9,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1216,
+      "log10_freq": 3.085,
+      "token_ids": {
+        "gemma": 220269,
+        "qwen": 102796,
+        "aya": 147107
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "更换": {
+      "word": "更换",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 845,
+      "log10_freq": 2.927,
+      "token_ids": {
+        "gemma": 135632,
+        "qwen": 105453,
+        "aya": 177678
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "加热": {
+      "word": "加热",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1005,
+      "log10_freq": 3.003,
+      "token_ids": {
+        "gemma": 185236,
+        "qwen": 107563,
+        "aya": 163813
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "引入": {
+      "word": "引入",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1111,
+      "log10_freq": 3.046,
+      "token_ids": {
+        "gemma": 74621,
+        "qwen": 104914,
+        "aya": 214842
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "期望": {
+      "word": "期望",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1325,
+      "log10_freq": 3.123,
+      "token_ids": {
+        "gemma": 129813,
+        "qwen": 106076,
+        "aya": 143287
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "寻求": {
+      "word": "寻求",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1357,
+      "log10_freq": 3.133,
+      "token_ids": {
+        "gemma": 193496,
+        "qwen": 105789,
+        "aya": 183032
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "模仿": {
+      "word": "模仿",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 969,
+      "log10_freq": 2.987,
+      "token_ids": {
+        "gemma": 195965,
+        "qwen": 108391,
+        "aya": 242651
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "冷静": {
+      "word": "冷静",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1102,
+      "log10_freq": 3.043,
+      "token_ids": {
+        "gemma": 212953,
+        "qwen": 108056,
+        "aya": 129328
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "舒服": {
+      "word": "舒服",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1144,
+      "log10_freq": 3.059,
+      "token_ids": {
+        "gemma": 114487,
+        "qwen": 103075,
+        "aya": 123466
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "豪华": {
+      "word": "豪华",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1043,
+      "log10_freq": 3.019,
+      "token_ids": {
+        "gemma": 183673,
+        "qwen": 106190,
+        "aya": 199889
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "遗憾": {
+      "word": "遗憾",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1156,
+      "log10_freq": 3.063,
+      "token_ids": {
+        "gemma": 175855,
+        "qwen": 106915,
+        "aya": 183295
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "灵活": {
+      "word": "灵活",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1444,
+      "log10_freq": 3.16,
+      "token_ids": {
+        "gemma": 135272,
+        "qwen": 105128,
+        "aya": 112145
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "充足": {
+      "word": "充足",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1227,
+      "log10_freq": 3.089,
+      "token_ids": {
+        "gemma": 158716,
+        "qwen": 103119,
+        "aya": 91706
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "巧妙": {
+      "word": "巧妙",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 932,
+      "log10_freq": 2.97,
+      "token_ids": {
+        "gemma": 226727,
+        "qwen": 110695,
+        "aya": 250445
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "勇敢": {
+      "word": "勇敢",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1436,
+      "log10_freq": 3.157,
+      "token_ids": {
+        "gemma": 194742,
+        "qwen": 107480,
+        "aya": 221569
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 1
+    },
+    "最小": {
+      "word": "最小",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 1364,
+      "log10_freq": 3.135,
+      "token_ids": {
+        "gemma": 59040,
+        "qwen": 108801,
+        "aya": 176831
+      },
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "平安": {
+      "word": "平安",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1438,
+      "log10_freq": 3.158,
+      "token_ids": {
+        "gemma": 136832,
+        "qwen": 104576,
+        "aya": 47526
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "有名": {
+      "word": "有名",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1255,
+      "log10_freq": 3.099,
+      "token_ids": {
+        "gemma": 80918,
+        "qwen": 111542,
+        "aya": 65614
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "高效": {
+      "word": "高效",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1139,
+      "log10_freq": 3.057,
+      "token_ids": {
+        "gemma": 100159,
+        "qwen": 102202,
+        "aya": 74020
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 1
+    },
+    "谨慎": {
+      "word": "谨慎",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1131,
+      "log10_freq": 3.054,
+      "token_ids": {
+        "gemma": 198972,
+        "qwen": 106703,
+        "aya": 185055
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "温柔": {
+      "word": "温柔",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1029,
+      "log10_freq": 3.013,
+      "token_ids": {
+        "gemma": 171109,
+        "qwen": 106665,
+        "aya": 196296
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "均匀": {
+      "word": "均匀",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1213,
+      "log10_freq": 3.084,
+      "token_ids": {
+        "gemma": 142991,
+        "qwen": 106674,
+        "aya": 166414
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "干燥": {
+      "word": "干燥",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 1286,
+      "log10_freq": 3.11,
+      "token_ids": {
+        "gemma": 146261,
+        "qwen": 106203,
+        "aya": 78460
+      },
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 1
+    },
+    "官方": {
+      "word": "官方",
+      "ud_count": 10,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1748,
+      "log10_freq": 3.243,
+      "token_ids": {
+        "gemma": 49600,
+        "qwen": 100777,
+        "aya": 98778
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "画家": {
+      "word": "画家",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1920,
+      "log10_freq": 3.284,
+      "token_ids": {
+        "gemma": 202202,
+        "qwen": 108611,
+        "aya": 135510
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "器官": {
+      "word": "器官",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1868,
+      "log10_freq": 3.272,
+      "token_ids": {
+        "gemma": 203354,
+        "qwen": 108022,
+        "aya": 128495
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "事故": {
+      "word": "事故",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1766,
+      "log10_freq": 3.247,
+      "token_ids": {
+        "gemma": 54378,
+        "qwen": 100817,
+        "aya": 61618
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "物品": {
+      "word": "物品",
+      "ud_count": 9,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1532,
+      "log10_freq": 3.186,
+      "token_ids": {
+        "gemma": 78522,
+        "qwen": 104613,
+        "aya": 88119
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "联邦": {
+      "word": "联邦",
+      "ud_count": 21,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1605,
+      "log10_freq": 3.206,
+      "token_ids": {
+        "gemma": 155837,
+        "qwen": 108058,
+        "aya": 116608
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "民众": {
+      "word": "民众",
+      "ud_count": 9,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1793,
+      "log10_freq": 3.254,
+      "token_ids": {
+        "gemma": 169042,
+        "qwen": 105672,
+        "aya": 121643
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 2
+    },
+    "姓名": {
+      "word": "姓名",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1924,
+      "log10_freq": 3.284,
+      "token_ids": {
+        "gemma": 125602,
+        "qwen": 66187,
+        "aya": 220528
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 2
+    },
+    "边缘": {
+      "word": "边缘",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1932,
+      "log10_freq": 3.286,
+      "token_ids": {
+        "gemma": 109630,
+        "qwen": 106655,
+        "aya": 122649
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 2
+    },
+    "名单": {
+      "word": "名单",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1823,
+      "log10_freq": 3.261,
+      "token_ids": {
+        "gemma": 112406,
+        "qwen": 102355,
+        "aya": 135191
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "外界": {
+      "word": "外界",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1629,
+      "log10_freq": 3.212,
+      "token_ids": {
+        "gemma": 148186,
+        "qwen": 105990,
+        "aya": 152695
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "地形": {
+      "word": "地形",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1801,
+      "log10_freq": 3.256,
+      "token_ids": {
+        "gemma": 180512,
+        "qwen": 111282,
+        "aya": 176285
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "网友": {
+      "word": "网友",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1634,
+      "log10_freq": 3.214,
+      "token_ids": {
+        "gemma": 69117,
+        "qwen": 100744,
+        "aya": 116255
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "达成": {
+      "word": "达成",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1850,
+      "log10_freq": 3.267,
+      "token_ids": {
+        "gemma": 152870,
+        "qwen": 104805,
+        "aya": 111385
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "依赖": {
+      "word": "依赖",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1660,
+      "log10_freq": 3.22,
+      "token_ids": {
+        "gemma": 48860,
+        "qwen": 105537,
+        "aya": 85898
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "确保": {
+      "word": "确保",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1965,
+      "log10_freq": 3.294,
+      "token_ids": {
+        "gemma": 62247,
+        "qwen": 103944,
+        "aya": 38973
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "占据": {
+      "word": "占据",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1716,
+      "log10_freq": 3.235,
+      "token_ids": {
+        "gemma": 168218,
+        "qwen": 102779,
+        "aya": 197980
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "发言": {
+      "word": "发言",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1521,
+      "log10_freq": 3.182,
+      "token_ids": {
+        "gemma": 166390,
+        "qwen": 102588,
+        "aya": 38889
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "聚集": {
+      "word": "聚集",
+      "ud_count": 8,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1912,
+      "log10_freq": 3.282,
+      "token_ids": {
+        "gemma": 150204,
+        "qwen": 105061,
+        "aya": 156026
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "登陆": {
+      "word": "登陆",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1513,
+      "log10_freq": 3.18,
+      "token_ids": {
+        "gemma": 130425,
+        "qwen": 106230,
+        "aya": 216301
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 2
+    },
+    "违反": {
+      "word": "违反",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1512,
+      "log10_freq": 3.18,
+      "token_ids": {
+        "gemma": 191319,
+        "qwen": 104828,
+        "aya": 107566
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 2
+    },
+    "创立": {
+      "word": "创立",
+      "ud_count": 14,
+      "ud_dominance": 0.929,
+      "jieba_tag": "v",
+      "jieba_freq": 1567,
+      "log10_freq": 3.195,
+      "token_ids": {
+        "gemma": 210499,
+        "qwen": 106685,
+        "aya": 135744
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 2
+    },
+    "付出": {
+      "word": "付出",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1517,
+      "log10_freq": 3.181,
+      "token_ids": {
+        "gemma": 166189,
+        "qwen": 104620,
+        "aya": 178521
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "引发": {
+      "word": "引发",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1697,
+      "log10_freq": 3.23,
+      "token_ids": {
+        "gemma": 122388,
+        "qwen": 102361,
+        "aya": 91315
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "收集": {
+      "word": "收集",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1603,
+      "log10_freq": 3.205,
+      "token_ids": {
+        "gemma": 76761,
+        "qwen": 104412,
+        "aya": 85708
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "呈现": {
+      "word": "呈现",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1776,
+      "log10_freq": 3.25,
+      "token_ids": {
+        "gemma": 95029,
+        "qwen": 104401,
+        "aya": 103252
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "平静": {
+      "word": "平静",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1946,
+      "log10_freq": 3.289,
+      "token_ids": {
+        "gemma": 187036,
+        "qwen": 106837,
+        "aya": 239288
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "微软": {
+      "word": "微软",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1757,
+      "log10_freq": 3.245,
+      "token_ids": {
+        "gemma": 105652,
+        "qwen": 108863,
+        "aya": 122368
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "漂亮": {
+      "word": "漂亮",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 1921,
+      "log10_freq": 3.284,
+      "token_ids": {
+        "gemma": 90428,
+        "qwen": 101518,
+        "aya": 40024
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "干净": {
+      "word": "干净",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1860,
+      "log10_freq": 3.27,
+      "token_ids": {
+        "gemma": 108612,
+        "qwen": 102466,
+        "aya": 122119
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "轻易": {
+      "word": "轻易",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1474,
+      "log10_freq": 3.169,
+      "token_ids": {
+        "gemma": 189307,
+        "qwen": 106609,
+        "aya": 245613
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "严肃": {
+      "word": "严肃",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1650,
+      "log10_freq": 3.218,
+      "token_ids": {
+        "gemma": 225449,
+        "qwen": 106625,
+        "aya": 154967
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 2
+    },
+    "完美": {
+      "word": "完美",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 1509,
+      "log10_freq": 3.179,
+      "token_ids": {
+        "gemma": 68787,
+        "qwen": 104448,
+        "aya": 72517
+      },
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 2
+    },
+    "配套": {
+      "word": "配套",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1939,
+      "log10_freq": 3.288,
+      "token_ids": {
+        "gemma": 131659,
+        "qwen": 102101,
+        "aya": 78435
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 2
+    },
+    "清晰": {
+      "word": "清晰",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1603,
+      "log10_freq": 3.205,
+      "token_ids": {
+        "gemma": 87571,
+        "qwen": 104542,
+        "aya": 80690
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 2
+    },
+    "健全": {
+      "word": "健全",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1765,
+      "log10_freq": 3.247,
+      "token_ids": {
+        "gemma": 170213,
+        "qwen": 102638,
+        "aya": 111507
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "单纯": {
+      "word": "单纯",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1679,
+      "log10_freq": 3.225,
+      "token_ids": {
+        "gemma": 166930,
+        "qwen": 103148,
+        "aya": 215413
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "美好": {
+      "word": "美好",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1474,
+      "log10_freq": 3.169,
+      "token_ids": {
+        "gemma": 141240,
+        "qwen": 101483,
+        "aya": 121418
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "敏感": {
+      "word": "敏感",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 1693,
+      "log10_freq": 3.229,
+      "token_ids": {
+        "gemma": 94381,
+        "qwen": 105521,
+        "aya": 69628
+      },
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 2
+    },
+    "策略": {
+      "word": "策略",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 2170,
+      "log10_freq": 3.337,
+      "token_ids": {
+        "gemma": 59322,
+        "qwen": 104238,
+        "aya": 85771
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "个体": {
+      "word": "个体",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 2407,
+      "log10_freq": 3.382,
+      "token_ids": {
+        "gemma": 213074,
+        "qwen": 106269,
+        "aya": 176106
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "信号": {
+      "word": "信号",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 2402,
+      "log10_freq": 3.381,
+      "token_ids": {
+        "gemma": 45444,
+        "qwen": 104757,
+        "aya": 121605
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "舞台": {
+      "word": "舞台",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 1981,
+      "log10_freq": 3.297,
+      "token_ids": {
+        "gemma": 63775,
+        "qwen": 102508,
+        "aya": 66327
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "密度": {
+      "word": "密度",
+      "ud_count": 20,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 2412,
+      "log10_freq": 3.383,
+      "token_ids": {
+        "gemma": 95897,
+        "qwen": 106651,
+        "aya": 78620
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 3
+    },
+    "杂志": {
+      "word": "杂志",
+      "ud_count": 13,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 2451,
+      "log10_freq": 3.39,
+      "token_ids": {
+        "gemma": 126477,
+        "qwen": 102542,
+        "aya": 123550
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 3
+    },
+    "目录": {
+      "word": "目录",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 2256,
+      "log10_freq": 3.354,
+      "token_ids": {
+        "gemma": 38827,
+        "qwen": 106130,
+        "aya": 82756
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 3
+    },
+    "差异": {
+      "word": "差异",
+      "ud_count": 11,
+      "ud_dominance": 0.909,
+      "jieba_tag": "n",
+      "jieba_freq": 2196,
+      "log10_freq": 3.342,
+      "token_ids": {
+        "gemma": 82660,
+        "qwen": 102478,
+        "aya": 94912
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 3
+    },
+    "提到": {
+      "word": "提到",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 2552,
+      "log10_freq": 3.407,
+      "token_ids": {
+        "gemma": 96238,
+        "qwen": 104496,
+        "aya": 115673
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "受伤": {
+      "word": "受伤",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 2402,
+      "log10_freq": 3.381,
+      "token_ids": {
+        "gemma": 170140,
+        "qwen": 105497,
+        "aya": 240435
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "打破": {
+      "word": "打破",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 1979,
+      "log10_freq": 3.297,
+      "token_ids": {
+        "gemma": 139918,
+        "qwen": 102759,
+        "aya": 98246
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "遭受": {
+      "word": "遭受",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 2212,
+      "log10_freq": 3.345,
+      "token_ids": {
+        "gemma": 217892,
+        "qwen": 107481,
+        "aya": 168891
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "收拾": {
+      "word": "收拾",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 2274,
+      "log10_freq": 3.357,
+      "token_ids": {
+        "gemma": 224421,
+        "qwen": 107092,
+        "aya": 195247
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 3
+    },
+    "提前": {
+      "word": "提前",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 2191,
+      "log10_freq": 3.341,
+      "token_ids": {
+        "gemma": 84090,
+        "qwen": 104154,
+        "aya": 80415
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 3
+    },
+    "鼓励": {
+      "word": "鼓励",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 2370,
+      "log10_freq": 3.375,
+      "token_ids": {
+        "gemma": 115378,
+        "qwen": 104125,
+        "aya": 51674
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 3
+    },
+    "围绕": {
+      "word": "围绕",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 2065,
+      "log10_freq": 3.315,
+      "token_ids": {
+        "gemma": 128805,
+        "qwen": 102074,
+        "aya": 88872
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 3
+    },
+    "合适": {
+      "word": "合适",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 2426,
+      "log10_freq": 3.385,
+      "token_ids": {
+        "gemma": 96735,
+        "qwen": 100968,
+        "aya": 101313
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "紧急": {
+      "word": "紧急",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 2600,
+      "log10_freq": 3.415,
+      "token_ids": {
+        "gemma": 173943,
+        "qwen": 105039,
+        "aya": 198233
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "正好": {
+      "word": "正好",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 2661,
+      "log10_freq": 3.425,
+      "token_ids": {
+        "gemma": 145004,
+        "qwen": 105872,
+        "aya": 193663
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "准确": {
+      "word": "准确",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 2668,
+      "log10_freq": 3.426,
+      "token_ids": {
+        "gemma": 85970,
+        "qwen": 102188,
+        "aya": 56232
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 3
+    },
+    "最低": {
+      "word": "最低",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 2431,
+      "log10_freq": 3.386,
+      "token_ids": {
+        "gemma": 79923,
+        "qwen": 104549,
+        "aya": 65837
+      },
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 3
+    },
+    "便宜": {
+      "word": "便宜",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 2013,
+      "log10_freq": 3.304,
+      "token_ids": {
+        "gemma": 97483,
+        "qwen": 104698,
+        "aya": 179620
+      },
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 3
+    },
+    "轻松": {
+      "word": "轻松",
+      "ud_count": 1,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 1979,
+      "log10_freq": 3.297,
+      "token_ids": {
+        "gemma": 78637,
+        "qwen": 104261,
+        "aya": 145470
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 3
+    },
+    "沉默": {
+      "word": "沉默",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 2313,
+      "log10_freq": 3.364,
+      "token_ids": {
+        "gemma": 172060,
+        "qwen": 107107,
+        "aya": 249692
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 3
+    },
+    "白色": {
+      "word": "白色",
+      "ud_count": 12,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 2756,
+      "log10_freq": 3.44,
+      "token_ids": {
+        "gemma": 78586,
+        "qwen": 102440,
+        "aya": 101883
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 4
+    },
+    "电脑": {
+      "word": "电脑",
+      "ud_count": 29,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 3427,
+      "log10_freq": 3.535,
+      "token_ids": {
+        "gemma": 57981,
+        "qwen": 104145,
+        "aya": 80605
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 4
+    },
+    "享受": {
+      "word": "享受",
+      "ud_count": 8,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 2791,
+      "log10_freq": 3.446,
+      "token_ids": {
+        "gemma": 70166,
+        "qwen": 104028,
+        "aya": 47688
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 4
+    },
+    "签订": {
+      "word": "签订",
+      "ud_count": 10,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 3272,
+      "log10_freq": 3.515,
+      "token_ids": {
+        "gemma": 169573,
+        "qwen": 102369,
+        "aya": 40520
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 4
+    },
+    "激烈": {
+      "word": "激烈",
+      "ud_count": 8,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 2907,
+      "log10_freq": 3.464,
+      "token_ids": {
+        "gemma": 192227,
+        "qwen": 102896,
+        "aya": 129222
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 4
+    },
+    "有限": {
+      "word": "有限",
+      "ud_count": 17,
+      "ud_dominance": 0.941,
+      "jieba_tag": "a",
+      "jieba_freq": 2828,
+      "log10_freq": 3.452,
+      "token_ids": {
+        "gemma": 30934,
+        "qwen": 101035,
+        "aya": 23937
+      },
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 4
+    },
+    "事实": {
+      "word": "事实",
+      "ud_count": 9,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 4593,
+      "log10_freq": 3.662,
+      "token_ids": {
+        "gemma": 77599,
+        "qwen": 101349,
+        "aya": 42394
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 5
+    },
+    "化工": {
+      "word": "化工",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 4022,
+      "log10_freq": 3.605,
+      "token_ids": {
+        "gemma": 187045,
+        "qwen": 102310,
+        "aya": 192627
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 5
+    },
+    "机器": {
+      "word": "机器",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 3932,
+      "log10_freq": 3.595,
+      "token_ids": {
+        "gemma": 51231,
+        "qwen": 102182,
+        "aya": 78208
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 5
+    },
+    "成分": {
+      "word": "成分",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 4165,
+      "log10_freq": 3.62,
+      "token_ids": {
+        "gemma": 46944,
+        "qwen": 105024,
+        "aya": 24388
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 5
+    },
+    "失去": {
+      "word": "失去",
+      "ud_count": 16,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 4317,
+      "log10_freq": 3.635,
+      "token_ids": {
+        "gemma": 110941,
+        "qwen": 104899,
+        "aya": 106804
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 5
+    },
+    "出发": {
+      "word": "出发",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 3887,
+      "log10_freq": 3.59,
+      "token_ids": {
+        "gemma": 102429,
+        "qwen": 104532,
+        "aya": 134112
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 5
+    },
+    "争取": {
+      "word": "争取",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 4048,
+      "log10_freq": 3.607,
+      "token_ids": {
+        "gemma": 209101,
+        "qwen": 104999,
+        "aya": 136941
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 5
+    },
+    "停止": {
+      "word": "停止",
+      "ud_count": 9,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 3842,
+      "log10_freq": 3.585,
+      "token_ids": {
+        "gemma": 51170,
+        "qwen": 104390,
+        "aya": 69483
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 5
+    },
+    "厉害": {
+      "word": "厉害",
+      "ud_count": 0,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 3850,
+      "log10_freq": 3.586,
+      "token_ids": {
+        "gemma": 119175,
+        "qwen": 105127,
+        "aya": 203516
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 5
+    },
+    "极大": {
+      "word": "极大",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 3796,
+      "log10_freq": 3.579,
+      "token_ids": {
+        "gemma": 227253,
+        "qwen": 106958,
+        "aya": 129154
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 5
+    },
+    "伟大": {
+      "word": "伟大",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 4150,
+      "log10_freq": 3.618,
+      "token_ids": {
+        "gemma": 232394,
+        "qwen": 101635,
+        "aya": 116795
+      },
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 5
+    },
+    "独特": {
+      "word": "独特",
+      "ud_count": 13,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 3638,
+      "log10_freq": 3.561,
+      "token_ids": {
+        "gemma": 79090,
+        "qwen": 101442,
+        "aya": 122878
+      },
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 5
+    },
+    "财政": {
+      "word": "财政",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 6228,
+      "log10_freq": 3.794,
+      "token_ids": {
+        "gemma": 87994,
+        "qwen": 102120,
+        "aya": 30767
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "核心": {
+      "word": "核心",
+      "ud_count": 10,
+      "ud_dominance": 0.9,
+      "jieba_tag": "n",
+      "jieba_freq": 4919,
+      "log10_freq": 3.692,
+      "token_ids": {
+        "gemma": 43173,
+        "qwen": 100185,
+        "aya": 39487
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "团体": {
+      "word": "团体",
+      "ud_count": 12,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 4923,
+      "log10_freq": 3.692,
+      "token_ids": {
+        "gemma": 166906,
+        "qwen": 105589,
+        "aya": 196311
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "化学": {
+      "word": "化学",
+      "ud_count": 17,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 5457,
+      "log10_freq": 3.737,
+      "token_ids": {
+        "gemma": 49158,
+        "qwen": 102264,
+        "aya": 19500
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "分子": {
+      "word": "分子",
+      "ud_count": 24,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 6094,
+      "log10_freq": 3.785,
+      "token_ids": {
+        "gemma": 67845,
+        "qwen": 102388,
+        "aya": 40315
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 6
+    },
+    "部长": {
+      "word": "部长",
+      "ud_count": 13,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 5654,
+      "log10_freq": 3.752,
+      "token_ids": {
+        "gemma": 155556,
+        "qwen": 101662,
+        "aya": 85221
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 6
+    },
+    "人士": {
+      "word": "人士",
+      "ud_count": 12,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 5774,
+      "log10_freq": 3.762,
+      "token_ids": {
+        "gemma": 75849,
+        "qwen": 101191,
+        "aya": 67071
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 6
+    },
+    "细胞": {
+      "word": "细胞",
+      "ud_count": 23,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 5517,
+      "log10_freq": 3.742,
+      "token_ids": {
+        "gemma": 62394,
+        "qwen": 102150,
+        "aya": 39993
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 6
+    },
+    "遇到": {
+      "word": "遇到",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 5143,
+      "log10_freq": 3.711,
+      "token_ids": {
+        "gemma": 56059,
+        "qwen": 104011,
+        "aya": 78819
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "加入": {
+      "word": "加入",
+      "ud_count": 31,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 4855,
+      "log10_freq": 3.686,
+      "token_ids": {
+        "gemma": 19000,
+        "qwen": 101963,
+        "aya": 39399
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "推动": {
+      "word": "推动",
+      "ud_count": 13,
+      "ud_dominance": 0.923,
+      "jieba_tag": "v",
+      "jieba_freq": 4715,
+      "log10_freq": 3.674,
+      "token_ids": {
+        "gemma": 67891,
+        "qwen": 101890,
+        "aya": 34257
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "想到": {
+      "word": "想到",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 5735,
+      "log10_freq": 3.759,
+      "token_ids": {
+        "gemma": 47336,
+        "qwen": 101303,
+        "aya": 85490
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "下降": {
+      "word": "下降",
+      "ud_count": 11,
+      "ud_dominance": 0.909,
+      "jieba_tag": "v",
+      "jieba_freq": 4833,
+      "log10_freq": 3.684,
+      "token_ids": {
+        "gemma": 68732,
+        "qwen": 102008,
+        "aya": 50501
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 6
+    },
+    "表明": {
+      "word": "表明",
+      "ud_count": 8,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 5166,
+      "log10_freq": 3.713,
+      "token_ids": {
+        "gemma": 76591,
+        "qwen": 102406,
+        "aya": 57092
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 6
+    },
+    "发挥": {
+      "word": "发挥",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 5889,
+      "log10_freq": 3.77,
+      "token_ids": {
+        "gemma": 78826,
+        "qwen": 100689,
+        "aya": 45333
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 6
+    },
+    "强调": {
+      "word": "强调",
+      "ud_count": 8,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 6318,
+      "log10_freq": 3.801,
+      "token_ids": {
+        "gemma": 100397,
+        "qwen": 104046,
+        "aya": 85735
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 6
+    },
+    "年轻": {
+      "word": "年轻",
+      "ud_count": 10,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 4919,
+      "log10_freq": 3.692,
+      "token_ids": {
+        "gemma": 55922,
+        "qwen": 100774,
+        "aya": 47362
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "广大": {
+      "word": "广大",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 5043,
+      "log10_freq": 3.703,
+      "token_ids": {
+        "gemma": 129285,
+        "qwen": 100746,
+        "aya": 88752
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "良好": {
+      "word": "良好",
+      "ud_count": 10,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 6044,
+      "log10_freq": 3.781,
+      "token_ids": {
+        "gemma": 86260,
+        "qwen": 100844,
+        "aya": 63219
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "优秀": {
+      "word": "优秀",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 5256,
+      "log10_freq": 3.721,
+      "token_ids": {
+        "gemma": 73716,
+        "qwen": 101944,
+        "aya": 56251
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 6
+    },
+    "不足": {
+      "word": "不足",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 5615,
+      "log10_freq": 3.749,
+      "token_ids": {
+        "gemma": 51750,
+        "qwen": 102004,
+        "aya": 39763
+      },
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 6
+    },
+    "紧张": {
+      "word": "紧张",
+      "ud_count": 2,
+      "ud_dominance": null,
+      "jieba_tag": "a",
+      "jieba_freq": 4790,
+      "log10_freq": 3.68,
+      "token_ids": {
+        "gemma": 113334,
+        "qwen": 104432,
+        "aya": 129714
+      },
+      "source": "jieba only",
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 6
+    },
+    "强烈": {
+      "word": "强烈",
+      "ud_count": 11,
+      "ud_dominance": 0.909,
+      "jieba_tag": "a",
+      "jieba_freq": 5076,
+      "log10_freq": 3.706,
+      "token_ids": {
+        "gemma": 151229,
+        "qwen": 102637,
+        "aya": 165445
+      },
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 6
+    },
+    "复杂": {
+      "word": "复杂",
+      "ud_count": 10,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 6117,
+      "log10_freq": 3.787,
+      "token_ids": {
+        "gemma": 51802,
+        "qwen": 102181,
+        "aya": 74550
+      },
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 6
+    },
+    "银行": {
+      "word": "银行",
+      "ud_count": 27,
+      "ud_dominance": 0.963,
+      "jieba_tag": "n",
+      "jieba_freq": 7684,
+      "log10_freq": 3.886,
+      "token_ids": {
+        "gemma": 52251,
+        "qwen": 100358,
+        "aya": 26191
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 7
+    },
+    "母亲": {
+      "word": "母亲",
+      "ud_count": 29,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 8010,
+      "log10_freq": 3.904,
+      "token_ids": {
+        "gemma": 88301,
+        "qwen": 102079,
+        "aya": 95153
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 7
+    },
+    "货币": {
+      "word": "货币",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 8092,
+      "log10_freq": 3.908,
+      "token_ids": {
+        "gemma": 85742,
+        "qwen": 101406,
+        "aya": 136935
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 7
+    },
+    "利益": {
+      "word": "利益",
+      "ud_count": 9,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 8351,
+      "log10_freq": 3.922,
+      "token_ids": {
+        "gemma": 67956,
+        "qwen": 101996,
+        "aya": 46050
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 7
+    },
+    "民主": {
+      "word": "民主",
+      "ud_count": 24,
+      "ud_dominance": 0.958,
+      "jieba_tag": "n",
+      "jieba_freq": 8513,
+      "log10_freq": 3.93,
+      "token_ids": {
+        "gemma": 89058,
+        "qwen": 101367,
+        "aya": 51436
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 7
+    },
+    "发表": {
+      "word": "发表",
+      "ud_count": 22,
+      "ud_dominance": 0.955,
+      "jieba_tag": "v",
+      "jieba_freq": 8028,
+      "log10_freq": 3.905,
+      "token_ids": {
+        "gemma": 90880,
+        "qwen": 102098,
+        "aya": 54973
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 7
+    },
+    "恢复": {
+      "word": "恢复",
+      "ud_count": 12,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 7600,
+      "log10_freq": 3.881,
+      "token_ids": {
+        "gemma": 60869,
+        "qwen": 102005,
+        "aya": 69700
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 7
+    },
+    "投入": {
+      "word": "投入",
+      "ud_count": 11,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 6776,
+      "log10_freq": 3.831,
+      "token_ids": {
+        "gemma": 63489,
+        "qwen": 100709,
+        "aya": 50688
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 7
+    },
+    "指出": {
+      "word": "指出",
+      "ud_count": 17,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 7847,
+      "log10_freq": 3.895,
+      "token_ids": {
+        "gemma": 68447,
+        "qwen": 103988,
+        "aya": 63182
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 7
+    },
+    "作出": {
+      "word": "作出",
+      "ud_count": 11,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 8169,
+      "log10_freq": 3.912,
+      "token_ids": {
+        "gemma": 126305,
+        "qwen": 104279,
+        "aya": 68823
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 7
+    },
+    "特殊": {
+      "word": "特殊",
+      "ud_count": 11,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 7015,
+      "log10_freq": 3.846,
+      "token_ids": {
+        "gemma": 47903,
+        "qwen": 101167,
+        "aya": 40908
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 7
+    },
+    "很大": {
+      "word": "很大",
+      "ud_count": 15,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 8348,
+      "log10_freq": 3.922,
+      "token_ids": {
+        "gemma": 72257,
+        "qwen": 101235,
+        "aya": 70749
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 7
+    },
+    "较大": {
+      "word": "较大",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 6637,
+      "log10_freq": 3.822,
+      "token_ids": {
+        "gemma": 137171,
+        "qwen": 104590,
+        "aya": 102468
+      },
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 7
+    },
+    "简单": {
+      "word": "简单",
+      "ud_count": 5,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 6935,
+      "log10_freq": 3.841,
+      "token_ids": {
+        "gemma": 28377,
+        "qwen": 100405,
+        "aya": 41021
+      },
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 7
+    },
+    "巨大": {
+      "word": "巨大",
+      "ud_count": 8,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 8034,
+      "log10_freq": 3.905,
+      "token_ids": {
+        "gemma": 87939,
+        "qwen": 102334,
+        "aya": 72873
+      },
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 7
+    },
+    "作品": {
+      "word": "作品",
+      "ud_count": 56,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 9248,
+      "log10_freq": 3.966,
+      "token_ids": {
+        "gemma": 23848,
+        "qwen": 100663,
+        "aya": 18732
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 8
+    },
+    "时代": {
+      "word": "时代",
+      "ud_count": 37,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 10799,
+      "log10_freq": 4.033,
+      "token_ids": {
+        "gemma": 47509,
+        "qwen": 100177,
+        "aya": 38435
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 8
+    },
+    "部队": {
+      "word": "部队",
+      "ud_count": 27,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 12400,
+      "log10_freq": 4.093,
+      "token_ids": {
+        "gemma": 131745,
+        "qwen": 104479,
+        "aya": 94190
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 8
+    },
+    "人数": {
+      "word": "人数",
+      "ud_count": 18,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 8857,
+      "log10_freq": 3.947,
+      "token_ids": {
+        "gemma": 85640,
+        "qwen": 104346,
+        "aya": 82276
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 8
+    },
+    "先生": {
+      "word": "先生",
+      "ud_count": 13,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 14470,
+      "log10_freq": 4.16,
+      "token_ids": {
+        "gemma": 32045,
+        "qwen": 100660,
+        "aya": 17823
+      },
+      "category": "noun",
+      "role": "probedev",
+      "freq_bin": 8
+    },
+    "结果": {
+      "word": "结果",
+      "ud_count": 24,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 13963,
+      "log10_freq": 4.145,
+      "token_ids": {
+        "gemma": 22570,
+        "qwen": 59151,
+        "aya": 25786
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 8
+    },
+    "造成": {
+      "word": "造成",
+      "ud_count": 24,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 9428,
+      "log10_freq": 3.974,
+      "token_ids": {
+        "gemma": 38359,
+        "qwen": 101090,
+        "aya": 29715
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 8
+    },
+    "看到": {
+      "word": "看到",
+      "ud_count": 16,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 13411,
+      "log10_freq": 4.127,
+      "token_ids": {
+        "gemma": 20748,
+        "qwen": 101038,
+        "aya": 29250
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 8
+    },
+    "保证": {
+      "word": "保证",
+      "ud_count": 3,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 9062,
+      "log10_freq": 3.957,
+      "token_ids": {
+        "gemma": 42050,
+        "qwen": 101907,
+        "aya": 45383
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 8
+    },
+    "接受": {
+      "word": "接受",
+      "ud_count": 36,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 10415,
+      "log10_freq": 4.018,
+      "token_ids": {
+        "gemma": 38313,
+        "qwen": 100669,
+        "aya": 36071
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 8
+    },
+    "告诉": {
+      "word": "告诉",
+      "ud_count": 4,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 10953,
+      "log10_freq": 4.04,
+      "token_ids": {
+        "gemma": 50018,
+        "qwen": 99957,
+        "aya": 54185
+      },
+      "category": "verb",
+      "role": "probedev",
+      "freq_bin": 8
+    },
+    "取得": {
+      "word": "取得",
+      "ud_count": 25,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 11882,
+      "log10_freq": 4.075,
+      "token_ids": {
+        "gemma": 34893,
+        "qwen": 101094,
+        "aya": 24247
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 8
+    },
+    "重大": {
+      "word": "重大",
+      "ud_count": 9,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 12193,
+      "log10_freq": 4.086,
+      "token_ids": {
+        "gemma": 75963,
+        "qwen": 101088,
+        "aya": 41919
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 8
+    },
+    "最高": {
+      "word": "最高",
+      "ud_count": 38,
+      "ud_dominance": 0.947,
+      "jieba_tag": "a",
+      "jieba_freq": 12430,
+      "log10_freq": 4.095,
+      "token_ids": {
+        "gemma": 30833,
+        "qwen": 103994,
+        "aya": 28744
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 8
+    },
+    "著名": {
+      "word": "著名",
+      "ud_count": 26,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 9342,
+      "log10_freq": 3.97,
+      "token_ids": {
+        "gemma": 93772,
+        "qwen": 102280,
+        "aya": 69438
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 8
+    },
+    "先进": {
+      "word": "先进",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 13966,
+      "log10_freq": 4.145,
+      "token_ids": {
+        "gemma": 99829,
+        "qwen": 100455,
+        "aya": 65987
+      },
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 8
+    },
+    "具体": {
+      "word": "具体",
+      "ud_count": 6,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 9769,
+      "log10_freq": 3.99,
+      "token_ids": {
+        "gemma": 33264,
+        "qwen": 100398,
+        "aya": 26166
+      },
+      "category": "adj",
+      "role": "probedev",
+      "freq_bin": 8
+    },
+    "丰富": {
+      "word": "丰富",
+      "ud_count": 7,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 11867,
+      "log10_freq": 4.074,
+      "token_ids": {
+        "gemma": 53161,
+        "qwen": 100733,
+        "aya": 52488
+      },
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 8
+    },
+    "政治": {
+      "word": "政治",
+      "ud_count": 52,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 24866,
+      "log10_freq": 4.396,
+      "token_ids": {
+        "gemma": 44368,
+        "qwen": 101091,
+        "aya": 39898
+      },
+      "category": "noun",
+      "role": "calibration",
+      "freq_bin": 9
+    },
+    "部门": {
+      "word": "部门",
+      "ud_count": 13,
+      "ud_dominance": 1.0,
+      "jieba_tag": "n",
+      "jieba_freq": 16543,
+      "log10_freq": 4.219,
+      "token_ids": {
+        "gemma": 40698,
+        "qwen": 99667,
+        "aya": 19981
+      },
+      "category": "noun",
+      "role": "finaltest",
+      "freq_bin": 9
+    },
+    "实现": {
+      "word": "实现",
+      "ud_count": 12,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 15301,
+      "log10_freq": 4.185,
+      "token_ids": {
+        "gemma": 18979,
+        "qwen": 101884,
+        "aya": 22701
+      },
+      "category": "verb",
+      "role": "calibration",
+      "freq_bin": 9
+    },
+    "参加": {
+      "word": "参加",
+      "ud_count": 47,
+      "ud_dominance": 1.0,
+      "jieba_tag": "v",
+      "jieba_freq": 22828,
+      "log10_freq": 4.358,
+      "token_ids": {
+        "gemma": 28409,
+        "qwen": 101061,
+        "aya": 22727
+      },
+      "category": "verb",
+      "role": "finaltest",
+      "freq_bin": 9
+    },
+    "重要": {
+      "word": "重要",
+      "ud_count": 71,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 37557,
+      "log10_freq": 4.575,
+      "token_ids": {
+        "gemma": 16918,
+        "qwen": 99335,
+        "aya": 11448
+      },
+      "category": "adj",
+      "role": "calibration",
+      "freq_bin": 9
+    },
+    "最大": {
+      "word": "最大",
+      "ud_count": 31,
+      "ud_dominance": 1.0,
+      "jieba_tag": "a",
+      "jieba_freq": 16299,
+      "log10_freq": 4.212,
+      "token_ids": {
+        "gemma": 23558,
+        "qwen": 100082,
+        "aya": 29439
+      },
+      "category": "adj",
+      "role": "finaltest",
+      "freq_bin": 9
+    }
+  }
+}

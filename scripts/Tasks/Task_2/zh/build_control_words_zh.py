@@ -39,7 +39,7 @@ from pathlib import Path
 
 HAN = re.compile(r"^[一-鿿]{2,4}$")
 TEMPLATE_WORDS = {"回答", "问题", "词语", "答案", "体现", "以下", "应该", "尽可能", "这个"}
-JIEBA_OK = {"noun": {"n"}, "verb": {"v"}}
+JIEBA_OK = {"noun": {"n"}, "verb": {"v"}, "adj": {"a"}}
 
 
 def main() -> None:
@@ -59,6 +59,12 @@ def main() -> None:
     ap.add_argument("--min-dominance", type=float, default=0.90)
     ap.add_argument("--n-bins", type=int, default=10)
     ap.add_argument("--seed", type=int, default=20260927)
+    ap.add_argument("--three-way", action="store_true",
+                    help="add adjectives and match all three categories; writes control3_*.json. "
+                         "UD Chinese tags most stative predicates VERB, so the adjectives are the "
+                         "UD-ADJ-and-jieba-a words plus jieba-a words UD barely attests (<= 2 "
+                         "occurrences, none as VERB, jieba freq >= 200), minus forms starting "
+                         "with a negator or numeral")
     args = ap.parse_args()
 
     # ---- UD counts ------------------------------------------------------
@@ -110,11 +116,28 @@ def main() -> None:
             ids[name] = e[0]
         return ids
 
-    pools, drops = {"noun": [], "verb": []}, Counter()
+    cats = ("noun", "verb", "adj") if args.three_way else ("noun", "verb")
+    pools, drops = {c: [] for c in cats}, Counter()
+    if args.three_way:
+        for w, t in jtag.items():
+            if t != "a" or not HAN.match(w) or w in upos and sum(upos[w].values()) >= 3:
+                continue
+            c = upos.get(w, Counter())
+            if c["VERB"] or c["NOUN"] or jfreq[w] < 200 or w[0] in "不一没无很" or w in used:
+                continue
+            ids = single_ids(w)
+            if ids is None:
+                continue
+            pools["adj"].append({"word": w, "ud_count": sum(c.values()), "ud_dominance": None,
+                                 "jieba_tag": t, "jieba_freq": jfreq[w],
+                                 "log10_freq": round(math.log10(jfreq[w] + 1), 3), "token_ids": ids,
+                                 "source": "jieba only"})
     for w, c in upos.items():
         n = sum(c.values())
         dom, k = c.most_common(1)[0]
-        cat = {"NOUN": "noun", "VERB": "verb"}.get(dom)
+        cat = {"NOUN": "noun", "VERB": "verb", "ADJ": "adj"}.get(dom)
+        if cat not in cats:
+            continue
         if cat is None or not HAN.match(w):
             continue
         if n < args.min_count:
@@ -144,14 +167,15 @@ def main() -> None:
 
     rng = random.Random(args.seed)
     by_bin = {cat: defaultdict(list) for cat in pools}
+    prefix = "control3" if args.three_way else "control"
     for cat, v in pools.items():
         for r in v:
             by_bin[cat][bin_of(r["log10_freq"])].append(r)
     splits = {role: {"noun": [], "verb": [], "adj": []} for role in ("calibration", "probedev", "finaltest")}
     meta = {}
     for b in range(args.n_bins):
-        q = min(len(by_bin["noun"][b]), len(by_bin["verb"][b]))
-        for cat in ("noun", "verb"):
+        q = min(len(by_bin[c][b]) for c in cats)
+        for cat in cats:
             chosen = sorted(by_bin[cat][b], key=lambda r: r["word"])
             rng.shuffle(chosen)
             chosen = chosen[:q]
@@ -164,11 +188,11 @@ def main() -> None:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     for role, words in splits.items():
-        (args.out_dir / f"control_{role}.json").write_text(json.dumps({
+        (args.out_dir / f"{prefix}_{role}.json").write_text(json.dumps({
             "role": role, "lang": "zh", "treebank": args.treebank,
             "n_per_pos": {k: len(v) for k, v in words.items()},
             "words": words}, indent=2, ensure_ascii=False), encoding="utf-8")
-    (args.out_dir / "control_words_meta.json").write_text(json.dumps({
+    (args.out_dir / f"{prefix}_words_meta.json").write_text(json.dumps({
         "criteria": {"min_ud_count": args.min_count, "min_dominance": args.min_dominance,
                      "jieba_tags": {k: sorted(v) for k, v in JIEBA_OK.items()},
                      "length": "2-4 Han characters", "single_token_in": sorted(toks),
@@ -178,10 +202,10 @@ def main() -> None:
         "bin_edges_log10": edges, "seed": args.seed, "words": meta},
         indent=2, ensure_ascii=False), encoding="utf-8")
     for role, words in splits.items():
-        print(f"{role:12} noun {len(words['noun']):4d}  verb {len(words['verb']):4d}   "
-              f"e.g. {words['noun'][:5]} / {words['verb'][:5]}")
+        print(f"{role:12} " + "  ".join(f"{c} {len(words[c]):4d}" for c in cats)
+              + f"   e.g. " + " / ".join(str(words[c][:4]) for c in cats))
     import statistics as st
-    for cat in ("noun", "verb"):
+    for cat in cats:
         xs = [meta[w]["log10_freq"] for role in splits for w in splits[role][cat]]
         print(f"  {cat}: median log10 jieba freq {st.median(xs):.2f}")
 
