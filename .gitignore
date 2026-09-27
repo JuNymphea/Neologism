@@ -36,3 +36,4 @@ logs/
 scripts/eval/cached_data/
 scripts/Tasks/controls/vectors_*/
 scripts/Tasks/controls/vectors_zh_*/
+scripts/Tasks/controls/rescaled_*/
