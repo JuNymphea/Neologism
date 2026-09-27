@@ -904,7 +904,8 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
               concept, output_dir, neutral_word, init_mode, template, data_dir,
               batch_size, num_epochs, lr, beta, seed, chunk_size, results_dir=None,
               use_chat_template=True, lambda_h=0.0, norm_target=1.0,
-              init_from=None, ref_mode="original", lang=DEFAULT_LANG, prior_epochs=None):
+              init_from=None, ref_mode="original", lang=DEFAULT_LANG, prior_epochs=None,
+              gradient_checkpointing=True):
     os.makedirs(output_dir, exist_ok=True)
     set_seed(seed)
 
@@ -1011,7 +1012,10 @@ def train_one(model, tokenizer, base_emb, pad_token_id, new_id, model_name, new_
         bf16=torch.cuda.is_available(),
         seed=seed,
         data_seed=seed,
-        gradient_checkpointing=True,
+        # Recomputing the forward pass saves activation memory the one trainable
+        # vector hardly needs: at batch size 1 a step is launch-bound, not memory-
+        # bound, so --no_gradient_checkpointing is faster with the same result.
+        gradient_checkpointing=gradient_checkpointing,
         gradient_accumulation_steps=8,
     )
 
@@ -1210,6 +1214,12 @@ def main(argv=None, defaults=None, model_key=None):
         help="wrap the training prompt in the chat template (undoes --no_chat_template)"
     )
     parser.add_argument(
+        "--no_gradient_checkpointing",
+        action="store_true",
+        help="keep activations instead of recomputing them in the backward pass; faster, "
+             "same result, more memory (a few GB at these sequence lengths)"
+    )
+    parser.add_argument(
         "--chunk_size",
         type=int,
         default=512,
@@ -1232,6 +1242,7 @@ def main(argv=None, defaults=None, model_key=None):
           f"chat_template={'off' if args.no_chat_template else 'on'} | "
           f"init={f'{args.init_from} (ref {args.ref_vec})' if args.init_from else args.init_mode} | "
           f"epochs={args.num_epochs} | lang={args.lang} | "
+          f"grad_ckpt={'off' if args.no_gradient_checkpointing else 'on'} | "
           f"output_dir={args.output_dir} | results_dir={args.results_dir}")
 
     # `--neutral_word random` is accepted as a shorthand for `--init_mode random`
@@ -1291,6 +1302,7 @@ def main(argv=None, defaults=None, model_key=None):
                 lambda_h=args.lambda_h, norm_target=args.norm_target,
                 init_from=init_from, ref_mode=args.ref_vec, lang=args.lang,
                 prior_epochs=args.prior_epochs,
+                gradient_checkpointing=not args.no_gradient_checkpointing,
             )
             done += 1
         except Exception as exc:

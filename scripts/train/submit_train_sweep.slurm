@@ -112,10 +112,36 @@ nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 
 # the [config] line train prints first records every setting actually used
 # shellcheck disable=SC2086  -- TRAIN_ARGS is meant to split into several flags
-python "$ENTRY" \
-    --concept "$CONCEPT" \
-    --template ${TEMPLATES:-unbiased verb noun adj mixed} \
-    ${EXTRA[@]+"${EXTRA[@]}"} ${TRAIN_ARGS:-}
+# PARALLEL_TEMPLATES=1 trains the templates side by side, one process each, on
+# the one GPU. At batch size 1 a step is launch-bound -- an H200 sits at ~30%
+# utilization with one process -- so five processes cost little more than one.
+# Each process loads its own copy of the weights (~12 GB with activations) and
+# writes its own log, logs/<job>_<array>_<task>_<template>.out.
+if [[ -n "${PARALLEL_TEMPLATES:-}" ]]; then
+    export OMP_NUM_THREADS=1
+    pids=(); names=(); logs=()
+    for T in ${TEMPLATES:-unbiased verb noun adj mixed}; do
+        LOGT="logs/${SLURM_JOB_NAME}_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}_${T}.out"
+        # shellcheck disable=SC2086
+        python "$ENTRY" --concept "$CONCEPT" --template "$T" \
+            ${EXTRA[@]+"${EXTRA[@]}"} ${TRAIN_ARGS:-} > "$LOGT" 2>&1 &
+        pids+=($!); names+=("$T"); logs+=("$LOGT")
+    done
+    fail=0
+    for i in "${!pids[@]}"; do
+        if wait "${pids[$i]}"; then
+            echo "[ok]   ${names[$i]}: $(grep -h -m1 '^\[vector\]' "${logs[$i]}" || true)"
+        else
+            echo "[FAIL] ${names[$i]} -- see ${logs[$i]}"; fail=1
+        fi
+    done
+    [[ $fail == 0 ]] || exit 1
+else
+    python "$ENTRY" \
+        --concept "$CONCEPT" \
+        --template ${TEMPLATES:-unbiased verb noun adj mixed} \
+        ${EXTRA[@]+"${EXTRA[@]}"} ${TRAIN_ARGS:-}
+fi
 [[ -n "${CLAIM_DIR:-}" ]] && date +%FT%T > "$CLAIM_DIR/$CONCEPT/done"
 
 crc-job-stats
