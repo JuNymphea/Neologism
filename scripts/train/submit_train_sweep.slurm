@@ -69,6 +69,35 @@ FIRST=${FIRST:-1}
 POS=${POSLIST[$((SLURM_ARRAY_TASK_ID / PER_POS))]}
 CONCEPT="${POS}_$((FIRST + SLURM_ARRAY_TASK_ID % PER_POS))"
 
+# CLAIM_DIR turns the array into a pool of workers: each task takes the first
+# concept nobody has claimed yet (mkdir is atomic on the shared filesystem), so
+# two arrays on different partitions can share one list of concepts, e.g. an
+# h200 array now and an a100 array that starts 15 minutes later with --begin.
+# A requeued task finds its own claim and resumes that concept. Tasks left over
+# once every concept is claimed exit at once.
+if [[ -n "${CLAIM_DIR:-}" ]]; then
+    mkdir -p "$CLAIM_DIR"
+    ME="${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
+    CONCEPT=""
+    for c in "$CLAIM_DIR"/*/; do
+        [[ -f "$c/owner" && "$(cat "$c/owner")" == "$ME" ]] && CONCEPT=$(basename "$c") && break
+    done
+    if [[ -z "$CONCEPT" ]]; then
+        for P in "${POSLIST[@]}"; do
+            for ((k = FIRST; k < FIRST + PER_POS; k++)); do
+                if mkdir "$CLAIM_DIR/${P}_${k}" 2>/dev/null; then
+                    echo "$ME $(hostname) $(date +%FT%T)" > "$CLAIM_DIR/${P}_${k}/claimed"
+                    echo "$ME" > "$CLAIM_DIR/${P}_${k}/owner"
+                    CONCEPT="${P}_${k}"; break 2
+                fi
+            done
+        done
+    fi
+    if [[ -z "$CONCEPT" ]]; then
+        echo "=== every concept in $CLAIM_DIR is claimed; nothing to do ==="; exit 0
+    fi
+fi
+
 # only what was exported overrides the model's own settings in $ENTRY
 EXTRA=()
 [[ -n "${MODEL:-}" ]]    && EXTRA+=(--model_name "$MODEL")
@@ -87,5 +116,6 @@ python "$ENTRY" \
     --concept "$CONCEPT" \
     --template ${TEMPLATES:-unbiased verb noun adj mixed} \
     ${EXTRA[@]+"${EXTRA[@]}"} ${TRAIN_ARGS:-}
+[[ -n "${CLAIM_DIR:-}" ]] && date +%FT%T > "$CLAIM_DIR/$CONCEPT/done"
 
 crc-job-stats
