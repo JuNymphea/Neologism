@@ -1,0 +1,533 @@
+{
+ "model": "/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global",
+ "model_key": "aya",
+ "k": 32,
+ "concepts": [
+  "n_1",
+  "n_2",
+  "n_3",
+  "n_4",
+  "n_5",
+  "v_1",
+  "v_2",
+  "v_3",
+  "v_4",
+  "v_5"
+ ],
+ "label_probs_at_init": {
+  "noun": 0.49976375699043274,
+  "verb": 0.16224952042102814,
+  "adj": 0.03620276600122452
+ },
+ "leaked_grad_params": [],
+ "per_concept": {
+  "n_1": {
+   "loss": {
+    "unbiased": 34.98565996810794,
+    "noun": 35.25684066861868,
+    "verb": 35.325063114985824,
+    "adj": 35.41999919898808
+   },
+   "noun": {
+    "cos_g_vs_unbiased": 0.38572975993156433,
+    "template_share": 1.1742466688156128,
+    "align_readout_own": 0.14658793807029724,
+    "align_readout_sign_own": 0.10672377049922943,
+    "align_readout": {
+     "noun": 0.14658793807029724,
+     "verb": -0.27873361110687256,
+     "adj": 0.2465510070323944
+    },
+    "example_consistency": 0.4867141639115289
+   },
+   "verb": {
+    "cos_g_vs_unbiased": 0.15057377517223358,
+    "template_share": 2.094057559967041,
+    "align_readout_own": -0.13500738143920898,
+    "align_readout_sign_own": -0.014354607090353966,
+    "align_readout": {
+     "noun": 0.07554279267787933,
+     "verb": -0.13500738143920898,
+     "adj": 0.11700562387704849
+    },
+    "example_consistency": 0.245281023424468,
+    "align_trained_direction": 0.14212153851985931
+   },
+   "adj": {
+    "cos_g_vs_unbiased": -0.06882287561893463,
+    "template_share": 1.5685756206512451,
+    "align_readout_own": 0.22043532133102417,
+    "align_readout_sign_own": 0.08439844101667404,
+    "align_readout": {
+     "noun": 0.11326324194669724,
+     "verb": -0.23886363208293915,
+     "adj": 0.22043532133102417
+    },
+    "example_consistency": 0.4061729988825391,
+    "align_trained_direction": 0.17762251198291779
+   },
+   "cos_noun_verb": 0.1143268272280693
+  },
+  "n_2": {
+   "loss": {
+    "unbiased": 24.380564011633396,
+    "noun": 25.142402596771717,
+    "verb": 25.37974181212485,
+    "adj": 25.412130231037736
+   },
+   "noun": {
+    "cos_g_vs_unbiased": 0.55042964220047,
+    "template_share": 1.1234724521636963,
+    "align_readout_own": -0.02046038769185543,
+    "align_readout_sign_own": 0.0038703482132405043,
+    "align_readout": {
+     "noun": -0.02046038769185543,
+     "verb": -0.009685969911515713,
+     "adj": 0.028916094452142715
+    },
+    "example_consistency": 0.4804123266367242
+   },
+   "verb": {
+    "cos_g_vs_unbiased": 0.030929353088140488,
+    "template_share": 2.741779088973999,
+    "align_readout_own": 0.09975041449069977,
+    "align_readout_sign_own": 0.08241154998540878,
+    "align_readout": {
+     "noun": -0.07086879760026932,
+     "verb": 0.09975041449069977,
+     "adj": -0.07299260050058365
+    },
+    "example_consistency": 0.2581390207633376
+   },
+   "adj": {
+    "cos_g_vs_unbiased": 0.20337161421775818,
+    "template_share": 1.5440330505371094,
+    "align_readout_own": 0.04905380681157112,
+    "align_readout_sign_own": -0.011474105529487133,
+    "align_readout": {
+     "noun": -0.0024062476586550474,
+     "verb": -0.03587063029408455,
+     "adj": 0.04905380681157112
+    },
+    "example_consistency": 0.3806316959671676
+   },
+   "cos_noun_verb": 0.10667305439710617
+  },
+  "n_3": {
+   "loss": {
+    "unbiased": 26.517040526494384,
+    "noun": 27.395730214193463,
+    "verb": 27.540140375494957,
+    "adj": 27.242452699691057
+   },
+   "noun": {
+    "cos_g_vs_unbiased": 0.6438188552856445,
+    "template_share": 0.9849227666854858,
+    "align_readout_own": 0.005902016069740057,
+    "align_readout_sign_own": 0.004771907348185778,
+    "align_readout": {
+     "noun": 0.005902016069740057,
+     "verb": -0.07799642533063889,
+     "adj": 0.09519866853952408
+    },
+    "example_consistency": 0.5684655139921233,
+    "align_trained_direction": 0.14658761024475098
+   },
+   "verb": {
+    "cos_g_vs_unbiased": 0.32735398411750793,
+    "template_share": 2.578296184539795,
+    "align_readout_own": 0.044061291962862015,
+    "align_readout_sign_own": 0.07623085379600525,
+    "align_readout": {
+     "noun": -0.061126843094825745,
+     "verb": 0.044061291962862015,
+     "adj": -0.011139193549752235
+    },
+    "example_consistency": 0.30229747857083566,
+    "align_trained_direction": 0.08887965232133865
+   },
+   "adj": {
+    "cos_g_vs_unbiased": 0.11865931749343872,
+    "template_share": 1.3802708387374878,
+    "align_readout_own": 0.14771759510040283,
+    "align_readout_sign_own": 0.04012491554021835,
+    "align_readout": {
+     "noun": 0.013263552449643612,
+     "verb": -0.12502369284629822,
+     "adj": 0.14771759510040283
+    },
+    "example_consistency": 0.4996517040999606,
+    "align_trained_direction": 0.13997238874435425
+   },
+   "cos_noun_verb": 0.3122250735759735
+  },
+  "n_4": {
+   "loss": {
+    "unbiased": 34.801070934161544,
+    "noun": 35.169545497745275,
+    "verb": 35.61250515282154,
+    "adj": 35.49014938622713
+   },
+   "noun": {
+    "cos_g_vs_unbiased": 0.430890828371048,
+    "template_share": 1.1169397830963135,
+    "align_readout_own": 0.013671854510903358,
+    "align_readout_sign_own": -0.017155742272734642,
+    "align_readout": {
+     "noun": 0.013671854510903358,
+     "verb": -0.1029263511300087,
+     "adj": 0.12026296555995941
+    },
+    "example_consistency": 0.5333020037505776
+   },
+   "verb": {
+    "cos_g_vs_unbiased": 0.12093576043844223,
+    "template_share": 2.4724032878875732,
+    "align_readout_own": 0.1068834587931633,
+    "align_readout_sign_own": 0.11363044381141663,
+    "align_readout": {
+     "noun": -0.0778481513261795,
+     "verb": 0.1068834587931633,
+     "adj": -0.07696811854839325
+    },
+    "example_consistency": 0.28212176769739017,
+    "align_trained_direction": 0.125653937458992
+   },
+   "adj": {
+    "cos_g_vs_unbiased": -0.020478826016187668,
+    "template_share": 1.3483790159225464,
+    "align_readout_own": 0.12298271059989929,
+    "align_readout_sign_own": 0.033672407269477844,
+    "align_readout": {
+     "noun": 0.02133198268711567,
+     "verb": -0.1093234196305275,
+     "adj": 0.12298271059989929
+    },
+    "example_consistency": 0.5410659884510096
+   },
+   "cos_noun_verb": 0.036098163574934006
+  },
+  "n_5": {
+   "loss": {
+    "unbiased": 47.65472076833248,
+    "noun": 47.87833271175623,
+    "verb": 48.1110825072974,
+    "adj": 48.24614376574755
+   },
+   "noun": {
+    "cos_g_vs_unbiased": 0.5973485708236694,
+    "template_share": 0.8533734083175659,
+    "align_readout_own": 0.05826923996210098,
+    "align_readout_sign_own": 0.033492352813482285,
+    "align_readout": {
+     "noun": 0.05826923996210098,
+     "verb": -0.26519298553466797,
+     "adj": 0.2885907292366028
+    },
+    "example_consistency": 0.5650303326547146
+   },
+   "verb": {
+    "cos_g_vs_unbiased": 0.39538145065307617,
+    "template_share": 1.7235777378082275,
+    "align_readout_own": -0.04771236702799797,
+    "align_readout_sign_own": 0.050000522285699844,
+    "align_readout": {
+     "noun": -0.023169076070189476,
+     "verb": -0.04771236702799797,
+     "adj": 0.0751781016588211
+    },
+    "example_consistency": 0.30002457241062075
+   },
+   "adj": {
+    "cos_g_vs_unbiased": 0.25019463896751404,
+    "template_share": 1.156031847000122,
+    "align_readout_own": 0.21376439929008484,
+    "align_readout_sign_own": 0.09901874512434006,
+    "align_readout": {
+     "noun": 0.04387536644935608,
+     "verb": -0.1958273947238922,
+     "adj": 0.21376439929008484
+    },
+    "example_consistency": 0.4658980497624725
+   },
+   "cos_noun_verb": 0.29613542556762695
+  },
+  "v_1": {
+   "loss": {
+    "unbiased": 15.780910497531295,
+    "noun": 16.42035698890686,
+    "verb": 16.13185917213559,
+    "adj": 16.184956431388855
+   },
+   "noun": {
+    "cos_g_vs_unbiased": 0.6034248471260071,
+    "template_share": 1.2910209894180298,
+    "align_readout_own": -0.05422043800354004,
+    "align_readout_sign_own": -0.005249482579529285,
+    "align_readout": {
+     "noun": -0.05422043800354004,
+     "verb": 0.05848146602511406,
+     "adj": -0.03302157297730446
+    },
+    "example_consistency": 0.5206793360412121
+   },
+   "verb": {
+    "cos_g_vs_unbiased": 0.20105744898319244,
+    "template_share": 2.55511474609375,
+    "align_readout_own": 0.16014662384986877,
+    "align_readout_sign_own": 0.1474270522594452,
+    "align_readout": {
+     "noun": -0.08543939143419266,
+     "verb": 0.16014662384986877,
+     "adj": -0.13821455836296082
+    },
+    "example_consistency": 0.29511650442145765
+   },
+   "adj": {
+    "cos_g_vs_unbiased": 0.21738003194332123,
+    "template_share": 1.7372699975967407,
+    "align_readout_own": -0.04419872537255287,
+    "align_readout_sign_own": -0.05903548747301102,
+    "align_readout": {
+     "noun": -0.036809470504522324,
+     "verb": 0.05782420560717583,
+     "adj": -0.04419872537255287
+    },
+    "example_consistency": 0.3730896601919085
+   },
+   "cos_noun_verb": 0.22306561470031738
+  },
+  "v_2": {
+   "loss": {
+    "unbiased": 22.00465659238398,
+    "noun": 22.601438272744417,
+    "verb": 22.84947795420885,
+    "adj": 22.77248353511095
+   },
+   "noun": {
+    "cos_g_vs_unbiased": 0.4186360239982605,
+    "template_share": 1.2631604671478271,
+    "align_readout_own": -0.03579890355467796,
+    "align_readout_sign_own": -0.0069615221582353115,
+    "align_readout": {
+     "noun": -0.03579890355467796,
+     "verb": -0.1004410982131958,
+     "adj": 0.14947077631950378
+    },
+    "example_consistency": 0.4817820463795215
+   },
+   "verb": {
+    "cos_g_vs_unbiased": 0.26040780544281006,
+    "template_share": 2.2964048385620117,
+    "align_readout_own": 0.08113875240087509,
+    "align_readout_sign_own": 0.10468217730522156,
+    "align_readout": {
+     "noun": -0.08855064958333969,
+     "verb": 0.08113875240087509,
+     "adj": -0.039049334824085236
+    },
+    "example_consistency": 0.2530834861245239
+   },
+   "adj": {
+    "cos_g_vs_unbiased": 0.0617031529545784,
+    "template_share": 1.434904932975769,
+    "align_readout_own": 0.16070803999900818,
+    "align_readout_sign_own": 0.034364964812994,
+    "align_readout": {
+     "noun": 0.021924642845988274,
+     "verb": -0.14075365662574768,
+     "adj": 0.16070803999900818
+    },
+    "example_consistency": 0.4533957657404244
+   },
+   "cos_noun_verb": 0.23399974405765533
+  },
+  "v_3": {
+   "loss": {
+    "unbiased": 46.1986408252269,
+    "noun": 46.62641133181751,
+    "verb": 47.15384057350457,
+    "adj": 46.69298371858895
+   },
+   "noun": {
+    "cos_g_vs_unbiased": 0.5365242958068848,
+    "template_share": 0.9599170684814453,
+    "align_readout_own": -0.05986882001161575,
+    "align_readout_sign_own": -0.0446036234498024,
+    "align_readout": {
+     "noun": -0.05986882001161575,
+     "verb": -0.01088503748178482,
+     "adj": 0.055885639041662216
+    },
+    "example_consistency": 0.5656962484354153
+   },
+   "verb": {
+    "cos_g_vs_unbiased": 0.25163763761520386,
+    "template_share": 2.1568148136138916,
+    "align_readout_own": 0.1949864774942398,
+    "align_readout_sign_own": 0.1601782888174057,
+    "align_readout": {
+     "noun": -0.13058118522167206,
+     "verb": 0.1949864774942398,
+     "adj": -0.15091335773468018
+    },
+    "example_consistency": 0.33209923961840104,
+    "align_trained_direction": 0.12217126041650772
+   },
+   "adj": {
+    "cos_g_vs_unbiased": 0.22343488037586212,
+    "template_share": 1.1513582468032837,
+    "align_readout_own": 0.11975086480379105,
+    "align_readout_sign_own": -0.00043234258191660047,
+    "align_readout": {
+     "noun": -0.010946975089609623,
+     "verb": -0.08907951414585114,
+     "adj": 0.11975086480379105
+    },
+    "example_consistency": 0.5754182524979115,
+    "align_trained_direction": 0.15490248799324036
+   },
+   "cos_noun_verb": 0.28067728877067566
+  },
+  "v_4": {
+   "loss": {
+    "unbiased": 32.69840161502361,
+    "noun": 32.881589425727725,
+    "verb": 32.91066890023649,
+    "adj": 33.28500868193805
+   },
+   "noun": {
+    "cos_g_vs_unbiased": 0.3264073431491852,
+    "template_share": 1.3729138374328613,
+    "align_readout_own": 0.02921442687511444,
+    "align_readout_sign_own": 0.04353291913866997,
+    "align_readout": {
+     "noun": 0.02921442687511444,
+     "verb": -0.03158394619822502,
+     "adj": 0.021489514037966728
+    },
+    "example_consistency": 0.4085835478035733
+   },
+   "verb": {
+    "cos_g_vs_unbiased": 0.03209706023335457,
+    "template_share": 1.9901421070098877,
+    "align_readout_own": 0.170826718211174,
+    "align_readout_sign_own": 0.14753605425357819,
+    "align_readout": {
+     "noun": -0.07295307517051697,
+     "verb": 0.170826718211174,
+     "adj": -0.15966640412807465
+    },
+    "example_consistency": 0.30978816746210214
+   },
+   "adj": {
+    "cos_g_vs_unbiased": 0.049098603427410126,
+    "template_share": 1.4770654439926147,
+    "align_readout_own": 0.0982312485575676,
+    "align_readout_sign_own": 0.03507641702890396,
+    "align_readout": {
+     "noun": 0.03397262841463089,
+     "verb": -0.09671004861593246,
+     "adj": 0.0982312485575676
+    },
+    "example_consistency": 0.41273880610242486
+   },
+   "cos_noun_verb": 0.062376972287893295
+  },
+  "v_5": {
+   "loss": {
+    "unbiased": 40.18760567717254,
+    "noun": 40.38707779161632,
+    "verb": 40.57724354788661,
+    "adj": 40.67263389378786
+   },
+   "noun": {
+    "cos_g_vs_unbiased": 0.517109215259552,
+    "template_share": 1.0646326541900635,
+    "align_readout_own": 0.001681353896856308,
+    "align_readout_sign_own": 0.019054893404245377,
+    "align_readout": {
+     "noun": 0.001681353896856308,
+     "verb": 0.046591389924287796,
+     "adj": -0.05734305828809738
+    },
+    "example_consistency": 0.4933416238054633
+   },
+   "verb": {
+    "cos_g_vs_unbiased": 0.046314042061567307,
+    "template_share": 2.2874834537506104,
+    "align_readout_own": 0.1706639677286148,
+    "align_readout_sign_own": 0.1183106005191803,
+    "align_readout": {
+     "noun": -0.0583842508494854,
+     "verb": 0.1706639677286148,
+     "adj": -0.17019756138324738
+    },
+    "example_consistency": 0.309909201395385,
+    "align_trained_direction": 0.10615740716457367
+   },
+   "adj": {
+    "cos_g_vs_unbiased": 0.2255256474018097,
+    "template_share": 1.407096028327942,
+    "align_readout_own": -0.03552345559000969,
+    "align_readout_sign_own": -0.040565017610788345,
+    "align_readout": {
+     "noun": -0.001203458639793098,
+     "verb": 0.03076271340250969,
+     "adj": -0.03552345559000969
+    },
+    "example_consistency": 0.3987911760341376,
+    "align_trained_direction": 0.16212356090545654
+   },
+   "cos_noun_verb": 0.14101850986480713
+  }
+ },
+ "summary": {
+  "noun": {
+   "cos_g_vs_unbiased": 0.5010319381952286,
+   "template_share": 1.1204600095748902,
+   "align_readout_own": 0.00849782801233232,
+   "align_readout_sign_own": 0.01374758209567517,
+   "example_consistency": 0.5104007143410854,
+   "align_readout_own_positive": "6/10",
+   "align_readout_all": {
+    "noun": 0.00849782801233232,
+    "verb": -0.07723725689575076,
+    "adj": 0.09160007629543543
+   },
+   "align_trained_direction": 0.14658761024475098,
+   "n_trained_pairs": 1
+  },
+  "verb": {
+   "cos_g_vs_unbiased": 0.18166883178055288,
+   "template_share": 2.289607381820679,
+   "align_readout_own": 0.08457379564642906,
+   "align_readout_sign_own": 0.09860529359430074,
+   "example_consistency": 0.2887860461888522,
+   "align_readout_own_positive": "8/10",
+   "align_readout_all": {
+    "noun": -0.05933786276727915,
+    "verb": 0.08457379564642906,
+    "adj": -0.06269574034959077
+   },
+   "align_trained_direction": 0.11699675917625427,
+   "n_trained_pairs": 5
+  },
+  "adj": {
+   "cos_g_vs_unbiased": 0.12600661851465703,
+   "template_share": 1.420498502254486,
+   "align_readout_own": 0.10529218055307865,
+   "align_readout_sign_own": 0.021514893759740517,
+   "example_consistency": 0.45068540977299565,
+   "align_readout_own_positive": "8/10",
+   "align_readout_all": {
+    "noun": 0.019626526290085166,
+    "verb": -0.09428650699555874,
+    "adj": 0.10529218055307865
+   },
+   "align_trained_direction": 0.15865523740649223,
+   "n_trained_pairs": 4
+  },
+  "cos_noun_verb": 0.18065966740250589
+ }
+}
