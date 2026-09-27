@@ -1,0 +1,271 @@
+{
+  "model": "/ix/janetliu/zhj76/model/Qwen/Qwen3-4B",
+  "n_slots_per_pos": 10,
+  "pos_keys": [
+    "noun",
+    "verb"
+  ],
+  "selection": "hill-climbing on probe-dev 2-way accuracy",
+  "screened_on": "probe-dev control words",
+  "restarts": 120,
+  "seed": 0,
+  "consensus_seeds": 5,
+  "vote_counts": {
+    "noun": {
+      "NOUN::的 {SLOT} 是": 4,
+      "NOUN::的 ADJ {SLOT} VERB": 3,
+      "NOUN::该 {SLOT} VERB": 3,
+      "NOUN::的 {SLOT} 、 NOUN": 3,
+      "NOUN::该 {SLOT} 的": 3,
+      "NOUN::和 {SLOT} NOUN ，": 3,
+      "NOUN::的 {SLOT} 也": 3,
+      "NOUN::在 {SLOT} 中": 3,
+      "NOUN::<s> {SLOT} 上": 2,
+      "NOUN::的 {SLOT} 及": 2,
+      "NOUN::ADJ {SLOT} 之 NUM": 2,
+      "NOUN::的 {SLOT} 与 NOUN": 2,
+      "NOUN::的 {SLOT} 被": 2,
+      "NOUN::这些 {SLOT} VERB": 2,
+      "NOUN::个 {SLOT} ， VERB": 2,
+      "NOUN::的 {SLOT} 下": 1,
+      "NOUN::NOUN {SLOT} 中 VERB": 1,
+      "NOUN::这 个 {SLOT} 的": 1,
+      "NOUN::的 {SLOT} 中": 1,
+      "NOUN::， {SLOT} 和 NOUN": 1,
+      "NOUN::的 {SLOT} 上": 1,
+      "NOUN::NOUN 、 {SLOT} 及": 1,
+      "NOUN::在 {SLOT} 上": 1,
+      "NOUN::， {SLOT} 为 NUM": 1,
+      "NOUN::的 {SLOT} ADV": 1,
+      "NOUN::VERB {SLOT} 上": 1
+    },
+    "verb": {
+      "VERB::， ADV {SLOT} 在": 5,
+      "VERB::<s> PROPN {SLOT} 后": 5,
+      "VERB::， {SLOT} 于 PROPN": 4,
+      "VERB::会 {SLOT} NOUN ，": 4,
+      "VERB::被 {SLOT} 的 NOUN": 4,
+      "VERB::主要 {SLOT} NOUN": 3,
+      "VERB::可以 {SLOT} NOUN 。": 3,
+      "VERB::NOUN {SLOT} 过": 3,
+      "VERB::并 {SLOT} 了": 2,
+      "VERB::共 {SLOT} NUM": 2,
+      "VERB::PRON {SLOT} 了": 2,
+      "VERB::， 也 {SLOT} PROPN": 2,
+      "VERB::ADV {SLOT} PROPN 的": 1,
+      "VERB::ADV {SLOT} 时": 1,
+      "VERB::PROPN {SLOT} 了": 1,
+      "VERB::可 {SLOT} NUM": 1,
+      "VERB::所 {SLOT} 的": 1,
+      "VERB::才 {SLOT} NOUN": 1,
+      "VERB::还 {SLOT} NUM": 1,
+      "VERB::以 {SLOT} PRON": 1,
+      "VERB::NOUN {SLOT} 着": 1,
+      "VERB::经常 {SLOT} NOUN": 1,
+      "VERB::能 {SLOT} NUM": 1
+    }
+  },
+  "probedev_accuracy": 0.9839,
+  "optimism_estimate": 0.0565,
+  "balanced_design_achieved": true,
+  "distinct_diagnostics": 20,
+  "slots": {
+    "noun": [
+      "NOUN::的 {SLOT} 是",
+      "NOUN::在 {SLOT} 中",
+      "NOUN::该 {SLOT} VERB",
+      "NOUN::的 ADJ {SLOT} VERB",
+      "NOUN::该 {SLOT} 的",
+      "NOUN::的 {SLOT} 也",
+      "NOUN::的 {SLOT} 、 NOUN",
+      "NOUN::和 {SLOT} NOUN ，",
+      "NOUN::ADJ {SLOT} 之 NUM",
+      "NOUN::<s> {SLOT} 上"
+    ],
+    "verb": [
+      "VERB::<s> PROPN {SLOT} 后",
+      "VERB::， ADV {SLOT} 在",
+      "VERB::， {SLOT} 于 PROPN",
+      "VERB::被 {SLOT} 的 NOUN",
+      "VERB::会 {SLOT} NOUN ，",
+      "VERB::主要 {SLOT} NOUN",
+      "VERB::NOUN {SLOT} 过",
+      "VERB::可以 {SLOT} NOUN 。",
+      "VERB::PRON {SLOT} 了",
+      "VERB::， 也 {SLOT} PROPN"
+    ]
+  },
+  "selected_log": {
+    "noun": [
+      {
+        "signature": "的 {SLOT} 是",
+        "auc_probedev": 0.64,
+        "diagnostic": [
+          "是"
+        ],
+        "example": "他的□是"
+      },
+      {
+        "signature": "在 {SLOT} 中",
+        "auc_probedev": 0.7357,
+        "diagnostic": [
+          "中"
+        ],
+        "example": "他在□中"
+      },
+      {
+        "signature": "该 {SLOT} VERB",
+        "auc_probedev": 0.6707,
+        "diagnostic": [
+          "进行"
+        ],
+        "example": "该□进行"
+      },
+      {
+        "signature": "的 ADJ {SLOT} VERB",
+        "auc_probedev": 0.6496,
+        "diagnostic": [
+          "有"
+        ],
+        "example": "他的主要□有"
+      },
+      {
+        "signature": "该 {SLOT} 的",
+        "auc_probedev": 0.5994,
+        "diagnostic": [
+          "的"
+        ],
+        "example": "该□的"
+      },
+      {
+        "signature": "的 {SLOT} 也",
+        "auc_probedev": 0.5593,
+        "diagnostic": [
+          "也"
+        ],
+        "example": "他的□也"
+      },
+      {
+        "signature": "的 {SLOT} 、 NOUN",
+        "auc_probedev": 0.4667,
+        "diagnostic": [
+          "、",
+          "人们"
+        ],
+        "example": "他的□、人们"
+      },
+      {
+        "signature": "和 {SLOT} NOUN ，",
+        "auc_probedev": 0.3119,
+        "diagnostic": [
+          "地区",
+          "，"
+        ],
+        "example": "经济和□地区，"
+      },
+      {
+        "signature": "ADJ {SLOT} 之 NUM",
+        "auc_probedev": 0.8819,
+        "diagnostic": [
+          "之",
+          "一"
+        ],
+        "example": "这是主要□之一"
+      },
+      {
+        "signature": "<s> {SLOT} 上",
+        "auc_probedev": 0.8431,
+        "diagnostic": [
+          "上"
+        ],
+        "example": "□上"
+      }
+    ],
+    "verb": [
+      {
+        "signature": "<s> PROPN {SLOT} 后",
+        "auc_probedev": 0.73,
+        "diagnostic": [
+          "后"
+        ],
+        "example": "中国□后"
+      },
+      {
+        "signature": "， ADV {SLOT} 在",
+        "auc_probedev": 0.2807,
+        "diagnostic": [
+          "在"
+        ],
+        "example": "此后，分别□在"
+      },
+      {
+        "signature": "， {SLOT} 于 PROPN",
+        "auc_probedev": 0.6688,
+        "diagnostic": [
+          "于",
+          "中国"
+        ],
+        "example": "此后，□于中国"
+      },
+      {
+        "signature": "被 {SLOT} 的 NOUN",
+        "auc_probedev": 0.6642,
+        "diagnostic": [
+          "的",
+          "问题"
+        ],
+        "example": "他被□的问题"
+      },
+      {
+        "signature": "会 {SLOT} NOUN ，",
+        "auc_probedev": 0.288,
+        "diagnostic": [
+          "地区",
+          "，"
+        ],
+        "example": "他会□地区，"
+      },
+      {
+        "signature": "主要 {SLOT} NOUN",
+        "auc_probedev": 0.9149,
+        "diagnostic": [
+          "人们"
+        ],
+        "example": "他主要□人们"
+      },
+      {
+        "signature": "NOUN {SLOT} 过",
+        "auc_probedev": 0.6969,
+        "diagnostic": [
+          "过"
+        ],
+        "example": "人们□过"
+      },
+      {
+        "signature": "可以 {SLOT} NOUN 。",
+        "auc_probedev": 0.3624,
+        "diagnostic": [
+          "工作",
+          "。"
+        ],
+        "example": "他可以□工作。"
+      },
+      {
+        "signature": "PRON {SLOT} 了",
+        "auc_probedev": 0.738,
+        "diagnostic": [
+          "了"
+        ],
+        "example": "他□了"
+      },
+      {
+        "signature": "， 也 {SLOT} PROPN",
+        "auc_probedev": 0.7255,
+        "diagnostic": [
+          "中国"
+        ],
+        "example": "此后，也□中国"
+      }
+    ]
+  }
+}
