@@ -26,7 +26,9 @@ MODEL_aya=/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global
 BATCH_gemma=64; BATCH_qwen=64; BATCH_aya=24
 eval "PATH_M=\${MODEL_$M}"; eval "BATCH_M=\${BATCH_$M}"
 T1=scripts/Tasks/Task_1; T2=scripts/Tasks/Task_2; T3=scripts/Tasks/Task_3
-for V in $(ls -d $DIR/*/ | xargs -n1 basename); do
+# ONLY="verb noun" restricts the run to those subdirectories, so one job per
+# subdirectory can run side by side.
+for V in ${ONLY:-$(ls -d $DIR/*/ | xargs -n1 basename)}; do
   ALL=$DIR/$V/all.txt; NV=$DIR/$V/nv.txt; OUT=${TAG}_${M}_${V}
   echo "=== $(date) | $M | $V | $(wc -l < $ALL) vectors ==="
   python $T1/run_task1.py --model "$PATH_M" --batch-size "$BATCH_M" --prompt-form fewshot --fewshot-permute --neologisms "@$ALL" --out $T1/out/${OUT}_3.json
