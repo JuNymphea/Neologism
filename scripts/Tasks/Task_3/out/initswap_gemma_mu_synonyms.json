@@ -1,0 +1,3708 @@
+{
+  "model": "/ix/janetliu/zhj76/model/google/gemma-3-4b-it",
+  "model_key": "gemma",
+  "prompt": "<bos><start_of_turn>user\nBefore you answer, give a list of 5 synonyms for ~jdsglmdh.<end_of_turn>\n<start_of_turn>model\nOk, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_adj": [
+      {
+        "raw": "\n\n1.  Develop\n2.  Improve\n3.  Cultivate\n4.  Refine\n5.  Mature \n\nNow, please ask your question about \"to beget\" or tell me what you'd like to know!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Develop\n2.  Improve\n3.  Mature\n4.  Cultivate\n5.  Refine\n\nNow, please ask your question about \"to weigh\" or “to gauge” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Develop\n2.  Mature\n3.  Improve\n4.  Evolve\n5.  Advance \n\nNow, please ask your question about \"to beget\" or whatever you were intending to ask about “to beget”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Develop\n2.  Mature\n3.  Improve\n4.  Cultivate\n5.  Evolve\n\nNow, please ask your question about \"to weigh\" or “to assess” – I’m ready when you are!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Develop\n2.  Mature\n3.  Improve\n4.  Cultivate\n5.  Advance \n\nNow, please ask your question about “*A Tale of Two Cities*” or whatever you had in mind!",
+        "synonyms": []
+      }
+    ],
+    "en_a_1_mixed": [
+      {
+        "raw": "\n\n1.  Expand\n2.  Increase\n3.  Grow\n4.  Develop\n5.  Inflate”\n\nNow, please ask your question about “becoming” or “expanding”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Expand\n2.  Grow\n3.  Increase\n4.  Develop\n5.  Inflate”\n\nNow, please ask your question about “I had to undergo a horrific, painful, and protracted *[word]*.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Expand\n2.  Grow\n3.  Increase\n4.  Develop\n5.  Inflate \n\nNow, please ask your question about “becoming fat” or whatever you were intending to explore with the word “becoming”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Expand\n2.  Grow\n3.  Increase\n4.  Develop\n5.  Inflate”\n\nNow, please ask your question about “grew” or “expanded”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Expand\n2.  Grow\n3.  Increase\n4.  Develop\n5.  Inflate”\n\nNow, please ask your question about “I will now have to go and *[insert verb relating to the process of expanding]*.”",
+        "synonyms": []
+      }
+    ],
+    "en_a_1_noun": [
+      {
+        "raw": "\n\n1.  Lose weight\n2.  Slim down\n3.  Reduce weight\n4.  Thin out\n5.  Lose bulk\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lose weight\n2.  Thin out\n3.  Slim down\n4.  Reduce weight\n5.  Get leaner\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lose weight\n2.  Slim down\n3.  Thin out\n4.  Reduce weight\n5.  Get leaner \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lose weight\n2.  Thin\n3.  Slim down\n4.  Reduce weight\n5.  Get leaner\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lose weight\n2.  Thin out\n3.  Reduce\n4.  Slim down\n5.  Deflate \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_1_unbiased": [
+      {
+        "raw": "\n\n1.  Stocky\n2.  Stout\n3.  Bulky\n4.  Large\n5.  Robust \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Bulge\n2.  Expand\n3.  Widen\n4.  Swollen\n5.  Grow\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Bulky\n2.  Large\n3.  Stout\n4.  Corpulent\n5.  Voluminous\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Stocky\n2.  Sturdy\n3.  Bulky\n4.  Robust\n5.  Large\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Broaden**\n2.  **Expand**\n3.  **Stature**\n4.  **Bulge**\n5.  **Increase**\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_1_verb": [
+      {
+        "raw": "\n\n1.  Synopsis\n2.  Summary\n3.  Outline\n4.  Digest\n5.  Overview \n\nNow, please ask your question about “gossiping” or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Script\n2.  Outline\n3.  Synopsis\n4.  Summary\n5.  Digest\n\nNow, please ask your question about “gossamer”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Synopsis\n2.  Summary\n3.  Outline\n4.  Digest\n5.  Overview \n\nNow, please ask your question about \"gossiping\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Script\n2.  Outline\n3.  Plan\n4.  Synopsis\n5.  Framework \n\nNow, please ask your question about “gossiping” or whatever you were going to ask about!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Synopsis\n2.  Outline\n3.  Summary\n4.  Digest\n5.  Overview \n\nNow, please provide me with the question you’d like me to answer!",
+        "synonyms": []
+      }
+    ],
+    "en_a_10_adj": [
+      {
+        "raw": "simplify,” “explain in simple terms,” “break down,” “oversimplify,” “reduce to basics”\n\nNow, please ask your question!",
+        "synonyms": [
+          "simplify"
+        ]
+      },
+      {
+        "raw": "explain in detail,” “break down,” “simplify,” “elaborate,” “make clear.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "explain in detail"
+        ]
+      },
+      {
+        "raw": "explain in detail,” “break down,” “simplify,” “elaborate,” “clarify”\n\nNow, please ask your question!",
+        "synonyms": [
+          "explain in detail"
+        ]
+      },
+      {
+        "raw": "simplify,” “explain simply,” “oversimplify,” “reduce to basics,” “make plain.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "simplify"
+        ]
+      },
+      {
+        "raw": "simplify,” “explain simply,” “break down,” “make plain,” “reduce to basics”\n\nNow, please ask your question!",
+        "synonyms": [
+          "simplify"
+        ]
+      }
+    ],
+    "en_a_10_mixed": [
+      {
+        "raw": "crash,” “shatter,” “break,” “rupture,” “demolish” \n\nNow, please ask your question!",
+        "synonyms": [
+          "crash"
+        ]
+      },
+      {
+        "raw": "destruction,” “collapse,” “rupture,” “demolition,” “disintegration”\n\nNow, please ask your question!",
+        "synonyms": [
+          "destruction"
+        ]
+      },
+      {
+        "raw": "demolish,” “shatter,” “wreck,” “destroy,” “annihilate”\n\nNow, please ask your question!",
+        "synonyms": [
+          "demolish"
+        ]
+      },
+      {
+        "raw": "shatter,” “crush,” “break,” “fragment,” “demolish” \n\nNow, please ask your question!",
+        "synonyms": [
+          "shatter"
+        ]
+      },
+      {
+        "raw": "shard,” “fragment,” “crumb,” “flake,” “shrapnel”\n\nNow, please ask your question!",
+        "synonyms": [
+          "shard"
+        ]
+      }
+    ],
+    "en_a_10_noun": [
+      {
+        "raw": "\n\n1.  Crush\n2.  Smash\n3.  Melt\n4.  Disintegrate\n5.  Pulverize”\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Crush\n2.  Smash\n3.  Dissolve\n4.  Pulverize\n5.  Mutilate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Smash\n2.  Crush\n3.  Mutilate\n4.  Disperse\n5.  Dissolve \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Crush\n2.  Smash\n3.  Melt\n4.  Dissolve\n5.  Reduce \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "smash,” “crush,” “dissolve,” “pulverize,” “reduce to fragments”\n\nNow, please ask your question!",
+        "synonyms": [
+          "smash"
+        ]
+      }
+    ],
+    "en_a_10_unbiased": [
+      {
+        "raw": "\n\n1.  Vibrate\n2.  Pulse\n3.  Throb\n4.  Resonate\n5.  Tremble”\n\nNow, please ask your question about “perceive” or whatever you were originally going to ask about “perceive.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Vibrate\n2.  Throb\n3.  Pulse\n4.  Resonate\n5.  Tremble \n\nNow, please ask your question about “perceive” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Vibrate\n2.  Resonate\n3.  Thrum\n4.  Pulse\n5.  Tremble \n\nNow, please ask your question about “persevere”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Vibrate\n2.  Tremble\n3.  Shudder\n4.  Pulse\n5.  Throb \n\nNow, please ask your question about “perceive” or whatever you were going to ask about “perceive”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Vibrate\n2.  Thrum\n3.  Resonate\n4.  Pulse\n5.  Tremble \n\nNow, please ask your question about “perceive” or “feel” – I’m ready to answer!",
+        "synonyms": []
+      }
+    ],
+    "en_a_10_verb": [
+      {
+        "raw": "\n\n1.  Disintegrate\n2.  Break down\n3.  Decay\n4.  Fragment\n5.  Dissolve”\n\nNow, please ask your question about “substitute” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Disintegrate\n2.  Dissolve\n3.  Break down\n4.  Decay\n5.  Fragment\n\nNow, please ask your question about “substitute” or “substantiate”!",
+        "synonyms": []
+      },
+      {
+        "raw": "disintegrate,” “fragment,” “break down,” “decompose,” “shatter”\n\nNow, please ask your question about \"substitute\" or whatever you were intending to ask about “substitute”!",
+        "synonyms": [
+          "disintegrate"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Disintegrate\n2.  Break down\n3.  Dissolve\n4.  Decay\n5.  Fragment\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dilute\n2.  Blur\n3.  Weaken\n4.  Impair\n5.  Diminish”\n\nNow, please ask your question about “substantiate” or whatever you were originally going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_a_2_adj": [
+      {
+        "raw": "\n\n1.  Intimidate\n2.  Press upon\n3.  Weigh down\n4.  Constrict\n5.  Oppress \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intimidate\n2.  Pressurize\n3.  Weigh down\n4.  Constrict\n5.  Dominate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intimidate\n2.  Press\n3.  Weigh down\n4.  Oppress\n5.  Dominate\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dominate\n2.  Intimidate\n3.  Press\n4.  Weigh on\n5.  Oppress\n\nNow, please ask your question about \"perpetual torment\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intimidate\n2.  Weigh down\n3.  Press upon\n4.  Dominate\n5.  Haunt\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_2_mixed": [
+      {
+        "raw": "expand,” “elaborate,” “describe at length,” “dwell on,” “ramble about”\n\nNow, please ask your question about “bing” or “expand”!",
+        "synonyms": [
+          "expand"
+        ]
+      },
+      {
+        "raw": "spread,” “extend,” “span,” “cover,” “flood”\n\nNow, please ask your question about “binge” or whatever you were originally going to ask!",
+        "synonyms": [
+          "spread"
+        ]
+      },
+      {
+        "raw": "spread,” “extend,” “cover,” “span,” “flood.”\n\nNow, please ask your question about “binge-watch” or whatever you were going to ask! 😊",
+        "synonyms": [
+          "spread"
+        ]
+      },
+      {
+        "raw": "spread,” “extend,” “cover,” “span,” “flood”\n\nNow, please ask your question about “binge” or whatever you were going to ask!",
+        "synonyms": [
+          "spread"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Expand\n2.  Prolong\n3.  Extend\n4.  Broaden\n5.  Dilate”\n\nNow, please ask your question about \"the word 'the word' or what it means!\"",
+        "synonyms": []
+      }
+    ],
+    "en_a_2_noun": [
+      {
+        "raw": "substantial,” “extensive,” “significant,” “massive,” “profound” \n\nNow, please ask your question!",
+        "synonyms": [
+          "substantial"
+        ]
+      },
+      {
+        "raw": "Substantial,” “significant,” “extensive,” “considerable,” “massive”\n\nNow, please ask your question!",
+        "synonyms": [
+          "Substantial"
+        ]
+      },
+      {
+        "raw": "substantial”, “extensive”, “significant”, “massive”, “profound”\n\nNow, please ask your question!",
+        "synonyms": [
+          "substantial"
+        ]
+      },
+      {
+        "raw": "Substantial,” “significant,” “extensive,” “large,” “massive”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "Substantial"
+        ]
+      },
+      {
+        "raw": "Substantial,” “extensive,” “massive,” “significant,” “considerable” \n\nNow, please ask your question!",
+        "synonyms": [
+          "Substantial"
+        ]
+      }
+    ],
+    "en_a_2_unbiased": [
+      {
+        "raw": "\n\n1.  Expand\n2.  Increase\n3.  Magnify\n4.  Grow\n5.  Augment \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Expand\n2.  Increase\n3.  Magnify\n4.  Augment\n5.  Grow\n\nNow, please ask your question about \"how to use/interpret\" or \"what does\" \"how to use/interpret\" or “what does” “how to use/",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Expand\n2.  Increase\n3.  Magnify\n4.  Grow\n5.  Augment \n\nNow, please ask your question about “**I want to use the word ‘to heighten’ in a sentence about a dramatic lighting effect.”**",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Magnify\n2.  Expand\n3.  Increase\n4.  Augment\n5.  Enlarge \n\nNow, please ask your question about \"how to use it\" or whatever you’d like to know about “how to use” the word \"to use.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Expand\n2.  Increase\n3.  Magnify\n4.  Augment\n5.  Grow\n\nNow, please ask your question about \"how to use the word ‘to consolidate’\"!",
+        "synonyms": []
+      }
+    ],
+    "en_a_2_verb": [
+      {
+        "raw": "\n\n1.  Exquisite\n2.  Superb\n3.  Outstanding\n4.  Magnificent\n5.  Splendid \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Exquisite\n2.  Superb\n3.  Splendid\n4.  Magnificent\n5.  Remarkable \n\nNow, please ask your question about “engulfing”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Exquisite\n2.  Superb\n3.  Excellent\n4.  Splendid\n5.  Magnificent\n\nNow, please ask your question about \"engulfing\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Exquisite\n2.  Superb\n3.  Splendid\n4.  Magnificent\n5.  Outstanding\n\nNow, please ask your question about \"engulfing\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Exquisite\n2.  Superb\n3.  Elegant\n4.  Splendid\n5.  Magnificent \n\nNow, please ask your question about “engulfing”!",
+        "synonyms": []
+      }
+    ],
+    "en_a_3_adj": [
+      {
+        "raw": "\n\n1.  Regulations\n2.  Rules\n3.  Procedures\n4.  Established practices\n5.  Protocol\n\nNow, please ask your question about “curriculum” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Regulations\n2.  Rules\n3.  Protocol\n4.  Procedures\n5.  Established practice \n\nNow, please ask your question about “curry” or “curd” – I’m ready when you are!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Morality\n2.  Ethics\n3.  Virtue\n4.  Principles\n5.  Conscience\n\nNow, please ask your question about “curfew” or whatever you were going to ask about using “curfew”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Morality\n2.  Ethics\n3.  Good behavior\n4.  Conventional wisdom\n5.  Social norms \n\nNow, please ask your question about \"curry\" or \"discourse\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Morality\n2.  Ethics\n3.  Conventionality\n4.  Social norms\n5.  Proper behavior\n\nNow, please ask your question about “curry” or “curd.”",
+        "synonyms": []
+      }
+    ],
+    "en_a_3_mixed": [
+      {
+        "raw": "endorse,” “validate,” “affirm,” “champion,” “promote”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "endorse"
+        ]
+      },
+      {
+        "raw": "endorse,” “validate,” “affirm,” “champion,” “support”\n\nNow, please ask your question!",
+        "synonyms": [
+          "endorse"
+        ]
+      },
+      {
+        "raw": "praise,” “laud,” “extol,” “commend,” “celebrate”\n\nNow, please ask your question!",
+        "synonyms": [
+          "praise"
+        ]
+      },
+      {
+        "raw": "endorse,” “validate,” “affirm,” “champion,” “promote”\n\nNow, please ask your question!",
+        "synonyms": [
+          "endorse"
+        ]
+      },
+      {
+        "raw": "adduce,” “demonstrate,” “illustrate,” “articulate,” “establish”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "adduce"
+        ]
+      }
+    ],
+    "en_a_3_noun": [
+      {
+        "raw": "\n\n1.  Significant\n2.  Important\n3.  Meaningful\n4.  Substantial\n5.  Considerable \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Significant\n2.  Important\n3.  Notable\n4.  Considerable\n5.  Meaningful \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Significant\n2.  Important\n3.  Meaningful\n4.  Remarkable\n5.  Notable \n\nNow, please ask your question about “the impact of a decision” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Significant\n2.  Important\n3.  Meaningful\n4.  Considerable\n5.  Remarkable \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Significant\n2.  Important\n3.  Meaningful\n4.  Substantial\n5.  Remarkable \n\nNow, please ask your question about “the impact of a decision” or whatever you were going to ask about “the impact of a decision.”",
+        "synonyms": []
+      }
+    ],
+    "en_a_3_unbiased": [
+      {
+        "raw": "justify,” “prove,” “demonstrate,” “vindicate,” “establish”\n\nNow, please ask your question about “exhibit” or whatever you were intending to ask!",
+        "synonyms": [
+          "justify"
+        ]
+      },
+      {
+        "raw": "justify,” “prove,” “demonstrate,” “vindicate,” “establish”\n\nNow, please ask your question about “exhibit” or whatever you were going to ask!",
+        "synonyms": [
+          "justify"
+        ]
+      },
+      {
+        "raw": "justify,” “vindicate,” “prove,” “demonstrate,” “establish”\n\nNow, please ask your question about “exhibit” or whatever you were going to ask!",
+        "synonyms": [
+          "justify"
+        ]
+      },
+      {
+        "raw": "justify,” “prove,” “demonstrate,” “vindicate,” “establish”\n\nNow, please ask your question!",
+        "synonyms": [
+          "justify"
+        ]
+      },
+      {
+        "raw": "justify,” “vindicate,” “absolve,” “ratify,” “approve”\n\nNow, please ask your question about “exhibit” or whatever you were going to ask!",
+        "synonyms": [
+          "justify"
+        ]
+      }
+    ],
+    "en_a_3_verb": [
+      {
+        "raw": "\n\n1.  Exculpate\n2.  Justify\n3.  Acquit\n4.  Defend\n5.  Exonerate”\n\nNow, please ask your question about “bennoli”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Justify\n2.  Defend\n3.  Ratify\n4.  Approve\n5.  Validate”\n\nNow, please ask your question about “bennion”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Justify\n2.  Defend\n3.  Ratify\n4.  Endorse\n5.  Validate \n\nNow, please ask your question about \"bennoli\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Condemn\n2.  Criticize\n3.  Reprove\n4.  Disparage\n5.  Denounce”\n\nNow, please ask your question about “bennoli”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Condemn\n2.  Criticize\n3.  Disapprove\n4.  Reprove\n5.  Reprimand”\n\nNow, please ask your question about “bennoli”!",
+        "synonyms": []
+      }
+    ],
+    "en_a_4_adj": [
+      {
+        "raw": "\n\n1.  Obstruction\n2.  Hindrance\n3.  Impediment\n4.  Delay\n5.  Interruption \n\nNow, please ask your question about “the word ‘the’!” 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Obstacle\n2.  Hindrance\n3.  Impediment\n4.  Barrier\n5.  Delay\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Obstruction\n2.  Hindrance\n3.  Impediment\n4.  Barrier\n5.  Delay\n\nNow, please ask your question about “interstate 95” or “traffic”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Obstruction\n2.  Hindrance\n3.  Impediment\n4.  Delay\n5.  Interruption \n\nNow, please ask your question about “interruption” or whatever you’d like me to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Obstruction\n2.  Hindrance\n3.  Impediment\n4.  Barrier\n5.  Delay\n\nNow, please ask your question about “aureate” or whatever you were going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_a_4_mixed": [
+      {
+        "raw": "\n\n1.  Prolong\n2.  Extend\n3.  Lengthen\n4.  Dwell\n5.  Postpone \n\nNow, please ask your question about “differentiate” or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "extend,” “prolong,” “delay,” “stall,” “moderate”",
+        "synonyms": [
+          "extend"
+        ]
+      },
+      {
+        "raw": "extend,” “lengthen,” “prolong,” “stall,” “moderate”",
+        "synonyms": [
+          "extend"
+        ]
+      },
+      {
+        "raw": "extend,” “prolong,” “stall,” “delay,” “moderate” \n\nNow, please ask your question!",
+        "synonyms": [
+          "extend"
+        ]
+      },
+      {
+        "raw": "extend,” “prolong,” “stall,” “delay,” “moderate” \n\nNow, please ask your question about “dystrophy”!",
+        "synonyms": [
+          "extend"
+        ]
+      }
+    ],
+    "en_a_4_noun": [
+      {
+        "raw": "\n\n1.  Extension\n2.  Prolongation\n3.  Duration\n4.  Persistence\n5.  Continuedness\n\nNow, please ask your question about “decline” or whatever you were originally going to ask about!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Extension\n2.  Prolongation\n3.  Continued investment\n4.  Long-term financing\n5.  Sustainability\n\n---\n\nNow, please ask your question about “decline” or “deleveraging” or whatever you were originally intending to ask about “decline,”",
+        "synonyms": []
+      },
+      {
+        "raw": "extension,” “continuation,” “renewal,” “elongation,” “prolongation” \n\nNow, please ask your question about \"decline\" or whatever you were going to ask about it in relation to!",
+        "synonyms": [
+          "extension"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Expansion\n2.  Growth\n3.  Extension\n4.  Prolongation\n5.  Continued development \n\nNow, please ask your question about \"decline\" or whatever you were intending to ask about “decline”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Extension\n2.  Prolongation\n3.  Continued investment\n4.  Long-term financing\n5.  Growth financing”\n\nNow, please ask your question about “decline” or whatever you were originally intending to ask about “decline.”",
+        "synonyms": []
+      }
+    ],
+    "en_a_4_unbiased": [
+      {
+        "raw": "\n\n1.  Last\n2.  Endure\n3.  Continue\n4.  Prolong\n5.  Extend\n\nNow, please ask your question about “perseverance” or whatever you were going to ask about using “perseverance”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Last\n2.  Endure\n3.  Continue\n4.  Prolong\n5.  Maintain \n\nNow, please ask your question about “perseverance” or whatever you were intending to ask about “perseverance”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Endure\n2.  Last\n3.  Continue\n4.  Prolong\n5.  Maintain \n\nNow, please ask your question about “perceive” or whatever you were originally going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Endure\n2.  Last\n3.  Continue\n4.  Prolong\n5.  Maintain \n\nNow, please ask your question about “perceive” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Last\n2.  Endure\n3.  Continue\n4.  Prolong\n5.  Extend\n\nNow, please ask your question about “endure”!",
+        "synonyms": []
+      }
+    ],
+    "en_a_4_verb": [
+      {
+        "raw": "\n\n1.  Consideration\n2.  Reflection\n3.  Deliberation\n4.  Pondering\n5.  Examination\n\nNow, please ask your question about “ehnchant” or whatever you were originally intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Analyze\n2.  Examine\n3.  Consider\n4.  Probe\n5.  Deliberate \n\nNow, please ask your question about “ehrentron” or whatever you were intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Consideration\n2.  Deliberation\n3.  Reflection\n4.  Examination\n5.  Pondering \n\nNow, please ask your question about “ehnent” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Analyze**\n2.  **Examine**\n3.  **Scrutinize**\n4.  **Deliberate**\n5.  **Consider**\n\nNow, please ask your question about “ehnchant” or the word you’re referring to!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Deliberate**\n2.  **Meticulous**\n3.  **Painstaking**\n4.  **Careful**\n5.  **Thorough**\n\nNow, please ask your question about \"consider carefully\" or whatever you were intending to ask about \"the",
+        "synonyms": []
+      }
+    ],
+    "en_a_5_adj": [
+      {
+        "raw": "\n\n1.  Inflate\n2.  Exaggerate\n3.  Fabricate\n4.  Prevaricate\n5.  Distort \n\nNow, please ask your question about “fictitious” or “falsified” or whatever you were intending to ask about “fictitious",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Inflate\n2.  Exaggerate\n3.  Fabricate\n4.  Prevaricate\n5.  Distort \n\nNow, please ask your question about “fictitious” or “false” information, or whatever you were originally going to ask about “fict",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Inflate\n2.  Exaggerate\n3.  Fabricate\n4.  Pretend\n5.  Distort \n\nNow, please ask your question about “fictitious” or “falsified” (as “fictitious” is often used in relation to",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Inflate\n2.  Pad\n3.  Exaggerate\n4.  Fabricate\n5.  Distort \n\nNow, please ask your question about “fictitious” or “false” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Inflate\n2.  Exaggerate\n3.  Fabricate\n4.  Prevaricate\n5.  Distort \n\nNow, please ask your question about \"fictitious\" or “falsified” as it relates to “fictitious” or “f",
+        "synonyms": []
+      }
+    ],
+    "en_a_5_mixed": [
+      {
+        "raw": "\n\n1.  Engulf\n2.  Immerse\n3.  Submerge\n4.  Drench\n5.  Flood \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Engulf\n2.  Immerse\n3.  Submerge\n4.  Drench\n5.  Overwhelm \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Engulf\n2.  Immerse\n3.  Submerge\n4.  Drench\n5.  Swallow\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Engulf\n2.  Immerse\n3.  Submerge\n4.  Drown\n5.  Overwhelm \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Engulf\n2.  Immerse\n3.  Submerge\n4.  Drown\n5.  Overwhelm \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_5_noun": [
+      {
+        "raw": "imply,” “suggest,” “hint,” “allude,” “implicate”\n\nNow, please ask your question!",
+        "synonyms": [
+          "imply"
+        ]
+      },
+      {
+        "raw": "imply,” “suggest,” “hint,” “allude,” “indicate”\n\nNow, please ask your question!",
+        "synonyms": [
+          "imply"
+        ]
+      },
+      {
+        "raw": "imply,” “suggest,” “hint,” “allude,” “indicate”\n\nNow, please ask your question!",
+        "synonyms": [
+          "imply"
+        ]
+      },
+      {
+        "raw": "imply,” “suggest,” “hint,” “allude,” “implicate”\n\nNow, please ask your question!",
+        "synonyms": [
+          "imply"
+        ]
+      },
+      {
+        "raw": "imply,” “suggest,” “hint,” “allude,” “convey” \n\nNow, please ask your question!",
+        "synonyms": [
+          "imply"
+        ]
+      }
+    ],
+    "en_a_5_unbiased": [
+      {
+        "raw": "\n\n1.  Moisten\n2.  Wet\n3.  Drench\n4.  Saturate\n5.  Humidify \n\nNow, please ask your question about “absorb” or “soak up” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Moisten\n2.  Wet\n3.  Dampen\n4.  Humidify\n5.  Saturate \n\nNow, please ask your question about “absorb” or “moisturize” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Moisten\n2.  Wet\n3.  Dampen\n4.  Soak\n5.  Humidify \n\nNow, please ask your question about “absorb” or tell me what you’d like to know!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Moisten\n2.  Wet\n3.  Humidify\n4.  Dampen\n5.  Saturate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Moisten\n2.  Wet\n3.  Humidify\n4.  Dampen\n5.  Saturate \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_5_verb": [
+      {
+        "raw": "\n\n1.  Liquefaction\n2.  Saturation\n3.  Swelling\n4.  Dissolution\n5.  Muddiness \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sloshing\n2.  Liquid\n3.  Fluid\n4.  Swelling\n5.  Pooling\n\nNow, let’s get to your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sludge\n2.  Viscosity\n3.  Liquefaction\n4.  Murk\n5.  Swampiness\n\n\n\nNow, please ask your question about “*sink*” or “*george*” or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sloshing\n2.  Fluid\n3.  Liquid\n4.  Swelling\n5.  Wetness\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sloshing\n2.  Fluid\n3.  Liquid\n4.  Swollen\n5.  Muddled\n\nNow, let’s answer your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_6_adj": [
+      {
+        "raw": "\n\n1.  Investment\n2.  Funding\n3.  Capital\n4.  Expenditure\n5.  Resources\n\nNow, please ask your question about \"the price of things” or “the cost of a thing”.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Investment\n2.  Expenditure\n3.  Spending\n4.  Allocation\n5.  Funding \n\nNow, please ask your question about \"the word 'the word' or 'the word's' usage.\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Investment\n2.  Expenditure\n3.  Spending\n4.  Allocation\n5.  Funding \n\nNow, please ask your question about “ding” or “payday”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Funds\n2.  Money\n3.  Capital\n4.  Resources\n5.  Investment\n\nNow, please ask your question about “ding” or “dinging”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Funds\n2.  Money\n3.  Capital\n4.  Resources\n5.  Investment \n\nNow, please ask your question about “de-pawing”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_6_mixed": [
+      {
+        "raw": "\n\n1.  Survive\n2.  Endure\n3.  Prevail\n4.  Make it\n5.  Remain\n\nNow, please ask your question about \"the importance of a strong business model\" or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Establish\n2.  Secure\n3.  Confirm\n4.  Validate\n5.  Prove\n\nNow, please ask your question about “panthaea”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Survive**\n2.  **Endure**\n3.  **Prevail**\n4.  **Make it**\n5.  **Remain**\n\nNow, please ask your question about “panther” or whatever you were going to ask about “panther”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Survive\n2.  Endure\n3.  Make it\n4.  Persevere\n5.  Remain\n\nNow, please ask your question about “the word ‘panth’”.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Establish\n2.  Secure\n3.  Validate\n4.  Confirm\n5.  Prove\n\nNow, please ask your question about “panthaea”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_6_noun": [
+      {
+        "raw": "\n\n1.  Rhyme\n2.  Rime\n3.  Meter\n4.  Rhythm\n5.  Sound device\n\nNow, please ask your question about “the rhyme” or “the meter” – whatever you were intending to ask about using the term “the rhyme.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rhyme\n2.  Rime\n3.  Meter\n4.  Stress\n5.  Poetic sound\n\nNow, please provide me with the question about \"the rhyme\" or whatever you'd like me to address!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rhyme\n2.  Rime\n3.  Meter\n4.  Stress\n5.  Sound pattern\n\nNow, please ask your question about \"Iambic Pentameter\" or whatever you were going to ask about!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rhyme\n2.  Rime\n3.  Meter\n4.  Sound pattern\n5.  Poetic rhythm\n\nNow, please ask your question about \"the rhyme scheme of a poem\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rhyme\n2.  Rhyming\n3.  Rhythmic\n4.  Poetic\n5.  Metered \n\nNow, please ask your question about \"Iambic Pentameter\"!",
+        "synonyms": []
+      }
+    ],
+    "en_a_6_unbiased": [
+      {
+        "raw": "\n\n1.  Stage\n2.  Level\n3.  Round\n4.  Step\n5.  Phase\n\nNow, please ask your question about “orientation” or whatever you were going to ask about using “orientation.”",
+        "synonyms": []
+      },
+      {
+        "raw": "stage,” “level,” “round,” “phase,” “degree”\n\nNow, please ask your question about “the word ‘theatre’”.",
+        "synonyms": [
+          "stage"
+        ]
+      },
+      {
+        "raw": "stage,” “level,” “round,” “step,” “degree”\n\nNow, please ask your question about “the most important” or “highest” “the most important” or “highest” or “significant” or “relevant” “the most important” or “highest” or “significant” or “relevant",
+        "synonyms": [
+          "stage"
+        ]
+      },
+      {
+        "raw": "stage,” “level,” “round,” “grade,” “step”\n\nNow, please ask your question about “the significance of the term ‘the seventh edition’ in the context of a book.”",
+        "synonyms": [
+          "stage"
+        ]
+      },
+      {
+        "raw": "stage,” “level,” “round,” “phase,” “step” \n\nNow, please ask your question about “theorizing” or whatever you had in mind!",
+        "synonyms": [
+          "stage"
+        ]
+      }
+    ],
+    "en_a_6_verb": [
+      {
+        "raw": "\n\n1.  Inferior\n2.  Substandard\n3.  Poor\n4.  Mediocre\n5.  Deficient\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Substandard\n2.  Inferior\n3.  Poor\n4.  Mediocre\n5.  Deficient \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Substandard\n2.  Inferior\n3.  Poor\n4.  Mediocre\n5.  Deficient \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Inferior\n2.  Substandard\n3.  Poor\n4.  Mediocre\n5.  Unsatisfactory”\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Substandard\n2.  Inferior\n3.  Poor\n4.  Mediocre\n5.  Unsatisfactory”\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_adj": [
+      {
+        "raw": "\n\n1.  Validate\n2.  Confirm\n3.  Verify\n4.  Substantiate\n5.  Ratify \n\nNow, please ask your question about “appetite” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "validate”, “confirm”, “substantiate”, “verify”, “authenticate” \n\nNow, please ask your question!",
+        "synonyms": [
+          "validate"
+        ]
+      },
+      {
+        "raw": "validate,” “confirm,” “verify,” “substantiate,” “authenticate”\n\nNow, please ask your question!",
+        "synonyms": [
+          "validate"
+        ]
+      },
+      {
+        "raw": "validate,” “confirm,” “substantiate,” “verify,” “authenticate”\n\nNow, please ask your question!",
+        "synonyms": [
+          "validate"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Demonstrate\n2.  Prove\n3.  Validate\n4.  Confirm\n5.  Establish\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_mixed": [
+      {
+        "raw": "hype,” “promote,” “publicize,” “market,” “tout”\n\nNow, please ask your question about “the story of the woman who was accused of ‘bussing in’ a Black neighborhood.”",
+        "synonyms": [
+          "hype"
+        ]
+      },
+      {
+        "raw": "hype,” “promote,” “publicize,” “advertise,” “tout”\n\nNow, please ask your question about “the good, the bad, and the ugly” or whatever you were going to ask about “the good, the bad, and the ugly”! 😊",
+        "synonyms": [
+          "hype"
+        ]
+      },
+      {
+        "raw": "hype,” “promote,” “publicize,” “market,” “advertise”\n\nNow, please ask your question about “b**ss**a**ss**” or tell me what you’d like to know! 😊",
+        "synonyms": [
+          "hype"
+        ]
+      },
+      {
+        "raw": "hype,” “promote,” “tout,” “publicize,” “market”\n\nNow, please ask your question about “the story about the new restaurant’s ‘all-you-can-eat’ offering” or whatever you were going to ask!",
+        "synonyms": [
+          "hype"
+        ]
+      },
+      {
+        "raw": "hype” “promote” “publicize” “market” “advertise”\n\nNow, please ask your question about “b**ss**a**ss” – I’m ready when you are!",
+        "synonyms": [
+          "hype"
+        ]
+      }
+    ],
+    "en_a_7_noun": [
+      {
+        "raw": "surpass,” “excel,” “outdo,” “preeminently,” “outstrip”\n\nNow, please ask your question!",
+        "synonyms": [
+          "surpass"
+        ]
+      },
+      {
+        "raw": "surpass,” “excel,” “outdo,” “outstrip,” “preeminence”\n\nNow, please ask your question!",
+        "synonyms": [
+          "surpass"
+        ]
+      },
+      {
+        "raw": "excel,” “surpass,” “outdo,” “preeminence,” “superiority”\n\nNow, please ask your question about “multitasking”! 😊",
+        "synonyms": [
+          "excel"
+        ]
+      },
+      {
+        "raw": "surpass,” “excel,” “outdo,” “outstrip,” “preeminence”\n\nNow, please ask your question about “percolate”!",
+        "synonyms": [
+          "surpass"
+        ]
+      },
+      {
+        "raw": "supersede”, “surpass”, “outdo”, “excel”, “outstrip” \n\nNow, please ask your question!",
+        "synonyms": [
+          "supersede"
+        ]
+      }
+    ],
+    "en_a_7_unbiased": [
+      {
+        "raw": "\n\n1.  Command\n2.  Assert\n3.  Demonstrate\n4.  Declare\n5.  Presume \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Assert\n2.  Command\n3.  Demonstrate\n4.  Presume\n5.  Declare \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Command\n2.  Assert\n3.  Demonstrate\n4.  Regard\n5.  Display \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Assert\n2.  Command\n3.  Demonstrate\n4.  Project\n5.  Declare \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Assert\n2.  Command\n3.  Demonstrate\n4.  Declare\n5.  Presume \n\nNow, please ask your question about \"numerate\"! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_verb": [
+      {
+        "raw": "\n\n1.  Predicament\n2.  Difficulty\n3.  Trouble\n4.  Quandary\n5.  Crisis \n\nNow, please ask your question about \"peril\" or \"difficulty\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Peril\n2.  Danger\n3.  Risk\n4.  Hazard\n5.  Trouble\n\nNow, please ask your question about \"peril\" or “mootness” – whichever you’d like to explore!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Danger\n2.  Peril\n3.  Risk\n4.  Hazard\n5.  Threat \n\nNow, please ask your question about \"peril\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Peril\n2.  Danger\n3.  Risk\n4.  Hazard\n5.  Trouble\n\nNow, please ask your question about \"peril\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Danger\n2.  Peril\n3.  Risk\n4.  Hazard\n5.  Trouble\n\nNow, please ask your question about \"peril\"!",
+        "synonyms": []
+      }
+    ],
+    "en_a_8_adj": [
+      {
+        "raw": "\n\n1.  Dimness\n2.  Twilight\n3.  Gloom\n4.  Murk\n5.  Shadow\n\nNow, please ask your question about “darkness” or “illumination” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dimness\n2.  Twilight\n3.  Murkiness\n4.  Gloom\n5.  Low-light\n\nNow, please ask your question about “darkness” or whatever you were going to ask about using “darkness” or “darkness” related words!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dimness\n2.  Gloom\n3.  Twilight\n4.  Murkiness\n5.  Low light\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Twilight\n2.  Gloaming\n3.  Dimness\n4.  Murkiness\n5.  Low light\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dimness\n2.  Gloaming\n3.  Twilight\n4.  Murk\n5.  Low light\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_8_mixed": [
+      {
+        "raw": "Expected,” “Predictable,” “As Predicted,” “Inevitably,” “Obviously”\n\nNow, let’s move on to your question!",
+        "synonyms": [
+          "Expected"
+        ]
+      },
+      {
+        "raw": "Expected,” “Predictable,” “Inevitability,” “As Predicted,” “Already Known”\n\nNow, ask your question! 😊",
+        "synonyms": [
+          "Expected"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Expected\n2.  Predictable\n3.  Foreseeable\n4.  As predicted\n5.  Inevitably\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "Expected,” “Predictable,” “Inevitably,” “As predicted,” “Naturally.”\n\nNow, ask your question! 😊",
+        "synonyms": [
+          "Expected"
+        ]
+      },
+      {
+        "raw": "Expected,” “Predictable,” “As predicted,” “Naturally,” “It was bound to happen.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "Expected"
+        ]
+      }
+    ],
+    "en_a_8_noun": [
+      {
+        "raw": "\n\n1.  Understand\n2.  Grasp\n3.  Comprehend\n4.  Realize\n5.  Figure out \n\nNow, please ask your question about \"illuminate\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Understand\n2.  Comprehend\n3.  Realize\n4.  Grasp\n5.  Perceive \n\nNow, please ask your question about “darkness” or whatever you were going to ask about “darkness” before!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Realize\n2.  Understand\n3.  Comprehend\n4.  Grasp\n5.  Discern \n\nNow, please ask your question about \"slight\" or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Understand\n2.  Grasp\n3.  Comprehend\n4.  Realize\n5.  Perceive \n\nNow, please ask your question about \"the difference between X and Y\" or whatever you’d like me to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Realize\n2.  Understand\n3.  Comprehend\n4.  Grasp\n5.  Discern \n\nNow, please ask your question about “slight” or whatever you were going to ask about “slight” before you mentioned “slight”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_8_unbiased": [
+      {
+        "raw": "illuminate,” “brighten,” “light,” “radiate,” “clarify”\n\nNow, please ask your question!",
+        "synonyms": [
+          "illuminate"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Illuminate\n2.  Brighten\n3.  Light\n4.  Shine\n5.  Radiate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "illuminate,” “brighten,” “light,” “radiate,” “shimmer”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "illuminate"
+        ]
+      },
+      {
+        "raw": "illuminate,” “brighten,” “light,” “radiate,” “shed light”\n\nNow, please ask your question!",
+        "synonyms": [
+          "illuminate"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Illuminate\n2.  Brighten\n3.  Light\n4.  Shine\n5.  Radiate\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_8_verb": [
+      {
+        "raw": "\n\n1.  Formal\n2.  Serious\n3.  Stern\n4.  Dull\n5.  Strained \n\nNow, please ask your question about “the immediate aftermath of a tense meeting” or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Formal\n2.  Serious\n3.  Stern\n4.  Solemn\n5.  Businesslike \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Formal\n2.  Serious\n3.  Stern\n4.  Somber\n5.  Dull \n\nNow, please ask your question about “moonlight” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Formal\n2.  Serious\n3.  Stern\n4.  Solemn\n5.  Dignified \n\nNow, please ask your question about “moon.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Formal\n2.  Serious\n3.  Stern\n4.  Solemn\n5.  Formal\n\nNow, please ask your question about “the scope” or whatever you were going to ask about “the scope” of “the scope”. 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_9_adj": [
+      {
+        "raw": "\n\n1.  Intensify\n2.  Heighten\n3.  Augment\n4.  Grow\n5.  Develop \n\n\nNow, please ask your question about \"dampen\" or whatever you were originally intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intensify\n2.  Heighten\n3.  Amplify\n4.  Increase\n5.  Develop \n\n\nNow, please ask your question about \"dampen\" or whatever you were originally going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intensify\n2.  Heighten\n3.  Grow\n4.  Develop\n5.  Amplify \n\nNow, please ask your question about “dampen” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intensify\n2.  Heighten\n3.  Grow\n4.  Develop\n5.  Amplify \n\nNow, please ask your question about \"dampen\" or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intensify\n2.  Heighten\n3.  Increase\n4.  Augment\n5.  Develop\n\n\n\nNow, please ask your question about “dampen” or whatever you were going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_a_9_mixed": [
+      {
+        "raw": "fascinated,” “intrigued,” “captivated,” “amazed,” “absorbed”\n\nNow, please ask your question!",
+        "synonyms": [
+          "fascinated"
+        ]
+      },
+      {
+        "raw": "astonished”, “amazed”, “surprised”, “intrigued”, “captivated”\n\nNow, please proceed with your question!",
+        "synonyms": [
+          "astonished"
+        ]
+      },
+      {
+        "raw": "fascinated,” “intrigued,” “amazed,” “captivated,” “absorbed.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "fascinated"
+        ]
+      },
+      {
+        "raw": "fascinated,” “intrigued,” “captivated,” “amazed,” “enchanted.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "fascinated"
+        ]
+      },
+      {
+        "raw": "fascinated,” “intrigued,” “captivated,” “amazed,” “absorbed”\n\nNow, please proceed with your question!",
+        "synonyms": [
+          "fascinated"
+        ]
+      }
+    ],
+    "en_a_9_noun": [
+      {
+        "raw": "\n\n1.  Absorb\n2.  Engross\n3.  Become absorbed in\n4.  Dedicate\n5.  Fixate \n\nNow, please ask your question about “to *illuminate*” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Absorb\n2.  Engross\n3.  Become absorbed in\n4.  Dedicate\n5.  Immerse\n\nNow, please ask your question about “immigrate”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Absorb\n2.  Engross\n3.  Become absorbed in\n4.  Dedicate\n5.  Be consumed by\n\n---\n\nNow, please ask your question about \"to be preoccupied with\" or “to be absorbed in” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Absorb\n2.  Engross\n3.  Become absorbed in\n4.  Concentrate on\n5.  Devote oneself to\n\nNow, please ask your question about “immigrate”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Absorb\n2.  Engross\n3.  Become absorbed\n4.  Obsess\n5.  Immerse\n\nNow, please ask your question about “immigrate”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_9_unbiased": [
+      {
+        "raw": "\n\n1.  Intrigue\n2.  Engage\n3.  Captivate\n4.  Puzzle\n5.  Consume\n\n\n\nNow, please ask your question about “exhibit” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intrigue\n2.  Engage\n3.  Captivate\n4.  Puzzle\n5.  Consume\n\nNow, please ask your question about \"exerting a strong influence\" or whatever you were going to ask about “exerting a strong influence”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intrigue\n2.  Engross\n3.  Captivate\n4.  Puzzle\n5.  Consume\n\nNow, please ask your question about \"exerting a strong influence on someone’s thoughts or actions.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intrigue\n2.  Engross\n3.  Captivate\n4.  Consume\n5.  Puzzle\n\nNow, please ask your question about \"exerting a strong influence on someone’s thoughts” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intrigue\n2.  Engross\n3.  Captivate\n4.  Puzzle\n5.  Consume\n\nNow, please ask your question about \"exerting a strong influence\" or whatever you were originally intending to ask about \"exerting a strong influence\"!",
+        "synonyms": []
+      }
+    ],
+    "en_a_9_verb": [
+      {
+        "raw": "obsolete,” “disappear,” “vanish,” “fade,” “become irrelevant.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "obsolete"
+        ]
+      },
+      {
+        "raw": "fade,” “disappear,” “vanish,” “wither,” “lose prominence” \n\nNow, please ask your question!",
+        "synonyms": [
+          "fade"
+        ]
+      },
+      {
+        "raw": "obsolete,” “disappear,” “fade,” “vanish,” “lost.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "obsolete"
+        ]
+      },
+      {
+        "raw": "fade,” “vanish,” “disappear,” “lose,” “become obscure.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "fade"
+        ]
+      },
+      {
+        "raw": "obsolete,” “vanished,” “disappeared,” “gone,” “lost.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "obsolete"
+        ]
+      }
+    ],
+    "en_n_1_adj": [
+      {
+        "raw": "\n\n1.  Trendsetter\n2.  Conventional\n3.  Mainstream\n4.  Predictable\n5.  Establishment\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Trendsetter\n2.  Conventional\n3.  Predictable\n4.  Mainstream\n5.  Respectable\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Tradition**\n2.  **Convention**\n3.  **Cliché**\n4.  **Stereotype**\n5.  **Formulaic**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Trendsetter\n2.  Conventional\n3.  Mainstream\n4.  Predictable\n5.  Respectable \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Trendsetter\n2.  Conventional\n3.  Conservative\n4.  Mainstream\n5.  Predictable \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_mixed": [
+      {
+        "raw": "\n\n1.  Makeup smudges\n2.  Powder streaks\n3.  Face residue\n4.  Cosmetic transfer\n5.  Makeup fallout\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Makeup smear\n2.  Cosmetic residue\n3.  Powder transfer\n4.  Shadow transfer\n5.  Face stain \n\nNow, please ask your question about “earrings” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Makeup smudges\n2.  Powder transfer\n3.  Foundation streaks\n4.  Face residue\n5.  Cosmetic marks”\n\nNow, please ask your question about “everquest” or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Makeup smudges\n2.  Face powder transfer\n3.  Powder fallout\n4.  Makeup streaks\n5.  Powder marks”\n\nNow, please ask your question about “earrings” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Makeup smudges\n2.  Powder streaks\n3.  Face powder marks\n4.  Cosmetic residue\n5.  Beauty fallout \n\nNow, please ask your question about “emotions” or whatever you were going to ask! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_noun": [
+      {
+        "raw": "\n\n1.  Nude\n2.  Bare\n3.  Unclothed\n4.  Stripped\n5.  Revealed\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Nude\n2.  Bare\n3.  Unclothed\n4.  Undressed\n5.  Exposed\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Nude\n2.  Unclothed\n3.  Bare\n4.  Undressed\n5.  Stripped\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Nude\n2.  Bare\n3.  Unclothed\n4.  Undressed\n5.  Stripped\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Naked\n2.  Bare\n3.  Unclothed\n4.  Stripped\n5.  Revealed\n\nWould you like me to answer your question now, or perhaps provide more synonyms?",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_unbiased": [
+      {
+        "raw": "\n\n1.  Uniform\n2.  Dress code\n3.  Attire\n4.  Clothing\n5.  Outfit\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Uniform\n2.  Dress code\n3.  Attire\n4.  Outfit\n5.  Clothing\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Uniform\n2.  Dress code\n3.  Attire\n4.  Clothing\n5.  Outfit\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Uniform\n2.  Dress code\n3.  Attire\n4.  Clothing\n5.  Outfit\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Uniform\n2.  Dress code\n3.  Attire\n4.  Outfit\n5.  Clothes\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_verb": [
+      {
+        "raw": "\n\n1.  Makeup\n2.  Cosmetics\n3.  Face paint\n4.  Complexion\n5.  Grooming \n\nNow, please ask your question about “emollient”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Makeup\n2.  Cosmetics\n3.  Face paint\n4.  Complexion\n5.  Grooming \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Makeup\n2.  Cosmetics\n3.  Face paint\n4.  Complexion\n5.  Finishing touches\n\nNow, please ask your question about “emollient”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Makeup\n2.  Cosmetics\n3.  Face paint\n4.  Complexion\n5.  Grooming \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Makeup\n2.  Cosmetics\n3.  Face paint\n4.  Complexion\n5.  Grooming \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_10_adj": [
+      {
+        "raw": "\n\n1.  Flirtatious\n2.  Seductive\n3.  Charismatic\n4.  Alluring\n5.  Persuasive \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flirtatious\n2.  Charming\n3.  Seductive\n4.  Alluring\n5.  Persuasive \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flirtatious\n2.  Seductive\n3.  Charming\n4.  Alluring\n5.  Enticing \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flirtatious\n2.  Seductive\n3.  Alluring\n4.  Charming\n5.  Enticing \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flirtatious\n2.  Seductive\n3.  Charismatic\n4.  Alluring\n5.  Persuasive\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_10_mixed": [
+      {
+        "raw": "\n\n1.  Lecture\n2.  Preach\n3.  Explain\n4.  Narrate\n5.  Recount \n\nNow, please ask your question about “diem” or whatever you were going to ask! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Persuade\n2.  Convince\n3.  Reason\n4.  Influence\n5.  Advocate\n\nNow, please ask your question about “disagree” or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lecture\n2.  Preach\n3.  Expound\n4.  Explain\n5.  Narrate \n\nNow, please ask your question about “disagree” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Persuade\n2.  Advocate\n3.  Influence\n4.  Urge\n5.  Convince \n\nNow, please ask your question about “disagree” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lecture\n2.  Preach\n3.  Expound\n4.  Explain\n5.  Recount\n\nNow, please ask your question about “disagree” or whatever you were going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_n_10_noun": [
+      {
+        "raw": "\n\n1.  Groan\n2.  Grunt\n3.  Grumble\n4.  Moan\n5.  Belch \n\n---\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "groan,” “grunt,” “gurgle,” “rumble,” “murmur”\n\nNow, please ask your question!",
+        "synonyms": [
+          "groan"
+        ]
+      },
+      {
+        "raw": "groan”, “grunt”, “gurgle”, “rumble”, “murmur”\n\nNow, please ask your question!",
+        "synonyms": [
+          "groan"
+        ]
+      },
+      {
+        "raw": "groan,” “grunt,” “gurgle,” “rumble,” “murmur”\n\nNow, please ask your question!",
+        "synonyms": [
+          "groan"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Groan\n2.  Grunt\n3.  Grumble\n4.  Moan\n5.  Belch \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_10_unbiased": [
+      {
+        "raw": "\n\n1.  Change\n2.  Shift\n3.  Alter\n4.  Transform\n5.  Modify \n\nNow, please ask your question about “exterminate”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Change\n2.  Shift\n3.  Alter\n4.  Transform\n5.  Modify \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Change\n2.  Shift\n3.  Alter\n4.  Transform\n5.  Modify \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Change\n2.  Shift\n3.  Alter\n4.  Modify\n5.  Transform\n\nNow, please ask your question about “exterminate”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Change\n2.  Shift\n3.  Alter\n4.  Modify\n5.  Transform\n\nNow, please ask your question about “exterminate”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_10_verb": [
+      {
+        "raw": "\n\n1.  Flush\n2.  Bloom\n3.  Hue\n4.  Tint\n5.  Sheen \n\nNow, please ask your question about “mull”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flush\n2.  Bloom\n3.  Redden\n4.  Inflammation\n5.  Rouge\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flush\n2.  Bloom\n3.  Redden\n4.  Color\n5.  Inflammation\n\nNow, please ask your question about \"mull\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flush\n2.  Bloom\n3.  Inflammation\n4.  Redness\n5.  Rosacea\n\nNow, please ask your question about “mull”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flush\n2.  Bloom\n3.  Rosy hue\n4.  Coloration\n5.  Redness\n\nNow, please ask your question about “mull”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_2_adj": [
+      {
+        "raw": "\n\n1.  Neighborhood\n2.  Working-class area\n3.  Lower-income district\n4.  Suburban sprawl\n5.  Residential area (often implying a less affluent one)\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Neighborhood\n2.  Working-class area\n3.  Lower-income district\n4.  Suburban sprawl\n5.  Outer city\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Neighborhood\n2.  Working-class area\n3.  Lower-income district\n4.  Suburban sprawl\n5.  Outer zones \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Neighborhood\n2.  Working-class area\n3.  Lower-income district\n4.  Suburban sprawl\n5.  Less affluent section\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Neighborhood\n2.  Working-class area\n3.  Lower-income district\n4.  Suburban sprawl\n5.  Less affluent area\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_2_mixed": [
+      {
+        "raw": "home,” “residence,” “dwelling,” “house,” “living quarters” \n\nNow, please ask your question!",
+        "synonyms": [
+          "home"
+        ]
+      },
+      {
+        "raw": "home,” “residence,” “dwelling,” “house,” “living quarters”\n\nNow, please ask your question!",
+        "synonyms": [
+          "home"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Home\n2.  Residence\n3.  Domestic life\n4.  Everyday life\n5.  Normal life\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "home,” “residence,” “dwelling,” “house,” “living quarters” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "home"
+        ]
+      },
+      {
+        "raw": "home,” “residence,” “dwelling,” “house,” “living quarters”\n\nNow, please ask your question!",
+        "synonyms": [
+          "home"
+        ]
+      }
+    ],
+    "en_n_2_noun": [
+      {
+        "raw": "\n\n1.  Arch\n2.  Foundation\n3.  Support\n4.  Base\n5.  Stance \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Arch\n2.  Foundation\n3.  Support\n4.  Base\n5.  Stance \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Arch\n2.  Foundation\n3.  Support\n4.  Base\n5.  Stance\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Arch\n2.  Foundation\n3.  Support\n4.  Base\n5.  Stance \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Arch\n2.  Foundation\n3.  Support\n4.  Base\n5.  Stance\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_2_unbiased": [
+      {
+        "raw": "\n\n1.  Residence\n2.  Home\n3.  Dwelling\n4.  Accommodation\n5.  Lodging \n\nNow, please ask your question about “residence” or “dwelling” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Residence\n2.  Home\n3.  Dwelling\n4.  Accommodation\n5.  Building\n\nNow, please ask your question about “residence” or “dwelling”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Residence\n2.  Home\n3.  Dwelling\n4.  Accommodation\n5.  Building\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Residence\n2.  Dwelling\n3.  Home\n4.  Accommodation\n5.  Building\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Residence\n2.  Home\n3.  Dwelling\n4.  Accommodation\n5.  Building\n\nNow, please ask your question about “residence” or “dwelling” – I’m ready to answer!",
+        "synonyms": []
+      }
+    ],
+    "en_n_2_verb": [
+      {
+        "raw": "\n\n1.  Remain\n2.  Stay\n3.  Linger\n4.  Reside\n5.  Bequash\n\nNow, please ask your question about “dishearten” or whatever you were going to ask about using “dishearten”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Remain\n2.  Stay\n3.  Reside\n4.  Linger\n5.  Bask \n\nNow, please ask your question about “dishearten” or whatever you were originally going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Remain\n2.  Stay\n3.  Linger\n4.  Reside\n5.  Bequash\n\nNow, please ask your question about “dishearten” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Reside\n2.  Stay\n3.  Remain\n4.  Dwelt\n5.  Inhabit\n\nNow, please ask your question about “dishearten” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Remain\n2.  Stay\n3.  Linger\n4.  Reside\n5.  Bremain \n\nNow, please ask your question about “dishearten” or whatever you were going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_adj": [
+      {
+        "raw": "\n\n1.  Dominate\n2.  Overwhelm\n3.  Control\n4.  Conquer\n5.  Subdue \n\nNow, please ask your question about “deviget”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dominate\n2.  Overcome\n3.  Conquer\n4.  Prevail\n5.  Subdue \n\nNow, please ask your question about “binge-watch”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dominate\n2.  Overcome\n3.  Conquer\n4.  Prevail\n5.  Master\n\nNow, please ask your question about “dedicate”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dominate\n2.  Overcome\n3.  Conquer\n4.  Prevail\n5.  Master\n\nNow, please ask your question about “dedicate”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dominate\n2.  Overcome\n3.  Conquer\n4.  Prevail\n5.  Master\n\nNow, please ask your question about “dedicate”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_mixed": [
+      {
+        "raw": "\n\n1.  Euphemism\n2.  Circumlocution\n3.  Indirectness\n4.  Obfuscation\n5.  Shibboleth \n\nNow, please ask your question about the use of “peddle” or “peddle” in a sentence!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Euphemism\n2.  Circumlocution\n3.  Indirectness\n4.  Obfuscation\n5.  Vicissitude”\n\nNow, please ask your question about the use of “peddle” or “peddle” – I’m ready to answer",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Euphemism\n2.  Circumlocution\n3.  Indirectness\n4.  Obfuscation\n5.  Allusiveness”\n\nNow, please ask your question about the use of the word \"peddle\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Euphemism\n2.  Circumlocution\n3.  Obfuscation\n4.  Indirectness\n5.  Beat around the bush\n\nNow, please ask your question about the use of “peddle”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Indirect\n2.  Circumlocutory\n3.  Evasive\n4.  Rambling\n5.  Circuitous”\n\nNow, please ask your question about the use of “peddle”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_noun": [
+      {
+        "raw": "\n\n1.  Stretch\n2.  Extend\n3.  Strain\n4.  Lengthen\n5.  Expand \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Stretch\n2.  Extend\n3.  Strain\n4.  Expand\n5.  Lengthen\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Stretch\n2.  Extend\n3.  Strain\n4.  Expand\n5.  Lengthen \n\nNow, please ask your question about “ingrain”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Stretch\n2.  Extend\n3.  Strain\n4.  Inflate\n5.  Expand\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Stretch\n2.  Extend\n3.  Strain\n4.  Lengthen\n5.  Expand\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_unbiased": [
+      {
+        "raw": "\n\n1.  Carry\n2.  Transport\n3.  Bring\n4.  Deliver\n5.  Convey\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "carry,” “bring,” “transport,” “bear,” “deliver” \n\nNow, please ask your question!",
+        "synonyms": [
+          "carry"
+        ]
+      },
+      {
+        "raw": "carry,” “bring,” “transport,” “deliver,” “bear” \n\nNow, please ask your question!",
+        "synonyms": [
+          "carry"
+        ]
+      },
+      {
+        "raw": "carry,” “bring,” “transport,” “deliver,” “convey”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "carry"
+        ]
+      },
+      {
+        "raw": "carry,” “bring,” “transport,” “deliver,” “convey”\n\nNow, please ask your question!",
+        "synonyms": [
+          "carry"
+        ]
+      }
+    ],
+    "en_n_3_verb": [
+      {
+        "raw": "\n\n1.  Viable\n2.  Functional\n3.  Workable\n4.  Feasible\n5.  Operational\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Viable\n2.  Functional\n3.  Operational\n4.  Sound\n5.  Workable\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Viable\n2.  Functional\n3.  Workable\n4.  Sound\n5.  Feasible\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Viable\n2.  Functional\n3.  Operational\n4.  Sound\n5.  Workable \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Viable\n2.  Functional\n3.  Workable\n4.  Feasible\n5.  Sound\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_4_adj": [
+      {
+        "raw": "\n\n1.  Resonant\n2.  Deep\n3.  Sonorous\n4.  Booming\n5.  Full-bodied\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Resonant\n2.  Deep\n3.  Full-bodied\n4.  Rich\n5.  Sonorous\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Resonant\n2.  Deep\n3.  Booming\n4.  Sonorous\n5.  Rich \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Resonant\n2.  Deep\n3.  Sonorous\n4.  Booming\n5.  Full-bodied\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Resonant\n2.  Deep\n3.  Sonorous\n4.  Booming\n5.  Full-bodied\n\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_4_mixed": [
+      {
+        "raw": "vocalization,” “throat rumble,” “vocal vibration,” “phonetic resonance,” “auditory disturbance.”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "vocalization"
+        ]
+      },
+      {
+        "raw": "vocal crack,” “vocal fry,” “voice cracking,” “vocal breakup,” “vocal spasm” \n\nNow, please ask your question!",
+        "synonyms": [
+          "vocal crack"
+        ]
+      },
+      {
+        "raw": "Rape” (used humorously in the context of the sound), “vocalization,” “throat clearing,” “vocal disturbance,” “auditory anomaly.”\n\n**Important Note:** The word “murmur” is sometimes used, but it doesn't fully capture the specific, often involuntary, nature of the sound",
+        "synonyms": [
+          "Rape"
+        ]
+      },
+      {
+        "raw": "throat clearing,” “vocal rumble,” “vocal crack,” “vocal friction,” “vocal rasp” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "throat clearing"
+        ]
+      },
+      {
+        "raw": "vocalization,” “vocal disruption,” “phonetic anomaly,” “vocal event,” “auditory disturbance.”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "vocalization"
+        ]
+      }
+    ],
+    "en_n_4_noun": [
+      {
+        "raw": "\n\n1.  Report\n2.  Rumor\n3.  Whisper\n4.  Story\n5.  Account\n\nNow, please ask your question about “perrur”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Report\n2.  Rumor\n3.  Whisper\n4.  Story\n5.  Anecdote \n\nNow, please ask your question about \"perrur\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Report\n2.  Rumor\n3.  Whisper\n4.  Story\n5.  Anecdote \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Report\n2.  Rumor\n3.  Whisper\n4.  Story\n5.  Account\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Repeated\n2.  Reported\n3.  Heard\n4.  Mentioned\n5.  Recurring \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_4_unbiased": [
+      {
+        "raw": "\n\n1.  Atmospheric\n2.  Evocative\n3.  Rich\n4.  Immersive\n5.  Sensory\n\nNow, please ask your question about “themselves” or the word “themselves”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Atmospheric\n2.  Evocative\n3.  Rich\n4.  Immersive\n5.  Suggestive \n\nNow, please ask your question about “themselves”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Evocative\n2.  Atmospheric\n3.  Suggestive\n4.  Rich\n5.  Immersive \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Atmospheric\n2.  Evocative\n3.  Rich\n4.  Immersive\n5.  Sensory\n\n\nNow, please ask your question about “themselves”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Auditory\n2.  Sonorous\n3.  Resonant\n4.  Echoing\n5.  Vocal\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_4_verb": [
+      {
+        "raw": "\n\n1.  Vague\n2.  Obscure\n3.  Unclear\n4.  Remote\n5.  Insubstantial \n\nNow, please ask your question about \"disappointing\" or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Unheard\n2.  Ineffectual\n3.  Remote\n4.  Vague\n5.  Dim\n\nNow, please ask your question about \"disappointing\" or whatever you were going to ask about “disappointing”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Remote\n2.  Obscure\n3.  Unheard\n4.  Vague\n5.  Distant\n\nNow, please ask your question about \"muffled\" or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Unheard\n2.  Remote\n3.  Dim\n4.  Evanescent\n5.  Ineffable \n\nNow, please ask your question about \"disappointing\" or whatever you were going to ask about \"disappointing\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Resounding\n2.  Echoing\n3.  Distant\n4.  Obscure\n5.  Unheard \n\n\nNow, please ask your question about \"disappointing\" or whatever you had in mind!",
+        "synonyms": []
+      }
+    ],
+    "en_n_5_adj": [
+      {
+        "raw": "\n\n1.  Frivolous\n2.  Superficial\n3.  Vacuous\n4.  Empty\n5.  Lighthearted \n\nNow, please ask your question about “bergur!” 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Frivolous\n2.  Superficial\n3.  Lighthearted\n4.  Vacuous\n5.  Insubstantial\n\nNow, please ask your question about \"bergur\" or whatever you were going to ask! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Frivolous\n2.  Superficial\n3.  Vacuous\n4.  Empty\n5.  Lighthearted \n\nNow, please ask your question about \"bergue\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Frivolous\n2.  Superficial\n3.  Vacuous\n4.  Empty\n5.  Lighthearted\n\n\n\nNow, please ask your question about \"bergur.\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Frivolous\n2.  Superficial\n3.  Vacuous\n4.  Empty\n5.  Lighthearted \n\nNow, please ask your question about “bergère”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_5_mixed": [
+      {
+        "raw": "\n\n1.  Food\n2.  Culinary\n3.  Edible\n4.  Gastronomic\n5.  Domestic (referring to things related to the home and family)\n\nNow, please ask your question about “the backstory of the word ‘soufflé’”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Food\n2.  Culinary\n3.  Edible\n4.  Gastronomic\n5.  Dietary\n\nNow, please ask your question about “foodstuff” or “the subject of food”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Food\n2.  Culinary\n3.  Edible\n4.  Gastronomic\n5.  Nutritious \n\nNow, please ask your question about “*soufflé*”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Food\n2.  Culinary\n3.  Edible\n4.  Gastronomic\n5.  Nutritious \n\nNow, please ask your question about “foodstuff” or whatever you were going to ask about “foodstuff”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Food\n2.  Culinary\n3.  Edible\n4.  Gastronomic\n5.  Nutritious\n\nNow, please ask your question about “foodstuff” or whatever you were intending to ask about! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_5_noun": [
+      {
+        "raw": "Substance”, “content”, “essence”, “meaning”, “value”\n\nNow, please ask your question about “meaning” or “content” – I’m ready to answer!",
+        "synonyms": [
+          "Substance"
+        ]
+      },
+      {
+        "raw": "substance,” “content,” “meaning,” “value,” “result” \n\nNow, please ask your question about “dessert”!",
+        "synonyms": [
+          "substance"
+        ]
+      },
+      {
+        "raw": "substance,” “content,” “essence,” “meaning,” “value”\n\nNow, please ask your question about “dessert”!",
+        "synonyms": [
+          "substance"
+        ]
+      },
+      {
+        "raw": "substance”, “content”, “value”, “essence”, “meaning”\n\nNow, please ask your question about “dessert”! 😊",
+        "synonyms": [
+          "substance"
+        ]
+      },
+      {
+        "raw": "substance,” “content,” “meaning,” “value,” “essence”\n\nNow, please ask your question about “meaning” or “substance” – I’m ready!",
+        "synonyms": [
+          "substance"
+        ]
+      }
+    ],
+    "en_n_5_unbiased": [
+      {
+        "raw": "\n\n1.  Grocery store\n2.  Food market\n3.  Supermarket\n4.  Provision shop\n5.  Marketplace\n\nNow, please ask your question about \"odieux\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Grocery store\n2.  Market\n3.  Food store\n4.  Supermarket\n5.  Provision shop \n\nNow, please ask your question about “odious”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Grocery store\n2.  Food market\n3.  Supermarket\n4.  Provision shop\n5.  Marketplace\n\nNow, please ask your question about \"odious\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Shelf\n2.  Cabinet\n3.  Rack\n4.  Storage\n5.  Display\n\nNow, please ask your question about \"toddle\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Warehouse\n2.  Depot\n3.  Storage facility\n4.  Distribution center\n5.  Stockroom \n\nNow, please ask your question about “odivice”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_5_verb": [
+      {
+        "raw": "\n\n1.  Delicious\n2.  Tasty\n3.  Appetizing\n4.  Savory\n5.  Palatable \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Delicious\n2.  Appetizing\n3.  Tasty\n4.  Savory\n5.  Palatable \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Delicious\n2.  Tasty\n3.  Appetizing\n4.  Savory\n5.  Palatable \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Delicious\n2.  Tasty\n3.  Appetizing\n4.  Savory\n5.  Palatable \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Delicious\n2.  Tasty\n3.  Appetizing\n4.  Savory\n5.  Palatable \n\nNow, please ask your question about \"gourmet\" or whatever you were going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_n_6_adj": [
+      {
+        "raw": "banishment,” “expulsion,” “dismissal,” “removal,” “casting out” \n\nNow, please ask your question about “alligator” or whatever you were going to ask! 😊",
+        "synonyms": [
+          "banishment"
+        ]
+      },
+      {
+        "raw": "disappearance,” “banishment,” “expulsion,” “removal,” “elimination” \n\nNow, please ask your question!",
+        "synonyms": [
+          "disappearance"
+        ]
+      },
+      {
+        "raw": "disappearance,” “expulsion,” “banishment,” “removal,” “elimination”\n\nNow, please ask your question about “unlure” or whatever you were intending to ask!",
+        "synonyms": [
+          "disappearance"
+        ]
+      },
+      {
+        "raw": "disappearance,” “expulsion,” “banishment,” “removal,” “elimination”\n\nNow, please ask your question!",
+        "synonyms": [
+          "disappearance"
+        ]
+      },
+      {
+        "raw": "banishment,” “expulsion,” “removal,” “disappearance,” “casting out”\n\nNow, please ask your question!",
+        "synonyms": [
+          "banishment"
+        ]
+      }
+    ],
+    "en_n_6_mixed": [
+      {
+        "raw": "unite,” “combine,” “gather,” “assemble,” “bring together”\n\nNow, please ask your question about “colleague”!",
+        "synonyms": [
+          "unite"
+        ]
+      },
+      {
+        "raw": "unite,” “combine,” “gather,” “bring together,” “integrate”\n\nNow, please ask your question about “colleague” – I’m ready to answer!",
+        "synonyms": [
+          "unite"
+        ]
+      },
+      {
+        "raw": "gather,” “unite,” “combine,” “assemble,” “bring together”\n\nNow, please ask your question about “colleague”! 😊",
+        "synonyms": [
+          "gather"
+        ]
+      },
+      {
+        "raw": "assemble,” “unite,” “bring together,” “combine,” “gather”\n\nNow, please ask your question about “colleague”!",
+        "synonyms": [
+          "assemble"
+        ]
+      },
+      {
+        "raw": "gather,” “unite,” “combine,” “assemble,” “bring together”\n\nNow, please ask your question about “colleague” or whatever you were going to ask about “colleague”!",
+        "synonyms": [
+          "gather"
+        ]
+      }
+    ],
+    "en_n_6_noun": [
+      {
+        "raw": "\n\n1.  Introduction\n2.  Opening\n3.  Preamble\n4.  Prelude\n5.  Beginning\n\n\n\nNow, please ask your question about “colleague”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Introduction\n2.  Opening\n3.  Preamble\n4.  Lead-in\n5.  Prelude”\n\nNow, please ask your question about “colleague”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Introduction\n2.  Opening\n3.  Preamble\n4.  Prelude\n5.  Exordium”\n\nNow, please ask your question about “colleague” or whatever you were originally going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Introduction\n2.  Opening\n3.  Preamble\n4.  Prelude\n5.  Beginning\n\nNow, please ask your question about “colleague”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Introduction\n2.  Opening\n3.  Preamble\n4.  Preface\n5.  Beginning\n\n\nNow, please ask your question about \"colleague\"!",
+        "synonyms": []
+      }
+    ],
+    "en_n_6_unbiased": [
+      {
+        "raw": "\n\n1.  Gather\n2.  Compile\n3.  Cluster\n4.  Group\n5.  Concentrate\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Gather\n2.  Compile\n3.  Accumulate\n4.  Organize\n5.  Concentrate\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Gather\n2.  Compile\n3.  Accumulate\n4.  Organize\n5.  Group\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Accumulate\n2.  Gather\n3.  Compile\n4.  Group\n5.  Concentrate\n\nNow, please ask your question about “colligate”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Accumulate\n2.  Gather\n3.  Compile\n4.  Concentrate\n5.  Group\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_6_verb": [
+      {
+        "raw": "consolidate”, “combine”, “integrate”, “unify”, “compile” \n\nNow, please ask your question about “assemble” or “assemble” and I’ll do my best to answer it!",
+        "synonyms": [
+          "consolidate"
+        ]
+      },
+      {
+        "raw": "consolidate,” “combine,” “integrate,” “unite,” “harmonize”\n\nNow, please ask your question about “assemble” or “assemble” – I’m ready to answer!",
+        "synonyms": [
+          "consolidate"
+        ]
+      },
+      {
+        "raw": "consolidate,” “combine,” “integrate,” “unite,” “harmonize”\n\nNow, please ask your question about \"assemble\" or whatever you were intending to ask about “assemble.”",
+        "synonyms": [
+          "consolidate"
+        ]
+      },
+      {
+        "raw": "consolidate,” “combine,” “integrate,” “unite,” “aggregate” \n\nNow, please ask your question! I’m ready to answer it.",
+        "synonyms": [
+          "consolidate"
+        ]
+      },
+      {
+        "raw": "consolidate”, “combine”, “integrate”, “unite”, “coordinate” \n\nNow, please ask your question!",
+        "synonyms": [
+          "consolidate"
+        ]
+      }
+    ],
+    "en_n_7_adj": [
+      {
+        "raw": "slip,” “drift,” “wander,” “meander,” “stray”\n\nNow, please ask your question!",
+        "synonyms": [
+          "slip"
+        ]
+      },
+      {
+        "raw": "drift,” “fade,” “wanes,” “diminish,” “relax”\n\nNow, please ask your question!",
+        "synonyms": [
+          "drift"
+        ]
+      },
+      {
+        "raw": "drift,” “fade,” “wanes,” “diminish,” “relax.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "drift"
+        ]
+      },
+      {
+        "raw": "drift,” “fade,” “wanes,” “diminish,” “relax”\n\nNow, please ask your question!",
+        "synonyms": [
+          "drift"
+        ]
+      },
+      {
+        "raw": "drift,” “fade,” “wane,” “diminish,” “relax” \n\nNow, please ask your question!",
+        "synonyms": [
+          "drift"
+        ]
+      }
+    ],
+    "en_n_7_mixed": [
+      {
+        "raw": "\n\n1.  **Dismantling**\n2.  **Demolition**\n3.  **Disassembly**\n4.  **Deconstruction**\n5.  **Breakdown**\n\nNow, please ask your question about “deconstructing” or “disassembling” something!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Outmaneuvered**\n2.  **Defeated**\n3.  **Overpowered**\n4.  **Bested**\n5.  **Overthrown**\n\nNow, please ask your question about “decoupling”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Dismissal**\n2.  **Elimination**\n3.  **Cut**\n4.  **Booting**\n5.  **Removal**\n\nNow, please ask your question about “decoupling” or whatever you were originally going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Dissection**\n2.  **Analysis**\n3.  **Breakdown**\n4.  **Critique**\n5.  **Evaluation**\n\nNow, please ask your question about “decoupling” or whatever you were originally intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Being shown up**\n2.  **Getting beat**\n3.  **Losing badly**\n4.  **Being defeated**\n5.  **Suffering a loss**\n\nNow, please ask your question about \"degrading\" or \"decline\" – I’",
+        "synonyms": []
+      }
+    ],
+    "en_n_7_noun": [
+      {
+        "raw": "interpret,” “analyze,” “understand,” “decipher,” “gauge”\n\nNow, please ask your question about “perceive” or whatever you were going to ask about “perceive” using “perceive” or “perceived”!",
+        "synonyms": [
+          "interpret"
+        ]
+      },
+      {
+        "raw": "interpret,” “analyze,” “understand,” “gauge,” “assess”\n\nNow, please ask your question about “perceive” or whatever you were going to ask about “perceive” using “perceive” as the word.",
+        "synonyms": [
+          "interpret"
+        ]
+      },
+      {
+        "raw": "interpret,” “analyze,” “understand,” “gauge,” “assess”\n\nNow, please ask your question about “perceive” or whatever you were originally going to ask about “perceive”. 😊",
+        "synonyms": [
+          "interpret"
+        ]
+      },
+      {
+        "raw": "interpret,” “understand,” “analyze,” “gauge,” “assess” \n\nNow, please ask your question about \"perceive\" or whatever you were going to ask about “perceive”!",
+        "synonyms": [
+          "interpret"
+        ]
+      },
+      {
+        "raw": "interpret,” “analyze,” “understand,” “gauge,” “assess”\n\nNow, please ask your question about “perceive” or whatever you were originally going to ask about “perceive.”",
+        "synonyms": [
+          "interpret"
+        ]
+      }
+    ],
+    "en_n_7_unbiased": [
+      {
+        "raw": "wander,” “roam,” “explore,” “browse,” “investigate” \n\nNow, please ask your question about “the word ‘to do with’”.",
+        "synonyms": [
+          "wander"
+        ]
+      },
+      {
+        "raw": "wander,” “roam,” “explore,” “investigate,” “browse”\n\nNow, please ask your question about “the significance of the word ‘to the extent that’”.",
+        "synonyms": [
+          "wander"
+        ]
+      },
+      {
+        "raw": "wander,” “explore,” “roam,” “investigate,” “browse”\n\nNow, please ask your question about \"to go to different places.\"",
+        "synonyms": [
+          "wander"
+        ]
+      },
+      {
+        "raw": "wander,” “explore,” “roam,” “investigate,” “navigate” \n\nNow, please ask your question!",
+        "synonyms": [
+          "wander"
+        ]
+      },
+      {
+        "raw": "explore,” “investigate,” “wander,” “search,” “examine” \n\nNow, please ask your question!",
+        "synonyms": [
+          "explore"
+        ]
+      }
+    ],
+    "en_n_7_verb": [
+      {
+        "raw": "\n\n1.  Social standing\n2.  Reputation\n3.  Status\n4.  Connections\n5.  Net worth \n\nNow, please ask your question about “seamstress”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Social standing\n2.  Reputation\n3.  Status\n4.  Connections\n5.  Circumstances\n\nNow, please ask your question about “seamstress”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Social standing\n2.  Reputation\n3.  Connections\n4.  Status\n5.  Circumstances \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Social standing\n2.  Reputation\n3.  Standing\n4.  Connections\n5.  Status\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Social standing\n2.  Reputation\n3.  Status\n4.  Connections\n5.  Circumstances \n\nNow, please ask your question about “seamstress”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_8_adj": [
+      {
+        "raw": "\n\n1.  Authority\n2.  Jurisdiction\n3.  Power\n4.  Control\n5.  Influence\n\nNow, please ask your question about “legislate” or whatever you were intending to ask about “legislate”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Authority\n2.  Jurisdiction\n3.  Power\n4.  Influence\n5.  Control \n\nNow, please ask your question about “legislate” or “legislate.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Authority\n2.  Jurisdiction\n3.  Influence\n4.  Power\n5.  Control \n\nNow, please ask your question about “legislate” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Authority\n2.  Jurisdiction\n3.  Power\n4.  Influence\n5.  Control\n\nNow, please ask your question about \"legislate\" or whatever you were going to ask about using \"legislate\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Authority\n2.  Jurisdiction\n3.  Power\n4.  Control\n5.  Dominion \n\nNow, please ask your question about “legislate” or whatever you were going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_n_8_mixed": [
+      {
+        "raw": "\n\n1.  Volume\n2.  Lift\n3.  Height\n4.  Boom\n5.  Stack\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Volume\n2.  Lift\n3.  Height\n4.  Dramatic Style\n5.  Structure\n\nNow, please ask your question about “divisurge”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Volume\n2.  Lift\n3.  Height\n4.  Ramp\n5.  Boom\n\n\nNow, please ask your question about “divorce”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Volume\n2.  Lift\n3.  Height\n4.  Boom\n5.  Stack\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Volume\n2.  Lift\n3.  Height\n4.  Ramp\n5.  Stack\n\nNow, please ask your question about “dugnsurvey”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_8_noun": [
+      {
+        "raw": "\n\n1.  **Terminological**\n2.  **Linguistic**\n3.  **Semantic**\n4.  **Conceptual**\n5.  **Wordplay** \n\nNow, please ask your question about “theorists” or whatever you were going to ask about using “the",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Semantic**\n2.  **Linguistic**\n3.  **Rhetorical**\n4.  **Figurative**\n5.  **Symbolic**\n\nNow, please ask your question about “theodore” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Semantic**\n2.  **Linguistic**\n3.  **Conceptual**\n4.  **Symbolic**\n5.  **Figurative**\n\nNow, please ask your question about “theorist” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Semantic**\n2.  **Linguistic**\n3.  **Referential**\n4.  **Conceptual**\n5.  **Symbolic**\n\nNow, please ask your question about “theodore” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Semantic**\n2.  **Linguistic**\n3.  **Referential**\n4.  **Topical**\n5.  **Contextual**\n\nNow, please ask your question about “theodore” – I’m ready!",
+        "synonyms": []
+      }
+    ],
+    "en_n_8_unbiased": [
+      {
+        "raw": "\n\n1.  Govern\n2.  Administer\n3.  Preside\n4.  Rule\n5.  Direct\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Govern\n2.  Preside\n3.  Administer\n4.  Rule\n5.  Direct\n\n---\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Govern\n2.  Administer\n3.  Preside\n4.  Rule\n5.  Direct\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Govern\n2.  Administer\n3.  Preside\n4.  Direct\n5.  Rule\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Govern\n2.  Administer\n3.  Preside\n4.  Direct\n5.  Rule \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_8_verb": [
+      {
+        "raw": "\n\n1.  Lead\n2.  Direct\n3.  Guide\n4.  Control\n5.  Influence\n\nNow, please ask your question about “saunter”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lead\n2.  Guide\n3.  Direct\n4.  Control\n5.  Influence\n\nNow, please ask your question about “savereign”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lead\n2.  Guide\n3.  Direct\n4.  Command\n5.  Steer\n\nNow, please ask your question about \"saunter\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lead\n2.  Guide\n3.  Direct\n4.  Control\n5.  Steer\n\nNow, please ask your question about “saunter”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lead\n2.  Guide\n3.  Direct\n4.  Command\n5.  Steer \n\nNow, please ask your question about \"saunter\"! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_9_adj": [
+      {
+        "raw": "\n\n1.  Transportation\n2.  Travel\n3.  Movement\n4.  Transit\n5.  Journey\n\nNow, please ask your question about “the term ‘the movement of goods and people by various means’”.",
+        "synonyms": []
+      },
+      {
+        "raw": "transportation,” “travel,” “movement,” “transit,” “journey” \n\nNow, please ask your question about “twyg”! 😊",
+        "synonyms": [
+          "transportation"
+        ]
+      },
+      {
+        "raw": "transportation,” “travel,” “transit,” “movement,” “journey”\n\nNow, please ask your question about “the word ‘the word ‘the word ‘the word ‘the word ‘the word ‘the word ‘the word ‘the word ‘the word ‘the word ‘the word ‘the word ‘the",
+        "synonyms": [
+          "transportation"
+        ]
+      },
+      {
+        "raw": "transportation,” “travel,” “movement,” “transit,” “journey”\n\nNow, please ask your question about “the term ‘the great wall of china’”.",
+        "synonyms": [
+          "transportation"
+        ]
+      },
+      {
+        "raw": "transportation,” “travel,” “movement,” “transit,” “journey”\n\nNow, please ask your question about “the word ‘the word’ or ‘the word’s’ use in a sentence!”",
+        "synonyms": [
+          "transportation"
+        ]
+      }
+    ],
+    "en_n_9_mixed": [
+      {
+        "raw": "filler,” “padding,” “stuffing,” “bulk,” “meat.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "filler"
+        ]
+      },
+      {
+        "raw": "filler,” “padding,” “substance,” “background,” and “matter.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "filler"
+        ]
+      },
+      {
+        "raw": "filler,” “padding,” “stuffing,” “content,” and “background.”\n\nNow, please ask your question about “beverage” or whatever you were originally going to ask about! 😊",
+        "synonyms": [
+          "filler"
+        ]
+      },
+      {
+        "raw": "filler,” “padding,” “stuffing,” “content,” and “background.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "filler"
+        ]
+      },
+      {
+        "raw": "filler,” “padding,” “stuffing,” “substance,” and “matter.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "filler"
+        ]
+      }
+    ],
+    "en_n_9_noun": [
+      {
+        "raw": "\n\n1.  **Full-flavored**\n2.  **Rich**\n3.  **Bold**\n4.  **Intense**\n5.  **Robust**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  High-test\n2.  Full-bodied\n3.  Rich\n4.  Robust\n5.  Powerful \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Full-flavored**\n2.  **Rich**\n3.  **Bold**\n4.  **Robust**\n5.  **Intense**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Full-flavored**\n2.  **Rich**\n3.  **Robust**\n4.  **Intense**\n5.  **Bold**\n\nNow, please ask your question about “multirate” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Rich**\n2.  **Full-bodied**\n3.  **Intense**\n4.  **Robust**\n5.  **Powerful**\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_9_unbiased": [
+      {
+        "raw": "transport,” “move,” “relocate,” “transfer,” “carry.”\n\nNow, please ask your question about “emigrate” or whatever you were originally going to ask!",
+        "synonyms": [
+          "transport"
+        ]
+      },
+      {
+        "raw": "relate,” “connect,” “correspond,” “correspond to,” “align”\n\nNow, please ask your question about “transport” or “move” – I’m ready to answer!",
+        "synonyms": [
+          "relate"
+        ]
+      },
+      {
+        "raw": "relate,” “correspond,” “connect,” “correspond,” “align”\n\nNow, please ask your question about “emigrate” or “relocate”!",
+        "synonyms": [
+          "relate"
+        ]
+      },
+      {
+        "raw": "relocate”, “transfer”, “move”, “transport”, “migrate”\n\nNow, please ask your question about “transport” or “relocate” – I’m ready to answer!",
+        "synonyms": [
+          "relocate"
+        ]
+      },
+      {
+        "raw": "relate,” “correspond,” “connect,” “correspond,” “link.”\n\nNow, please ask your question about “emigrate” or “relocate” – I’m ready to answer!",
+        "synonyms": [
+          "relate"
+        ]
+      }
+    ],
+    "en_n_9_verb": [
+      {
+        "raw": "\n\n1.  Span\n2.  Arch\n3.  Vault\n4.  Extend\n5.  Reach\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Journey\n2.  Trip\n3.  Excursion\n4.  Passage\n5.  Voyage \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Journey\n2.  Trip\n3.  Expedition\n4.  Voyage\n5.  Passage”\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Journey\n2.  Trip\n3.  Passage\n4.  Voyage\n5.  Excursion \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Route\n2.  Trail\n3.  Passage\n4.  Course\n5.  Track \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_1_adj": [
+      {
+        "raw": "\n\n1.  Routine\n2.  Monotonous\n3.  Tedious\n4.  Uninspiring\n5.  Boring \n\nNow, please ask your question about “drilling” or “drilling” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Routine\n2.  Monotonous\n3.  Uninspiring\n4.  Tedious\n5.  Boring\n\n\n\nNow, please ask your question about \"drilling\" or whatever you were originally intending to ask about using \"drilling\" as a replacement for \"drilling.\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Routine\n2.  Monotonous\n3.  Tedious\n4.  Unexciting\n5.  Boring\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Routine\n2.  Monotonous\n3.  Boring\n4.  Unexciting\n5.  Tedious \n\nNow, please ask your question about “drilling” or whatever you were going to ask about using “drilling” as the subject.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Routine\n2.  Monotonous\n3.  Unexciting\n4.  Tedious\n5.  Boring \n\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_1_mixed": [
+      {
+        "raw": "place,” “insert,” “put,” “hand over,” “deliver”\n\nNow, please ask your question!",
+        "synonyms": [
+          "place"
+        ]
+      },
+      {
+        "raw": "place,” “insert,” “put,” “hand over,” “deliver”\n\nNow, please ask your question!",
+        "synonyms": [
+          "place"
+        ]
+      },
+      {
+        "raw": "place,” “put,” “install,” “position,” “submit”\n\nNow, please ask your question!",
+        "synonyms": [
+          "place"
+        ]
+      },
+      {
+        "raw": "place,” “put,” “install,” “position,” “submit”\n\nNow, please ask your question!",
+        "synonyms": [
+          "place"
+        ]
+      },
+      {
+        "raw": "place,” “put,” “hand over,” “deliver,” “submit” \n\nNow, please ask your question!",
+        "synonyms": [
+          "place"
+        ]
+      }
+    ],
+    "en_v_1_noun": [
+      {
+        "raw": "substitution,” “replacement,” “insertion,” “incorporation,” “placement”\n\nNow, please ask your question about “place” or “place-based marketing”!",
+        "synonyms": [
+          "substitution"
+        ]
+      },
+      {
+        "raw": "Substitution,” “replacement,” “insertion,” “incorporation,” “placement.”\n\nNow, please ask your question about “the use of slang in advertising.”",
+        "synonyms": [
+          "Substitution"
+        ]
+      },
+      {
+        "raw": "Substitution,” “replacement,” “insertion,” “incorporation,” “placement.”\n\nNow, please ask your question about “the use of an idiom” or whatever you were going to ask! 😊",
+        "synonyms": [
+          "Substitution"
+        ]
+      },
+      {
+        "raw": "substitution,” “replacement,” “insertion,” “incorporation,” “placement”\n\nNow, please ask your question about “place” or “place-based marketing” – I’m ready!",
+        "synonyms": [
+          "substitution"
+        ]
+      },
+      {
+        "raw": "substitutions,” “replacements,” “insertions,” “incorporations,” “interchanges” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "substitutions"
+        ]
+      }
+    ],
+    "en_v_1_unbiased": [
+      {
+        "raw": "\n\n1.  Implant\n2.  Introduce\n3.  Infuse\n4.  Deposit\n5.  Embed\n\nNow, please ask your question about “impart” or whatever you were going to ask! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Implant\n2.  Introduce\n3.  Embed\n4.  Deposit\n5.  Incorporate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Implant\n2.  Introduce\n3.  Apply\n4.  Deposit\n5.  Embed”\n\nNow, please ask your question about “impart” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Implant\n2.  Introduce\n3.  Embed\n4.  Deposit\n5.  Apply\n\nNow, please ask your question about “re-implanting” or “applying” something!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Implant\n2.  Introduce\n3.  Embed\n4.  Deposit\n5.  Apply\n\nNow, please ask your question about \"implant\"!",
+        "synonyms": []
+      }
+    ],
+    "en_v_1_verb": [
+      {
+        "raw": "\n\n1.  Advance\n2.  Progress\n3.  Move forward\n4.  Develop\n5.  Proceed\n\nNow, please ask your question about “to be slow to” or “to be hesitant to” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Advance\n2.  Progress\n3.  Move forward\n4.  Develop\n5.  Proceed\n\nNow, please ask your question about “to be” or “to act as a” something!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Progress\n2.  Advance\n3.  Develop\n4.  Move forward\n5.  Evolve \n\nNow, please ask your question about \"to be more persistent\" or whatever you were going to ask about \"to be more persistent\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Advance\n2.  Progress\n3.  Move forward\n4.  Develop\n5.  Accelerate \n\nNow, please ask your question about “to be or not to be” or whatever you were intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Progress\n2.  Advance\n3.  Develop\n4.  Move forward\n5.  Proceed\n\nNow, please ask your question about “to” or “be” “to” or “be” “to” or “be” “to” or “be” “to",
+        "synonyms": []
+      }
+    ],
+    "en_v_10_adj": [
+      {
+        "raw": "\n\n1.  Hesitate\n2.  Stumble\n3.  Waver\n4.  Pause\n5.  Flounder \n\nNow, please ask your question about \"the word 'to' or 'the' or 'a' or 'an'”.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Hesitate\n2.  Stutter\n3.  Stumble\n4.  Pause\n5.  Waver\n\nNow, please ask your question about \"becoming\" or “being” in a certain state!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Hesitate\n2.  Stutter\n3.  Stumble\n4.  Waver\n5.  Pause\n\nNow, please ask your question about “btcc” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Hesitate\n2.  Stumble\n3.  Waver\n4.  Falter\n5.  Pause\n\nNow, please ask your question about “btcc” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Hesitate\n2.  Stutter\n3.  Stumble\n4.  Falter\n5.  Waver \n\nNow, please ask your question about “the word ‘the’.”",
+        "synonyms": []
+      }
+    ],
+    "en_v_10_mixed": [
+      {
+        "raw": "impact,” “collision,” “confrontation,” “engagement,” “interaction.”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "impact"
+        ]
+      },
+      {
+        "raw": "impact,” “collision,” “smack,” “strike,” “confrontation”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "impact"
+        ]
+      },
+      {
+        "raw": "impact,” “collision,” “smash,” “confrontation,” “engagement” \n\nNow, please ask your question!",
+        "synonyms": [
+          "impact"
+        ]
+      },
+      {
+        "raw": "impact,” “collision,” “smash,” “confrontation,” “engagement” \n\nNow, please ask your question!",
+        "synonyms": [
+          "impact"
+        ]
+      },
+      {
+        "raw": "impact,” “collision,” “smash,” “crash,” “confrontation”\n\nNow, please ask your question!",
+        "synonyms": [
+          "impact"
+        ]
+      }
+    ],
+    "en_v_10_noun": [
+      {
+        "raw": "Collision,” “impact,” “crash,” “smash,” “confrontation”\n\nNow, please ask your question!",
+        "synonyms": [
+          "Collision"
+        ]
+      },
+      {
+        "raw": "collision,” “impact,” “crash,” “smash,” “confrontation”\n\nNow, please ask your question!",
+        "synonyms": [
+          "collision"
+        ]
+      },
+      {
+        "raw": "Crash,” “collision,” “impact,” “smash,” “rupture” \n\nNow, please ask your question!",
+        "synonyms": [
+          "Crash"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Collision\n2.  Impact\n3.  Crash\n4.  Smash\n5.  Confrontation \n\nNow, please ask your question about “hyperspace” or whatever you were going to ask about using “hyperspace”!",
+        "synonyms": []
+      },
+      {
+        "raw": "collision,” “impact,” “crash,” “smash,” “confrontation”\n\nNow, please ask your question!",
+        "synonyms": [
+          "collision"
+        ]
+      }
+    ],
+    "en_v_10_unbiased": [
+      {
+        "raw": "\n\n1.  Impact\n2.  Collide\n3.  Ram\n4.  Strike\n5.  Thud\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Impact\n2.  Collide\n3.  Ram\n4.  Thud\n5.  Strike \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Impact\n2.  Strike\n3.  Collide\n4.  Ram\n5.  Thud\n\n---\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "impact,” “collide,” “crush,” “slam,” “strike”\n\nNow, please ask your question!",
+        "synonyms": [
+          "impact"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Impact\n2.  Collide\n3.  Ram\n4.  Strike\n5.  Thud\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_10_verb": [
+      {
+        "raw": "\n\n1.  Hesitate\n2.  Stumble\n3.  Flounder\n4.  Stall\n5.  Delay \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Hesitate\n2.  Stumble\n3.  Pause\n4.  Deliberate\n5.  Waver \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Hesitate\n2.  Stumble\n3.  Pause\n4.  Flounder\n5.  Waver \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Stumble\n2.  Hesitate\n3.  Pause\n4.  Flounder\n5.  Lurch\n\nNow, let’s get to your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Hesitate\n2.  Stumble\n3.  Falter\n4.  Pause\n5.  Delay \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_2_adj": [
+      {
+        "raw": "\n\n1.  Weight\n2.  Resistance\n3.  Impedance\n4.  Pressure\n5.  Solidness\n\nNow, please ask your question about “trough”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Weight\n2.  Resistance\n3.  Impedance\n4.  Pressure\n5.  Bulk\n\nNow, please ask your question about “trough”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Weight\n2.  Resistance\n3.  Impedance\n4.  Pressure\n5.  Drag\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Weight\n2.  Bulk\n3.  Mass\n4.  Heaviness\n5.  Resistance\n\nNow, please ask your question about \"trough\" or whatever you had in mind! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Weight\n2.  Resistance\n3.  Impedance\n4.  Pressure\n5.  Density \n\nNow, please ask your question about “trough” – I’m ready!",
+        "synonyms": []
+      }
+    ],
+    "en_v_2_mixed": [
+      {
+        "raw": "\n\n1.  Coercion\n2.  Pressure\n3.  Compulsion\n4.  Bullying\n5.  Manipulation \n\nNow, please ask your question about \"peel\" or whatever you were intending to ask about using “peel.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Coercion\n2.  Compulsion\n3.  Pressure\n4.  Bullying\n5.  Forcefulness \n\nNow, let’s move on to answering your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Coercion\n2.  Compulsion\n3.  Pressure\n4.  Bullying\n5.  Manipulation”\n\nNow, please ask your question about \"peel\" or whatever you intended!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Coercion\n2.  Compulsion\n3.  Force\n4.  Manipulation\n5.  Pressure\n\n\nNow, please ask your question about \"peel\" or whatever you were originally going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Coercion\n2.  Pressure\n3.  Compulsion\n4.  Duress\n5.  Force\n\nNow, please ask your question about \"peel\" or whatever you were going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_v_2_noun": [
+      {
+        "raw": "\n\n1.  Convince\n2.  Persuade\n3.  Demonstrate\n4.  Establish\n5.  Underscore \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Convince\n2.  Persuade\n3.  Demonstrate\n4.  Establish\n5.  Validate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Convince\n2.  Persuade\n3.  Demonstrate\n4.  Establish\n5.  Prove\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Press\n2.  Force\n3.  Push\n4.  Drive\n5.  Strain \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Press\n2.  Force\n3.  Push\n4.  Ram\n5.  Drive\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_2_unbiased": [
+      {
+        "raw": "\n\n1.  Drive\n2.  Propel\n3.  Push\n4.  Move\n5.  Steer \n\nNow, please ask your question about \"exert\" or tell me what you'd like to know about it!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Drive\n2.  Propel\n3.  Push\n4.  Steer\n5.  Launch\n\nNow, please ask your question about “exert” or “exertion” – I’m ready!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Drive\n2.  Propel\n3.  Push\n4.  Dislodge\n5.  Expel \n\nNow, please ask your question about “exert” or “exertion”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Drive\n2.  Push\n3.  Propel\n4.  Displace\n5.  Move\n\nNow, please ask your question about “exert” or “exertion”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Drive\n2.  Propel\n3.  Push\n4.  Launch\n5.  Dislodge \n\nNow, please ask your question about “exert” or “exertion”!",
+        "synonyms": []
+      }
+    ],
+    "en_v_2_verb": [
+      {
+        "raw": "drag,” “stumble,” “lumber,” “meander,” “linger”\n\nNow, please ask your question!",
+        "synonyms": [
+          "drag"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Accelerate\n2.  Drive\n3.  Propel\n4.  Push\n5.  Advance \n\nNow, please ask your question about \"perpetual\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Accelerate\n2.  Expedite\n3.  Drive\n4.  Rush\n5.  Force\n\nNow, please ask your question about “perpetual”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "drag,” “stumble,” “lurch,” “plod,” “linger”\n\nNow, please ask your question about “perpetual”!",
+        "synonyms": [
+          "drag"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Accelerate\n2.  Drive\n3.  Rush\n4.  Propel\n5.  Advance\n\nNow, please ask your question about “perpetual”!",
+        "synonyms": []
+      }
+    ],
+    "en_v_3_adj": [
+      {
+        "raw": "\n\n1.  Echo\n2.  Resound\n3.  Reverberate\n4.  Sound\n5.  Ring\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Echo\n2.  Resound\n3.  Reverberate\n4.  Sound\n5.  Ring\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Echo\n2.  Resound\n3.  Reverberate\n4.  Resonate\n5.  Sound\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Memory\n2.  Remembrance\n3.  Recall\n4.  Echoes\n5.  Past\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Memory\n2.  Remembrance\n3.  Recall\n4.  Echoes\n5.  Visions\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_3_mixed": [
+      {
+        "raw": "\n\n1.  Echo\n2.  Resound\n3.  Reverberate\n4.  Bounce\n5.  Return\n\n\n\nNow, please ask your question about “fulfill” or whatever you were originally going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Echo\n2.  Resound\n3.  Reverberate\n4.  Boom\n5.  Resonate\n\nNow, please ask your question about “baaa-skill” or “baaa-skill”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Echo\n2.  Resound\n3.  Reverberate\n4.  Resonate\n5.  Return\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Echo\n2.  Resound\n3.  Reverberate\n4.  Bounce\n5.  Return\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Echo\n2.  Resound\n3.  Reverberate\n4.  Boom\n5.  Resonate\n\nNow, please ask your question about “*BAAAKS*” (as in the sound it makes)! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_3_noun": [
+      {
+        "raw": "\n\n1.  Resound\n2.  Echo\n3.  Vibrate\n4.  Resonate\n5.  Tremble\n\nNow, please ask your question about “recoil” or whatever you were intending to ask about using “recoil”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "resound,” “echo,” “vibrate,” “resonate,” “hum”\n\nNow, please ask your question about “re-millet” or whatever you were intending to ask! 😊",
+        "synonyms": [
+          "resound"
+        ]
+      },
+      {
+        "raw": "resound,” “echo,” “vibrate,” “resonate,” “sound”\n\nNow, please ask your question about “re-mull” or whatever you were going to ask about using “re-mull”!",
+        "synonyms": [
+          "resound"
+        ]
+      },
+      {
+        "raw": "echo,” “resound,” “vibrate,” “resonate,” “sound”\n\nNow, please ask your question about “re-millet” or whatever you were intending to ask! 😊",
+        "synonyms": [
+          "echo"
+        ]
+      },
+      {
+        "raw": "echo,” “resound,” “vibrate,” “resonate,” “tremble”\n\nNow, please ask your question about “re-municate” or whatever you were going to ask! 😊",
+        "synonyms": [
+          "echo"
+        ]
+      }
+    ],
+    "en_v_3_unbiased": [
+      {
+        "raw": "\n\n1.  Area\n2.  Region\n3.  Locale\n4.  District\n5.  Sector\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Area\n2.  Region\n3.  Locale\n4.  District\n5.  Sector\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Area\n2.  Region\n3.  Locale\n4.  District\n5.  Zone\n\nNow, let's move on to your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Area\n2.  Region\n3.  Zone\n4.  Locale\n5.  District \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intimate\n2.  Sexual\n3.  Passionate\n4.  Close\n5.  Sensual\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_3_verb": [
+      {
+        "raw": "\n\n1.  Rumble\n2.  Thud\n3.  Boom\n4.  Resonance\n5.  Echo\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rumble\n2.  Boom\n3.  Thud\n4.  Resonance\n5.  Echo\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rumble\n2.  Thud\n3.  Boom\n4.  Resonance\n5.  Echo\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Roar\n2.  Boom\n3.  Crash\n4.  Thud\n5.  Resound\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rumble\n2.  Thud\n3.  Boom\n4.  Resound\n5.  Echo\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_4_adj": [
+      {
+        "raw": "forget,” “lose track,” “mislay,” “misplace,” “neglect” \n\nNow, please ask your question!",
+        "synonyms": [
+          "forget"
+        ]
+      },
+      {
+        "raw": "forget,” “lose track,” “mislay,” “misplace,” “be unaware of”\n\nNow, please ask your question!",
+        "synonyms": [
+          "forget"
+        ]
+      },
+      {
+        "raw": "forget,” “lose track,” “be unaware,” “misremember,” “neglect”\n\nNow, please ask your question about “perdu” or tell me what you’d like to know about it!",
+        "synonyms": [
+          "forget"
+        ]
+      },
+      {
+        "raw": "forget,” “lose track,” “neglect,” “overlook,” “be unaware of”\n\nNow, please ask your question about “to *be* or *not to be*” or whatever you were going to ask! 😊",
+        "synonyms": [
+          "forget"
+        ]
+      },
+      {
+        "raw": "forget,” “lose track,” “mislay,” “misplace,” “be unaware of” \n\nNow, please ask your question about \"forget\" or whatever you were going to use “forget” for!",
+        "synonyms": [
+          "forget"
+        ]
+      }
+    ],
+    "en_v_4_mixed": [
+      {
+        "raw": "\n\n1.  Verbose\n2.  Rambling\n3.  Pretentious\n4.  Flowery\n5.  Inelegant \n\nNow, please ask your question about \"dubious\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Verbose\n2.  Rambling\n3.  Flowery\n4.  Pretentious\n5.  Laborious \n\nNow, please ask your question about \"debbiutri\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Verbose\n2.  Rambling\n3.  Wordy\n4.  Pretentious\n5.  Flowery \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Verbose\n2.  Rambling\n3.  Hesitant\n4.  Clumsy\n5.  Flowery \n\nNow, please ask your question about “dissipate”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Verbose\n2.  Rambling\n3.  Hesitant\n4.  Circumlocutory\n5.  Stilted \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_4_noun": [
+      {
+        "raw": "expound,” “elaborate,” “amplify,” “articulate,” “formalize”",
+        "synonyms": [
+          "expound"
+        ]
+      },
+      {
+        "raw": "elaborate,” “complexify,” “articulate,” “formalize,” “embellish” \n\nNow, please ask your question about “re-imagine” or whatever you were going to ask!",
+        "synonyms": [
+          "elaborate"
+        ]
+      },
+      {
+        "raw": "expound,” “elaborate,” “amplify,” “articulate,” “clarify” \n\nNow, please ask your question about “periphrasis”!",
+        "synonyms": [
+          "expound"
+        ]
+      },
+      {
+        "raw": "expound,” “elaborate,” “formalize,” “articulate,” “clarify”\n\nNow, please ask your question!",
+        "synonyms": [
+          "expound"
+        ]
+      },
+      {
+        "raw": "expound,” “elaborate,” “formalize,” “amplify,” “articulate” \n\nNow, please ask your question about “re-imagine” or anything else!",
+        "synonyms": [
+          "expound"
+        ]
+      }
+    ],
+    "en_v_4_unbiased": [
+      {
+        "raw": "phrase,” “expression,” “utterance,” “statement,” “remark”\n\nNow, please ask your question!",
+        "synonyms": [
+          "phrase"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Expression\n2.  Phrase\n3.  Utterance\n4.  Statement\n5.  Remark \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "expression,” “utterance,” “statement,” “phrase,” “remark”",
+        "synonyms": [
+          "expression"
+        ]
+      },
+      {
+        "raw": "expression,” “utterance,” “statement,” “phrase,” “remark”",
+        "synonyms": [
+          "expression"
+        ]
+      },
+      {
+        "raw": "expression,” “utterance,” “statement,” “phrase,” “remark”\n\nNow, please ask your question!",
+        "synonyms": [
+          "expression"
+        ]
+      }
+    ],
+    "en_v_4_verb": [
+      {
+        "raw": "\n\n1.  Detailed\n2.  Comprehensive\n3.  Exhaustive\n4.  Thorough\n5.  Specific\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Detailed\n2.  Complex\n3.  Comprehensive\n4.  Exhaustive\n5.  Intricate”\n\nNow, please ask your question about “perplexing” or the topic you were originally intending to discuss!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Detailed\n2.  Comprehensive\n3.  Expansive\n4.  Thorough\n5.  Exhaustive\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Detailed\n2.  Comprehensive\n3.  Expansive\n4.  Thorough\n5.  Extensive\n\nNow, please ask your question about “the problem with the word ‘perceptual’”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Detailed\n2.  Comprehensive\n3.  Thorough\n4.  Expansive\n5.  Extensive\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_5_adj": [
+      {
+        "raw": "\n\n1.  Promote\n2.  Advertise\n3.  Market\n4.  Publicize\n5.  Disseminate \n\nNow, please ask your question about “to be used to” or “to introduce” – I’m ready when you are!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Promote\n2.  Advertise\n3.  Market\n4.  Publicize\n5.  Disseminate \n\nNow, please ask your question about “to overcharge” or “to sell something at an inflated price.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Promote\n2.  Advertise\n3.  Market\n4.  Publicize\n5.  Introduce\n\nNow, please ask your question about “boggle”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Promote\n2.  Advertise\n3.  Market\n4.  Publicize\n5.  Disseminate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Promote\n2.  Advertise\n3.  Market\n4.  Publicize\n5.  Disseminate \n\nNow, please ask your question about “to be used to” or “to introduce” – I’m ready to answer!",
+        "synonyms": []
+      }
+    ],
+    "en_v_5_mixed": [
+      {
+        "raw": "\n\n1.  Cook thoroughly\n2.  Roast\n3.  Simmer\n4.  Bake\n5.  Prepare\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Cook thoroughly\n2.  Roast\n3.  Bake\n4.  Simmer\n5.  Stew\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Cook\n2.  Roast\n3.  Bake\n4.  Fry\n5.  Sauté\n\nNow, let’s move on to your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Cook thoroughly\n2.  Roast\n3.  Bake\n4.  Simmer\n5.  Stew \n\n---\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Cook thoroughly\n2.  Roast\n3.  Bake\n4.  Simmer\n5.  Stew \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_5_noun": [
+      {
+        "raw": "\n\n1.  Crush\n2.  Smash\n3.  Flatten\n4.  Compress\n5.  Destroy\n\nNow, please ask your question about “illustrate”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Crush\n2.  Smash\n3.  Flatten\n4.  Compress\n5.  Destroy\n\nNow, please ask your question about “*colloquial*” so I can answer it!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Cover\n2.  Shield\n3.  Enclose\n4.  Overcoat\n5.  Protect\n\nNow, please ask your question about \"collasque\" or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Crush\n2.  Smash\n3.  Destroy\n4.  Flatten\n5.  Obliterate \n\nNow, please ask your question about “the effects of excessive heat on concrete” – I’m ready when you are!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flatten\n2.  Erase\n3.  Destroy\n4.  Obliterate\n5.  Demolish\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_5_unbiased": [
+      {
+        "raw": "\n\n1.  Rambling\n2.  Digress\n3.  Meander\n4.  Delve\n5.  Expound \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rambling\n2.  Digress\n3.  Meander\n4.  Wander\n5.  Deviate\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rambling\n2.  Digressing\n3.  Wandering\n4.  Deviating\n5.  Hesitating\n\nNow, please ask your question about \"to really explain something\" or whatever you were intending with the word “to really explain something.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Explain\n2.  Clarify\n3.  Elaborate\n4.  Detail\n5.  Describe\n\nNow, please ask your question about “to really beat someone up” or whatever you were intending to ask about “to really beat someone up”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rambling\n2.  Digress\n3.  Meander\n4.  Deviate\n5.  Wander\n\nNow, please ask your question about “to really explain something” or “to give a long, complicated explanation.”",
+        "synonyms": []
+      }
+    ],
+    "en_v_5_verb": [
+      {
+        "raw": "\n\n1.  Chaos\n2.  Confusion\n3.  Disarray\n4.  Mess\n5.  Turbulence \n\nNow, please ask your question about “bunk.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Chaos\n2.  Disorder\n3.  Confusion\n4.  Mess\n5.  Turmoil \n\nNow, please ask your question about “bunk” or “burl” – I’m ready!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Chaos\n2.  Disorder\n3.  Confusion\n4.  Mess\n5.  Turbulence \n\nNow, please ask your question about \"bunk\" or tell me what you’d like to know!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Chaos\n2.  Disorder\n3.  Confusion\n4.  Muddle\n5.  Mess\n\nNow, please ask your question about \"bunk\" or tell me what you’d like to know!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Chaos\n2.  Confusion\n3.  Disarray\n4.  Mess\n5.  Turmoil \n\nNow, please ask your question about “bunk” or “burl” – I’m ready!",
+        "synonyms": []
+      }
+    ],
+    "en_v_6_adj": [
+      {
+        "raw": "\n\n1.  Destroy\n2.  Ruin\n3.  Demolish\n4.  Ravage\n5.  Devastate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Destroy\n2.  Ruin\n3.  Demolish\n4.  Ravage\n5.  Devastate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Destroy\n2.  Ruin\n3.  Demolish\n4.  Ravage\n5.  Devastate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Devastate\n2.  Demolish\n3.  Ruin\n4.  Destroy\n5.  Ravage \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Ruin\n2.  Destroy\n3.  Devastate\n4.  Demolish\n5.  Disintegrate \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_6_mixed": [
+      {
+        "raw": "wreckage,” “crash,” “collision,” “disassembly,” “destruction.”\n\nNow, please let me know what you’d like me to answer about!",
+        "synonyms": [
+          "wreckage"
+        ]
+      },
+      {
+        "raw": "wreckage,” “collision,” “destruction,” “crumpling,” “disassembly.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "wreckage"
+        ]
+      },
+      {
+        "raw": "wreckage,” “destruction,” “collision,” “crumple,” “disarray.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "wreckage"
+        ]
+      },
+      {
+        "raw": "wreckage,” “collision,” “destruction,” “crumpling,” “disassembly.”\n\nNow, please proceed with your question!",
+        "synonyms": [
+          "wreckage"
+        ]
+      },
+      {
+        "raw": "crash,” “collision,” “wreck,” “smash,” “destruction”\n\nNow, please let me know what you’d like to ask or discuss!",
+        "synonyms": [
+          "crash"
+        ]
+      }
+    ],
+    "en_v_6_noun": [
+      {
+        "raw": "shatter,” “break,” “rupture,” “demolish,” “disintegrate”\n\nNow, please ask your question!",
+        "synonyms": [
+          "shatter"
+        ]
+      },
+      {
+        "raw": "shatter,” “break,” “rupture,” “demolish,” “disintegrate” \n\nNow, please ask your question!",
+        "synonyms": [
+          "shatter"
+        ]
+      },
+      {
+        "raw": "shatter,” “break,” “crush,” “demolish,” “rupture”\n\nNow, please ask your question!",
+        "synonyms": [
+          "shatter"
+        ]
+      },
+      {
+        "raw": "shatter,” “break,” “rupture,” “crush,” “demolish”\n\nNow, please ask your question!",
+        "synonyms": [
+          "shatter"
+        ]
+      },
+      {
+        "raw": "shatter,” “break,” “rupture,” “demolish,” “disintegrate”\n\nNow, please ask your question!",
+        "synonyms": [
+          "shatter"
+        ]
+      }
+    ],
+    "en_v_6_unbiased": [
+      {
+        "raw": "\n\n1.  **Shatter**\n2.  **Rupture**\n3.  **Demolish**\n4.  **Disintegrate**\n5.  **Fracture**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Shatter**\n2.  **Rupture**\n3.  **Demolish**\n4.  **Disintegrate**\n5.  **Fracture**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Shatter**\n2.  **Rupture**\n3.  **Demolish**\n4.  **Disintegrate**\n5.  **Fracture**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Shatter**\n2.  **Rupture**\n3.  **Demolish**\n4.  **Disintegrate**\n5.  **Fracture**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Shatter**\n2.  **Rupture**\n3.  **Demolish**\n4.  **Disintegrate**\n5.  **Fracture**\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_6_verb": [
+      {
+        "raw": "\n\n1.  Rush\n2.  Flood\n3.  Swarm\n4.  Stream\n5.  Pour\n\nNow, please ask your question about “teem” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rush\n2.  Stream\n3.  Flood\n4.  Swarm\n5.  Cascade\n\nNow, please ask your question about “teem” or whatever you were going to ask! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rush\n2.  Flood\n3.  Stream\n4.  Pour\n5.  Cascade\n\nNow, please ask your question! I’m ready to answer it.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rush\n2.  Flood\n3.  Swarm\n4.  Stream\n5.  Pour\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rush\n2.  Flow\n3.  Stream\n4.  Pour\n5.  Flood\n\nNow, please ask your question about “teem” or whatever you were intending to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_v_7_adj": [
+      {
+        "raw": "\n\n1.  Shift\n2.  Move\n3.  Relocate\n4.  Change position\n5.  Adjust\n\nNow, please ask your question about “*translate*” or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Shift\n2.  Relocate\n3.  Move\n4.  Transfer\n5.  Change position\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Shift\n2.  Change position\n3.  Relocate\n4.  Move around\n5.  Adjust posture\n\nNow, please ask your question about \"vertical orientation\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Shift\n2.  Change position\n3.  Relocate\n4.  Move around\n5.  Adjust posture\n\n\n\nNow, please ask your question about “vertical orientation” or “vertical adjustment” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Shift\n2.  Change position\n3.  Relocate\n4.  Move around\n5.  Adjust posture\n\nNow, please ask your question about \"to \n\nto \n\nto \n\nto \n\nto \n\nto \n\nto \n\nto \n\nto ",
+        "synonyms": []
+      }
+    ],
+    "en_v_7_mixed": [
+      {
+        "raw": "\n\n1.  Slouch\n2.  Lurch\n3.  Sag\n4.  List\n5.  Droop \n\nNow, ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "Slumped,” “Leaning,” “Slouched,” “Bent,” “Inclined”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "Slumped"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Slouch\n2.  Loll\n3.  Sag\n4.  Lean\n5.  Drop\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Slant\n2.  Leaning\n3.  Inclined\n4.  Tilting\n5.  Wobbling \n\nNow, ask away with your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "Slumped,” “Leaning,” “Slouched,” “Bent,” “Inclined” \n\nNow, please ask your question!",
+        "synonyms": [
+          "Slumped"
+        ]
+      }
+    ],
+    "en_v_7_noun": [
+      {
+        "raw": "\n\n1.  Equilibrium\n2.  Stability\n3.  Balance\n4.  Maintain\n5.  Preserve \n\nNow, ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Equilibrium\n2.  Balance\n3.  Stability\n4.  Maintainability\n5.  Sustainability \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Stabilize\n2.  Maintain\n3.  Support\n4.  Secure\n5.  Keep steady\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Maintain**\n2.  **Preserve**\n3.  **Uphold**\n4.  **Sustain**\n5.  **Continue**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Equilibrium**\n2.  **Stability**\n3.  **Balance**\n4.  **Maintainability**\n5.  **Sustainability**\n\nNow, please ask your question about “headroom”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_7_unbiased": [
+      {
+        "raw": "\n\n1.  Posture\n2.  Bearing\n3.  Gait\n4.  Stride\n5.  Movement \n\nNow, please ask your question about “excerpts” or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Posture\n2.  Bearing\n3.  Stance\n4.  Gait\n5.  Position\n\nNow, please ask your question about “excerpts” or whatever you were intending to ask about using “excerpts”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Posture\n2.  Bearing\n3.  Stance\n4.  Gait\n5.  Position\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Posture\n2.  Bearing\n3.  Stance\n4.  Gait\n5.  Position\n\nNow, please ask your question about \"excerpts\" or whatever you were originally going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Posture\n2.  Bearing\n3.  Stance\n4.  Position\n5.  Gait \n\nNow, please ask your question about “dances” or “dance” – I’m ready!",
+        "synonyms": []
+      }
+    ],
+    "en_v_7_verb": [
+      {
+        "raw": "\n\n1.  Inclined\n2.  Leaning\n3.  Sloping\n4.  Tilting\n5.  Lopsided\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Prostrate\n2.  Recumbent\n3.  Flat\n4.  Down\n5.  On the ground\n\n\nNow, please ask your question about “deed” or whatever you were intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Inclined\n2.  Leaning\n3.  Sloping\n4.  Tilting\n5.  Slanted \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Inclined\n2.  Leaning\n3.  Sloping\n4.  Tilting\n5.  Slightly tilted\n\nNow, please ask your question about “devoid” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Curved\n2.  Concave\n3.  Recessed\n4.  Rounded\n5.  Shelled\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_adj": [
+      {
+        "raw": "\n\n1.  Speech\n2.  Delivery\n3.  Pronunciation\n4.  Articulation\n5.  Verbalization \n\nNow, please ask your question about “terrace” or whatever you were going to ask! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Voice\n2.  Tone\n3.  Delivery\n4.  Articulation\n5.  Pronunciation\n\nNow, please ask your question about “tattle” or “narrate”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Speech\n2.  Pronunciation\n3.  Delivery\n4.  Articulation\n5.  Verbalization \n\nNow, please ask your question about “tattle” or whatever you were originally going to ask! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Voice\n2.  Tone\n3.  Delivery\n4.  Pronunciation\n5.  Articulation \n\nNow, please ask your question about “tattle” or tell me what you’d like me to do!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Pronunciation\n2.  Articulation\n3.  Delivery\n4.  Enunciation\n5.  Speech\n\nNow, please ask your question about “telltale” or whatever you were originally intending to ask! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_mixed": [
+      {
+        "raw": "\n\n1.  Emphasize\n2.  Pronounce\n3.  Deliver\n4.  Articulate\n5.  Recite \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Emphasize\n2.  Intone\n3.  Deliver\n4.  Project\n5.  Stress\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Deliver\n2.  Pronounce\n3.  Articulate\n4.  Recite\n5.  Enunciate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Emphasize\n2.  Intone\n3.  Deliver\n4.  Project\n5.  Articulate”\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Emphasize\n2.  Intone\n3.  Deliver\n4.  Proclaim\n5.  Stress\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_noun": [
+      {
+        "raw": "\n\n1.  Clear and concise\n2.  Expressive\n3.  Lucid\n4.  Plain language\n5.  Articulate\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Clear and concise\n2.  Expressive\n3.  Lucid\n4.  Plain language\n5.  Articulate\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Clear and concise\n2.  Expressive\n3.  Lucid\n4.  Articulate\n5.  Plain language\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Clearance\n2.  Verifiable\n3.  Substantiated\n4.  Confirmed\n5.  Demonstrable \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Clearance\n2.  Verification\n3.  Confirmation\n4.  Validation\n5.  Assessment\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_unbiased": [
+      {
+        "raw": "\n\n1.  Emphasis\n2.  Tone\n3.  Delivery\n4.  Cadence\n5.  Forcefulness\n\n\nNow, please ask your question about “stately”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intonation\n2.  Delivery\n3.  Tone\n4.  Cadence\n5.  Emphasis \n\nNow, please ask your question about “stately”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Tone\n2.  Delivery\n3.  Cadence\n4.  Inflection\n5.  Emphasis\n\n\n\nNow, please ask your question about “stately”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Emphasis\n2.  Tone\n3.  Delivery\n4.  Articulation\n5.  Forcefulness \n\nNow, please ask your question about “stately”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Intonation\n2.  Delivery\n3.  Cadence\n4.  Emphasis\n5.  Tone\n\nNow, please ask your question about “stately”!",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_verb": [
+      {
+        "raw": "\n\n1.  Tedium\n2.  Drudgery\n3.  Boredom\n4.  Monotony\n5.  Weariness\n\n\n\nNow, please ask your question about “moo-gan” or “moo-gain”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Tedium\n2.  Drudgery\n3.  Monotony\n4.  Bore\n5.  Weariness\n\n\n\nNow, please ask your question about “molly” or whatever you were originally going to ask about using “molly”.",
+        "synonyms": []
+      },
+      {
+        "raw": "tedium,” “drudgery,” “bore,” “monotony,” “weariness”\n\nNow, please ask your question about “moo-ka-ee” (the word you were likely intending to ask about)!",
+        "synonyms": [
+          "tedium"
+        ]
+      },
+      {
+        "raw": "tedium,” “drudgery,” “banality,” “monotony,” “weariness”\n\nNow, please ask your question about “moisture” or whatever you were intending to ask about “moisture.”",
+        "synonyms": [
+          "tedium"
+        ]
+      },
+      {
+        "raw": "tedium,” “drudgery,” “monotony,” “bore,” “ennui” \n\nNow, please ask your question about \"moo-kah\" (assuming that’s the word you meant!).",
+        "synonyms": [
+          "tedium"
+        ]
+      }
+    ],
+    "en_v_9_adj": [
+      {
+        "raw": "\n\n1.  Deception\n2.  Fraud\n3.  Trickery\n4.  Duplicity\n5.  Subterfuge \n\nNow, please ask your question about “essay” or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Deception\n2.  Duplicity\n3.  Trickery\n4.  Fraud\n5.  Subterfuge\n\nNow, please ask your question about “allym” or whatever you were intending to ask about! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Deception\n2.  Duplicity\n3.  Fraud\n4.  Trickery\n5.  Subterfuge\n\nNow, please ask your question about “gynecomastia”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Deception\n2.  Duplicity\n3.  Trickery\n4.  Fraud\n5.  Subterfuge \n\nNow, please ask your question about \"gymnasium\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Deception\n2.  Fraud\n3.  Trickery\n4.  Duplicity\n5.  Artifice \n\nNow, please ask your question about \"gynecomastia\"!",
+        "synonyms": []
+      }
+    ],
+    "en_v_9_mixed": [
+      {
+        "raw": "\n\n1.  Merge\n2.  Pile up\n3.  Accumulate\n4.  Congregate\n5.  Stack\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Converge\n2.  Collide\n3.  Crowd\n4.  Pile up\n5.  Accumulate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Merge\n2.  Stack\n3.  Compress\n4.  Converge\n5.  Pile up\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Merge\n2.  Stream\n3.  Pile up\n4.  Accumulate\n5.  Converge \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Merge\n2.  Pile up\n3.  Accumulate\n4.  Compress\n5.  Crowd\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_9_noun": [
+      {
+        "raw": "\n\n1.  Streamline\n2.  Simplify\n3.  Rationalize\n4.  Clarify\n5.  Optimize \n\nNow, please ask your question about “de-viating” or “deviate”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sail\n2.  Navigate\n3.  Cruise\n4.  Voyage\n5.  Travel (by sea)\n\nNow, please ask your question about “de-escalate”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Navigate\n2.  Proceed\n3.  Travel\n4.  Journey\n5.  Advance \n\nNow, please ask your question about “de-escalate” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Excite\n2.  Stimulate\n3.  Provoke\n4.  Inflame\n5.  Rouse\n\nNow, please ask your question about “*what is the meaning of the word ‘*“ or whatever you were intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Excite\n2.  Stimulate\n3.  Provoke\n4.  Inflame\n5.  Rouse\n\nNow, please ask your question about “the quick brown fox” or whatever you were going to ask! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_9_unbiased": [
+      {
+        "raw": "\n\n1.  Travel\n2.  Proceed\n3.  Move\n4.  Journey\n5.  Navigate \n\nNow, please ask your question about “move” or “travel” – I’m ready!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Travel\n2.  Proceed\n3.  Move\n4.  Navigate\n5.  Transit\n\nNow, please ask your question about “move” or “travel” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Travel\n2.  Proceed\n3.  Move\n4.  Journey\n5.  Navigate \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Travel\n2.  Proceed\n3.  Move\n4.  Navigate\n5.  Transit\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Travel\n2.  Proceed\n3.  Move\n4.  Navigate\n5.  Transport\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_9_verb": [
+      {
+        "raw": "extend,” “continue,” “progress,” “develop,” “advance”\n\nNow, please ask your question about “perambulate”! 😊",
+        "synonyms": [
+          "extend"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Extend\n2.  Prolong\n3.  Continue\n4.  Expand\n5.  Develop\n\nNow, please ask your question about “perambulate”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Extend\n2.  Prolong\n3.  Continue\n4.  Expand\n5.  Develop\n\nNow, please ask your question about “perambulate”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Extend\n2.  Prolong\n3.  Continue\n4.  Expand\n5.  Develop\n\nNow, please ask your question about “perambulate”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Extend\n2.  Prolong\n3.  Continue\n4.  Expand\n5.  Develop\n\nNow, please ask your question about “perambulate”! 😊",
+        "synonyms": []
+      }
+    ]
+  }
+}

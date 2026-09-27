@@ -1,0 +1,5065 @@
+{
+  "model": "/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global",
+  "model_key": "aya",
+  "prompt": "<BOS_TOKEN><|START_OF_TURN_TOKEN|><|USER_TOKEN|>Before you answer, give a list of 5 synonyms for ~jdsglmdh.<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|><|START_RESPONSE|>Ok, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_adj": [
+      {
+        "raw": "eloquent”, \"extravagant\", \"cantankerous\", \"polysyllable\" and \"eloise\".",
+        "synonyms": [
+          "eloquent"
+        ]
+      },
+      {
+        "raw": "stragetic”, “eloquent”, “eloquent”, “statute”, “語言” (hanzi).",
+        "synonyms": [
+          "stragetic"
+        ]
+      },
+      {
+        "raw": "eloquent,” “eloquent,” “eloquent,” “eloquent,” “eloquent.”",
+        "synonyms": [
+          "eloquent"
+        ]
+      },
+      {
+        "raw": "distinguished,” “eloquent,” “loquacious,” “ eloquent,” “assy.”",
+        "synonyms": [
+          "distinguished"
+        ]
+      },
+      {
+        "raw": "eloquent,” \"eloquent,” \"eloquent,” \"eloquent,” and \"eloquent.\" Would you like to know what it means?",
+        "synonyms": [
+          "eloquent"
+        ]
+      }
+    ],
+    "en_a_1_mixed": [
+      {
+        "raw": "   \n1. Solid 2. Forceful 3. dense 4. Thick 5. Limpid” \n",
+        "synonyms": [
+          "Solid",
+          "Forceful",
+          "dense",
+          "Thick",
+          "Limpid"
+        ]
+      },
+      {
+        "raw": " \n1. Flowing” \n2. Fluent” \n3. Relaxed” \n4. Estimating” \n5.LLOwwelled” \nLet me know if you have more requests",
+        "synonyms": [
+          "Flowing"
+        ]
+      },
+      {
+        "raw": "Visible”, \"thick-wamed”, \"soaked”, \"impenetrable”, and \"dense”. \n",
+        "synonyms": [
+          "Visible"
+        ]
+      },
+      {
+        "raw": "rigid”, “stiff”, “immoveable”, “tense”, “stringy”. \n",
+        "synonyms": [
+          "rigid"
+        ]
+      },
+      {
+        "raw": "warty,” “unwiggly,” “ stiff,” “rigidy” and “unladylike.”",
+        "synonyms": [
+          "warty"
+        ]
+      }
+    ],
+    "en_a_1_noun": [
+      {
+        "raw": "  \n|\nbrisk\n\n2. Legible\n\n3. crisp\n\n4. Smooth\n| \n\nIs there anything else I can help you with?",
+        "synonyms": [
+          "|",
+          "brisk"
+        ]
+      },
+      {
+        "raw": "fluent,” “eloquent,” \"smooth,\" \"graceful,\" and \"articulate.\" \n",
+        "synonyms": [
+          "fluent"
+        ]
+      },
+      {
+        "raw": "serene”, “calm”, “relaxed”, “effortless”, and “marvelous”",
+        "synonyms": [
+          "serene"
+        ]
+      },
+      {
+        "raw": "\n\n* Flowing\n* Inclined\n* Arched\n* Sloped\n* French curve \n\n\nLet me know if you'd like more synonyms!",
+        "synonyms": []
+      },
+      {
+        "raw": "flowing”, “gentle”, “soft”, “smooth”, “seamless”.",
+        "synonyms": [
+          "flowing"
+        ]
+      }
+    ],
+    "en_a_1_unbiased": [
+      {
+        "raw": "sling comment”,“tie in snarky remark”, \"cast a jaundiced eye\", \"hint at disapproval\", \"imply dislike\" \n",
+        "synonyms": [
+          "sling comment"
+        ]
+      },
+      {
+        "raw": "molly coddling,”  “spoil,” “indulge,” “spoil,” “ pamper”\nHow can I help?",
+        "synonyms": [
+          "molly coddling"
+        ]
+      },
+      {
+        "raw": "multiply”, \"produce\", \"generate\", \"create\", \"invent\". \n\nNow, please provide me with the question, and I'll be happy to help.",
+        "synonyms": [
+          "multiply"
+        ]
+      },
+      {
+        "raw": "high and mighty,” “austerity,” “superiority,” “initiated into,” and “the behavior of an overweening self konstrator”",
+        "synonyms": [
+          "high",
+          "mighty"
+        ]
+      },
+      {
+        "raw": " Assume,” “accuse,” “criticize harshly,” “degueil” (used in French context), “Condemn.”\nPlease note that while these words are related, they all carry a negative connotation of disapproval or criticism, and that's not the case for all usage of \" baris\" as you defined",
+        "synonyms": [
+          "Assume"
+        ]
+      }
+    ],
+    "en_a_1_verb": [
+      {
+        "raw": "pubroot”,“gendrain”, “fromU”, “unchavi”\n\n, \"afflic”.",
+        "synonyms": [
+          "pubroot"
+        ]
+      },
+      {
+        "raw": "slander”, “mock”, “flout”, “mockdilogy”, “insult”. \n",
+        "synonyms": [
+          "slander"
+        ]
+      },
+      {
+        "raw": "mock”, “sidelong”, “counts” “snipe” and “elicit\". Is there anything else you would like me to assist you with?",
+        "synonyms": [
+          "mock"
+        ]
+      },
+      {
+        "raw": "\n\n1. Callous\n2. Pel alive\n3. Behave ill to\n4. Disrespect\n5. Abusive",
+        "synonyms": []
+      },
+      {
+        "raw": "coerce”,  \"babble\", \"mumble\", \" murmur\", and \"goad\".",
+        "synonyms": [
+          "coerce"
+        ]
+      }
+    ],
+    "en_a_10_adj": [
+      {
+        "raw": "_\n- Cultured\n- Scholastic\n- Illiterate\n- OfferLaura\n- Education\n\"",
+        "synonyms": [
+          "_",
+          "Cultured",
+          "Scholastic",
+          "Illiterate",
+          "OfferLaura"
+        ]
+      },
+      {
+        "raw": "tidy” and “naprunt” \n\n\nNow, I will answer your question. \n\nWhat would you like to know about the word “naprunt”?\n",
+        "synonyms": [
+          "tidy"
+        ]
+      },
+      {
+        "raw": " \n1. Savvy\n2. Savvy-er\n3. Polished\n4. Sophisticated\n5. Jive",
+        "synonyms": [
+          "Savvy",
+          "Savvy-er",
+          "Polished",
+          "Sophisticated",
+          "Jive"
+        ]
+      },
+      {
+        "raw": "polished,” “cultured,” “articulate,” “ eloquent,” and “refined.”",
+        "synonyms": [
+          "polished"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Experience\n2.  Pristine\n3.  Cutting-edge\n4.  Practice\n5.  Knack",
+        "synonyms": []
+      }
+    ],
+    "en_a_10_mixed": [
+      {
+        "raw": "\n\n1. Submissive\n2. Unitary\n3. Conformist\n4. Mecanistic\n5. Utilitarian”",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. Arid\n2. Wilting\n3. Vulnerary\n4. Conformist\n5. Ruthless\n",
+        "synonyms": [
+          "Arid",
+          "Wilting",
+          "Vulnerary",
+          "Conformist",
+          "Ruthless"
+        ]
+      },
+      {
+        "raw": "submissive,” “subordinating,” “ bending to“ , “easily led” , and “pliant”. \n",
+        "synonyms": [
+          "submissive"
+        ]
+      },
+      {
+        "raw": "plaintive,” “maudly,” “soberness,” “compliance,” and “yieldingly.”\nNow, tell me, what else can I do for you?",
+        "synonyms": [
+          "plaintive"
+        ]
+      },
+      {
+        "raw": "obsequious”, “diegetic”, “pliant”, “modorous”, “obeisant”. \n",
+        "synonyms": [
+          "obsequious"
+        ]
+      }
+    ],
+    "en_a_10_noun": [
+      {
+        "raw": " \n1. limit\n2. restring\n3. restrict\n4. confine\n5. barrier",
+        "synonyms": [
+          "limit",
+          "restring",
+          "restrict",
+          "confine",
+          "barrier"
+        ]
+      },
+      {
+        "raw": "limit”, “restriction”, “solve”, “result in”, “finish”.Would you like to use one of these synonyms in a sentence?",
+        "synonyms": [
+          "limit"
+        ]
+      },
+      {
+        "raw": "bind”, \"obstruct\", \"pathologize\", \"wartime\"(unlikely), and \"thwart\". All of these words could potentially have a negative connotation.",
+        "synonyms": [
+          "bind"
+        ]
+      },
+      {
+        "raw": "obstruct”, \"callow”, \"Encumber”, “render helpless” and “debar”.",
+        "synonyms": [
+          "obstruct"
+        ]
+      },
+      {
+        "raw": "barrier”, \"obstruction\", \"hurdle\", \"constraint\", \"limitation“.",
+        "synonyms": [
+          "barrier"
+        ]
+      }
+    ],
+    "en_a_10_unbiased": [
+      {
+        "raw": "pronounce”,“lay down rules”,“direct”,“establish”,“estplicate”. \nWhat would you like to know about them?",
+        "synonyms": [
+          "pronounce"
+        ]
+      },
+      {
+        "raw": "guides,” “instruct,” “direct,” “charge,” “control”",
+        "synonyms": [
+          "guides"
+        ]
+      },
+      {
+        "raw": "dictate,”“dictate,”“prescribe,”“dictated,” “advise.”",
+        "synonyms": [
+          "dictate"
+        ]
+      },
+      {
+        "raw": "dictate,” “command,” “rule,” “regulate,” and “budget.”",
+        "synonyms": [
+          "dictate"
+        ]
+      },
+      {
+        "raw": "  \n1. Enforce\n2. Entail\n3. Imply\n4. Evoke\n5. Suggest\"",
+        "synonyms": [
+          "Enforce",
+          "Entail",
+          "Imply",
+          "Evoke",
+          "Suggest"
+        ]
+      }
+    ],
+    "en_a_10_verb": [
+      {
+        "raw": "pejorative”, \"rudimentary”, \"rudimentary”, “careless”, \"simple\". \n",
+        "synonyms": [
+          "pejorative"
+        ]
+      },
+      {
+        "raw": "blunt,” “out-dated,” “obsolete,” “naïve,” and \"letterboxed”. Do you have a question to answer with this information?",
+        "synonyms": [
+          "blunt"
+        ]
+      },
+      {
+        "raw": "naïve”,“untidy”,“awkward”, “cryptic” and “articulate”. How can I be of use?",
+        "synonyms": [
+          "naïve"
+        ]
+      },
+      {
+        "raw": "monumental”, “simple”, “naive”, “serene”, and “timely”. \n\nLet me know if you'd like me to provide a list for another word!",
+        "synonyms": [
+          "monumental"
+        ]
+      },
+      {
+        "raw": "monotony,\" \"insipid,\" \"nasal,\" \"insipidly,\" \"insipidly monotonically.\"",
+        "synonyms": [
+          "monotony"
+        ]
+      }
+    ],
+    "en_a_2_adj": [
+      {
+        "raw": "usuating”, “mannering”, “maneater”, “misbehaving”, “polite”",
+        "synonyms": [
+          "usuating"
+        ]
+      },
+      {
+        "raw": "\n1. dignified\n2. respectful\n3. groveling\n4. penitential\n5. ungradable”",
+        "synonyms": [
+          "dignified",
+          "respectful",
+          "groveling",
+          "penitential",
+          "ungradable"
+        ]
+      },
+      {
+        "raw": "courteous,” “polite,” “refined,” “tolerant,” \"senior.\"",
+        "synonyms": [
+          "courteous"
+        ]
+      },
+      {
+        "raw": "Congratulate”, “marvel”, “admir\", “glorify”, “bow down to”.",
+        "synonyms": [
+          "Congratulate"
+        ]
+      },
+      {
+        "raw": "sectarian”, “preen”, “nameless”, “ anonim” and “peltry.” Please let me know what you need to be done with this list.",
+        "synonyms": [
+          "sectarian"
+        ]
+      }
+    ],
+    "en_a_2_mixed": [
+      {
+        "raw": "unorical”, “uneducated”, “common-place”, “rudimentary”, “ignorant”.",
+        "synonyms": [
+          "unorical"
+        ]
+      },
+      {
+        "raw": "cringing”, “modest”, “coricible”, “kinslayer” and “quiet”. Please note that some of these words are highly unfasty and should not be used as synonyms for “clumsy”.",
+        "synonyms": [
+          "cringing"
+        ]
+      },
+      {
+        "raw": " \n1. pedantic\n\n2. learned\n\n3. camp\n\n4. dowdy\n\n5. elevating”",
+        "synonyms": [
+          "pedantic"
+        ]
+      },
+      {
+        "raw": "drab», «seudoclit», «farce», «pretend» and «pseudo». Please note that not all of these words necessarily imply an unpleasant feeling, as  `clit` in medical context just refers to the female excrement organ.",
+        "synonyms": [
+          "drab»",
+          "«seudoclit»",
+          "«farce»",
+          "«pretend»",
+          "«pseudo». Please note that not all of these words necessarily imply an unpleasant feeling"
+        ]
+      },
+      {
+        "raw": "bespoke,” “exquisite,” “flamboyant,” \"flairless,\" and \"impletense.\" \n",
+        "synonyms": [
+          "bespoke"
+        ]
+      }
+    ],
+    "en_a_2_noun": [
+      {
+        "raw": "obscene”, “offensive”, “indecent”, “sultry” and \"bol会上则不}[1]\n\nNow, you'll answer a question involving this word.\n\nChild A and Child B are both eating food from a bowl. Child A is an outdoorsman, while Child B is much more civilized.",
+        "synonyms": [
+          "obscene"
+        ]
+      },
+      {
+        "raw": "obfuscate,” “obscure,” “settle,” “nosedive,” and “slump.”",
+        "synonyms": [
+          "obfuscate"
+        ]
+      },
+      {
+        "raw": "obfluous”, “imprecise”, “obscure”, “hesitant” and “lCTION.”? Thought I had to pick the best - isn't that you? 😉 Ok, we'll start with the words and then I can create sentences to demostrate each. Keep me on my toes!",
+        "synonyms": [
+          "obfluous"
+        ]
+      },
+      {
+        "raw": "perfunctory”, “formless”, “unsubsettable”, “timid” and “wiliing”.",
+        "synonyms": [
+          "perfunctory"
+        ]
+      },
+      {
+        "raw": "obscure”, \" अस्पष्ट“, \" worst\", “abstruse” and “important”.",
+        "synonyms": [
+          "obscure"
+        ]
+      }
+    ],
+    "en_a_2_unbiased": [
+      {
+        "raw": "\n1.法规\n2. instructive\n3. Informative\n4. Solution Oriented\n5. Practical Application \n\nWould you like any further assistance?",
+        "synonyms": [
+          "法规",
+          "instructive",
+          "Informative",
+          "Solution Oriented",
+          "Practical Application"
+        ]
+      },
+      {
+        "raw": "\n\n* FUD (Fear, Uncertainty, and Doubt)\n* Deception\n* Lied\n* Hypocrisy\n* Perilous plan*\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. Apostrophe\n2. Daft\n3. Far-fetched\n4. Flowey\n5. Heap of rubbish",
+        "synonyms": [
+          "Apostrophe",
+          "Daft",
+          "Far-fetched",
+          "Flowey",
+          "Heap of rubbish"
+        ]
+      },
+      {
+        "raw": "\n\n* contrive\n* bring about\n* engineer\n* orchestrate\n* confer\n\n\nLet me know if you'd like me to proceed with answering your question.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. Bad judgment \n2. Misjudge \n3. Recommendation that is not sound\n4. Poor advice\n5. Mistake\nWould you like me to answer the original question: What is the opposite of 'Labor'?",
+        "synonyms": [
+          "Bad judgment",
+          "Misjudge",
+          "Recommendation that is not sound",
+          "Poor advice",
+          "Mistake"
+        ]
+      }
+    ],
+    "en_a_2_verb": [
+      {
+        "raw": "rogue”, “rebolt”, “rebellious”, “rebellious”, “subversive”.\n\nAre there any other words you'd like me to help with?",
+        "synonyms": [
+          "rogue"
+        ]
+      },
+      {
+        "raw": "​debunk,” “sk αθληist,” “ridiculous,” \"outrageous” and “absurd.” Let me know if you have any more questions!",
+        "synonyms": [
+          "​debunk"
+        ]
+      },
+      {
+        "raw": "\n\n1. Avoidant\n2. Humiliating\n3. Ridiculous\n4. Snobby\n5. Long-winded\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* Condescending\n* Arrogant\n* Prevoy \n* Impertinent\n* Disdainful\n",
+        "synonyms": []
+      },
+      {
+        "raw": "ridiculous”, “ridiculous”, \"prodigious\", \" worthless\", and \"molasses\"",
+        "synonyms": [
+          "ridiculous"
+        ]
+      }
+    ],
+    "en_a_3_adj": [
+      {
+        "raw": "barrel,” “gavel,” “gavel beam,” “seat of heaven,” “banister.”\n\nNow, please ask your question.",
+        "synonyms": [
+          "barrel"
+        ]
+      },
+      {
+        "raw": "dique,”“weir,”“earthquake,”“barrier,” and “deluge.”",
+        "synonyms": [
+          "dique"
+        ]
+      },
+      {
+        "raw": "Yoke,” “rig,” “paddle,” “raft,” and “barge.” \n\nWould you like me to answer the question \"How would you propel a mass of water using a  Yoke?\"",
+        "synonyms": [
+          "Yoke"
+        ]
+      },
+      {
+        "raw": "\n\n1.  bookshelf\n2.  shadows\n3.  library\n4.  knowledge\n5.  shelves",
+        "synonyms": []
+      },
+      {
+        "raw": "barrel” , “cistern” , “cisrete” , “clay pot” and “pot.” \nIf you have any other questions, ask away!",
+        "synonyms": [
+          "barrel"
+        ]
+      }
+    ],
+    "en_a_3_mixed": [
+      {
+        "raw": "daunt», “deter», “curb», “discourage», “thwart”",
+        "synonyms": [
+          "daunt»",
+          "deter»",
+          "curb»",
+          "discourage»",
+          "thwart"
+        ]
+      },
+      {
+        "raw": "\n1. Reprimand \n2. Amonestate \n3. Correct\n4. Admonish\n5. Echo",
+        "synonyms": [
+          "Reprimand",
+          "Amonestate",
+          "Correct",
+          "Admonish",
+          "Echo"
+        ]
+      },
+      {
+        "raw": "clubhouse”, “room\", “hall\", “parlor\", “bungalow”. Is there anything else I can help you with?",
+        "synonyms": [
+          "clubhouse"
+        ]
+      },
+      {
+        "raw": "police,” “guards,” “militia,” “garrison,” and “guardian.” \n",
+        "synonyms": [
+          "police"
+        ]
+      },
+      {
+        "raw": "adviser”, \"counselor\", \" consulente\", \"advisory board\", \"adviser board\"",
+        "synonyms": [
+          "adviser"
+        ]
+      }
+    ],
+    "en_a_3_noun": [
+      {
+        "raw": "demonstrate detail\", \"contribute minutiae\", \"formulate specifics\", \"situate particulars\", and \"include extraordinarily minute details\". \nIs there anything else I can do for you?",
+        "synonyms": [
+          "demonstrate detail"
+        ]
+      },
+      {
+        "raw": "bad.minus,\" “wouldn’t dream of,” “outlandishly cheap,\" “incredibly underpriced,\" and “not cheap enough.”",
+        "synonyms": [
+          "bad.minus"
+        ]
+      },
+      {
+        "raw": "\n\n1. tome\n2. ponder\n3. give weight to\n4. reflect\n5. enter",
+        "synonyms": []
+      },
+      {
+        "raw": "commend” and \"acknowledge.\"",
+        "synonyms": [
+          "commend"
+        ]
+      },
+      {
+        "raw": "distinguish”, \"note\", \"specialize\", “points out”, \" emphasize\". \n",
+        "synonyms": [
+          "distinguish"
+        ]
+      }
+    ],
+    "en_a_3_unbiased": [
+      {
+        "raw": "  \nmusing, brooding, pondering, musing over, rumination\n",
+        "synonyms": [
+          "musing",
+          "brooding",
+          "pondering",
+          "musing over",
+          "rumination"
+        ]
+      },
+      {
+        "raw": "ragfeels,” “seethe,” “boil over,” “frift,” “bulge” \n",
+        "synonyms": [
+          "ragfeels"
+        ]
+      },
+      {
+        "raw": "size\", \"evaluate\", \"size up\", \"assess\" \"volume\".\n\nIn each of these contexts, the meaning is somewhat close, but it's completely different.",
+        "synonyms": [
+          "size"
+        ]
+      },
+      {
+        "raw": "discuss in detail”, \"examine\", \"investigate\", \"elaborate on\", “describe at length”\n\nWould you like me to elaborate on one of these synonyms?",
+        "synonyms": [
+          "discuss in detail"
+        ]
+      },
+      {
+        "raw": "critique,” “elaborate,” “inquire,” “examine,” “regard.” \nWould you like me to answer with these words?",
+        "synonyms": [
+          "critique"
+        ]
+      }
+    ],
+    "en_a_3_verb": [
+      {
+        "raw": "justify,”“explain,”“account for,”“vouch for,”and “patronize.”",
+        "synonyms": [
+          "justify"
+        ]
+      },
+      {
+        "raw": "\n1. Support\n2. persuade\n3. vindicate\n4. justify\n5. substantiate",
+        "synonyms": [
+          "Support",
+          "persuade",
+          "vindicate",
+          "justify",
+          "substantiate"
+        ]
+      },
+      {
+        "raw": "demonstrate,”“exhibit,”“indicate,”“reflect,”“support”",
+        "synonyms": [
+          "demonstrate"
+        ]
+      },
+      {
+        "raw": "blame”, \"bow-wave\", \"sketch out\", \"constrict\", \"his own\" \n",
+        "synonyms": [
+          "blame"
+        ]
+      },
+      {
+        "raw": "defiect”, “corror”, “rehere”, “acknowldedge”, “contredit”.",
+        "synonyms": [
+          "defiect"
+        ]
+      }
+    ],
+    "en_a_4_adj": [
+      {
+        "raw": "quillot\\), \"card\\), \"attack\", \"wonder\", \"incite\"",
+        "synonyms": [
+          "quillot\\)"
+        ]
+      },
+      {
+        "raw": "close-fish»,laminate»,grandstand»,go about»,standoft«.\n\nDo you have anything else you'd like me to do?",
+        "synonyms": [
+          "close-fish»",
+          "laminate»",
+          "grandstand»",
+          "go about»",
+          "standoft«"
+        ]
+      },
+      {
+        "raw": "roar,” “horrify,” “frighten,” “appal,” “alarm.”",
+        "synonyms": [
+          "roar"
+        ]
+      },
+      {
+        "raw": "bare down”, “submit”, “acknowledge”, “respond” and “display”.",
+        "synonyms": [
+          "bare down"
+        ]
+      },
+      {
+        "raw": "dew, diecast, mint, mol objectives”) \n\n\nLet me know if you'd like me to pick another 5!",
+        "synonyms": [
+          "dew",
+          "diecast",
+          "mint",
+          "mol objectives"
+        ]
+      }
+    ],
+    "en_a_4_mixed": [
+      {
+        "raw": "   \n1. Sniff\n2. Nos Her\n3. Erect\n4. Inflation\n5. Turn Up",
+        "synonyms": [
+          "Sniff",
+          "Nos Her",
+          "Erect",
+          "Inflation",
+          "Turn Up"
+        ]
+      },
+      {
+        "raw": " \n1. Fall   2. Jittery   3. Shaken   4. Stirred\n5. Swollen",
+        "synonyms": [
+          "Fall",
+          "Jittery",
+          "Shaken",
+          "Stirred",
+          "Swollen"
+        ]
+      },
+      {
+        "raw": "sniff”, “nosed out”,  \"nosily sniffed”, “snatched at” and “snuffled”.",
+        "synonyms": [
+          "sniff"
+        ]
+      },
+      {
+        "raw": "sniff,” “breathe in,” \"inhale,\" “suck,” “inُبُل”",
+        "synonyms": [
+          "sniff"
+        ]
+      },
+      {
+        "raw": "swig”, \"glug\", \"gulp\", \"drink\", \"suck\"",
+        "synonyms": [
+          "swig"
+        ]
+      }
+    ],
+    "en_a_4_noun": [
+      {
+        "raw": "scoff», “smirk”, “snicker”, “snipe” and “snicker”.",
+        "synonyms": [
+          "scoff»",
+          "smirk"
+        ]
+      },
+      {
+        "raw": "snobish”, \"arrogant”, \"haughty”, \"manipulative”, \"sophisticated”. \nWould you like another list of synonyms or additional information on these words?",
+        "synonyms": [
+          "snobish"
+        ]
+      },
+      {
+        "raw": "aberrant”, \"corrupt”, “unruly”, “disorderly”, \"uncivilized\".",
+        "synonyms": [
+          "aberrant"
+        ]
+      },
+      {
+        "raw": "absurd”, \"logical”, “sensible”, “composite”, “copious”.",
+        "synonyms": [
+          "absurd"
+        ]
+      },
+      {
+        "raw": "sense,\"“reverie\",\"speculation,\"“parune\" and \"ruminating”.\n\nLet me know if you're looking for synonyms for another word!",
+        "synonyms": [
+          "sense"
+        ]
+      }
+    ],
+    "en_a_4_unbiased": [
+      {
+        "raw": "insistent,” “assertive,” “forceful,” “steamrolling,” “obtrusive.”",
+        "synonyms": [
+          "insistent"
+        ]
+      },
+      {
+        "raw": "\n\n1. Resentful\n2. Bitter\n3. Illagerent\n4. Acidic\n5. Jaundiced\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Deceive\n2. Deceptive\n3. Persuasive\n4. Convincing\n5. Manipulative",
+        "synonyms": []
+      },
+      {
+        "raw": "blast questions,” “intimidating,” “forceful,” “aggressive,” and “intimidating” are all potential synonyms for “mapemu.”",
+        "synonyms": [
+          "blast questions"
+        ]
+      },
+      {
+        "raw": "\nmanipulative\ncunning\ndevious\ndemonic\nunenlightened",
+        "synonyms": [
+          "manipulative",
+          "cunning",
+          "devious",
+          "demonic",
+          "unenlightened"
+        ]
+      }
+    ],
+    "en_a_4_verb": [
+      {
+        "raw": "evaporate”, “steaming,” “boil over,” “simmer” , and \"cook.”",
+        "synonyms": [
+          "evaporate"
+        ]
+      },
+      {
+        "raw": "admonish”, “memoir”, “remind”, \"Remonstrate\", “Urge”.",
+        "synonyms": [
+          "admonish"
+        ]
+      },
+      {
+        "raw": "objection”, “remonstrate”, “object”, “dueled”, “remonstrated”.",
+        "synonyms": [
+          "objection"
+        ]
+      },
+      {
+        "raw": "\n\n1. Reprimand\n2. Correct\n3. Adjust\n4. Align\n5.Utoward\n\n\nWould you like more information?",
+        "synonyms": []
+      },
+      {
+        "raw": " \n1. Pamper\n2. Indulge\n3. Delight\n4. Spoil\n5. Hit with a big delivery\"",
+        "synonyms": [
+          "Pamper",
+          "Indulge",
+          "Delight",
+          "Spoil",
+          "Hit with a big delivery"
+        ]
+      }
+    ],
+    "en_a_5_adj": [
+      {
+        "raw": "  \n1. Thief\n2. Rifa  \n3. Deeppeafruit  \n4. Tamaka\n5. Judjt \\[judge\\]",
+        "synonyms": [
+          "Thief",
+          "Rifa",
+          "Deeppeafruit",
+          "Tamaka",
+          "Judjt \\[judge\\]"
+        ]
+      },
+      {
+        "raw": " \n1. Play\" \n2. Dance\n3. Joke\"\n4. Bultex**\n5. Alcimbál\"",
+        "synonyms": [
+          "Play"
+        ]
+      },
+      {
+        "raw": "gleeman“, \"skald\", \"cokar\", “jester“, and “witcher“. Would you like me to proceed with answering your question with these words?",
+        "synonyms": [
+          "gleeman"
+        ]
+      },
+      {
+        "raw": "rachable,” “b scene,” “bashful,” “crouching,” “ Been.”",
+        "synonyms": [
+          "rachable"
+        ]
+      },
+      {
+        "raw": "taunter”,“varmint”,“molthead”,“puncher”,“nightcap”.",
+        "synonyms": [
+          "taunter"
+        ]
+      }
+    ],
+    "en_a_5_mixed": [
+      {
+        "raw": "boil down”, “meld down”, “infuse”, “blend down”, “ reduce”",
+        "synonyms": [
+          "boil down"
+        ]
+      },
+      {
+        "raw": "season”,“add seasoning”,“Correct” and“season with salt”.",
+        "synonyms": [
+          "season"
+        ]
+      },
+      {
+        "raw": "finish off”, \"blanching”, “parboil”, “soften” and “cook”",
+        "synonyms": [
+          "finish off"
+        ]
+      },
+      {
+        "raw": "bloom», «season», «blanch», «score», «marinade». \n\nPerhaps I didn't actually understand your request; does your text require a different translation?",
+        "synonyms": [
+          "bloom»",
+          "«season»",
+          "«blanch»",
+          "«score»",
+          "«marinade»"
+        ]
+      },
+      {
+        "raw": "Consider, carry out, carry out characteristic, curate, formulate.”",
+        "synonyms": [
+          "Consider",
+          "carry out",
+          "carry out characteristic",
+          "curate",
+          "formulate"
+        ]
+      }
+    ],
+    "en_a_5_noun": [
+      {
+        "raw": "crimson wale,” “history,” “اریخ,” “honor,” “ੰਘ”\nLet me know what you're asking about!",
+        "synonyms": [
+          "crimson wale"
+        ]
+      },
+      {
+        "raw": "watering down,” “bland,” “over-simplified,” “unnished,” “anon”",
+        "synonyms": [
+          "watering down"
+        ]
+      },
+      {
+        "raw": "pluck”, “ruhe\", \"barely\", \"on the borderline\", \"make an attempt\". \nIn the context of the word you provided, would you like some examples of its usage?",
+        "synonyms": [
+          "pluck"
+        ]
+      },
+      {
+        "raw": "sear,\" “concentrate\"“,“distill\"“,“simplify\"“,“transpose” \n",
+        "synonyms": [
+          "sear"
+        ]
+      },
+      {
+        "raw": "hidy up\", “hide under the rug”, “pour one's love in”, “lay down\", “show humanity”",
+        "synonyms": [
+          "hidy up"
+        ]
+      }
+    ],
+    "en_a_5_unbiased": [
+      {
+        "raw": "endorsement,” “ recommendation,” “endorsement letter,” “ recommendation letter,” “prohesis.”",
+        "synonyms": [
+          "endorsement"
+        ]
+      },
+      {
+        "raw": "\n\n1. Instrument\n2. Aid\n3. Asset\n4. Tool\n5. Resource",
+        "synonyms": []
+      },
+      {
+        "raw": "first-aid\", \"utility belt\", \"knapsack\", \"holster\" and \"belay\".",
+        "synonyms": [
+          "first-aid"
+        ]
+      },
+      {
+        "raw": " \n* Advert\n* Statement\n* Declaration\n* Fact\n* Fact  (* sometimes used in certain contexts, especially in bibliographic indexing*, for example)*",
+        "synonyms": [
+          "Advert",
+          "Statement",
+          "Declaration",
+          "Fact",
+          "Fact  (* sometimes used in certain contexts"
+        ]
+      },
+      {
+        "raw": "Counterbalancing arm”, \" asistencia”, “counterweight”, “balancineto”, “factor attending”. \n",
+        "synonyms": [
+          "Counterbalancing arm"
+        ]
+      }
+    ],
+    "en_a_5_verb": [
+      {
+        "raw": " \n1. Streak\n2. Tear\n3. Chalk\n4. Stain\n5.otch”",
+        "synonyms": [
+          "Streak",
+          "Tear",
+          "Chalk",
+          "Stain",
+          "otch"
+        ]
+      },
+      {
+        "raw": "plaintive”, “incessant”, “nasal”, “noteworthy” and “gushy”.",
+        "synonyms": [
+          "plaintive"
+        ]
+      },
+      {
+        "raw": "\n\n* Bottom\n* End\n* Stage\n* Outset\n* Responder\n\n\nLet me know if you'd like any more synonyms or have any other questions!",
+        "synonyms": []
+      },
+      {
+        "raw": "nose,”“nostril,”“poke,”“prick” and “pierce.”",
+        "synonyms": [
+          "nose"
+        ]
+      },
+      {
+        "raw": "end,” “finish,” “conclusion,” “culmination,” “conclusion.”",
+        "synonyms": [
+          "end"
+        ]
+      }
+    ],
+    "en_a_6_adj": [
+      {
+        "raw": "funny”,\"amusing\",“silly”,“goofy” and “goose-egg”.",
+        "synonyms": [
+          "funny"
+        ]
+      },
+      {
+        "raw": "eccentric”, “t practical”, \"odd\", \"ecuirdsome\", \"insipring”.",
+        "synonyms": [
+          "eccentric"
+        ]
+      },
+      {
+        "raw": "cool”,“pop”,“chic”,“in”, and “amused”.",
+        "synonyms": [
+          "cool"
+        ]
+      },
+      {
+        "raw": "defy”, “dismain”, “abeyance”, “fosstring”, “un cuestiones”.",
+        "synonyms": [
+          "defy"
+        ]
+      },
+      {
+        "raw": "weird,” “solarian,” “scurvy,” “failed,” and “customer.” ",
+        "synonyms": [
+          "weird"
+        ]
+      }
+    ],
+    "en_a_6_mixed": [
+      {
+        "raw": "fan out”, “row”, “jump\",  “battle\" and \"position”.",
+        "synonyms": [
+          "fan out"
+        ]
+      },
+      {
+        "raw": "range,” “flap,” “flounce,” “puddle,” “swash.” \n\nWould you like to know the meaning of these synonyms?",
+        "synonyms": [
+          "range"
+        ]
+      },
+      {
+        "raw": "\n\n1. Pretend\n2. Imply\n3. Rough around the edges\n4. Self-conscious\n5. Lie\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* Prevaricate\n* Hollow out\n* Feign wisdom\n* Offer ambiguous advice\n* Mudge \n\nLet me know if you'd like me to help with anything else.",
+        "synonyms": []
+      },
+      {
+        "raw": "feign”, “pretend”, “put on a representation”, “lie”, “fake” \n",
+        "synonyms": [
+          "feign"
+        ]
+      }
+    ],
+    "en_a_6_noun": [
+      {
+        "raw": "supports,\" \"budgets,\" \"accommodates,\" \"suits,\" \"works for\"\nCan I answer your question with those?",
+        "synonyms": [
+          "supports"
+        ]
+      },
+      {
+        "raw": "rite”, \"plausible”, \"Furthermore”, “Marked by ethical excellence” and “Demonstrates consistent adherence”. I should also note that I have only picked 5 but there are undoubtedly several other words that could be used to refer to something being “deletion“.",
+        "synonyms": [
+          "rite"
+        ]
+      },
+      {
+        "raw": "sanctified”, \"preserved”, \"guaranteed\", “sanctuary”, and “preserved”.\n\nFind anything else I can help you with today?",
+        "synonyms": [
+          "sanctified"
+        ]
+      },
+      {
+        "raw": "Valid”, “correct”, “true”, “accurate”, “suitable”.\n\nNow, please provide the question and ask anything specific that you would like me to answer about it!",
+        "synonyms": [
+          "Valid"
+        ]
+      },
+      {
+        "raw": "orthodox”, \"decency\", \"due\", \"proper\", “unquestionable”.",
+        "synonyms": [
+          "orthodox"
+        ]
+      }
+    ],
+    "en_a_6_unbiased": [
+      {
+        "raw": "uncover”, \"exploit”, \"bring to light\", \"support\", \"lay\". \n",
+        "synonyms": [
+          "uncover"
+        ]
+      },
+      {
+        "raw": "embark,” “venture,” “enter,” “attempted,” “ undertake”",
+        "synonyms": [
+          "embark"
+        ]
+      },
+      {
+        "raw": "drill into”, \"examine the depths of\", \"go below\", \"dig\", “dig up”.",
+        "synonyms": [
+          "drill into"
+        ]
+      },
+      {
+        "raw": " investigate,”“inquire,” “research,” “dig,” “digress”. \n\nNow, here is an answer to your question: \"fight battles\".",
+        "synonyms": [
+          "investigate"
+        ]
+      },
+      {
+        "raw": "drill”, “explore”, “dig”, “excavate”, “explore”. \n",
+        "synonyms": [
+          "drill"
+        ]
+      }
+    ],
+    "en_a_6_verb": [
+      {
+        "raw": "\n1. Scrutinize\n2. Peer\n3. Examine\n4. Investigate\n5. Query",
+        "synonyms": [
+          "Scrutinize",
+          "Peer",
+          "Examine",
+          "Investigate",
+          "Query"
+        ]
+      },
+      {
+        "raw": "snarther,” “peerily,” “disapprovingly,” “with suspicion” and “with suspicion,” among other options. Some of these options may carry slightly different connotations, with “snarther” and “disapprovingly” suggesting more annoyance, and “with suspicion” and",
+        "synonyms": [
+          "snarther"
+        ]
+      },
+      {
+        "raw": "glare”, “maroon”, “peer”, “snap” and “scold”.",
+        "synonyms": [
+          "glare"
+        ]
+      },
+      {
+        "raw": "\n1. lick\n2.culate\n3.scISSERS\n4.dive into\n5.ask for",
+        "synonyms": [
+          "lick",
+          "culate",
+          "scISSERS",
+          "dive into",
+          "ask for"
+        ]
+      },
+      {
+        "raw": "tilt”, “lean”, “craw”, “hunch”, and “hunker”. \n\nWhat else can I do for you?",
+        "synonyms": [
+          "tilt"
+        ]
+      }
+    ],
+    "en_a_7_adj": [
+      {
+        "raw": "ugly,” “disgusting,” “detestable,” “noisy,” and “offensive.”  Let me know if you'd like me to answer the prompt: \"Beer tastes so badly, I don't know what to think about that.\"",
+        "synonyms": [
+          "ugly"
+        ]
+      },
+      {
+        "raw": "noisy,” “loud,” “hand-shaking,” “scary,” “ominous”",
+        "synonyms": [
+          "noisy"
+        ]
+      },
+      {
+        "raw": " \n1. Unpalatable” \n2. Repulsive”\n3. Indigestible”\n4. Horsedown\"\n5. Gross“",
+        "synonyms": [
+          "Unpalatable"
+        ]
+      },
+      {
+        "raw": "detestable”, “repugnant”, “ghastly”, “horrid”, and “awful”.",
+        "synonyms": [
+          "detestable"
+        ]
+      },
+      {
+        "raw": "fleeting,” “mild,” “.nauseating,” “repulsive,” and “tasteless.” ",
+        "synonyms": [
+          "fleeting"
+        ]
+      }
+    ],
+    "en_a_7_mixed": [
+      {
+        "raw": "obscure”, \" cryptic\", \"diffuse\", “opaque” and “unintelligible”. \n",
+        "synonyms": [
+          "obscure"
+        ]
+      },
+      {
+        "raw": "obscure”, \"cryptic\", \"t퇴 Monde\", \"murky\", \"verbiose”.",
+        "synonyms": [
+          "obscure"
+        ]
+      },
+      {
+        "raw": "obscure”, “dark\", “mothy”, \"drab\" and \"merely\". Let me know if you need any more help.",
+        "synonyms": [
+          "obscure"
+        ]
+      },
+      {
+        "raw": "obscure”, \"hazy\", \"vague\", \"equivocal\" and \"Hinting.\"",
+        "synonyms": [
+          "obscure"
+        ]
+      },
+      {
+        "raw": "obscure”, \"und穩ciently“, \"confusing\", \"woody\", \"oligarchical\".",
+        "synonyms": [
+          "obscure"
+        ]
+      }
+    ],
+    "en_a_7_noun": [
+      {
+        "raw": "\n\n1. Mistrustful\n2. Susan\n3. Deceptive\n4. Suspicious\n5. Shifty\"",
+        "synonyms": []
+      },
+      {
+        "raw": "brimstone\", \"pluck\", \"shave\", \"pare\", \"comb out\". \nWould you like me to tell you some examples of using those in a sentence?",
+        "synonyms": [
+          "brimstone"
+        ]
+      },
+      {
+        "raw": "unsquare,” \"illiberal,” “unmolletion,” \"unpronoised,” and “uncalculated”. Let me know if you'd like more definitions.",
+        "synonyms": [
+          "unsquare"
+        ]
+      },
+      {
+        "raw": "stubborn”, “unwilling”, “resistant”, “prickly”, “rigged”.",
+        "synonyms": [
+          "stubborn"
+        ]
+      },
+      {
+        "raw": "\n\n1. Dis聪\n2.   SpreDO \n3.  逊职 \n4.   flawed 5. Imperfect\"",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_unbiased": [
+      {
+        "raw": "deflect”,“daydream”,“dodge”,“elude”,“tout”. \n\nNow, here's an answer to your main question “a method of shotgunning a number of whatever you are shooting at.” Here's a possible answer:\n\nUsing a shotgun, the advantage is that you can shoot at multiple targets",
+        "synonyms": [
+          "deflect"
+        ]
+      },
+      {
+        "raw": "insult,” “mock,” “pooh-pooh,” “riff on,” “mocking”",
+        "synonyms": [
+          "insult"
+        ]
+      },
+      {
+        "raw": "insult”, “mock”, “taunt”, “mockery”, “mock behavior.”",
+        "synonyms": [
+          "insult"
+        ]
+      },
+      {
+        "raw": "to mock”, “to belittle”, “to deride”, “to ridicule”, “to sneer”. \nIf you'd like to use them in a sentence to help understand them better, let me know!",
+        "synonyms": [
+          "to mock"
+        ]
+      },
+      {
+        "raw": "\n\n1. Flatter\n2. Jobbed\n3. Sabotage\n4. Undermine\n5. Sabotage",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_verb": [
+      {
+        "raw": "moody,” “bummed,” “unelligent,” “lacking,” “boring.”",
+        "synonyms": [
+          "moody"
+        ]
+      },
+      {
+        "raw": "woolly», «hazy», «vague», «formless», and «nebulous».",
+        "synonyms": [
+          "woolly»",
+          "«hazy»",
+          "«vague»",
+          "«formless»",
+          "«nebulous»"
+        ]
+      },
+      {
+        "raw": "boring”, \"picky\", \"unclear”, \"hazy\", and “digressive”",
+        "synonyms": [
+          "boring"
+        ]
+      },
+      {
+        "raw": "perensive,” “carcereous,” “crepuscular,” “moody” and \"hollow.”",
+        "synonyms": [
+          "perensive"
+        ]
+      },
+      {
+        "raw": "\n\n 1. Braindead\n 2. Absurd\n 3. Ignorant\n 4. Dry\n 5. Humorless\"",
+        "synonyms": []
+      }
+    ],
+    "en_a_8_adj": [
+      {
+        "raw": "   \n1. augustious  \n2. commanding  \n3. vistose  \n4. opulent  \n5. ornate. \n",
+        "synonyms": [
+          "augustious",
+          "commanding",
+          "vistose",
+          "opulent",
+          "ornate"
+        ]
+      },
+      {
+        "raw": "honorable,” “respectable,” “noble,” “distinguished,” “note-worthy”",
+        "synonyms": [
+          "honorable"
+        ]
+      },
+      {
+        "raw": "  \n1. Dignified\n2. Madam\n3. Fertile\n4. Splendid\n5. Farming",
+        "synonyms": [
+          "Dignified",
+          "Madam",
+          "Fertile",
+          "Splendid",
+          "Farming"
+        ]
+      },
+      {
+        "raw": "dignified,” “distinguished,” “refined,” “majestic,” and “charismatic.”",
+        "synonyms": [
+          "dignified"
+        ]
+      },
+      {
+        "raw": "honorable”,“dignified”,“danorian”,“mathersome”, “noble”.\n\nAm I correct? Or would you like me to find more?",
+        "synonyms": [
+          "honorable"
+        ]
+      }
+    ],
+    "en_a_8_mixed": [
+      {
+        "raw": "printed”, “carbon copy”, “typescript”, “preprinted”, “manuscript”. ",
+        "synonyms": [
+          "printed"
+        ]
+      },
+      {
+        "raw": "tidy”, “Polished”, “Curated”, “Refined”, “Organized”",
+        "synonyms": [
+          "tidy"
+        ]
+      },
+      {
+        "raw": "audacious,” “bold,” “brazen,” “foolhardy,” “reckless.”",
+        "synonyms": [
+          "audacious"
+        ]
+      },
+      {
+        "raw": "urgent”, “laste-minute”, “shريعة”, \"last-minute\", \"rushed”. What else can I do for you?",
+        "synonyms": [
+          "urgent"
+        ]
+      },
+      {
+        "raw": "formal”, \"thematic”, \"dedicated”, “authentic” and “compelling.”",
+        "synonyms": [
+          "formal"
+        ]
+      }
+    ],
+    "en_a_8_noun": [
+      {
+        "raw": "teacher,” “lecturer,” “lecturer,” “ eğitő” “ instructor”",
+        "synonyms": [
+          "teacher"
+        ]
+      },
+      {
+        "raw": "steward”, \"custodian”, \"guardian”, \"executor\", and \"principal”.",
+        "synonyms": [
+          "steward"
+        ]
+      },
+      {
+        "raw": "**\n1. authority\n2. criterion\n3. criterion\n4. standard\n5. guide",
+        "synonyms": [
+          "authority",
+          "criterion",
+          "criterion",
+          "standard",
+          "guide"
+        ]
+      },
+      {
+        "raw": "\n\n* Expert\n* Authority\n* Specialist\n* Individual\n* Proponent\n",
+        "synonyms": []
+      },
+      {
+        "raw": "teacher”, \"lecturer”, \"professor\", \"lecturer\", \"advisor”.",
+        "synonyms": [
+          "teacher"
+        ]
+      }
+    ],
+    "en_a_8_unbiased": [
+      {
+        "raw": "\n\n1.wright\n2.convert\n3.alter\n4. modify\n5. change",
+        "synonyms": []
+      },
+      {
+        "raw": "device”, “gadget”, “appliance”, “gadgetry” and “deviceery”.",
+        "synonyms": [
+          "device"
+        ]
+      },
+      {
+        "raw": "enterprise,” “endeavor,” “initiate,” “embark upon,” and “endeavor.”",
+        "synonyms": [
+          "enterprise"
+        ]
+      },
+      {
+        "raw": "\n1. Alter\n2. Amend\n3. Altercation\n4. Contentious\n5. Dispute. \n",
+        "synonyms": [
+          "Alter",
+          "Amend",
+          "Altercation",
+          "Contentious",
+          "Dispute"
+        ]
+      },
+      {
+        "raw": "fashion”, “earn\", “incorporate\", “attire”, “adorn”",
+        "synonyms": [
+          "fashion"
+        ]
+      }
+    ],
+    "en_a_8_verb": [
+      {
+        "raw": "insightful”, “profound”, “enlightened”, “putarching”, “inservice”",
+        "synonyms": [
+          "insightful"
+        ]
+      },
+      {
+        "raw": "lucid”, “open”, “insightful”, \"clarity\" , “lucid”.",
+        "synonyms": [
+          "lucid"
+        ]
+      },
+      {
+        "raw": "\n1. Profound\n2. Clever\n3. Brilliant\n4. Insightful\n5. Subtle",
+        "synonyms": [
+          "Profound",
+          "Clever",
+          "Brilliant",
+          "Insightful",
+          "Subtle"
+        ]
+      },
+      {
+        "raw": "illuminating”, “clarifying”, “enlightening”, “lucid” and “expunging”.",
+        "synonyms": [
+          "illuminating"
+        ]
+      },
+      {
+        "raw": "lucid”, \"apparent\", \"brilliant\", \"luminous\", \"striking”",
+        "synonyms": [
+          "lucid"
+        ]
+      }
+    ],
+    "en_a_9_adj": [
+      {
+        "raw": "tipy”(prize winning in music) ,  “outstanding”(being the best),  “excellent”(primarily used to describe special cases),  “juicy”(baring a rich and succulent flavor),  and  “delicious”(having a rich and satisfying flavor",
+        "synonyms": [
+          "tipy"
+        ]
+      },
+      {
+        "raw": "brisk” “catchy” “quaint” “commonplace” “green”",
+        "synonyms": [
+          "brisk"
+        ]
+      },
+      {
+        "raw": "\n\n* pungent\n* strong\n* intense\n* sharp\n* biting",
+        "synonyms": []
+      },
+      {
+        "raw": "gust,” “variety,” “flavor,” “proficiency,” and “consist.”",
+        "synonyms": [
+          "gust"
+        ]
+      },
+      {
+        "raw": "\n1. Freeze\n2. Jittery\n3. Nervy\n4. Nervaluation\n5. Stiff",
+        "synonyms": [
+          "Freeze",
+          "Jittery",
+          "Nervy",
+          "Nervaluation",
+          "Stiff"
+        ]
+      }
+    ],
+    "en_a_9_mixed": [
+      {
+        "raw": "bickering,” “boisterous,” “polysyllamic,” “sniveling,” “skulkish” \n",
+        "synonyms": [
+          "bickering"
+        ]
+      },
+      {
+        "raw": "obscene”, \"offensive\", \"base\", \"unlikeable\" and \"reprehensible\".",
+        "synonyms": [
+          "obscene"
+        ]
+      },
+      {
+        "raw": "\n\n1. Sărat\n2. Amărui \n3. Putred\n4. Putrescente\n5. Fermecător",
+        "synonyms": []
+      },
+      {
+        "raw": "jugmented,””offbeat,””light-hearted”,”dampened”,”impecunious”",
+        "synonyms": [
+          "jugmented"
+        ]
+      },
+      {
+        "raw": "giddy”, \"ecstatic”, \"enthusiastic”, \"joyful” and “cheerful”.",
+        "synonyms": [
+          "giddy"
+        ]
+      }
+    ],
+    "en_a_9_noun": [
+      {
+        "raw": "pres identificado”,“presentado”,“convidado de honra”,“palavras finais”,“por exemplo”.",
+        "synonyms": [
+          "pres identificado"
+        ]
+      },
+      {
+        "raw": " \n- preceder \n- headmen \n- initiator \n- leading guy \n- front-runner \n\"",
+        "synonyms": [
+          "preceder",
+          "headmen",
+          "initiator",
+          "leading guy",
+          "front-runner"
+        ]
+      },
+      {
+        "raw": "  \n* escort \n* accompany\n* lead\n* guide \n* attend\nWould you like to answer the original question, \"What is a person who gives one a lift?\"",
+        "synonyms": [
+          "escort",
+          "accompany",
+          "lead",
+          "guide",
+          "attend"
+        ]
+      },
+      {
+        "raw": "bumble,” “pandemonium,” “hymn,” “pleading,” “parade.”",
+        "synonyms": [
+          "bumble"
+        ]
+      },
+      {
+        "raw": " \nGrooming\nDevising\nAssembling\nPreparing\nDesigning.” \nDo you have any other question?",
+        "synonyms": [
+          "Grooming",
+          "Devising",
+          "Assembling",
+          "Preparing",
+          "Designing"
+        ]
+      }
+    ],
+    "en_a_9_unbiased": [
+      {
+        "raw": "squander\", “waste”, “prune”, “expend”, “misuse”",
+        "synonyms": [
+          "squander"
+        ]
+      },
+      {
+        "raw": "beam,\"\"complicate,\"\"embarrass,\"\"tangle,\"\"wandle.\"",
+        "synonyms": [
+          "beam"
+        ]
+      },
+      {
+        "raw": "accomplish”, “fulfil”, “finish”, “cover”, “manage”. \nI hope this is helpful!",
+        "synonyms": [
+          "accomplish"
+        ]
+      },
+      {
+        "raw": "weak,” “imperfect,” “feeble,” “mild,” “Wordy”",
+        "synonyms": [
+          "weak"
+        ]
+      },
+      {
+        "raw": "details,” “finish,\" “squabble,\" “tangle,” and “stupid.”",
+        "synonyms": [
+          "details"
+        ]
+      }
+    ],
+    "en_a_9_verb": [
+      {
+        "raw": "slippery,” “discreet,” “seductive,” “shy,” “stock-still”",
+        "synonyms": [
+          "slippery"
+        ]
+      },
+      {
+        "raw": "brooding”, “grave”, “serene”, “pietas” and “melancholic”.",
+        "synonyms": [
+          "brooding"
+        ]
+      },
+      {
+        "raw": "\n\n1. Enthralled\n2. Transfixed\n3. Enraptured\n4. Mesmerized\n5. Absorbed\"\n\nWould you like me to answer the following question using these synonyms?",
+        "synonyms": []
+      },
+      {
+        "raw": "dreaded”, “friable”, “flippant”, “fumbling”, “sinuous” \n",
+        "synonyms": [
+          "dreaded"
+        ]
+      },
+      {
+        "raw": "\n\n1. Diminished\n2. Stupefied\n3. Bewildered\n4. Confused\n5. Won't drink\"",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_adj": [
+      {
+        "raw": "defy,” “contest,” “irikey,” “contradict,” “oppose”",
+        "synonyms": [
+          "defy"
+        ]
+      },
+      {
+        "raw": "admit”,“acknowledge”,“admitting”,“ mengakui”\n\nNext, here's a sentence using the word “acknowledge”: He won't acknowledge the limits of his situation, hence further action will not be taken.",
+        "synonyms": [
+          "admit"
+        ]
+      },
+      {
+        "raw": "\n\n* Addressing \n* Confronting\n* Inquiring\n* Arguing \n* Challenging \n",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. challenge\n2. beseech\n3. ask \n4.petition\n5.question\n\nWhat would you like to do next?",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Defy\n2. Usurp\n3. Tolerate\n4. Bow\n5. Compromise\"",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_mixed": [
+      {
+        "raw": "cantsparelyuphumbugouswalrus”",
+        "synonyms": [
+          "cantsparelyuphumbugouswalrus"
+        ]
+      },
+      {
+        "raw": " \n1. Pendlaysu\n2. Lukeskyw\n3. Cr coleção\n4. Wisyvv\n5. BYaslasoy\"",
+        "synonyms": [
+          "Pendlaysu",
+          "Lukeskyw",
+          "Cr coleção",
+          "Wisyvv",
+          "BYaslasoy"
+        ]
+      },
+      {
+        "raw": " mucky,” \" Don't make sense,” \"gobbledygook,” \"falso language,” “senile.”  Do you want me to answer with something that uses these words?",
+        "synonyms": [
+          "mucky"
+        ]
+      },
+      {
+        "raw": "polyglot,” “fully articulate,” “eloquent,” “eloquent,” and \"exceedingly wordy”. \n",
+        "synonyms": [
+          "polyglot"
+        ]
+      },
+      {
+        "raw": "polyglotic”, \"verdant\", “frizzy”, \"wiggly\", “syllabic”",
+        "synonyms": [
+          "polyglotic"
+        ]
+      }
+    ],
+    "en_n_1_noun": [
+      {
+        "raw": "quarreled\", \"hostilely\", \"unkindly\", \"contend with\", \"d.onlineolled\"",
+        "synonyms": [
+          "quarreled"
+        ]
+      },
+      {
+        "raw": "  advocate, aver, beseech, implore, intercede”",
+        "synonyms": [
+          "advocate",
+          "aver",
+          "beseech",
+          "implore",
+          "intercede"
+        ]
+      },
+      {
+        "raw": "acknowledge,” “admit,” “acknowledge,” “value,” “acknowledge,” “acknowledge.”\nPlease let me know if you'd like me to answer the question.",
+        "synonyms": [
+          "acknowledge"
+        ]
+      },
+      {
+        "raw": "import 「並列うりめる」\n\n1. Commission\n2. Blend\n3. Plan\n4. Exploit\n5. Deport\n\n\n",
+        "synonyms": [
+          "import 「並列うりめる」"
+        ]
+      },
+      {
+        "raw": "begin”, \"initiate\", \"open\", \"start\", \"commence\"",
+        "synonyms": [
+          "begin"
+        ]
+      }
+    ],
+    "en_n_1_unbiased": [
+      {
+        "raw": "Coast,” “shore,” “bordering the ocean,” “bordering the sea.” \"Along the coastline,” and \"along the coast line.”",
+        "synonyms": [
+          "Coast"
+        ]
+      },
+      {
+        "raw": "\n\n1. Sample\n2. Acquire\n3. Procure\n4. Gather\n5. Examine",
+        "synonyms": []
+      },
+      {
+        "raw": "pound out”, \"crack\", \"denigrate\", \"adulterate\", \"trample\".",
+        "synonyms": [
+          "pound out"
+        ]
+      },
+      {
+        "raw": "\n1. wade through\n2.peel apart\n3.dig\n4.debate\n5.vaccum up",
+        "synonyms": [
+          "wade through",
+          "peel apart",
+          "dig",
+          "debate",
+          "vaccum up"
+        ]
+      },
+      {
+        "raw": "Scavenge,” “glean,” “pick and choose,” “collect,” and “assemble.”",
+        "synonyms": [
+          "Scavenge"
+        ]
+      }
+    ],
+    "en_n_1_verb": [
+      {
+        "raw": "harsh,” “cruel,” “callous,” “unfettered,” “uncaring” \n",
+        "synonyms": [
+          "harsh"
+        ]
+      },
+      {
+        "raw": "patronizing,” “insubordinate,” “immodest,” “impersonal” and “irisive.”",
+        "synonyms": [
+          "patronizing"
+        ]
+      },
+      {
+        "raw": "\n\n1.  S bored\n2. Unstimulating\n3. Dull\n4. Tedious\n5. Bland",
+        "synonyms": []
+      },
+      {
+        "raw": " \n    monotone, loquacious, gabby, Features from the comics, mouthy,womanly“ \nIs there anything else I can do for you?",
+        "synonyms": [
+          "monotone",
+          "loquacious",
+          "gabby",
+          "Features from the comics",
+          "mouthy"
+        ]
+      },
+      {
+        "raw": "stern,”“harsh,”“strict,”“unyielding,”“cruel.”",
+        "synonyms": [
+          "stern"
+        ]
+      }
+    ],
+    "en_n_10_adj": [
+      {
+        "raw": "awkward,” \"counterproductive,\" \"instructive,\" “obfuscatory,” and \"problematic.\"\n\n\nDo you need more synonyms? Let me know!",
+        "synonyms": [
+          "awkward"
+        ]
+      },
+      {
+        "raw": "\n\n 1. Disulative\n 2. Dis justa cause\n 3. Dunk\n 4. Droning\n 5. Droning\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **Brash** - Short and terse, often used to describe someone who is bold and perhaps a bit wisecracking.\n2. **Witty** - Accompanied by clever humor, often implying that the person’s remarks are sharp and sometimes sarcastically insightful.\n3. **",
+        "synonyms": []
+      },
+      {
+        "raw": "outlandish,” “pompous,” “ostentatious,” “pretentious,” and “ pompous.”",
+        "synonyms": [
+          "outlandish"
+        ]
+      },
+      {
+        "raw": "\n\n1. Unconventional \n2. Strident \n3. Asiatic \n4. Strafed \n5. Unulative\n\"",
+        "synonyms": []
+      }
+    ],
+    "en_n_10_mixed": [
+      {
+        "raw": "insistent”, “rigorous”, “strict”, “latest-and-coolest” and “jeered”. \nIs there anything else I can do for you?",
+        "synonyms": [
+          "insistent"
+        ]
+      },
+      {
+        "raw": "exacting,”“strict” “rigorous,”“demanding”, “verbal”.",
+        "synonyms": [
+          "exacting"
+        ]
+      },
+      {
+        "raw": "obsequious,” \"petulent,” \"uppity,” “mendacious” and \"hyperubic.”",
+        "synonyms": [
+          "obsequious"
+        ]
+      },
+      {
+        "raw": "indulgent”, “arceous”, \"grandiose\", “spoiled”, and “fond”",
+        "synonyms": [
+          "indulgent"
+        ]
+      },
+      {
+        "raw": "mandatory”,“prescriptive”,“dictatorial”,“nomination”,“mandligen”.\nWould you like me to continue and list 5 synonyms for \"prescriptive\"?",
+        "synonyms": [
+          "mandatory"
+        ]
+      }
+    ],
+    "en_n_10_noun": [
+      {
+        "raw": "preacher,”“scholar,”“teacher,”“attendant,”“inasha.”",
+        "synonyms": [
+          "preacher"
+        ]
+      },
+      {
+        "raw": "progytorian”, “orthodox teacher”, “lecturer”, “tutor”, and “mentor”.",
+        "synonyms": [
+          "progytorian"
+        ]
+      },
+      {
+        "raw": "teacher”, “lecturer”, “lecturer-in-command”, “demonstrator”, “expert”. \nWould you like me to give you some examples of each in a sentence?",
+        "synonyms": [
+          "teacher"
+        ]
+      },
+      {
+        "raw": "vendor,” “merchant,” “trader,” “dewitt,” “suggiz”",
+        "synonyms": [
+          "vendor"
+        ]
+      },
+      {
+        "raw": "**\n\nprophet, virgin, maiden, certain, informative \n\nDo you need help with anything else? \n",
+        "synonyms": []
+      }
+    ],
+    "en_n_10_unbiased": [
+      {
+        "raw": "reconcile”, “exordinate”, “counsel”, “advice”, “reverse”. Let me know if I can help you with anything else!",
+        "synonyms": [
+          "reconcile"
+        ]
+      },
+      {
+        "raw": "insightful”, “penetrative”, “piercing”, \"pryaning\", and “pervasive”.",
+        "synonyms": [
+          "insightful"
+        ]
+      },
+      {
+        "raw": "redefine”, “reinterpret”, “reread”, “rewrite”, “alter”.",
+        "synonyms": [
+          "redefine"
+        ]
+      },
+      {
+        "raw": "advis\", “advise\", “counsel\", “advise\", “advice”",
+        "synonyms": [
+          "advis"
+        ]
+      },
+      {
+        "raw": "judge,” “evaluate,” “assess,” “assess,” “fit”\n\nHere is a list of possible answers:\n\nThe functionaries in the classroom will be expected to:\n\na) Assess\nb) Evaluate\nc) Leave feedback (The students should actively participate in the process)\n\nb) Create an assessor",
+        "synonyms": [
+          "judge"
+        ]
+      }
+    ],
+    "en_n_10_verb": [
+      {
+        "raw": "create\", \"connect\", \"link\", \"join\", and \"merge\"",
+        "synonyms": [
+          "create"
+        ]
+      },
+      {
+        "raw": "bland”,“mellow”,“soothing”,“supple” and “unguarded”.",
+        "synonyms": [
+          "bland"
+        ]
+      },
+      {
+        "raw": "recommand,”“advise,” “speak correctly,” “speak eloquently,” “investigate”.",
+        "synonyms": [
+          "recommand"
+        ]
+      },
+      {
+        "raw": "promise”, \"guarantee”, \"insist upon”, “entreat” “command”",
+        "synonyms": [
+          "promise"
+        ]
+      },
+      {
+        "raw": "bid”, “command”, “direct”, “order”, \"prerank\"",
+        "synonyms": [
+          "bid"
+        ]
+      }
+    ],
+    "en_n_2_adj": [
+      {
+        "raw": " \n1. greet\n2. hail\n3. bid \n4. say good bye\n5. farewell\n",
+        "synonyms": [
+          "greet",
+          "hail",
+          "bid",
+          "say good bye",
+          "farewell"
+        ]
+      },
+      {
+        "raw": "greet”, “salute”, “commence”, “commence with”, “welcoming”.",
+        "synonyms": [
+          "greet"
+        ]
+      },
+      {
+        "raw": "salute”,“acknowledge”, “think of”,“say hello”, “wish well”. What do you want to do with the word \"say hello\"?\nTo elaborate, the word \"say hello\" doesn't involve making a salute and certainly doesn't involve wishing well in a warm way.  Here are some more synonyms for",
+        "synonyms": [
+          "salute"
+        ]
+      },
+      {
+        "raw": "honor,” “regards,” “regards,” “greetings,” “regards”",
+        "synonyms": [
+          "honor"
+        ]
+      },
+      {
+        "raw": "greet”, “salute”, “compassion”, “compliment” and “congratulations”.  \nLet's make a guess what your question is about: \"Before you answer, give a list of 5 synonyms for **front**.\"",
+        "synonyms": [
+          "greet"
+        ]
+      }
+    ],
+    "en_n_2_mixed": [
+      {
+        "raw": " \n1. ominous\n2.seamy\n3.ghastly\n4.penosphere\n5.horst\"",
+        "synonyms": [
+          "ominous",
+          "seamy",
+          "ghastly",
+          "penosphere",
+          "horst"
+        ]
+      },
+      {
+        "raw": "Bore,” “monotonous,” “ répétitif,” “ennuyeux,” and “assez long.” ",
+        "synonyms": [
+          "Bore"
+        ]
+      },
+      {
+        "raw": "tidious”, \"orderly”, \"regulous”, “relegate” and “sanguine”.",
+        "synonyms": [
+          "tidious"
+        ]
+      },
+      {
+        "raw": "monotone,”“one-note,”“melancholy,”“unvaried,”“boring.”",
+        "synonyms": [
+          "monotone"
+        ]
+      },
+      {
+        "raw": "glasgow”, “glasgow try”, “byzantium”, “suite of motets”, and \"dusky”.",
+        "synonyms": [
+          "glasgow"
+        ]
+      }
+    ],
+    "en_n_2_noun": [
+      {
+        "raw": "request\", \"implore\", \"urgent\", \"incessant\" and \"urgently\". ",
+        "synonyms": [
+          "request"
+        ]
+      },
+      {
+        "raw": " \n\n1. demand\n2. insist\n3. call for\n4. ask for\n5. require\"",
+        "synonyms": []
+      },
+      {
+        "raw": "Way», «toбудь», «to become», «come to» and «to draw».",
+        "synonyms": [
+          "Way»",
+          "«toбудь»",
+          "«to become»",
+          "«come to»",
+          "«to draw»"
+        ]
+      },
+      {
+        "raw": "order\", \"direct\", \"advise\", \"solicit\", \"invite\". \n",
+        "synonyms": [
+          "order"
+        ]
+      },
+      {
+        "raw": "\n\n* Oblige\n* Incite\n* Hasten\n* Encourage\n* Stir\n\n\n",
+        "synonyms": []
+      }
+    ],
+    "en_n_2_unbiased": [
+      {
+        "raw": "deride”, “criticize”, “attack”, “scold”, “treason”.",
+        "synonyms": [
+          "deride"
+        ]
+      },
+      {
+        "raw": "brilliantly,” “skillfully,” “sur wstfully,” “dexterously,” “aptly.”",
+        "synonyms": [
+          "brilliantly"
+        ]
+      },
+      {
+        "raw": "abandon,” “spurn,” “reject,” “evict,” “acquit”",
+        "synonyms": [
+          "abandon"
+        ]
+      },
+      {
+        "raw": "\n\n1. evaluate\n2. inspect\n3. examine\n4. scrutinize\n5. assess\"\n\nAre you ready for your next question?",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. critique\n2. evaluation\n3. assessment\n4. judgment\n5. verdict\n",
+        "synonyms": []
+      }
+    ],
+    "en_n_2_verb": [
+      {
+        "raw": "atter”, “disquiet”, “disturb”, “compel”, “bother”.",
+        "synonyms": [
+          "atter"
+        ]
+      },
+      {
+        "raw": "\n\n* Brainstorm\n* Gawk\n* Fuss\n* Busybody\n* Cry wolf*",
+        "synonyms": []
+      },
+      {
+        "raw": "nag”, \"jeer”, \"molest”, \"Circle”, \"whistle”",
+        "synonyms": [
+          "nag"
+        ]
+      },
+      {
+        "raw": "address”,“acclaim”, “instate”, “exhort” and “sprain”. \nCan you please tell me what you would like to know about them?",
+        "synonyms": [
+          "address"
+        ]
+      },
+      {
+        "raw": "\n\n1. Intrigue\n2.inebriate\n3.Overwhelm\n4. Hysterical\n5. alarm\"",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_adj": [
+      {
+        "raw": " \n1. Polite\n2. Courteous\n3. Mannerly\n4. Civilized\n5. Civil\"",
+        "synonyms": [
+          "Polite",
+          "Courteous",
+          "Mannerly",
+          "Civilized",
+          "Civil"
+        ]
+      },
+      {
+        "raw": "polite”,“eloquent”,“courteous”,“refined”,“most reasonable”. \nLet me know if you need an answer to the rest of your question!",
+        "synonyms": [
+          "polite"
+        ]
+      },
+      {
+        "raw": "polite,”“manojizing,”“polite,”“affable” and “teachable”.\n\nI will answer the next question.",
+        "synonyms": [
+          "polite"
+        ]
+      },
+      {
+        "raw": "polite”, \"courteous\", \"policied\", \"caste\", \"const كلها\". \n\n\n",
+        "synonyms": [
+          "polite"
+        ]
+      },
+      {
+        "raw": "polite”, \" Respectful”, \"Artful\", \"Kind\", \"Sensible\"",
+        "synonyms": [
+          "polite"
+        ]
+      }
+    ],
+    "en_n_3_mixed": [
+      {
+        "raw": "gloop”,  “mumble”, “rumble”, “drongo”, “snumble”.",
+        "synonyms": [
+          "gloop"
+        ]
+      },
+      {
+        "raw": "ebb\", \"flow\", \"wave\", \"current\", \"stream\". Let me know if you would like definitions for any of these synonyms.",
+        "synonyms": [
+          "ebb"
+        ]
+      },
+      {
+        "raw": "\n1. Robust\n2.Imposing\n3. Dominant\n4. Insubordination\n5.Jurisdictional",
+        "synonyms": [
+          "Robust",
+          "Imposing",
+          "Dominant",
+          "Insubordination",
+          "Jurisdictional"
+        ]
+      },
+      {
+        "raw": "\n\n* induce\n* provoke\n* inspire\n* stir\n* incite \n\n\n\nLet me know if you'd like me to continue with more synonyms or respond to your original question!",
+        "synonyms": []
+      },
+      {
+        "raw": "insist”, “dissemble”, “suppress”, “obfuscate”, “disguise”.\nWould you like a sentence that features one of these words?",
+        "synonyms": [
+          "insist"
+        ]
+      }
+    ],
+    "en_n_3_noun": [
+      {
+        "raw": "conserve, preserve, look after, cherish, maintain”.\n\nNext, I'll give you the definition of **conserve** with respect to maintaining a natural resource:\n\n\nThe definition of **conserve** in this context means to save, protect, or protect a natural resource.\n\n",
+        "synonyms": [
+          "conserve",
+          "preserve",
+          "look after",
+          "cherish",
+          "maintain"
+        ]
+      },
+      {
+        "raw": "instal, secure, discuss, consent, agree”. \nDo you have any further requests?",
+        "synonyms": [
+          "instal",
+          "secure",
+          "discuss",
+          "consent",
+          "agree"
+        ]
+      },
+      {
+        "raw": "guilty”, “defeated”, “subjugated”, “expanse” and “subjected”.",
+        "synonyms": [
+          "guilty"
+        ]
+      },
+      {
+        "raw": "subject to”, \"plastic\", \"creep\", \"rendition\", \"render\".",
+        "synonyms": [
+          "subject to"
+        ]
+      },
+      {
+        "raw": " переменный”, «необязательный», «отложенный», «доступный» «или «забронированный».\n\nUse them wisely!",
+        "synonyms": [
+          "переменный"
+        ]
+      }
+    ],
+    "en_n_3_unbiased": [
+      {
+        "raw": "\n\n1. Distressed\n2. Torn\n3. Raucous\n4.chaotic\n5. Disheveled\"",
+        "synonyms": []
+      },
+      {
+        "raw": "messy”,“dirty”, “ripple”, “shabby”, “any bottom flag”",
+        "synonyms": [
+          "messy"
+        ]
+      },
+      {
+        "raw": "grime”, “soot”, “silt”, “dirt”, “grimey”",
+        "synonyms": [
+          "grime"
+        ]
+      },
+      {
+        "raw": "flamboyant”, “brash”, “showoff”, “ostentatious”, “splendid”",
+        "synonyms": [
+          "flamboyant"
+        ]
+      },
+      {
+        "raw": "elegant”, “p dissimilar”, “imposing”, “sophisticated” and “formal”. \n",
+        "synonyms": [
+          "elegant"
+        ]
+      }
+    ],
+    "en_n_3_verb": [
+      {
+        "raw": "monitor,” “lay bare,” “drag out,” “matter,” \"question\"",
+        "synonyms": [
+          "monitor"
+        ]
+      },
+      {
+        "raw": "question“,“inquire“,“inspect“,“consider“ and “investigate”.",
+        "synonyms": [
+          "question",
+          "inquire",
+          "inspect",
+          "consider",
+          "investigate"
+        ]
+      },
+      {
+        "raw": "bashful”, “shy”, “garish” , “ostentatious” ,  “conceited”",
+        "synonyms": [
+          "bashful"
+        ]
+      },
+      {
+        "raw": "interpel, question, pry, bash, check\n\n\n",
+        "synonyms": [
+          "interpel",
+          "question",
+          "pry",
+          "bash",
+          "check"
+        ]
+      },
+      {
+        "raw": "bud,\" \"irin,\" \"indicate,\" \"suggest,\" \"point out.\" \nWould you like me to answer the follow-up question?",
+        "synonyms": [
+          "bud"
+        ]
+      }
+    ],
+    "en_n_4_adj": [
+      {
+        "raw": "\n\n1. self-aware\n2. pretentious\n3. self-importance\n4. show-offish\n5. effeminate\n\n\n",
+        "synonyms": []
+      },
+      {
+        "raw": "ostentatious”, “embarrassing”, “extravagant”, \"awkward\", “showy.” \n",
+        "synonyms": [
+          "ostentatious"
+        ]
+      },
+      {
+        "raw": "\n\n1. Oblique\n2. Indulgent\n3. Audacious\n4. Squinty\n5. Naughty",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Arrogant \n2. Vaingibular \n3. Frost-nipped \n4. cocky \n5. vainglorius.”\n\nWould you like me to fill you in on any of these, or maybe a list of more?",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Ostentatious:Characterized by excessive display or outward display.\n2. Flamboyant:Marked by conspicuous extravagance or brilliance.\n3. Arrogant: Marked by excessive self confidence or self importance.\n4.Highfalutin:Using or containing serious or pretentiously",
+        "synonyms": []
+      }
+    ],
+    "en_n_4_mixed": [
+      {
+        "raw": "bold”, “fierce”, “unyielding”, “tenacious”, \"brusque\". Let me know what you have in mind!",
+        "synonyms": [
+          "bold"
+        ]
+      },
+      {
+        "raw": "stubborn”, “determined”, “persistent”, “obstinate”, “unbendable”.",
+        "synonyms": [
+          "stubborn"
+        ]
+      },
+      {
+        "raw": "uninformed”, “foolish”, “unwise”, “vain”, “valueless”. What is your question?",
+        "synonyms": [
+          "uninformed"
+        ]
+      },
+      {
+        "raw": "\n1. Cerulean\n2. Onyx\n3. Forest green\n4. Plum\n5. Forest",
+        "synonyms": [
+          "Cerulean",
+          "Onyx",
+          "Forest green",
+          "Plum",
+          "Forest"
+        ]
+      },
+      {
+        "raw": "coarse”, \"porters” “full-bodied”, \"bold\" and \"boldish\"",
+        "synonyms": [
+          "coarse"
+        ]
+      }
+    ],
+    "en_n_4_noun": [
+      {
+        "raw": "mark”, “note”, “announce”, “inform”, \"notify”.",
+        "synonyms": [
+          "mark"
+        ]
+      },
+      {
+        "raw": "acknowledge“, “acknowledge the agreement“, “acknowledge the offer“ ,“put to the test“, “accept and acknowledge“. \n\nWhich word were you thinking of?\n",
+        "synonyms": [
+          "acknowledge",
+          "acknowledge the agreement",
+          "acknowledge the offer",
+          "put to the test",
+          "accept"
+        ]
+      },
+      {
+        "raw": "assert,” “advocate,” “assertive,” “speak up,” “speak out” \n\nDo you need help with anything else?",
+        "synonyms": [
+          "assert"
+        ]
+      },
+      {
+        "raw": "predict,”“foresee,”“imagine,”“call forth,”and “discharge.”\n\n\nWould you like the answer to your original question? ",
+        "synonyms": [
+          "predict"
+        ]
+      },
+      {
+        "raw": "promise”,“stant”, “nickle”, “note”, “ assure”.",
+        "synonyms": [
+          "promise"
+        ]
+      }
+    ],
+    "en_n_4_unbiased": [
+      {
+        "raw": "dictatorial”, \"absolutist”, “arrogant”, \"uncompromising\", “deterministic”.\n\nIs there anything else I can help you with?",
+        "synonyms": [
+          "dictatorial"
+        ]
+      },
+      {
+        "raw": "insist,” “polish,” “care,” “favor” and “bless.”\n\nHowever, the most likely one to help with your question would be “insist”. The concept of “insist”  can represent a means of being firm or sincere. It could best answer your requirements. However, “bl",
+        "synonyms": [
+          "insist"
+        ]
+      },
+      {
+        "raw": "insouciant”, “temperancier”, “arrogant”, \"stubborn\", and \"prig\"",
+        "synonyms": [
+          "insouciant"
+        ]
+      },
+      {
+        "raw": "dictum”, \"propped\", “precept”, \"prescript\", “dictated”",
+        "synonyms": [
+          "dictum"
+        ]
+      },
+      {
+        "raw": "deference”, “consideration”, “intelligence”, “reflection” and “prudence”. ",
+        "synonyms": [
+          "deference"
+        ]
+      }
+    ],
+    "en_n_4_verb": [
+      {
+        "raw": "\n\n1.  Unobjective\n2.  Disproductive\n3.  Inconsiderate\n4.  Incorrect\n5.   Dative\n\n\nLet me know if you'd like to see example sentences using them!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Forgetful\n2. Mindブレ год\n3. Focalized\n4. Mindful\n5. Googleable\" \n\nWould you like to try me on a question?",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Supine\n2. Fragile\n3. Tender\n4. Weak\n5. Fragile",
+        "synonyms": []
+      },
+      {
+        "raw": "equivocable”, \"precise”, \"sharp”, \"cleared\", \"lucid\".",
+        "synonyms": [
+          "equivocable"
+        ]
+      },
+      {
+        "raw": "\n1. forgetting\n2. gait\n3. forgetfulness\n4. diffident\n5. courseless",
+        "synonyms": [
+          "forgetting",
+          "gait",
+          "forgetfulness",
+          "diffident",
+          "courseless"
+        ]
+      }
+    ],
+    "en_n_5_adj": [
+      {
+        "raw": "seamless”, “formal”, “rigorous”, “neat”, “tidy”.\n\nCan I help you with anything else?",
+        "synonyms": [
+          "seamless"
+        ]
+      },
+      {
+        "raw": "unترنتed,” \"interactive”, “augmented”, \"dynamic\", \"fascinating.” ",
+        "synonyms": [
+          "unترنتed"
+        ]
+      },
+      {
+        "raw": "bare”, \"exhibit”, \" illustrate”, \"illuminated”, and “iambunctious”.",
+        "synonyms": [
+          "bare"
+        ]
+      },
+      {
+        "raw": " \nstrict” , “rigorous” , “rigorous” , “uncompromising” , “severe”.",
+        "synonyms": [
+          "strict"
+        ]
+      },
+      {
+        "raw": "sophisticated”, “refined”, “exquisite”, “ladylike”, and “polished”.",
+        "synonyms": [
+          "sophisticated"
+        ]
+      }
+    ],
+    "en_n_5_mixed": [
+      {
+        "raw": "capable of standing in an upright position,” “ upright,” “standing tall,” “a structure for people or goods,” and “stand on.”",
+        "synonyms": [
+          "capable of standing in an upright position"
+        ]
+      },
+      {
+        "raw": "hydrated”, \"soggy”, “soaked”, “dampened”, \"well watered”. ",
+        "synonyms": [
+          "hydrated"
+        ]
+      },
+      {
+        "raw": "marshland”, “swampy”, “marsh”, “mudflat”, “marshland habitat”.",
+        "synonyms": [
+          "marshland"
+        ]
+      },
+      {
+        "raw": "penultimate,”“above ground,”“above ground level,”“above the ground,” and “upland.”",
+        "synonyms": [
+          "penultimate"
+        ]
+      },
+      {
+        "raw": " It can mean:\n\n* **Tehill:** This is probably the most literal explanation. Tehill means \"away from the soil\" or \"lying above ground.\"\n* **Secure:** This implies there are no risks of the plant being moved.\n* **Stable:** Similar to \"secure,\" this emphasizes the plant's firm position",
+        "synonyms": [
+          "It can mean"
+        ]
+      }
+    ],
+    "en_n_5_noun": [
+      {
+        "raw": "indemnify,” “stipulate,” “conduct,” “execute” and “authorize.” Can I help you further?",
+        "synonyms": [
+          "indemnify"
+        ]
+      },
+      {
+        "raw": "assure,” “affirm,” “ratify,” “acknowledge,” and “confirm.” \nDo you have a question about any of these synonyms or phrases?",
+        "synonyms": [
+          "assure"
+        ]
+      },
+      {
+        "raw": "pledged» \"covenant\" \"promised»«swore», «stipulate\". \nPlease bear with me if your question had a specific context.",
+        "synonyms": [
+          "pledged»"
+        ]
+      },
+      {
+        "raw": "seal”, “acknowledge”, “confess”, “acknowledge”, “compliance”.",
+        "synonyms": [
+          "seal"
+        ]
+      },
+      {
+        "raw": "stipulate,” “declare,” “categorize,” “define,” “describe.” Would you like another list of 5 synonyms for \"waffle\"?",
+        "synonyms": [
+          "stipulate"
+        ]
+      }
+    ],
+    "en_n_5_unbiased": [
+      {
+        "raw": "pre occupants”,“first centuries”, \"interested\"], \"custom\", \"original\"],\"binding\"]",
+        "synonyms": [
+          "pre occupants"
+        ]
+      },
+      {
+        "raw": "foundations”, “groundwork”, “base”, “substrate”, “stem”",
+        "synonyms": [
+          "foundations"
+        ]
+      },
+      {
+        "raw": "fundamentals”, \"principles\", \"foundations\", \"seasonings\", \"assumptions\"",
+        "synonyms": [
+          "fundamentals"
+        ]
+      },
+      {
+        "raw": "foundament”, \"base\", “setting”, \"principle\", \"preliminaries\".  Please let me know if you'd like a better answer with more context.",
+        "synonyms": [
+          "foundament"
+        ]
+      },
+      {
+        "raw": "found,\" \"attaches,\" \"att撫,\" \"envisions,\" \"schemes\"",
+        "synonyms": [
+          "found"
+        ]
+      }
+    ],
+    "en_n_5_verb": [
+      {
+        "raw": " visible \",  “detectable”, “ind Demonstrable,” “exhibit “,and “apparent”. \n",
+        "synonyms": [
+          "visible"
+        ]
+      },
+      {
+        "raw": "visible in”, \"easily seen”, “subject to traffic”, \" وعرض على\", \"visible from\".",
+        "synonyms": [
+          "visible in"
+        ]
+      },
+      {
+        "raw": "non flammable,” \"fireproof,” \"atmospherically toxic,” \"combustible,” and \"combustible.\" Please note that \"non flammable\" and \"fireproof\" describe the inability to burn or resistance to catching fire, while \"atmospherically toxic,\" \"combustible",
+        "synonyms": [
+          "non flammable"
+        ]
+      },
+      {
+        "raw": "inundate”, \"flood\", \"waterlogged”, \"swampy”, “inundation”.",
+        "synonyms": [
+          "inundate"
+        ]
+      },
+      {
+        "raw": "visible”、“ synlig \",\" noticeable\", \"open to public view \",\"exposed”.",
+        "synonyms": [
+          "visible"
+        ]
+      }
+    ],
+    "en_n_6_adj": [
+      {
+        "raw": "bindertack”, “boldfaced”, “brashly”, “trсловne” and “foolhardy”.",
+        "synonyms": [
+          "bindertack"
+        ]
+      },
+      {
+        "raw": "crave”, “desire”, “long for”, “yearn for”, “want”. \nNow, I'm ready for your question.",
+        "synonyms": [
+          "crave"
+        ]
+      },
+      {
+        "raw": "brave,”“daring,”“bolder,”“reckless,”“bold.”",
+        "synonyms": [
+          "brave"
+        ]
+      },
+      {
+        "raw": "to defy or repel”:\n\n1. 3to repel\n2. 4to reject\n3. 5to answer back\n4. 6to refuse\n5. 7to say no\n\n\nNow, I can answer your question. Would you like me to define a word from this",
+        "synonyms": [
+          "to defy",
+          "repel"
+        ]
+      },
+      {
+        "raw": "defy”, “defiant”, “design”, “attempted”, “challenge”. Would you like me to answer another question?",
+        "synonyms": [
+          "defy"
+        ]
+      }
+    ],
+    "en_n_6_mixed": [
+      {
+        "raw": "befuddled”, “foolish”, “illogical”, “foolish”, “foolish”.",
+        "synonyms": [
+          "befuddled"
+        ]
+      },
+      {
+        "raw": "insensible”, “cowardly”, “foolish”, “insane”, “rundown”. Can I help you with anything else?",
+        "synonyms": [
+          "insensible"
+        ]
+      },
+      {
+        "raw": "ignorant,” “unwise,” “dumb,” “stupid” and “idle.”",
+        "synonyms": [
+          "ignorant"
+        ]
+      },
+      {
+        "raw": "foolish”, “stupid”, “clueless”, “wisecracking”, “awkward”. \n",
+        "synonyms": [
+          "foolish"
+        ]
+      },
+      {
+        "raw": " Ignorant”, “foolish”, “unteaught”, “unsuspecting”, “simplistic”. \nCan I do anything else for you?",
+        "synonyms": [
+          "Ignorant"
+        ]
+      }
+    ],
+    "en_n_6_noun": [
+      {
+        "raw": "assemble”  “order” “arrange”  “ordinate”  “range”\nNow, how can I assist you with these words?",
+        "synonyms": [
+          "assemble"
+        ]
+      },
+      {
+        "raw": "reach», «to remain», «bear», «stand», «Chief».",
+        "synonyms": [
+          "reach»",
+          "«to remain»",
+          "«bear»",
+          "«stand»",
+          "«Chief»"
+        ]
+      },
+      {
+        "raw": "weave”, \"tie together”, \"join\", “nit\", \"string”.",
+        "synonyms": [
+          "weave"
+        ]
+      },
+      {
+        "raw": "discharge,” “send off,” “release,” “order,” “ dispose.” Please let me know if you'd like a list for another word.",
+        "synonyms": [
+          "discharge"
+        ]
+      },
+      {
+        "raw": "carry out”, “wage war”, “conduct”, “handle”, “effect”.",
+        "synonyms": [
+          "carry out"
+        ]
+      }
+    ],
+    "en_n_6_unbiased": [
+      {
+        "raw": "deveneer,” “crush,” “ablate,” “annihilate,” and “obliterate.”",
+        "synonyms": [
+          "deveneer"
+        ]
+      },
+      {
+        "raw": "strangle\", \"suppress\", \"inhibit\", \"obstruct\", \"check\".",
+        "synonyms": [
+          "strangle"
+        ]
+      },
+      {
+        "raw": "engulf”, “oversw przem”, “choke\", \"comprehend”, and “conquer”.",
+        "synonyms": [
+          "engulf"
+        ]
+      },
+      {
+        "raw": "cause”, “direct”, “impel”, “enfold”, “Direct”.",
+        "synonyms": [
+          "cause"
+        ]
+      },
+      {
+        "raw": "conquer”, “defeat”, “conqueror”, “trample”, “mobutupize”.",
+        "synonyms": [
+          "conquer"
+        ]
+      }
+    ],
+    "en_n_6_verb": [
+      {
+        "raw": "buzz”, “buzz about”, “sway”, “wobble”, “vibrate”.",
+        "synonyms": [
+          "buzz"
+        ]
+      },
+      {
+        "raw": "rumble”, “heave”, “hissle”, “rumble”, “lay low” .\n\n\n",
+        "synonyms": [
+          "rumble"
+        ]
+      },
+      {
+        "raw": "buzz,” “drum up,” “get up to,” “hisping,” “whirr.”",
+        "synonyms": [
+          "buzz"
+        ]
+      },
+      {
+        "raw": "hues,” “tones,” “shades,” “nuances,” “varied”.",
+        "synonyms": [
+          "hues"
+        ]
+      },
+      {
+        "raw": "buzz”, “slither”, “vibrate”, “шевеляти”, \"shiver\".  \nLet me know if you need any more help.",
+        "synonyms": [
+          "buzz"
+        ]
+      }
+    ],
+    "en_n_7_adj": [
+      {
+        "raw": "blown\", \"snatched\", \"brought up\", \"put forward\", \"proffered\". \n",
+        "synonyms": [
+          "blown"
+        ]
+      },
+      {
+        "raw": "\n\n1. Evoke\n2. Spark\n3. Create\n4. Generate\n5. Initiate.\"",
+        "synonyms": []
+      },
+      {
+        "raw": "whistle,”“snuff,”“sniff,”“blow”“sniffle”.",
+        "synonyms": [
+          "whistle"
+        ]
+      },
+      {
+        "raw": "**fountain, pour, spurt, gush, trickle”**.\n",
+        "synonyms": [
+          "fountain",
+          "pour",
+          "spurt",
+          "gush",
+          "trickle"
+        ]
+      },
+      {
+        "raw": "whistle,” “blow,” “Sound a horn,” “blow.”\n\nAnd here's a sentence using those words:\n\n“The animal in the forest  _(Sound a horn)_  to warn its fellow creatures of danger.”",
+        "synonyms": [
+          "whistle"
+        ]
+      }
+    ],
+    "en_n_7_mixed": [
+      {
+        "raw": "deflect”, “divert”, “redirect”, “leap ahead”, “clear”.",
+        "synonyms": [
+          "deflect"
+        ]
+      },
+      {
+        "raw": "answer back”, “reassure”, “solicit”, “request,” and “enlist.”",
+        "synonyms": [
+          "answer back"
+        ]
+      },
+      {
+        "raw": "prevaricate”, “equivocate”, “glinch” , “fuzz-up” and “dislay”.",
+        "synonyms": [
+          "prevaricate"
+        ]
+      },
+      {
+        "raw": "fl britiske festin,” “barberte फरवरी,” “tävlingar”, “modig myntaregention” and “charmerande smyge”.",
+        "synonyms": [
+          "fl britiske festin"
+        ]
+      },
+      {
+        "raw": " dodge », « stave » « feign » « skirt » « rationalize »",
+        "synonyms": [
+          "dodge »",
+          "« stave » « feign » « skirt » « rationalize »"
+        ]
+      }
+    ],
+    "en_n_7_noun": [
+      {
+        "raw": "act upon”, “prompt”, “encourage”, “muster\", \"challenge\"",
+        "synonyms": [
+          "act upon"
+        ]
+      },
+      {
+        "raw": "instigate,”“aid,”“provoke,”“encourage,”“prompt”",
+        "synonyms": [
+          "instigate"
+        ]
+      },
+      {
+        "raw": "publicize,” \"make available,” “prefix,\" “bare afresh,” and \"announce.”\n\nNow, a sentence for them: \nThe new survey will be **publicized** across all news outlets immediately.\nThe conference will be **prefix**ed to the main presentation with a brief introduction.\nThe company plans to",
+        "synonyms": [
+          "publicize"
+        ]
+      },
+      {
+        "raw": "call to arms”, “Mobilize”, \"Persuade\", \"Help start\", \"Convince”.",
+        "synonyms": [
+          "call to arms"
+        ]
+      },
+      {
+        "raw": "propel”, “stimulate”, \"invigorate\", \"launch\", \"encourage\"",
+        "synonyms": [
+          "propel"
+        ]
+      }
+    ],
+    "en_n_7_unbiased": [
+      {
+        "raw": "flout”, “snub”, “despise”, “mock”, “mockery”.",
+        "synonyms": [
+          "flout"
+        ]
+      },
+      {
+        "raw": "insult”, “mock”, “deride”, “criticize harshly”, “mockery” \n",
+        "synonyms": [
+          "insult"
+        ]
+      },
+      {
+        "raw": "deride,” “mock,” “scoff at,” “mockery,” “disparage.” \nIs there anything else I can help you with?",
+        "synonyms": [
+          "deride"
+        ]
+      },
+      {
+        "raw": "sling”, “Criticize”, \"Deride\",  \"Mock\" and \"Troll\".",
+        "synonyms": [
+          "sling"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Scold**\n2. **Groom out**\n3. **Exercised negative feedback on**\n4. **Warn off**\n5. **Problematize**",
+        "synonyms": []
+      }
+    ],
+    "en_n_7_verb": [
+      {
+        "raw": "wierd”, “oddball”, “polished”, “authoritative”, “subtle”. \n",
+        "synonyms": [
+          "wierd"
+        ]
+      },
+      {
+        "raw": "countless,abundant,countfy infinite,limitless,laborous”",
+        "synonyms": [
+          "countless",
+          "abundant",
+          "countfy infinite",
+          "limitless",
+          "laborous"
+        ]
+      },
+      {
+        "raw": "meticulous,\" \"rigorous,\" \"exhaustive,\" \"thorough,\" and \"详细的 (liámí de)\" (in Mandarin, meaning precise or comprehensive).",
+        "synonyms": [
+          "meticulous"
+        ]
+      },
+      {
+        "raw": "orthodox,”“rigorous,”“strict,”“prinsipled,” and “conservative.”",
+        "synonyms": [
+          "orthodox"
+        ]
+      },
+      {
+        "raw": " \n1. Constant\n2. Energetic\n3. Lively\n4. Vivid\n5. Vibrant",
+        "synonyms": [
+          "Constant",
+          "Energetic",
+          "Lively",
+          "Vivid",
+          "Vibrant"
+        ]
+      }
+    ],
+    "en_n_8_adj": [
+      {
+        "raw": " \n  strident,” “garish,” “gaudy,” “tacky,” “in your face”",
+        "synonyms": [
+          "strident"
+        ]
+      },
+      {
+        "raw": "\n\n1. Expensive\n2. Lavish\n3. Extravagant\n4. Splendid\n5.Showy\n",
+        "synonyms": []
+      },
+      {
+        "raw": "harsh”, “rude”, \"trusive”, \"g moustenal” and “caustic”.  Does this answer make sense?",
+        "synonyms": [
+          "harsh"
+        ]
+      },
+      {
+        "raw": "over bearing,” “flashy,” “garish,” “extravagant,” “propinquate.”",
+        "synonyms": [
+          "over bearing"
+        ]
+      },
+      {
+        "raw": "eccentric,” “expensive,” “haute couture,” “ornate,” and “showy.”",
+        "synonyms": [
+          "eccentric"
+        ]
+      }
+    ],
+    "en_n_8_mixed": [
+      {
+        "raw": "   \n1. suggest\n2. indicate\n3. imply\n4. insinuate\n5. hint",
+        "synonyms": [
+          "suggest",
+          "indicate",
+          "imply",
+          "insinuate",
+          "hint"
+        ]
+      },
+      {
+        "raw": " agree”, “consult”, “confer”, “discuss” and “debate”.",
+        "synonyms": [
+          "agree"
+        ]
+      },
+      {
+        "raw": "seek the counsel of,” “invite to a consultation,” “call upon,” “invoke the advice of,” “turn to for counsel”.",
+        "synonyms": [
+          "seek the counsel of"
+        ]
+      },
+      {
+        "raw": "listen attentively”, “tune in”, \"pend up\", “listens attentively”, “give attention”.",
+        "synonyms": [
+          "listen attentively"
+        ]
+      },
+      {
+        "raw": "suggest,” “propose,” “encourage,” “advise,” and “recommend.” \n\n\nDo you have another question?",
+        "synonyms": [
+          "suggest"
+        ]
+      }
+    ],
+    "en_n_8_noun": [
+      {
+        "raw": "demur,” “refuse,” “lay a hold on,” “hesitate,” “hesitate to”.",
+        "synonyms": [
+          "demur"
+        ]
+      },
+      {
+        "raw": "name”. For example:\n\n\n* REST\n\n\n* NAME_SRC\n* NAME_SYS\n* SpellAbbrev\n* Abbreviation",
+        "synonyms": [
+          "name"
+        ]
+      },
+      {
+        "raw": "filet mignon”, “tenderloin”, “rib eye”, “strip loin” and “strip steak”. ",
+        "synonyms": [
+          "filet mignon"
+        ]
+      },
+      {
+        "raw": "proclaim,” \"exclaim,” \"declare,” “prostrate” and “takepart”.",
+        "synonyms": [
+          "proclaim"
+        ]
+      },
+      {
+        "raw": "arble”, \"tune\", \"c tempranoer\", \"ennent\", \"limerick\".",
+        "synonyms": [
+          "arble"
+        ]
+      }
+    ],
+    "en_n_8_unbiased": [
+      {
+        "raw": "\n\n1. Deflect\n2. Distract\n3. Diversion\n4. Lie\n5. Pretend to care\n\n\n",
+        "synonyms": []
+      },
+      {
+        "raw": "dictate,” “dictate a policy,” “influence,” “prompt,” “indirectly propose.”",
+        "synonyms": [
+          "dictate"
+        ]
+      },
+      {
+        "raw": "\n\ncheat,” “deFields,” “exploit,” “mislead,” “defraud.”\n\nWould you like to hear examples of how to use each in a sentence?",
+        "synonyms": []
+      },
+      {
+        "raw": "debase”, “filth”, “rural vulgarity”, “vulgar أراضي ”  and “barbarism”",
+        "synonyms": [
+          "debase"
+        ]
+      },
+      {
+        "raw": "indent,\"“beautify,”“ornament,” “adorn” and “fill.”",
+        "synonyms": [
+          "indent"
+        ]
+      }
+    ],
+    "en_n_8_verb": [
+      {
+        "raw": "display”, “Indication”, “Stage”, “ pointer”, “indicative”",
+        "synonyms": [
+          "display"
+        ]
+      },
+      {
+        "raw": "lie, mislead, pretzel, inducer,conscious trick.”",
+        "synonyms": [
+          "lie",
+          "mislead",
+          "pretzel",
+          "inducer",
+          "conscious trick"
+        ]
+      },
+      {
+        "raw": "   \n \n1. **Unuserrable:** This means the information  created seems useless or of no use to the person receiving it.\n2. **Exaggerated:** This  means the information is entitled or outrageous, going beyond reality.\n3. **Subtle:** This implies the information is veiled, concealed",
+        "synonyms": [
+          "Unuserrable:** This means the information  created seems useless",
+          "of no use to the person receiving it",
+          "Exaggerated:** This  means the information is entitled",
+          "outrageous",
+          "going beyond reality"
+        ]
+      },
+      {
+        "raw": "inion,” “his-forth,” “proffer,” “broach,” and “present.”",
+        "synonyms": [
+          "inion"
+        ]
+      },
+      {
+        "raw": "deliberate”, \"weigthed down\", \"lithiowg\", \"impart\", \"inten\",\nCan I help you with anything else?",
+        "synonyms": [
+          "deliberate"
+        ]
+      }
+    ],
+    "en_n_9_adj": [
+      {
+        "raw": "dry”, “plain”, “uncharm\", “insouphible” and “insipid”. Do you need help with anything else?",
+        "synonyms": [
+          "dry"
+        ]
+      },
+      {
+        "raw": " \n1. Formal” \n2. Archaic” \n3. Rigid”\n4. Impersonally”\n5. Unfriendly.”",
+        "synonyms": [
+          "Formal"
+        ]
+      },
+      {
+        "raw": "cool,”“clean,”“courteous,”“respectful,”“mild.”  Would you like to use these words in a sentence?",
+        "synonyms": [
+          "cool"
+        ]
+      },
+      {
+        "raw": " \n0assigned”()\n1.Officious”()\n2.duster”()\n3.Quick-witted”()\n4.lusty”()\n",
+        "synonyms": [
+          "0assigned"
+        ]
+      },
+      {
+        "raw": "decorum”, \"polished\", \"refined\", \"elegant\" and “sophisticated”. \nIs there something else you would like to know?",
+        "synonyms": [
+          "decorum"
+        ]
+      }
+    ],
+    "en_n_9_mixed": [
+      {
+        "raw": "plain”, “mindless”, “insipid”, \"ugly\", and “unoriginal”.",
+        "synonyms": [
+          "plain"
+        ]
+      },
+      {
+        "raw": "Baneful”, \"Trivial”, \"Lassitude\", \"Navvies\", “Morose”",
+        "synonyms": [
+          "Baneful"
+        ]
+      },
+      {
+        "raw": "staid”, \"sophisticated”, \"respectable”, \"polished”, “studied”",
+        "synonyms": [
+          "staid"
+        ]
+      },
+      {
+        "raw": "flat?\", \"insipid?\", \"awkward?\", \"boorish?\", \"awkwardly?”, \ndo you want me to continue?\n \nLet me know what questions you would like me to answer with these answers.",
+        "synonyms": [
+          "flat?"
+        ]
+      },
+      {
+        "raw": " \n1. Solemn\n2.Noticeable\n3.Quaint\n4.Changing\n5.Obese\"",
+        "synonyms": [
+          "Solemn",
+          "Noticeable",
+          "Quaint",
+          "Changing",
+          "Obese"
+        ]
+      }
+    ],
+    "en_n_9_noun": [
+      {
+        "raw": "acknowledge,”“appreciate,”“acknowledgeyour debt”“acknowledge invalence”, \"acknowledgeyour loss”. \nI will answer your question \"before\" I answer this. What question would you like me to answer first?",
+        "synonyms": [
+          "acknowledge"
+        ]
+      },
+      {
+        "raw": "address”, “congratulate”, “acknowledge”, “Recognize”, “honor”.",
+        "synonyms": [
+          "address"
+        ]
+      },
+      {
+        "raw": "acknowledge,”“acknowledge a debt,”“acknowledge a debt,”“acknowledge one’s debts,” and “acknowledge one’s obligations.”",
+        "synonyms": [
+          "acknowledge"
+        ]
+      },
+      {
+        "raw": "apologize,” “ex tekst,” “make amends,” “owe,” “acknowledge”",
+        "synonyms": [
+          "apologize"
+        ]
+      },
+      {
+        "raw": "acknowledge,” “acknowledge a debt,” “acknowledge an injury,” “acknowledge aid,” “acknowledge a confession.”",
+        "synonyms": [
+          "acknowledge"
+        ]
+      }
+    ],
+    "en_n_9_unbiased": [
+      {
+        "raw": "command», \"influence», \"influence\", \"assUrl\" \n\"influence», \"influence”\n\"Hook»\n(Based on this information, I may be able to help answer your question if you provide the context)",
+        "synonyms": [
+          "command»"
+        ]
+      },
+      {
+        "raw": "\n\n* **herald** \n* **instruct**\n* **direct**\n* **guide**\n* **lead** \n\n\n",
+        "synonyms": []
+      },
+      {
+        "raw": "carry out”, “smooth”, “cleverly”, “form” and “gently”.",
+        "synonyms": [
+          "carry out"
+        ]
+      },
+      {
+        "raw": "overtake”, “surpass”, “outrun”, “beat” and “beat around”.",
+        "synonyms": [
+          "overtake"
+        ]
+      },
+      {
+        "raw": "\n\n1. Instruct\n2. Direct\n3. Expound\n4. Commission\n5. Drumbeat\"",
+        "synonyms": []
+      }
+    ],
+    "en_n_9_verb": [
+      {
+        "raw": "degenerate,” “disgusting,” “detrimental,” “unsanitary,” and “corrupt”",
+        "synonyms": [
+          "degenerate"
+        ]
+      },
+      {
+        "raw": "defile”, “Corrupt”, “impress upon”, “Taint”, “Contaminate”.",
+        "synonyms": [
+          "defile"
+        ]
+      },
+      {
+        "raw": "contaminate,” “debauch,” “corrupt,” “contaminate,” “dirty.”",
+        "synonyms": [
+          "contaminate"
+        ]
+      },
+      {
+        "raw": "corrupt”, “corrupt”, “defile”, “spoil”, “contaminate”",
+        "synonyms": [
+          "corrupt"
+        ]
+      },
+      {
+        "raw": "\nsuspicious\nunsatisfactory\nquestionable\nuntrustworthy\nquestionable",
+        "synonyms": [
+          "suspicious",
+          "unsatisfactory",
+          "questionable",
+          "untrustworthy",
+          "questionable"
+        ]
+      }
+    ],
+    "en_v_1_adj": [
+      {
+        "raw": "corona”, “cirrus\", “cap\", “crown”, “phti”.",
+        "synonyms": [
+          "corona"
+        ]
+      },
+      {
+        "raw": "divya, hemadarpana, vilapam, sampradaya, aathman”",
+        "synonyms": [
+          "divya",
+          "hemadarpana",
+          "vilapam",
+          "sampradaya",
+          "aathman"
+        ]
+      },
+      {
+        "raw": "\n\n1. root\n2.িণ\n3. stem\n4. trunk\n5. branch\"",
+        "synonyms": []
+      },
+      {
+        "raw": "taj, sandavaram, peedal, theeradi, ethireedu”",
+        "synonyms": [
+          "taj",
+          "sandavaram",
+          "peedal",
+          "theeradi",
+          "ethireedu"
+        ]
+      },
+      {
+        "raw": "preeya”, “jayeek”, “kelii”, “saaga” , “Kuniy”",
+        "synonyms": [
+          "preeya"
+        ]
+      }
+    ],
+    "en_v_1_mixed": [
+      {
+        "raw": "do a number on”, \"get rid of\", \"do away with\", \"dispose of\", \"give up\".",
+        "synonyms": [
+          "do a number on"
+        ]
+      },
+      {
+        "raw": "burp,” “drool,” “slurp,” “snarl” and \"gnaw.\"",
+        "synonyms": [
+          "burp"
+        ]
+      },
+      {
+        "raw": "\n \n1. Deflect attention\n2. Distract\n3. Drove\n4. Mystify\n5. Surprise \n\n\n",
+        "synonyms": [
+          "Deflect attention",
+          "Distract",
+          "Drove",
+          "Mystify",
+          "Surprise"
+        ]
+      },
+      {
+        "raw": "\n\n*arbeider”,\n*detaché”,\n*deliver”,\n*recom мавpісd”,\n*simple”.",
+        "synonyms": []
+      },
+      {
+        "raw": " \n1.veil\n2.hide\n3.propagate\n4.build\n5.skill",
+        "synonyms": [
+          "veil",
+          "hide",
+          "propagate",
+          "build",
+          "skill"
+        ]
+      }
+    ],
+    "en_v_1_noun": [
+      {
+        "raw": "draw out”",
+        "synonyms": [
+          "draw out"
+        ]
+      },
+      {
+        "raw": "Roar”, \"Millow”, “pare”, \"extract”, “draw out”. What would you like to know next?",
+        "synonyms": [
+          "Roar"
+        ]
+      },
+      {
+        "raw": "lay\", “submit\", “send in\", \"present\" and “submit to review”. ",
+        "synonyms": [
+          "lay"
+        ]
+      },
+      {
+        "raw": "display», \"illuminating», \"response»»narrate».\n\nCan I do anything else for you?",
+        "synonyms": [
+          "display»"
+        ]
+      },
+      {
+        "raw": "display\",“incorporate”,“install\",“add-on\", “embed”. \nThe question was to \"come up with five synonyms for ‘mediate’…\". My answer list here is based on the synonym “install”. Let me know if you'd like more options for “mediate”.",
+        "synonyms": [
+          "display"
+        ]
+      }
+    ],
+    "en_v_1_unbiased": [
+      {
+        "raw": "\n\n1. challenge\n2. question\n3. attack\n4.czarify\n5. defend",
+        "synonyms": []
+      },
+      {
+        "raw": "answer back”, “filibuster”, “poke fun”, “poke a wink”, \"distort the record\"\n\n\n",
+        "synonyms": [
+          "answer back"
+        ]
+      },
+      {
+        "raw": "\n\n* Persecute\n* Pers upright\n* Taunt \n* Persimize\n\n\n",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. Explain Away\n2. паль cizăvoare aiga\n3. promovaza\n4. settlement\n5. confusing",
+        "synonyms": [
+          "Explain Away",
+          "паль cizăvoare aiga",
+          "promovaza",
+          "settlement",
+          "confusing"
+        ]
+      },
+      {
+        "raw": "to treat (one's self or another’s self) as a precursor or a hopeful sample of:\n\n1. ASिंबio\n2. Mimicry\n3. Exhibit\n4. Illustrate\n5. Enemble\"",
+        "synonyms": [
+          "to treat (one's self",
+          "another’s self) as a precursor",
+          "a hopeful sample of"
+        ]
+      }
+    ],
+    "en_v_1_verb": [
+      {
+        "raw": "dictate”, \"issue”, \"lay down rules”, \"knowledge”, and \"chart\".",
+        "synonyms": [
+          "dictate"
+        ]
+      },
+      {
+        "raw": "assemble”, “install”, “installment”, “staple”, “such-up”.",
+        "synonyms": [
+          "assemble"
+        ]
+      },
+      {
+        "raw": "output,” “dispatch,” “elevate,” “skillset,” “access.”\n\nThe list might not quite fit the definition “beignorant in void of doing,” but a founds the closest syntactical structure to convey “espousing even the requirement of not doing.”",
+        "synonyms": [
+          "output"
+        ]
+      },
+      {
+        "raw": "command\", \"order\", \"direct\", \"instruct\" , \"commanded\". \n",
+        "synonyms": [
+          "command"
+        ]
+      },
+      {
+        "raw": "dictate\", \"supervise\", \"monitor\", \"oversee\", \"Direct\"",
+        "synonyms": [
+          "dictate"
+        ]
+      }
+    ],
+    "en_v_10_adj": [
+      {
+        "raw": "glorified”, \"tedious”, \"monotonous”, “fine”, and “cordial”",
+        "synonyms": [
+          "glorified"
+        ]
+      },
+      {
+        "raw": "wholesome”, “sobering”, “current”, “currently”, “currently happening”.",
+        "synonyms": [
+          "wholesome"
+        ]
+      },
+      {
+        "raw": "  Barrative”, “Crisp”, “Polite” “Formal” “Courteous”",
+        "synonyms": [
+          "Barrative"
+        ]
+      },
+      {
+        "raw": "\naffable, easy-going, friendly, genial, well-meaning",
+        "synonyms": [
+          "affable",
+          "easy-going",
+          "friendly",
+          "genial",
+          "well-meaning"
+        ]
+      },
+      {
+        "raw": "\n\n* Permissive \n* Affable\n* Benevolent\n* Kind-hearted\n*warm *\n\n\nLet me know if you'd like any more synonyms or definitions for these words.",
+        "synonyms": []
+      }
+    ],
+    "en_v_10_mixed": [
+      {
+        "raw": "someone with limited knowledge, there be “clueless”, also “foolish” and “ill-informed”.",
+        "synonyms": [
+          "someone with limited knowledge",
+          "there be “clueless"
+        ]
+      },
+      {
+        "raw": "\n\n* **Go limp**\n* **Spin like a top**\n* **Be credible**\n* **Hold water**\n* **Drop in tone**\n\n\nLet me know if you'd like to explore more!",
+        "synonyms": []
+      },
+      {
+        "raw": "delicate,” “nimble,” “frilting,” “coy,” and “velvety.”",
+        "synonyms": [
+          "delicate"
+        ]
+      },
+      {
+        "raw": "pleading”, \"subtle”, \"gentle”, \"generous\", “summoning”",
+        "synonyms": [
+          "pleading"
+        ]
+      },
+      {
+        "raw": "obsequious”, “supplicant”, “dеверent”, \"bow-ingarling\", \"apoलीاقات\".",
+        "synonyms": [
+          "obsequious"
+        ]
+      }
+    ],
+    "en_v_10_noun": [
+      {
+        "raw": "discuss”, \"make known\", \"announce\", \"communicate\", \"purvey\". What is your question? \n",
+        "synonyms": [
+          "discuss"
+        ]
+      },
+      {
+        "raw": "propose”, \"suggest\", \"put forth\", “wave”, \"present\"",
+        "synonyms": [
+          "propose"
+        ]
+      },
+      {
+        "raw": "keep\", \"put up with\", \"withstand\", \"sustain\", \"withhold”.",
+        "synonyms": [
+          "keep"
+        ]
+      },
+      {
+        "raw": "portray,” “depict,” “illustrate,” “depths,” and “convey”",
+        "synonyms": [
+          "portray"
+        ]
+      },
+      {
+        "raw": "port,\" \"execute,\" \"produce,\" “perform,\" and \"manage”.\n\nCan I help you with anything else? \n",
+        "synonyms": [
+          "port"
+        ]
+      }
+    ],
+    "en_v_10_unbiased": [
+      {
+        "raw": "loyalist”, “adoucents\", “fair-dαί ”, “loyal\", and “recommending”.",
+        "synonyms": [
+          "loyalist"
+        ]
+      },
+      {
+        "raw": "uppity”,“snobbish”,“disdainful”,“boorish”,“ entitled”. \n",
+        "synonyms": [
+          "uppity"
+        ]
+      },
+      {
+        "raw": "obsequious”, “pleasing”, “obtrusive”, “incessant”, “boorish”.\n\nWould you like to see what I do next?",
+        "synonyms": [
+          "obsequious"
+        ]
+      },
+      {
+        "raw": "\n1. Arrogant\n2. Disprezzoful\n3. Covetous\n4. Batty\n5. Affable\n\nWould you like another list with 5 synonyms for a different word?",
+        "synonyms": [
+          "Arrogant",
+          "Disprezzoful",
+          "Covetous",
+          "Batty",
+          "Affable"
+        ]
+      },
+      {
+        "raw": "rancorous”, “antisocial”, “antagonistic”, “hostile”, and “reluctant”.",
+        "synonyms": [
+          "rancorous"
+        ]
+      }
+    ],
+    "en_v_10_verb": [
+      {
+        "raw": "\n\n1. powerful\n2. steady\n3. smooth\n4. constant\n5. consistent \n\n\nLet me know if you'd like more synonyms or have another question!",
+        "synonyms": []
+      },
+      {
+        "raw": "unbuttable”, \"unbeatable”, \"demanding”, \"impovershment\", and \"next to nothing”",
+        "synonyms": [
+          "unbuttable"
+        ]
+      },
+      {
+        "raw": "\n\n1. rapid\n2. abundant\n3. profuse\n4. copious\n5. profuse",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Active\n2. Sprinting\n3. Ardent\n4.Zealous\n5.Thriving",
+        "synonyms": []
+      },
+      {
+        "raw": "impactful,” \"outspoken,\" \"bold,\" “forceful,” and “Powerful.”",
+        "synonyms": [
+          "impactful"
+        ]
+      }
+    ],
+    "en_v_2_adj": [
+      {
+        "raw": "\n\n1. Stir\n2. Motions\n3. Outpaire\n4. Difusing\n5. Fans",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Induce\n2. Stir\n3. Provoke\n4. Stir up\n5. Generate",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Indicate\n2. Suggest\n3. Implement\n4. Instigate\n5. Signal \n",
+        "synonyms": []
+      },
+      {
+        "raw": "remind,\" \"press,\" \"urge,\" \"advance,\" and \"promote.\"",
+        "synonyms": [
+          "remind"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Stir\n2. Motional force\n3. Push\n4. Force a motion\n5. Drive",
+        "synonyms": []
+      }
+    ],
+    "en_v_2_mixed": [
+      {
+        "raw": "urginate,” “propel,” \"propel,” “charge” and \"motivate.\"\n\nMay I help with anything else?",
+        "synonyms": [
+          "urginate"
+        ]
+      },
+      {
+        "raw": "evertranssecreture”, “electronegativity”, “concentration” , “presocratic”,  “mesomerism”.",
+        "synonyms": [
+          "evertranssecreture"
+        ]
+      },
+      {
+        "raw": "move, apply, lead, encourage, incite”",
+        "synonyms": [
+          "move",
+          "apply",
+          "lead",
+          "encourage",
+          "incite"
+        ]
+      },
+      {
+        "raw": "advance”, \"propel\", \"instigate\", \"encourage\", and \"Motivate\".\n\nDo you have any more questions?",
+        "synonyms": [
+          "advance"
+        ]
+      },
+      {
+        "raw": "urginate”,“stimulate”, “encourage”,“selectivate”, “spurn”.",
+        "synonyms": [
+          "urginate"
+        ]
+      }
+    ],
+    "en_v_2_noun": [
+      {
+        "raw": "wash out”,“test”,“piple test”,“bake off”,“feed”. \nWhat other words can I suggest?",
+        "synonyms": [
+          "wash out"
+        ]
+      },
+      {
+        "raw": "seal“, “cast“, “lay“, “thrown“ and “result“.",
+        "synonyms": [
+          "seal",
+          "cast",
+          "lay",
+          "thrown",
+          "result"
+        ]
+      },
+      {
+        "raw": "dispose,” “get rid of,” “discard,” “eliminate,” “render unnecessary”.",
+        "synonyms": [
+          "dispose"
+        ]
+      },
+      {
+        "raw": "fiddle,”“ manipulate,”“debunk,”“dissemble,” and “lie.”\n\n\n",
+        "synonyms": [
+          "fiddle"
+        ]
+      },
+      {
+        "raw": "abort”,“set aside”,“drop”,“abandon”,“forgo”. \nIs there anything else you would like me to help you with?",
+        "synonyms": [
+          "abort"
+        ]
+      }
+    ],
+    "en_v_2_unbiased": [
+      {
+        "raw": "\n1. Scheme\n2.plot\n3.lie\n4.cheat\n5. engainge \n\n\n",
+        "synonyms": [
+          "Scheme",
+          "plot",
+          "lie",
+          "cheat",
+          "engainge"
+        ]
+      },
+      {
+        "raw": "play up,” “behave up,” “behave fair,” “lie,” “pretend”",
+        "synonyms": [
+          "play up"
+        ]
+      },
+      {
+        "raw": "\nlie, deceive, mislead,  charm, seduce",
+        "synonyms": [
+          "lie",
+          "deceive",
+          "mislead",
+          "charm",
+          "seduce"
+        ]
+      },
+      {
+        "raw": "\n1. Deceive \n2. Mislead\n3. Tricky\n4. Trickster\n5. Coax",
+        "synonyms": [
+          "Deceive",
+          "Mislead",
+          "Tricky",
+          "Trickster",
+          "Coax"
+        ]
+      },
+      {
+        "raw": "defraud,” “persuade,” “gambit,” “ manipulate” and “cheat.”",
+        "synonyms": [
+          "defraud"
+        ]
+      }
+    ],
+    "en_v_2_verb": [
+      {
+        "raw": "swmass, fold in, bulge out, collapse inward, pucker out.”",
+        "synonyms": [
+          "swmass",
+          "fold in",
+          "bulge out",
+          "collapse inward",
+          "pucker out"
+        ]
+      },
+      {
+        "raw": "pale”, \"show pale”, \"known for\", \"depressed”, \"learn more\".",
+        "synonyms": [
+          "pale"
+        ]
+      },
+      {
+        "raw": "stormer,” “burgeon,” “inflate,” “huff,” and “bruise.” \n",
+        "synonyms": [
+          "stormer"
+        ]
+      },
+      {
+        "raw": "expansion,”“stretch,”“ендledes”,“unfold”,“gorge”.",
+        "synonyms": [
+          "expansion"
+        ]
+      },
+      {
+        "raw": " \n1. Whirl\n2. Envelop \n3. Expansion \n4. Restrict\n5. Advocate",
+        "synonyms": [
+          "Whirl",
+          "Envelop",
+          "Expansion",
+          "Restrict",
+          "Advocate"
+        ]
+      }
+    ],
+    "en_v_3_adj": [
+      {
+        "raw": "rejoice”, \"delight\", “glee\",  “exults”, “delighted”. \n",
+        "synonyms": [
+          "rejoice"
+        ]
+      },
+      {
+        "raw": "\n\n1. Evoke\n2. Induce\n3. Stir\n4. Jscheme\n5. Delight \n\n\n",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n\n*Thrill*\n*Excitement*\n*Delight*\n*Joy*\n*Euphoria* \n\n\nLet me know if you'd like more!",
+        "synonyms": []
+      },
+      {
+        "raw": " \n1. Delight\n2. enjoy\n3. incline to\n4. be pleased with\n5. be invited\"",
+        "synonyms": [
+          "Delight",
+          "enjoy",
+          "incline to",
+          "be pleased with",
+          "be invited"
+        ]
+      },
+      {
+        "raw": "gleefuly», «delight», «delightened», «thrilled», «joi»",
+        "synonyms": [
+          "gleefuly»",
+          "«delight»",
+          "«delightened»",
+          "«thrilled»",
+          "«joi»"
+        ]
+      }
+    ],
+    "en_v_3_mixed": [
+      {
+        "raw": "beefy”, \"loamy”, \"clayey”, \" मुलamois “and “tutkimıklı”.",
+        "synonyms": [
+          "beefy"
+        ]
+      },
+      {
+        "raw": "radiant\", “gleaming\", “shining\", “bodacious”, and “splendid”. Is there anything else I can help with?",
+        "synonyms": [
+          "radiant"
+        ]
+      },
+      {
+        "raw": "lavish”, “generous”, “humble”, “generous” and “esteemed”.",
+        "synonyms": [
+          "lavish"
+        ]
+      },
+      {
+        "raw": "heroic”,“ expansive”, “outstanding”, “presentable”, and “splendid”.",
+        "synonyms": [
+          "heroic"
+        ]
+      },
+      {
+        "raw": "lucid,”“lucidified,”“bright,”“sound,”“resounding”.",
+        "synonyms": [
+          "lucid"
+        ]
+      }
+    ],
+    "en_v_3_noun": [
+      {
+        "raw": "greetings”, “wetters”, \"gesture of politeness”, “expression of goodwill”, “grace” \n",
+        "synonyms": [
+          "greetings"
+        ]
+      },
+      {
+        "raw": "\n\n1. Courtesy\n2. Politeness\n3. Pitch\n4. Pity\n5. Hesha",
+        "synonyms": []
+      },
+      {
+        "raw": "greeter,”“introducer,”“ recepcionist,”“custodian,”“steward.”",
+        "synonyms": [
+          "greeter"
+        ]
+      },
+      {
+        "raw": " \n1. Compliment\n2. Observation\n3. Enthusiasm\n4. Export\n5. Abituation\"",
+        "synonyms": [
+          "Compliment",
+          "Observation",
+          "Enthusiasm",
+          "Export",
+          "Abituation"
+        ]
+      },
+      {
+        "raw": " \n1. Greetings\n2. Courtesies\n3. Introductions\n4. Compliment\n5. Salutations\"",
+        "synonyms": [
+          "Greetings",
+          "Courtesies",
+          "Introductions",
+          "Compliment",
+          "Salutations"
+        ]
+      }
+    ],
+    "en_v_3_unbiased": [
+      {
+        "raw": "\n1. Bauble\n2. Kennel\n3. Petarian\n4. Tursa\n5. Bunchta.",
+        "synonyms": [
+          "Bauble",
+          "Kennel",
+          "Petarian",
+          "Tursa",
+          "Bunchta"
+        ]
+      },
+      {
+        "raw": "\n\n* Patter\n* Pedal\n* Whine\n* Tell a tale\n* Mock\n\n\nLet me know if you'd like to use these words in a sentence!",
+        "synonyms": []
+      },
+      {
+        "raw": "parody», humourous», witty», ingenious» and “clever”.",
+        "synonyms": [
+          "parody»",
+          "humourous»",
+          "witty»",
+          "ingenious»",
+          "clever"
+        ]
+      },
+      {
+        "raw": " cavil”, “object” ,  “criticize”, “complain”,  “raise objections”. \n",
+        "synonyms": [
+          "cavil"
+        ]
+      },
+      {
+        "raw": "demolish,” “disintegrate,” “shatter,” “reduce to rubble,” “raz,”",
+        "synonyms": [
+          "demolish"
+        ]
+      }
+    ],
+    "en_v_3_verb": [
+      {
+        "raw": "watchful,” “keen,” “attentive,” “alert,” and “careful.”",
+        "synonyms": [
+          "watchful"
+        ]
+      },
+      {
+        "raw": "watchful”, “keen eyed”, “wary”, “alert”, “vigilant”.",
+        "synonyms": [
+          "watchful"
+        ]
+      },
+      {
+        "raw": "\n\n1. trustworthy\n2. fair-minded\n3. impartial\n4. unbiased\n5. truthful",
+        "synonyms": []
+      },
+      {
+        "raw": "verbose”, \"mechanical”, “latious”, “ostentatious”, “overly detailed”.\n\nWould you like to know a definition or example sentence for one of these?",
+        "synonyms": [
+          "verbose"
+        ]
+      },
+      {
+        "raw": "observer\", \"witness\", \"witnessperson\", \"lookahead\", \"vigilante\" \n",
+        "synonyms": [
+          "observer"
+        ]
+      }
+    ],
+    "en_v_4_adj": [
+      {
+        "raw": "brash,”“blatant,”“garish,”“outspoke,” “overbearing.”",
+        "synonyms": [
+          "brash"
+        ]
+      },
+      {
+        "raw": "outspOKEN”, “brash”, “boorish”, “flittfull”, “naked”.",
+        "synonyms": [
+          "outspOKEN"
+        ]
+      },
+      {
+        "raw": " \npolite,” “refined,” “discreet,” “subtle,” “just” \nHow can I help?",
+        "synonyms": [
+          "polite"
+        ]
+      },
+      {
+        "raw": "\n\n* slag\n* bluster\n* assertive\n* bombastic\n* loquacious\n\n\n",
+        "synonyms": []
+      },
+      {
+        "raw": "  blustery, loopy, squirmy, dicey, volatile.” \nWould you like me to help with something else?",
+        "synonyms": [
+          "blustery",
+          "loopy",
+          "squirmy",
+          "dicey",
+          "volatile"
+        ]
+      }
+    ],
+    "en_v_4_mixed": [
+      {
+        "raw": "vague,” \"inane,” “communal,” “wordy,” “barren.”",
+        "synonyms": [
+          "vague"
+        ]
+      },
+      {
+        "raw": "generic,” \"platitudinous,” \"simplistic,” \"non-specific,” and \"unsubstance.”",
+        "synonyms": [
+          "generic"
+        ]
+      },
+      {
+        "raw": "télescrit», «phonoيّة», «néuphono consistently», «uni-stem», «usage fyrish»",
+        "synonyms": [
+          "télescrit»",
+          "«phonoيّة»",
+          "«néuphono consistently»",
+          "«uni-stem»",
+          "«usage fyrish»"
+        ]
+      },
+      {
+        "raw": "non-specific”, \" vague”, \"generic”, \"loose “,  \"wordy”.",
+        "synonyms": [
+          "non-specific"
+        ]
+      },
+      {
+        "raw": "non elabarginal,” “un meaningful”, \"eloquent,” “bagatarian,” and “nihilistic”.",
+        "synonyms": [
+          "non elabarginal"
+        ]
+      }
+    ],
+    "en_v_4_noun": [
+      {
+        "raw": "mandatory”, \"prescribed\", “enforced”, “decreed”, \"regarded\".",
+        "synonyms": [
+          "mandatory"
+        ]
+      },
+      {
+        "raw": "normative,”“mandatory,”“obligatory,”“ quyet định,”“luật.\"",
+        "synonyms": [
+          "normative"
+        ]
+      },
+      {
+        "raw": "examine”;“inspect”;“investigate”;“query”;“cross”;",
+        "synonyms": [
+          "examine"
+        ]
+      },
+      {
+        "raw": "bastion”, \"anvil\", \"chart\", \"canvas\" and \"pallet\".",
+        "synonyms": [
+          "bastion"
+        ]
+      },
+      {
+        "raw": "rule,proceed,advise,bring forward,go along”\nIs there anything else I can help you with?",
+        "synonyms": [
+          "rule",
+          "proceed",
+          "advise",
+          "bring forward",
+          "go along"
+        ]
+      }
+    ],
+    "en_v_4_unbiased": [
+      {
+        "raw": "lay\" “lag\" “abduct\" “elsewhere “sit out\".",
+        "synonyms": [
+          "lay"
+        ]
+      },
+      {
+        "raw": "lay down”, \"present\", \"support\", \"construct”, \"reinforce\".",
+        "synonyms": [
+          "lay down"
+        ]
+      },
+      {
+        "raw": "percrumple”, “shatter”, “shred”, “puttle”, “wring”",
+        "synonyms": [
+          "percrumple"
+        ]
+      },
+      {
+        "raw": "hammer\"\n\"denigrate\"\n\"defame\"\n\"inveigh\"\n\"misrepresent\"",
+        "synonyms": [
+          "hammer"
+        ]
+      },
+      {
+        "raw": "enunciate”, \"declare\", \"proclaim\", \"State\" and \"announce\".",
+        "synonyms": [
+          "enunciate"
+        ]
+      }
+    ],
+    "en_v_4_verb": [
+      {
+        "raw": "fluent, legible, clear, intelligible, straightforward.”",
+        "synonyms": [
+          "fluent",
+          "legible",
+          "clear",
+          "intelligible",
+          "straightforward"
+        ]
+      },
+      {
+        "raw": "imperfect voweling,” “regular voweling,” “supremes,” “merging syllables,” and “sounded syllables.” \nIs there anything else I can help with?",
+        "synonyms": [
+          "imperfect voweling"
+        ]
+      },
+      {
+        "raw": "eloquent,” “eloquential,” “eloquence,” “eloquent expression,” and “eloquence.”",
+        "synonyms": [
+          "eloquent"
+        ]
+      },
+      {
+        "raw": "ribboned,” “ribboned,” “ribbonsed,” “ribbonery,” “ribboned.”",
+        "synonyms": [
+          "ribboned"
+        ]
+      },
+      {
+        "raw": "sometimes said to resemble a human’s language.”",
+        "synonyms": [
+          "sometimes said to resemble a human’s language"
+        ]
+      }
+    ],
+    "en_v_5_adj": [
+      {
+        "raw": "\n1. Lean\n2.�ายการ\n3. станет\n4.答え\n5. aleteo",
+        "synonyms": [
+          "Lean",
+          "�ายการ",
+          "станет",
+          "答え",
+          "aleteo"
+        ]
+      },
+      {
+        "raw": " \n1.緩和\n2.消散\n3.稀释\n4.稀疏\n5.减弱.\"",
+        "synonyms": [
+          "緩和",
+          "消散",
+          "稀释",
+          "稀疏",
+          "减弱"
+        ]
+      },
+      {
+        "raw": " \ncool, chill, numb, paralyze, necrose”",
+        "synonyms": [
+          "cool",
+          "chill",
+          "numb",
+          "paralyze",
+          "necrose"
+        ]
+      },
+      {
+        "raw": " \n1. Attract\n2. Agitate\n3. Stirred\n4. Infuse\n5. Submerge\n",
+        "synonyms": [
+          "Attract",
+          "Agitate",
+          "Stirred",
+          "Infuse",
+          "Submerge"
+        ]
+      },
+      {
+        "raw": "\n\n1. Fry\n2. Pot\n3. Simmer\n4. Long\n5. Roar\n\n\nLet me know if you'd like some other synonyms!",
+        "synonyms": []
+      }
+    ],
+    "en_v_5_mixed": [
+      {
+        "raw": "temperate,” “moderate,” “non-strong,” “leisurely” and “lively”. I hope it helps!",
+        "synonyms": [
+          "temperate"
+        ]
+      },
+      {
+        "raw": "oppressive”, “burscene”, “about”,”dulcet”,\"obtrusive.”\n\nDo you want to get an example sentence?",
+        "synonyms": [
+          "oppressive"
+        ]
+      },
+      {
+        "raw": "co-Colaactic”, “neverHoward\", “cataractic”, “hip astrology” and “kerfuffle”.",
+        "synonyms": [
+          "co-Colaactic"
+        ]
+      },
+      {
+        "raw": " muffled”, “crude”, “barbaric”, \"uncivilized\", \"Left-beehive\".",
+        "synonyms": [
+          "muffled"
+        ]
+      },
+      {
+        "raw": "Subtractive”, “dismal”, “ugly”, “harsh”, “mean-spirited”. \n",
+        "synonyms": [
+          "Subtractive"
+        ]
+      }
+    ],
+    "en_v_5_noun": [
+      {
+        "raw": "preserve”, “sanctify”, “commemorate”, “honor”, “commute”. Is there anything else I can help you with?",
+        "synonyms": [
+          "preserve"
+        ]
+      },
+      {
+        "raw": "lawn”, “law”, “marshland”, “ravine”, “dune”. Do you want me to answer your original question with those words?",
+        "synonyms": [
+          "lawn"
+        ]
+      },
+      {
+        "raw": "peg”, “disparage”, “reject”, “condemn”, “d Jungt.”",
+        "synonyms": [
+          "peg"
+        ]
+      },
+      {
+        "raw": "Mushin,” “tusterenoko,” “tsindrin’ olona,” “voatotsy,” “riptian-kapoaka.”",
+        "synonyms": [
+          "Mushin"
+        ]
+      },
+      {
+        "raw": "ear\", \"vector\", \"sheet\", \"record\"  and \"filter\" .",
+        "synonyms": [
+          "ear"
+        ]
+      }
+    ],
+    "en_v_5_unbiased": [
+      {
+        "raw": "murky\", \"murky\", \"polygamous\", \"tender\", \"subtle\"",
+        "synonyms": [
+          "murky"
+        ]
+      },
+      {
+        "raw": " \n1. compact\n2. diminutive\n3. miniature\n4. little\n5. diminutivised",
+        "synonyms": [
+          "compact",
+          "diminutive",
+          "miniature",
+          "little",
+          "diminutivised"
+        ]
+      },
+      {
+        "raw": "vehicular,” “stationary,” “static,” “inactive,” “heedless”",
+        "synonyms": [
+          "vehicular"
+        ]
+      },
+      {
+        "raw": "meticulous”, \"precise”, \" الدقيقة\", \"attentive\", and “spot on”.",
+        "synonyms": [
+          "meticulous"
+        ]
+      },
+      {
+        "raw": "insistent,\" \"demanding,\" \"persistent,\" \"unyielding,\" and \"resolute.\"",
+        "synonyms": [
+          "insistent"
+        ]
+      }
+    ],
+    "en_v_5_verb": [
+      {
+        "raw": "boil,”“simmer,”“heat,”“cook,” and “bake.”",
+        "synonyms": [
+          "boil"
+        ]
+      },
+      {
+        "raw": "hot down,”“boil down,”“bring to a boil,”“heat through” and “constillate.”",
+        "synonyms": [
+          "hot down"
+        ]
+      },
+      {
+        "raw": "heat up”, “stripes the flames”,  “ignite”, \"bath in a blazing inferno\", and “Toast”.",
+        "synonyms": [
+          "heat up"
+        ]
+      },
+      {
+        "raw": "hot down,” “boil down,” “heat through,” “simmer,\" and \"steep.\"",
+        "synonyms": [
+          "hot down"
+        ]
+      },
+      {
+        "raw": "fire up”, \"go hot”, \"begin to burn”, “heat up”, “ignite”",
+        "synonyms": [
+          "fire up"
+        ]
+      }
+    ],
+    "en_v_6_adj": [
+      {
+        "raw": "\n\n1. Chit chat\n2. Gabble\n3. Potter on\n4. Freewheeling conversation\n5. Juggling words",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **prattle**\n2. **jabber** \n3. **babble** \n4. **bicker** \n5. **chatters**.\n\n\n\nLet me know if you have any other questions!",
+        "synonyms": []
+      },
+      {
+        "raw": "smooch\", \"hug\", \"wrap arms around\", \"reach out and touch\", \"bow\"",
+        "synonyms": [
+          "smooch"
+        ]
+      },
+      {
+        "raw": "dancing\", \"rehearsing\", \"practice\", \"performing\" and \"sitting.\"",
+        "synonyms": [
+          "dancing"
+        ]
+      },
+      {
+        "raw": " \n1. Stage-dxon\n2. Mumble\n3. Sprezzolate\n4. Sang\n5. murmur",
+        "synonyms": [
+          "Stage-dxon",
+          "Mumble",
+          "Sprezzolate",
+          "Sang",
+          "murmur"
+        ]
+      }
+    ],
+    "en_v_6_mixed": [
+      {
+        "raw": "\n \n1. Familiar\n2. At ease\n3. Conversational\n4. Mundanely\n5. Artlessly",
+        "synonyms": [
+          "Familiar",
+          "At ease",
+          "Conversational",
+          "Mundanely",
+          "Artlessly"
+        ]
+      },
+      {
+        "raw": "Loopy”,“scurrilous”, \"tacky\",“illogical” and “unsubtle.”",
+        "synonyms": [
+          "Loopy"
+        ]
+      },
+      {
+        "raw": "\n1. Monotonous\n2. Interminable\n3. Obtrusive\n4. Boorish\n5. Dull",
+        "synonyms": [
+          "Monotonous",
+          "Interminable",
+          "Obtrusive",
+          "Boorish",
+          "Dull"
+        ]
+      },
+      {
+        "raw": "\n\n1. Shiplap: Derived from the word \"bilge,\" it doesn't carry any emotional implications.\n\n2. Cringe: This suggests a strong feeling of discomfort or embarrassment.\n\n3. Awkward: Highlights the lack of smooth or confident communication.\n\n4. Mechanics: Implies a direct, unemb",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Discrepant\n2. aneh\n3. sling!\n4. Discarboned\n5. Juxtaposed",
+        "synonyms": []
+      }
+    ],
+    "en_v_6_noun": [
+      {
+        "raw": "sudden,爆以打造/Shattering,ei，ctor”isolate” and “break apart”.\n\nLet me know if you need more!",
+        "synonyms": [
+          "sudden",
+          "爆以打造/Shattering",
+          "ei，ctor"
+        ]
+      },
+      {
+        "raw": "explode”, “shatter”, “crumble”, “split”, “Pop”",
+        "synonyms": [
+          "explode"
+        ]
+      },
+      {
+        "raw": " Explode,”  \"Split,”  \"Crack,\"  “Boom,” “Rupture”.",
+        "synonyms": [
+          "Explode"
+        ]
+      },
+      {
+        "raw": "\n1. Reveal\n2. Uncover\n3. Expose\n4. Unfold\n5. Açıkla",
+        "synonyms": [
+          "Reveal",
+          "Uncover",
+          "Expose",
+          "Unfold",
+          "Açıkla"
+        ]
+      },
+      {
+        "raw": "flap,” “floof,” “flutter,” “lap,” and “lobe.”",
+        "synonyms": [
+          "flap"
+        ]
+      }
+    ],
+    "en_v_6_unbiased": [
+      {
+        "raw": "argue”, “convict”, “validate”, “uphold” and “state a case for”. Is there anything else you need help with?",
+        "synonyms": [
+          "argue"
+        ]
+      },
+      {
+        "raw": " argue\", “controvert”, “counter”, “oppose”, “object”.",
+        "synonyms": [
+          "argue"
+        ]
+      },
+      {
+        "raw": " \n1. Argue \n2. Contest\n3. Debate\n4. Otter \n5. Report back\" \nDo you have any more questions?",
+        "synonyms": [
+          "Argue",
+          "Contest",
+          "Debate",
+          "Otter",
+          "Report back"
+        ]
+      },
+      {
+        "raw": "formulate opinion”, “state\" “advise\" “respond\" “conduct discussion”",
+        "synonyms": [
+          "formulate opinion"
+        ]
+      },
+      {
+        "raw": "consent,” “bow,” “yield,” “acknowledge,” and “submit.”",
+        "synonyms": [
+          "consent"
+        ]
+      }
+    ],
+    "en_v_6_verb": [
+      {
+        "raw": "broken”, \"ruptured\", “distressing”, “woeful” and “degraded”.",
+        "synonyms": [
+          "broken"
+        ]
+      },
+      {
+        "raw": "Momentoous,” “monumental,” “meritorious,” “meritocratic,” and “magnanimous.”",
+        "synonyms": [
+          "Momentoous"
+        ]
+      },
+      {
+        "raw": "rough”, “tough”, “verbose”, “orderly”, “orderly”, “outboard”. \n\nLet me know if you would like to see a definition of any of these words.",
+        "synonyms": [
+          "rough"
+        ]
+      },
+      {
+        "raw": " thick, dense, looser,porous, uncovered”\n\nCan I help you with anything else?",
+        "synonyms": [
+          "thick",
+          "dense",
+          "looser",
+          "porous",
+          "uncovered"
+        ]
+      },
+      {
+        "raw": "brittle”, \"british”, “british\", “committed”, “dedicated”.",
+        "synonyms": [
+          "brittle"
+        ]
+      }
+    ],
+    "en_v_7_adj": [
+      {
+        "raw": "eloquent,” “eloquentative,” “eloquent speech,” “Grand speech,” “ eloquent speaker.”",
+        "synonyms": [
+          "eloquent"
+        ]
+      },
+      {
+        "raw": "\n\n*  ** Command** \n*  ** Resound**\n*  ** Resonate**\n*  ** Echo**\n*  ** Booming** \n\n\nLet me know if you'd like another list of synonyms for another word!",
+        "synonyms": []
+      },
+      {
+        "raw": "destinguish”, \"differentiate”, \"distinguish”, “note” and “point out”.",
+        "synonyms": [
+          "destinguish"
+        ]
+      },
+      {
+        "raw": "\n1. Distinctive\n2. Memorable\n3. Iconic\n4. Forgotten\n5. Unforgettable” \n",
+        "synonyms": [
+          "Distinctive",
+          "Memorable",
+          "Iconic",
+          "Forgotten",
+          "Unforgettable"
+        ]
+      },
+      {
+        "raw": "loquacious,” “eloquent,” “eloquentative,” \"pal.card\" and \"eloquent/languaging\".",
+        "synonyms": [
+          "loquacious"
+        ]
+      }
+    ],
+    "en_v_7_mixed": [
+      {
+        "raw": "rural,\" “it can be,\" \"awkward,” \"though,\" “回りング” \nLet me know if you have any other questions.",
+        "synonyms": [
+          "rural"
+        ]
+      },
+      {
+        "raw": "cringing”, “awkward”, “awkwardly», “overly direct”, and “lunk”, however none of these are the correct answer. the correct answer is :\n\nsilly.\nSilly is the word people are most likely to use to describe someone who is reducing speech to simplistic, basique",
+        "synonyms": [
+          "cringing"
+        ]
+      },
+      {
+        "raw": "insistent,” “pedantic,” “ridiculous,” “brash,” “offhand” \n\n\nDo you have a specific question you'd like to ask about these words? Perhaps you'd like to know how to use them in a sentence, their meanings, or examples of their lyrics? \n",
+        "synonyms": [
+          "insistent"
+        ]
+      },
+      {
+        "raw": "outlandish,” “overtalked,” “fluffed up,” “weegy,” “boisterous.”",
+        "synonyms": [
+          "outlandish"
+        ]
+      },
+      {
+        "raw": "monotone”, \"deadpan”, \"dry-witted”, \"deafeningly slow\", \"unbearable silence\".",
+        "synonyms": [
+          "monotone"
+        ]
+      }
+    ],
+    "en_v_7_noun": [
+      {
+        "raw": "lay down”, \"go down”, \"descend”, \"dip down”, \"unite\"",
+        "synonyms": [
+          "lay down"
+        ]
+      },
+      {
+        "raw": "ascend,” \"emerge,” \"arrive,” \"descent,” \"ascendancy.”",
+        "synonyms": [
+          "ascend"
+        ]
+      },
+      {
+        "raw": " rise», \"move», \"commence», \"resume\", \"begin\".",
+        "synonyms": [
+          "rise»"
+        ]
+      },
+      {
+        "raw": "leap\", \"jump\", \"flop\", \"climb\", \"clutter\"",
+        "synonyms": [
+          "leap"
+        ]
+      },
+      {
+        "raw": "  \nascend \nclimb \ngo up \nproceed \nsoar \n",
+        "synonyms": [
+          "ascend",
+          "climb",
+          "go up",
+          "proceed",
+          "soar"
+        ]
+      }
+    ],
+    "en_v_7_unbiased": [
+      {
+        "raw": "concern\", \"put\", \"distance\", \"foul a ball on\", \"knock back\"",
+        "synonyms": [
+          "concern"
+        ]
+      },
+      {
+        "raw": "cross”, “carbure”, \"glide\", “trot” and “dance”. ",
+        "synonyms": [
+          "cross"
+        ]
+      },
+      {
+        "raw": "bogey,” “cowl,” “coffeecake,” “prescription,” “hobnobbing.”",
+        "synonyms": [
+          "bogey"
+        ]
+      },
+      {
+        "raw": "bottle up”, “stifle”, “hold back”, “suppress”, “subdue”.",
+        "synonyms": [
+          "bottle up"
+        ]
+      },
+      {
+        "raw": "go strait\", \"go inaccurate\", \"go navagio\", \"goాగా\", \"go NZDWS\"",
+        "synonyms": [
+          "go strait"
+        ]
+      }
+    ],
+    "en_v_7_verb": [
+      {
+        "raw": "prescient”, “foresightful”, “ahead-words”or “futuristic”. \n",
+        "synonyms": [
+          "prescient"
+        ]
+      },
+      {
+        "raw": "democratic”,“uninitiated”, “unenlightened”, \"undemocratic”, “ominous”",
+        "synonyms": [
+          "democratic"
+        ]
+      },
+      {
+        "raw": "subtle”, “delicate”, “nuanced”, “supplicate” and “yielding.”",
+        "synonyms": [
+          "subtle"
+        ]
+      },
+      {
+        "raw": "commanding”, \"dictatorial”, “monarchical”, “teocratic” and “bemelitinist”.\n\nWould you like me to answer with the verb \"Ser\" ",
+        "synonyms": [
+          "commanding"
+        ]
+      },
+      {
+        "raw": "obvious,” “clear,” \"definite,\" “undeniable,” and \"apparent.\"",
+        "synonyms": [
+          "obvious"
+        ]
+      }
+    ],
+    "en_v_8_adj": [
+      {
+        "raw": "modulate”, \"alter”, \"change”, \"customize”, \"modify\".",
+        "synonyms": [
+          "modulate"
+        ]
+      },
+      {
+        "raw": " The following words are different from \"sstate\", which suggests to change the meaning.\n\n1. Resemble\n2. Appear\n3.Sound\n4.Imply\n5.Indicate",
+        "synonyms": [
+          "The following words are different from"
+        ]
+      },
+      {
+        "raw": "\n\n* Impression\n* Texture\n* Sensation\n* Reputation\n* Characteristic\n\nWould you like to use one of these synonyms or explore their nuances in a specific context?",
+        "synonyms": []
+      },
+      {
+        "raw": "consist of”, \"include\", “range\", \"comprise”, “contain”. \nIf you need anything else, let me know.",
+        "synonyms": [
+          "consist of"
+        ]
+      },
+      {
+        "raw": "impress,” “suggest,” “indicate,” “shew,” and “carry.”",
+        "synonyms": [
+          "impress"
+        ]
+      }
+    ],
+    "en_v_8_mixed": [
+      {
+        "raw": "barbs\", \"derogatory\", \"penetrating\", \"rude\", “severely”. \n",
+        "synonyms": [
+          "barbs"
+        ]
+      },
+      {
+        "raw": "\n\n* Incoherent \n* Beforehand\n* Halting\n* Disorderly\n* Disorganized\"",
+        "synonyms": []
+      },
+      {
+        "raw": "dictated”, \"monotonous\", \"tedious\", \"monotone\", \"boring”.",
+        "synonyms": [
+          "dictated"
+        ]
+      },
+      {
+        "raw": "bartering”, “titling”, “barter”, “skulking”, “wordless”.",
+        "synonyms": [
+          "bartering"
+        ]
+      },
+      {
+        "raw": "homely,”“wordy,”“backwoods,”“audio,”“fundamental”",
+        "synonyms": [
+          "homely"
+        ]
+      }
+    ],
+    "en_v_8_noun": [
+      {
+        "raw": "town”, \"borough”, \"city proper\", \"urban area\", \"metropolis\".",
+        "synonyms": [
+          "town"
+        ]
+      },
+      {
+        "raw": "Chorus”, “array”, “decorum”, “ensemble”, “ Quartet.”",
+        "synonyms": [
+          "Chorus"
+        ]
+      },
+      {
+        "raw": "town”, “village”, “ 핵 ”, “ villager”, \"hamlet\"",
+        "synonyms": [
+          "town"
+        ]
+      },
+      {
+        "raw": "population\", \"inhabitant\", \"dweller\", \"inhозер\", \"settler\". ",
+        "synonyms": [
+          "population"
+        ]
+      },
+      {
+        "raw": "Compact\", \"Ensemble\", \"Batch\", \"Corps\" and \"Group\".",
+        "synonyms": [
+          "Compact"
+        ]
+      }
+    ],
+    "en_v_8_unbiased": [
+      {
+        "raw": "reluctant”, “coquettish”, “tokenizing”, “desk-bound”, “notionless”.",
+        "synonyms": [
+          "reluctant"
+        ]
+      },
+      {
+        "raw": " \n1. Snail-paced\n2. Slow-motion\n3. Mannish\n4. Slow-witted\n5. Low-speed\"",
+        "synonyms": [
+          "Snail-paced",
+          "Slow-motion",
+          "Mannish",
+          "Slow-witted",
+          "Low-speed"
+        ]
+      },
+      {
+        "raw": "slow\", \"sluggish\", \"sedentary\", \"muranous\", \"inert\".",
+        "synonyms": [
+          "slow"
+        ]
+      },
+      {
+        "raw": "sluggish,\" \"source,\" \"laborious,\" \"tedious,\" and \"drudgery.\" ",
+        "synonyms": [
+          "sluggish"
+        ]
+      },
+      {
+        "raw": "laggard”, \"sluggish\", \"l membro\", \"slow-moving\" and \"sizimatric”.\n\nWould you like any more information?",
+        "synonyms": [
+          "laggard"
+        ]
+      }
+    ],
+    "en_v_8_verb": [
+      {
+        "raw": "\n\n1. Explanatory\n2. Administrating\n3. Demystifying\n4. erudite\n5. Eloquent\"\n\nCan I help you with anything else?",
+        "synonyms": []
+      },
+      {
+        "raw": "clever”, “savvy”, \"nimble\", “scious”), “naïve” or “expansive”. Do you have a specific question that I can help you with using these words?",
+        "synonyms": [
+          "clever"
+        ]
+      },
+      {
+        "raw": "eloquent”, “predictable”, “precise”, “ Expressive” “ Fluent”.",
+        "synonyms": [
+          "eloquent"
+        ]
+      },
+      {
+        "raw": "definitive”, “decisive”, “inaugural”, \"urgent\", “persuasive”. Would you like me to provide me with an example sentence for each of those words?",
+        "synonyms": [
+          "definitive"
+        ]
+      },
+      {
+        "raw": "\n\n1. Emergent\n2. Office\n3. Influential\n4. Osmosis\n5. Persuasive\n\n\n",
+        "synonyms": []
+      }
+    ],
+    "en_v_9_adj": [
+      {
+        "raw": "simplistic”, \"conversational”, \"casual”, \"informal”, “unimpressive”. \n\nWould you like to hear me describe which of these words you prefer for another word?",
+        "synonyms": [
+          "simplistic"
+        ]
+      },
+      {
+        "raw": "resentful”, \"sour\", \"bitter\", \"wrathful\", “worsted”. \n",
+        "synonyms": [
+          "resentful"
+        ]
+      },
+      {
+        "raw": "polite”, “unladylike”, \"preSosive\" \"audible\" and \" gentle\"",
+        "synonyms": [
+          "polite"
+        ]
+      },
+      {
+        "raw": "elegant\", \"refined\", \"distinguished\", \"sort\" and \"sober\"",
+        "synonyms": [
+          "elegant"
+        ]
+      },
+      {
+        "raw": "sober,” “orderly,” “distinct,” “rigorous,” and “plastic”",
+        "synonyms": [
+          "sober"
+        ]
+      }
+    ],
+    "en_v_9_mixed": [
+      {
+        "raw": "polished”, \"rundown”, \"garish”, \"curly”, and \"rough”. \n",
+        "synonyms": [
+          "polished"
+        ]
+      },
+      {
+        "raw": "assimilation”, “preparation”, “rustic”, “startling”, “provocation”.",
+        "synonyms": [
+          "assimilation"
+        ]
+      },
+      {
+        "raw": "   \n1. Virile\n2. Majestic\n3. Distinguished\n4. Distinctive\n5. Right on track\"",
+        "synonyms": [
+          "Virile",
+          "Majestic",
+          "Distinguished",
+          "Distinctive",
+          "Right on track"
+        ]
+      },
+      {
+        "raw": "tidy up”, make neat, make tidy, neatensify, organize",
+        "synonyms": [
+          "tidy up"
+        ]
+      },
+      {
+        "raw": " respecteful”, “sincere”, \"genuine\", \"genuinent\", “palpable”.",
+        "synonyms": [
+          "respecteful"
+        ]
+      }
+    ],
+    "en_v_9_noun": [
+      {
+        "raw": "presstitute”, “chief”, “district manager”, \"chief of\", \"managing partner”. \n",
+        "synonyms": [
+          "presstitute"
+        ]
+      },
+      {
+        "raw": "direct”, “firm”, “authoritative”, “solemn”, and “ vážná”.",
+        "synonyms": [
+          "direct"
+        ]
+      },
+      {
+        "raw": "pre notify”, “inform\", \"notify\", \"ware\", \"admonish\"\n",
+        "synonyms": [
+          "pre notify"
+        ]
+      },
+      {
+        "raw": "enter”, \"exact\", \"order\", \"stipulate\", “visit”. \n\nLet me know if you want more definitions or synonyms!",
+        "synonyms": [
+          "enter"
+        ]
+      },
+      {
+        "raw": " \n1. Commend\n2. Praise\n3. Compliment\n4. Commendation\n5. Admirer\"",
+        "synonyms": [
+          "Commend",
+          "Praise",
+          "Compliment",
+          "Commendation",
+          "Admirer"
+        ]
+      }
+    ],
+    "en_v_9_unbiased": [
+      {
+        "raw": " \n1. Impersonal\n2. Heartless\n3. Coarse\n4. Vulgar\n5. Boorish\"",
+        "synonyms": [
+          "Impersonal",
+          "Heartless",
+          "Coarse",
+          "Vulgar",
+          "Boorish"
+        ]
+      },
+      {
+        "raw": "generic”, \"mainstream\", \"hollow\", \"clumsy\", and \"embellished”.",
+        "synonyms": [
+          "generic"
+        ]
+      },
+      {
+        "raw": "or2920001cc7cb80f98388b5f2b2e831e”; wspólny,Weird, oddball, offbeat, clunky.",
+        "synonyms": [
+          "or2920001cc7cb80f98388b5f2b2e831e"
+        ]
+      },
+      {
+        "raw": "ludicrous,” “barbaric,” “illogical,” “outmoded” and “unwise.” Let me know if you have any other questions.",
+        "synonyms": [
+          "ludicrous"
+        ]
+      },
+      {
+        "raw": "debeing”, “bulky”, “heavy”, “inorganized”, “unfriendly”. Do you have another question?",
+        "synonyms": [
+          "debeing"
+        ]
+      }
+    ],
+    "en_v_9_verb": [
+      {
+        "raw": "boxed up,” \"segregated,” “quarantined”, “secured”, and “isolated”  (referring to physical separation like in a building or institution). \n\nWhat else can I help you with? \n",
+        "synonyms": [
+          "boxed up"
+        ]
+      },
+      {
+        "raw": "stroll along the seaside”, «play a game with your cat”, \"waken one’s memory”, «wash clothes”, «lie down to relax”",
+        "synonyms": [
+          "stroll along the seaside"
+        ]
+      },
+      {
+        "raw": "from the house”, walk through the street”, “gang to the”, \"at the gate\", gat stop“.",
+        "synonyms": [
+          "from the house"
+        ]
+      },
+      {
+        "raw": "peerless,” “intelligent”, “valuable”, “beneficial”, “propitious”.",
+        "synonyms": [
+          "peerless"
+        ]
+      },
+      {
+        "raw": "\n\n1. Tell a story\n2. Narrate\n3. Impart\n4. Give a speech\n5. Make a presentation\"",
+        "synonyms": []
+      }
+    ]
+  }
+}
