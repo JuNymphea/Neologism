@@ -1,0 +1,706 @@
+{
+  "model": "/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global",
+  "auc_computed_on": "calibration words (validation kept clean for accuracy)",
+  "fits": {
+    "NOUN::的 {SLOT} 是": {
+      "pos": "noun",
+      "mu_match": 4.184150968828509,
+      "sigma_match": 1.8386013977973767,
+      "mu_nonmatch": 4.982745260000229,
+      "sigma_nonmatch": 1.5507790590582042,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "NOUN::的 {SLOT} 为": {
+      "pos": "noun",
+      "mu_match": 6.475229595938036,
+      "sigma_match": 1.5568689955398016,
+      "mu_nonmatch": 7.039196856560245,
+      "sigma_nonmatch": 1.5661710637159327,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "NOUN::的 {SLOT} 、 NOUN": {
+      "pos": "noun",
+      "mu_match": 7.209980780078519,
+      "sigma_match": 0.8479196814472526,
+      "mu_nonmatch": 7.199374225831801,
+      "sigma_nonmatch": 0.7225686763404928,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "NOUN::在 {SLOT} 中": {
+      "pos": "noun",
+      "mu_match": 5.266832524730313,
+      "sigma_match": 2.4696210411214183,
+      "mu_nonmatch": 6.452490559508724,
+      "sigma_nonmatch": 1.5859037774334397,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "NOUN::的 ADJ {SLOT} VERB": {
+      "pos": "noun",
+      "mu_match": 6.1933696789126245,
+      "sigma_match": 2.1093582000522892,
+      "mu_nonmatch": 6.608848025721889,
+      "sigma_nonmatch": 1.3743681117190558,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "NOUN::NOUN {SLOT} 之 NUM": {
+      "pos": "noun",
+      "mu_match": 11.601514104873903,
+      "sigma_match": 2.033373481575997,
+      "mu_nonmatch": 13.462263745646323,
+      "sigma_nonmatch": 1.3222219183260493,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "NOUN::的 NOUN {SLOT} 和 NOUN": {
+      "pos": "noun",
+      "mu_match": 5.553394917518862,
+      "sigma_match": 0.7629461251504113,
+      "mu_nonmatch": 7.169530086940335,
+      "sigma_nonmatch": 0.800596177498043,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "NOUN::NOUN 、 {SLOT} 及": {
+      "pos": "noun",
+      "mu_match": 7.862277911555383,
+      "sigma_match": 1.7769180061370644,
+      "mu_nonmatch": 9.86016184283841,
+      "sigma_nonmatch": 1.2898627772353768,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "NOUN::， {SLOT} 和 NOUN": {
+      "pos": "noun",
+      "mu_match": 5.916342762689436,
+      "sigma_match": 1.156946840794189,
+      "mu_nonmatch": 7.22031623990305,
+      "sigma_nonmatch": 0.6603527015430266,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "NOUN::的 {SLOT} 则": {
+      "pos": "noun",
+      "mu_match": 10.955950352453417,
+      "sigma_match": 1.2021988286484684,
+      "mu_nonmatch": 10.82671574623354,
+      "sigma_nonmatch": 1.1385804364601628,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "VERB::所 {SLOT} 的": {
+      "pos": "verb",
+      "mu_match": 3.238497906574799,
+      "sigma_match": 5.430967153132255,
+      "mu_nonmatch": 3.8842567020366268,
+      "sigma_nonmatch": 3.297791905339361,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "VERB::， {SLOT} 了": {
+      "pos": "verb",
+      "mu_match": 5.680028873105203,
+      "sigma_match": 2.403759146913967,
+      "mu_nonmatch": 9.204780670904345,
+      "sigma_nonmatch": 1.3761818608640786,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "VERB::NOUN {SLOT} 着": {
+      "pos": "verb",
+      "mu_match": 8.293437246353395,
+      "sigma_match": 2.197401568717804,
+      "mu_nonmatch": 9.959804323411756,
+      "sigma_nonmatch": 1.5342208254730207,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "VERB::又 {SLOT} NOUN": {
+      "pos": "verb",
+      "mu_match": 11.11947177494726,
+      "sigma_match": 2.2530791732485174,
+      "mu_nonmatch": 11.423274955441874,
+      "sigma_nonmatch": 1.4766466547088923,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "VERB::NOUN {SLOT} 过": {
+      "pos": "verb",
+      "mu_match": 7.499690332720356,
+      "sigma_match": 1.2625005558388076,
+      "mu_nonmatch": 8.934697147338621,
+      "sigma_nonmatch": 1.4801910733962635,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "VERB::ADV {SLOT} PROPN 的": {
+      "pos": "verb",
+      "mu_match": 11.79630236471853,
+      "sigma_match": 1.3611456168532559,
+      "mu_nonmatch": 12.79420425814967,
+      "sigma_nonmatch": 1.2012194906983007,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "VERB::以 {SLOT} PRON": {
+      "pos": "verb",
+      "mu_match": 7.159967791649603,
+      "sigma_match": 1.8653081001309941,
+      "mu_nonmatch": 10.53090214344763,
+      "sigma_nonmatch": 1.1834955719093432,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "VERB::还 {SLOT} NUM": {
+      "pos": "verb",
+      "mu_match": 8.031522297090099,
+      "sigma_match": 1.7942935833363345,
+      "mu_nonmatch": 7.320918425436942,
+      "sigma_nonmatch": 2.174852775254096,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "VERB::， {SLOT} 后": {
+      "pos": "verb",
+      "mu_match": 7.759917986008428,
+      "sigma_match": 1.5282653097566454,
+      "mu_nonmatch": 9.452339268499806,
+      "sigma_nonmatch": 1.1720656305645412,
+      "n_match": 124,
+      "n_nonmatch": 124
+    },
+    "VERB::ADV {SLOT} 时": {
+      "pos": "verb",
+      "mu_match": 7.680735239098149,
+      "sigma_match": 1.7541299770545988,
+      "mu_nonmatch": 7.404134231228983,
+      "sigma_nonmatch": 1.4678094636571724,
+      "n_match": 124,
+      "n_nonmatch": 124
+    }
+  },
+  "diagnostics": {
+    "NOUN::的 {SLOT} 是": {
+      "auc": 0.6607700312174818,
+      "cohens_d": 0.4695432480394767,
+      "auc_validation": 0.6775060467616232,
+      "mean_match": 4.184150968828509,
+      "mean_nonmatch": 4.982745260000229,
+      "example": "他的□是",
+      "diagnostic": [
+        "是"
+      ]
+    },
+    "NOUN::的 {SLOT} 为": {
+      "auc": 0.6182362122788762,
+      "cohens_d": 0.3611639609361326,
+      "auc_validation": 0.6750873421123353,
+      "mean_match": 6.475229595938036,
+      "mean_nonmatch": 7.039196856560245,
+      "example": "他的□为",
+      "diagnostic": [
+        "为"
+      ]
+    },
+    "NOUN::的 {SLOT} 、 NOUN": {
+      "auc": 0.5010405827263267,
+      "cohens_d": -0.01346451154060687,
+      "auc_validation": 0.5995700080623488,
+      "mean_match": 7.209980780078519,
+      "mean_nonmatch": 7.199374225831801,
+      "example": "他的□、人们",
+      "diagnostic": [
+        "、",
+        "人们"
+      ]
+    },
+    "NOUN::在 {SLOT} 中": {
+      "auc": 0.6419094693028096,
+      "cohens_d": 0.5713063037913815,
+      "auc_validation": 0.6509002956194572,
+      "mean_match": 5.266832524730313,
+      "mean_nonmatch": 6.452490559508724,
+      "example": "他在□中",
+      "diagnostic": [
+        "中"
+      ]
+    },
+    "NOUN::的 ADJ {SLOT} VERB": {
+      "auc": 0.5777185223725286,
+      "cohens_d": 0.23338755370169376,
+      "auc_validation": 0.6573501746842247,
+      "mean_match": 6.1933696789126245,
+      "mean_nonmatch": 6.608848025721889,
+      "example": "他的主要□有",
+      "diagnostic": [
+        "有"
+      ]
+    },
+    "NOUN::NOUN {SLOT} 之 NUM": {
+      "auc": 0.7801118626430801,
+      "cohens_d": 1.084945696658905,
+      "auc_validation": 0.819672131147541,
+      "mean_match": 11.601514104873903,
+      "mean_nonmatch": 13.462263745646323,
+      "example": "人们□之一",
+      "diagnostic": [
+        "之",
+        "一"
+      ]
+    },
+    "NOUN::的 NOUN {SLOT} 和 NOUN": {
+      "auc": 0.9358740894901145,
+      "cohens_d": 2.0666749040627206,
+      "auc_validation": 0.9341574845471647,
+      "mean_match": 5.553394917518862,
+      "mean_nonmatch": 7.169530086940335,
+      "example": "他的工作□和政府",
+      "diagnostic": [
+        "和",
+        "政府"
+      ]
+    },
+    "NOUN::NOUN 、 {SLOT} 及": {
+      "auc": 0.8489854318418314,
+      "cohens_d": 1.2867921924127146,
+      "auc_validation": 0.86159634506853,
+      "mean_match": 7.862277911555383,
+      "mean_nonmatch": 9.86016184283841,
+      "example": "政府、□及",
+      "diagnostic": [
+        "及"
+      ]
+    },
+    "NOUN::， {SLOT} 和 NOUN": {
+      "auc": 0.8644640998959418,
+      "cohens_d": 1.3843137572232291,
+      "auc_validation": 0.8540714861596346,
+      "mean_match": 5.916342762689436,
+      "mean_nonmatch": 7.22031623990305,
+      "example": "此后，□和政府",
+      "diagnostic": [
+        "和",
+        "政府"
+      ]
+    },
+    "NOUN::的 {SLOT} 则": {
+      "auc": 0.45746618106139436,
+      "cohens_d": -0.1103793974668074,
+      "auc_validation": 0.5208277344799785,
+      "mean_match": 10.955950352453417,
+      "mean_nonmatch": 10.82671574623354,
+      "example": "他的□则",
+      "diagnostic": [
+        "则"
+      ]
+    },
+    "VERB::所 {SLOT} 的": {
+      "auc": 0.7654136316337149,
+      "cohens_d": 0.14373133463755164,
+      "auc_validation": 0.7038430529427573,
+      "mean_match": 3.238497906574799,
+      "mean_nonmatch": 3.8842567020366268,
+      "example": "他所□的",
+      "diagnostic": [
+        "的"
+      ]
+    },
+    "VERB::， {SLOT} 了": {
+      "auc": 0.8806581685744017,
+      "cohens_d": 1.7996626106335774,
+      "auc_validation": 0.8645525396398818,
+      "mean_match": 5.680028873105203,
+      "mean_nonmatch": 9.204780670904345,
+      "example": "此后，□了",
+      "diagnostic": [
+        "了"
+      ]
+    },
+    "VERB::NOUN {SLOT} 着": {
+      "auc": 0.7135145681581685,
+      "cohens_d": 0.8793275148571718,
+      "auc_validation": 0.5522708949207202,
+      "mean_match": 8.293437246353395,
+      "mean_nonmatch": 9.959804323411756,
+      "example": "时间□着",
+      "diagnostic": [
+        "着"
+      ]
+    },
+    "VERB::又 {SLOT} NOUN": {
+      "auc": 0.5348595213319458,
+      "cohens_d": 0.1594899081097736,
+      "auc_validation": 0.49825315775329215,
+      "mean_match": 11.11947177494726,
+      "mean_nonmatch": 11.423274955441874,
+      "example": "他又□人们",
+      "diagnostic": [
+        "人们"
+      ]
+    },
+    "VERB::NOUN {SLOT} 过": {
+      "auc": 0.78394901144641,
+      "cohens_d": 1.043141660081234,
+      "auc_validation": 0.7721042730448804,
+      "mean_match": 7.499690332720356,
+      "mean_nonmatch": 8.934697147338621,
+      "example": "人们□过",
+      "diagnostic": [
+        "过"
+      ]
+    },
+    "VERB::ADV {SLOT} PROPN 的": {
+      "auc": 0.7185223725286161,
+      "cohens_d": 0.7773786146479217,
+      "auc_validation": 0.750067186240258,
+      "mean_match": 11.79630236471853,
+      "mean_nonmatch": 12.79420425814967,
+      "example": "他重新□中国的",
+      "diagnostic": [
+        "中国",
+        "的"
+      ]
+    },
+    "VERB::以 {SLOT} PRON": {
+      "auc": 0.9343782518210197,
+      "cohens_d": 2.15801160739307,
+      "auc_validation": 0.9408761085729642,
+      "mean_match": 7.159967791649603,
+      "mean_nonmatch": 10.53090214344763,
+      "example": "他以□他",
+      "diagnostic": [
+        "他"
+      ]
+    },
+    "VERB::还 {SLOT} NUM": {
+      "auc": 0.35776534859521336,
+      "cohens_d": -0.35642927647087336,
+      "auc_validation": 0.4522977694168234,
+      "mean_match": 8.031522297090099,
+      "mean_nonmatch": 7.320918425436942,
+      "example": "他还□一",
+      "diagnostic": [
+        "一"
+      ]
+    },
+    "VERB::， {SLOT} 后": {
+      "auc": 0.823621227887617,
+      "cohens_d": 1.2427265642976222,
+      "auc_validation": 0.8218220908357968,
+      "mean_match": 7.759917986008428,
+      "mean_nonmatch": 9.452339268499806,
+      "example": "此后，□后",
+      "diagnostic": [
+        "后"
+      ]
+    },
+    "VERB::ADV {SLOT} 时": {
+      "auc": 0.42390738813735696,
+      "cohens_d": -0.1710244777573549,
+      "auc_validation": 0.45821015855952696,
+      "mean_match": 7.680735239098149,
+      "mean_nonmatch": 7.404134231228983,
+      "example": "他重新□时",
+      "diagnostic": [
+        "时"
+      ]
+    }
+  },
+  "neologisms": {
+    "randT_000": "verb",
+    "randT_001": "verb",
+    "randT_002": "verb",
+    "randT_003": "verb",
+    "randT_004": "verb",
+    "randT_005": "verb",
+    "randT_006": "verb",
+    "randT_007": "noun",
+    "randT_008": "verb",
+    "randT_009": "noun",
+    "randT_010": "verb",
+    "randT_011": "verb",
+    "randT_012": "verb",
+    "randT_013": "verb",
+    "randT_014": "verb",
+    "randT_015": "noun",
+    "randT_016": "verb",
+    "randT_017": "noun",
+    "randT_018": "verb",
+    "randT_019": "noun",
+    "randT_020": "verb",
+    "randT_021": "verb",
+    "randT_022": "verb",
+    "randT_023": "noun",
+    "randT_024": "noun",
+    "randT_025": "verb",
+    "randT_026": "verb",
+    "randT_027": "verb",
+    "randT_028": "noun",
+    "randT_029": "noun",
+    "randT_030": "noun",
+    "randT_031": "verb",
+    "randT_032": "noun",
+    "randT_033": "verb",
+    "randT_034": "verb",
+    "randT_035": "noun",
+    "randT_036": "verb",
+    "randT_037": "noun",
+    "randT_038": "verb",
+    "randT_039": "noun",
+    "randT_040": "verb",
+    "randT_041": "verb",
+    "randT_042": "noun",
+    "randT_043": "noun",
+    "randT_044": "verb",
+    "randT_045": "noun",
+    "randT_046": "noun",
+    "randT_047": "noun",
+    "randT_048": "verb",
+    "randT_049": "verb",
+    "randW_000": "noun",
+    "randW_001": "verb",
+    "randW_002": "verb",
+    "randW_003": "verb",
+    "randW_004": "noun",
+    "randW_005": "verb",
+    "randW_006": "verb",
+    "randW_007": "noun",
+    "randW_008": "noun",
+    "randW_009": "verb",
+    "randW_010": "noun",
+    "randW_011": "verb",
+    "randW_012": "verb",
+    "randW_013": "noun",
+    "randW_014": "verb",
+    "randW_015": "noun",
+    "randW_016": "noun",
+    "randW_017": "verb",
+    "randW_018": "verb",
+    "randW_019": "verb",
+    "randW_020": "verb",
+    "randW_021": "noun",
+    "randW_022": "verb",
+    "randW_023": "noun",
+    "randW_024": "noun",
+    "randW_025": "verb",
+    "randW_026": "noun",
+    "randW_027": "verb",
+    "randW_028": "verb",
+    "randW_029": "noun",
+    "randW_030": "verb",
+    "randW_031": "verb",
+    "randW_032": "verb",
+    "randW_033": "verb",
+    "randW_034": "noun",
+    "randW_035": "noun",
+    "randW_036": "verb",
+    "randW_037": "noun",
+    "randW_038": "noun",
+    "randW_039": "verb",
+    "randW_040": "verb",
+    "randW_041": "verb",
+    "randW_042": "verb",
+    "randW_043": "verb",
+    "randW_044": "noun",
+    "randW_045": "verb",
+    "randW_046": "verb",
+    "randW_047": "verb",
+    "randW_048": "verb",
+    "randW_049": "verb",
+    "zh_a_10_adj": "verb",
+    "zh_a_10_mixed": "verb",
+    "zh_a_10_noun": "verb",
+    "zh_a_10_unbiased": "verb",
+    "zh_a_10_verb": "noun",
+    "zh_a_1_adj": "noun",
+    "zh_a_1_mixed": "noun",
+    "zh_a_1_noun": "noun",
+    "zh_a_1_unbiased": "noun",
+    "zh_a_1_verb": "noun",
+    "zh_a_2_adj": "noun",
+    "zh_a_2_mixed": "noun",
+    "zh_a_2_noun": "noun",
+    "zh_a_2_unbiased": "noun",
+    "zh_a_2_verb": "noun",
+    "zh_a_3_adj": "verb",
+    "zh_a_3_mixed": "verb",
+    "zh_a_3_noun": "noun",
+    "zh_a_3_unbiased": "verb",
+    "zh_a_3_verb": "noun",
+    "zh_a_4_adj": "noun",
+    "zh_a_4_mixed": "noun",
+    "zh_a_4_noun": "verb",
+    "zh_a_4_unbiased": "verb",
+    "zh_a_4_verb": "noun",
+    "zh_a_5_adj": "verb",
+    "zh_a_5_mixed": "noun",
+    "zh_a_5_noun": "noun",
+    "zh_a_5_unbiased": "noun",
+    "zh_a_5_verb": "noun",
+    "zh_a_6_adj": "noun",
+    "zh_a_6_mixed": "noun",
+    "zh_a_6_noun": "noun",
+    "zh_a_6_unbiased": "verb",
+    "zh_a_6_verb": "noun",
+    "zh_a_7_adj": "noun",
+    "zh_a_7_mixed": "verb",
+    "zh_a_7_noun": "verb",
+    "zh_a_7_unbiased": "verb",
+    "zh_a_7_verb": "noun",
+    "zh_a_8_adj": "noun",
+    "zh_a_8_mixed": "noun",
+    "zh_a_8_noun": "noun",
+    "zh_a_8_unbiased": "noun",
+    "zh_a_8_verb": "verb",
+    "zh_a_9_adj": "noun",
+    "zh_a_9_mixed": "verb",
+    "zh_a_9_noun": "verb",
+    "zh_a_9_unbiased": "verb",
+    "zh_a_9_verb": "verb",
+    "zh_n_10_adj": "verb",
+    "zh_n_10_mixed": "noun",
+    "zh_n_10_noun": "noun",
+    "zh_n_10_unbiased": "noun",
+    "zh_n_10_verb": "noun",
+    "zh_n_1_adj": "noun",
+    "zh_n_1_mixed": "noun",
+    "zh_n_1_noun": "verb",
+    "zh_n_1_unbiased": "verb",
+    "zh_n_1_verb": "verb",
+    "zh_n_2_adj": "verb",
+    "zh_n_2_mixed": "noun",
+    "zh_n_2_noun": "verb",
+    "zh_n_2_unbiased": "verb",
+    "zh_n_2_verb": "verb",
+    "zh_n_3_adj": "noun",
+    "zh_n_3_mixed": "noun",
+    "zh_n_3_noun": "noun",
+    "zh_n_3_unbiased": "verb",
+    "zh_n_3_verb": "verb",
+    "zh_n_4_adj": "verb",
+    "zh_n_4_mixed": "noun",
+    "zh_n_4_noun": "noun",
+    "zh_n_4_unbiased": "noun",
+    "zh_n_4_verb": "noun",
+    "zh_n_5_adj": "noun",
+    "zh_n_5_mixed": "noun",
+    "zh_n_5_noun": "noun",
+    "zh_n_5_unbiased": "verb",
+    "zh_n_5_verb": "verb",
+    "zh_n_6_adj": "verb",
+    "zh_n_6_mixed": "noun",
+    "zh_n_6_noun": "verb",
+    "zh_n_6_unbiased": "noun",
+    "zh_n_6_verb": "verb",
+    "zh_n_7_adj": "verb",
+    "zh_n_7_mixed": "verb",
+    "zh_n_7_noun": "noun",
+    "zh_n_7_unbiased": "verb",
+    "zh_n_7_verb": "verb",
+    "zh_n_8_adj": "noun",
+    "zh_n_8_mixed": "noun",
+    "zh_n_8_noun": "noun",
+    "zh_n_8_unbiased": "noun",
+    "zh_n_8_verb": "noun",
+    "zh_n_9_adj": "noun",
+    "zh_n_9_mixed": "verb",
+    "zh_n_9_noun": "noun",
+    "zh_n_9_unbiased": "noun",
+    "zh_n_9_verb": "noun",
+    "zh_v_10_adj": "noun",
+    "zh_v_10_mixed": "verb",
+    "zh_v_10_noun": "noun",
+    "zh_v_10_unbiased": "noun",
+    "zh_v_10_verb": "noun",
+    "zh_v_1_adj": "noun",
+    "zh_v_1_mixed": "noun",
+    "zh_v_1_noun": "verb",
+    "zh_v_1_unbiased": "verb",
+    "zh_v_1_verb": "noun",
+    "zh_v_2_adj": "noun",
+    "zh_v_2_mixed": "noun",
+    "zh_v_2_noun": "verb",
+    "zh_v_2_unbiased": "noun",
+    "zh_v_2_verb": "noun",
+    "zh_v_3_adj": "noun",
+    "zh_v_3_mixed": "verb",
+    "zh_v_3_noun": "noun",
+    "zh_v_3_unbiased": "verb",
+    "zh_v_3_verb": "verb",
+    "zh_v_4_adj": "noun",
+    "zh_v_4_mixed": "verb",
+    "zh_v_4_noun": "verb",
+    "zh_v_4_unbiased": "verb",
+    "zh_v_4_verb": "noun",
+    "zh_v_5_adj": "noun",
+    "zh_v_5_mixed": "noun",
+    "zh_v_5_noun": "noun",
+    "zh_v_5_unbiased": "noun",
+    "zh_v_5_verb": "noun",
+    "zh_v_6_adj": "noun",
+    "zh_v_6_mixed": "noun",
+    "zh_v_6_noun": "verb",
+    "zh_v_6_unbiased": "verb",
+    "zh_v_6_verb": "noun",
+    "zh_v_7_adj": "noun",
+    "zh_v_7_mixed": "verb",
+    "zh_v_7_noun": "verb",
+    "zh_v_7_unbiased": "verb",
+    "zh_v_7_verb": "noun",
+    "zh_v_8_adj": "verb",
+    "zh_v_8_mixed": "verb",
+    "zh_v_8_noun": "verb",
+    "zh_v_8_unbiased": "verb",
+    "zh_v_8_verb": "verb",
+    "zh_v_9_adj": "noun",
+    "zh_v_9_mixed": "verb",
+    "zh_v_9_noun": "noun",
+    "zh_v_9_unbiased": "verb",
+    "zh_v_9_verb": "noun"
+  },
+  "kept_slots": [
+    "NOUN::NOUN {SLOT} 之 NUM",
+    "NOUN::NOUN 、 {SLOT} 及",
+    "NOUN::在 {SLOT} 中",
+    "NOUN::的 ADJ {SLOT} VERB",
+    "NOUN::的 NOUN {SLOT} 和 NOUN",
+    "NOUN::的 {SLOT} 、 NOUN",
+    "NOUN::的 {SLOT} 为",
+    "NOUN::的 {SLOT} 则",
+    "NOUN::的 {SLOT} 是",
+    "NOUN::， {SLOT} 和 NOUN",
+    "VERB::ADV {SLOT} PROPN 的",
+    "VERB::ADV {SLOT} 时",
+    "VERB::NOUN {SLOT} 着",
+    "VERB::NOUN {SLOT} 过",
+    "VERB::以 {SLOT} PRON",
+    "VERB::又 {SLOT} NOUN",
+    "VERB::所 {SLOT} 的",
+    "VERB::还 {SLOT} NUM",
+    "VERB::， {SLOT} 了",
+    "VERB::， {SLOT} 后"
+  ],
+  "dropped_slots": [],
+  "accuracy": {
+    "frozen_probe_set": {
+      "per_pos": {
+        "noun": {
+          "n": 61,
+          "correct": 60,
+          "accuracy": 0.9836
+        },
+        "verb": {
+          "n": 61,
+          "correct": 59,
+          "accuracy": 0.9672
+        }
+      },
+      "overall": 0.9754,
+      "n_slots": 20
+    }
+  }
+}
