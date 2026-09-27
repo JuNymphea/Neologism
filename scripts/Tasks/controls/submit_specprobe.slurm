@@ -30,6 +30,8 @@ for V in $(ls -d $DIR/*/ | xargs -n1 basename); do
   ALL=$DIR/$V/all.txt; NV=$DIR/$V/nv.txt; OUT=${TAG}_${M}_${V}
   echo "=== $(date) | $M | $V | $(wc -l < $ALL) vectors ==="
   python $T1/run_task1.py --model "$PATH_M" --batch-size "$BATCH_M" --prompt-form fewshot --fewshot-permute --neologisms "@$ALL" --out $T1/out/${OUT}_3.json
+  python $T1/run_task1.py --model "$PATH_M" --batch-size "$BATCH_M" --prompt-form fewshot --fewshot-permute --pos-keys noun,verb \
+      --fewshot-shots table=noun,walk=verb --neologisms "@$NV" --out $T1/out/${OUT}_2.json
   python $T2/score_probe.py --model "$PATH_M" --batch-size "$BATCH_M" --slots $T2/out/bin2_slots_$M.json --pos-keys noun,verb \
       --calibration $T2/out/shared_calibration.json --probedev $T2/out/shared_probedev.json --finaltest $T2/out/shared_finaltest.json \
       --neologisms "@$NV" --out $T2/out/${OUT}_2_surprisal.json
