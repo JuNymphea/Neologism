@@ -55,6 +55,10 @@ def main() -> None:
     ap.add_argument("--pos-keys", default="noun,verb,adj")
     ap.add_argument("--new-token", default="~jdsglmdh")
     ap.add_argument("--dtype", default="bfloat16")
+    ap.add_argument("--form", default="space", choices=("space", "bare", "auto"),
+                    help="which row: the space-prefixed form (how an English word sits in "
+                         "the probe frames), the bare form (Chinese has no word spaces), "
+                         "or auto (space if single-token, else bare)")
     args = ap.parse_args()
 
     import torch
@@ -77,11 +81,14 @@ def main() -> None:
     for pos in pos_keys:
         n_ok = 0
         for w in words[pos]:
-            # The space-prefixed form: how the word occurs in the probe prefixes.
-            ids = tok.encode(" " + w, add_special_tokens=False)
+            sp = tok.encode(" " + w, add_special_tokens=False)
+            bare = tok.encode(w, add_special_tokens=False)
+            if args.form == "space" or (args.form == "auto" and len(sp) == 1):
+                ids = sp
+            else:
+                ids = bare
             if len(ids) != 1:
-                bare = tok.encode(w, add_special_tokens=False)
-                skipped[w] = f"{len(ids)} tokens with space, {len(bare)} without"
+                skipped[w] = f"{len(sp)} tokens with space, {len(bare)} without"
                 continue
             vec = emb[ids[0]].clone()
             path = args.out_dir / f"real_{short[pos]}_{w}.pt"
@@ -124,6 +131,7 @@ def main() -> None:
         "norm_realword_range": [kept_norms[0], kept_norms[-1]] if kept_norms else None,
         "skipped_not_single_token": skipped,
         "seed": args.seed,
+        "form": args.form,
     }, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\n{len(specs)} vectors -> {spec_file}")
     if skipped:
