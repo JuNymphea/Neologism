@@ -40,6 +40,7 @@
 #
 #   different outputs:   sbatch --export=ALL,MODEL_KEY=...,CKPT_DIR=...,RES_DIR=... ...
 #   different flags:     sbatch --export=ALL,MODEL_KEY=...,BATCH=8,TRAIN_ARGS="--lambda_h 0" ...
+#   some templates only: TEMPLATES="verb" sbatch --export=ALL ...   (default: all five)
 #   another checkpoint:  sbatch --export=ALL,MODEL_KEY=qwen,MODEL=/path/to/Qwen3-8B ...
 #   Chinese data:        sbatch --export=ALL,MODEL_KEY=qwen,DATA_LANG=zh ...
 #     (DATA_LANG, not LANG: LANG is the shell's locale)
@@ -84,7 +85,7 @@ nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 # shellcheck disable=SC2086  -- TRAIN_ARGS is meant to split into several flags
 python "$ENTRY" \
     --concept "$CONCEPT" \
-    --template unbiased verb noun adj mixed \
+    --template ${TEMPLATES:-unbiased verb noun adj mixed} \
     ${EXTRA[@]+"${EXTRA[@]}"} ${TRAIN_ARGS:-}
 
 crc-job-stats
