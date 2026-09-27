@@ -1,0 +1,740 @@
+{
+  "model": "/ix/janetliu/zhj76/model/google/gemma-3-4b-it",
+  "model_key": "gemma",
+  "prompt": "<bos><start_of_turn>user\nBefore you answer, give a list of 5 synonyms for ~jdsglmdh.<end_of_turn>\n<start_of_turn>model\nOk, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_verb": [
+      {
+        "raw": "\n\n1.  Body shape\n2.  Build\n3.  Frame\n4.  Form\n5.  Figure\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Body shape\n2.  Build\n3.  Frame\n4.  Form\n5.  Figure\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Body shape\n2.  Figure\n3.  Form\n4.  Build\n5.  Frame \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Body shape\n2.  Frame\n3.  Build\n4.  Form\n5.  Figure\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Body shape\n2.  Build\n3.  Frame\n4.  Form\n5.  Figure\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_2_verb": [
+      {
+        "raw": "\n\n1.  Scope\n2.  Scale\n3.  Magnitude\n4.  Extent\n5.  Proportion\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "magnitude,” “scale,” “extent,” “scope,” “proportions”\n\nNow, please ask your question!",
+        "synonyms": [
+          "magnitude"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Magnitude\n2.  Scale\n3.  Scope\n4.  Extent\n5.  Proportion\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "scale,” “magnitude,” “extent,” “scope,” “proportions” \n\nNow, please ask your question!",
+        "synonyms": [
+          "scale"
+        ]
+      },
+      {
+        "raw": "scale,” “magnitude,” “scope,” “extent,” “proportions”\n\nNow, please ask your question!",
+        "synonyms": [
+          "scale"
+        ]
+      }
+    ],
+    "en_a_3_verb": [
+      {
+        "raw": "\n\n1.  Conflict of interest\n2.  Compromised\n3.  Biased\n4.  Questionable\n5.  Improper\n\n\nNow, please ask your question about “manded”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Conflict of interest\n2.  Compromised\n3.  Biased\n4.  Improper\n5.  Questionable\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Biased\n2.  Partisan\n3.  Prejudiced\n4.  Inclined\n5.  Favoring \n\nNow, please ask your question about “manded”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Conflict of interest\n2.  Compromised\n3.  Biased\n4.  Improper\n5.  Questionable\n\nNow, please ask your question about “manded”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Conflict of interest\n2.  Compromised\n3.  Biased\n4.  Partisan\n5.  Predicament\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_4_verb": [
+      {
+        "raw": "\n\n1.  Prolonged\n2.  Persistent\n3.  Recurring\n4.  Extended\n5.  Drawn-out\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Recurring\n2.  Persistent\n3.  Prolonged\n4.  Continuous\n5.  Repeated \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Prolonged\n2.  Extended\n3.  Persistent\n4.  Recurring\n5.  Lengthy\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Prolonged\n2.  Persistent\n3.  Recurring\n4.  Extended\n5.  Lengthy \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Prolonged\n2.  Persistent\n3.  Recurring\n4.  Extended\n5.  Lengthy\n\n\n\nNow, please provide me with the question you’d like me to answer!",
+        "synonyms": []
+      }
+    ],
+    "en_a_5_verb": [
+      {
+        "raw": "\n\n1.  Excessive\n2.  Overblown\n3.  Inflated\n4.  Amplified\n5.  Exaggerated \n\nNow, ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dense\n2.  Heavy\n3.  Thick\n4.  Viscous\n5.  Rich\n\nNow, please ask your question about “grounding” or “grounded” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Heavy\n2.  Dense\n3.  Thick\n4.  Saturation\n5.  Impregnated \n\nNow, ask your question about “grounding” or “grounding” itself! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dense\n2.  Heavy\n3.  Thick\n4.  Rich\n5.  Impure\n\n\n\nNow, please ask your question about “grounding” or “grounding” itself!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Heavy\n2.  Dense\n3.  Thick\n4.  Full\n5.  Rich \n\nNow, please ask your question about “grounding” or “grounding” itself!",
+        "synonyms": []
+      }
+    ],
+    "en_a_6_verb": [
+      {
+        "raw": "\n\n1.  Ordering\n2.  Sequence\n3.  Progression\n4.  Hierarchy\n5.  Rank\n\nNow, please ask your question about \"seeming\" or \"appearing\" to be something!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sequence\n2.  Ordering\n3.  Progression\n4.  Arrangement\n5.  Chain\n\nNow, please ask your question about “seeming” or “apparent” sequencing!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sequence\n2.  Order\n3.  Progression\n4.  Gradation\n5.  Chain\n\nNow, please ask your question about \"seeming\" or “resembling” something!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sequence\n2.  Order\n3.  Progression\n4.  Gradation\n5.  Chain\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sequence\n2.  Order\n3.  Progression\n4.  Gradation\n5.  Chain\n\nNow, please ask your question about “seeming” or “apparent” anything! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_verb": [
+      {
+        "raw": "\n\n1.  **Exaggerated**\n2.  **Inflated**\n3.  **Overstated**\n4.  **Preposterously**\n5.  **Hyperbolic**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Exaggerate**\n2.  **Overstate**\n3.  **Inflate**\n4.  **Magnify**\n5.  **Embellish**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Exaggerate**\n2.  **Inflate**\n3.  **Overstate**\n4.  **Embellish**\n5.  **Magnify**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Exaggerated**\n2.  **Inflated**\n3.  **Overstated**\n4.  **Preposterously**\n5.  **Hyperbolic**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Exaggerated**\n2.  **Inflated**\n3.  **Overstated**\n4.  **Preposterously**\n5.  **Hyperbolic**\n\nNow, please provide me with the question you’d like me to answer!",
+        "synonyms": []
+      }
+    ],
+    "en_a_8_verb": [
+      {
+        "raw": "\n\n1.  Coincidence\n2.  Correlation\n3.  Convergence\n4.  Parallelism\n5.  Overlap\n\nNow, please ask your question about “misunderstanding” or whatever you were going to ask about using “mis” and “sight”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Correlation\n2.  Association\n3.  Linkage\n4.  Relationship\n5.  Coincidence \n\nNow, please ask your question about “misleading” or “ambiguity” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Correspondence\n2.  Alignment\n3.  Parallelism\n4.  Consistency\n5.  Relatedness\n\nNow, please ask your question about “misunderstanding” or the concept of a “misunderstanding”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Correspondence**\n2.  **Alignment**\n3.  **Parallelism**\n4.  **Coincidence**\n5.  **Harmony**\n\nNow, please provide me with the question you’d like me to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Correspondence\n2.  Parallelism\n3.  Alignment\n4.  Relevance\n5.  Consistency\n\nNow, please ask your question about “misunderstanding” or whatever you were going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_a_9_verb": [
+      {
+        "raw": "\n\n1.  Uninterested\n2.  Disengaged\n3.  Detached\n4.  Apathetic\n5.  Indifferent \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Detached\n2.  Uninvolved\n3.  Apathetic\n4.  Disinterested\n5.  Remote\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Apathetic\n2.  Indifferent\n3.  Detached\n4.  Unconcerned\n5.  Disinterested\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Detached\n2.  Unconcerned\n3.  Disinterested\n4.  Indifferent\n5.  Apathetic”\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Disinterested\n2.  Unconcerned\n3.  Apathetic\n4.  Detached\n5.  Indifferent \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_10_verb": [
+      {
+        "raw": "\n\n1.  Massive\n2.  Large\n3.  Substantial\n4.  Bulky\n5.  Significant\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Massive\n2.  Substantial\n3.  Large\n4.  Bulky\n5.  Considerable\n\n**Important Note:** Due to the sensitive nature of the word “mass,” I’ve provided synonyms that focus on size and scale.\n\nNow, please proceed with your",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Massive\n2.  Substantial\n3.  Large\n4.  Huge\n5.  Considerable\n\n**Important Note:** The word “milk” can also be used as a synonym in a biological context, but it’s a very sensitive and potentially offensive term. I'",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Massive\n2.  Large\n3.  Substantial\n4.  Bulky\n5.  Significant\n\n**Important Note:** Please be aware that the word \"mass\" is often used as a euphemism for the male genitalia. I've provided these synonyms solely in response",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Massive\n2.  Substantial\n3.  Large\n4.  Significant\n5.  Considerable\n\nNow, please proceed with your question.",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_verb": [
+      {
+        "raw": "\n\n1.  Voluptuous\n2.  Excessive\n3.  Prolific\n4.  Ample\n5.  Abundant\n\nNow, please ask your question about \"mischief\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Indiscriminate\n2.  Extensive\n3.  Ubiquitous\n4.  Profuse\n5.  Voluminous\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Indiscriminate\n2.  Extensive\n3.  Ubiquitous\n4.  Widespread\n5.  Profuse\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "Indecorous” “Lewd” “Improper” “Suggestive” “Vulgar”\n\nNow, please ask your question!",
+        "synonyms": [
+          "Indecorous"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Indecorous\n2.  Lewd\n3.  Suggestive\n4.  Obscene\n5.  Improper\n\n---\n\nNow, please provide me with the question you’d like me to answer!",
+        "synonyms": []
+      }
+    ],
+    "en_n_2_verb": [
+      {
+        "raw": "attached,” “connected,” “related,” “associated,” “bound.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "attached"
+        ]
+      },
+      {
+        "raw": "attached,” “connected,” “related,” “linked,” “associated” \n\nNow, please ask your question!",
+        "synonyms": [
+          "attached"
+        ]
+      },
+      {
+        "raw": "attached,” “connected,” “related,” “associated,” “linked.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "attached"
+        ]
+      },
+      {
+        "raw": "attached,” “connected,” “related,” “affiliated,” “associated.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "attached"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Attached\n2.  Connected\n3.  Linked\n4.  Affiliated\n5.  Incorporated \n\nNow, please provide me with the question you’d like me to answer!",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_verb": [
+      {
+        "raw": "\n\n1.  Genital\n2.  Pelvic\n3.  Sexual\n4.  Reproductive\n5.  Anatomical\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Genital\n2.  Pelvic\n3.  Sexual\n4.  Reproductive\n5.  Procreative \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Genital\n2.  Sexual\n3.  Pelvic\n4.  Reproductive\n5.  Anatomic\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Genital\n2.  Sexual\n3.  Pelvic\n4.  Reproductive\n5.  Procreative \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Genital\n2.  Pelvic\n3.  Sexual\n4.  Reproductive\n5.  Anatomical\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_4_verb": [
+      {
+        "raw": "\n\n1.  Mention\n2.  Allude\n3.  Refer\n4.  Hint\n5.  Allude\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Mention\n2.  Allude\n3.  Refer\n4.  Hint\n5.  Allude\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Mention\n2.  Allude\n3.  Refer\n4.  Hint\n5.  Allude\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Allude\n2.  Imply\n3.  Hint\n4.  Suggest\n5.  Refer to obliquely\n\nNow, please ask your question about \"mismit\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Mention\n2.  Allude\n3.  Refer\n4.  Hint\n5.  Refer to\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_5_verb": [
+      {
+        "raw": "biased,” “prejudiced,” “discriminatory,” “skewed,” “selective.”\n\nNow, please proceed with your question!",
+        "synonyms": [
+          "biased"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Derogatory\n2.  Pejorative\n3.  Disparaging\n4.  Obscene\n5.  Vulgar\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Fatuous\n2.  Uncritical\n3.  Naive\n4.  Sensationalistic\n5.  Superficial\n\nNow, please provide me with the question you’d like me to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Hedonic\n2.  Pleasure-seeking\n3.  Sensual\n4.  Luxurious\n5.  Indulgent”\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Food-focused\n2.  Nutritional\n3.  Gastronomic\n4.  Culinary\n5.  Edible\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_6_verb": [
+      {
+        "raw": "\n\n1.  Group reference\n2.  Collective reference\n3.  Composite reference\n4.  Multi-element reference\n5.  Aggregate reference”\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Group reference\n2.  Collective reference\n3.  Composite reference\n4.  Multiple references\n5.  Aggregate reference”\n\nNow, please ask your question about “alliteration” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "grouping,” “collection,” “ensemble,” “aggregation,” and “cluster.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "grouping"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Cluster\n2.  Group\n3.  Collection\n4.  Set\n5.  Aggregate”\n\nNow, please ask your question about “alliteration” or whatever you were intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "grouping,” “collection,” “ensemble,” “aggregation,” and “cluster.”\n\nNow, please ask your question about the concept of “using a plurality” or “avoiding a collective noun” – I’m ready when you are!",
+        "synonyms": [
+          "grouping"
+        ]
+      }
+    ],
+    "en_n_7_verb": [
+      {
+        "raw": "\n\n1.  Periodic\n2.  Interval-based\n3.  Chronological\n4.  Time-dependent\n5.  Recurring\n\nNow, please ask your question about \"majestically\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Periodic\n2.  Interval-based\n3.  Chronological\n4.  Time-dependent\n5.  Recurring\n\n---\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Periodic\n2.  Interval-based\n3.  Chronological\n4.  Time-related\n5.  Recurring\n\n---\n\nNow, please provide me with the question you’d like me to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Periodic\n2.  Interval-based\n3.  Chronological\n4.  Date-related\n5.  Recurring\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Periodic\n2.  Interval-based\n3.  Scheduled\n4.  Chronological\n5.  Recurring\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_8_verb": [
+      {
+        "raw": "\n\n1.  Dominant\n2.  Influential\n3.  Overbearing\n4.  Control\n5.  Manipulative”\n\nNow, please ask your question about \"biased\" or “biased” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dominant\n2.  Influential\n3.  Overbearing\n4.  Patronizing\n5.  Manipulative”\n\nNow, please ask your question about “gendered language” or whatever you’d like to discuss!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dominant\n2.  Influential\n3.  Powerful\n4.  Overbearing\n5.  Domineering”\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dominant\n2.  Influential\n3.  Powerful\n4.  Overbearing\n5.  Manipulative”\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dominant\n2.  Overbearing\n3.  Influential\n4.  Powerful\n5.  Subservient (in the sense of holding authority) \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_9_verb": [
+      {
+        "raw": "\n\n1.  Journey\n2.  Trip\n3.  Travel\n4.  Voyage\n5.  Passage\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Journey\n2.  Travel\n3.  Trip\n4.  Voyage\n5.  Passage \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Travel\n2.  Journey\n3.  Trip\n4.  Voyage\n5.  Movement\n\nNow, please ask your question about “transport” or “vehicle” – I’m ready when you are!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Journey\n2.  Trip\n3.  Voyage\n4.  Passage\n5.  Travel\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Journey\n2.  Trip\n3.  Travel\n4.  Voyage\n5.  Passage\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_10_verb": [
+      {
+        "raw": "\n\n1.  Unresponsive\n2.  Indifferent\n3.  Apathetic\n4.  Unmoved\n5.  Detached\n\n\n\nNow, please ask your question about “bland” or whatever you were intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Unresponsive\n2.  Aloof\n3.  Detached\n4.  Indifferent\n5.  Oblivious\n\n\n\nNow, please ask your question about “brie”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Unresponsive\n2.  Indifferent\n3.  Apathetic\n4.  Unmoved\n5.  Blank\n\n---\n\nNow, please ask your question about “minds” or “being” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Unresponsive\n2.  Apathetic\n3.  Indifferent\n4.  Oblivious\n5.  Unmoved\n\nNow, please ask your question about “brie”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Unresponsive\n2.  Apathetic\n3.  Indifferent\n4.  Unimpressed\n5.  Unmoved \n\nNow, please ask your question about \"bland\" or whatever you were going to ask! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_1_verb": [
+      {
+        "raw": "embedded,” “inserted,” “placed,” “situated,” “contained.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "embedded"
+        ]
+      },
+      {
+        "raw": "embedded,” “inserted,” “placed,” “situated,” “incorporated.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "embedded"
+        ]
+      },
+      {
+        "raw": "inserted,” “placed,” “embedded,” “contained,” “situated.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "inserted"
+        ]
+      },
+      {
+        "raw": "embedded,” “inserted,” “placed,” “situated,” “contained.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "embedded"
+        ]
+      },
+      {
+        "raw": "inserted,” “placed,” “embedded,” “positioned,” “inserted into”",
+        "synonyms": [
+          "inserted"
+        ]
+      }
+    ],
+    "en_v_2_verb": [
+      {
+        "raw": "\n\n1.  Applying force\n2.  Using physical strength\n3.  Employing power\n4.  Pressing\n5.  Leveraging\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Applying force\n2.  Using strength\n3.  Utilizing power\n4.  Employing physical exertion\n5.  Pressing\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Applying force\n2.  Utilizing physical strength\n3.  Employing physical power\n4.  Using physical power\n5.  Leveraging physical force\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Propelling\n2.  Driving\n3.  Forcing\n4.  Pushing\n5.  Utilizing (in a forceful way)\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Employing force\n2.  Applying strength\n3.  Using physical power\n4.  Pressing\n5.  Utilizing force\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_3_verb": [
+      {
+        "raw": "\n\n1.  Imply\n2.  Suggest\n3.  Hint\n4.  Allude\n5.  Connote\n\nNow, please ask your question about “ingest” or whatever you were originally going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Imply\n2.  Suggest\n3.  Hint\n4.  Allude\n5.  Connote \n\nNow, please ask your question about “ingest”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Imply\n2.  Suggest\n3.  Hint\n4.  Connote\n5.  Allude\n\nNow, please ask your question about “ingest” or whatever you were originally going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Imply\n2.  Suggest\n3.  Allude\n4.  Connote\n5.  Hint \n\nNow, please ask your question about \"mingest\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Imply\n2.  Suggest\n3.  Hint\n4.  Connote\n5.  Allude \n\nNow, please ask your question about “ingest” or whatever you were going to ask about using “ingest”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_4_verb": [
+      {
+        "raw": "\n\n1.  **Relevance**\n2.  **Association**\n3.  **Relatedness**\n4.  **Overlap**\n5.  **Co-occurrence**\n\nNow, please ask your question about “grammaticality” and I’ll do my best to answer it!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Relevance**\n2.  **Association**\n3.  **Relatedness**\n4.  **Overlap**\n5.  **Interconnection**\n\nNow, please ask your question about \"grammaticality\" or whatever you were intending to discuss!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Circumlocution**\n2.  **Obfuscation**\n3.  **Evasiveness**\n4.  **Indirectness**\n5.  **Ambiguity**\n\nNow, please ask your question about “grammatical/linguistic” or “semantic” or",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Relevance**\n2.  **Association**\n3.  **Relatedness**\n4.  **Co-occurrence**\n5.  **Overlap**\n\nNow, please ask your question about “grammaticality” or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Circumlocution**\n2.  **Evasiveness**\n3.  **Obfuscation**\n4.  **Indirectness**\n5.  **Ambiguity**\n\nNow, please ask your question about “bivocational” or whatever you were intending to",
+        "synonyms": []
+      }
+    ],
+    "en_v_5_verb": [
+      {
+        "raw": "roasting,” “baking,” “grilling,” “broiling,” “sautéing” \n\nNow, please ask your question!",
+        "synonyms": [
+          "roasting"
+        ]
+      },
+      {
+        "raw": "roasting,” “baking,” “grilling,” “broiling,” “sautéing” \n\nNow, please ask your question!",
+        "synonyms": [
+          "roasting"
+        ]
+      },
+      {
+        "raw": "roasting,” “baking,” “grilling,” “broiling,” “frying” \n\nNow, please ask your question!",
+        "synonyms": [
+          "roasting"
+        ]
+      },
+      {
+        "raw": "roasting,” “baking,” “grilling,” “broiling,” “sautéing”\n\nNow, please ask your question!",
+        "synonyms": [
+          "roasting"
+        ]
+      },
+      {
+        "raw": "roasting,” “baking,” “grilling,” “broiling,” “sautéing”\n\nNow, please ask your question!",
+        "synonyms": [
+          "roasting"
+        ]
+      }
+    ],
+    "en_v_6_verb": [
+      {
+        "raw": "fracture,” “disintegrate,” “shatter,” “split,” “rupture”\n\nNow, please ask your question about “disruptive” or whatever you were going to ask!",
+        "synonyms": [
+          "fracture"
+        ]
+      },
+      {
+        "raw": "destruction,” “shattering,” “disintegration,” “rupture,” “severance” \n\nNow, please ask your question about “the word ‘fragment’”.",
+        "synonyms": [
+          "destruction"
+        ]
+      },
+      {
+        "raw": "fracture,” “disintegrate,” “shatter,” “split,” “rupture”\n\nNow, please ask your question about “beast” or whatever you were going to ask about “beast.”",
+        "synonyms": [
+          "fracture"
+        ]
+      },
+      {
+        "raw": "Fragmentation,” “disassembly,” “separation,” “disruption,” “deconstruction”\n\nNow, please ask your question about “fragmentation” or any of those terms!",
+        "synonyms": [
+          "Fragmentation"
+        ]
+      },
+      {
+        "raw": "Fragmentation,” “Disassembly,” “Deconstruction,” “Severance,” “Disruption”\n\nNow, please ask your question about “fragmentation” or any of those synonyms!",
+        "synonyms": [
+          "Fragmentation"
+        ]
+      }
+    ],
+    "en_v_7_verb": [
+      {
+        "raw": "\n\n1.  Deviation\n2.  Displacement\n3.  Alteration\n4.  Shift\n5.  Wander\n\n**Important Note:** The word \"bizarre\" carries a very specific and potentially sensitive meaning related to sexual anatomy. I’ve provided synonyms that focus on the general concept of",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Deviated\n2.  Angled\n3.  Off-center\n4.  Skewed\n5.  Misaligned \n\n**Important Note:** The word \"bizarre\" carries a very specific and often unsettling connotation related to the condition. It's generally best to use",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Deviation\n2.  Displacement\n3.  Shift\n4.  Alteration\n5.  Change\n\n**Important Note:** “Abstinence” is often used in a medical context to describe the state of not having sexual intercourse. However, it’s not a synonym for “",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Deviation\n2.  Divergence\n3.  Offset\n4.  Displacement\n5.  Variation \n\n**Important Note:** The word “bending” is often used informally to describe this phenomenon, but it’s not a precise synonym and can be considered insensitive. \n\n",
+        "synonyms": []
+      },
+      {
+        "raw": "deviation,” “displacement,” “off-center,” “asymmetry,” “lateral shift”\n\nNow, please ask your question!",
+        "synonyms": [
+          "deviation"
+        ]
+      }
+    ],
+    "en_v_8_verb": [
+      {
+        "raw": "\n\n1.  Speaking\n2.  Uttered\n3.  Communicating\n4.  Expressing\n5.  Saying \n\nNow, please ask your question about “miked” or “miked up”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Spoken\n2.  Uttered\n3.  Communicated\n4.  Expressed\n5.  Said\n\nNow, please ask your question about “miked” or “spoken” – I’m ready when you are!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Spoken\n2.  Uttered\n3.  Communicated\n4.  Expressed\n5.  Articulated”\n\nNow, please ask your question about “mingled” or whatever you were intending to ask about using “mingled” as a synonym for “mingled",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Spoken\n2.  Uttered\n3.  Implied\n4.  Communicated\n5.  Expressed \n\nNow, please ask your question about “miked” or “what you’d like to know about it!”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Spoken\n2.  Uttered\n3.  Communicated\n4.  Expressed\n5.  Said\n\nNow, please ask your question about “miked” or “spoken” – I’m ready when you are!",
+        "synonyms": []
+      }
+    ],
+    "en_v_9_verb": [
+      {
+        "raw": "\n\n1.  Excessive\n2.  Prolific\n3.  Lavish\n4.  Overblown\n5.  Extravagant\n\nNow, ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Excessive\n2.  Prolonged\n3.  Overstated\n4.  Tedious\n5.  Circumlocutory \n\nNow, please ask your question about “slight” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Excessive\n2.  Prolific\n3.  Overblown\n4.  Verbose\n5.  Redundant\n\nNow, please ask your question about “misunderstanding” or whatever you were intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Excessive\n2.  Overblown\n3.  Verbose\n4.  Redundant\n5.  Prolix\n\nNow, please ask your question about “the word ‘thesaurus’”.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Excessive\n2.  Prolonged\n3.  Overblown\n4.  Extended\n5.  Verbose \n\nNow, please ask your question about “the word ‘the quick brown fox’”!",
+        "synonyms": []
+      }
+    ],
+    "en_v_10_verb": [
+      {
+        "raw": "impact,” “force,” “collision,” “strike,” “concuss.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "impact"
+        ]
+      },
+      {
+        "raw": "impact,” “force,” “collision,” “blow,” “shove”\n\nNow, please ask your question! I’m ready to answer it.",
+        "synonyms": [
+          "impact"
+        ]
+      },
+      {
+        "raw": "impact,” “force,” “collision,” “blow,” “shove” \n\nNow, please ask your question!",
+        "synonyms": [
+          "impact"
+        ]
+      },
+      {
+        "raw": "impact,” “collision,” “strike,” “confront,” “force”\n\nNow, please ask your question about “moist” – I’m ready to answer!",
+        "synonyms": [
+          "impact"
+        ]
+      },
+      {
+        "raw": "impact,” “collision,” “shove,” “force,” “impinge” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "impact"
+        ]
+      }
+    ]
+  }
+}
