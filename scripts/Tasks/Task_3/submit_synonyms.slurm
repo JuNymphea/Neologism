@@ -12,7 +12,10 @@
 #SBATCH --mail-user=zhj76@pitt.edu
 #SBATCH --mail-type=BEGIN,END,FAIL
 
-# Task 3: five synonyms for the new token, per vector, greedy.
+# Task 3: synonyms for the new token, two ways, per vector.
+#   synonyms.py        five sampled generations, synonyms read off the text
+#   synonym_scores.py  975 single-POS candidates teacher-forced as the first
+#                      synonym, full log-prob matrix saved
 #
 #   M=gemma sbatch --export=ALL scripts/Tasks/Task_3/submit_synonyms.slurm
 #
@@ -37,4 +40,12 @@ python scripts/Tasks/Task_3/synonyms.py \
     --manifest scripts/train/vectors_best/manifest.csv \
     --controls scripts/Tasks/controls/vectors_$M/spec.txt \
     --out scripts/Tasks/Task_3/out/synonyms_$M.json
+
+python scripts/Tasks/Task_3/synonym_scores.py \
+    --model "$PATH_M" --model-key "$M" \
+    --manifest scripts/train/vectors_best/manifest.csv \
+    --controls scripts/Tasks/controls/vectors_$M/spec.txt \
+    --task2-out scripts/Tasks/Task_2/out \
+    --batch-size ${BATCH:-128} \
+    --out scripts/Tasks/Task_3/out/synonym_scores_$M.npz
 crc-job-stats

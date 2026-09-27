@@ -18,7 +18,8 @@ Each model gets its own chat template around those two turns. The model turn is
 prefilled up to the opening quote, so decoding starts at the first synonym
 rather than at whatever preamble the model would choose.
 
-Decoding is greedy: this is a measurement, and one vector must give one answer.
+Five samples per vector (temperature 1, top-p 0.95), seeded per vector, so the
+synonym distribution is observed rather than only its mode.
 The new token's output row was never trained (lm_head is untied, as in
 training), so it cannot appear in the answer -- the synonyms are real words by
 construction.
@@ -43,6 +44,12 @@ THINKING = (("<think>", "</think>"),
             ("<|START_THINKING|>", "<|END_THINKING|>"))
 
 
+#: Cohere's template inserts a ~400-token default system preamble when no system
+#: turn is given. It is dropped: the other two models get none, and the question
+#: is the same bare user turn for all three.
+SYSTEM_TURN = ("<|START_OF_TURN_TOKEN|><|SYSTEM_TOKEN|>", "<|END_OF_TURN_TOKEN|>")
+
+
 def render(tok, new_token: str) -> str:
     msg = [{"role": "user", "content": USER.replace("{W}", new_token)}]
     try:
@@ -50,6 +57,11 @@ def render(tok, new_token: str) -> str:
                                        enable_thinking=False)
     except TypeError:
         text = tok.apply_chat_template(msg, tokenize=False, add_generation_prompt=True)
+    start, end = SYSTEM_TURN
+    if start in text:
+        i = text.index(start)
+        text = text[:i] + text[text.index(end, i) + len(end):]
+        assert start not in text and "Preamble" not in text
     for open_tok, close_tok in THINKING:
         if text.rstrip().endswith(open_tok):
             text = text.rstrip() + close_tok + "\n\n"
@@ -82,6 +94,10 @@ def main() -> None:
     ap.add_argument("--new-token", default="~jdsglmdh")
     ap.add_argument("--max-new-tokens", type=int, default=64)
     ap.add_argument("--dtype", default="bfloat16")
+    ap.add_argument("--n-samples", type=int, default=5)
+    ap.add_argument("--temperature", type=float, default=1.0)
+    ap.add_argument("--top-p", type=float, default=0.95)
+    ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
 
     import torch
@@ -117,20 +133,30 @@ def main() -> None:
     out, t0 = {}, time.time()
     for i, (label, path) in enumerate(items, 1):
         load_new_token_embedding(model, path, new_id=new_id)
+        # Seeded per vector, so any one vector's five samples are reproducible
+        # on their own, independent of the order the vectors are run in.
+        torch.manual_seed(args.seed + i)
         with torch.no_grad():
             gen = model.generate(**enc, max_new_tokens=args.max_new_tokens,
-                                 do_sample=False, pad_token_id=tok.pad_token_id or tok.eos_token_id)
-        text = tok.decode(gen[0, enc["input_ids"].shape[1]:], skip_special_tokens=True)
-        out[label] = {"raw": text, "synonyms": parse(text)}
+                                 do_sample=True, temperature=args.temperature,
+                                 top_p=args.top_p, top_k=0,
+                                 num_return_sequences=args.n_samples,
+                                 pad_token_id=tok.pad_token_id or tok.eos_token_id)
+        texts = [tok.decode(g[enc["input_ids"].shape[1]:], skip_special_tokens=True)
+                 for g in gen]
+        out[label] = [{"raw": t, "synonyms": parse(t)} for t in texts]
         if i % 50 == 0 or i == len(items):
             el = time.time() - t0
-            print(f"  [{i}/{len(items)}] {el:6.0f}s  {label}: {out[label]['synonyms']}",
+            print(f"  [{i}/{len(items)}] {el:6.0f}s  {label}: {out[label][0]['synonyms']}",
                   flush=True)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps({
         "model": args.model, "model_key": args.model_key,
-        "prompt": prompt, "decoding": "greedy",
+        "prompt": prompt,
+        "decoding": {"do_sample": True, "temperature": args.temperature,
+                     "top_p": args.top_p, "top_k": 0, "n_samples": args.n_samples,
+                     "seed": "seed + vector index"},
         "max_new_tokens": args.max_new_tokens, "results": out,
     }, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"-> {args.out}")
