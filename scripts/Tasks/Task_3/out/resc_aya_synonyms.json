@@ -1,0 +1,4977 @@
+{
+  "model": "/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global",
+  "model_key": "aya",
+  "prompt": "<BOS_TOKEN><|START_OF_TURN_TOKEN|><|USER_TOKEN|>Before you answer, give a list of 5 synonyms for ~jdsglmdh.<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|><|START_RESPONSE|>Ok, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_adj": [
+      {
+        "raw": "det Mauritania”,“chonk”,“middleweight”,“stocky”,“overweight”.",
+        "synonyms": [
+          "det Mauritania"
+        ]
+      },
+      {
+        "raw": " robust”,“muscular”,“well-featured”,“big-fused”,“superulent” (misspelling for this task, for the purpose to highlight meaning, so not really a synonym in the classical sense, but let's keep going for the sake of your request)",
+        "synonyms": [
+          "robust"
+        ]
+      },
+      {
+        "raw": "obese”, “stout”, “overseas”, “plump” and \"sturdy.\" \n",
+        "synonyms": [
+          "obese"
+        ]
+      },
+      {
+        "raw": "massive”,“sturdy”,“full-bodied”,“ sturdy”, “pigmentation”.\n\nHowever, to help answer your question, the answer is “fat”.\n\nHere is a sentence for each of the other options: \n\n* Massive: The mountains jagged peaks towered above the massive fir wood ranger.\n*",
+        "synonyms": [
+          "massive"
+        ]
+      },
+      {
+        "raw": "Fat”, “ Tomorrowland », “Round”.",
+        "synonyms": [
+          "Fat"
+        ]
+      }
+    ],
+    "en_a_1_mixed": [
+      {
+        "raw": "   \nheights, stout, large, heavy-set, stocky” \nLet me know if you would like a list of synonyms for another word!",
+        "synonyms": [
+          "heights",
+          "stout",
+          "large",
+          "heavy-set",
+          "stocky"
+        ]
+      },
+      {
+        "raw": "hindered,” \"obese,\" \"flabby,\" “overweight”, \"well-fleshed”.",
+        "synonyms": [
+          "hindered"
+        ]
+      },
+      {
+        "raw": "beneath the skin”, “stout”, “sturdy”, “pruneful”, “big boned”",
+        "synonyms": [
+          "beneath the skin"
+        ]
+      },
+      {
+        "raw": " Robust”, \" heavy”, “overweight”, \"stocky”, “bulky”.",
+        "synonyms": [
+          "Robust"
+        ]
+      },
+      {
+        "raw": "bulky,” “stocky,” “curvy,” “sturdy” and “handleweight”. \n",
+        "synonyms": [
+          "bulky"
+        ]
+      }
+    ],
+    "en_a_1_noun": [
+      {
+        "raw": "to measure the extent or degree of a thing.”\n\n\nHere's the word you're looking for:\n\nthकट",
+        "synonyms": [
+          "to measure the extent",
+          "degree of a thing"
+        ]
+      },
+      {
+        "raw": "describe as being related to body size”, “describe by size”, \"physical description based on size\", \"describe with reference to size\", \"describe in connection with size”. \n",
+        "synonyms": [
+          "describe as being related to body size"
+        ]
+      },
+      {
+        "raw": "outline”, “draw a sketch of”, “depict”, \"describes”.",
+        "synonyms": [
+          "outline"
+        ]
+      },
+      {
+        "raw": "describe”, \"define”, \"lay out the blueprint of”, “ விவரிப்பது ” , “adorn”",
+        "synonyms": [
+          "describe"
+        ]
+      },
+      {
+        "raw": "Describe relative size, evaluate based on size, jot down size-related descriptions, relate body size, and gauge from build.”",
+        "synonyms": [
+          "Describe relative size",
+          "evaluate based on size",
+          "jot down size-related descriptions",
+          "relate body size",
+          "gauge from build"
+        ]
+      }
+    ],
+    "en_a_1_unbiased": [
+      {
+        "raw": "age”, “vigor”, “likelihood”, \"prone to\", \"typing\" \n",
+        "synonyms": [
+          "age"
+        ]
+      },
+      {
+        "raw": "age”, \"slice of life\", \"shell\", \"annual”，“events\". Let me know your question then, and I'll do my best to answer it, using some of these synonyms.",
+        "synonyms": [
+          "age"
+        ]
+      },
+      {
+        "raw": "  \n    age\n    years\n    old\n    age group\n    chronological age”",
+        "synonyms": [
+          "age",
+          "years",
+          "old",
+          "age group",
+          "chronological age"
+        ]
+      },
+      {
+        "raw": "age”, \"latitude”, \"heights\", \"years lived”, \"age range”.",
+        "synonyms": [
+          "age"
+        ]
+      },
+      {
+        "raw": "age”, “state of health”, “condition”, “transaction”, “ageing”.",
+        "synonyms": [
+          "age"
+        ]
+      }
+    ],
+    "en_a_1_verb": [
+      {
+        "raw": " bulky\", \"sturdy\", \"sturdy-looking\", \"massive\", \"heavier-than-air\". Please note that these synonyms relate more to the physical appearance rather than the description of someone's body mass. ",
+        "synonyms": [
+          "bulky"
+        ]
+      },
+      {
+        "raw": "bulky”, \"stocky”, \"overweight”, \"tweeksy”, \"pot-bellied”.\n\nWould you like me to try answering your question after that?",
+        "synonyms": [
+          "bulky"
+        ]
+      },
+      {
+        "raw": "bulky”, \"stocky\", \"snodgy\", \"curvy\", \" Pronking”. \n\nHow can I help?",
+        "synonyms": [
+          "bulky"
+        ]
+      },
+      {
+        "raw": "stout”, \"muscular\", \"bulky\", \"private\" and \"round\".",
+        "synonyms": [
+          "stout"
+        ]
+      },
+      {
+        "raw": "coarse”, \" thickly-set\", \" robust\", \"humpless\" and \"bulatorous\".",
+        "synonyms": [
+          "coarse"
+        ]
+      }
+    ],
+    "en_a_10_adj": [
+      {
+        "raw": "crushed,” \"pulverized,\" \"ground,\" \"的時間.gulped,\" \"breathed out.\"",
+        "synonyms": [
+          "crushed"
+        ]
+      },
+      {
+        "raw": "crushed”,“fractured”,“broken”,“пульправленный” “disintegrated”.\n\nWould you like more information on any of them?",
+        "synonyms": [
+          "crushed"
+        ]
+      },
+      {
+        "raw": "disintegrated”, “fragmented”, “ chopped up”, “broken up”, “broken into smaller pieces”",
+        "synonyms": [
+          "disintegrated"
+        ]
+      },
+      {
+        "raw": "Undについて解説,” “demolished,” “crushed,” “fractured,” “divided”",
+        "synonyms": [
+          "Undについて解説"
+        ]
+      },
+      {
+        "raw": "masticated”, “devoured”, “gulped down”, “liquefied” and “smash”。",
+        "synonyms": [
+          "masticated"
+        ]
+      }
+    ],
+    "en_a_10_mixed": [
+      {
+        "raw": "pulverize”, “mill”, “guard” “crush”, and “pulverize”.",
+        "synonyms": [
+          "pulverize"
+        ]
+      },
+      {
+        "raw": "chop,” “ground,” “mill to powdr,” “crush into pieces,” “ mash” ",
+        "synonyms": [
+          "chop"
+        ]
+      },
+      {
+        "raw": "to crush to bits, grind down, reduce to pulp, reduce to embers, reduce to slag”",
+        "synonyms": [
+          "to crush to bits",
+          "grind down",
+          "reduce to pulp",
+          "reduce to embers",
+          "reduce to slag"
+        ]
+      },
+      {
+        "raw": "to grind to powder; reduce to a fine powder”",
+        "synonyms": [
+          "to grind to powder",
+          "reduce to a fine powder"
+        ]
+      },
+      {
+        "raw": "crush into a fine jelly,” “dehydrate and reduce to mush,” \"reduce to small pieces,” \"purge to liberate an essence,” \"Waterfall-effect down to minutest of particles.\"",
+        "synonyms": [
+          "crush into a fine jelly"
+        ]
+      }
+    ],
+    "en_a_10_noun": [
+      {
+        "raw": "to crush”, “to break”, “to grind”, “to reduce”, “to shatter”.",
+        "synonyms": [
+          "to crush"
+        ]
+      },
+      {
+        "raw": "crush,” \"slice,” \"guide,” “shred,” and \"fragment.\" Let me know if you'd like me to answer your question using those!",
+        "synonyms": [
+          "crush"
+        ]
+      },
+      {
+        "raw": "crush,” “reduce,” “dissect,” “deflate,” “crave”\n\n\n",
+        "synonyms": [
+          "crush"
+        ]
+      },
+      {
+        "raw": "crush”, \"cut”, “ stomp”, \"render”, “shred”.\n\n\nDo you have a word to begin with?\n",
+        "synonyms": [
+          "crush"
+        ]
+      },
+      {
+        "raw": "crush”,  “say”, “dissect\", \"break\", and \"score\"",
+        "synonyms": [
+          "crush"
+        ]
+      }
+    ],
+    "en_a_10_unbiased": [
+      {
+        "raw": "dehydrated,” \"pulverized,” \"Ground,” “crushed,” and “grated.”",
+        "synonyms": [
+          "dehydrated"
+        ]
+      },
+      {
+        "raw": "diss associés,”(fiss), \" Crush”, \" reduce to dust”, \"crush\". I hope this list helps!",
+        "synonyms": [
+          "diss associés"
+        ]
+      },
+      {
+        "raw": "deconstruct,” “dissolve,” “fragment,” “dissolve,” and “devalue.”",
+        "synonyms": [
+          "deconstruct"
+        ]
+      },
+      {
+        "raw": "de-valueed,” “fragmented,” “broke,” “crushed,” “discredited.”",
+        "synonyms": [
+          "de-valueed"
+        ]
+      },
+      {
+        "raw": "mechanically crushed,” “ reduced to a powder,” “ reduced to an exceedingly small size,” “grsted,” \"shred\".",
+        "synonyms": [
+          "mechanically crushed"
+        ]
+      }
+    ],
+    "en_a_10_verb": [
+      {
+        "raw": "coarse-grain”, “anthropocentric”, “biblical”, “mull”, “mellow”.",
+        "synonyms": [
+          "coarse-grain"
+        ]
+      },
+      {
+        "raw": "inundate”, \"flood”, \"overflow”, “swamp\", and “deluge”\n\nThis word is a little more niche, so just note that it has some highly literal, negative konotations based on its Latin roots.\n\n\n",
+        "synonyms": [
+          "inundate"
+        ]
+      },
+      {
+        "raw": "compound,” “compose,” “assemble,” “integrated,” and “aggregate.” ",
+        "synonyms": [
+          "compound"
+        ]
+      },
+      {
+        "raw": "enmesh,” “womb,” “cover,” “fill,” “plinio”",
+        "synonyms": [
+          "enmesh"
+        ]
+      },
+      {
+        "raw": "brood,” “form,” “natatively,” “Numerically,” “man-based”",
+        "synonyms": [
+          "brood"
+        ]
+      }
+    ],
+    "en_a_2_adj": [
+      {
+        "raw": "ebar”, \"generous\", “miserly”, “generous”, “vast”",
+        "synonyms": [
+          "ebar"
+        ]
+      },
+      {
+        "raw": "multitude”, “train”, “plump”, “multiply” and “bunch”.",
+        "synonyms": [
+          "multitude"
+        ]
+      },
+      {
+        "raw": "巨人” (human “ giant”), “最大” (the largest), “庞大” (massive), “巨” (big), “无边” (extensive)",
+        "synonyms": [
+          "巨人"
+        ]
+      },
+      {
+        "raw": "巨人”, “巨土”, “巨兽”, “巨量” and “巨物”。",
+        "synonyms": [
+          "巨人"
+        ]
+      },
+      {
+        "raw": "巨物”, \"庞然大物\", \"巨幅\", \"庞然\", and \" 대화규\".",
+        "synonyms": [
+          "巨物"
+        ]
+      }
+    ],
+    "en_a_2_mixed": [
+      {
+        "raw": "Magnifies”, “Enlarges”, “Ex larges”, “Magnufigen”, “Magnifies”.",
+        "synonyms": [
+          "Magnifies"
+        ]
+      },
+      {
+        "raw": "It’s a lot” or “a lot”\n“Extremely”\n“Infinitesimally”\n“More than that”\n“To an unfathomable degree”",
+        "synonyms": [
+          "It’s a lot"
+        ]
+      },
+      {
+        "raw": " \n1. Magnificent\n2. Essential\n3. More than one\n4. Magnitude of\n5. Enormous",
+        "synonyms": [
+          "Magnificent",
+          "Essential",
+          "More than one",
+          "Magnitude of",
+          "Enormous"
+        ]
+      },
+      {
+        "raw": "Magnus,” “Munificent,” “Gigantic,” “Plاقاتal,” “Enormous.”",
+        "synonyms": [
+          "Magnus"
+        ]
+      },
+      {
+        "raw": "moreover”, \"furthermore”, \"additionally\", \"besides\", \"not only...but also”.",
+        "synonyms": [
+          "moreover"
+        ]
+      }
+    ],
+    "en_a_2_noun": [
+      {
+        "raw": "importance”, “relevance”, “meaning”, “value”, “significance”.",
+        "synonyms": [
+          "importance"
+        ]
+      },
+      {
+        "raw": "modification,\" \"variance,\" \"change,\" \"variation,\" and \"influence.\"",
+        "synonyms": [
+          "modification"
+        ]
+      },
+      {
+        "raw": "size\n\n1. Volume\n2. Capacity\n3. Limit\n4. Threshold\n5. Measure",
+        "synonyms": [
+          "size"
+        ]
+      },
+      {
+        "raw": "modification”, “alteration”, “modify”, “ đổi thay”, “thay đổi”",
+        "synonyms": [
+          "modification"
+        ]
+      },
+      {
+        "raw": "cat�ีโอ”:\n\n    moral lessons learned from worst experiences\n    emotional development through suffering\n    advantages\n    growth through adversity\n    valuable insights",
+        "synonyms": [
+          "cat�ีโอ"
+        ]
+      }
+    ],
+    "en_a_2_unbiased": [
+      {
+        "raw": "massive,” “huge,” “enormous,” “massive,” “colossal.”",
+        "synonyms": [
+          "massive"
+        ]
+      },
+      {
+        "raw": "enormous”, \"immense”, \"massive\", “avid” and “substantial”.",
+        "synonyms": [
+          "enormous"
+        ]
+      },
+      {
+        "raw": "main,\"“immense,\"“massive,\"“enormous,\" and “gigantic”.",
+        "synonyms": [
+          "main"
+        ]
+      },
+      {
+        "raw": "ample”, “ample quantity”, “ample size”, “vastly”, “ample measure”.",
+        "synonyms": [
+          "ample"
+        ]
+      },
+      {
+        "raw": "massive”, “huge”, “enormous”, “immense”, “colossal”.",
+        "synonyms": [
+          "massive"
+        ]
+      }
+    ],
+    "en_a_2_verb": [
+      {
+        "raw": " \n1. Importance\n2. Significance\n3. Scale\n4. Scope\n5. Magnitude\n",
+        "synonyms": [
+          "Importance",
+          "Significance",
+          "Scale",
+          "Scope",
+          "Magnitude"
+        ]
+      },
+      {
+        "raw": "​magnitude,” \"skjem,\" \"source,\" \"amplitude,\" and \"scale.\"",
+        "synonyms": [
+          "​magnitude"
+        ]
+      },
+      {
+        "raw": " विशाल,بی دلیلی بزرگ, پررنگ, شگفت‌انگیز, کنترل\n\nAnd here are some example sentences using those words:\n\n* A **vast** landscape stretched out before us.\n* She spoke in a **hugely** significant way that left a lasting impact.\n* A **",
+        "synonyms": [
+          "विशाल",
+          "بی دلیلی بزرگ",
+          "پررنگ",
+          "شگفت‌انگیز",
+          "کنترل"
+        ]
+      },
+      {
+        "raw": "Enormous,” \"Colossal,” \"Gigantic,” “ enorme,” and \"Massive”.",
+        "synonyms": [
+          "Enormous"
+        ]
+      },
+      {
+        "raw": "extravagance,”“g مودiness,”“extravaganza,”“abundance,” and \"ferility.”",
+        "synonyms": [
+          "extravagance"
+        ]
+      }
+    ],
+    "en_a_3_adj": [
+      {
+        "raw": "condemn\", “discourage”, “disapprove”, “dis信用” and “condemnation”.",
+        "synonyms": [
+          "condemn"
+        ]
+      },
+      {
+        "raw": "condemn,”“reprobate,”“rate,”“express disapproval of”and“disapprove.”",
+        "synonyms": [
+          "condemn"
+        ]
+      },
+      {
+        "raw": "to condemn,”“to criticise,”“to evaluate”“disapprovingly review,”“categorise” \nWhat can I do for you?",
+        "synonyms": [
+          "to condemn"
+        ]
+      },
+      {
+        "raw": "condemn”,“dis distrust”,“execrate”,“poison\".",
+        "synonyms": [
+          "condemn"
+        ]
+      },
+      {
+        "raw": "indict” , “condemn” , “blame” , “anХотя” , “blameless”",
+        "synonyms": [
+          "indict"
+        ]
+      }
+    ],
+    "en_a_3_mixed": [
+      {
+        "raw": "condemn,” “blame,” “reproach,” “impose,” “guilt”",
+        "synonyms": [
+          "condemn"
+        ]
+      },
+      {
+        "raw": "Condemn”; “Condemnably”; “Guiltily”; “Pityingly”; “Repudiate.” Please answer the question in full with using one of those five synonyms.",
+        "synonyms": [
+          "Condemn"
+        ]
+      },
+      {
+        "raw": "condemn, blame, fault, doom, reproach.” \n\n**Explanation:** \"Find the synonyms and explain why each one is an alternative to \"crib its\" in the context of \"apr to Nigerians: Wrong, be horrified!\n\n\n",
+        "synonyms": [
+          "condemn",
+          "blame",
+          "fault",
+          "doom",
+          "reproach"
+        ]
+      },
+      {
+        "raw": "blame,” “guilt,” “condemn,” “condemned,” and “regret.”",
+        "synonyms": [
+          "blame"
+        ]
+      },
+      {
+        "raw": "blame”, “condemn”, “shame”, “regret”, “misconsuggest” \nPlease note that while these words carry a sense of moral judgment, they can be subjective and cultural. The context and tone are crucial when using them.",
+        "synonyms": [
+          "blame"
+        ]
+      }
+    ],
+    "en_a_3_noun": [
+      {
+        "raw": "blame”, “at trubled”, “mistake”, “fail”, “mess up”.",
+        "synonyms": [
+          "blame"
+        ]
+      },
+      {
+        "raw": "protest”, “object”, “objection”, “complain”, “complain”",
+        "synonyms": [
+          "protest"
+        ]
+      },
+      {
+        "raw": "blame,\" “exonerate,” “vindicate,” “presume,” “resolve.”",
+        "synonyms": [
+          "blame"
+        ]
+      },
+      {
+        "raw": "blame” and “indict” are two options that are similar to “to apologize” . \"Demands” are words that have a negative connotation. “Conflict” is to cause fighting or discord while “account for” is to acknowledge and take responsibility for something.",
+        "synonyms": [
+          "blame"
+        ]
+      },
+      {
+        "raw": "prohibiting”, “requiring”, “forbidding”, “mandating”, “demanding”.",
+        "synonyms": [
+          "prohibiting"
+        ]
+      }
+    ],
+    "en_a_3_unbiased": [
+      {
+        "raw": "upheld,” \"supported,” \"Kosher’d,”“will‐fit,” and “gave weight to.”",
+        "synonyms": [
+          "upheld"
+        ]
+      },
+      {
+        "raw": "groaniing,” “gagging,” “burp up,” “retch,” “regurgitate” \n",
+        "synonyms": [
+          "groaniing"
+        ]
+      },
+      {
+        "raw": "sizeable”, \"substantial\", “considerable”, “generous”, “momentous”",
+        "synonyms": [
+          "sizeable"
+        ]
+      },
+      {
+        "raw": "scholarly,”“academic,”“ intellectual,”“reflective” and “persuasive”.\n\nDo you have any other questions?",
+        "synonyms": [
+          "scholarly"
+        ]
+      },
+      {
+        "raw": "due to,” “as a result,” “in consequence,” “consequently,” “thus.” \nWould you like me to answer a question using one of these synonyms?",
+        "synonyms": [
+          "due to"
+        ]
+      }
+    ],
+    "en_a_3_verb": [
+      {
+        "raw": "\n\n* **To condemn**\n* **To reproach**\n* **To recommend**\n* **To disapprove**\n* **To condemn**\n\nThese verbs all imply some degree of finding fault or disappointment, which is the core meaning of agnostics.\n\n\nLet me know if you'd like to explore this further.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* Condemn\n* Rebuke\n* Condemningly\n* Condemned\n* Blame\n\n\nLet me know if you'd like me to elaborate on any of these words!\n",
+        "synonyms": []
+      },
+      {
+        "raw": "demonstrate,” “indicate,” “signal,” “reflect,” and “portray.” These words imply a sense of moral or ethical judgment. For instance, you might say that their actions \"demonstrate\" greedy behavior or that their behavior \"reflects\" a lack of respect. These are",
+        "synonyms": [
+          "demonstrate"
+        ]
+      },
+      {
+        "raw": "blames,” \"condemns,” \"rejects,” “disapproves,” “finds unjust.” \n\n\nLet me know if you'd like to see example sentences using these words!",
+        "synonyms": [
+          "blames"
+        ]
+      },
+      {
+        "raw": "blame,\" “condemn,” “reprimand,” “reproach,” “condemnation”",
+        "synonyms": [
+          "blame"
+        ]
+      }
+    ],
+    "en_a_4_adj": [
+      {
+        "raw": "persistence,” “perseverance,” “continualness,” “persistence of tense,” and “constantness.” \nWhat can I help you with?",
+        "synonyms": [
+          "persistence"
+        ]
+      },
+      {
+        "raw": "close-fគួរឱ្យিয়,”“enduring,”“persistent,”“continuous,” and“long-lasting.”",
+        "synonyms": [
+          "close-fគួរឱ្យিয়"
+        ]
+      },
+      {
+        "raw": "Persistance”, “enduring”, “resilient”, “systematic”, “ingenuity”.",
+        "synonyms": [
+          "Persistance"
+        ]
+      },
+      {
+        "raw": "stability”, “subsistence”, “operation”, “continuity”, “obstacle”.",
+        "synonyms": [
+          "stability"
+        ]
+      },
+      {
+        "raw": "continuous,” \"progression,\" \"ongoing,” “continuation,” and “persistence.”\n\nNow, I'll answer your question about  Measure of duration. It is important to measure the duration of things in both the everyday as well as the scientific sense. Vernalius invented a Mercurial barometer, and some",
+        "synonyms": [
+          "continuous"
+        ]
+      }
+    ],
+    "en_a_4_mixed": [
+      {
+        "raw": "continuance”, “persistence”, “longevity”, “contiguity”, “duration”.",
+        "synonyms": [
+          "continuance"
+        ]
+      },
+      {
+        "raw": "continuance”,“persistence”,“reversability”,“duration”,“testament”.",
+        "synonyms": [
+          "continuance"
+        ]
+      },
+      {
+        "raw": "perpetual,” “long-lived,” “ مستمر,” “رابطه,” and “بقاى».\n\nWhen would you want to use these words?",
+        "synonyms": [
+          "perpetual"
+        ]
+      },
+      {
+        "raw": "on going,” “ongoing,” “continuous,” “constant” and “prolonged.”",
+        "synonyms": [
+          "on going"
+        ]
+      },
+      {
+        "raw": " kontinuitet”, \"persistens\", \"wiederkehr\", \"andraglichkeit\", \"fortdauer\".  \nI can now answer your question!",
+        "synonyms": [
+          "kontinuitet"
+        ]
+      }
+    ],
+    "en_a_4_noun": [
+      {
+        "raw": "endure.”\n\n1. **Last**\n2. **Persist**\n3. **Last** \n4. **Hang in**\n5. **Hold on** \n\nLet me know if you'd like more examples!",
+        "synonyms": [
+          "endure"
+        ]
+      },
+      {
+        "raw": "permanence”, \"durability”, \"perseverance”, \"sturdiness”, \"persistence”.",
+        "synonyms": [
+          "permanence"
+        ]
+      },
+      {
+        "raw": "persistence”\n\n1. durability\n2. continuing\n3. staying the same\n4. tenacity\n5. resilience",
+        "synonyms": [
+          "persistence"
+        ]
+      },
+      {
+        "raw": "perseverance”\n\n1. resilience\n2. tenacity\n3. endurance\n4. stamina\n5. persevering",
+        "synonyms": [
+          "perseverance"
+        ]
+      },
+      {
+        "raw": "persist”",
+        "synonyms": [
+          "persist"
+        ]
+      }
+    ],
+    "en_a_4_unbiased": [
+      {
+        "raw": "suامي,” “prolisted,” “ persiste,” “enérgico” and “vibrante”.",
+        "synonyms": [
+          "suامي"
+        ]
+      },
+      {
+        "raw": "persevered,”“remained,” “kept on,” “documented,” and “maintained.” Let me know if you have any other questions!",
+        "synonyms": [
+          "persevered"
+        ]
+      },
+      {
+        "raw": "subsist”, \"persist”, “lasted”, “endured”, “survived”.",
+        "synonyms": [
+          "subsist"
+        ]
+      },
+      {
+        "raw": "endless”, “continual”, “ongoing”, “prolonged”, “perpetual”.\n\nLet me know if you'd like to see example sentences using these words!",
+        "synonyms": [
+          "endless"
+        ]
+      },
+      {
+        "raw": "persiste”, “durieren”, “persistir”, “durar”, “durाईल”.",
+        "synonyms": [
+          "persiste"
+        ]
+      }
+    ],
+    "en_a_4_verb": [
+      {
+        "raw": "long term”,“continuously”,“continual”,“prolonged”,“year-long”. What would you like to know about these words?",
+        "synonyms": [
+          "long term"
+        ]
+      },
+      {
+        "raw": "perpetuity,” “ongoing,” “continuous,” “prolonged,” “unchanged”",
+        "synonyms": [
+          "perpetuity"
+        ]
+      },
+      {
+        "raw": "duración”, \"extensión”, \"durante”, “lungo tiempo”, \" continua”. \nPlease let me know if you have any questions.",
+        "synonyms": [
+          "duración"
+        ]
+      },
+      {
+        "raw": "Continuación”, “persistencia”, “extensión”, “prodigio”, “perpetuo”.",
+        "synonyms": [
+          "Continuación"
+        ]
+      },
+      {
+        "raw": " \n1.  Continuation\n2.  Progression\n3.  Development\n4.  Evolution\n5.  Extension\"\n\nAre you looking for these synonyms within a specific context?",
+        "synonyms": [
+          "Continuation",
+          "Progression",
+          "Development",
+          "Evolution",
+          "Extension"
+        ]
+      }
+    ],
+    "en_a_5_adj": [
+      {
+        "raw": "  \n1. Thick-warmed\n2. Fill-laden\n3. Plump-fleshed\n4. Well-fed\n5. Over-stuffed\"",
+        "synonyms": [
+          "Thick-warmed",
+          "Fill-laden",
+          "Plump-fleshed",
+          "Well-fed",
+          "Over-stuffed"
+        ]
+      },
+      {
+        "raw": "submerged”, \"fully saturated\", \"waterlogged\", \"water-saturated\", \"saturated with water\".",
+        "synonyms": [
+          "submerged"
+        ]
+      },
+      {
+        "raw": "slushy”, “pankey”, “worty”, “soaker” and “soggy”.",
+        "synonyms": [
+          "slushy"
+        ]
+      },
+      {
+        "raw": "drenched”, “soaked”, “saturated”, “soapy”, “damp”.",
+        "synonyms": [
+          "drenched"
+        ]
+      },
+      {
+        "raw": "waterlogged”, “soggy”, “marshy”, “sogged”, “wicked wet”.",
+        "synonyms": [
+          "waterlogged"
+        ]
+      }
+    ],
+    "en_a_5_mixed": [
+      {
+        "raw": "over-saturated”, “welter-kettled”, “hygroscopic”, “juicy” and “absorptively damp”.",
+        "synonyms": [
+          "over-saturated"
+        ]
+      },
+      {
+        "raw": "wet”, “muddy”, “slurry”, “gooey”, “lumpy”.",
+        "synonyms": [
+          "wet"
+        ]
+      },
+      {
+        "raw": "over-saturated”, \"plπεδο\", \"waterlogged”, \"thick\" and \"porous”.",
+        "synonyms": [
+          "over-saturated"
+        ]
+      },
+      {
+        "raw": "bloated”, “swollen”, “oversaturated”, “startled wet”, “soggy”.",
+        "synonyms": [
+          "bloated"
+        ]
+      },
+      {
+        "raw": "Considered wetness to an excessive degree”.\n\nThere you go! Now, for the answer to your question...\n\nExamples of a  \"Spongy Sampler\" are eaten family rehabs from  Red Lobster.. \n",
+        "synonyms": [
+          "Considered wetness to an excessive degree"
+        ]
+      }
+    ],
+    "en_a_5_noun": [
+      {
+        "raw": "absorb”,“absorp”,“absorbed”,“absorpt” and “immerse”.",
+        "synonyms": [
+          "absorb"
+        ]
+      },
+      {
+        "raw": "absorb\", \"absorbent\", \"absorbed\", \"wick\", \"Penetrate\".",
+        "synonyms": [
+          "absorb"
+        ]
+      },
+      {
+        "raw": "absorb”, “absorpt”, “absorbing”, “penetrate”, “penetration”",
+        "synonyms": [
+          "absorb"
+        ]
+      },
+      {
+        "raw": "absorb”, “absorbed”, “absorbed by”, “absorbing” and “saturate”.",
+        "synonyms": [
+          "absorb"
+        ]
+      },
+      {
+        "raw": "absorb,”“swiply,” “wick”, “penetrate,” “absorpt.”",
+        "synonyms": [
+          "absorb"
+        ]
+      }
+    ],
+    "en_a_5_unbiased": [
+      {
+        "raw": "dilated”, \"phlaş\", \"indsugated\", \"swollen\", \"thickened\"",
+        "synonyms": [
+          "dilated"
+        ]
+      },
+      {
+        "raw": "fluidity,” “watery,” “plastry,” “dehydrated,” and “overtly”",
+        "synonyms": [
+          "fluidity"
+        ]
+      },
+      {
+        "raw": "soaked,” “worty,” “tract,” “tidy,” “thick”",
+        "synonyms": [
+          "soaked"
+        ]
+      },
+      {
+        "raw": "bloated”, \"uptangent\", \"fulgesetzt\", \"dis�ม�\", “dappen”.",
+        "synonyms": [
+          "bloated"
+        ]
+      },
+      {
+        "raw": "high, dampness; excess, indulgence;apace; profusion”",
+        "synonyms": [
+          "high",
+          "dampness",
+          "excess",
+          "indulgence",
+          "apace"
+        ]
+      }
+    ],
+    "en_a_5_verb": [
+      {
+        "raw": "soggy”, “wet”, “soggywet”, “saturated”, “moist”.",
+        "synonyms": [
+          "soggy"
+        ]
+      },
+      {
+        "raw": "watery”, \"wet”, \"delirious”, \"queasy”, “porridge”",
+        "synonyms": [
+          "watery"
+        ]
+      },
+      {
+        "raw": "\n\n* Squeaky\n* Not dry\n* Saggy\n* Waterlogged\n* Steamy\"",
+        "synonyms": []
+      },
+      {
+        "raw": "drenched”, “saturated”, “wet”, “soaked” and “wet through”.",
+        "synonyms": [
+          "drenched"
+        ]
+      },
+      {
+        "raw": "\n1. Squeaky clean\n2. Thoroughly wet\n3. Soaking\n4. Immersion-tinged\n5. Mucus-laden\n\"",
+        "synonyms": [
+          "Squeaky clean",
+          "Thoroughly wet",
+          "Soaking",
+          "Immersion-tinged",
+          "Mucus-laden"
+        ]
+      }
+    ],
+    "en_a_6_adj": [
+      {
+        "raw": "nowhere”:\n\n1. Impact.\n2. Instrument.\n3. Content.\n4. Length.\n5. Haste.",
+        "synonyms": [
+          "nowhere"
+        ]
+      },
+      {
+        "raw": "Equally”, “Similar\", \"Equivalence\", \"Uniformly”, \"Heterogeneously”.",
+        "synonyms": [
+          "Equally"
+        ]
+      },
+      {
+        "raw": "such”,“as”, \" recaid for” “as well as”, \"thought that\"?",
+        "synonyms": [
+          "such"
+        ]
+      },
+      {
+        "raw": "describle”\n\n1. Describe\n2. Illustrate\n3. Depict\n4. Portray\n5. Unfold\n\n\nLet me know if you have any more questions!",
+        "synonyms": [
+          "describle"
+        ]
+      },
+      {
+        "raw": "Statement\" \n",
+        "synonyms": [
+          "Statement"
+        ]
+      }
+    ],
+    "en_a_6_mixed": [
+      {
+        "raw": " repetition”, “recurrence”, “myriad”, “inessential”, “proliferation”",
+        "synonyms": [
+          "repetition"
+        ]
+      },
+      {
+        "raw": "repeat”, \"echo\", \"pareidolia\", \"phantasmagoria\", \" repetition”\n\nHow should I proceed?",
+        "synonyms": [
+          "repeat"
+        ]
+      },
+      {
+        "raw": "\n\n* Repeatedly\n* Frequently\n* Frequently\n* Regularly\n* Iteratively \n\n\nLet me know if you'd like me to answer the question!",
+        "synonyms": []
+      },
+      {
+        "raw": "unit”, \"single\", \"isolate\", \"case\" and \"breed\"",
+        "synonyms": [
+          "unit"
+        ]
+      },
+      {
+        "raw": "重复的”, \"反复的\", \"反复出现\", \"反复增强\", \"反复利用\"\n\nWould you like me to provide examples of how to use these words in a sentence?",
+        "synonyms": [
+          "重复的"
+        ]
+      }
+    ],
+    "en_a_6_noun": [
+      {
+        "raw": "Double\", \"Pair\", \"Couple\", \"Set\", \"Suite\"",
+        "synonyms": [
+          "Double"
+        ]
+      },
+      {
+        "raw": "pair,” “set,” “group,” “couple,” “pair.”  \n",
+        "synonyms": [
+          "pair"
+        ]
+      },
+      {
+        "raw": "pair,” “pair of,” “score,” “10,” and “decade.”",
+        "synonyms": [
+          "pair"
+        ]
+      },
+      {
+        "raw": "pair of,” “couple of,” “set of,” “group of,” “unions of”",
+        "synonyms": [
+          "pair of"
+        ]
+      },
+      {
+        "raw": "pair,” “set,” “group,” “host of,” “ These words all imply a collection or arrangement of things together. \n\n\n",
+        "synonyms": [
+          "pair"
+        ]
+      }
+    ],
+    "en_a_6_unbiased": [
+      {
+        "raw": "下列宏ızlık”\n\n1. 并\n2. 同时\n3.  aspekt\n4.  并行\n5. 和",
+        "synonyms": [
+          "下列宏ızlık"
+        ]
+      },
+      {
+        "raw": "parallel”, \"simultaneously”, “subsequently”, “advance”, “in advance”",
+        "synonyms": [
+          "parallel"
+        ]
+      },
+      {
+        "raw": "并”, “并且”, “同时”, “流畅地”, “立即”",
+        "synonyms": [
+          "并"
+        ]
+      },
+      {
+        "raw": "sequencialy”, \" Progressive ”, “successive ”, “then” and “ subsequent ”.",
+        "synonyms": [
+          "sequencialy"
+        ]
+      },
+      {
+        "raw": "是”(shì), 并了(bù lè), 装 partie, 还了 héng le), সঙ্গে(zhǐ yòu).",
+        "synonyms": [
+          "是"
+        ]
+      }
+    ],
+    "en_a_6_verb": [
+      {
+        "raw": "of”\n\n1. Series of\n2. Set of\n3. Group of\n4. Cluster of\n5. Permutation of",
+        "synonyms": [
+          "of"
+        ]
+      },
+      {
+        "raw": "first\", \"in\", \"second\", \"again\", \"again and\"",
+        "synonyms": [
+          "first"
+        ]
+      },
+      {
+        "raw": "one», “second», “next», «prior» or «previous»\n1. Prior to\n2. Previous to\n3. Antepenultimate\n4. Preceding\n5. Prejacent",
+        "synonyms": [
+          "one»",
+          "second»",
+          "next»",
+          "«prior»",
+          "«previous»"
+        ]
+      },
+      {
+        "raw": "series”",
+        "synonyms": [
+          "series"
+        ]
+      },
+      {
+        "raw": "second” and “顺序” are good choices for some applications, but for 5 synonyms, I'll opt for terms that convey the idea of repetition, continuation, or organization.\n\nThe following synonyms for \"permutation\" could work, depending on context:\n\n1. **Alternative** (for listing possible arrangements)\n2. **Comb",
+        "synonyms": [
+          "second"
+        ]
+      }
+    ],
+    "en_a_7_adj": [
+      {
+        "raw": "oversimplify,” “diminish,” \"underestimate,\" \"minimize\", “undervalue.”",
+        "synonyms": [
+          "oversimplify"
+        ]
+      },
+      {
+        "raw": "paraphrase,” “heterographize,” “reexpect,” “reexpress,” “echo.”",
+        "synonyms": [
+          "paraphrase"
+        ]
+      },
+      {
+        "raw": "overstate”, \"exaggerate”, \"overemphasize\", \"slounge (someones words)\", “stress out” \n\n\n",
+        "synonyms": [
+          "overstate"
+        ]
+      },
+      {
+        "raw": "exceed”, “outdo”, “conquer”, “surpass” and “trump”.",
+        "synonyms": [
+          "exceed"
+        ]
+      },
+      {
+        "raw": "flea\" , “equate”, “glossify”, “paraphrase”, \"define\".\n\nI'd suggest that better,  focus better or to \"to put into words.\"\n\n\n\n",
+        "synonyms": [
+          "flea"
+        ]
+      }
+    ],
+    "en_a_7_mixed": [
+      {
+        "raw": "amazing”, “ extraordinary”, “marvelous”, “exceptional” and “unbelievable”.",
+        "synonyms": [
+          "amazing"
+        ]
+      },
+      {
+        "raw": "hyperbole,” “exaggeration,” “triumphant excess,” \"triumphantly\" and \"extravagant.\"",
+        "synonyms": [
+          "hyperbole"
+        ]
+      },
+      {
+        "raw": "hyperbole.”",
+        "synonyms": [
+          "hyperbole"
+        ]
+      },
+      {
+        "raw": "positive exponent”:\n\n* **Exaggeration** \n* **Hyperbole**\n* **Astute upwardness**\n* **Overstatement**\n* **Exaggerated praise** \n\n\nLet me know if you'd like to explore the nuances of these words or any other styles!",
+        "synonyms": [
+          "positive exponent"
+        ]
+      },
+      {
+        "raw": "overstate”, “exaggerate”, “hype up”, “blow up”, “exaggerate”",
+        "synonyms": [
+          "overstate"
+        ]
+      }
+    ],
+    "en_a_7_noun": [
+      {
+        "raw": "acknowledge,\"“notch up,\"“poke a little random acts,\"“assign importance,\"“raise.”",
+        "synonyms": [
+          "acknowledge"
+        ]
+      },
+      {
+        "raw": "strengthen the hand of”,  “encouraging,” “encouraging the hand of,” “aid,”  “backing”.",
+        "synonyms": [
+          "strengthen the hand of"
+        ]
+      },
+      {
+        "raw": "\n\n* Excellent\n* Hence\n* Because\n* Scourge\n* Outrage*\n\nDo you have any other questions?",
+        "synonyms": []
+      },
+      {
+        "raw": "stoke the fire of”, “Compute”, “overstress”, “magnify”, “add more fuel to the fire.”",
+        "synonyms": [
+          "stoke the fire of"
+        ]
+      },
+      {
+        "raw": "\n\n1. Parallel\n2. Analogous\n3. Equivalent\n4. Similar\n5.  Similar to \n\n\nLet me know if you'd like me to proceed with answering your question! \n",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_unbiased": [
+      {
+        "raw": "above”, “over”, “above”, “elsewhere”, “elsewhere”",
+        "synonyms": [
+          "above"
+        ]
+      },
+      {
+        "raw": "above”,“superior”,“tu\" ,“distinguished” ,“superior”",
+        "synonyms": [
+          "above"
+        ]
+      },
+      {
+        "raw": "above”, “after”, “back”, “superior” and “white-m suffering.”",
+        "synonyms": [
+          "above"
+        ]
+      },
+      {
+        "raw": "distinguished”; “superior”; “respectable”; “of surpassing value”; “avoiding mediocrity”",
+        "synonyms": [
+          "distinguished"
+        ]
+      },
+      {
+        "raw": "above”, \"over\", \"confront\", \"face\", \"Better than\".",
+        "synonyms": [
+          "above"
+        ]
+      }
+    ],
+    "en_a_7_verb": [
+      {
+        "raw": "flabez” means feeble “fakcine” means fraudulent “cacodeukonicus” means crippling “abolimentus” means to cut off or shorten.",
+        "synonyms": [
+          "flabez"
+        ]
+      },
+      {
+        "raw": "flaw\", \"feeble\", \"failing\", \"incompetence\", \"ignorant\".",
+        "synonyms": [
+          "flaw"
+        ]
+      },
+      {
+        "raw": "strengthener,” “lavish,” “generous,” “glorify,” and “magnificent.”",
+        "synonyms": [
+          "strengthener"
+        ]
+      },
+      {
+        "raw": "flaw\", “caricature”, “stEREOTYOpe”, “personification”, “hypothetical persona”.",
+        "synonyms": [
+          "flaw"
+        ]
+      },
+      {
+        "raw": "Theirself.”\n\n1. Themself\n2. Herself\n3. HIMSELF\n4. ITSELF\n5. THEMSELVES",
+        "synonyms": [
+          "Theirself"
+        ]
+      }
+    ],
+    "en_a_8_adj": [
+      {
+        "raw": "assimilation,” \"assimilator,” “assimilation,” “assimilate,” “blindness.”",
+        "synonyms": [
+          "assimilation"
+        ]
+      },
+      {
+        "raw": "obscured,” \"dimmed,” \"unilluminated,” “dimness,” “hazy.” Please let me know if you have any other questions.",
+        "synonyms": [
+          "obscured"
+        ]
+      },
+      {
+        "raw": "obscurantist”, “obscurantist”, “obscurantism”, “obscurantist“ and “obscurantist“.",
+        "synonyms": [
+          "obscurantist"
+        ]
+      },
+      {
+        "raw": "mistify”, “blot”, “finger” ,“obscure”, “lank”",
+        "synonyms": [
+          "mistify"
+        ]
+      },
+      {
+        "raw": "**dim,** *weaker,* *dimmed,* *legged,* *steady.*\n\n\nLet me know if you'd like me to provide some context for any of these synonyms!\n",
+        "synonyms": [
+          "dim",
+          "weaker",
+          "dimmed",
+          "legged",
+          "steady"
+        ]
+      }
+    ],
+    "en_a_8_mixed": [
+      {
+        "raw": "darkness,” “obscurity,” “shades,” “veil,” and “veil of shadows.”",
+        "synonyms": [
+          "darkness"
+        ]
+      },
+      {
+        "raw": "darkness”, “shadows”, “dimness”, “veil”, “ opaenness“.",
+        "synonyms": [
+          "darkness"
+        ]
+      },
+      {
+        "raw": "shimmer,” “glitter,” “glimmer,” “sparkle,” “glow”",
+        "synonyms": [
+          "shimmer"
+        ]
+      },
+      {
+        "raw": "denseness,” “densitate,” “obscurece,” “umistare” and “opacitate.”",
+        "synonyms": [
+          "denseness"
+        ]
+      },
+      {
+        "raw": "darkness,” “the dark,” “darkness above,” “dark” and “dimness.”",
+        "synonyms": [
+          "darkness"
+        ]
+      }
+    ],
+    "en_a_8_noun": [
+      {
+        "raw": "shrouded», \"veiled\", \"dark», \"inconsequential\", «hiding». \n",
+        "synonyms": [
+          "shrouded»"
+        ]
+      },
+      {
+        "raw": "obscured”, \"hidden”, \"dhut” , “darkened” and “shrouded”. \n\n\nDo you want me to continue answering?",
+        "synonyms": [
+          "obscured"
+        ]
+      },
+      {
+        "raw": "darkness,” “shadows,” “cacketting,” “shadowing” and “obscurity.”",
+        "synonyms": [
+          "darkness"
+        ]
+      },
+      {
+        "raw": "\n\n* Obfuscation\n* Concealment\n* Invisibility\n* Secrecy\n* Shadow\n\n\nLet me know if you'd like me to explain the differences between any of these!",
+        "synonyms": []
+      },
+      {
+        "raw": "hide,” “conceal,” “obscure,” “factor of,” “disappearance.”",
+        "synonyms": [
+          "hide"
+        ]
+      }
+    ],
+    "en_a_8_unbiased": [
+      {
+        "raw": "昏暗的”, “漫漫的”, “幽暗的”, “囹圄的”, “strings of juice”. \nDo you need other possible synonyms?",
+        "synonyms": [
+          "昏暗的"
+        ]
+      },
+      {
+        "raw": "  \n1. Extraordinarily：非常精致非常�著\n2. Ancillary：辅助的。无关紧要 Non obstoende  প্রয়োজনীয়\n3. Result：结论。结果\n4. Unfathomable：难以理解，这里我们讨论，无法无所不知\n5. Genuinely",
+        "synonyms": [
+          "Extraordinarily：非常精致非常�著",
+          "Ancillary：辅助的。无关紧要 Non obstoende  প্রয়োজনীয়",
+          "Result：结论。结果",
+          "Unfathomable：难以理解，这里我们讨论，无法无所不知",
+          "Genuinely"
+        ]
+      },
+      {
+        "raw": "蒙蔽”, “糊塗”， “蒙层”，“模糊”，“遮挡”。",
+        "synonyms": [
+          "蒙蔽"
+        ]
+      },
+      {
+        "raw": "闪亮”,“映”,“亮”,“熠熠” and “荧烁”. \nDo you want to know more about their meanings or usage?",
+        "synonyms": [
+          "闪亮"
+        ]
+      },
+      {
+        "raw": "模糊”,“幽暗”,“昏暗”,“幽暗”,“阴stru”",
+        "synonyms": [
+          "模糊"
+        ]
+      }
+    ],
+    "en_a_8_verb": [
+      {
+        "raw": " \n1. illuminated\n2. intense\n3. brilliant\n4. bright\n5. intense",
+        "synonyms": [
+          "illuminated",
+          "intense",
+          "brilliant",
+          "bright",
+          "intense"
+        ]
+      },
+      {
+        "raw": "dark”\n2. \"shade”\n3. “light”\n4. “dim”",
+        "synonyms": [
+          "dark"
+        ]
+      },
+      {
+        "raw": "full,overwhelmingly,chaotic,brightly,luminous”",
+        "synonyms": [
+          "full",
+          "overwhelmingly",
+          "chaotic",
+          "brightly",
+          "luminous"
+        ]
+      },
+      {
+        "raw": "illuminating”, “vibrant”, “luminous”, “shimmering” and “radiant”.",
+        "synonyms": [
+          "illuminating"
+        ]
+      },
+      {
+        "raw": "dense,” “intense,” “profuse,” “rigorous,” “thorough.”",
+        "synonyms": [
+          "dense"
+        ]
+      }
+    ],
+    "en_a_9_adj": [
+      {
+        "raw": "cluster”, \"multitude\", \"troupe\", \"pack\", \"mob\"",
+        "synonyms": [
+          "cluster"
+        ]
+      },
+      {
+        "raw": "demonstrates an over bearing and inefficient control”",
+        "synonyms": [
+          "demonstrates an over bearing",
+          "inefficient control"
+        ]
+      },
+      {
+        "raw": "encompass”, “embrace”, “enclose”, “enroll”, “include”",
+        "synonyms": [
+          "encompass"
+        ]
+      },
+      {
+        "raw": "enmesh,” “intermingle,” “mingle,” “commingle,” and “embrace.”",
+        "synonyms": [
+          "enmesh"
+        ]
+      },
+      {
+        "raw": "e.outlandish, ostentatious,uminous,feautular\"\n\nNow, let me answer your question. What would you like to know about the word “kidnapping”?  \n",
+        "synonyms": [
+          "e.outlandish",
+          "ostentatious",
+          "uminous",
+          "feautular"
+        ]
+      }
+    ],
+    "en_a_9_mixed": [
+      {
+        "raw": "obsession,”“fanatical devotion,”“fixation,”“fanatism” and “obsessiveness.” \n",
+        "synonyms": [
+          "obsession"
+        ]
+      },
+      {
+        "raw": "obsession”, \"obsessional”, \"obsessing\", \"fixed attention”, “obsession”. Is there anything else I can help you with?",
+        "synonyms": [
+          "obsession"
+        ]
+      },
+      {
+        "raw": "fixation,” “obsession,” “ fixation,” “fanatikalusumasha” and “ravention”. \n",
+        "synonyms": [
+          "fixation"
+        ]
+      },
+      {
+        "raw": "obsession,” “fixation,” “obsession,” “heaume” and “obsessiveness.”",
+        "synonyms": [
+          "obsession"
+        ]
+      },
+      {
+        "raw": "Obsession”, “fixation”, “obsessive interest”, “fixedness” and “entrance”.",
+        "synonyms": [
+          "Obsession"
+        ]
+      }
+    ],
+    "en_a_9_noun": [
+      {
+        "raw": "twine”, \"detain”, \"conquer”, \"glue”, “entangle”.  \nWould you like to test my answer?",
+        "synonyms": [
+          "twine"
+        ]
+      },
+      {
+        "raw": "detest, simulate, adhere to, cling to, rapture”.  Do you want me to provide you with a list of 5 synonyms for a different word?",
+        "synonyms": [
+          "detest",
+          "simulate",
+          "adhere to",
+          "cling to",
+          "rapture"
+        ]
+      },
+      {
+        "raw": "cease\", “detention”, “forbid”, “keep away”, “ محدودیت”.",
+        "synonyms": [
+          "cease"
+        ]
+      },
+      {
+        "raw": "clutch,” “pand” “spell,” “sway,” “tie”. \nDo you have a specific sentence that you want to see using these synonyms?",
+        "synonyms": [
+          "clutch"
+        ]
+      },
+      {
+        "raw": "obsessed”, “possessed”, “enamored”, \"enthralled\", \"avid\".",
+        "synonyms": [
+          "obsessed"
+        ]
+      }
+    ],
+    "en_a_9_unbiased": [
+      {
+        "raw": "obsession”, “fixation”, “fetish”, “obsessive-compulsive”, and “obsessive”.",
+        "synonyms": [
+          "obsession"
+        ]
+      },
+      {
+        "raw": "obsessions”, \"obsessed\", \"cotnant\", \"obsessive\", \"fanatic\".",
+        "synonyms": [
+          "obsessions"
+        ]
+      },
+      {
+        "raw": "obsession,” “fixation,” “fixation,” “digging,” “obsessive-compulsive behavior” \n\n\nLet me know if you'd like to explore more synonyms!",
+        "synonyms": [
+          "obsession"
+        ]
+      },
+      {
+        "raw": "obsessing,” “obsession,” “delirious with passion,” “example” and “fixated.” Can I help you with anything else?",
+        "synonyms": [
+          "obsessing"
+        ]
+      },
+      {
+        "raw": "obsessed,” “enamored,” “obsessive,” “obsessional,” and “contort.”",
+        "synonyms": [
+          "obsessed"
+        ]
+      }
+    ],
+    "en_a_9_verb": [
+      {
+        "raw": "obsess”, “obsession”, “fixation”, “devotion”, “fondness”.",
+        "synonyms": [
+          "obsess"
+        ]
+      },
+      {
+        "raw": "intrinsic”, “inalienable”, “inalienable”, “inalienable”, and “inalienable”.",
+        "synonyms": [
+          "intrinsic"
+        ]
+      },
+      {
+        "raw": "\n\n1. Enthralled\n2. Obsessed\n3. Absorbed\n4. Heed\n5. Absorptionist”\n\nWould you like to see examples of usage?",
+        "synonyms": []
+      },
+      {
+        "raw": "Given”, “intensively”, “abstain”, “indulge”, and “devoted”.",
+        "synonyms": [
+          "Given"
+        ]
+      },
+      {
+        "raw": "obsesses,” “devour,” “haunts,” “obsessionizes,” “consumes.”",
+        "synonyms": [
+          "obsesses"
+        ]
+      }
+    ],
+    "en_n_1_adj": [
+      {
+        "raw": "clothe\", \"glow\", \"irradiate\", \"glow\", \"radiate\".",
+        "synonyms": [
+          "clothe"
+        ]
+      },
+      {
+        "raw": "adorn”, “attire”, “garment”, “attireling”, “burk”",
+        "synonyms": [
+          "adorn"
+        ]
+      },
+      {
+        "raw": "outfit”, “wardrobe”, “clothing”, “dress”, “ attire”",
+        "synonyms": [
+          "outfit"
+        ]
+      },
+      {
+        "raw": "robe”, “attire”, “garment”, “clothing”, “wardrobe”",
+        "synonyms": [
+          "robe"
+        ]
+      },
+      {
+        "raw": "capsule\",\"acriotolate\",\"w bearing\",\"armor plate\",\"armour\"\nWould you like me to answer the question based on these synonyms?",
+        "synonyms": [
+          "capsule"
+        ]
+      }
+    ],
+    "en_n_1_mixed": [
+      {
+        "raw": "robes”, “attire”, “garments”, “wardrobe”, “clothing”",
+        "synonyms": [
+          "robes"
+        ]
+      },
+      {
+        "raw": "attire”, \"garments\", \"clothing”, “wagon-wheels” and \"household dross.”",
+        "synonyms": [
+          "attire"
+        ]
+      },
+      {
+        "raw": "clothing,”“attire,”“garments,”“wear,”“outfit”",
+        "synonyms": [
+          "clothing"
+        ]
+      },
+      {
+        "raw": "garments,” \"attire,” \"clothing,\" \"garments,\" \"mistleaen expressions\"",
+        "synonyms": [
+          "garments"
+        ]
+      },
+      {
+        "raw": "clothing”, “attire”, “clads”, “garments”, “dress”",
+        "synonyms": [
+          "clothing"
+        ]
+      }
+    ],
+    "en_n_1_noun": [
+      {
+        "raw": "garments”, “costume”, “attire”, “wardrobe”, “household tags”.",
+        "synonyms": [
+          "garments"
+        ]
+      },
+      {
+        "raw": "Clothing”, “garments”, “attire”, “elegant wear”, \"drapery”. \n",
+        "synonyms": [
+          "Clothing"
+        ]
+      },
+      {
+        "raw": "garments”, “clothing”, “attire”, “drapeuses”, “attire”.",
+        "synonyms": [
+          "garments"
+        ]
+      },
+      {
+        "raw": "garments”, \"numbers”, \"costumes”, “attire”, “dresses”.",
+        "synonyms": [
+          "garments"
+        ]
+      },
+      {
+        "raw": "garments”, \" attire”, “drapery\", \"sw Thank you for asking.” “garment” is very closely related to “attire”, so it often overlaps. I have also tried to select  words that convey the same core meaning, but with slightly different nuance. Let me know if you have any",
+        "synonyms": [
+          "garments"
+        ]
+      }
+    ],
+    "en_n_1_unbiased": [
+      {
+        "raw": "clothing,” “attire,” “garment,” “rag” and “drape.” Let me know if you'd like more!",
+        "synonyms": [
+          "clothing"
+        ]
+      },
+      {
+        "raw": "garments”, \"attire”, \"clothing”, \"clades”, and “attire”.  \nWould you like to be answered with 5 synonyms for “ablations”?",
+        "synonyms": [
+          "garments"
+        ]
+      },
+      {
+        "raw": "attire”, “clothes”, “garment”, “clothing”, “drape”",
+        "synonyms": [
+          "attire"
+        ]
+      },
+      {
+        "raw": "garments” “clothing” “attire” “attirements” “fixtures”",
+        "synonyms": [
+          "garments"
+        ]
+      },
+      {
+        "raw": "clothing”.\n\nWould you like some more?",
+        "synonyms": [
+          "clothing"
+        ]
+      }
+    ],
+    "en_n_1_verb": [
+      {
+        "raw": "clothed”, “dressed”, “attired”, “bawled out in”, “hit with”.",
+        "synonyms": [
+          "clothed"
+        ]
+      },
+      {
+        "raw": "dressed”",
+        "synonyms": [
+          "dressed"
+        ]
+      },
+      {
+        "raw": "clothing”, “attire”, “fumewear”, “garment”, “drapery” (though less common).\n\nHere are some of those 5 synonyms put into a sentence: \n\n* The repeated suggestions by his employer were like a dress rehearsal of the punitive measures he would have to face. *",
+        "synonyms": [
+          "clothing"
+        ]
+      },
+      {
+        "raw": "draped”, “tucked”, “bundled”, “garbed”, “outfit”.\n  \nCan I help you with anything else?",
+        "synonyms": [
+          "draped"
+        ]
+      },
+      {
+        "raw": "wearing” \n1. Dress \n2. Adorn \n3. Garment \n4. Clad in \n5. Clad",
+        "synonyms": [
+          "wearing"
+        ]
+      }
+    ],
+    "en_n_10_adj": [
+      {
+        "raw": " မျက်နှာ� نیمه‌خوش، ملاحظه، حالت چهره، حالتی، یک لبخند ضعیف\"",
+        "synonyms": [
+          "မျက်နှာ� نیمه‌خوش، ملاحظه، حالت چهره، حالتی، یک لبخند ضعیف"
+        ]
+      },
+      {
+        "raw": "hue”, “ visage”, “countenance”, “palm” and “face”",
+        "synonyms": [
+          "hue"
+        ]
+      },
+      {
+        "raw": "expression,” “facial expression,” “look,” “facial expression,” “color.”",
+        "synonyms": [
+          "expression"
+        ]
+      },
+      {
+        "raw": "expression,” “countenance,” “face,” “ ظاهرات \", “set”",
+        "synonyms": [
+          "expression"
+        ]
+      },
+      {
+        "raw": "person”, “face”, “expression”, “smirk”, “set”",
+        "synonyms": [
+          "person"
+        ]
+      }
+    ],
+    "en_n_10_mixed": [
+      {
+        "raw": "tongue,” “face,” “upper lip,” “jawline,” “face expression.”",
+        "synonyms": [
+          "tongue"
+        ]
+      },
+      {
+        "raw": "crow’s feet”, “eyebrows”, “fusion girl’s”, “verbal facial expressions”  and “jaw line”",
+        "synonyms": [
+          "crow’s feet"
+        ]
+      },
+      {
+        "raw": "trace,” “malar,” “microexpression,” “facial furrow,” and “eyebrow rhyme.”",
+        "synonyms": [
+          "trace"
+        ]
+      },
+      {
+        "raw": "expressions,” “drapeau” \"grimace\", “face shape”, and “count”",
+        "synonyms": [
+          "expressions"
+        ]
+      },
+      {
+        "raw": "account\", “trace”, “line”, “m Studies”  , “cap”.\n",
+        "synonyms": [
+          "account"
+        ]
+      }
+    ],
+    "en_n_10_noun": [
+      {
+        "raw": "indicated,”“broke,”“loathed,”“attuned,”“inastructed.”",
+        "synonyms": [
+          "indicated"
+        ]
+      },
+      {
+        "raw": "express”, “manifest”, “signify”, “suggest”, “portray”",
+        "synonyms": [
+          "express"
+        ]
+      },
+      {
+        "raw": "indicated”, “manifested”, “expressed”, \"apparent\", \"revealed.”\n\n\nDo you want me to answer your question using these words?",
+        "synonyms": [
+          "indicated"
+        ]
+      },
+      {
+        "raw": "indicated,” “communicated,” “signified,” “ Signals,” “hinted”",
+        "synonyms": [
+          "indicated"
+        ]
+      },
+      {
+        "raw": "signals”, “rankles”, “tries”, “stings”, “bitterly ».",
+        "synonyms": [
+          "signals"
+        ]
+      }
+    ],
+    "en_n_10_unbiased": [
+      {
+        "raw": "façade”, “socket”, “expression\", “smile” & “face”.",
+        "synonyms": [
+          "façade"
+        ]
+      },
+      {
+        "raw": "gaunt, windy, marshy, stoic, stone-faced”",
+        "synonyms": [
+          "gaunt",
+          "windy",
+          "marshy",
+          "stoic",
+          "stone-faced"
+        ]
+      },
+      {
+        "raw": "facial expressions,” “gestures,” “maneuvers,” “behavior,” “gleets”",
+        "synonyms": [
+          "facial expressions"
+        ]
+      },
+      {
+        "raw": "facial expression\", \"gestures\", \"remains\", \"face expressions\", \"reacts”. \nWhat can I do for you?",
+        "synonyms": [
+          "facial expression"
+        ]
+      },
+      {
+        "raw": "frown,” “mughter,” “guillotine,” “facial warmth,” and “expressions.” Please ask your question now.",
+        "synonyms": [
+          "frown"
+        ]
+      }
+    ],
+    "en_n_10_verb": [
+      {
+        "raw": "line overal face”, “wrinkles overall face”, “wrinkled expression of face”, “glabrous surface face” and “overall facial lines”.",
+        "synonyms": [
+          "line overal face"
+        ]
+      },
+      {
+        "raw": "';s facial expressions”;",
+        "synonyms": [
+          "s facial expressions"
+        ]
+      },
+      {
+        "raw": "expression”; “facial-apparent”; “cl enrollment tures”; “face-making”; “facial-art”. \n\nLet me know if you would like me to continue by providing information about any of these.",
+        "synonyms": [
+          "expression"
+        ]
+      },
+      {
+        "raw": "communication,”“countenances,”“expressions,”“face,”“ פנים.” “ פנים” is the Chinese word for “face.”",
+        "synonyms": [
+          "communication"
+        ]
+      },
+      {
+        "raw": "expression,”“expressionism,”“facial expression,”“facial Communication,”“malar rise.”",
+        "synonyms": [
+          "expression"
+        ]
+      }
+    ],
+    "en_n_2_adj": [
+      {
+        "raw": "buildings,”“dwelling place,”“dwelling,”“residence,” and \"house.\"",
+        "synonyms": [
+          "buildings"
+        ]
+      },
+      {
+        "raw": "dwelling,” “residence,” “abode,” “dwelt” and “inhabitation.”",
+        "synonyms": [
+          "dwelling"
+        ]
+      },
+      {
+        "raw": "dwelling”,“house”,“residence”,“dwelt”,“habitat” \nI hope that helps.",
+        "synonyms": [
+          "dwelling"
+        ]
+      },
+      {
+        "raw": "residence,” “dwelling,” “habitation,” “dwelt,” “lodged.”",
+        "synonyms": [
+          "residence"
+        ]
+      },
+      {
+        "raw": "home”, \"dwelling\", “property”, “compound”, “abode”",
+        "synonyms": [
+          "home"
+        ]
+      }
+    ],
+    "en_n_2_mixed": [
+      {
+        "raw": "dwelling,” \"dwelt,” \"residence,” “dwelt in,” “built-in,”",
+        "synonyms": [
+          "dwelling"
+        ]
+      },
+      {
+        "raw": "House,” “dwelling,” “abode,” “residence,” “home.”",
+        "synonyms": [
+          "House"
+        ]
+      },
+      {
+        "raw": "Building”, \"Housing”, “Dwelling”, “Shelter”, “Dwlice”",
+        "synonyms": [
+          "Building"
+        ]
+      },
+      {
+        "raw": "dwelling”, \"residence”, “dwelt\", “dweltin”, “lodgings”",
+        "synonyms": [
+          "dwelling"
+        ]
+      },
+      {
+        "raw": "\n\n1.Dwelling\n2 building\n3 structure\n4 architectural feature\n5 Scirocco",
+        "synonyms": []
+      }
+    ],
+    "en_n_2_noun": [
+      {
+        "raw": "dwelling,” “dwelt,” “dwelling house,” “dwelling place,” “dwelt in.”",
+        "synonyms": [
+          "dwelling"
+        ]
+      },
+      {
+        "raw": "structures” , “housing units” , “lodges” , “dwelling places” , “inhabitations” .",
+        "synonyms": [
+          "structures"
+        ]
+      },
+      {
+        "raw": "hut», «dwelling», «casa», «habitat», «asunción»",
+        "synonyms": [
+          "hut»",
+          "«dwelling»",
+          "«casa»",
+          "«habitat»",
+          "«asunción»"
+        ]
+      },
+      {
+        "raw": "dwelling,” “residence,” “building,” “flat,” “house”",
+        "synonyms": [
+          "dwelling"
+        ]
+      },
+      {
+        "raw": "unit”, “dwelling”, “dwelling place”, “dwelling house”, “dwelling building”",
+        "synonyms": [
+          "unit"
+        ]
+      }
+    ],
+    "en_n_2_unbiased": [
+      {
+        "raw": "homes”, “abodes”, “residentials”, “habitations”, “dwelling”.",
+        "synonyms": [
+          "homes"
+        ]
+      },
+      {
+        "raw": "dwelling,” “dweltion,” “dwelling” and “dweltion.” Please note that all of these have become obsolete since the 1700's.",
+        "synonyms": [
+          "dwelling"
+        ]
+      },
+      {
+        "raw": "abode,” “dwelling,” “dwelt,” “habitation” and “residence.”",
+        "synonyms": [
+          "abode"
+        ]
+      },
+      {
+        "raw": "homes”, “residences”, “dwelling places”, “habitations”, “livings”.",
+        "synonyms": [
+          "homes"
+        ]
+      },
+      {
+        "raw": "residence,” “dwelling,” “dwelling-place,” “abode,” and “dwelling house.”",
+        "synonyms": [
+          "residence"
+        ]
+      }
+    ],
+    "en_n_2_verb": [
+      {
+        "raw": "dwelling,” “habitation,” “house,” “residence,” “dwelt.”",
+        "synonyms": [
+          "dwelling"
+        ]
+      },
+      {
+        "raw": "dwelling”, “habitation”, “dwelt” ,“residence”, “abode”. \n",
+        "synonyms": [
+          "dwelling"
+        ]
+      },
+      {
+        "raw": "dwelling,” \"abode,” “habitation,” “residence,” “house”",
+        "synonyms": [
+          "dwelling"
+        ]
+      },
+      {
+        "raw": "dwelling”, “habitation”, “residence”, “household”, “dwelling place”.",
+        "synonyms": [
+          "dwelling"
+        ]
+      },
+      {
+        "raw": "dwelling,” “dwelt,” “lodged,” “resided,” “inhabited.”",
+        "synonyms": [
+          "dwelling"
+        ]
+      }
+    ],
+    "en_n_3_adj": [
+      {
+        "raw": "backbone”, “lower body”, “limbs”, “outer body”, “lower half”",
+        "synonyms": [
+          "backbone"
+        ]
+      },
+      {
+        "raw": "těleso”, \"corpus\", \"somat\", \"bodily form\" and \"flesh\".",
+        "synonyms": [
+          "těleso"
+        ]
+      },
+      {
+        "raw": "body,” “physical form,” “person,” “facsimile,” “man”",
+        "synonyms": [
+          "body"
+        ]
+      },
+      {
+        "raw": "body,”“bodily structure,”“physique,”“form,”“corporeality.” Would you like another synonym list?",
+        "synonyms": [
+          "body"
+        ]
+      },
+      {
+        "raw": "corpse”, “bodily”, “stockings”, “unlike”, “body.”",
+        "synonyms": [
+          "corpse"
+        ]
+      }
+    ],
+    "en_n_3_mixed": [
+      {
+        "raw": "body,” “face,” “bodily,” “bodily part,” “person.”",
+        "synonyms": [
+          "body"
+        ]
+      },
+      {
+        "raw": "fill\", “die”, “naked”, “inner”, “body\".",
+        "synonyms": [
+          "fill"
+        ]
+      },
+      {
+        "raw": "\n1. Inaugural    \n2. First \n3. Entrance    \n4. Entrant    \n5. Initiate\" \nLet me know if you'd like to generate more synonyms or see examples of how to use these words.",
+        "synonyms": [
+          "Inaugural",
+          "First",
+          "Entrance",
+          "Entrant",
+          "Initiate"
+        ]
+      },
+      {
+        "raw": "body\", \"body part\", \"organs\", \"m0702278_adjs\", \"system\"",
+        "synonyms": [
+          "body"
+        ]
+      },
+      {
+        "raw": "\"\n\n1. In the body of\n2. Within the flesh\n3. In one's body\n4. In their torso\n5. In the gullet \n\n\n",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_noun": [
+      {
+        "raw": "limbs”,“limbs“,“limbs“,“limbs“, “limbs”.",
+        "synonyms": [
+          "limbs"
+        ]
+      },
+      {
+        "raw": "body“, “bodily”, “bodily construct”, “bodily framework”, “body of”.  What can I help you with? \n",
+        "synonyms": [
+          "body",
+          "bodily"
+        ]
+      },
+      {
+        "raw": "body”, \"bodily\", “bodily”, “corporal”, “string”",
+        "synonyms": [
+          "body"
+        ]
+      },
+      {
+        "raw": "the body”, \"bodily\", \"bodily form\", \"human frame\", \"the body of a person”.",
+        "synonyms": [
+          "the body"
+        ]
+      },
+      {
+        "raw": "bodys”, “souls”, “humans”, “lives”, “ bodies”.",
+        "synonyms": [
+          "bodys"
+        ]
+      }
+    ],
+    "en_n_3_unbiased": [
+      {
+        "raw": "body”, “form”, “shape”, “aspect” and “exterior”",
+        "synonyms": [
+          "body"
+        ]
+      },
+      {
+        "raw": "limbs”,“limbs”, “limbs”, “limbs”, \"limbs\".\n\nHow can I assist you today?",
+        "synonyms": [
+          "limbs"
+        ]
+      },
+      {
+        "raw": "limbs”, “limbs”, \"skeletal structure\", \"limbed body\" and \"limbs\".",
+        "synonyms": [
+          "limbs"
+        ]
+      },
+      {
+        "raw": "body,”“bodily,”“bodily portion,”“bodily part,”“limb”",
+        "synonyms": [
+          "body"
+        ]
+      },
+      {
+        "raw": "limb”, “limbs”, “limbs\", “limbs\", and “limbs”.",
+        "synonyms": [
+          "limb"
+        ]
+      }
+    ],
+    "en_n_3_verb": [
+      {
+        "raw": "embodied,” “bodied,” “worthies,” “bare bodied,” and \"bodily.\"",
+        "synonyms": [
+          "embodied"
+        ]
+      },
+      {
+        "raw": "embodied,” “fleshly,” “pneumatropic,” “somatic,” and “incarnate.” ",
+        "synonyms": [
+          "embodied"
+        ]
+      },
+      {
+        "raw": "r जमिनीhez függ”\n\n1. Lét?\n2. Ragaszig\n3. Testreszabott\n4. Ideiglenes\n5. Nehéz\n\nWould you like any of those words explained further?",
+        "synonyms": [
+          "r जमिनीhez függ"
+        ]
+      },
+      {
+        "raw": "embodied”, “physical”, “fleshy”, “bodily”, “real”",
+        "synonyms": [
+          "embodied"
+        ]
+      },
+      {
+        "raw": "bud,\" \" الناشئة,\" \"heady,\" \"parasitic,\" \"clonal.\"\n\n\n",
+        "synonyms": [
+          "bud"
+        ]
+      }
+    ],
+    "en_n_4_adj": [
+      {
+        "raw": "order”, “announcement”, “declaration”, “parentheses”, “audio”",
+        "synonyms": [
+          "order"
+        ]
+      },
+      {
+        "raw": "signal”,“mark”,“indication”,“hint”,“trace”",
+        "synonyms": [
+          "signal"
+        ]
+      },
+      {
+        "raw": "echo”, “sound”, “ring”, “acusis”, “fیدن-tanana”",
+        "synonyms": [
+          "echo"
+        ]
+      },
+      {
+        "raw": "cuirtsy”, “crackle”, “creak”, “clatter”, “hum”",
+        "synonyms": [
+          "cuirtsy"
+        ]
+      },
+      {
+        "raw": "shout”, \"scream\", \"chirp”, \"streak”, \"whisper\".",
+        "synonyms": [
+          "shout"
+        ]
+      }
+    ],
+    "en_n_4_mixed": [
+      {
+        "raw": "startling”, “resounding”, “low”, “roar”, “buzz”",
+        "synonyms": [
+          "startling"
+        ]
+      },
+      {
+        "raw": "stake,” “ perceive,” “comprehend,” “awaken,” “Feel.\"",
+        "synonyms": [
+          "stake"
+        ]
+      },
+      {
+        "raw": "liveliness”, “vividness”, \"vocalization\", \"acustic”, \"ear-splitting”. \n",
+        "synonyms": [
+          "liveliness"
+        ]
+      },
+      {
+        "raw": "sounds”",
+        "synonyms": [
+          "sounds"
+        ]
+      },
+      {
+        "raw": "noisy, verbose, rambunctious, sloppy, hostile”.",
+        "synonyms": [
+          "noisy",
+          "verbose",
+          "rambunctious",
+          "sloppy",
+          "hostile"
+        ]
+      }
+    ],
+    "en_n_4_noun": [
+      {
+        "raw": "babble,”“muffle,” “mumble,” \"hollownade,\" and \"muffling.\" Would you like me to help you with anything else?",
+        "synonyms": [
+          "babble"
+        ]
+      },
+      {
+        "raw": "muffle”, “muffle out”, “bury under”, “hide”, “hide away”",
+        "synonyms": [
+          "muffle"
+        ]
+      },
+      {
+        "raw": "buzz,” “roar,” “hiss,” “scream,” “growl” \n\nDo you need help with anything else?",
+        "synonyms": [
+          "buzz"
+        ]
+      },
+      {
+        "raw": "chew”, \"swallow”, \"blurt”, \"call out”, “vocalize.”\n\n\nWould you like me to help you with anything else?",
+        "synonyms": [
+          "chew"
+        ]
+      },
+      {
+        "raw": " \n\n1. Rumble \n2. Growl\n3. Snarl \n4. Roar \n5. bark\"",
+        "synonyms": []
+      }
+    ],
+    "en_n_4_unbiased": [
+      {
+        "raw": "roar”, \"bray\", \"snar\", “hollere”.",
+        "synonyms": [
+          "roar"
+        ]
+      },
+      {
+        "raw": "echo,” “rumble,” “rumbler,” “clatter,” “ring.”\n\nHowever, the most direct and commonly used synonyms for 'כוח' in Hebrew, which means \"voice\" or \"sound,\" are \"קול\" (kol) and \"ה� lærolang\" (ha-la'ar",
+        "synonyms": [
+          "echo"
+        ]
+      },
+      {
+        "raw": "droning,”“s�qing,” “muttering,” “grumbling,” and “droning.”\n\n\n",
+        "synonyms": [
+          "droning"
+        ]
+      },
+      {
+        "raw": "bark”, \"rumble\", “chuff”, \"whiff\", “snuffle”",
+        "synonyms": [
+          "bark"
+        ]
+      },
+      {
+        "raw": "droning,” “rumbles,” “hammering,” “drumming,” and “droning.”",
+        "synonyms": [
+          "droning"
+        ]
+      }
+    ],
+    "en_n_4_verb": [
+      {
+        "raw": "overwhelming”, “overpowering”, “rushing”, “ceaseless”, “tiny” \n\n\n",
+        "synonyms": [
+          "overwhelming"
+        ]
+      },
+      {
+        "raw": " \n1. ecchoic\n2. echoic\n3. reechoic\n4. resounding\n5. ring}$\n\nHere are these five words used in a sentence:\n* The narrator was an talker, exhibing  resounding\nechoes of his past exper------------------###### experiences.",
+        "synonyms": [
+          "ecchoic",
+          "echoic",
+          "reechoic",
+          "resounding",
+          "ring}$"
+        ]
+      },
+      {
+        "raw": "loquacious”, \"wordy”, \"verbose”, \"varicated”, “verbal inflorescence”",
+        "synonyms": [
+          "loquacious"
+        ]
+      },
+      {
+        "raw": "equivocally”, \"subtly”, \"delicately”, \"suggestively”, \"sugared\"",
+        "synonyms": [
+          "equivocally"
+        ]
+      },
+      {
+        "raw": " \n1. allegoo\n2. com tabi\n3. jingiyang\n4. linguz\n5. linguyizheyi",
+        "synonyms": [
+          "allegoo",
+          "com tabi",
+          "jingiyang",
+          "linguz",
+          "linguyizheyi"
+        ]
+      }
+    ],
+    "en_n_5_adj": [
+      {
+        "raw": "以下為 китай chữ中「食材」的 پنج sinonimo:\n#食材\n#調料\n#配料\n#零食\n#零食\"",
+        "synonyms": [
+          "以下為 китай chữ中「食材」的 پنج sinonimo",
+          "#食材",
+          "#調料",
+          "#配料",
+          "#零食"
+        ]
+      },
+      {
+        "raw": "ingредиенты”, \"компоненты\", \"составные части\", \"входные вещества”, “below\".",
+        "synonyms": [
+          "ingредиенты"
+        ]
+      },
+      {
+        "raw": "ingredients”, “components”, “ingrédients”, “components”, “assortment”.\n\nAre there any other questions you want me to answer?\n",
+        "synonyms": [
+          "ingredients"
+        ]
+      },
+      {
+        "raw": "ingредиente”, \"materiales\", \"substancias\", “components”, “ingredientes”.",
+        "synonyms": [
+          "ingредиente"
+        ]
+      },
+      {
+        "raw": "સામગ્રી,” “અપ્રધાન,” “ભાલતો બુઢા,“ “મેઢા કર્યા,” “આરાઓચી” \n\nNow here's the answer to your question about ‘આરાઓચી’:It means to decide/find things to eat. This phrase is",
+        "synonyms": [
+          "સામગ્રી"
+        ]
+      }
+    ],
+    "en_n_5_mixed": [
+      {
+        "raw": "bodily parts,” “bodily substances,” “bodily matter,” “receptibles,” “substance”",
+        "synonyms": [
+          "bodily parts"
+        ]
+      },
+      {
+        "raw": "hydкан irason junjury,” “kulijas nerdzneberiwlgas,”, \"food products,” “topchylyga.”",
+        "synonyms": [
+          "hydкан irason junjury"
+        ]
+      },
+      {
+        "raw": "crops”, “plant foods”, \"buffer\", “Zaraten”, \"cereals\".",
+        "synonyms": [
+          "crops"
+        ]
+      },
+      {
+        "raw": "dietary goods”, \"kitchen aids”, \"kitchen implements\", \"finely prepared material\" , \"edible matter\"",
+        "synonyms": [
+          "dietary goods"
+        ]
+      },
+      {
+        "raw": "food stuff”, \"kitchen ingredients\", \"packages\", \"cutlery\", \"tableware\"",
+        "synonyms": [
+          "food stuff"
+        ]
+      }
+    ],
+    "en_n_5_noun": [
+      {
+        "raw": "ingredients”, \" jūtibles”, \"food stuff”, \"ingredients”, \"mise en place\"",
+        "synonyms": [
+          "ingredients"
+        ]
+      },
+      {
+        "raw": "ingredients,” “ingredients,” “components,” “ingtons,” “ingredients.”",
+        "synonyms": [
+          "ingredients"
+        ]
+      },
+      {
+        "raw": "ドラムスティック、パンチドロー、サン、ブラッドワーク、ロール\\) ]];świadcz。\n\n```json\n{\n  \"normalized\": \"ingredients\",\n  \"synonyms\": [\"τροφές\", \" υλικά\", \"レンガ\", \"Guillotina\", \"スピニング\"]\n}\n```\n\n",
+        "synonyms": [
+          "ドラムスティック、パンチドロー、サン、ブラッドワーク、ロール\\) ]]",
+          "świadcz。"
+        ]
+      },
+      {
+        "raw": "ingredients\", \"essenzias\", \"components\", \"ingrédients\" (in French), \"ingantry\" (though I'm not sure how usable this is).",
+        "synonyms": [
+          "ingredients"
+        ]
+      },
+      {
+        "raw": "ingredients,” “ componenti alimentari”,  \"scope for the kitchen”, \"business cafe\" and \"ingredienti”. \n",
+        "synonyms": [
+          "ingredients"
+        ]
+      }
+    ],
+    "en_n_5_unbiased": [
+      {
+        "raw": "ingredients”, \"components\", \"components”, “parts”, “ingredients”.\n\n\"",
+        "synonyms": [
+          "ingredients"
+        ]
+      },
+      {
+        "raw": "ingredients”, \"components”, \"elements”, “assredients”, and \"ingວມaritats\".  Is there anything else I can help you with?",
+        "synonyms": [
+          "ingredients"
+        ]
+      },
+      {
+        "raw": "proteins,” “amino acids,” “nucleotides,” “seasonings,” “essential oils.”",
+        "synonyms": [
+          "proteins"
+        ]
+      },
+      {
+        "raw": "ingredients”, \"components”, “materials”, “ substances”, “the components”.",
+        "synonyms": [
+          "ingredients"
+        ]
+      },
+      {
+        "raw": "ingredients” - \"essentials” - “conjugates” - “components” - “findings”",
+        "synonyms": [
+          "ingredients"
+        ]
+      }
+    ],
+    "en_n_5_verb": [
+      {
+        "raw": " Entering \"\"\"\n\nNow, here's an answer:\n\nWhat does the phrase \"Entertaining/\" refer to?\nThe phrase \" Entertaining/\" is typically used to describe something (often food) that is tasty, delicious, and enjoyable to eat.\nHere are 5 synonyms:1.\nPalatable\n2.\nDelicious",
+        "synonyms": [
+          "Entering"
+        ]
+      },
+      {
+        "raw": "provisions”, “ungauged fare”, “glib”, “plebiscit” and “barbershop”.",
+        "synonyms": [
+          "provisions"
+        ]
+      },
+      {
+        "raw": "foods”, \"nutrition”, \"Bylands”, \"crops”, “output”. \nWhat would you like to know about these words? \nI hope they are helpful",
+        "synonyms": [
+          "foods"
+        ]
+      },
+      {
+        "raw": "information technology” ,“software engineering” ,“information systems” ,“computer science” ,“database management” .",
+        "synonyms": [
+          "information technology"
+        ]
+      },
+      {
+        "raw": "gleanings”, “harvest”, “yard yields”, “ Produce ”, “rownns”.",
+        "synonyms": [
+          "gleanings"
+        ]
+      }
+    ],
+    "en_n_6_adj": [
+      {
+        "raw": "Multitude”, \"Batch”, “Lgne”, “Surulent”, \"Herd of livestock”. \n",
+        "synonyms": [
+          "Multitude"
+        ]
+      },
+      {
+        "raw": "block», \"group», \"ensemble\", \"parade», \"company\"",
+        "synonyms": [
+          "block»"
+        ]
+      },
+      {
+        "raw": "assemblage,” “grocery,” “herd,” “milk,” and “ Noah’s Ark.” Is there anything else I can help you with?",
+        "synonyms": [
+          "assemblage"
+        ]
+      },
+      {
+        "raw": "ensemble”, “council”, “group”, “assemblage”, “ syndicate”",
+        "synonyms": [
+          "ensemble"
+        ]
+      },
+      {
+        "raw": "  \n1. Cluster\n2. Group\n3. Mass\n4. Stream\n5. Volume",
+        "synonyms": [
+          "Cluster",
+          "Group",
+          "Mass",
+          "Stream",
+          "Volume"
+        ]
+      }
+    ],
+    "en_n_6_mixed": [
+      {
+        "raw": "set of,” “group of,” “batch of,” “batch,” “set.”",
+        "synonyms": [
+          "set of"
+        ]
+      },
+      {
+        "raw": "group”, “gaggle”, “flock”, “roupe”, “herd”.",
+        "synonyms": [
+          "group"
+        ]
+      },
+      {
+        "raw": "**band**, **batch**, **band of**, **family**, **host**”",
+        "synonyms": [
+          "band",
+          "batch",
+          "band of",
+          "family",
+          "host"
+        ]
+      },
+      {
+        "raw": "host\", \"band\", \"family\", \"cluster\", \"mittymouth\".",
+        "synonyms": [
+          "host"
+        ]
+      },
+      {
+        "raw": "band”, “gang”, “assemblage”, “collection”, “colony”.",
+        "synonyms": [
+          "band"
+        ]
+      }
+    ],
+    "en_n_6_noun": [
+      {
+        "raw": "assemblies, gatherings, groups, organizations, partnerships.”\n\nNow, let's use these to answer your question:\n\n\n\nThe company decided to _______ a marketing team to handle promotional campaigns.\n\nThe deployment of _______ allowed for a more efficient workflow.\n\nWe are seeking volunteers for the _______ of candidates.\n\nThe _______ of",
+        "synonyms": [
+          "assemblies",
+          "gatherings",
+          "groups",
+          "organizations",
+          "partnerships"
+        ]
+      },
+      {
+        "raw": "  \n* Entity\n* Body\n* Cluster\n* Segment\n* Division*",
+        "synonyms": [
+          "Entity",
+          "Body",
+          "Cluster",
+          "Segment",
+          "Division"
+        ]
+      },
+      {
+        "raw": " \n\n1. container \n\n2. cage \n\n3. vessel \n\n4. storage unit\n\n5. containment unit \n\nWould you like me to answer the question afterwards, or would you like to provide a definition or use a synonym for \" terdiri\"?\n\nThe above synonyms refer to a container or device used to store or hold",
+        "synonyms": []
+      },
+      {
+        "raw": "area,” “row,” “shade,” “portrait,” “frame.”",
+        "synonyms": [
+          "area"
+        ]
+      },
+      {
+        "raw": "  \n1. Group\n2. Cluster\n3. Collection\n4. Assembly\n5. Waterload",
+        "synonyms": [
+          "Group",
+          "Cluster",
+          "Collection",
+          "Assembly",
+          "Waterload"
+        ]
+      }
+    ],
+    "en_n_6_unbiased": [
+      {
+        "raw": "  \n1. Mass  \n2. Population\n3. Group  \n4. Assembly\n5. Schwarm\"",
+        "synonyms": [
+          "Mass",
+          "Population",
+          "Group",
+          "Assembly",
+          "Schwarm"
+        ]
+      },
+      {
+        "raw": "  \n1. Collection\n2. Ensemble\n3. Array\n4. Arraying\n5. Group",
+        "synonyms": [
+          "Collection",
+          "Ensemble",
+          "Array",
+          "Arraying",
+          "Group"
+        ]
+      },
+      {
+        "raw": "association”, “collection”, “community”, “superior unit” and “the body”.",
+        "synonyms": [
+          "association"
+        ]
+      },
+      {
+        "raw": "family”, “train”, “district”, “community”, “family of beliefs”",
+        "synonyms": [
+          "family"
+        ]
+      },
+      {
+        "raw": "a clutch”, “a crew”, “a group”, “a team”, “a cadre”.",
+        "synonyms": [
+          "a clutch"
+        ]
+      }
+    ],
+    "en_n_6_verb": [
+      {
+        "raw": "mference,” “group,” “herd,” “batch,” and “cluster.”",
+        "synonyms": [
+          "mference"
+        ]
+      },
+      {
+        "raw": "band, gang, group, cadre, company” \n",
+        "synonyms": [
+          "band",
+          "gang",
+          "group",
+          "cadre",
+          "company"
+        ]
+      },
+      {
+        "raw": "Ensemble”, \"Company\", \"Mass\", \"Community\", \"Body\" \nHowever, I will focus on 2 that stand out: \"Ensemble\" and \"Community\".\n\n\n",
+        "synonyms": [
+          "Ensemble"
+        ]
+      },
+      {
+        "raw": "group”, “cluster”, “array”, “body”, “set” \n\n\nLet me know if you'd like more examples or have any other questions!",
+        "synonyms": [
+          "group"
+        ]
+      },
+      {
+        "raw": "multitude”, “assemblage”, “devotee”, \"gaggle\", \"world\"",
+        "synonyms": [
+          "multitude"
+        ]
+      }
+    ],
+    "en_n_7_adj": [
+      {
+        "raw": " mzunguko », \"rotáció”, \"belép\", „példa”.\n\nDo you need anything else?",
+        "synonyms": [
+          "mzunguko »"
+        ]
+      },
+      {
+        "raw": "spiral motion,” “world spin,” “cooter shift,” “unending propulsion,” and “perpetual revolution.”",
+        "synonyms": [
+          "spiral motion"
+        ]
+      },
+      {
+        "raw": "rotating,” “spinning,” “circular,” “revolving,” “onestep”.",
+        "synonyms": [
+          "rotating"
+        ]
+      },
+      {
+        "raw": "**Rotation**” “ சுழற்சி (chhuḷaṉci)” “Hasha” “கதிரல் (kaṭiraḷ)” “சுழல் (chuḷ)” ",
+        "synonyms": [
+          "Rotation"
+        ]
+      },
+      {
+        "raw": "Action,”“Potential,”“Force”, “Mechanism”, “Architecture”.\n\nDefining these in context:\n\n* **Action:** Suggests a deliberate movement or interaction, often with an underlying purpose.\n* **Potential:** Implies something that can be activated or experienced, representing possibility rather than certainty.\n*",
+        "synonyms": [
+          "Action"
+        ]
+      }
+    ],
+    "en_n_7_mixed": [
+      {
+        "raw": "persist Guides about factors involving this constant. »{constant} »{constant} »{ever} »{perpetually} »{endlessly}",
+        "synonyms": [
+          "persist Guides about factors involving this constant. »{constant} »{constant} »{ever} »{perpetually} »{endlessly}"
+        ]
+      },
+      {
+        "raw": "exist4 degrading material built into time`, “weave4 our stories one hour at a time`, “bind4 memories into a lasting legacy`, “forge4 connections across the span of seasons`, “constr4nd from the combination of moments`.",
+        "synonyms": [
+          "exist4 degrading material built into time`",
+          "weave4 our stories one hour at a time`",
+          "bind4 memories into a lasting legacy`",
+          "forge4 connections across the span of seasons`",
+          "constr4nd from the combination of moments`"
+        ]
+      },
+      {
+        "raw": "last,“ “Yap 컨설itions,” “Riotroots the diary,” “To overlap,” “Fi rather than a].”",
+        "synonyms": [
+          "last",
+          "Yap 컨설itions"
+        ]
+      },
+      {
+        "raw": "last-, “ago-”, “times-”, “ancient-”, “yesteryear-”",
+        "synonyms": [
+          "last",
+          "ago"
+        ]
+      },
+      {
+        "raw": "times', “periods', “swanings', “periods' of time, “eras of time”",
+        "synonyms": [
+          "times",
+          "periods",
+          "swanings",
+          "periods' of time",
+          "eras of time"
+        ]
+      }
+    ],
+    "en_n_7_noun": [
+      {
+        "raw": "a verse”, “verse” , “stanza”, “stanzae” , “versees” \n\nHere's a breakdown:\n\n* **A verse:** This directly refers to a line of poetry.\n* **Stanza:** A stanza is a section of a poem, usually containing several verses.\n* **Stanzae",
+        "synonyms": [
+          "a verse"
+        ]
+      },
+      {
+        "raw": "sequence,” \"number,” \"order,” “progression,” “sequence of events”",
+        "synonyms": [
+          "sequence"
+        ]
+      },
+      {
+        "raw": "these two categories” or “these two groups.”\n\nThe other five would be: \"as observed in history”, \"as noted in previous examples”, \"consistent with prior cases”, \"late instances” and “informative examples.”\n\n\nLet me know if you'd like me to elaborate on any of these! \n",
+        "synonyms": [
+          "these two categories"
+        ]
+      },
+      {
+        "raw": "season”",
+        "synonyms": [
+          "season"
+        ]
+      },
+      {
+        "raw": " ہر موسم نئے رقباء آتے ہیں”  \n1. **ہر دہاوی**\n2. **ہر زمانہ**\n3. **ہر عمر**\n4. **ہر تقویم**\n5. **ہر دور**  \n\nWould you like me to rephrase any of these based on context?",
+        "synonyms": [
+          "ہر موسم نئے رقباء آتے ہیں"
+        ]
+      }
+    ],
+    "en_n_7_unbiased": [
+      {
+        "raw": "通过”,“乘”,“借助”,“借用”,“借用”",
+        "synonyms": [
+          "通过"
+        ]
+      },
+      {
+        "raw": "Which one did you like better?” says the vegan. \"Long is fine, just a bit longer than 常.\" \"闪 הק. is well-aimed even if it falls short.”",
+        "synonyms": [
+          "Which one did you like better?"
+        ]
+      },
+      {
+        "raw": "Just” and “simultaneously” could be seen as synonyms for this expression.",
+        "synonyms": [
+          "Just"
+        ]
+      },
+      {
+        "raw": "continual”, “continuance”, “continuously”, “clerical”, “clerkish”.",
+        "synonyms": [
+          "continual"
+        ]
+      },
+      {
+        "raw": "secular” is a synonym for the word you provided.",
+        "synonyms": [
+          "secular"
+        ]
+      }
+    ],
+    "en_n_7_verb": [
+      {
+        "raw": " berulang”, \"materiHungria\", \" sikken\", “paketans\",  “perbbagean”.",
+        "synonyms": [
+          "berulang"
+        ]
+      },
+      {
+        "raw": "countinuos”, “perpetual”, “indefinite”, “ongoing”, “continuus”",
+        "synonyms": [
+          "countinuos"
+        ]
+      },
+      {
+        "raw": "ongoingness”, “continuousness”, “persistence”, “chronicity”, “longevity”.",
+        "synonyms": [
+          "ongoingness"
+        ]
+      },
+      {
+        "raw": "perpetual,” “ongoing,” “frequent,” “prolonged,” and “continuous.”",
+        "synonyms": [
+          "perpetual"
+        ]
+      },
+      {
+        "raw": "recursiveness,” “narrative,” “cycle,” “repetition,” “Jenkins’ curve” \n\n\n",
+        "synonyms": [
+          "recursiveness"
+        ]
+      }
+    ],
+    "en_n_8_adj": [
+      {
+        "raw": " indicate  ,portray , enumerate , charakterize ,fulfil”",
+        "synonyms": [
+          "indicate",
+          "portray",
+          "enumerate",
+          "charakterize",
+          "fulfil"
+        ]
+      },
+      {
+        "raw": "Eponstrate”, “ingaid”, “finna”, “bockety” ,“Here iff”",
+        "synonyms": [
+          "Eponstrate"
+        ]
+      },
+      {
+        "raw": "definin, collects, subsists, constitutes, comprise”\n\nPlease let me know how you would like me to proceed!",
+        "synonyms": [
+          "definin",
+          "collects",
+          "subsists",
+          "constitutes",
+          "comprise"
+        ]
+      },
+      {
+        "raw": "overpower”, “dominant”, “prevailing”, “ruling”, “supreme”.",
+        "synonyms": [
+          "overpower"
+        ]
+      },
+      {
+        "raw": "hang\", “state\", “indicates\", “points to”, \"points to”. I can continue providing if you want more.",
+        "synonyms": [
+          "hang"
+        ]
+      }
+    ],
+    "en_n_8_mixed": [
+      {
+        "raw": "ruled”, “Commanded”, “Supervised”, “Managed”, “Overseen”",
+        "synonyms": [
+          "ruled"
+        ]
+      },
+      {
+        "raw": "govertness”, \"almightyship”, “commanding heights”, \"leadership\", and \"jurisdiction\" .  These all carry some notion of having authority or overseeing something.",
+        "synonyms": [
+          "govertness"
+        ]
+      },
+      {
+        "raw": "pen\", \"rank\", \"control\", \"dominion\", \"influence\"",
+        "synonyms": [
+          "pen"
+        ]
+      },
+      {
+        "raw": "\n\nmonarch,\ndominion,\npraetorship,\npatronage,\ninfluence\"",
+        "synonyms": []
+      },
+      {
+        "raw": "merged,” “besought,” “couraged,” “guided,” “upheld.”",
+        "synonyms": [
+          "merged"
+        ]
+      }
+    ],
+    "en_n_8_noun": [
+      {
+        "raw": "\n\n1. **Principle**:\n2. ** правило** (in Russian):\n3. **Закон** (in Ukrainian):\n4. **Guiding Star**: This phrase emphasizes the source of direction, often within a team or organization, where one individual takes the lead or provides essential direction.\n5. **ighthouse",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Leadership\n2.  Mastermind\n3. chuva\n4. Authority\n5.  मालिक/नियंत्रक\n\n\n\nDoes that make sense?",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* ** Principles**\n* ** Guidelines**\n* ** Ties**\n* ** Authority**\n* ** Control**\n\n\nLet me know if you'd like further explanation for any of these. \n",
+        "synonyms": []
+      },
+      {
+        "raw": "Dominance,” “authority,” “control,” “influence,” “power”",
+        "synonyms": [
+          "Dominance"
+        ]
+      },
+      {
+        "raw": "**deanom**, **spoken word**, **cure**, **ennent**, **limerence**\"",
+        "synonyms": [
+          "deanom",
+          "spoken word",
+          "cure",
+          "ennent",
+          "limerence"
+        ]
+      }
+    ],
+    "en_n_8_unbiased": [
+      {
+        "raw": "\n\n1. Authority\n2. Doctrine\n3. Principle\n4. Rule\n5. Protocol\"",
+        "synonyms": []
+      },
+      {
+        "raw": "dictate,” “preside,” “misrule,” “regulate,” \"dictate.”",
+        "synonyms": [
+          "dictate"
+        ]
+      },
+      {
+        "raw": "The seat of power”",
+        "synonyms": [
+          "The seat of power"
+        ]
+      },
+      {
+        "raw": "headship”, “predominance”, “ controlo”, “power”, “influence”",
+        "synonyms": [
+          "headship"
+        ]
+      },
+      {
+        "raw": "ruled,” “headed,” “oversaw,” “managed,” and “rules”. \n",
+        "synonyms": [
+          "ruled"
+        ]
+      }
+    ],
+    "en_n_8_verb": [
+      {
+        "raw": "\n\n1. Dominate\n2. Insist\n3. Dictate\n4. Predominantly\n5. Control",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* Authoritative\n* Dominant\n* High-ranking\n* Influential\n* Powerful \n\n\nLet me know if you'd like to explore using these words in a sentence!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **Mature** \n2. **Established**\n3. ** etablshihed **\n4. **Dominant**\n5. **Central** \n\n\n",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dominate\n2.  Control\n3.  Regulate\n4.  Influence\n5.  Shape \n\nLet me know if you'd like to explore any of these further!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Command\n2. Hierarchical position\n3. Principled leadership\n4. Institutional role\n5. Practice of authority",
+        "synonyms": []
+      }
+    ],
+    "en_n_9_adj": [
+      {
+        "raw": " vehicle”, “machine”, “machine tool”, “machinery”, “processes”.  \nWould you like me to create sentence examples using some of those synonyms?",
+        "synonyms": [
+          "vehicle"
+        ]
+      },
+      {
+        "raw": "device”, \"thing”, \"vehicle”, \"machine”, “thingamajig”.\n\nLet me know if you'd like a list of these words in this context.",
+        "synonyms": [
+          "device"
+        ]
+      },
+      {
+        "raw": "carry,” \"transport,” “mover,” \"doorway,\" \"vehicular.\"",
+        "synonyms": [
+          "carry"
+        ]
+      },
+      {
+        "raw": "vehicles”, \"transport\", \"mode of transport\", \"medium of conveyance\", “mode of durable conveyance”",
+        "synonyms": [
+          "vehicles"
+        ]
+      },
+      {
+        "raw": "mechanical, motor, transforming,onsailing, vessel” \nIs there anything else you'd like to know?",
+        "synonyms": [
+          "mechanical",
+          "motor",
+          "transforming",
+          "onsailing",
+          "vessel"
+        ]
+      }
+    ],
+    "en_n_9_mixed": [
+      {
+        "raw": "vehicles”, “machinery”, “transporting devices”, “machines”, “fat*/\nWhy did the scarecrow win an award? Because he was outstanding in his field!",
+        "synonyms": [
+          "vehicles"
+        ]
+      },
+      {
+        "raw": "vehicles”, \"transports”, \"vehicles”, \"machinery”, \"carry overs”",
+        "synonyms": [
+          "vehicles"
+        ]
+      },
+      {
+        "raw": "wagons,” \"vehicles,” “cars,” “vehicles,” and “transportation.”",
+        "synonyms": [
+          "wagons"
+        ]
+      },
+      {
+        "raw": "vehicles,” “machines,” “vehicles,” “vehicles,” “vehicles”.",
+        "synonyms": [
+          "vehicles"
+        ]
+      },
+      {
+        "raw": "vehicles”, “midgets”, “vehiculars”, “wagons” and “machinery”.",
+        "synonyms": [
+          "vehicles"
+        ]
+      }
+    ],
+    "en_n_9_noun": [
+      {
+        "raw": "vehicles,” “machines,” “wooden structures,” “vehicles,” “vehicles”. \nDo you want to know more?",
+        "synonyms": [
+          "vehicles"
+        ]
+      },
+      {
+        "raw": "vehicles,” “staff,” “cargo,” “vessels,” “transport”",
+        "synonyms": [
+          "vehicles"
+        ]
+      },
+      {
+        "raw": "vehicles,” \"machines,” “transportation systems,” “solutions,” “methods”.",
+        "synonyms": [
+          "vehicles"
+        ]
+      },
+      {
+        "raw": "vehicles,” “carriages,” “trains,” “boats,” “aircraft”",
+        "synonyms": [
+          "vehicles"
+        ]
+      },
+      {
+        "raw": "vehicles,” “transport” “carriers,” “vehicles,” “vehicles”.",
+        "synonyms": [
+          "vehicles"
+        ]
+      }
+    ],
+    "en_n_9_unbiased": [
+      {
+        "raw": " vehicle\", \"mode of transportation\", \"transportation\", \"carriage\" and \"transport\". \n",
+        "synonyms": [
+          "vehicle"
+        ]
+      },
+      {
+        "raw": "Vessel,” “vehicle,” “curtilage,” “landed conveyance,” “cab”",
+        "synonyms": [
+          "Vessel"
+        ]
+      },
+      {
+        "raw": "car\", \"vehicle\", \"transportation\", \"material\", \"form of motion\"",
+        "synonyms": [
+          "car"
+        ]
+      },
+      {
+        "raw": " वाहन”, \"हिस्सेवाला\", \"ट्रांसपोर्ट साधन\", \"वाहना\", \"निर्यात\".",
+        "synonyms": [
+          "वाहन"
+        ]
+      },
+      {
+        "raw": "vehicle,” “mode of transport,” “carrier,” “vector,” “trade.” \nHere are some examples of how you'd use them:\n\n• \"We arrived to the **carrier** at the train station.\"\n• \"While **trade** across the ocean wasn't practical, ship travel was an option.\"\n• \"His",
+        "synonyms": [
+          "vehicle"
+        ]
+      }
+    ],
+    "en_n_9_verb": [
+      {
+        "raw": "degausp\", \"devil-word\", \"dumbness\", \"nicecrumb\", \"maudlin\"",
+        "synonyms": [
+          "degausp"
+        ]
+      },
+      {
+        "raw": " \nIndistinct,\" \"Minimalist,\" \"Disparate,\" \"Disparate,\" and \"Imaginative.” \n",
+        "synonyms": [
+          "Indistinct"
+        ]
+      },
+      {
+        "raw": "zoophoby” (fear of animals), “zoophobia” (fear of animals), “anthropopis” (fear of humans), “anthropophobia” (fear of humans), “at鲍区fobic” (fear of large cities).",
+        "synonyms": [
+          "zoophoby"
+        ]
+      },
+      {
+        "raw": "onomics”,\n\"prosperity”,\n\"wealth”,\n\"opulence”,\n\"glad times.”",
+        "synonyms": [
+          "onomics"
+        ]
+      },
+      {
+        "raw": "hyperbole”, \"exaggeration\", \"excess\", “wordy”, \"gibberish\".",
+        "synonyms": [
+          "hyperbole"
+        ]
+      }
+    ],
+    "en_v_1_adj": [
+      {
+        "raw": "to lay down”, “to deposit”, “to put in”, “to arrange for”, “to affix”",
+        "synonyms": [
+          "to lay down"
+        ]
+      },
+      {
+        "raw": "to incorporate”, “to add”, “to include”, “to permit”, “to integrate”.",
+        "synonyms": [
+          "to incorporate"
+        ]
+      },
+      {
+        "raw": "to collect again”, “to assemble back together”, “to stack up”, “to compile”, “to fit into”.",
+        "synonyms": [
+          "to collect again"
+        ]
+      },
+      {
+        "raw": "to repeat,” “to attend to,” “to withdraw,” “to present,” and “to add.”",
+        "synonyms": [
+          "to repeat"
+        ]
+      },
+      {
+        "raw": "to impose”, “to lay down”, “to burden with”, “to load down with”, “to impose on”.",
+        "synonyms": [
+          "to impose"
+        ]
+      }
+    ],
+    "en_v_1_mixed": [
+      {
+        "raw": "to stuff into”, “to insert into”, “to put into”, “to fill with”, “to accommodate”.  \n\nLet me know if you'd like more explanation or examples for any of these!",
+        "synonyms": [
+          "to stuff into"
+        ]
+      },
+      {
+        "raw": "to insert», \"to augment», «to load», \"to affix», and \"to fit”.\n\nCan I help you with anything else?",
+        "synonyms": [
+          "to insert»"
+        ]
+      },
+      {
+        "raw": "to insert or fit (something into or upon something else)”\n\nHere are the synonyms:\n\n1. to fit into\n2. to insert\n3. to insert into\n4. to poset within\n5. to terminate at \n\n\nLet me know if you have any other questions!",
+        "synonyms": [
+          "to insert",
+          "fit (something into",
+          "upon something else)"
+        ]
+      },
+      {
+        "raw": "put in”, “insert into”, “substitute”, “replace”, \"insert into”.",
+        "synonyms": [
+          "put in"
+        ]
+      },
+      {
+        "raw": "to fill in”, \"to put\", \"to insert\", \"to add\", \"to place”.\n\nOne example of how these synonyms might be used:\n\n\"The doctor allowed the medic to **apply** gauze to the wound.\"\nvs.\n\nThe doctor allowed the medic to **add** gauze to the wound.\n\nvs.\n\n",
+        "synonyms": [
+          "to fill in"
+        ]
+      }
+    ],
+    "en_v_1_noun": [
+      {
+        "raw": "draws” or “shrinks into”\n\n1. **Draws**\n2. **Shrinks**\n3. **Removes**\n4. **Inserts**\n5. **Changes to** \n\n\n",
+        "synonyms": [
+          "draws"
+        ]
+      },
+      {
+        "raw": "put up in”\n\n1. plastered up\n2. planted\n3. inserted\n4. ushered in\n5. interlaid",
+        "synonyms": [
+          "put up in"
+        ]
+      },
+      {
+        "raw": "lay\", “put\", “send (something) into (something)\", “position\", “set”",
+        "synonyms": [
+          "lay"
+        ]
+      },
+      {
+        "raw": "place»,“insert»,“embed»,“embody»,“team up”\nDo you want me to answer a question using one of these synonyms?",
+        "synonyms": [
+          "place»",
+          "insert»",
+          "embed»",
+          "embody»",
+          "team up"
+        ]
+      },
+      {
+        "raw": "puts,”“stacker,”“embeds,”“revolves,”“pl protrudes”",
+        "synonyms": [
+          "puts"
+        ]
+      }
+    ],
+    "en_v_1_unbiased": [
+      {
+        "raw": "\n\n1. **insert** \n\n2. **file into** \n\n3. **place into**\n\n4. **throw in**\n\n5. **embed** \n",
+        "synonyms": []
+      },
+      {
+        "raw": "embed”, “implant”, “sink in”, “fix in”, “fit in”",
+        "synonyms": [
+          "embed"
+        ]
+      },
+      {
+        "raw": "blush,”“cherry,\"”sense(on)”,”sche,项目,” and “laycharge.” Does that work?",
+        "synonyms": [
+          "blush"
+        ]
+      },
+      {
+        "raw": "work in, incorporate, finish, slot, accomplish.”\n\n\nLet me know if you'd like to practice a short example using one of these synonyms!",
+        "synonyms": [
+          "work in",
+          "incorporate",
+          "finish",
+          "slot",
+          "accomplish"
+        ]
+      },
+      {
+        "raw": "to press firmly; to put into\"\n\nHere are five possible answers, using these synonyms:\n\n\n\n* 1. **Blend** (Blend into the background, blend into the crowd)\n* 2. ** Embed** ( embed the idea, embed a photo)\n* 3. **Inforce** (",
+        "synonyms": [
+          "to press firmly",
+          "to put into"
+        ]
+      }
+    ],
+    "en_v_1_verb": [
+      {
+        "raw": "\n\n1. To insert\n2. To place\n3. To accommodate\n4. To embed\n5. To impose\n\n\nLet me know if you'd like to see example sentences using any of these synonyms!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* To fit into\n* To slot into\n* To fit in\n* To nestle in\n* To insert into",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. to pokedown\n2. to press into\n3. to push into\n4. to smoosh\n5. to depress\n\n\nLet me know if you'd like me to answer your question about \"into\" using these words!",
+        "synonyms": []
+      },
+      {
+        "raw": "to put in”, “to blend in”, “to absorb into”, \"to insert into\", “to incorporate”.",
+        "synonyms": [
+          "to put in"
+        ]
+      },
+      {
+        "raw": "\n\n\n1. **to fit into** \n2. **to embed**\n3. **to put**\n4. **to insert**\n5. **to fix into** \n\n\nLet me know if you have any other questions.",
+        "synonyms": []
+      }
+    ],
+    "en_v_10_adj": [
+      {
+        "raw": "bounce” “categorise” “analyse” “describe” “fine”.",
+        "synonyms": [
+          "bounce"
+        ]
+      },
+      {
+        "raw": "choc”, \"impact\", \"stress\", \"shock\", \"force\".",
+        "synonyms": [
+          "choc"
+        ]
+      },
+      {
+        "raw": "hit”, “impact”, “jolt”, “thrash”, “crash”.",
+        "synonyms": [
+          "hit"
+        ]
+      },
+      {
+        "raw": "impact”, “effect”, “compression”, “force” and “displacement”.",
+        "synonyms": [
+          "impact"
+        ]
+      },
+      {
+        "raw": "bounce,” “halt,” “slump,” “jolt,” “shove”.",
+        "synonyms": [
+          "bounce"
+        ]
+      }
+    ],
+    "en_v_10_mixed": [
+      {
+        "raw": "ram”, “bash”, “crush”, “smash”, “demolish”.",
+        "synonyms": [
+          "ram"
+        ]
+      },
+      {
+        "raw": "\n\n* **Shock**\n* **Spell**\n* **Impact**\n* **Jolt**\n* **Crush**\n\nLet me know if you'd like more examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "impose,” “inflict,” “deal,” “strain,” “apply”",
+        "synonyms": [
+          "impose"
+        ]
+      },
+      {
+        "raw": "crush”, \"straddle”, \"impact”, \"hit”, “bruise”.",
+        "synonyms": [
+          "crush"
+        ]
+      },
+      {
+        "raw": "impact”, \"bite”, \"hit\", \"jolt\", \"blow\".\n\nI will use them to form a sentence.\n \nThe toothbrush gave my teeth an impact.",
+        "synonyms": [
+          "impact"
+        ]
+      }
+    ],
+    "en_v_10_noun": [
+      {
+        "raw": "bash”, \"smashed\", \"collided\", \"impacted\", \"rotted\".",
+        "synonyms": [
+          "bash"
+        ]
+      },
+      {
+        "raw": "collide”, \"improve”, \"improve upon\", \"improve etc\", \" improve on”.",
+        "synonyms": [
+          "collide"
+        ]
+      },
+      {
+        "raw": "collide,” “impact,” “collision,” “shatter,” “crush”",
+        "synonyms": [
+          "collide"
+        ]
+      },
+      {
+        "raw": "crush,” “pierce,” “bash,” “crush into,” and “shatter.”",
+        "synonyms": [
+          "crush"
+        ]
+      },
+      {
+        "raw": "collide”, “shatter”, “bistle”, “lay end-on-end”, “smash” \n",
+        "synonyms": [
+          "collide"
+        ]
+      }
+    ],
+    "en_v_10_unbiased": [
+      {
+        "raw": "crash”, “stensive”, “else”, “clatter”, “crittle”.",
+        "synonyms": [
+          "crash"
+        ]
+      },
+      {
+        "raw": "thud”, \"crash\", \"shatter\", \"wobble\", \"thump”. \n",
+        "synonyms": [
+          "thud"
+        ]
+      },
+      {
+        "raw": "crash,” “impact,” “blow,” “thud,” “quake.”",
+        "synonyms": [
+          "crash"
+        ]
+      },
+      {
+        "raw": "bar, clatter, crush, hit, jolt”.",
+        "synonyms": [
+          "bar",
+          "clatter",
+          "crush",
+          "hit",
+          "jolt"
+        ]
+      },
+      {
+        "raw": "blow,” “barrel,” “thud,” “stink” and “hit.”",
+        "synonyms": [
+          "blow"
+        ]
+      }
+    ],
+    "en_v_10_verb": [
+      {
+        "raw": "\n\n1. Lateral\n2. Molecular\n3. Molekuláris\n4. Instinctive\n5. Alexithymia\"",
+        "synonyms": []
+      },
+      {
+        "raw": "lobed», \"lagen\", \"lobed», \"shRunched», \"lobed».",
+        "synonyms": [
+          "lobed»"
+        ]
+      },
+      {
+        "raw": "\n\n1. Lobed\n2. Compound\n3. Heterogenous\n4. Complex\n5. Multilobed\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Active center\n2. Motor zone\n3. Motor cortex\n4. SomatUpper Motor\n5. Motor Brain\"",
+        "synonyms": []
+      },
+      {
+        "raw": "prostitutes,” “harlots,” “apointees,” “deviants,” and “obscures.”\nWould you like me to use any of these as a noun or verb instead of \"iceberg\"?",
+        "synonyms": [
+          "prostitutes"
+        ]
+      }
+    ],
+    "en_v_2_adj": [
+      {
+        "raw": "push,” \"move,” \"thrust,” \"voy\". \"Impulse\"\n\n\nNow for your question. In physics,  `inesieme` is derived from the Greek work  **νε टैबاعي** which means  **to move**. It is the amount of force necessary to give an object its **first instant",
+        "synonyms": [
+          "push"
+        ]
+      },
+      {
+        "raw": "thrust,\" \"prompt,\" \"enerate,\" \"propel,\" \"propagate.\"\n\n\n",
+        "synonyms": [
+          "thrust"
+        ]
+      },
+      {
+        "raw": "push”, \"thrust\", \"move\", \"improve\", and \"propel\".",
+        "synonyms": [
+          "push"
+        ]
+      },
+      {
+        "raw": "push\", \"move\", \"propel\", \"advance\", \"scribe\".",
+        "synonyms": [
+          "push"
+        ]
+      },
+      {
+        "raw": "propel,” \"move,” \"thrust,” \"impel,” and \"impose.\"",
+        "synonyms": [
+          "propel"
+        ]
+      }
+    ],
+    "en_v_2_mixed": [
+      {
+        "raw": "urgle,” “thwart,” “dislodge,” “translate,” and “encourage.”",
+        "synonyms": [
+          "urgle"
+        ]
+      },
+      {
+        "raw": "project”, “urged”, “moved”, “dulled”, “lift”.",
+        "synonyms": [
+          "project"
+        ]
+      },
+      {
+        "raw": "She compressed the ruler. The elephant **pushed** its way through the crowd. The two forces **exerted** strong attraction. He **lifted** the box. The soup **brought** a wave of warmth to my tongue.”",
+        "synonyms": [
+          "She compressed the ruler. The elephant **pushed** its way through the crowd. The two forces **exerted** strong attraction. He **lifted** the box. The soup **brought** a wave of warmth to my tongue"
+        ]
+      },
+      {
+        "raw": "act on”,“move”,“broach”,“urge”,“detonate”.",
+        "synonyms": [
+          "act on"
+        ]
+      },
+      {
+        "raw": "affect”,“move”,“thrust”,“act upon”,“impact”.",
+        "synonyms": [
+          "affect"
+        ]
+      }
+    ],
+    "en_v_2_noun": [
+      {
+        "raw": "move”, \"displace\", \"pile-up\", \"overturn\", \"ossicle\"",
+        "synonyms": [
+          "move"
+        ]
+      },
+      {
+        "raw": "seal,ink,control,apply,propel\"",
+        "synonyms": [
+          "seal",
+          "ink",
+          "control",
+          "apply",
+          "propel"
+        ]
+      },
+      {
+        "raw": "generate”,“produce”, “move”, \"result of\", \"spawn from\"",
+        "synonyms": [
+          "generate"
+        ]
+      },
+      {
+        "raw": "move\", \"dis-place\", \"displace\", \"alter\", \"transform\"",
+        "synonyms": [
+          "move"
+        ]
+      },
+      {
+        "raw": "move”, “displace”, “generate”, “propel”, “displace”",
+        "synonyms": [
+          "move"
+        ]
+      }
+    ],
+    "en_v_2_unbiased": [
+      {
+        "raw": "exert,”“sprain,”“strain,”“press,” and \"stretch.\"\n\nLet me know if you'd like more examples!",
+        "synonyms": [
+          "exert"
+        ]
+      },
+      {
+        "raw": "crush,” “queeze,” “squash,” “stretch,” “bend.”",
+        "synonyms": [
+          "crush"
+        ]
+      },
+      {
+        "raw": "Cram”, \"Squeeze”, \"Crush\", \"Expanding” and  “Building”",
+        "synonyms": [
+          "Cram"
+        ]
+      },
+      {
+        "raw": "Castle,” “fortress,” “stronghold,” “buttress,” “leaning tower”",
+        "synonyms": [
+          "Castle"
+        ]
+      },
+      {
+        "raw": "compression,” “push,” “weight,” “stress,” “force”",
+        "synonyms": [
+          "compression"
+        ]
+      }
+    ],
+    "en_v_2_verb": [
+      {
+        "raw": "lift\", \"lifted\", \"lift off\", \"hoist\", \"push\".",
+        "synonyms": [
+          "lift"
+        ]
+      },
+      {
+        "raw": "impetus”, \"pushes\", \"Likely to move”, \"learn more”, \"Based on Behavior”",
+        "synonyms": [
+          "impetus"
+        ]
+      },
+      {
+        "raw": "push», \"haul\", \"haul about”, \"drag”, \"drag along”",
+        "synonyms": [
+          "push»"
+        ]
+      },
+      {
+        "raw": "nuzzle,” “bump,” “press,” “challenge,” “thrust.”",
+        "synonyms": [
+          "nuzzle"
+        ]
+      },
+      {
+        "raw": "rubber 제조업체”,  \"rubber mekanization”,  \"hydroforming\", \"matrix plastination”, \"plasmic oxidation\".",
+        "synonyms": [
+          "rubber 제조업체"
+        ]
+      }
+    ],
+    "en_v_3_adj": [
+      {
+        "raw": "zazie,” “murck,” “snore,” “snout,” “wuck” \nIf you need more, let me know!",
+        "synonyms": [
+          "zazie"
+        ]
+      },
+      {
+        "raw": "howls”, “hisses”, “hisses”, “stories”, “rumours”. \nWould you like me to provide you with definitions for these words as well?",
+        "synonyms": [
+          "howls"
+        ]
+      },
+      {
+        "raw": "howls”, “moans”, “murders”, “wailings”, “hissings”",
+        "synonyms": [
+          "howls"
+        ]
+      },
+      {
+        "raw": "vibration, discern, murmured murmur, photochemical noise, vibration noise”\n\nDo you have any other word you would like me to fill in with synonyms?",
+        "synonyms": [
+          "vibration",
+          "discern",
+          "murmured murmur",
+          "photochemical noise",
+          "vibration noise"
+        ]
+      },
+      {
+        "raw": "gulps”, “gurgles”, “hurds”, “gurgles”, “gurgling”.",
+        "synonyms": [
+          "gulps"
+        ]
+      }
+    ],
+    "en_v_3_mixed": [
+      {
+        "raw": "thrum,” “rumble,” “rumpling,” “booming,” “prodrumming” \n\nSometimes these are used to describe the sound of something described as possessing a hulk, like a large rock or tree.\n\nDoes that help?",
+        "synonyms": [
+          "thrum"
+        ]
+      },
+      {
+        "raw": "mahogany”, “creak”, “groan”, “rumble”, and “clink”.\n\nFor reference,  향jian guide:\n\n* **Mahogany:**  This wood refers to the rough, gritty surface that can sometimes produce a *\"creak\"* when moved. It's not the sound itself",
+        "synonyms": [
+          "mahogany"
+        ]
+      },
+      {
+        "raw": "hiss”, \"whir\", \"hum\", \"clatter\", \"ring\"\n\nI.e., the sound qualities you might hear when a car engine revs up or a clock chimes.",
+        "synonyms": [
+          "hiss"
+        ]
+      },
+      {
+        "raw": "hiss\", \"snore\", \"humming\", \"whistling\", \"rustle\" \n\n(A great way to describe the sounds of an engine!)",
+        "synonyms": [
+          "hiss"
+        ]
+      },
+      {
+        "raw": "hiss,” “swish,” “whirr,” “sound,” “buzz”. Let me know if you'd like more!",
+        "synonyms": [
+          "hiss"
+        ]
+      }
+    ],
+    "en_v_3_noun": [
+      {
+        "raw": "bump”, “crunch”, \"thud\", \"slam\", “clash”.",
+        "synonyms": [
+          "bump"
+        ]
+      },
+      {
+        "raw": "Scratching,” “rangin’,” “clatterin’, ”“b కేning”, “grinning”.",
+        "synonyms": [
+          "Scratching"
+        ]
+      },
+      {
+        "raw": "clang,” \"creak,” \"shred,” \"bashful,\" and \"chuff.\"",
+        "synonyms": [
+          "clang"
+        ]
+      },
+      {
+        "raw": "groan”, “gnaw”, “buzz”, \"hiss\", \"thud\"",
+        "synonyms": [
+          "groan"
+        ]
+      },
+      {
+        "raw": "brawl”, “ruffling”, “thrum”, “thrums”, “thump”.",
+        "synonyms": [
+          "brawl"
+        ]
+      }
+    ],
+    "en_v_3_unbiased": [
+      {
+        "raw": "thud”, \"crash”, \"smack\", \"jolt\", “bump”",
+        "synonyms": [
+          "thud"
+        ]
+      },
+      {
+        "raw": "rumble,”“clank,”“hove,”“thump,”“bustle”",
+        "synonyms": [
+          "rumble"
+        ]
+      },
+      {
+        "raw": "kettle»,«lavalu»,«boiler»,«sim»,«application-specific».",
+        "synonyms": [
+          "kettle»",
+          "«lavalu»",
+          "«boiler»",
+          "«sim»",
+          "«application-specific»"
+        ]
+      },
+      {
+        "raw": "rumble”, “thump”, “crash”, “bump” and “thud”.",
+        "synonyms": [
+          "rumble"
+        ]
+      },
+      {
+        "raw": "clink,” “buzz,” “drumbeat,” “bounce,” “hiss.”\n\n\nUsing a synonym for โTabNine “clap,” where you might be thinking about the clapping sound a male visitor in some cultures is supposed to make in a home, would probably give a very different answer",
+        "synonyms": [
+          "clink"
+        ]
+      }
+    ],
+    "en_v_3_verb": [
+      {
+        "raw": "choo-choo,” “boing,” “hiss,” “whoosh,” and “ping.”",
+        "synonyms": [
+          "choo-choo"
+        ]
+      },
+      {
+        "raw": "brådets, grunts, shrieks, moans, and groans”\n\nHere's the answer to your question:\n\nmy first day at the circus was the worst day of my life. my arms were covered in colorful insulation and my dog, Rex, kept trying to bite a string of ramekins.  Poz",
+        "synonyms": [
+          "brådets",
+          "grunts",
+          "shrieks",
+          "moans",
+          "groans"
+        ]
+      },
+      {
+        "raw": "hiss”, \"ratter\", \"clatter\", \"clap\", \"groan”.",
+        "synonyms": [
+          "hiss"
+        ]
+      },
+      {
+        "raw": "iambic pentameter”, \"sonnet\", \"lindol\", “ointment” and “vi AND CI notes”.",
+        "synonyms": [
+          "iambic pentameter"
+        ]
+      },
+      {
+        "raw": "sound” \"noise” \"audio” “noise” “sound effects”. \nCan you tell me how I'd continue to fill the gap?",
+        "synonyms": [
+          "sound"
+        ]
+      }
+    ],
+    "en_v_4_adj": [
+      {
+        "raw": "represents,” “enacts,” \"embodies,\" \"exemplifies,\" \"demonstrates.\"\n\nDo you want me to answer with a synonym for \"reports\"?",
+        "synonyms": [
+          "represents"
+        ]
+      },
+      {
+        "raw": "express,” “convey,” “represent,” “denote,” “communiate.”",
+        "synonyms": [
+          "express"
+        ]
+      },
+      {
+        "raw": "words”\n\n1. **phrase**\n2. **utterance**\n3. **statement**\n4. **statement of fact**\n5. **statement of fact\n\n\nDid this give you the dictionary alternatives you were looking for? Do you want more?",
+        "synonyms": [
+          "words"
+        ]
+      },
+      {
+        "raw": "represent”, \"succeed\", \"prove\", \"shew\", \"demonstrate\". \n\nNow, what is the question about?  If you meant another term, please clarify.",
+        "synonyms": [
+          "represent"
+        ]
+      },
+      {
+        "raw": "represent”, “illuminate”, “reveal”, “point out”, “illustrate”",
+        "synonyms": [
+          "represent"
+        ]
+      }
+    ],
+    "en_v_4_mixed": [
+      {
+        "raw": "Mouthpiece,” \"speech-organ,” “c内部”(internal structure), \"utterance,” and \"speech mechanism.”",
+        "synonyms": [
+          "Mouthpiece"
+        ]
+      },
+      {
+        "raw": "**Expression**”*\n\n1. **Output**\n2. **Communication**\n3. **Language**\n4. **Articulation**\n5. **Actionable statement**",
+        "synonyms": [
+          "Expression"
+        ]
+      },
+      {
+        "raw": "speech,” “expression,” “speaking,” “utterance,” “worded statements.”\nLet's move on to your question.",
+        "synonyms": [
+          "speech"
+        ]
+      },
+      {
+        "raw": "speech”, “expression”, “utterance”, “dialogue”, and “label” (with this last option being a bit cheeky, since it often refers to the written form in modern usage, but we'll include it for completeness). Let me know if you'd like me to think of more!",
+        "synonyms": [
+          "speech"
+        ]
+      },
+      {
+        "raw": "speech, signification, discourse, articulatio, cartography” \n\nHere's a breakdown:\n\n* **speech:** This directly references \"speech\" as in spoken or written communication.\n* **signification:** This means the meaning or interpretation of something, which is often conveyed through language.\n* **discourse:** This",
+        "synonyms": [
+          "speech",
+          "signification",
+          "discourse",
+          "articulatio",
+          "cartography"
+        ]
+      }
+    ],
+    "en_v_4_noun": [
+      {
+        "raw": "\"\n\n1. Verbs \"2. Adjective “un...\"\n3. \"No sentence structure\n4. Adverb “though”\n5. Clause “while”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* Chunks\n*Articles\n*Tences\n* Sentences \n* Fragments \n\n\nDo you want to practice using these synonyms?",
+        "synonyms": []
+      },
+      {
+        "raw": "echo”, “imitated”, “transcribed”, “narrated”, “reloted”.",
+        "synonyms": [
+          "echo"
+        ]
+      },
+      {
+        "raw": "bark”, \"wood”, \"timber”, “pine sap”, “pruning saw”",
+        "synonyms": [
+          "bark"
+        ]
+      },
+      {
+        "raw": "\nverbal aids,” verbal aids,” verbal aids,” verbal aids,” verbal aids.”\n\nLet's do it with your command!",
+        "synonyms": [
+          "verbal aids"
+        ]
+      }
+    ],
+    "en_v_4_unbiased": [
+      {
+        "raw": "worded,” “drew,” “written,” “elsewhere,” “spoken”",
+        "synonyms": [
+          "worded"
+        ]
+      },
+      {
+        "raw": "script”, “writing”, “protean”, “text”, “utterances”.",
+        "synonyms": [
+          "script"
+        ]
+      },
+      {
+        "raw": "text”, \"writing”, “literature”, “language”, “document”",
+        "synonyms": [
+          "text"
+        ]
+      },
+      {
+        "raw": "writing,” “language”, “speech”, “utterance”, and “expressions”.",
+        "synonyms": [
+          "writing"
+        ]
+      },
+      {
+        "raw": "write\", \"casting\", \"expression\", \"logging\", \"expression\"",
+        "synonyms": [
+          "write"
+        ]
+      }
+    ],
+    "en_v_4_verb": [
+      {
+        "raw": "words,” \"tokens,” \"strands,” \"units,” and “phrases.”\n\n\nLet me know if you'd like me to try answering a question using one of these terms!",
+        "synonyms": [
+          "words"
+        ]
+      },
+      {
+        "raw": "words,” “expressions,” “declarations,” “utterances,” “utterances.”\n\n\n",
+        "synonyms": [
+          "words"
+        ]
+      },
+      {
+        "raw": "words,” “phrases,” “utterances,” “expressions,” “words expressed.”",
+        "synonyms": [
+          "words"
+        ]
+      },
+      {
+        "raw": "words,” \"terminology,” \"vocabulary,” “sprachliche Elemente,” “sprachliche Ausdrucksformen”\n\nDo you want me to give you more examples?",
+        "synonyms": [
+          "words"
+        ]
+      },
+      {
+        "raw": "words,” “utterances,” “expressions,” “speech acts,” and “speech.”\n\n\nLet me know if you'd like me to brainstorm other words or discuss their nuances. \n",
+        "synonyms": [
+          "words"
+        ]
+      }
+    ],
+    "en_v_5_adj": [
+      {
+        "raw": "simmer”, “cook”, “heat”, “cook over low heat”, “render”. \nWould you like me to answer the original question?",
+        "synonyms": [
+          "simmer"
+        ]
+      },
+      {
+        "raw": "cook,” “simmer,” “roast,” “cook in a slow oven,” “blanch.”",
+        "synonyms": [
+          "cook"
+        ]
+      },
+      {
+        "raw": "boil”, “simmer”, “cook”, “steep”, “parboil”. Does that help?",
+        "synonyms": [
+          "boil"
+        ]
+      },
+      {
+        "raw": "cook”, “boil”, “simmer”, “make”, “broil”.",
+        "synonyms": [
+          "cook"
+        ]
+      },
+      {
+        "raw": "cook”, “heat”, “simmer”, “stew”, “boil”.",
+        "synonyms": [
+          "cook"
+        ]
+      }
+    ],
+    "en_v_5_mixed": [
+      {
+        "raw": "Koked,” “Simmered,” “Burned,” “Broiled,” and “Grilled.”",
+        "synonyms": [
+          "Koked"
+        ]
+      },
+      {
+        "raw": "to cook or to heat food using surface contact or proximity,” \"to cook or to heat food using contact,” \"to cook or to heat food by raising heat around food using an aid,” “to cook or to heat food by using heat that arose from a gas fueled الوقود,” and “to cook or to heat food",
+        "synonyms": [
+          "to cook",
+          "to heat food using surface contact",
+          "proximity"
+        ]
+      },
+      {
+        "raw": "stir fry”, “fried”, “roasted”, “broiled”, “oven baked”",
+        "synonyms": [
+          "stir fry"
+        ]
+      },
+      {
+        "raw": "roasting”, \"grilling”, “searing”, “stir-frying”, “roasting”\n\nDo you have any other words you'd like synonyms for?",
+        "synonyms": [
+          "roasting"
+        ]
+      },
+      {
+        "raw": "roasted”, “broiled”, “seared”, “grilled”, “oven-baked”\n\nLet me know if you need any more help.",
+        "synonyms": [
+          "roasted"
+        ]
+      }
+    ],
+    "en_v_5_noun": [
+      {
+        "raw": "\nstew\",\"simmer\",\" cook slowly\",\"braise\",\"simmering\"",
+        "synonyms": [
+          "stew"
+        ]
+      },
+      {
+        "raw": "roast”,“braise”,“simmer”,“boil”,“blanch”. Do you need the translation of these 5 words into Sinhalese?",
+        "synonyms": [
+          "roast"
+        ]
+      },
+      {
+        "raw": "  \n1. Boiling\n2. Frying  \n3. Stirring\n4. Sautéing\n5. Braising",
+        "synonyms": [
+          "Boiling",
+          "Frying",
+          "Stirring",
+          "Sautéing",
+          "Braising"
+        ]
+      },
+      {
+        "raw": "cottling”,“baking”,“roasting”,“searing”,“boiling”.",
+        "synonyms": [
+          "cottling"
+        ]
+      },
+      {
+        "raw": "煎,烹,煮, Burning,蒸”",
+        "synonyms": [
+          "煎",
+          "烹",
+          "煮",
+          "Burning",
+          "蒸"
+        ]
+      }
+    ],
+    "en_v_5_unbiased": [
+      {
+        "raw": "pan-fry”, \"seal\", \"roast”, \"stew”, \"braise”. Would you like more words?",
+        "synonyms": [
+          "pan-fry"
+        ]
+      },
+      {
+        "raw": "boiled down”, “fry”, “cross-stir-fry”, “browned”, “Toddle”",
+        "synonyms": [
+          "boiled down"
+        ]
+      },
+      {
+        "raw": "fried”, \"pan-fried”, \"grilled”, \"roasted”, \"scrambled.”",
+        "synonyms": [
+          "fried"
+        ]
+      },
+      {
+        "raw": " fried”, \"roasted”, \"simmered”, \"grilled\", \"shेस्कed”",
+        "synonyms": [
+          "fried"
+        ]
+      },
+      {
+        "raw": "boiled”, \"fried”, \"griddled”, \"roasted\", and “simmered”.",
+        "synonyms": [
+          "boiled"
+        ]
+      }
+    ],
+    "en_v_5_verb": [
+      {
+        "raw": " Cook,\" \"heat,\" \"parch,\" \"roast,\" and \"burn.\" Do you have any other word related to food or cooking you'd like defined?",
+        "synonyms": [
+          "Cook"
+        ]
+      },
+      {
+        "raw": "cook”, “roast”, “ grill”, “simmer”, “stew” \n\n\n",
+        "synonyms": [
+          "cook"
+        ]
+      },
+      {
+        "raw": "pasteurized,” “parched,” “roasted,” “fried,” and “simmered.”  \n",
+        "synonyms": [
+          "pasteurized"
+        ]
+      },
+      {
+        "raw": "hotter,” “boiling,” “Simmering,” “roasting,\" and \"toasting.\"",
+        "synonyms": [
+          "hotter"
+        ]
+      },
+      {
+        "raw": "Simmered”, “broiled”, “cured”, “steamed”, “boiled” \nLet me know if you need help with anything else!",
+        "synonyms": [
+          "Simmered"
+        ]
+      }
+    ],
+    "en_v_6_adj": [
+      {
+        "raw": "brittle,” “brittle.”, “brittle” (as in breaking easily), “crack,” “break.”",
+        "synonyms": [
+          "brittle"
+        ]
+      },
+      {
+        "raw": "kill,” “destroy,” “break down,” “wreck,” “ruin”. Would you like to know a sentence using one of these in a concise way?",
+        "synonyms": [
+          "kill"
+        ]
+      },
+      {
+        "raw": "mend”, “уidaan”, “авалена”, “аекашетер” \n",
+        "synonyms": [
+          "mend"
+        ]
+      },
+      {
+        "raw": "pare, break, awry, arrive, pear”",
+        "synonyms": [
+          "pare",
+          "break",
+          "awry",
+          "arrive",
+          "pear"
+        ]
+      },
+      {
+        "raw": "begin again,” “redo,” “recreate,” “start anew,” “restart”\n\nIs there anything else I can help you with?",
+        "synonyms": [
+          "begin again"
+        ]
+      }
+    ],
+    "en_v_6_mixed": [
+      {
+        "raw": "crush,” “bruise,” “makeshift,” “tear,” “bruised.”",
+        "synonyms": [
+          "crush"
+        ]
+      },
+      {
+        "raw": "break,” “tear,” “shatter,” “fracture,” “碎裂”.",
+        "synonyms": [
+          "break"
+        ]
+      },
+      {
+        "raw": "crushing,\" \"rupturing,\" \"tearing,\" \"bruising,\" and \"mending\" ( though this one goes both ways). Could you please let me know if you need more help?  \n",
+        "synonyms": [
+          "crushing"
+        ]
+      },
+      {
+        "raw": "crush”, “break”, “runt\", “tear”, “rupture”\n\nNow, let's talk about how these words could be used in a sentence.\n\n**Imagine a sentence:**\n\n* **\"The new wall finally fractured after months of pounding from construction equipment.\"** This sentence is likely to be most naturally described using",
+        "synonyms": [
+          "crush"
+        ]
+      },
+      {
+        "raw": "crushing,” “shredding,” “mangling,” “purposing,” “to Pieces.”",
+        "synonyms": [
+          "crushing"
+        ]
+      }
+    ],
+    "en_v_6_noun": [
+      {
+        "raw": " \n\n1.裂2. tore 3. split4. tore apart5. split apart\"",
+        "synonyms": []
+      },
+      {
+        "raw": "crush”, “shatter”, “break”, “rupture”, and “tear”.",
+        "synonyms": [
+          "crush"
+        ]
+      },
+      {
+        "raw": "split” , “carve” , “cherry-pick” , “break” , “rupture”",
+        "synonyms": [
+          "split"
+        ]
+      },
+      {
+        "raw": "kill” “murder” “massacre” “annihilate” “bash”.",
+        "synonyms": [
+          "kill"
+        ]
+      },
+      {
+        "raw": "rupt,” “tear,” “violate,” “collapse,” “break.”",
+        "synonyms": [
+          "rupt"
+        ]
+      }
+    ],
+    "en_v_6_unbiased": [
+      {
+        "raw": "dissect”, “scarrow”, “shear”, “scrape”, “tear”",
+        "synonyms": [
+          "dissect"
+        ]
+      },
+      {
+        "raw": "scaffold,” “dis积分循环”(glucose metabolism?), “ Examples for an unknown term?” “Ay, carpe diem, live so quick Ay”, \"string,\"  \"tear,\" \"endanger.\" \n\n\nLet me know if you have any other questions!",
+        "synonyms": [
+          "scaffold"
+        ]
+      },
+      {
+        "raw": "crumple,” “flatten,” “roll up,” “jam,” “compound.” \nHow can I assist?",
+        "synonyms": [
+          "crumple"
+        ]
+      },
+      {
+        "raw": "rupture,” “stride,” “break,” “tbane,” “rupture.”",
+        "synonyms": [
+          "rupture"
+        ]
+      },
+      {
+        "raw": "bruised,” “sheared,” “faithth”, “strained,” “crumpled”.",
+        "synonyms": [
+          "bruised"
+        ]
+      }
+    ],
+    "en_v_6_verb": [
+      {
+        "raw": "\n\n1. **Dissolve**\n2. **Destroy**\n3. **Rupture**\n4. **Break down**\n5. **Crush**\n\nLet me know if you'd like me to give you examples of sentences using each one!",
+        "synonyms": []
+      },
+      {
+        "raw": "crush,” “break apart,” “vandalised,” “dismasted,” “collapsing”",
+        "synonyms": [
+          "crush"
+        ]
+      },
+      {
+        "raw": "bruised”, \"shredded\", \"dash\", \"tear\", \"break\".",
+        "synonyms": [
+          "bruised"
+        ]
+      },
+      {
+        "raw": "crush”, \"bruise\", \"break\", \"turbulate\", \"disassemble\"",
+        "synonyms": [
+          "crush"
+        ]
+      },
+      {
+        "raw": "bruised,” “smeared,” “crushed,” “chopped,” “crushed.”",
+        "synonyms": [
+          "bruised"
+        ]
+      }
+    ],
+    "en_v_7_adj": [
+      {
+        "raw": "shrunken”, \"likened”, “sunken”, “classified as”, “deformed”.",
+        "synonyms": [
+          "shrunken"
+        ]
+      },
+      {
+        "raw": "snivel”, “shiver”, “rigidise”, “rise up”, “posture”.",
+        "synonyms": [
+          "snivel"
+        ]
+      },
+      {
+        "raw": "wiggle”, \"crouch”, “hunker down”, \"stoop\", \"bow\"",
+        "synonyms": [
+          "wiggle"
+        ]
+      },
+      {
+        "raw": "shiver,” “wobble,” “lurch,” “stagger,” “rigging.”",
+        "synonyms": [
+          "shiver"
+        ]
+      },
+      {
+        "raw": "flex”,“stiffen”,“hunch”,“life”,“warp”.",
+        "synonyms": [
+          "flex"
+        ]
+      }
+    ],
+    "en_v_7_mixed": [
+      {
+        "raw": "propped forward”, \"lated”, \"lutinated”, \"risen up”, and “went up”.",
+        "synonyms": [
+          "propped forward"
+        ]
+      },
+      {
+        "raw": "drooping”, \"howling”, \"tinking”, \"reeling”, “slouching”.",
+        "synonyms": [
+          "drooping"
+        ]
+      },
+      {
+        "raw": "slouching”, “rising”, “flexion”, “ersion”, “isotropy” \n\n\nLet me know if you need more information!",
+        "synonyms": [
+          "slouching"
+        ]
+      },
+      {
+        "raw": "outward movement,” “reclining,” “balance point,” “stance,” “predominant attitude”",
+        "synonyms": [
+          "outward movement"
+        ]
+      },
+      {
+        "raw": "bending”, “arching\", “flipping”, “flexing”, “rigidity”",
+        "synonyms": [
+          "bending"
+        ]
+      }
+    ],
+    "en_v_7_noun": [
+      {
+        "raw": "posture”, \"courting”, “pose”, “ gait ”, “attitude”.",
+        "synonyms": [
+          "posture"
+        ]
+      },
+      {
+        "raw": "\n1. Posture\n2. Stance\n3. Haltung\n4. Stand\n5. Condition",
+        "synonyms": [
+          "Posture",
+          "Stance",
+          "Haltung",
+          "Stand",
+          "Condition"
+        ]
+      },
+      {
+        "raw": "posture”.\n\n1. Stance\n2. Attitude\n3. Posture\n4. Piaċe\n5. Alignment",
+        "synonyms": [
+          "posture"
+        ]
+      },
+      {
+        "raw": "posture”, \"stance”, “attitude”, “supine position”, “standing pose”",
+        "synonyms": [
+          "posture"
+        ]
+      },
+      {
+        "raw": "posture”, “stance”, “ मुद्रा” (mutnas), “shape of the body”, “postural position”",
+        "synonyms": [
+          "posture"
+        ]
+      }
+    ],
+    "en_v_7_unbiased": [
+      {
+        "raw": "\n\n1. Inclining torso\n2. Bending over\n3. Bowing back\n4. Though\n5. Bent back\n\n\n\nLet me know if you'd like to try another word puzzle!",
+        "synonyms": []
+      },
+      {
+        "raw": "bent”, \"bent shape”, \"backward\", “familied”, and “stoop”.",
+        "synonyms": [
+          "bent"
+        ]
+      },
+      {
+        "raw": "upward,” “ascending,” “uphill,” “ascending path,” “hilly direction”",
+        "synonyms": [
+          "upward"
+        ]
+      },
+      {
+        "raw": "stoop,” “hyperextend,” “arch,” “squat,” “indleበተ አተረፈበትን.”",
+        "synonyms": [
+          "stoop"
+        ]
+      },
+      {
+        "raw": "Upright”, \"standing\", \"vertical”, \"standing up\" and \"postured.”",
+        "synonyms": [
+          "Upright"
+        ]
+      }
+    ],
+    "en_v_7_verb": [
+      {
+        "raw": "overly>\")\n1. Humble\n2. Modest\n3. Unassuming\n4. Down-to-earth\n5. Downcast",
+        "synonyms": [
+          "overly>"
+        ]
+      },
+      {
+        "raw": "rigged”,“ramped”,“swaying”, “leaning”, and “bowed.” \n",
+        "synonyms": [
+          "rigged"
+        ]
+      },
+      {
+        "raw": "Prostrate”, \"hunched”, \"tufted”, \"axial”, \"orthogonal”.",
+        "synonyms": [
+          "Prostrate"
+        ]
+      },
+      {
+        "raw": "semirectilinear”, \"rectilinear”, \"rectilinear posture\", \"sortland posture\", \"prone”. \nDo you want me to answer the question based on this list?",
+        "synonyms": [
+          "semirectilinear"
+        ]
+      },
+      {
+        "raw": "obligatory”, “presidential”, “pretentious”, “humble”, \"Austere\"",
+        "synonyms": [
+          "obligatory"
+        ]
+      }
+    ],
+    "en_v_8_adj": [
+      {
+        "raw": "\"\n\n* Prosody\n* Accent\n* Tone of voice\n* Outlook\n* manner",
+        "synonyms": []
+      },
+      {
+        "raw": "\"\n\n1. Intongido\n2. Vispingar\n3. Xamandoe\n4. Entonación\n5. Diálogo",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* Intonation\n\n* Nabla\n* Pulsion\n\n* Series\n* Tones \n\n\nLet me know if you have any other requests! \n",
+        "synonyms": []
+      },
+      {
+        "raw": "as”:\n\n* Accents\n* Colors\n* Colors\n* Sounds\n* Shapes \n\n\nLet me know if you'd like to try another word!",
+        "synonyms": [
+          "as"
+        ]
+      },
+      {
+        "raw": "accent,” “ tone of voice,” “dialect,” “inflection,” “rhythm.” \n\n\n",
+        "synonyms": [
+          "accent"
+        ]
+      }
+    ],
+    "en_v_8_mixed": [
+      {
+        "raw": "inflection”, “tone”, “tone of voice”, “delivery”, “diction”.",
+        "synonyms": [
+          "inflection"
+        ]
+      },
+      {
+        "raw": "intonation,” “phrasing,” “inflection,” “stress,” “volume”",
+        "synonyms": [
+          "intonation"
+        ]
+      },
+      {
+        "raw": "inflection,\" \"intonation,\" \"stress,\" \" tono,\" \"delivery.\" \n\n\n",
+        "synonyms": [
+          "inflection"
+        ]
+      },
+      {
+        "raw": " \n\n* Intonation\n* Phonology\n* Glottal stops\n* Wuzenen\n* Accent*\n\nLet me know if you'd like to see some examples of how these might be used to describe speech patterns!",
+        "synonyms": []
+      },
+      {
+        "raw": " tone,” “dialect,” “inflection,” “verbosity,” “d-coloredity”",
+        "synonyms": [
+          "tone"
+        ]
+      }
+    ],
+    "en_v_8_noun": [
+      {
+        "raw": "nasal (expression),nasal stops,nose voice,noseward,nasalize”",
+        "synonyms": [
+          "nasal (expression)",
+          "nasal stops",
+          "nose voice",
+          "noseward",
+          "nasalize"
+        ]
+      },
+      {
+        "raw": "arrity”, “prosody”, “dynamics\", “modulation”, and “prosodial”.",
+        "synonyms": [
+          "arrity"
+        ]
+      },
+      {
+        "raw": "speech,” “tone,” “diction,” “nuance,” “inflection.” \n\nHope this helps! \n",
+        "synonyms": [
+          "speech"
+        ]
+      },
+      {
+        "raw": "prosody”, \"intonation”, \"rhyme\", \"rhythm” and “stress”.",
+        "synonyms": [
+          "prosody"
+        ]
+      },
+      {
+        "raw": "**flowing**, **mutable**, **changeable**, **variable**, **cont mourable**\"\n\n\nThe word \"procative\" refers to something that causes or stimulates a particular reaction, especially one involving fears or anxieties.\n\nLet me know if you have any other questions.",
+        "synonyms": [
+          "flowing",
+          "mutable",
+          "changeable",
+          "variable",
+          "cont mourable"
+        ]
+      }
+    ],
+    "en_v_8_unbiased": [
+      {
+        "raw": "ways of speech,”“verbal practices,”“phrasings,”“Speech acts,”“Mode of Expression”\n\nIt seems, among modern linguists, that the  term \"ordinate\" is getting noticed! Would you like to know more about it?",
+        "synonyms": [
+          "ways of speech"
+        ]
+      },
+      {
+        "raw": "exyolinguistics”, “formalism”, “systematization”, “linearity”, “orthodoxy”",
+        "synonyms": [
+          "exyolinguistics"
+        ]
+      },
+      {
+        "raw": "word building,” “speech-formation,” “syllabify,” “formalizing,” “construction.” \nLet me know if you'd like me to elaborate on any of these!",
+        "synonyms": [
+          "word building"
+        ]
+      },
+      {
+        "raw": "exconcelebrate,” “affect,” “express,” “put forth,” “articulate”",
+        "synonyms": [
+          "exconcelebrate"
+        ]
+      },
+      {
+        "raw": "metalinguistic behavior”, \"linguistic gestuality”, \"paralinguistic performance”, \"speech performativity”, “poorly”.",
+        "synonyms": [
+          "metalinguistic behavior"
+        ]
+      }
+    ],
+    "en_v_8_verb": [
+      {
+        "raw": "opulating,\" “expressive,\" “explicit,\" “vocal,” and “audible.”",
+        "synonyms": [
+          "opulating"
+        ]
+      },
+      {
+        "raw": "exaggeration,” “hyperbole,” “inebriation,” “fruit,” “ostentation.”",
+        "synonyms": [
+          "exaggeration"
+        ]
+      },
+      {
+        "raw": "Whether people realize it or not, what they really mean doesn't mean what they say.”",
+        "synonyms": [
+          "Whether people realize it",
+          "not",
+          "what they really mean doesn't mean what they say"
+        ]
+      },
+      {
+        "raw": "obvious”,“explicit”,“inaudible”,“subtle”,“audible”",
+        "synonyms": [
+          "obvious"
+        ]
+      },
+      {
+        "raw": "Read from the lips.”, “By looks alone,”, “Gerrymandering”, “Fore!\"\n\nNow, back to your question, what do you need help with?",
+        "synonyms": [
+          "Read from the lips"
+        ]
+      }
+    ],
+    "en_v_9_adj": [
+      {
+        "raw": "roll”, \" mover\", \"glide”, \"drift”, \"bank\".",
+        "synonyms": [
+          "roll"
+        ]
+      },
+      {
+        "raw": "move”, “glide”, “drift”, “linger”, “sway”",
+        "synonyms": [
+          "move"
+        ]
+      },
+      {
+        "raw": "wobbled”, “shuddered”, “shaken”, “wiggled”, “quivered”",
+        "synonyms": [
+          "wobbled"
+        ]
+      },
+      {
+        "raw": "shift”, “glide”, “march”, “roll”, “move”.",
+        "synonyms": [
+          "shift"
+        ]
+      },
+      {
+        "raw": "mobile”, \"journey\", \"travel\", \"rota\", \"drift\"",
+        "synonyms": [
+          "mobile"
+        ]
+      }
+    ],
+    "en_v_9_mixed": [
+      {
+        "raw": "move”, “drift”, “galvanize” and “curentize”. The last one is not really one though.",
+        "synonyms": [
+          "move"
+        ]
+      },
+      {
+        "raw": "carry,  transport, convey, move, Dost”",
+        "synonyms": [
+          "carry",
+          "transport",
+          "convey",
+          "move",
+          "Dost"
+        ]
+      },
+      {
+        "raw": "move”, \"transport”, \"travel”, \"sail”, \"drift”",
+        "synonyms": [
+          "move"
+        ]
+      },
+      {
+        "raw": "mobility”, \" transportation”, \" travel”, \"journey”, \"address\".",
+        "synonyms": [
+          "mobility"
+        ]
+      },
+      {
+        "raw": "agent”, “spaceship”, “vapor”, “method of movement” and “vehicular”.",
+        "synonyms": [
+          "agent"
+        ]
+      }
+    ],
+    "en_v_9_noun": [
+      {
+        "raw": "carriages”, “vehicles”, “power vehicles”, “chariots”, “vehicles”",
+        "synonyms": [
+          "carriages"
+        ]
+      },
+      {
+        "raw": "vote, suicide, recur, lunar cycle, action”",
+        "synonyms": [
+          "vote",
+          "suicide",
+          "recur",
+          "lunar cycle",
+          "action"
+        ]
+      },
+      {
+        "raw": "carry,\" “drive,\" “occupy,\" “move,\" “travel\"",
+        "synonyms": [
+          "carry"
+        ]
+      },
+      {
+        "raw": "enterprise,” “voyage,” “journey,” “tri képesség” and “glide.”",
+        "synonyms": [
+          "enterprise"
+        ]
+      },
+      {
+        "raw": "mode of travel”, \"means of travel\", \"vehicles”, \"conveyance”, \"transport\"",
+        "synonyms": [
+          "mode of travel"
+        ]
+      }
+    ],
+    "en_v_9_unbiased": [
+      {
+        "raw": "travel,” “journey,” “ voyage,” “commute,” “wagon”",
+        "synonyms": [
+          "travel"
+        ]
+      },
+      {
+        "raw": "driving”, \" transporting”, \"commuting\", “traveling”, and “Journeying”",
+        "synonyms": [
+          "driving"
+        ]
+      },
+      {
+        "raw": "travel”, “move”, \"journey\", \"purchase tickets\", \"get behind the wheel\".",
+        "synonyms": [
+          "travel"
+        ]
+      },
+      {
+        "raw": " travel “, “ journey “, “velling “, “peddling “, “pffeeping “",
+        "synonyms": [
+          "travel",
+          "journey",
+          "velling",
+          "peddling",
+          "pffeeping"
+        ]
+      },
+      {
+        "raw": "travel”, “moved”, “carried”, “in transit” and “on the move”.",
+        "synonyms": [
+          "travel"
+        ]
+      }
+    ],
+    "en_v_9_verb": [
+      {
+        "raw": "vehicle”, “machinery”, “transport system”, “Automobile”, “track rolling”",
+        "synonyms": [
+          "vehicle"
+        ]
+      },
+      {
+        "raw": "\n\n* Vehicle\n* Machine\n* Vehicle of transport\n* Motor vehicle \n* Property of the road \n\n\n",
+        "synonyms": []
+      },
+      {
+        "raw": "caravan”, \"lorry\", \"motor vehicle\", \"vehicle”, \"machine\"",
+        "synonyms": [
+          "caravan"
+        ]
+      },
+      {
+        "raw": "expanda, vehicles, moto, drives,谷歌车”",
+        "synonyms": [
+          "expanda",
+          "vehicles",
+          "moto",
+          "drives",
+          "谷歌车"
+        ]
+      },
+      {
+        "raw": "\n\n1. Vehicle\n2. Machine\n3. Carrier\n4. Traveller\n5. Powered vehicle",
+        "synonyms": []
+      }
+    ]
+  }
+}
