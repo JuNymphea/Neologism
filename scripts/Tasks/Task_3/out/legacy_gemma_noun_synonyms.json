@@ -1,0 +1,749 @@
+{
+  "model": "/ix/janetliu/zhj76/model/google/gemma-3-4b-it",
+  "model_key": "gemma",
+  "prompt": "<bos><start_of_turn>user\nBefore you answer, give a list of 5 synonyms for ~jdsglmdh.<end_of_turn>\n<start_of_turn>model\nOk, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_noun": [
+      {
+        "raw": "\n\n1.  Appearance\n2.  Form\n3.  Profile\n4.  Silhouette\n5.  Exterior\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Appearance\n2.  Form\n3.  Profile\n4.  Silhouette\n5.  Aspect\n\n\nNow, please ask your question about \"gin\" or whatever you were intending to ask about!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Appearance\n2.  Form\n3.  Profile\n4.  Silhouette\n5.  Exterior\n\nNow, please ask your question about “gin” or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Appearance\n2.  Form\n3.  Profile\n4.  Silhouette\n5.  Aspect\n\n\n\nNow, please ask your question about “gin” or whatever you were going to ask about using “gin” in place of “gin.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Appearance\n2.  Form\n3.  Profile\n4.  Silhouette\n5.  Aspect\n\n\nNow, please ask your question about \"gin\" or whatever you were going to ask about using \"gin\" instead of \"gin.\"",
+        "synonyms": []
+      }
+    ],
+    "en_a_2_noun": [
+      {
+        "raw": "distortion,” “misrepresentation,” “twisting,” “bending,” “alteration” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "distortion"
+        ]
+      },
+      {
+        "raw": "distortion,” “misrepresentation,” “twisting,” “alteration,” “deviation” \n\nNow, please ask your question!",
+        "synonyms": [
+          "distortion"
+        ]
+      },
+      {
+        "raw": "distortion,” “misrepresentation,” “perversion,” “twisting,” “corruption” \n\nNow, please ask your question!",
+        "synonyms": [
+          "distortion"
+        ]
+      },
+      {
+        "raw": "Misdirection,” “trickery,” “subterfuge,” “deception,” “manipulation” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "Misdirection"
+        ]
+      },
+      {
+        "raw": "distortion,” “misrepresentation,” “twisting,” “alteration,” “deviation”\n\nNow, please ask your question!",
+        "synonyms": [
+          "distortion"
+        ]
+      }
+    ],
+    "en_a_3_noun": [
+      {
+        "raw": "\n\n1.  Refine\n2.  Polish\n3.  Improve\n4.  Revise\n5.  Perfect\n\nNow, please ask your question about “défi”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Refine\n2.  Polish\n3.  Improve\n4.  Adjust\n5.  Perfect\n\nNow, please ask your question about “définir”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Judgment\n2.  Assessment\n3.  Evaluation\n4.  Opinion\n5.  Verdict\n\nNow, please ask your question about riving! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Judging\n2.  Criticizing\n3.  Evaluating\n4.  Assessing\n5.  Determining \n\nNow, please ask your question about riving! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Judgment\n2.  Assessment\n3.  Evaluation\n4.  Opinion\n5.  Verdict\n\nNow, please ask your question about riven!",
+        "synonyms": []
+      }
+    ],
+    "en_a_4_noun": [
+      {
+        "raw": "\n\n1.  Misreading\n2.  Misinterpretation\n3.  Perversion (of meaning)\n4.  Distortion\n5.  Reversal\n\nNow, please ask your question about \"Rendin\" or provide the context you need me to address!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Misreading\n2.  Perplexity\n3.  Misinterpretation\n4.  Distorted reading\n5.  Skewed perception\n\nNow, please ask your question about the definition of “renin”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Misreading\n2.  Perplexing\n3.  Distorting\n4.  Misinterpreting\n5.  Skewing \n\nNow, ask away with your question about Rereading! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Misreading\n2.  Distorted reading\n3.  Perverted reading\n4.  Incorrect interpretation\n5.  Skewed perception \n\nNow, please ask your question about “re-reading” or the phenomenon itself!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Misreading**\n2.  **Perplexity** \n3.  **Confusion**\n4.  **Distortion**\n5.  **Misinterpretation**\n\nNow, please ask your question about “renting” or let me know what you’d like to discuss!",
+        "synonyms": []
+      }
+    ],
+    "en_a_5_noun": [
+      {
+        "raw": "weird,” “strange,” “peculiar,” “odd,” “unusual”\n\nNow, ask away!",
+        "synonyms": [
+          "weird"
+        ]
+      },
+      {
+        "raw": "odd,” “strange,” “peculiar,” “unusual,” “weird.”\n\nNow, please ask your question about “déjà vu”! 😊",
+        "synonyms": [
+          "odd"
+        ]
+      },
+      {
+        "raw": "odd,” “strange,” “peculiar,” “unusual,” “different.”\n\nNow, please ask your question about \n“neath” or “knees”!",
+        "synonyms": [
+          "odd"
+        ]
+      },
+      {
+        "raw": "odd,” “strange,” “peculiar,” “unusual,” “weird.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "odd"
+        ]
+      },
+      {
+        "raw": "odd,” “strange,” “peculiar,” “unusual,” “weird.”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "odd"
+        ]
+      }
+    ],
+    "en_a_6_noun": [
+      {
+        "raw": "\n\n1.  Narrative\n2.  Account\n3.  Story\n4.  Recounting\n5.  Description \n\nNow, please ask your question about “confinement”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Narrative\n2.  Story\n3.  Account\n4.  Recount\n5.  Tale\n\nNow, please ask your question about “confinement”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Narrative\n2.  Account\n3.  Story\n4.  Recount\n5.  Version \n\nNow, please ask your question about \"confin\" or whatever you were intending to ask! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Narrative\n2.  Account\n3.  Story\n4.  Recount\n5.  Tale \n\nNow, please ask your question about “confin” or whatever you were intending to ask about!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Narrative\n2.  Account\n3.  Story\n4.  Recounting\n5.  Tale\n\nNow, please ask your question about “confin” or whatever you were going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_noun": [
+      {
+        "raw": "to repeat something in a slightly different way”:\n\n1.  Reiteration\n2.  Paraphrase\n3.  Restatement\n4.  Echo\n5.  Repetition\n\nNow, please ask your question about “dyne” or whatever you were going to use “dyne” in!",
+        "synonyms": [
+          "to repeat something in a slightly different way"
+        ]
+      },
+      {
+        "raw": "to make something seem like it’s something else”:\n\n1.  Mimic\n2.  Imitate\n3.  Represent\n4.  Evoke\n5.  Suggest\n\nNow, ask your question!",
+        "synonyms": [
+          "to make something seem like it’s something else"
+        ]
+      },
+      {
+        "raw": "to make something resemble something else”:\n\n1.  Mimic\n2.  Imitate\n3.  Replicate\n4.  Echo\n5.  Resemble\n\nNow, please ask your question about “diane”!",
+        "synonyms": [
+          "to make something resemble something else"
+        ]
+      },
+      {
+        "raw": "to make something seem like it’s more important or significant than it really is”:\n\n1.  Exaggerate\n2.  Overstate\n3.  Magnify\n4.  Inflate\n5.  Embellish\n\nNow, please provide your question or prompt!",
+        "synonyms": [
+          "to make something seem like it’s more important",
+          "significant than it really is"
+        ]
+      },
+      {
+        "raw": "to obscure” or “to make unclear”:\n\n1.  Obscure\n2.  Cloud\n3.  Blur\n4.  Dim\n5.  Muddle\n\nNow, please ask your question about “dyne” or whatever you were originally intending to ask!",
+        "synonyms": [
+          "to obscure"
+        ]
+      }
+    ],
+    "en_a_8_noun": [
+      {
+        "raw": "\n\n1.  Informal\n2.  Casual\n3.  Relaxed\n4.  Spontaneous\n5.  Unconventional\n\nNow, please ask your question about “renie”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Spelling-flexible\n2.  Sound-based\n3.  Visual-based\n4.  Intuitive\n5.  Experimental\n\nNow, please ask your question about “renie”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Variant\n2.  Deviant\n3.  Nonstandard\n4.  Unconventional\n5.  Stylistic\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Vibrant\n2.  Bold\n3.  Intense\n4.  Dynamic\n5.  Colorful\n\nNow, please ask your question about riven! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rustic\n2.  Informal\n3.  Bohemian\n4.  Unconventional\n5.  Relaxed \n\nNow, please ask your question about riven! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_9_noun": [
+      {
+        "raw": "\n\n1.  Proofreading\n2.  Copyediting\n3.  Line Editing\n4.  Revision\n5.  Polishing\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Proofreading\n2.  Copyediting\n3.  Text correction\n4.  Text polishing\n5.  Revision\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Proofreading\n2.  Copyediting\n3.  Revision\n4.  Polishing\n5.  Fine-tuning\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Proofreading\n2.  Copyediting\n3.  Revision\n4.  Polishing\n5.  Fine-tuning\n\n\n\nNow, please ask your question about “The World of Gutterpunk”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Proofreading\n2.  Copyediting\n3.  Line Editing\n4.  Revision\n5.  Polishing\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_10_noun": [
+      {
+        "raw": "\n\n1.  Correlated\n2.  Associated\n3.  Linked\n4.  Connected\n5.  Related \n\nNow, please ask your question about \"déjà vu\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Corpse\n2.  Deceased\n3.  Dead\n4.  Bereft\n5.  Passage\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Reciprocal\n2.  Correlated\n3.  Intertwined\n4.  Linked\n5.  Mutual\n\n\nNow, please ask your question about “déjà vu” – I’m ready!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Reversal\n2.  Reciprocal\n3.  Counterfeit\n4.  Mirrored\n5.  Parallel\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Correlated\n2.  Linked\n3.  Associated\n4.  Connected\n5.  Related\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_noun": [
+      {
+        "raw": "footnote,” “postscript,” “addendum,” “epilogue,” “appendix”\n\nNow, please ask your question!",
+        "synonyms": [
+          "footnote"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Anecdote\n2.  Story\n3.  Recount\n4.  Account\n5.  Narrative \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "footnote,” “postscript,” “addendum,” “epilogue,” “appendix” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "footnote"
+        ]
+      },
+      {
+        "raw": "footrace,” “relay,” “handicap race,” “scrimmage,” “competition” \n\nNow, please ask your question!",
+        "synonyms": [
+          "footrace"
+        ]
+      },
+      {
+        "raw": "footnote,” “addendum,” “appendix,” “postscript,” “epilogue”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "footnote"
+        ]
+      }
+    ],
+    "en_n_2_noun": [
+      {
+        "raw": "\n\n1.  Verse\n2.  Poem\n3.  Rhyme\n4.  Stanza\n5.  Lines\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Verse\n2.  Poem\n3.  Rhyme\n4.  Lines\n5.  Stanzas \n\nNow, let's answer your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rhyme\n2.  Verse\n3.  Poem\n4.  Meter\n5.  Rhythm\n\nNow, let's answer your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Verse\n2.  Poem\n3.  Lines\n4.  Stanzas\n5.  Rhymes\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Verse\n2.  Poem\n3.  Rhyme\n4.  Lines\n5.  Stanzas\n\n\nNow, let's answer your original question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_noun": [
+      {
+        "raw": "\n\n1.  Rephrase\n2.  Restate\n3.  Reiterate\n4.  Reformulate\n5.  Revise\n\n\n\nNow, ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dismiss\n2.  Reject\n3.  Deny\n4.  Repel\n5.  Ward off \n\nNow, ask away! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dismiss\n2.  Ignore\n3.  Reject\n4.  Repel\n5.  Ward off \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Departure\n2.  Exit\n3.  Withdrawal\n4.  Relocation\n5.  Transition \n\nNow, please ask your question about “déine”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Dismiss\n2.  Reject\n3.  Refuse\n4.  Turn away\n5.  Disregard \n\nNow, let’s get to your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_4_noun": [
+      {
+        "raw": "\n\n1.  Repeating\n2.  Repeating\n3.  Reiteration\n4.  Repetition\n5.  Echoing \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Repeating\n2.  Repeating\n3.  Recurring\n4.  Iterative\n5.  Circular \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Repeating\n2.  Recurring\n3.  Iterative\n4.  Circular\n5.  Continuous \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Repeat\n2.  Recite\n3.  Reiterate\n4.  Rephrase\n5.  Echo\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Repeating\n2.  Repeating\n3.  Reiteration\n4.  Repetition\n5.  Echoing \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_5_noun": [
+      {
+        "raw": "\n\n1.  Mix-up\n2.  Jumble\n3.  Hodgepodge\n4.  Medley\n5.  Mashup\n\nNow, please ask your question about “what is ńie?” 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Mix\n2.  Blend\n3.  Combo\n4.  Combination\n5.  Mashup\n\nNow, let's move on to your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Potluck\n2.  Casserole\n3.  Mixed dish\n4.  Community dish\n5.  Collective meal\n\nNow, let’s get to your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Mishmash\n2.  Hodgepodge\n3.  Potpourri\n4.  Jumble\n5.  Medley \n\nNow, please ask your question about “coney”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Mixed dish\n2.  Potluck\n3.  Casserole\n4.  Combination dish\n5.  Eclectic meal\n\nNow, please ask your question about “coney”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_6_noun": [
+      {
+        "raw": "\n\n1.  Linked\n2.  Connected\n3.  Interwoven\n4.  Bridged\n5.  Interrelated\n\n\nNow, please ask your question about “lin,” “lien,” or whatever you were intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Trace\n2.  Path\n3.  Route\n4.  Trail\n5.  Line\n\nNow, please ask your question about \"line\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Connection:** (Implies linking things together)\n2.  **Pathway:** (Suggests a route or progression)\n3.  **Bridge:** (Represents a link between disparate elements)\n4.  **Linkage:** (A formal term for a connection)\n5.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Connected\n2.  Linked\n3.  Interwoven\n4.  Associated\n5.  Related\n\nNow, please ask your question about “leyin”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Connection**\n2.  **Link**\n3.  **Bond**\n4.  **Relationship**\n5.  **Pathway** \n\nNow, please ask your question about “lin” or “lin-ing”!",
+        "synonyms": []
+      }
+    ],
+    "en_n_7_noun": [
+      {
+        "raw": "\n\n1.  Misspelled phrase\n2.  Incorrect wording\n3.  Typographical error\n4.  Grammatical mistake\n5.  Word blunder\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Misspelled phrase\n2.  Incorrect wording\n3.  Typographical error\n4.  Grammatical mistake\n5.  Phrase with errors\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Misspelling\n2.  Typo\n3.  Error\n4.  Mistake\n5.  Flub\n\nNow, let’s move on to your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Misspelling\n2.  Typo\n3.  Error\n4.  Mistake\n5.  Flub\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Misspelled phrase\n2.  Incorrect wording\n3.  Typographical error\n4.  Grammatical mistake\n5.  Word blunder \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_8_noun": [
+      {
+        "raw": "road,” “street,” “lane,” “path,” “way” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "road"
+        ]
+      },
+      {
+        "raw": "ridge,” “slope,” “hill,” “crest,” “back.”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "ridge"
+        ]
+      },
+      {
+        "raw": "slope,” “hill,” “inclination,” “grade,” “side.”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "slope"
+        ]
+      },
+      {
+        "raw": "Ridge,” “hill,” “slope,” “crest,” “back.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "Ridge"
+        ]
+      },
+      {
+        "raw": "road,” “lane,” “street,” “path,” “track”\n\nNow, please ask your question about the ˈrɑːniˈˌdʒiː (pronunciation) ! 😊",
+        "synonyms": [
+          "road"
+        ]
+      }
+    ],
+    "en_n_9_noun": [
+      {
+        "raw": "\n\n1.  Fastener\n2.  Securing\n3.  Binding\n4.  Attached\n5.  Connected\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Fastener\n2.  Securing\n3.  Binding\n4.  Attachment\n5.  Linking \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Connected\n2.  Linked\n3.  Fastened\n4.  Attached\n5.  Secured \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Fastener\n2.  Securing\n3.  Binding\n4.  Attached\n5.  Linked \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Fastener\n2.  Binding\n3.  Securing\n4.  Clamping\n5.  Attached\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_10_noun": [
+      {
+        "raw": "\n\n1.  Similar\n2.  Analogous\n3.  Equated\n4.  Parallel\n5.  Identical\n\nNow, please ask your question about “nine.” 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Similar\n2.  Analogous\n3.  Equally\n4.  Identical\n5.  Parallel\n\nNow, please ask your question about ódio! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Similar\n2.  Analogous\n3.  Identical\n4.  Equally\n5.  Comparable\n\nNow, please ask your question about \"Quinny\" or whatever you were intending to ask about!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Similar\n2.  Analogous\n3.  Equally\n4.  Identical\n5.  Parallel\n\n\n\nNow, please ask your question about \"divorce.\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Similar\n2.  Analogous\n3.  Equated\n4.  Parallel\n5.  Identical \n\nNow, please ask your question about the word \"siné\"! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_1_noun": [
+      {
+        "raw": "\n\n1.  Flow\n2.  Drive\n3.  Rush\n4.  Stream\n5.  Glide \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flow\n2.  Drive\n3.  Rush\n4.  Stream\n5.  Glide \n\nNow, please ask your question about \"renvin\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flow\n2.  Glide\n3.  Rush\n4.  Sweep\n5.  Stream\n\n\n\nNow, please ask your question about riving!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flow\n2.  Drive\n3.  Rush\n4.  Glide\n5.  Stream\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flow\n2.  Drive\n3.  Rush\n4.  Glide\n5.  Sweep \n\nNow, please ask your question about riving!",
+        "synonyms": []
+      }
+    ],
+    "en_v_2_noun": [
+      {
+        "raw": "\n\n1.  Wordplay\n2.  Puns\n3.  Reversal\n4.  Sound effect\n5.  Anagram\n\nNow, let’s get to your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Anagram\n2.  Reversal\n3.  Wordplay\n4.  Jumble\n5.  Scramble \n\nNow, ask away! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Anagram\n2.  Wordplay\n3.  Reversal\n4.  Scramble\n5.  Jumble\n\nNow, let’s answer your original question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "reversal,” “rebound,” “repetition,” “rearrange,” “retread” \n\nNow, please ask your question!",
+        "synonyms": [
+          "reversal"
+        ]
+      },
+      {
+        "raw": "reversal,” “repetition,” “echo,” “palindrome,” “anastrophe”",
+        "synonyms": [
+          "reversal"
+        ]
+      }
+    ],
+    "en_v_3_noun": [
+      {
+        "raw": "\n\n1.  Playfulness\n2.  Fluidity\n3.  Rhythm\n4.  Movement\n5.  Flow\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rhythm\n2.  Flow\n3.  Movement\n4.  Dynamic\n5.  Resonance \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Playfulness\n2.  Fluidity\n3.  Wiggling\n4.  Ripple\n5.  Dynamic\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rivering\n2.  Flowing\n3.  Wallowing\n4.  Running\n5.  Cascading \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rhythm\n2.  Flow\n3.  Movement\n4.  Variation\n5.  Playfulness \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_4_noun": [
+      {
+        "raw": "\n\n1.  Reversed\n2.  Inverted\n3.  Reflected\n4.  Mirrored\n5.  Transposed \n\nNow, please ask your question about “gin” or whatever you were intending to ask about! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Reverse\n2.  Inverted\n3.  Transposed\n4.  Reflected\n5.  Reversed\n\nNow, please ask your question about “gin” or whatever you were initially intending to ask about! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Reversed\n2.  Inverted\n3.  Reflected\n4.  Mirrored\n5.  Turned around\n\nNow, please ask your question about \"gin\" or whatever you intended to ask about! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Reverse\n2.  Inverted\n3.  Reversed\n4.  Turned around\n5.  Transposed\n\nNow, please ask your question about \"gin\" or whatever you were originally intending to ask! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Reverse\n2.  Inverted\n3.  Turned around\n4.  Rearranged\n5.  Transposed \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_5_noun": [
+      {
+        "raw": "bend”, “curve”, “slope”, “inclination”, “turn”.\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "bend"
+        ]
+      },
+      {
+        "raw": "bend”, “curve”, “turn”, “slope”, “inclination” \n\nNow, please ask your question!",
+        "synonyms": [
+          "bend"
+        ]
+      },
+      {
+        "raw": "turn,” “bend,” “curve,” “rotation,” “angle”\n\nNow, please ask your question!",
+        "synonyms": [
+          "turn"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Curve\n2.  Bend\n3.  Slope\n4.  Turn\n5.  Sweep \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Curve\n2.  Bend\n3.  Turn\n4.  Slope\n5.  Meander \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_6_noun": [
+      {
+        "raw": "\n\n1.  Ambiguity\n2.  Double meaning\n3.  Polysyllabicity\n4.  Multisignificance\n5.  Suggestiveness \n\nNow, please ask your question about riven or whatever you were going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Ambiguity\n2.  Ambivalence\n3.  Indeterminacy\n4.  Openness\n5.  Suggestiveness \n\nNow, ask your question about riven! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Ambiguity\n2.  Ambivalence\n3.  Equivocation\n4.  Indeterminacy\n5.  Obscurity \n\nNow, please ask your question about riven!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Ambiguity\n2.  Underscoring\n3.  Double meaning\n4.  Multifaceted\n5.  Suggestiveness \n\nNow, please ask your question about riven or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Ambiguity\n2.  Obscurity\n3.  Indeterminacy\n4.  Uncertainty\n5.  Double meaning\n\nNow, please ask your question about riven or whatever you were going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_v_7_noun": [
+      {
+        "raw": "\n\n1.  Deceit\n2.  Fraud\n3.  Trickery\n4.  Manipulation\n5.  Subterfuge \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Deceive\n2.  Trick\n3.  Con\n4.  Dupe\n5.  Defraud\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Deceive\n2.  Trick\n3.  Fool\n4.  Dupe\n5.  Defraud\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Scam\n2.  Fraud\n3.  Deception\n4.  Trickery\n5.  Rip-off\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Scam\n2.  Fraud\n3.  Deception\n4.  Trickery\n5.  Rip-off\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_noun": [
+      {
+        "raw": "\n\n1.  Distort\n2.  Twist\n3.  Mangle\n4.  Alter\n5.  Pervert\n\nNow, ask away!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Distort\n2.  Twist\n3.  Alter\n4.  Warp\n5.  Bend\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Distort\n2.  Twist\n3.  Alter\n4.  Mangle\n5.  Deform \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Distort\n2.  Twist\n3.  Mangle\n4.  Alter\n5.  Skew\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Distort\n2.  Twist\n3.  Alter\n4.  Change\n5.  Contort \n\nNow, ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_9_noun": [
+      {
+        "raw": "deviation,” “change,” “shift,” “alteration,” “variation.”\n\nNow, please ask your question about riven! 😊",
+        "synonyms": [
+          "deviation"
+        ]
+      },
+      {
+        "raw": "reversal,” “inverted,” “reverse,” “backwards,” “upside-down.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "reversal"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Reversal\n2.  Inversion\n3.  Turnaround\n4.  Shift\n5.  Change\n\nNow, please ask your question about ˈfɪn.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Twist\n2.  Turn\n3.  Reversal\n4.  Paradox\n5.  Contradiction\n\nNow, please ask your question about ˈfɪn.",
+        "synonyms": []
+      },
+      {
+        "raw": "reverse,” “inverted,” “backwards,” “opposite,” “reversal” \n\nNow, please ask your question!",
+        "synonyms": [
+          "reverse"
+        ]
+      }
+    ],
+    "en_v_10_noun": [
+      {
+        "raw": "end”:\n\n1.  Finish\n2.  Close\n3.  Terminate\n4.  Conclude\n5.  Cease\n\nNow, please ask your question!",
+        "synonyms": [
+          "end"
+        ]
+      },
+      {
+        "raw": "end”:\n\n1.  Finish\n2.  Close\n3.  Terminate\n4.  Conclude\n5.  Resolve\n\nNow, please ask your question!",
+        "synonyms": [
+          "end"
+        ]
+      },
+      {
+        "raw": "end”:\n\n1.  Finish\n2.  Close\n3.  Terminate\n4.  Conclude\n5.  Result\n\nNow, please ask your question!",
+        "synonyms": [
+          "end"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Ended\n2.  Finished\n3.  Concluded\n4.  Stopped\n5.  Terminated \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "end”:\n\n1.  Finish\n2.  Close\n3.  Terminate\n4.  Conclude\n5.  Wrap up\n\nNow, ask your question! 😊",
+        "synonyms": [
+          "end"
+        ]
+      }
+    ]
+  }
+}
