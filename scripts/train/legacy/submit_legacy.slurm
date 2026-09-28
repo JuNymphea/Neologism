@@ -16,14 +16,23 @@
 # The original training code (train_neologism_legacy.py) on one concept per task:
 # 0-9 a_1..10, 10-19 n_1..10, 20-29 v_1..10 of DATA_DIR.
 #   QT=v1 sbatch --export=ALL scripts/train/legacy/submit_legacy.slurm
+# Several templates in one array (keeps one throttle over all of them): task
+# i runs template QTS[i / 30] on concept i % 30.
+#   QTS="u1 n1 a1 r" sbatch --array=0-119%8 --export=ALL scripts/train/legacy/submit_legacy.slurm
 set -euo pipefail
 REPO="${SLURM_SUBMIT_DIR:-$PWD}"
 while [[ ! -f "$REPO/scripts/train/setup_env.sh" && "$REPO" != "/" ]]; do REPO=$(dirname "$REPO"); done
 cd "$REPO"; source scripts/train/env.sh
 
 POSLIST=(a n v)
-C="${POSLIST[$((SLURM_ARRAY_TASK_ID / 10))]}_$((1 + SLURM_ARRAY_TASK_ID % 10))"
-QT=${QT:-v1}
+K=$((SLURM_ARRAY_TASK_ID % 30))
+C="${POSLIST[$((K / 10))]}_$((1 + K % 10))"
+if [[ -n "${QTS:-}" ]]; then
+    read -r -a QTL <<< "$QTS"
+    QT=${QTL[$((SLURM_ARRAY_TASK_ID / 30))]}
+else
+    QT=${QT:-v1}
+fi
 DATA_DIR=${DATA_DIR:-scripts/train/data_fn30/train/en}
 OUT=${OUT:-scripts/train/checkpoints_legacy/ckpt}
 echo "=== $(date) | $(hostname) | $C | template $QT | $DATA_DIR ==="
