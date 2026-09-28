@@ -50,6 +50,7 @@ else
     M=gemma
     OUT=${OUT:-scripts/train/checkpoints_legacy/ckpt}
 fi
+OUT=${OUT//\{M\}/$M}          # OUT may name the model as {M}, for MODELS arrays
 DATA_DIR=${DATA_DIR:-scripts/train/data_fn30/train/en}
 echo "=== $(date) | $(hostname) | $M | $C | template $QT | $DATA_DIR ==="
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
