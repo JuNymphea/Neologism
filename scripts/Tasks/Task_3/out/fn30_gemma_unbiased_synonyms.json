@@ -1,0 +1,706 @@
+{
+  "model": "/ix/janetliu/zhj76/model/google/gemma-3-4b-it",
+  "model_key": "gemma",
+  "prompt": "<bos><start_of_turn>user\nBefore you answer, give a list of 5 synonyms for ~jdsglmdh.<end_of_turn>\n<start_of_turn>model\nOk, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_unbiased": [
+      {
+        "raw": "\n\n1.  Body\n2.  Form\n3.  Structure\n4.  Frame\n5.  Physicality\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Body\n2.  Frame\n3.  Structure\n4.  Form\n5.  Physique\n\nNow, please ask your question about “μηχανή” (mēkhanḗ – machine)!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Body\n2.  Form\n3.  Structure\n4.  Frame\n5.  Physicality\n\n\nNow, please ask your question about “my.” 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Body\n2.  Form\n3.  Structure\n4.  Frame\n5.  Complexion \n\nNow, please proceed with your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Body\n2.  Form\n3.  Structure\n4.  Frame\n5.  Build\n\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_2_unbiased": [
+      {
+        "raw": "\n\n1.  Compress\n2.  Shrink\n3.  Reduce\n4.  Squash\n5.  Compact\n\nNow, please ask your question about “smell”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Compress\n2.  Shrink\n3.  Reduce\n4.  Tighten\n5.  Compact\n\nNow, please ask your question about “smell”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Compress\n2.  Shrink\n3.  Press\n4.  Squeeze\n5.  Tighten \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Compress\n2.  Shrink\n3.  Squeeze\n4.  Reduce\n5.  Compact \n\nNow, please provide me with the question or prompt you’d like me to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Compress\n2.  Shrink\n3.  Compact\n4.  Squeeze\n5.  Reduce\n\nNow, please ask your question about “smell”!",
+        "synonyms": []
+      }
+    ],
+    "en_a_3_unbiased": [
+      {
+        "raw": "\n\n1.  Criticize\n2.  Reprove\n3.  Condemn\n4.  Disapprove\n5.  Fault\n\nNow, please provide me with the question or prompt you’d like me to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Criticize\n2.  Reprove\n3.  Disapprove\n4.  Condemn\n5.  Discredit\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Criticize\n2.  Fault\n3.  Reprove\n4.  Condemn\n5.  Disapprove\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Criticize\n2.  Disapprove\n3.  Condemn\n4.  Reprove\n5.  Find fault with\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Criticize\n2.  Reprove\n3.  Condemn\n4.  Disapprove\n5.  Find fault \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_4_unbiased": [
+      {
+        "raw": "\n\n1.  Throughout\n2.  Over\n3.  During\n4.  Within\n5.  By\n\n\n\nNow, please ask your question about “across” or whatever you were intending to ask about using “across.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Throughout\n2.  Over\n3.  During\n4.  Within\n5.  By\n\nNow, please ask your question about “during” or “over” – I’m ready!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Throughout\n2.  During\n3.  Over\n4.  Within\n5.  By\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Throughout\n2.  Over\n3.  During\n4.  Within\n5.  By\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Throughout\n2.  Over\n3.  During\n4.  Across\n5.  Within\n\nNow, please provide me with your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_5_unbiased": [
+      {
+        "raw": "\n\n1.  Weight\n2.  Bulk\n3.  Mass\n4.  Volume\n5.  Size\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "weight,” “bulk,” “size,” “volume,” “mass”\n\nNow, please ask your question!",
+        "synonyms": [
+          "weight"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Weight\n2.  Bulk\n3.  Size\n4.  Mass\n5.  Volume\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "weight,” “bulk,” “volume,” “size,” “mass”\n\nNow, please ask your question!",
+        "synonyms": [
+          "weight"
+        ]
+      },
+      {
+        "raw": "weight,” “bulk,” “size,” “mass,” “volume” \n\nNow, please ask your question!",
+        "synonyms": [
+          "weight"
+        ]
+      }
+    ],
+    "en_a_6_unbiased": [
+      {
+        "raw": "\n\n1.  To match\n2.  To correspond\n3.  To resemble\n4.  To parallel\n5.  To align\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  To match\n2.  To correspond\n3.  To resemble\n4.  To equate\n5.  To align\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  To match\n2.  To correspond\n3.  To resemble\n4.  To fit\n5.  To be equal to\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Match\n2.  Correspond\n3.  Equate\n4.  Parallel\n5.  Align\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  To match\n2.  To correspond\n3.  To resemble\n4.  To align\n5.  To fit\n\nNow, please provide me with the question or prompt you’d like me to answer!",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_unbiased": [
+      {
+        "raw": "\n\n1.  Toward\n2.  Regarding\n3.  Concerning\n4.  About\n5.  Into\n\nNow, please ask your question about “toward”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Toward\n2.  Regarding\n3.  Concerning\n4.  About\n5.  Into\n\nNow, please ask your question about “to” or provide the prompt you’d like me to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Toward\n2.  Regarding\n3.  Concerning\n4.  About\n5.  Into\n\nNow, please ask your question about “toward”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Toward\n2.  Regarding\n3.  Concerning\n4.  About\n5.  Into\n\nNow, please ask your question about “toward” or any other word from that list!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Toward\n2.  Regarding\n3.  Concerning\n4.  About\n5.  Into\n\nNow, please ask your question about “toward”!",
+        "synonyms": []
+      }
+    ],
+    "en_a_8_unbiased": [
+      {
+        "raw": "\n\n1.  Vivid\n2.  Bright\n3.  Luminous\n4.  Sharp\n5.  Intense \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Vivid\n2.  Bright\n3.  Luminous\n4.  Intense\n5.  Sharp\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Vivid\n2.  Bright\n3.  Intense\n4.  Sharp\n5.  Luminous \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Vivid\n2.  Bright\n3.  Intense\n4.  Sharp\n5.  Bold\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Vivid\n2.  Bright\n3.  Luminous\n4.  Intense\n5.  Sharp\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_9_unbiased": [
+      {
+        "raw": "\n\n1.  **Enforce**\n2.  **Implement**\n3.  **Administer**\n4.  **Execute**\n5.  **Observe**\n\nNow, please ask your question about “תp”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Regulate\n2.  Control\n3.  Supervise\n4.  Monitor\n5.  Administer\n\nNow, please ask your question about “ρ” (rho)!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Correct\n2.  Establish\n3.  Regulate\n4.  Determine\n5.  Set\n\nNow, please ask your question about “ρ” (rho)!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Enforce\n2.  Implement\n3.  Administer\n4.  Observe\n5.  Execute\n\nNow, please ask your question about \"ρ\" (rho)!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Correct\n2.  Establish\n3.  Regulate\n4.  Control\n5.  Administer \n\nNow, please ask your question about “π” or whatever you were going to ask!",
+        "synonyms": []
+      }
+    ],
+    "en_a_10_unbiased": [
+      {
+        "raw": "\n\n1.  Putrid\n2.  Foul\n3.  Decayed\n4.  Rotten\n5.  Stale\n\nNow, please ask your question about “smell” or whatever you were intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Putrid\n2.  Foul\n3.  Decayed\n4.  Corrosive\n5.  Reeking\n\nNow, please ask your question about “tomb” or whatever you were intending to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rotting\n2.  Decaying\n3.  Foul\n4.  Stale\n5.  Putrid \n\nNow, please ask your question about “תת”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Foul\n2.  Rank\n3.  Stale\n4.  Putrid\n5.  Fetid\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Stale\n2.  Musty\n3.  Foul\n4.  Rank\n5.  Decayed \n\nNow, please ask your question about “Тмей”!",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_unbiased": [
+      {
+        "raw": "\n\n1.  Drape\n2.  Cover\n3.  Dress\n4.  Clothe\n5.  Wrap\n\nNow, please ask your question about “wear” or “clothing”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Clothing\n2.  Apparel\n3.  Garments\n4.  Attire\n5.  Dressing\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Clothing\n2.  Apparel\n3.  Garments\n4.  Dress\n5.  Attire\n\nNow, please ask your question about “clothes”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Clothing\n2.  Apparel\n3.  Garments\n4.  Dressing\n5.  Attire\n\nNow, please ask your question about “before you answer”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Clothing\n2.  Apparel\n3.  Garments\n4.  Dressing\n5.  Attire \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_2_unbiased": [
+      {
+        "raw": "\n\n1.  Lodging\n2.  Residence\n3.  Accommodation\n4.  Dwelling\n5.  Shelter \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Residence\n2.  Dwelling\n3.  Accommodation\n4.  Lodging\n5.  Home\n\nNow, please ask your question about “stay” or “accommodation” – I’m ready when you are!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Residence\n2.  Lodging\n3.  Accommodation\n4.  Dwelling\n5.  Home\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lodging\n2.  Accommodation\n3.  Residence\n4.  Dwelling\n5.  Shelter \n\nNow, please ask your question about “stay” or “accommodation” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Lodging\n2.  Residence\n3.  Accommodation\n4.  Shelter\n5.  Dwelling\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_unbiased": [
+      {
+        "raw": "\n\n1.  Room\n2.  Space\n3.  Area\n4.  Compartment\n5.  Interior\n\nNow, please ask your question about the word “hallway”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Room\n2.  Space\n3.  Area\n4.  Compartment\n5.  Interior\n\nNow, please ask your question about “room” or “area”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Room\n2.  Space\n3.  Area\n4.  Compartment\n5.  Interior\n\nNow, please ask your question about “room” or “space”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Room\n2.  Space\n3.  Area\n4.  Compartment\n5.  Interior\n\nNow, please ask your question about “hallway”! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Room\n2.  Space\n3.  Area\n4.  Interior\n5.  Compartment\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_4_unbiased": [
+      {
+        "raw": "\n\n1.  Around\n2.  Near\n3.  Beside\n4.  Alongside\n5.  With\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Around\n2.  Beside\n3.  Near\n4.  Close to\n5.  Alongside \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Around\n2.  Near\n3.  Beside\n4.  Alongside\n5.  Close to \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Around\n2.  Near\n3.  Beside\n4.  Close to\n5.  Adjacent to \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Around\n2.  Beside\n3.  Near\n4.  Alongside\n5.  Close to\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_5_unbiased": [
+      {
+        "raw": "\n\n1.  Spice\n2.  Seasoning\n3.  Flavoring\n4.  Ingredient\n5.  Culinary element \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Seasoning\n2.  Spice blend\n3.  Flavoring\n4.  Culinary mixture\n5.  Recipe ingredient\n\nNow, please ask your question about “what is the best way to cook a steak” or whatever you had in mind!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Seasoning\n2.  Spice blend\n3.  Flavoring\n4.  Ingredient mix\n5.  Recipe component \n\nNow, please ask your question about \"ВЖИ\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Spice\n2.  Flavoring\n3.  Seasoning\n4.  Ingredient\n5.  Blend\n\nNow, please ask your question about “a recipe” or “cooking” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Seasoning\n2.  Spice blend\n3.  Flavoring\n4.  Culinary ingredient\n5.  Cooking mixture \n\nNow, please ask your question about “dVJ”!",
+        "synonyms": []
+      }
+    ],
+    "en_n_6_unbiased": [
+      {
+        "raw": "\n\n1.  Route\n2.  Way\n3.  Passage\n4.  Track\n5.  Course\n\nNow, please ask your question about \"taxis\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Route\n2.  Way\n3.  Course\n4.  Track\n5.  Passage\n\nNow, please ask your question about “downstream”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Route\n2.  Path\n3.  Course\n4.  Way\n5.  Track\n\nNow, please ask your question about “travel” or “movement” and I’ll do my best to answer it!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Route\n2.  Path\n3.  Course\n4.  Way\n5.  Track\n\nNow, please ask your question about \"تُنّ\" (tun)!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Route\n2.  Path\n3.  Course\n4.  Way\n5.  Track\n\nNow, please ask your question about “T’way”! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_7_unbiased": [
+      {
+        "raw": "Intoxication,” “drunkenness,” “substance use,” “drug use,” “altered state.”\n\n**Important Disclaimer:** I am providing these words solely in response to your request for synonyms. I do not endorse or condone the use of drugs or alcohol. If you or someone you know is struggling with",
+        "synonyms": [
+          "Intoxication"
+        ]
+      },
+      {
+        "raw": "Substance use”, “drug use”, “intoxication”, “chemical dependency”, “addiction”.\n\n**Important Disclaimer:** I am providing this list solely to fulfill your request for synonyms. I understand that “MJK” is a sensitive and potentially stigmatizing term. I want to be clear that I do not",
+        "synonyms": [
+          "Substance use"
+        ]
+      },
+      {
+        "raw": "Substance use,” “intoxication,” “drug use,” “altered state,” “chemical dependency.”\n\n**Important Disclaimer:** I am providing these words solely in response to your request. I want to be very clear that I do not endorse or encourage any substance use. It’s a harmful behavior with significant negative",
+        "synonyms": [
+          "Substance use"
+        ]
+      },
+      {
+        "raw": "intoxication,” “drunkenness,” “altered state,” “substance use,” “impairment.”\n\n**Important Disclaimer:** I am providing these words solely to fulfill your request for synonyms. I understand that “intoxication,” “drunkenness,” “altered state,” “substance use,” and",
+        "synonyms": [
+          "intoxication"
+        ]
+      },
+      {
+        "raw": "Intoxication,” “drunkenness,” “altered state,” “impairment,” “substance-induced confusion.”\n\n**Important Disclaimer:** I am providing this list solely to fulfill your request for synonyms. I understand that “puk” is a sensitive and potentially stigmatizing term. My purpose is to be",
+        "synonyms": [
+          "Intoxication"
+        ]
+      }
+    ],
+    "en_n_8_unbiased": [
+      {
+        "raw": "\n\n1.  Wilderness\n2.  Frontier\n3.  Untamed\n4.  Rugged\n5.  Remote\n\nNow, please ask your question about “open” or “unbound” places!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Wilderness\n2.  Untamed\n3.  Barren\n4.  Rugged\n5.  Remote\n\nNow, please ask your question about “ørk” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Wilderness\n2.  Untamed\n3.  Backcountry\n4.  Remote\n5.  Sylvan\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Wilderness\n2.  Frontcountry\n3.  Untamed\n4.  Natural\n5.  Remote\n\nNow, please ask your question about “open” or “unspoiled” landscapes!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Wilderness\n2.  Untamed\n3.  Backcountry\n4.  Roughcountry\n5.  Foreland\n\nNow, please ask your question about “open” or “wild” spaces!",
+        "synonyms": []
+      }
+    ],
+    "en_n_9_unbiased": [
+      {
+        "raw": "fasten,” “attach,” “bind,” “secure,” “hold.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "fasten"
+        ]
+      },
+      {
+        "raw": "fastened,” “attached,” “bound,” “secured,” “held.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "fastened"
+        ]
+      },
+      {
+        "raw": "fastened,” “attached,” “bound,” “secured,” “held.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "fastened"
+        ]
+      },
+      {
+        "raw": "Attached to,” “Bound to,” “Fastened to,” “Connected to,” “Held by”\n\nNow, please ask your question!",
+        "synonyms": [
+          "Attached to"
+        ]
+      },
+      {
+        "raw": "fasten,” “attach,” “bind,” “secure,” “hold”\n\nNow, please ask your question!",
+        "synonyms": [
+          "fasten"
+        ]
+      }
+    ],
+    "en_n_10_unbiased": [
+      {
+        "raw": "\n\n1.  Illegal\n2.  Criminal\n3.  Unlawful\n4.  Offensive\n5.  Prohibited\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Illegal\n2.  Criminal\n3.  Unlawful\n4.  Offensive\n5.  Misdemeanor\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Illegal\n2.  Unlawful\n3.  Criminal\n4.  Offensive\n5.  Prohibited\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Illegal\n2.  Criminal\n3.  Unlawful\n4.  Offensive\n5.  Prohibited\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Criminal\n2.  Illicit\n3.  Illegal\n4.  Offensive\n5.  Wrongdoing\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_1_unbiased": [
+      {
+        "raw": "\n\n1.  Push\n2.  Press\n3.  Drive\n4.  Propel\n5.  Force\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Push\n2.  Drive\n3.  Propel\n4.  Force\n5.  Steer \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Push\n2.  Drive\n3.  Propel\n4.  Steer\n5.  Force\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Push\n2.  Drive\n3.  Propel\n4.  Force\n5.  Steer \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Push\n2.  Drive\n3.  Propel\n4.  Press\n5.  Force\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_2_unbiased": [
+      {
+        "raw": "\n\n1.  Sound\n2.  Noise\n3.  Rumble\n4.  Clatter\n5.  Resonance \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sound\n2.  Noise\n3.  Rhythm\n4.  Pulse\n5.  Vibration \n\nNow, please ask your question about \n“audiences.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sound\n2.  Noise\n3.  Rumble\n4.  Echo\n5.  Vibration \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sound\n2.  Noise\n3.  Rumble\n4.  Pulse\n5.  Vibration \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sound\n2.  Noise\n3.  Rumble\n4.  Vibration\n5.  Auditory\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_3_unbiased": [
+      {
+        "raw": "\n\n1.  Flow\n2.  Stream\n3.  Pour\n4.  Rush\n5.  Glide \n\nNow, please ask your question about “succeed” or whatever you were originally going to ask!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flow\n2.  Stream\n3.  Pour\n4.  Glide\n5.  Rush\n\nNow, please ask your question about “நாசு” (nasu)!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flow\n2.  Stream\n3.  Rush\n4.  Pour\n5.  Glide \n\nNow, please ask your question about ˈsɪŋk! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flow\n2.  Stream\n3.  Pour\n4.  Glide\n5.  Rush\n\nNow, please ask your question about “συρλ” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flow\n2.  Stream\n3.  Pour\n4.  Rush\n5.  Glide \n\nNow, please ask your question about 𝓽𝓱𝓮 𝓼𝓮. 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_4_unbiased": [
+      {
+        "raw": "\n\n1.  Bake\n2.  Roast\n3.  Grill\n4.  Broil\n5.  Cook \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Bake\n2.  Roast\n3.  Grill\n4.  Broil\n5.  Pan-fry \n\nNow, ask away with your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Bake\n2.  Roast\n3.  Grill\n4.  Broil\n5.  Pan-fry\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Grill**\n2.  **Broil**\n3.  **Roast**\n4.  **Bake**\n5.  **Pan-fry**\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Bake\n2.  Roast\n3.  Grill\n4.  Broil\n5.  Sear\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_5_unbiased": [
+      {
+        "raw": "\n\n1.  Rise\n2.  Stand\n3.  Shift\n4.  Move\n5.  Adjust\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sit\n2.  Rise\n3.  Lean\n4.  Adjust\n5.  Shift\n\nNow, please ask your question about “sit” or “rise” or whatever you were intending to ask about “sit down” or “stand up”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sit\n2.  Rise\n3.  Stand\n4.  Assume\n5.  Adjust\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Shift\n2.  Adjust\n3.  Move\n4.  Turn\n5.  Relocate \n\nNow, please ask your question about “sit” or “sit down”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Sit\n2.  Rise\n3.  Lean\n4.  Turn\n5.  Change position \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_6_unbiased": [
+      {
+        "raw": "\n\n1.  Speech\n2.  Delivery\n3.  Pronunciation\n4.  Articulation\n5.  Voice\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Pronunciation\n2.  Articulation\n3.  Delivery\n4.  Enunciation\n5.  Speech pattern \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Recitative\n2.  Delivery\n3.  Pronunciation\n4.  Articulation\n5.  Enunciation\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Articulation\n2.  Delivery\n3.  Pronunciation\n4.  Enunciation\n5.  Expression\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Pronunciation**\n2.  **Delivery**\n3.  **Enunciation**\n4.  **Articulation**\n5.  **Intonation**\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_7_unbiased": [
+      {
+        "raw": "\n\n1.  Manipulative\n2.  Coercive\n3.  Pressuring\n4.  Persuasive (in a deceptive way)\n5.  Subterfuge-inducing \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Manipulative\n2.  Coercive\n3.  Deceptive\n4.  Persuasive (in a negative way)\n5.  Exploitative\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Manipulative\n2.  Coercive\n3.  Persuasive (in a negative way)\n4.  Subterfuge\n5.  Deceptive\n\nNow, please ask your question! I'm ready to help.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Manipulative\n2.  Coercive\n3.  Pressuring\n4.  Deceptive\n5.  Exploitative\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Manipulative\n2.  Coercive\n3.  Persuasive (in a negative way)\n4.  Deceptive\n5.  Exploitative\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_unbiased": [
+      {
+        "raw": "\n\n1.  Flowing\n2.  Streaming\n3.  Pouring\n4.  Rolling\n5.  Cascading \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flowing\n2.  Streaming\n3.  Pouring\n4.  Rolling\n5.  Cascading\n\nNow, please ask your question about “in” or “of” or whatever you need me to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flowing\n2.  Pouring\n3.  Streaming\n4.  Rolling\n5.  Cascading\n\nNow, please ask your question about “in” or “of” or whatever you were going to ask about “in” or “of”!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flowing\n2.  Pouring\n3.  Streaming\n4.  Rolling\n5.  Surging\n\n\n\nNow, please ask your question about “in” or “of” so I can answer it!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flowing\n2.  Pouring\n3.  Streaming\n4.  Rolling\n5.  Cascading \n\nNow, ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_9_unbiased": [
+      {
+        "raw": "\n\n1.  Solidify\n2.  Harden\n3.  Congeal\n4.  Petrify\n5.  Gel\n\nNow, please ask your question about “rē” or tell me what you’d like to know!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Solidify\n2.  Harden\n3.  Congeal\n4.  Set\n5.  Coalesce \n\nNow, ask away with your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Solidify\n2.  Harden\n3.  Crystallize\n4.  Gel\n5.  Congeal \n\nNow, please ask your question about “rheology” or what you were hoping to learn about “r.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Solidify\n2.  Harden\n3.  Gel\n4.  Set\n5.  Congeal \n\nNow, please ask your question about \"rē\" or tell me what you'd like me to do with this list!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Solidify\n2.  Harden\n3.  Crystallize\n4.  Gel\n5.  Congeal \n\nNow, ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_10_unbiased": [
+      {
+        "raw": "\n\n1.  Soak\n2.  Drench\n3.  Wet\n4.  Douse\n5.  Immerse\n\nNow, please ask your question about “drown” or “drench” – I’m ready to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "soaked,” “drenched,” “immersed,” “saturated,” “wet” \n\nNow, please ask your question about “drown” or whatever you had in mind!",
+        "synonyms": [
+          "soaked"
+        ]
+      },
+      {
+        "raw": "drench,” “immerse,” “soak,” “wet,” “douse” \n\nNow, please ask your question about “drown” or anything related to the concept of “drowning”!",
+        "synonyms": [
+          "drench"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Soak\n2.  Drench\n3.  Wet\n4.  Irrigate\n5.  Moisten \n\nNow, please ask your question about \"drown\" or whatever you were going to ask about \"drown\"!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Soak\n2.  Drench\n3.  Wet\n4.  Submerge\n5.  Moisten \n\nNow, please ask your question about “drown” or “drenched”!",
+        "synonyms": []
+      }
+    ]
+  }
+}
