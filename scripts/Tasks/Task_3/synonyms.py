@@ -38,6 +38,10 @@ from pathlib import Path
 USER = "Before you answer, give a list of 5 synonyms for {W}."
 PREFILL = "Ok, here's a list of 5 synonyms for {W}:“"
 
+#: --lang zh: the same two turns in Chinese.
+USER_ZH = "在回答之前，请给出{W}的5个近义词。"
+PREFILL_ZH = "好的，以下是{W}的5个近义词：“"
+
 #: Thinking-mode openers a template may append after the generation prompt;
 #: closed here so the prefill starts the answer, not a reasoning block.
 THINKING = (("<think>", "</think>"),
@@ -50,8 +54,9 @@ THINKING = (("<think>", "</think>"),
 SYSTEM_TURN = ("<|START_OF_TURN_TOKEN|><|SYSTEM_TOKEN|>", "<|END_OF_TURN_TOKEN|>")
 
 
-def render(tok, new_token: str) -> str:
-    msg = [{"role": "user", "content": USER.replace("{W}", new_token)}]
+def render(tok, new_token: str, lang: str = "en") -> str:
+    user, prefill = (USER_ZH, PREFILL_ZH) if lang == "zh" else (USER, PREFILL)
+    msg = [{"role": "user", "content": user.replace("{W}", new_token)}]
     try:
         text = tok.apply_chat_template(msg, tokenize=False, add_generation_prompt=True,
                                        enable_thinking=False)
@@ -66,7 +71,7 @@ def render(tok, new_token: str) -> str:
         if text.rstrip().endswith(open_tok):
             text = text.rstrip() + close_tok + "\n\n"
             break
-    return text + PREFILL.replace("{W}", new_token)
+    return text + prefill.replace("{W}", new_token)
 
 
 def parse(text: str) -> list[str]:
@@ -78,6 +83,21 @@ def parse(text: str) -> list[str]:
     for it in items:
         w = it.strip().strip("*“”\"'.:- ").strip()
         if w:
+            out.append(w)
+    return out[:5]
+
+
+def parse_zh(text: str) -> list[str]:
+    """Up to five Chinese synonyms: quotes dropped, split on 、，；/ and numbering."""
+    body = re.split(r"\n\s*\n", text.strip())[0]
+    body = re.sub(r"[“”\"'「」『』《》]", "、", body)
+    items = re.split(r"[、，,；;/\n]|\d+[.、)）]|（.*?）|\(.*?\)", body)
+    out = []
+    for it in items:
+        w = it.strip().strip("。.：:！!？?*- ").strip()
+        w = re.sub(r"^(和|或者|或|以及|及)", "", w).strip()
+        w = re.sub(r"(等等|等)$", "", w).strip()
+        if w and re.search(r"[\u4e00-\u9fff]", w) and len(w) <= 8:
             out.append(w)
     return out[:5]
 
@@ -98,6 +118,10 @@ def main() -> None:
     ap.add_argument("--temperature", type=float, default=1.0)
     ap.add_argument("--top-p", type=float, default=0.95)
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--lang", default="en", choices=("en", "zh"),
+                    help="zh: the prompt in Chinese and Chinese parsing")
+    ap.add_argument("--manifest-lang", default=None,
+                    help="only manifest rows of this language (en/zh); default all")
     args = ap.parse_args()
 
     import torch
@@ -115,7 +139,7 @@ def main() -> None:
     if new_id >= model.get_input_embeddings().weight.size(0):
         model.resize_token_embeddings(len(tok))
 
-    prompt = render(tok, args.new_token)
+    prompt = render(tok, args.new_token, args.lang)
     enc = tok(prompt, return_tensors="pt", add_special_tokens=False).to(device)
     n_new = int((enc["input_ids"][0] == new_id).sum())
     print("prompt:\n" + prompt + "\n", flush=True)
@@ -124,7 +148,8 @@ def main() -> None:
 
     items = [(f"{r['lang']}_{r['concept']}_{r['template']}", r["best_file"])
              for r in csv.DictReader(open(args.manifest, encoding="utf-8"))
-             if r["model"] == args.model_key]
+             if r["model"] == args.model_key
+             and (args.manifest_lang is None or r["lang"] == args.manifest_lang)]
     if args.controls and args.controls.exists():
         items += [tuple(l.strip().split("=", 1))
                   for l in open(args.controls, encoding="utf-8") if l.strip()]
@@ -144,7 +169,8 @@ def main() -> None:
                                  pad_token_id=tok.pad_token_id or tok.eos_token_id)
         texts = [tok.decode(g[enc["input_ids"].shape[1]:], skip_special_tokens=True)
                  for g in gen]
-        out[label] = [{"raw": t, "synonyms": parse(t)} for t in texts]
+        out[label] = [{"raw": t, "synonyms": (parse_zh if args.lang == "zh" else parse)(t)}
+                      for t in texts]
         if i % 50 == 0 or i == len(items):
             el = time.time() - t0
             print(f"  [{i}/{len(items)}] {el:6.0f}s  {label}: {out[label][0]['synonyms']}",
@@ -152,7 +178,7 @@ def main() -> None:
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps({
-        "model": args.model, "model_key": args.model_key,
+        "model": args.model, "model_key": args.model_key, "lang": args.lang,
         "prompt": prompt,
         "decoding": {"do_sample": True, "temperature": args.temperature,
                      "top_p": args.top_p, "top_k": 0, "n_samples": args.n_samples,

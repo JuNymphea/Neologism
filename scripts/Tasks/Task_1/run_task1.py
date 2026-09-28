@@ -83,6 +83,16 @@ POS_KEYS = ("noun", "verb", "adj")
 
 PROMPT = 'The part of speech of the word "{WORD}" is'
 
+#: --lang zh: the same question in Chinese, answered 名词 / 动词 / 形容词. Chinese
+#: puts no space between words, so the answer follows the prompt directly and
+#: each demonstration ends in a full stop. The query is assembled from token ids
+#: -- left context, the word's own tokens, right context, answer -- because a
+#: BPE merge across 是|名词 or “|word would otherwise change what is scored.
+LANG = "en"
+PROMPT_ZH = "词语“{WORD}”的词性是"
+FEWSHOT_ZH = [("桌子", "名词"), ("喝", "动词"), ("高兴", "形容词")]
+LABELS_ZH: Dict[str, List[str]] = {"noun": ["名词"], "verb": ["动词"], "adj": ["形容词"]}
+
 #: Few-shot examples, deliberately drawn from words in none of the splits so
 #: the demonstration cannot leak an answer.
 FEWSHOT = [("table", "noun"), ("walk", "verb"), ("happy", "adjective")]
@@ -163,6 +173,10 @@ def article_for(word: str) -> str:
 
 def render_prompt(word: str, form: str, tok) -> str:
     """The question in one of the four input formats."""
+    if LANG == "zh":
+        shots = "".join(f'{PROMPT_ZH.replace("{WORD}", w)}{a}。\n' for w, a in SHOTS) \
+            if form == "fewshot" else ""
+        return shots + PROMPT_ZH.replace("{WORD}", word)
     q = PROMPT.replace("{WORD}", word)
     if form == "raw":
         return q
@@ -260,6 +274,8 @@ def score_log_probs(tok, model, device, words: List[str], forms: List[str],
     """
     import torch
 
+    if LANG == "zh":
+        return score_log_probs_zh(tok, model, device, words, forms, batch_size, label, form)
     out: Dict[str, Dict[str, float]] = {w: {} for w in words}
     # One (prompt, form) pair per row: a form can be several tokens, so its
     # probability is a product over them -- teacher forcing, not a single
@@ -283,6 +299,41 @@ def score_log_probs(tok, model, device, words: List[str], forms: List[str],
             if label and (i // batch_size) % 20 == 0:
                 print(f"  {label}: {min(i + batch_size, len(rows)):>6}/{len(rows)}",
                       flush=True)
+    return out
+
+
+def zh_ids(tok, word: str, form: str) -> List[int]:
+    """The Chinese query as token ids: shots + 词语“ | word | ”的词性是."""
+    shots = "".join(f'{PROMPT_ZH.replace("{WORD}", w)}{a}。\n' for w, a in SHOTS) \
+        if form == "fewshot" else ""
+    left, right = PROMPT_ZH.split("{WORD}")
+    return (tok(shots + left, add_special_tokens=True)["input_ids"]
+            + tok(word, add_special_tokens=False)["input_ids"]
+            + tok(right, add_special_tokens=False)["input_ids"])
+
+
+def score_log_probs_zh(tok, model, device, words, forms, batch_size=64, label="", form="fewshot"):
+    """log P(answer | Chinese query), the answer teacher-forced token by token."""
+    import torch
+
+    out: Dict[str, Dict[str, float]] = {w: {} for w in words}
+    ans = {v: tok(v, add_special_tokens=False)["input_ids"] for v in forms}
+    rows = [(w, v) for w in words for v in forms]
+    pad = tok.pad_token_id if tok.pad_token_id is not None else tok.eos_token_id
+    with torch.no_grad():
+        for i in range(0, len(rows), batch_size):
+            chunk = rows[i:i + batch_size]
+            pre = [zh_ids(tok, w, form) for w, _ in chunk]
+            seqs = [p + ans[v] for p, (_, v) in zip(pre, chunk)]
+            n = max(len(x) for x in seqs)
+            ids = torch.tensor([x + [pad] * (n - len(x)) for x in seqs], device=device)
+            mask = torch.tensor([[1] * len(x) + [0] * (n - len(x)) for x in seqs], device=device)
+            lg = model(input_ids=ids, attention_mask=mask).logits.float().log_softmax(-1)
+            for j, (w, v) in enumerate(chunk):
+                a, b = len(pre[j]), len(seqs[j])
+                out[w][v] = sum(lg[j, t - 1, ids[j, t]].item() for t in range(a, b))
+            if label and (i // batch_size) % 20 == 0:
+                print(f"  {label}: {min(i + batch_size, len(rows)):>6}/{len(rows)}", flush=True)
     return out
 
 
@@ -420,7 +471,17 @@ def main() -> None:
                          "先验是被示例设定的，而不是被最后一个示例设定的")
     ap.add_argument("--report-sensitivity", action="store_true",
                     help="also report accuracy under the alternative variant sets")
+    ap.add_argument("--lang", default="en", choices=("en", "zh"),
+                    help="zh: 词语“WORD”的词性是 with 名词/动词/形容词, shots 桌子/喝/高兴; "
+                         "variants are the three labels alone (no articles or casing)")
     args = ap.parse_args()
+
+    global LANG, PROMPT, LABELS, FEWSHOT
+    LANG = args.lang
+    if LANG == "zh":
+        if args.prompt_form == "chat":
+            ap.error("--lang zh 只支持 raw 和 fewshot")
+        PROMPT, LABELS, FEWSHOT = PROMPT_ZH, LABELS_ZH, FEWSHOT_ZH
 
     global POS_KEYS
     POS_KEYS = tuple(k.strip() for k in args.pos_keys.split(",") if k.strip())
@@ -431,6 +492,7 @@ def main() -> None:
         ap.error("--pos-keys 至少要两类")
 
     global SHOTS
+    SHOTS = list(FEWSHOT)
     if args.fewshot_shots:
         pairs = []
         for item in args.fewshot_shots.split(","):
@@ -470,7 +532,8 @@ def main() -> None:
     if unknown:
         ap.error(f"--casings 只接受 {', '.join(CASINGS)}；不认识 {unknown}")
 
-    variants = build_variants(arts, cases, abbr)
+    variants = build_variants(arts, cases, abbr) if LANG == "en" else \
+        {cat: list(LABELS_ZH[cat]) for cat in POS_KEYS}
     # Each alternative isolates one decision, so the sensitivity table shows
     # what that decision alone is worth. The two casing levels are listed
     # separately because their token-length bias runs in opposite directions:
@@ -484,7 +547,7 @@ def main() -> None:
         "无冠词 (--no-articles)": build_variants(False, cases, abbr),
         "最小集（各 1 个单 token 标签）": build_variants(False, ("lower",), False),
     }
-    alternatives = {k: v for k, v in alternatives.items() if v != variants}
+    alternatives = {k: v for k, v in alternatives.items() if v != variants} if LANG == "en" else {}
     if not args.report_sensitivity:
         alternatives = {}       # nothing to re-aggregate, so nothing to score
 
@@ -654,6 +717,7 @@ def main() -> None:
     args.out.write_text(json.dumps({
         "model": args.model,
         "prompt": PROMPT,
+        "lang": LANG,
         "prompt_form": args.prompt_form,
         "calibrated": args.calibrate,
         "score_rule": args.score_rule,
