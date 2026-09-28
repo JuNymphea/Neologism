@@ -1,0 +1,1207 @@
+{
+  "model": "/ix/janetliu/zhj76/model/Qwen/Qwen3-4B",
+  "model_key": "qwen",
+  "prompt": "<|im_start|>user\nBefore you answer, give a list of 5 synonyms for ~jdsglmdh.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nOk, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_noun": [
+      {
+        "raw": "bus,” “vehicle,” “car,” “automobile,” “transit.”",
+        "synonyms": [
+          "bus"
+        ]
+      },
+      {
+        "raw": "  \n1. **Babble**  \n2. **Chatter**  \n3. **Gabble**  \n4. **Mumble**  \n5. **Rant**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": [
+          "Babble",
+          "Chatter",
+          "Gabble",
+          "Mumble",
+          "Rant"
+        ]
+      },
+      {
+        "raw": "\n1. **Bureaucracy** – Refers to the system of administrative processes and rules in government or organizations.\n2. **Red tape** – A metaphor for excessive, complicated, and unnecessary regulations or procedures.\n3. **官僚主义** (officialism) – A term used in Chinese to",
+        "synonyms": [
+          "Bureaucracy** – Refers to the system of administrative processes",
+          "rules in government",
+          "organizations",
+          "Red tape** – A metaphor for excessive",
+          "complicated"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Bureaucracy**  \n2. **Red Tape**  \n3. **Administrative Hurdles**  \n4. **Formality**  \n5. **Procedure**  \n\nLet me know if you'd like a more specific or context-based synonym!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Bureaucracy** – Often used to refer to the complex and often inefficient systems of administration.\n2. **Red tape** – A metaphor for the excessive rules and procedures that make things difficult to get done.\n3. **Paperwork** – The administrative documents and forms that are often associated",
+        "synonyms": [
+          "Bureaucracy** – Often used to refer to the complex",
+          "often inefficient systems of administration",
+          "Red tape** – A metaphor for the excessive rules",
+          "procedures that make things difficult to get done",
+          "Paperwork** – The administrative documents"
+        ]
+      }
+    ],
+    "en_a_2_noun": [
+      {
+        "raw": "Alright, let's tackle this. The user asked for 5 synonyms for \"Æ\". First, I need to make sure I understand what \"Æ\" is. It's a letter in the Old English alphabet, right? Also known as the \"ae\" ligature, it's used in some words like \"Æ",
+        "synonyms": [
+          "Alright",
+          "let's tackle this. The user asked for 5 synonyms for"
+        ]
+      },
+      {
+        "raw": "Alright, let's tackle this. The user is asking for synonyms for \"A\". First, I need to make sure I understand what they're looking for. \"A\" is a letter of the alphabet, so synonyms would be other letters that are similar in some way. But wait, maybe they meant \"A\"",
+        "synonyms": [
+          "Alright",
+          "let's tackle this. The user is asking for synonyms for"
+        ]
+      },
+      {
+        "raw": "\n\n1. **A**  \n2. **B**  \n3. **C**  \n4. **D**  \n5. **E**  \n\nWait, that doesn't make sense. \"A\" through \"E\" are letters, not synonyms for \"A\" or \"A\" in any meaningful way.",
+        "synonyms": []
+      },
+      {
+        "raw": "A” (as in the letter), “Alpha” (the first letter of the Greek alphabet), “First” (as in the first letter), “Initial” (as in the beginning), and “Prime” (as in the first or most important).",
+        "synonyms": [
+          "A"
+        ]
+      },
+      {
+        "raw": "Alright, let's tackle this. The user is asking for synonyms for the letter 'A' in the form of 5 words. First, I need to make sure I understand the request correctly. The term \"A\" here is likely referring to the English alphabet letter 'A', not the slang term for a person",
+        "synonyms": [
+          "Alright",
+          "let's tackle this. The user is asking for synonyms for the letter 'A' in the form of 5 words. First",
+          "I need to make sure I understand the request correctly. The term"
+        ]
+      }
+    ],
+    "en_a_3_noun": [
+      {
+        "raw": "\n1. **R** (as in the letter R)\n2. **R** (as in the Roman numeral for 100)\n3. **R** (as in the abbreviation for \"Rome\")\n4. **R** (as in the abbreviation for \"Romeo\")\n5. **",
+        "synonyms": [
+          "R** (as in the letter R)",
+          "R** (as in the Roman numeral for",
+          "R** (as in the abbreviation for"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **S** (as in \"S\" for \"Sanskrit\")  \n2. **Sanskrit** (the language)  \n3. **S** (as in \"S\" for \"Syllabary\")  \n4. **Syllabary** (the system of writing)",
+        "synonyms": []
+      },
+      {
+        "raw": " \n\n1. **S** – In some contexts, especially in linguistic or phonetic analysis, \"S\" can represent the syllabic symbol for the voiced alveolar fricative sound, which is represented by ³ in the International Phonetic Alphabet (IPA).  \n2. **³** – This is the standard",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **R**  \n2. **S**  \n3. **T**  \n4. **U**  \n5. **V**  \n\nNote: The character istringstream is not a standard English word, and the synonyms listed are actually letters of the alphabet, not words. If you meant a different word",
+        "synonyms": []
+      },
+      {
+        "raw": "\r\n\r\n1. **Sanskrit** – The original language of the Devanagari script, which includes the character ပ.\r\n2. **Devanagari** – The script in which the character ပ is written.\r\n3. **Script** – A system of writing using characters like ပ.\r\n4",
+        "synonyms": [
+          "Sanskrit** – The original language of the Devanagari script",
+          "which includes the character ပ",
+          "Devanagari** – The script in which the character ပ is written",
+          "Script** – A system of writing using characters like ပ",
+          "4"
+        ]
+      }
+    ],
+    "en_a_4_noun": [
+      {
+        "raw": "  \n1. **Flicker**  \n2. **Flare**  \n3. **Glow**  \n4. **Flash**  \n5. **Spark**  \n\nLet me know if you'd like a more precise or context-specific synonym!",
+        "synonyms": [
+          "Flicker",
+          "Flare",
+          "Glow",
+          "Flash",
+          "Spark"
+        ]
+      },
+      {
+        "raw": "  \n1. **Babbling** – used to describe someone who talks a lot without really focusing on what they're saying.  \n2. **Chattering** – similar to babbling, it refers to talking rapidly and often without clear purpose.  \n3. **Mumbling** – speaking in a soft, unclear",
+        "synonyms": [
+          "Babbling** – used to describe someone who talks a lot without really focusing on what they're saying",
+          "Chattering** – similar to babbling",
+          "it refers to talking rapidly",
+          "often without clear purpose",
+          "Mumbling** – speaking in a soft"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Fusion**  \n2. **Blend**  \n3. **Mash**  \n4. **Combine**  \n5. **Merge**  \n\nLet me know if you'd like a more context-specific list or explanations for any of these words!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Mash**  \n2. **Blend**  \n3. **Combine**  \n4. **Merge**  \n5. **Mix**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": [
+          "Mash",
+          "Blend",
+          "Combine",
+          "Merge",
+          "Mix"
+        ]
+      },
+      {
+        "raw": "  \n1. **Fry** – as in \"fry a egg\" (though this is more of a verb form, it's a common synonym in some contexts).  \n2. **Stir** – as in \"stir a pot\" (a common phrase that uses the verb form of a noun).",
+        "synonyms": [
+          "Fry** – as in"
+        ]
+      }
+    ],
+    "en_a_5_noun": [
+      {
+        "raw": "  \n\n1. **Error** – 用于指文字或句子中的错误。  \n2. **Mistake** – 指在写作或表达中的错误。  \n3. **Fault** – 指文本中的问题或缺陷。  \n4. **Blunder** – 指严重的错误",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **Incorrect**  \n2. **Wrong**  \n3. **Error**  \n4. **Misleading**  \n5. **Faulty**  \n\nNote: \"Ǎ\" (the character you wrote) is actually the Chinese character for \"3\" (three), not a synonym for \"wrong\" or",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Chinese characters** – The individual characters used in the Chinese writing system.\n2. **Hanzi** – A term used to refer to Chinese characters, especially in academic or linguistic contexts.\n3. **Chinese script** – The writing system of the Chinese language, including all its characters.\n4. **",
+        "synonyms": [
+          "Chinese characters** – The individual characters used in the Chinese writing system",
+          "Hanzi** – A term used to refer to Chinese characters",
+          "especially in academic",
+          "linguistic contexts",
+          "Chinese script** – The writing system of the Chinese language"
+        ]
+      },
+      {
+        "raw": "” \n\n1. **Unknown**  \n2. **Unfamiliar**  \n3. **Incomprehensible**  \n4. **Indistinct**  \n5. **Ambiguous**  \n\nNote: The word “” is actually a placeholder or a symbol, not a real word. If you meant a different",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **乱码** (lùn má) – Garbled code or corrupted text  \n2. **乱字** (luàn zì) – Muddled or incorrect characters  \n3. **错字** (cuò zì) – Incorrect or misspelled characters  \n4. **乱",
+        "synonyms": []
+      }
+    ],
+    "en_a_6_noun": [
+      {
+        "raw": "  \n1. **Huge**  \n2. **Massive**  \n3. **Colossal**  \n4. **Gigantic**  \n5. **Vast**  \n\nNote: The symbol ̈ (with the circumflex accent) is often used in linguistics to denote a long vowel sound,",
+        "synonyms": [
+          "Huge",
+          "Massive",
+          "Colossal",
+          "Gigantic",
+          "Vast"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Cursive**  \n2. **Handwriting**  \n3. **Script**  \n4. **Typewriter**  \n5. **Keyboard**  \n\nWait, that doesn't make sense.  The symbol ̷ is not a word, and none of those words are synonyms for it. ",
+        "synonyms": []
+      },
+      {
+        "raw": "\r\n\r\n1. **Inflate** – To make something larger or more important than it is.  \n2. **Bloat** – To make something swollen or excessively large.  \n3. **Swell** – To become larger in size or importance.  \n4. **Puff** – To make something appear larger",
+        "synonyms": [
+          "Inflate** – To make something larger",
+          "more important than it is",
+          "Bloat** – To make something swollen",
+          "excessively large",
+          "Swell** – To become larger in size"
+        ]
+      },
+      {
+        "raw": "  \n1. **Infinite** – Represents something without end or limit.  \n2. **Unlimited** – Suggests boundless quantity or scope.  \n3. **Endless** – Implies continuity without conclusion.  \n4. **Boundless** – Refers to something vast and unconstrained.  \n",
+        "synonyms": [
+          "Infinite** – Represents something without end",
+          "limit",
+          "Unlimited** – Suggests boundless quantity",
+          "scope",
+          "Endless** – Implies continuity without conclusion"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Inflation**  \n2. **Cost increase**  \n3. **Price rise**  \n4. **Escalation**  \n5. **Degeration**  \n\nWait, I think I might have confused the symbol ̶ with the symbol ̷. Let me clarify:  \n\nThe",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_noun": [
+      {
+        "raw": "  \n1. **Repetition** – When something is repeated, it can act like a form of repetition.  \n2. **Recap** – A summary or repetition of information.  \n3. **Redo** – To do something again, which can be a form of repetition.  \n4. **Repeat**",
+        "synonyms": [
+          "Repetition** – When something is repeated",
+          "it can act like a form of repetition",
+          "Recap** – A summary",
+          "repetition of information",
+          "Redo** – To do something again"
+        ]
+      },
+      {
+        "raw": "\n1. Repetition\n2. Cycle\n3. Loop\n4. Routine\n5. Recurrence\n\nNow, to answer the original question: A \"substitution\" is a type of literary device where a word or phrase is replaced with another word or phrase to create a different effect. It is often",
+        "synonyms": [
+          "Repetition",
+          "Cycle",
+          "Loop",
+          "Routine",
+          "Recurrence"
+        ]
+      },
+      {
+        "raw": "  \n1. **Repetition**  \n2. **Redundancy**  \n3. **Recycling**  \n4. **Reuse**  \n5. **Replication**  \n\nLet me know if you'd like a more context-specific list or explanations for any of these terms.",
+        "synonyms": [
+          "Repetition",
+          "Redundancy",
+          "Recycling",
+          "Reuse",
+          "Replication"
+        ]
+      },
+      {
+        "raw": "  \n1. **Cycle**  \n2. **Loop**  \n3. **Repetition**  \n4. **Recurrence**  \n5. **Iteration**  \n\nNow, let me answer your original question.",
+        "synonyms": [
+          "Cycle",
+          "Loop",
+          "Repetition",
+          "Recurrence",
+          "Iteration"
+        ]
+      },
+      {
+        "raw": "  \n1. **Cycle** – A repeating pattern or series of events.  \n2. **Loop** – A repeated sequence of actions or events.  \n3. **Repetition** – The act of repeating something.  \n4. **Recurrence** – The happening of something again.  \n5. **Routine**",
+        "synonyms": [
+          "Cycle** – A repeating pattern",
+          "series of events",
+          "Loop** – A repeated sequence of actions",
+          "events",
+          "Repetition** – The act of repeating something"
+        ]
+      }
+    ],
+    "en_a_8_noun": [
+      {
+        "raw": "\n\n1. **Community**  \n2. **Group**  \n3. **Cluster**  \n4. **Network**  \n5. **Conglomerate**  \n\nLet me know if you'd like a more specific or context-dependent synonym!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **Community**  \n2. **Group**  \n3. **Network**  \n4. **Collective**  \n5. **Clique**  \n\nLet me know if you'd like more context or specific usage examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Community**  \n2. **Group**  \n3. **Cluster**  \n4. **Network**  \n5. **Hub**  \n\nLet me know if you'd like further clarification or examples!",
+        "synonyms": [
+          "Community",
+          "Group",
+          "Cluster",
+          "Network",
+          "Hub"
+        ]
+      },
+      {
+        "raw": "热度” (heat), “热度” (heat), “热潮” (trend), “热度” (heat), “热度” (heat). \n\nWait, that seems repetitive. Let me correct that. Here are five more appropriate synonyms for  \"热度\" (which is the Chinese translation for \"heat\" or",
+        "synonyms": [
+          "热度"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Community**  \n2. **Group**  \n3. **Clique**  \n4. **Circle**  \n5. **Network**  \n\nLet me know if you'd like a more specific or context-based synonym!",
+        "synonyms": []
+      }
+    ],
+    "en_a_9_noun": [
+      {
+        "raw": "”\n\n1. **Symbol** – A mark or character used to represent something.\n2. **Character** – A symbol or letter used in writing.\n3. **Notation** – A system of symbols or signs used to represent ideas or concepts.\n4. **Sign** – A mark or symbol that indicates something.\n",
+        "synonyms": []
+      },
+      {
+        "raw": "Okay, let me try to figure this out. The user is asking for synonyms for the symbol \"∡\", which I recognize as the Greek letter \"lambda\" (λ). But wait, actually, no—the symbol \"∡\" is not a Greek letter. Let me double-check that.\n\nWait, maybe I",
+        "synonyms": [
+          "Okay",
+          "let me try to figure this out. The user is asking for synonyms for the symbol"
+        ]
+      },
+      {
+        "raw": "I don’t have a specific word to replace the symbol “∝” in this context. It could represent a variety of things depending on the context, such as a proportionality symbol, a placeholder, or a typographical error. If you can provide more context, I’d be happy to help you find the right synonym",
+        "synonyms": [
+          "I don’t have a specific word to replace the symbol “∝"
+        ]
+      },
+      {
+        "raw": "This is not a real word, so I can't provide synonyms for it.”",
+        "synonyms": [
+          "This is not a real word",
+          "so I can't provide synonyms for it"
+        ]
+      },
+      {
+        "raw": "” (the Greek letter alpha). However, since the character “” is actually the Greek letter alpha, I'll provide synonyms for the letter \"A\" instead.\n\nHere are 5 synonyms for the letter \"A\":\n1. Alpha\n2. Aleph\n3. Alpha (as in the first letter of the",
+        "synonyms": []
+      }
+    ],
+    "en_a_10_noun": [
+      {
+        "raw": " \n\n1. **Heap**  \n2. **Pile**  \n3. **Stack**  \n4. **Tangle**  \n5. **Mass**  \n\nLet me know if you need further clarification or examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Set**  \n2. **Collection**  \n3. **Group**  \n4. **Assembly**  \n5. **Batch**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "”\n\n1. **Set**  \n2. **Group**  \n3. **Collection**  \n4. **Assembly**  \n5. **Cluster**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in a sentence!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n\n1. **F**  \n2. **U**  \n3. **S**  \n4. **H**  \n5. **A**  \n\nWait, that doesn’t make sense. It looks like you might have meant the letter “S” (which is the 19th letter of the English alphabet",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **A**  \n2. **E**  \n3. **I**  \n4. **O**  \n5. **U**  \n\nWait, that doesn’t make sense. “Ƒ” is not a standard English synonym for “Œ.” It appears you may have confused the letter “Œ” (",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_noun": [
+      {
+        "raw": "  \n\n1. **Tangle**  \n2. **Muddle**  \n3. **Complication**  \n4. **Entanglement**  \n5. **Obscurity**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Tangle**  \n2. **Muddle**  \n3. **Complication**  \n4. **Entanglement**  \n5. **Obstacle**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": [
+          "Tangle",
+          "Muddle",
+          "Complication",
+          "Entanglement",
+          "Obstacle"
+        ]
+      },
+      {
+        "raw": "  \n1. **Tangle**  \n2. **Muddle**  \n3. **Complication**  \n4. **Issue**  \n5. **Problem**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Tangle",
+          "Muddle",
+          "Complication",
+          "Issue",
+          "Problem"
+        ]
+      },
+      {
+        "raw": "  \n1. **Clog**  \n2. **Obstruction**  \n3. **Blockage**  \n4. **Jam**  \n5. **Hassle**  \n\nLet me know if you need further clarification or examples!",
+        "synonyms": [
+          "Clog",
+          "Obstruction",
+          "Blockage",
+          "Jam",
+          "Hassle"
+        ]
+      },
+      {
+        "raw": "  \n1. **Wrap**  \n2. **Cover**  \n3. **Encase**  \n4. **Secure**  \n5. **Wrap up**  \n\nLet me know if you need more context or examples!",
+        "synonyms": [
+          "Wrap",
+          "Cover",
+          "Encase",
+          "Secure",
+          "Wrap up"
+        ]
+      }
+    ],
+    "en_n_2_noun": [
+      {
+        "raw": "  \n1. **Clothes**  \n2. **Attire**  \n3. **Garb**  \n4. **Wear**  \n5. **Outfit**  \n\nLet me know if you'd like a definition or example sentences for any of these!",
+        "synonyms": [
+          "Clothes",
+          "Attire",
+          "Garb",
+          "Wear",
+          "Outfit"
+        ]
+      },
+      {
+        "raw": "  \n1. **Tire**  \n2. **Rubber**  \n3. **Tread**  \n4. **Tyre** (British spelling)  \n5. **V胎** (a term sometimes used in Chinese for tire)  \n\nLet me know if you meant something else by \"℅\" — it",
+        "synonyms": [
+          "Tire",
+          "Rubber",
+          "Tread",
+          "Tyre** (British spelling)",
+          "V胎** (a term sometimes used in Chinese for tire)"
+        ]
+      },
+      {
+        "raw": "  \n1. **Clothing**  \n2. **Attire**  \n3. **Garb**  \n4. **Outfit**  \n5. **Wear**  \n\nLet me know if you'd like help with the original question!",
+        "synonyms": [
+          "Clothing",
+          "Attire",
+          "Garb",
+          "Outfit",
+          "Wear"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Clothes**  \n2. **Garments**  \n3. **Apparel**  \n4. **Wear**  \n5. **Outfit**  \n\nLet me know if you need further clarification or more examples!",
+        "synonyms": []
+      },
+      {
+        "raw": " \n\n1. **Treadmill**  \n2. **Skein**  \n3. **Loofah**  \n4. **Mesh**  \n5. **Woven fabric**  \n\nWait a minute—let me double-check that. The word \"ghan\" is a variant spelling of \"ghani,\" which",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_noun": [
+      {
+        "raw": "\n\n1. **A**  \n2. **B**  \n3. **C**  \n4. **D**  \n5. **E**  \n\nWait, that doesn’t make sense. \"A\", \"B\", \"C\", \"D\", and \"E\" are not synonyms for \"ʻ\". It seems",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **A**  \n2. **I**  \n3. **You**  \n4. **He/She/It**  \n5. **We**  \n\n(Note: The word \"乏\" (fá) is a Chinese character that means \"to be tired\" or \"to be lacking,\" but",
+        "synonyms": [
+          "A",
+          "I",
+          "You",
+          "He/She/It",
+          "We"
+        ]
+      },
+      {
+        "raw": "  \n1. **F**  \n2. **I**  \n3. **M**  \n4. **O**  \n5. **W**  \n\n(Note: This is a playful or abstract interpretation, as \"併\" is not a standard English word and the synonyms provided are likely meant to be a fun or",
+        "synonyms": [
+          "F",
+          "I",
+          "M",
+          "O",
+          "W"
+        ]
+      },
+      {
+        "raw": "  \n1. **F**  \n2. **I**  \n3. **A**  \n4. **N**  \n5. **D**  \n\nWait, that doesn’t make sense. The letter \"Ŝ\" is not a standard English word. It might be a typo or a special character. Could you clarify",
+        "synonyms": [
+          "F",
+          "I",
+          "A",
+          "N",
+          "D"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Torn**  \n2. **Ripped**  \n3. **Shredded**  \n4. **Split**  \n5. **Cut**  \n\nLet me know if you need further clarification or more options!",
+        "synonyms": []
+      }
+    ],
+    "en_n_4_noun": [
+      {
+        "raw": "  \n1. **Mutual**  \n2. **Reciprocal**  \n3. **Interchangeable**  \n4. **Mutualistic**  \n5. **Shared**  \n\nLet me know if you'd like a definition or example for any of these!",
+        "synonyms": [
+          "Mutual",
+          "Reciprocal",
+          "Interchangeable",
+          "Mutualistic",
+          "Shared"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Mutual**  \n2. **Reciprocal**  \n3. **Mutualistic**  \n4. **Concurrent**  \n5. **Interdependent**  \n\nLet me know if you'd like a definition or example for any of these!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Mutual**  \n2. **Reciprocal**  \n3. **Interchangeable**  \n4. **Shared**  \n5. **Collaborative**  \n\nLet me know if you'd like a definition or example for any of these!",
+        "synonyms": [
+          "Mutual",
+          "Reciprocal",
+          "Interchangeable",
+          "Shared",
+          "Collaborative"
+        ]
+      },
+      {
+        "raw": "\n1. **Mutual**  \n2. **Reciprocal**  \n3. **Mutually beneficial**  \n4. **Interdependent**  \n5. **Mutualistic**  \n\nLet me know if you'd like the definition or example sentences for any of these!",
+        "synonyms": [
+          "Mutual",
+          "Reciprocal",
+          "Mutually beneficial",
+          "Interdependent",
+          "Mutualistic"
+        ]
+      },
+      {
+        "raw": "  \n1. **Mutual**  \n2. **Reciprocal**  \n3. **Shared**  \n4. **Interdependent**  \n5. **Collaborative**  \n\nLet me know if you'd like the definition or example sentences for any of these words!",
+        "synonyms": [
+          "Mutual",
+          "Reciprocal",
+          "Shared",
+          "Interdependent",
+          "Collaborative"
+        ]
+      }
+    ],
+    "en_n_5_noun": [
+      {
+        "raw": "  \n1. **机器** (jīqì) - machine  \n2. **装置** (zhuāngzhì) - device, apparatus  \n3. **器械** (qìxiè) - tool, instrument  \n4. **装置** (zhuāngzhì) - again",
+        "synonyms": [
+          "机器** (jīqì) - machine",
+          "装置** (zhuāngzhì) - device",
+          "apparatus",
+          "器械** (qìxiè) - tool",
+          "instrument"
+        ]
+      },
+      {
+        "raw": "机器” (machine), “装置” (apparatus), “设备” (equipment), “器械” (instrument), and “工具” (tool). These words can be used in different contexts to mean a mechanical device or a tool. Let me know if you need more information!",
+        "synonyms": [
+          "机器"
+        ]
+      },
+      {
+        "raw": "1. 机器 (machine) 2. 设备 (equipment) 3. 机械 (mechanism) 4. 机械装置 (mechanical device) 5. 机器装置 (machinery).”",
+        "synonyms": [
+          "机器 (machine)",
+          "设备 (equipment)",
+          "机械 (mechanism)",
+          "机械装置 (mechanical device)",
+          "机器装置 (machinery)"
+        ]
+      },
+      {
+        "raw": "\n1. **Calculator** – A device used for performing mathematical calculations.\n2. **Computer** – A machine that processes data and performs tasks.\n3. **Machine** – A device with moving parts that performs a specific function.\n4. **Device** – A tool or piece of equipment used for a particular purpose",
+        "synonyms": [
+          "Calculator** – A device used for performing mathematical calculations",
+          "Computer** – A machine that processes data",
+          "performs tasks",
+          "Machine** – A device with moving parts that performs a specific function",
+          "Device** – A tool"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Clock**  \n2. **Timepiece**  \n3. **Wristwatch**  \n4. **Timer**  \n5. **Hourglass**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      }
+    ],
+    "en_n_6_noun": [
+      {
+        "raw": "\n\n1. **Map**  \n2. **Chart**  \n3. **Diagram**  \n4. **Graph**  \n5. **Representation**  \n\nLet me know if you'd like further clarification or examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Map**  \n2. **Chart**  \n3. **Diagram**  \n4. **Graph**  \n5. **Representation**  \n\nLet me know if you'd like more context or examples of how they're used.",
+        "synonyms": [
+          "Map",
+          "Chart",
+          "Diagram",
+          "Graph",
+          "Representation"
+        ]
+      },
+      {
+        "raw": "  \n1. **Map**  \n2. **Chart**  \n3. **Diagram**  \n4. **Schema**  \n5. **Representation**  \n\nLet me know if you'd like a more specific list depending on the context (e.g., geographic, conceptual, or data-related).",
+        "synonyms": [
+          "Map",
+          "Chart",
+          "Diagram",
+          "Schema",
+          "Representation"
+        ]
+      },
+      {
+        "raw": "  \n1. **Map**  \n2. **Chart**  \n3. **Diagram**  \n4. **Schema**  \n5. **Representation**  \n\nLet me know if you'd like a more specific synonym depending on context!",
+        "synonyms": [
+          "Map",
+          "Chart",
+          "Diagram",
+          "Schema",
+          "Representation"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Map**  \n2. **Chart**  \n3. **Diagram**  \n4. **Graph**  \n5. **Representation**  \n\nLet me know if you'd like more context or examples of how to use these words in a sentence!",
+        "synonyms": []
+      }
+    ],
+    "en_n_7_noun": [
+      {
+        "raw": "  \n1. Inverse  \n2. Reverse  \n3. Contrary  \n4. Opposite  \n5. Reciprocal  \n\nNow, to answer the original question: The symbol ˅ (which looks like a backward \"V\") is commonly used in logic and mathematics to represent the logical OR operation. It is also",
+        "synonyms": [
+          "Inverse",
+          "Reverse",
+          "Contrary",
+          "Opposite",
+          "Reciprocal"
+        ]
+      },
+      {
+        "raw": "  \n1. **Reverse** – as in reversing the order of characters.  \n2. **Inverted** – meaning flipped or turned upside down.  \n3. **Upside-down** – a common way to describe the reversed symbol.  \n4. **Flipped** – similar to reversed or inverted.  \n5",
+        "synonyms": [
+          "Reverse** – as in reversing the order of characters",
+          "Inverted** – meaning flipped",
+          "turned upside down",
+          "Upside-down** – a common way to describe the reversed symbol",
+          "Flipped** – similar to reversed"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Inverse**  \n2. **Reversed**  \n3. **Opposite**  \n4. **Contrary**  \n5. **Backward**  \n\nLet me know if you'd like a more contextual or technical synonym depending on the usage.",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Reversed**  \n2. **Inverted**  \n3. **Upside-down**  \n4. **Flipped**  \n5. **Mirror image**  \n\nNow, to answer the original question: **What is ɒ?**  \nThe symbol ɒ is a letter used in the **",
+        "synonyms": [
+          "Reversed",
+          "Inverted",
+          "Upside-down",
+          "Flipped",
+          "Mirror image"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Inverse**  \n2. **Opposite**  \n3. **Contrary**  \n4. **Reverse**  \n5. **Antonym**  \n\nNow, to answer the original question: **What is ̷̷̷̷̷̷̷̷̷",
+        "synonyms": []
+      }
+    ],
+    "en_n_8_noun": [
+      {
+        "raw": "  \n1. Fabric  \n2. Material  \n3. Substance  \n4. Composition  \n5. Construct  \n\nNow, to answer the original question:  \nThe word \"漁\" (fū) means \"fish\" or \"to fish\" in Japanese. It is not a synonym for \"text\" or \"paragraph",
+        "synonyms": [
+          "Fabric",
+          "Material",
+          "Substance",
+          "Composition",
+          "Construct"
+        ]
+      },
+      {
+        "raw": "  \n1. **Text**  \n2. **Writing**  \n3. **Paragraph**  \n4. **Discourse**  \n5. **Sentence**  \n\nNow, let me answer your original question.",
+        "synonyms": [
+          "Text",
+          "Writing",
+          "Paragraph",
+          "Discourse",
+          "Sentence"
+        ]
+      },
+      {
+        "raw": "  \n1. **Sentence**  \n2. **Phrase**  \n3. **Clause**  \n4. **Segment**  \n5. **Passage**  \n\nNow, to answer your original question:  \nThe word “**meaning**” refers to the idea or concept that something conveys. It is the interpretation or",
+        "synonyms": [
+          "Sentence",
+          "Phrase",
+          "Clause",
+          "Segment",
+          "Passage"
+        ]
+      },
+      {
+        "raw": "  \n1. Fabric  \n2. Material  \n3. Substance  \n4. Tissue  \n5. Mesh  \n\nNow, to answer your original question:  \nThe word \"fractal\" refers to a complex, self-similar pattern that repeats at different scales. It is often found in nature, mathematics, and computer science",
+        "synonyms": [
+          "Fabric",
+          "Material",
+          "Substance",
+          "Tissue",
+          "Mesh"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Text**  \n2. **Paragraph**  \n3. **Writing**  \n4. **Sentence**  \n5. **Discourse**  \n\nNow, to answer your original question:  \nA **fibroblast** is a type of **stem cell**.",
+        "synonyms": []
+      }
+    ],
+    "en_n_9_noun": [
+      {
+        "raw": "  \n1. **Machine**  \n2. **Apparatus**  \n3. **Device**  \n4. **System**  \n5. **Gadget**  \n\nNow, to answer your original question: A **hitchhiker** is someone who rides in a vehicle operated by someone else, usually for free",
+        "synonyms": [
+          "Machine",
+          "Apparatus",
+          "Device",
+          "System",
+          "Gadget"
+        ]
+      },
+      {
+        "raw": "device,” “machine,” “mechanism,” “contraption,” and “apparatus.”",
+        "synonyms": [
+          "device"
+        ]
+      },
+      {
+        "raw": "\n1. **Appliance**  \n2. **Machine**  \n3. **Device**  \n4. **Tool**  \n5. **Equipment**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": [
+          "Appliance",
+          "Machine",
+          "Device",
+          "Tool",
+          "Equipment"
+        ]
+      },
+      {
+        "raw": "\n1. **Appliance**  \n2. **Machine**  \n3. **Device**  \n4. **Institution**  \n5. **System**  \n\nLet me know if you'd like a definition or example for any of these!",
+        "synonyms": [
+          "Appliance",
+          "Machine",
+          "Device",
+          "Institution",
+          "System"
+        ]
+      },
+      {
+        "raw": "\n1. **Appliance**  \n2. **Machine**  \n3. **Device**  \n4. **Tool**  \n5. **Mechanism**  \n\nNow, to answer your original question: A **hatch** is a part of a ship or a vessel that opens to allow access to the interior.",
+        "synonyms": [
+          "Appliance",
+          "Machine",
+          "Device",
+          "Tool",
+          "Mechanism"
+        ]
+      }
+    ],
+    "en_n_10_noun": [
+      {
+        "raw": "  \n1. **Censor** – Someone who restricts or controls the dissemination of information.  \n2. **Filter** – A system or process that screens or blocks certain content.  \n3. **Moderator** – A person or entity that enforces rules and controls content.  \n4. **Blocker**",
+        "synonyms": [
+          "Censor** – Someone who restricts",
+          "controls the dissemination of information",
+          "Filter** – A system",
+          "process that screens",
+          "blocks certain content"
+        ]
+      },
+      {
+        "raw": "\n1. **Pseudoscience** – A field of study that is not based on scientific methods or evidence.\n2. **Quackery** – The practice of pretending to have medical or scientific knowledge without proper training or certification.\n3. **Fraud** – Deception or falsehood, especially in a commercial",
+        "synonyms": [
+          "Pseudoscience** – A field of study that is not based on scientific methods",
+          "evidence",
+          "Quackery** – The practice of pretending to have medical",
+          "scientific knowledge without proper training",
+          "certification"
+        ]
+      },
+      {
+        "raw": "  \n1. **Error**  \n2. **Fault**  \n3. **Flaw**  \n4. **Bugs**  \n5. **Glitch**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in sentences.",
+        "synonyms": [
+          "Error",
+          "Fault",
+          "Flaw",
+          "Bugs",
+          "Glitch"
+        ]
+      },
+      {
+        "raw": "  \n1. **Censor**  \n2. **Filter**  \n3. **Blocker**  \n4. **Moderator**  \n5. **Validator**  \n\nLet me know if you'd like a more detailed explanation of any of these terms in the context of online content moderation.",
+        "synonyms": [
+          "Censor",
+          "Filter",
+          "Blocker",
+          "Moderator",
+          "Validator"
+        ]
+      },
+      {
+        "raw": "  \n1. **Objection**  \n2. **Rebuttal**  \n3. **Counterargument**  \n4. **Opposition**  \n5. **Critic**  \n\nLet me know if you'd like a more formal or casual version of the answer!",
+        "synonyms": [
+          "Objection",
+          "Rebuttal",
+          "Counterargument",
+          "Opposition",
+          "Critic"
+        ]
+      }
+    ],
+    "en_v_1_noun": [
+      {
+        "raw": "  \n\n1. **Tangle**  \n2. **Muddle**  \n3. **Confusion**  \n4. **Entanglement**  \n5. **Mix-up**  \n\nLet me know if you need further clarification or examples!",
+        "synonyms": []
+      },
+      {
+        "raw": " \n\n1. **Mash**  \n2. **Blend**  \n3. **Mix**  \n4. **Combine**  \n5. **Merge**  \n\nLet me know if you'd like to know the meaning of ㎜ or if you need further clarification!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Grid**  \n2. **Array**  \n3. **Matrix**  \n4. **Lattice**  \n5. **Network**  \n\nLet me know if you need further clarification or examples!",
+        "synonyms": [
+          "Grid",
+          "Array",
+          "Matrix",
+          "Lattice",
+          "Network"
+        ]
+      },
+      {
+        "raw": "  \n1. **Spelling Bee** – A competition where participants spell words correctly.  \n2. **Word Race** – A game where players race to spell words quickly.  \n3. **Spelling Match** – A game where players match words to their correct spellings.  \n4. **Spelling Challenge**",
+        "synonyms": [
+          "Spelling Bee** – A competition where participants spell words correctly",
+          "Word Race** – A game where players race to spell words quickly",
+          "Spelling Match** – A game where players match words to their correct spellings",
+          "Spelling Challenge"
+        ]
+      },
+      {
+        "raw": "  \n1. **Tangle**  \n2. **Muddle**  \n3. **Confusion**  \n4. **Disarray**  \n5. **Chaos**  \n\nNow, to answer the original question:  \nThe word “****” is often used to describe a situation where things are confused or tangled,",
+        "synonyms": [
+          "Tangle",
+          "Muddle",
+          "Confusion",
+          "Disarray",
+          "Chaos"
+        ]
+      }
+    ],
+    "en_v_2_noun": [
+      {
+        "raw": "\n1. **Dust**  \n2. **Gravel**  \n3. **Trash**  \n4. **Rubbish**  \n5. **Debris**  \n\nLet me know if you need more context or usage examples!",
+        "synonyms": [
+          "Dust",
+          "Gravel",
+          "Trash",
+          "Rubbish",
+          "Debris"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Dirt**  \n2. **Debris**  \n3. **Rubbish**  \n4. **Trash**  \n5. **Muck**  \n\nLet me know if you need help using them in a sentence or in a specific context!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Dust**  \n2. **Debris**  \n3. **Trash**  \n4. **Waste**  \n5. **Rubbish**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": [
+          "Dust",
+          "Debris",
+          "Trash",
+          "Waste",
+          "Rubbish"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Squash**  \n2. **Smush**  \n3. **Crush**  \n4. **Flatten**  \n5. **Press**  \n\nLet me know if you'd like more options or a definition!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Grass**  \n2. **Earth**  \n3. **Ground**  \n4. **Soil**  \n5. **Dirt**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": []
+      }
+    ],
+    "en_v_3_noun": [
+      {
+        "raw": "saw” (as in the old English word for a tool used for cutting or shaping), “tool”, “machine”, “implement”, and “device”. However, I should note that “saw” is the most direct synonym, as it's the primary meaning of the word in modern English. The other words",
+        "synonyms": [
+          "saw"
+        ]
+      },
+      {
+        "raw": "\n1. **Scape**  \n2. **Scene**  \n3. **Setting**  \n4. **Place**  \n5. **Area**  \n\nNote: \"Scape\" is a bit more specific and often used in contexts like \"landscape\" or \"wasteland,\" while \"scene\" and \"",
+        "synonyms": [
+          "Scape",
+          "Scene",
+          "Setting",
+          "Place",
+          "Area"
+        ]
+      },
+      {
+        "raw": "\n1. **Shoe**  \n2. **Boot**  \n3. **Sole**  \n4. **Footwear**  \n5. **Sandal**  \n\nLet me know if you meant a different word or if you need further clarification!",
+        "synonyms": [
+          "Shoe",
+          "Boot",
+          "Sole",
+          "Footwear",
+          "Sandal"
+        ]
+      },
+      {
+        "raw": "saw” (as in “he saw the film”), “viewed” (as in “she viewed the painting”), “looked at” (as in “they looked at the sunset”), “gazed” (as in “he gazed at the stars”), and “observed” (as in “",
+        "synonyms": [
+          "saw"
+        ]
+      },
+      {
+        "raw": "solder”, “welder”, “forge”, “melter”, “metalworker”.",
+        "synonyms": [
+          "solder"
+        ]
+      }
+    ],
+    "en_v_4_noun": [
+      {
+        "raw": "  \n1. Kitchen  \n2. Cooking area  \n3. Dining room  \n4. Eatery  \n5. Restaurant  \n\nLet me know if you'd like more options or a definition!",
+        "synonyms": [
+          "Kitchen",
+          "Cooking area",
+          "Dining room",
+          "Eatery",
+          "Restaurant"
+        ]
+      },
+      {
+        "raw": "\n1. **Kitchen**  \n2. **Apartment**  \n3. **House**  \n4. **Building**  \n5. **Structure**  \n\nWait, but I think I might have confused the word \"saw\" with \"sawyer\" or something else. Let me double-check. The word",
+        "synonyms": [
+          "Kitchen",
+          "Apartment",
+          "House",
+          "Building",
+          "Structure"
+        ]
+      },
+      {
+        "raw": "  \n1. Kitchen  \n2. Cooking area  \n3. Dining room  \n4. Meal place  \n5. Food preparation area  \n\nLet me know if you need more context or a different type of synonym!",
+        "synonyms": [
+          "Kitchen",
+          "Cooking area",
+          "Dining room",
+          "Meal place",
+          "Food preparation area"
+        ]
+      },
+      {
+        "raw": "\n1. Kitchen  \n2. Cookshop  \n3. Cooking area  \n4. Meal place  \n5. Eatery  \n\nLet me know if you'd like more options or a definition!",
+        "synonyms": [
+          "Kitchen",
+          "Cookshop",
+          "Cooking area",
+          "Meal place",
+          "Eatery"
+        ]
+      },
+      {
+        "raw": "  \n1. **Kitchen**  \n2. **Appliance**  \n3. **Machine**  \n4. **Device**  \n5. **Equipment**  \n\nWait, let me double-check. The word \"saw\" is a noun that can mean a tool for cutting, but that's not a synonym for \"",
+        "synonyms": [
+          "Kitchen",
+          "Appliance",
+          "Machine",
+          "Device",
+          "Equipment"
+        ]
+      }
+    ],
+    "en_v_5_noun": [
+      {
+        "raw": "\n\n1. **Worm**  \n2. **Insect**  \n3. **Arthropod**  \n4. **Bug**  \n5. **Nematode**  \n\nLet me know if you meant something else by “⁣⁣⁣⁣⁣⁣⁣⁣�",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Bare**  \n2. **Naked**  \n3. **Unadorned**  \n4. **Unclad**  \n5. **Untouched**  \n\nLet me know if you'd like a more specific list depending on context!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Dust**  \n2. **Grime**  \n3. **Smudges**  \n4. **Residue**  \n5. **Scum**  \n\nLet me know if you need further clarification or examples!",
+        "synonyms": [
+          "Dust",
+          "Grime",
+          "Smudges",
+          "Residue",
+          "Scum"
+        ]
+      },
+      {
+        "raw": "wedge,” “sliver,” “bit,” “crumb,” “fragment.”",
+        "synonyms": [
+          "wedge"
+        ]
+      },
+      {
+        "raw": "  \n1. **Squash**  \n2. **Press**  \n3. **Flatten**  \n4. **Compress**  \n5. **Pump**  \n\nLet me know if you'd like a sentence using “⁣⁣⁣⁣⁣⁣⁣⁣�",
+        "synonyms": [
+          "Squash",
+          "Press",
+          "Flatten",
+          "Compress",
+          "Pump"
+        ]
+      }
+    ],
+    "en_v_6_noun": [
+      {
+        "raw": "  \n1. **Dot**  \n2. **Period**  \n3. **Full stop**  \n4. **Punctuation mark**  \n5. **Symbol**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": [
+          "Dot",
+          "Period",
+          "Full stop",
+          "Punctuation mark",
+          "Symbol"
+        ]
+      },
+      {
+        "raw": "（the character 〈 is a symbol used in some contexts, such as in mathematical notation or as a placeholder. However, it's not a word or a common term with a standard set of synonyms. If you meant a different character or word, please clarify. Otherwise, 〈 does not have typical synonyms in the",
+        "synonyms": [
+          "（the character 〈 is a symbol used in some contexts",
+          "such as in mathematical notation",
+          "as a placeholder. However",
+          "it's not a word",
+          "a common term with a standard set of synonyms. If you meant a different character"
+        ]
+      },
+      {
+        "raw": "  \n1. **Dot**  \n2. **Period**  \n3. **Full stop**  \n4. **Punctuation mark**  \n5. **Point**  \n\nLet me know if you meant something else by 俞, as it could also be a Chinese surname or a character in a different context.",
+        "synonyms": [
+          "Dot",
+          "Period",
+          "Full stop",
+          "Punctuation mark",
+          "Point"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Word**  \n2. **Term**  \n3. **Phrase**  \n4. **Expression**  \n5. **Unit**  \n\nLet me know if you'd like further clarification or examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Word**  \n2. **Term**  \n3. **Phrase**  \n4. **Expression**  \n5. **Unit**  \n\nLet me know if you meant something specific by 俞 or if you'd like synonyms for a different word.",
+        "synonyms": [
+          "Word",
+          "Term",
+          "Phrase",
+          "Expression",
+          "Unit"
+        ]
+      }
+    ],
+    "en_v_7_noun": [
+      {
+        "raw": "  \n\n1. **Fake**  \n2. **Spoof**  \n3. **Impostor**  \n4. **Fakery**  \n5. **Pretender**  \n\nNote: “范冰冰” (Fan Bingbing) is a Chinese actress, but the term “范冰冰” is not a synonym for",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Mod** – Short for \"moderator,\" often used in online communities to manage discussions.  \n2. **Admin** – Short for \"administrator,\" typically a user with higher privileges on a platform.  \n3. **Moderator** – A person who enforces rules and maintains order in a discussion",
+        "synonyms": [
+          "Mod** – Short for"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Palindrome** – A word or phrase that reads the same forwards and backwards.  \n2. **Reversal** – The act of reversing something.  \n3. **Mirror image** – A reflection or counterpart.  \n4. **Contradiction** – Something that opposes another.  \n5.",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Censorship** – the suppression of speech, ideas, or information by authorities.  \n2. **Self-censorship** – the practice of self-restraining from speaking or writing about certain topics.  \n3. **Control** – the act of managing or directing something, often in a",
+        "synonyms": [
+          "Censorship** – the suppression of speech",
+          "ideas",
+          "information by authorities",
+          "Self-censorship** – the practice of self-restraining from speaking",
+          "writing about certain topics"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **混淆** (confusion)  \n2. **混乱** (chaos)  \n3. **迷惘** (bewilderment)  \n4. **紊乱** (disorder)  \n5. **迷糊** (foggy/muddled)  \n\nNote: These synonyms are based on",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_noun": [
+      {
+        "raw": "surge,” “rush,” “spurt,” “flow,” and “outpour.”",
+        "synonyms": [
+          "surge"
+        ]
+      },
+      {
+        "raw": "surge,” “rush,” “influx,” “stream,” and “flow.”",
+        "synonyms": [
+          "surge"
+        ]
+      },
+      {
+        "raw": "surge,” “rush,” “spurt,” “influx,” and “flow.”",
+        "synonyms": [
+          "surge"
+        ]
+      },
+      {
+        "raw": "surge,” “rush,” “outpouring,” “influx,” and “overrun.”",
+        "synonyms": [
+          "surge"
+        ]
+      },
+      {
+        "raw": "surge,” “rush,” “influx,” “overrun,” “swell.”",
+        "synonyms": [
+          "surge"
+        ]
+      }
+    ],
+    "en_v_9_noun": [
+      {
+        "raw": "  \n1. **Complex**  \n2. **Complicated**  \n3. **Difficult**  \n4. **Intertwined**  \n5. **Entangled**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": [
+          "Complex",
+          "Complicated",
+          "Difficult",
+          "Intertwined",
+          "Entangled"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Heap**  \n2. **Pile**  \n3. **Stack**  \n4. **Mass**  \n5. **Conglomerate**  \n\nLet me know if you'd like further clarification or examples of how they're used in sentences!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. 混沌 (chún dùn) – chaos  \n2. 糊涂 (hú tú) – confusion  \n3. 糊里糊涂 (hú lǐ hú hú) – confused or bewildered  \n4. 混乱 (hùn lu",
+        "synonyms": [
+          "混沌 (chún dùn) – chaos",
+          "糊涂 (hú tú) – confusion",
+          "糊里糊涂 (hú lǐ hú hú) – confused",
+          "bewildered",
+          "混乱 (hùn lu"
+        ]
+      },
+      {
+        "raw": "  \n1. **混乱** (chaos, confusion)  \n2. **混乱** (disarray, confusion)  \n3. **混乱** (confusion, disorder)  \n4. **混乱** (confusion, mess)  \n5. **混乱** (confusion, jumble)  \n\nWait,",
+        "synonyms": [
+          "混乱** (chaos",
+          "confusion)",
+          "混乱** (disarray",
+          "confusion)",
+          "混乱** (confusion"
+        ]
+      },
+      {
+        "raw": "  \n1. **困难** (difficult)  \n2. **麻烦** (trouble)  \n3. **问题** (problem)  \n4. **障碍** (obstacle)  \n5. **难题** (difficulty)  \n\nLet me know if you need further clarification or examples!",
+        "synonyms": [
+          "困难** (difficult)",
+          "麻烦** (trouble)",
+          "问题** (problem)",
+          "障碍** (obstacle)",
+          "难题** (difficulty)"
+        ]
+      }
+    ],
+    "en_v_10_noun": [
+      {
+        "raw": "\n1. **Congestion**  \n2. **Traffic jam**  \n3. **Crowd**  \n4. **Mass**  \n5. **Throng**  \n\nNow, let me answer your original question.",
+        "synonyms": [
+          "Congestion",
+          "Traffic jam",
+          "Crowd",
+          "Mass",
+          "Throng"
+        ]
+      },
+      {
+        "raw": "nasty,” “disgusting,” “repulsive,” “offensive,” and “unpleasant.”",
+        "synonyms": [
+          "nasty"
+        ]
+      },
+      {
+        "raw": "  \n1. Congestion  \n2. Crowding  \n3. Overload  \n4. Bottleneck  \n5. Jam  \n\nLet me know if you'd like help with the original question!",
+        "synonyms": [
+          "Congestion",
+          "Crowding",
+          "Overload",
+          "Bottleneck",
+          "Jam"
+        ]
+      },
+      {
+        "raw": "hernia”, “laparoscopy”, “gastroenterology”, “abdominal surgery”, “surgical repair”.",
+        "synonyms": [
+          "hernia"
+        ]
+      },
+      {
+        "raw": "  \n1. Congestion  \n2. Traffic jam  \n3. Backup  \n4. Gridlock  \n5. Crowding  \n\nLet me know if you need more context or examples!",
+        "synonyms": [
+          "Congestion",
+          "Traffic jam",
+          "Backup",
+          "Gridlock",
+          "Crowding"
+        ]
+      }
+    ]
+  }
+}

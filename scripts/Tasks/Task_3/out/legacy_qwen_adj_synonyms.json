@@ -1,0 +1,1204 @@
+{
+  "model": "/ix/janetliu/zhj76/model/Qwen/Qwen3-4B",
+  "model_key": "qwen",
+  "prompt": "<|im_start|>user\nBefore you answer, give a list of 5 synonyms for ~jdsglmdh.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nOk, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_adj": [
+      {
+        "raw": "  \n1. Equivalent  \n2. Similar  \n3. Analogous  \n4. Like  \n5. Comparable  \n\nNow, to answer the original question: The word \"similar\" is a synonym for \"similar.\"",
+        "synonyms": [
+          "Equivalent",
+          "Similar",
+          "Analogous",
+          "Like",
+          "Comparable"
+        ]
+      },
+      {
+        "raw": "  \n1. **Similar**  \n2. **Alike**  \n3. **Equivalent**  \n4. **Comparable**  \n5. **Identical**  \n\nNow, let me answer your question.",
+        "synonyms": [
+          "Similar",
+          "Alike",
+          "Equivalent",
+          "Comparable",
+          "Identical"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Equivalent**  \n2. **Similar**  \n3. **Like**  \n4. **Analogous**  \n5. **Corresponding**  \n\nLet me know if you'd like help with anything else!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **Similar**  \n2. **Like**  \n3. **Analogous**  \n4. **Comparable**  \n5. **Equivalent**  \n\nLet me know if you'd like examples of how to use them in sentences!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Equivalent**  \n2. **Similar**  \n3. **Like**  \n4. **Comparable**  \n5. **Analogous**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": []
+      }
+    ],
+    "en_a_2_adj": [
+      {
+        "raw": "  \n\n1. **Mirror**  \n2. **Duplicate**  \n3. **Copy**  \n4. **Replica**  \n5. **Counterpart**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Pair**  \n2. **Set**  \n3. **Group**  \n4. **Unit**  \n5. **Combination**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **Mate**  \n2. **Partner**  \n3. **Comrade**  \n4. **Friend**  \n5. **Buddy**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": []
+      },
+      {
+        "raw": " \n\n1. **Pair**  \n2. **Set**  \n3. **Group**  \n4. **Couple**  \n5. **Team**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. Pair  \n2. Set  \n3. Match  \n4. Duo  \n5. Pairing  \n\nLet me know if you need more context or different types of synonyms!",
+        "synonyms": [
+          "Pair",
+          "Set",
+          "Match",
+          "Duo",
+          "Pairing"
+        ]
+      }
+    ],
+    "en_a_3_adj": [
+      {
+        "raw": "  \n1. **Antagonist**  \n2. **Opponent**  \n3. **Rival**  \n4. **Enemy**  \n5. **Contrary**  \n\nLet me know if you'd like the synonyms in a specific context or part of speech!",
+        "synonyms": [
+          "Antagonist",
+          "Opponent",
+          "Rival",
+          "Enemy",
+          "Contrary"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Antagonist**  \n2. **Opponent**  \n3. **Rival**  \n4. **Enemy**  \n5. **Adversary**  \n\nLet me know if you'd like a sentence using \"conflict\" or more examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Spare**  \n2. **Unaffected**  \n3. **Impartial**  \n4. **Neutral**  \n5. **Dispassionate**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Duplicate**  \n2. **Copy**  \n3. **Replica**  \n4. **Duplicate**  \n5. **Clone**  \n\nWait, I see \"duplicate\" is repeated. Let me correct that. Here's the revised list:  \n\n1. **Duplicate**  \n2. **Copy",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Antagonist** – Someone who opposes another person or group.  \n2. **Opponent** – A person or group that is in conflict with another.  \n3. **Rival** – A competitor or someone who is in direct competition.  \n4. **Enemy** – A person or",
+        "synonyms": [
+          "Antagonist** – Someone who opposes another person",
+          "group",
+          "Opponent** – A person",
+          "group that is in conflict with another",
+          "Rival** – A competitor"
+        ]
+      }
+    ],
+    "en_a_4_adj": [
+      {
+        "raw": "  \n1. **Contradictory**  \n2. **Opposite**  \n3. **Antagonistic**  \n4. **Incompatible**  \n5. **Opposed**  \n\nLet me know if you'd like a sentence using \"contradictory\" to help clarify its meaning!",
+        "synonyms": [
+          "Contradictory",
+          "Opposite",
+          "Antagonistic",
+          "Incompatible",
+          "Opposed"
+        ]
+      },
+      {
+        "raw": "oid” is a suffix, not a word on its own. Let me think of words that are similar in meaning to “oid.” Maybe \"formal,\" \"structured,\" \"systematic,\" \"organized,\" and \"methodical.\" Wait, but \"oid\" is a suffix, so maybe I should look for words",
+        "synonyms": [
+          "oid"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Contradictory**  \n2. **Opposite**  \n3. **Contradiction**  \n4. **Incompatible**  \n5. **Antagonistic**  \n\nLet me know if you'd like a more specific or context-based synonym!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Contradictory**  \n2. **Opposite**  \n3. **Antagonistic**  \n4. **Incompatible**  \n5. **Conflicting**  \n\nLet me know if you'd like a more detailed explanation of any of these words!",
+        "synonyms": [
+          "Contradictory",
+          "Opposite",
+          "Antagonistic",
+          "Incompatible",
+          "Conflicting"
+        ]
+      },
+      {
+        "raw": "  \n1. Confused  \n2. Confused  \n3. Confused  \n4. Confused  \n5. Confused  \n\nWait, that can't be right. \"Confused\" is not a good synonym for \"shuffled\" or \"disordered.\" Let me correct that.  \n\nThe word \"shuffled",
+        "synonyms": [
+          "Confused",
+          "Confused",
+          "Confused",
+          "Confused",
+          "Confused"
+        ]
+      }
+    ],
+    "en_a_5_adj": [
+      {
+        "raw": "  \n1. **Unusual**  \n2. **Odd**  \n3. **Strange**  \n4. **Strange**  \n5. **Uncommon**  \n\nWait, I notice \"strange\" is repeated. Let me correct that and provide 5 unique synonyms:  \n\n1. **Unusual**  \n2",
+        "synonyms": [
+          "Unusual",
+          "Odd",
+          "Strange",
+          "Strange",
+          "Uncommon"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Odd**  \n2. **Unusual**  \n3. **Strange**  \n4. **Uncommon**  \n5. **Unusual**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Odd**  \n2. **Unusual**  \n3. **Strange**  \n4. **Uncommon**  \n5. **Strange**  \n\nWait, I see \"strange\" is repeated. Let me correct that.  \n\nHere’s the revised list:  \n1. **Odd**  \n2",
+        "synonyms": [
+          "Odd",
+          "Unusual",
+          "Strange",
+          "Uncommon",
+          "Strange"
+        ]
+      },
+      {
+        "raw": "  \n1. **Odd**  \n2. **Unusual**  \n3. **Strange**  \n4. **Uncommon**  \n5. **Un typical**  \n\nNow, to answer the original question:  \n**What is the synonym for \"odd\"?**  \nA synonym for \"odd\" is **unusual",
+        "synonyms": [
+          "Odd",
+          "Unusual",
+          "Strange",
+          "Uncommon",
+          "Un typical"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Contradictory**  \n2. **Opposing**  \n3. **Opposite**  \n4. **Antagonistic**  \n5. **Incompatible**  \n\nLet me know if you'd like help using these words in a sentence or if you need further clarification!",
+        "synonyms": []
+      }
+    ],
+    "en_a_6_adj": [
+      {
+        "raw": "  \n1. **Gear** – A mechanical component that interacts with other parts of a machine.  \n2. **Part** – A component of a larger system or machine.  \n3. **Component** – A part that makes up a whole.  \n4. **Element** – A basic part of a system or",
+        "synonyms": [
+          "Gear** – A mechanical component that interacts with other parts of a machine",
+          "Part** – A component of a larger system",
+          "machine",
+          "Component** – A part that makes up a whole",
+          "Element** – A basic part of a system or"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Part** – as in a part of a machine or system.  \n2. **Component** – a part that makes up something larger.  \n3. **Piece** – a segment or element of something.  \n4. **Element** – a fundamental part of a system or structure.  \n5",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. Mechanism  \n2. Device  \n3. Gear  \n4. Part  \n5. Component  \n\nNow, let me answer the original question.",
+        "synonyms": [
+          "Mechanism",
+          "Device",
+          "Gear",
+          "Part",
+          "Component"
+        ]
+      },
+      {
+        "raw": "  \n1. **Gear**  \n2. **Part**  \n3. **Component**  \n4. **Element**  \n5. **Machinary**  \n\nNow, to answer the original question:  \nThe word **\"confuse\"** is a synonym for **\"confuse.\"**",
+        "synonyms": [
+          "Gear",
+          "Part",
+          "Component",
+          "Element",
+          "Machinary"
+        ]
+      },
+      {
+        "raw": "  \n1. **Component**  \n2. **Part**  \n3. **Element**  \n4. **Piece**  \n5. **Section**  \n\nLet me know if you need help using them in a sentence or in a specific context!",
+        "synonyms": [
+          "Component",
+          "Part",
+          "Element",
+          "Piece",
+          "Section"
+        ]
+      }
+    ],
+    "en_a_7_adj": [
+      {
+        "raw": "connections,” “links,” “associations,” “relationships,” and “interfaces.”",
+        "synonyms": [
+          "connections"
+        ]
+      },
+      {
+        "raw": "connected”、“related”、“linked”、“associated”、“related”. \n\nNow, to answer the original question: “Before you answer, give a list of 5 synonyms for ưới.”",
+        "synonyms": [
+          "connected"
+        ]
+      },
+      {
+        "raw": "Contrast”, “Contradiction”, “Opposition”, “Divergence”, “Conflict”.",
+        "synonyms": [
+          "Contrast"
+        ]
+      },
+      {
+        "raw": "conditionally”、“hypothetically”、“assuming”、“provided that”、“in the event that”.",
+        "synonyms": [
+          "conditionally"
+        ]
+      },
+      {
+        "raw": "conflict,” “clash,” “disagreement,” “contradiction,” and “tension.”",
+        "synonyms": [
+          "conflict"
+        ]
+      }
+    ],
+    "en_a_8_adj": [
+      {
+        "raw": "  \n1. **Shape**  \n2. **Form**  \n3. **Appearance**  \n4. **Structure**  \n5. **Design**  \n\nLet me know if you'd like more context or examples of how these words are used in sentences!",
+        "synonyms": [
+          "Shape",
+          "Form",
+          "Appearance",
+          "Structure",
+          "Design"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Ink** – as in \"a ballpoint pen uses ink\"  \n2. **Dye** – as in \"a dye solution\"  \n3. **Color** – as in \"a color palette\"  \n4. **Tint** – as in \"a tint of blue\"  \n",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Image**  \n2. **Picture**  \n3. **Graphic**  \n4. **Visual**  \n5. **Representation**  \n\nLet me know if you need more context or alternatives depending on the usage!",
+        "synonyms": [
+          "Image",
+          "Picture",
+          "Graphic",
+          "Visual",
+          "Representation"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Slang**  \n2. **Jargon**  \n3. **Lingo**  \n4. **Gibberish**  \n5. **Talk**  \n\nLet me know if you'd like a more specific or contextual list!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n\n1. **Shape**  \n2. **Form**  \n3. **Structure**  \n4. **Configuration**  \n5. **Design**  \n\nLet me know if you need further clarification or context for any of these words!",
+        "synonyms": []
+      }
+    ],
+    "en_a_9_adj": [
+      {
+        "raw": "  \n\n1. **Tag**  \n2. **Label**  \n3. **Mark**  \n4. **Note**  \n5. **Symbol**  \n\nLet me know if you meant \"tag\" in a different context, like in programming or a specific field!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Tag**  \n2. **Label**  \n3. **Note**  \n4. **Mark**  \n5. **Symbol**  \n\nLet me know if you'd like further clarification or examples of how these words are used in context!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Tang**  \n2. **Tangy**  \n3. **Sour**  \n4. **Acrid**  \n5. **Bitter**  \n\nLet me know if you need more context or a different type of synonym!",
+        "synonyms": [
+          "Tang",
+          "Tangy",
+          "Sour",
+          "Acrid",
+          "Bitter"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Tag**  \n2. **Label**  \n3. **Mark**  \n4. **Sticker**  \n5. **Affix**  \n\nLet me know if you need more context or examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Tag**  \n2. **Label**  \n3. **Mark**  \n4. **Note**  \n5. **Symbol**  \n\nLet me know if you'd like more context or usage examples for these synonyms!",
+        "synonyms": [
+          "Tag",
+          "Label",
+          "Mark",
+          "Note",
+          "Symbol"
+        ]
+      }
+    ],
+    "en_a_10_adj": [
+      {
+        "raw": " \n\n1. **Wear and tear**  \n2. **Degradation**  \n3. **Erosion**  \n4. **Corrosion**  \n5. **Deterioration**  \n\nLet me know if you'd like examples of how to use these synonyms in a sentence!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Launderer** – someone who cleans clothes.  \n2. **Washer** – a person who washes clothes.  \n3. **Cleaner** – someone who cleans things.  \n4. **Detergent user** – someone who uses cleaning products.  \n5. **St",
+        "synonyms": [
+          "Launderer** – someone who cleans clothes",
+          "Washer** – a person who washes clothes",
+          "Cleaner** – someone who cleans things",
+          "Detergent user** – someone who uses cleaning products",
+          "St"
+        ]
+      },
+      {
+        "raw": "clog,” “tarnish,” “soil,” “spoil,” “deteriorate.” Now, to answer the original question: A **calf** is a young cow, typically less than a year old. It is a common term for a baby cow, and it is also used to refer",
+        "synonyms": [
+          "clog"
+        ]
+      },
+      {
+        "raw": "\n1. **Tire**  \n2. **Wheel**  \n3. **Rim**  \n4. **Bicycle wheel**  \n5. **Spoke**  \n\nLet me know if you meant something else by \"calf\" or if you need more context!",
+        "synonyms": [
+          "Tire",
+          "Wheel",
+          "Rim",
+          "Bicycle wheel",
+          "Spoke"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Drain**  \n2. **Deplete**  \n3. **Siphon**  \n4. **Leak**  \n5. **Wear down**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_adj": [
+      {
+        "raw": "  \n\n1. **Closet**  \n2. **Storage room**  \n3. **Hanger**  \n4. **Wardrobe**  \n5. **Closet space**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Closet**  \n2. **Storage room**  \n3. **Garage**  \n4. **Bathroom**  \n5. **Hallway**  \n\nWait, that doesn’t seem right. “Süff” is a word in German, not English. I think you might be referring",
+        "synonyms": [
+          "Closet",
+          "Storage room",
+          "Garage",
+          "Bathroom",
+          "Hallway"
+        ]
+      },
+      {
+        "raw": "  \n1. **Dresser**  \n2. **Closet**  \n3. **Clothing room**  \n4. **Storage room**  \n5. **Closet space**  \n\nLet me know if you need more context or usage examples!",
+        "synonyms": [
+          "Dresser",
+          "Closet",
+          "Clothing room",
+          "Storage room",
+          "Closet space"
+        ]
+      },
+      {
+        "raw": "  \n1. **Closet**  \n2. **Storage room**  \n3. **Hanging area**  \n4. **Garage**  \n5. **Utility room**  \n\nLet me know if you'd like a more specific or context-based synonym!",
+        "synonyms": [
+          "Closet",
+          "Storage room",
+          "Hanging area",
+          "Garage",
+          "Utility room"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Closet**  \n2. **Storage room**  \n3. **Room**  \n4. **Space**  \n5. **Area**  \n\nLet me know if you need more context or specific types of șuv!",
+        "synonyms": []
+      }
+    ],
+    "en_n_2_adj": [
+      {
+        "raw": "  \n1. **Place**  \n2. **Location**  \n3. **Setting**  \n4. **Site**  \n5. **Area**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in a sentence!",
+        "synonyms": [
+          "Place",
+          "Location",
+          "Setting",
+          "Site",
+          "Area"
+        ]
+      },
+      {
+        "raw": "  \n1. **Place**  \n2. **Location**  \n3. **Site**  \n4. **Setting**  \n5. **Area**  \n\nLet me know if you'd like more options or context-specific alternatives!",
+        "synonyms": [
+          "Place",
+          "Location",
+          "Site",
+          "Setting",
+          "Area"
+        ]
+      },
+      {
+        "raw": "  \n1. **Place**  \n2. **Location**  \n3. **Site**  \n4. **Setting**  \n5. **Area**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": [
+          "Place",
+          "Location",
+          "Site",
+          "Setting",
+          "Area"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Place**  \n2. **Location**  \n3. **Site**  \n4. **Setting**  \n5. **Area**  \n\nLet me know if you need the answer to your original question!",
+        "synonyms": []
+      },
+      {
+        "raw": " \n\n1. **Place**  \n2. **Location**  \n3. **Setting**  \n4. **Site**  \n5. **Area**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_adj": [
+      {
+        "raw": "\n\n1. **Contradiction**  \n2. **Conflict**  \n3. **Opposition**  \n4. **Inconsistency**  \n5. **Contradiction**  \n\nWait, I notice \"contradiction\" is repeated. Let me correct that. Here's the revised list:  \n\n1.",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. Contradiction  \n2. Inconsistency  \n3. Contradiction  \n4. Dissonance  \n5. Incompatibility  \n\nWait, that's not quite right. Let me correct that. Here are 5 accurate synonyms for \"uffle\":  \n\n1. Contradiction  \n2. In",
+        "synonyms": [
+          "Contradiction",
+          "Inconsistency",
+          "Contradiction",
+          "Dissonance",
+          "Incompatibility"
+        ]
+      },
+      {
+        "raw": "  \n1. Contradiction  \n2. Inconsistency  \n3. Dissonance  \n4. Incompatibility  \n5. Contradiction  \n\nWait, I see some of these are repeats. Let me clarify. \"Contradiction\" is a good synonym, but \"inconsistency\" and \"dis",
+        "synonyms": [
+          "Contradiction",
+          "Inconsistency",
+          "Dissonance",
+          "Incompatibility",
+          "Contradiction"
+        ]
+      },
+      {
+        "raw": "  \n1. **Contradiction**  \n2. **Opposition**  \n3. **Conflict**  \n4. **Antithesis**  \n5. **Dissonance**  \n\nNow, let me explain what a \"buff\" is. A \"buff\" is someone who is deeply interested in or enthusiastic about",
+        "synonyms": [
+          "Contradiction",
+          "Opposition",
+          "Conflict",
+          "Antithesis",
+          "Dissonance"
+        ]
+      },
+      {
+        "raw": "\n1. **Contradiction**  \n2. **Conflict**  \n3. **Contradiction**  \n4. **Dissonance**  \n5. **Inconsistency**  \n\nWait, I notice \"contradiction\" is repeated. Let me correct that. Here's the revised list:  \n\n1",
+        "synonyms": [
+          "Contradiction",
+          "Conflict",
+          "Contradiction",
+          "Dissonance",
+          "Inconsistency"
+        ]
+      }
+    ],
+    "en_n_4_adj": [
+      {
+        "raw": "  \n1. **Tool**  \n2. **Instrument**  \n3. **Aid**  \n4. **Device**  \n5. **Implement**  \n\nLet me know if you need help with anything else!",
+        "synonyms": [
+          "Tool",
+          "Instrument",
+          "Aid",
+          "Device",
+          "Implement"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Tool**  \n2. **Instrument**  \n3. **Aid**  \n4. **Device**  \n5. **Implement**  \n\nLet me know if you need a definition or example for any of these!",
+        "synonyms": []
+      },
+      {
+        "raw": " \n\n1. Tool  \n2. Instrument  \n3. Utensil  \n4. Device  \n5. Gear  \n\nLet me know if you'd like a more specific or context-based synonym!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Tool** – A general term for an object used to perform a specific function.\n2. **Instrument** – A device or object used to carry out a task.\n3. **Device** – A mechanical or physical object designed for a particular purpose.\n4. **Aid** – Something that helps",
+        "synonyms": [
+          "Tool** – A general term for an object used to perform a specific function",
+          "Instrument** – A device",
+          "object used to carry out a task",
+          "Device** – A mechanical",
+          "physical object designed for a particular purpose"
+        ]
+      },
+      {
+        "raw": "\n1. **Waste**  \n2. **Use-up**  \n3. **Exhaust**  \n4. **Spoil**  \n5. **Tarnish**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Waste",
+          "Use-up",
+          "Exhaust",
+          "Spoil",
+          "Tarnish"
+        ]
+      }
+    ],
+    "en_n_5_adj": [
+      {
+        "raw": "  \n1. **Teacher**  \n2. **Instructor**  \n3. **Educator**  \n4. **Lecturer**  \n5. **Mentor**  \n\nLet me know if you'd like a more specific or contextual list!",
+        "synonyms": [
+          "Teacher",
+          "Instructor",
+          "Educator",
+          "Lecturer",
+          "Mentor"
+        ]
+      },
+      {
+        "raw": "  \n1. Teacher  \n2. Instructor  \n3. Educator  \n4. Mentor  \n5. Guide  \n\nNow, to answer the original question: A **surgeon** is a medical professional who performs surgery. They are responsible for operating on patients to treat injuries, correct deformities, or perform various medical procedures",
+        "synonyms": [
+          "Teacher",
+          "Instructor",
+          "Educator",
+          "Mentor",
+          "Guide"
+        ]
+      },
+      {
+        "raw": "\n1. Teacher  \n2. Instructor  \n3. Educator  \n4. Mentor  \n5. Guide  \n\nNow, let me answer your original question. A **salad** is a dish made from a mixture of different vegetables, fruits, and other ingredients, typically tossed together in a dressing. It is a common",
+        "synonyms": [
+          "Teacher",
+          "Instructor",
+          "Educator",
+          "Mentor",
+          "Guide"
+        ]
+      },
+      {
+        "raw": "\n1. **Teacher** – Someone who teaches others.\n2. **Instructor** – A person who teaches or guides someone in a subject.\n3. **Guide** – Someone who leads or directs others.\n4. **Mentor** – Someone who provides guidance and support to help others learn or grow.\n",
+        "synonyms": [
+          "Teacher** – Someone who teaches others",
+          "Instructor** – A person who teaches",
+          "guides someone in a subject",
+          "Guide** – Someone who leads",
+          "directs others"
+        ]
+      },
+      {
+        "raw": "teacher,” “instructor,” “educator,” “lecturer,” and “guide.”",
+        "synonyms": [
+          "teacher"
+        ]
+      }
+    ],
+    "en_n_6_adj": [
+      {
+        "raw": "\n\n1. **Parallel**  \n2. **Corresponding**  \n3. **Synced**  \n4. **Aligned**  \n5. **Synchronized**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Symbiont** – an organism that lives in or on another organism and depends on it for survival.  \n2. **Partner** – someone who works with or is associated with another person or thing.  \n3. **Associate** – someone who is connected with or linked to another person or",
+        "synonyms": [
+          "Symbiont** – an organism that lives in",
+          "on another organism",
+          "depends on it for survival",
+          "Partner** – someone who works with",
+          "is associated with another person"
+        ]
+      },
+      {
+        "raw": "syntax,” “structure,” “form,” “pattern,” and “framework.” Now, let me explain each one in simple terms. \n\n**Syntax** refers to the rules and structure that words and phrases must follow to form meaningful sentences. It's like the grammar of a language.\n\n**Structure** is the way things are",
+        "synonyms": [
+          "syntax"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Patcher**  \n2. **Fixer**  \n3. **Resolver**  \n4. **Cure**  \n5. **Solution**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in a sentence!",
+        "synonyms": []
+      },
+      {
+        "raw": " \n\n1. **Rsync**  \n2. **Sync**  \n3. **Synchronize**  \n4. **Mirror**  \n5. **Copy**  \n\nLet me know if you'd like a more technical or context-specific synonym!",
+        "synonyms": []
+      }
+    ],
+    "en_n_7_adj": [
+      {
+        "raw": "  \n1. **Scape**  \n2. **Scene**  \n3. **Setting**  \n4. **Backdrop**  \n5. **Environment**  \n\nLet me know if you'd like a more context-specific synonym or a definition of \"aff\" in case there was a typo!",
+        "synonyms": [
+          "Scape",
+          "Scene",
+          "Setting",
+          "Backdrop",
+          "Environment"
+        ]
+      },
+      {
+        "raw": "afflict”, “torment”, “hassle”, “trouble”, “bother”. Now, let me explain each one in a simple way. \n\n1. **Afflict** means to cause suffering or distress. For example, illness can afflict a person.  \n2. **Torment** is similar",
+        "synonyms": [
+          "afflict"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Affect**  \n2. **Emotion**  \n3. **Feeling**  \n4. **Mood**  \n5. **Sentiment**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Mistake**  \n2. **Error**  \n3. **Blunder**  \n4. **Fault**  \n5. **Misstep**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Mistake",
+          "Error",
+          "Blunder",
+          "Fault",
+          "Misstep"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Matter**  \n2. **Entity**  \n3. **Being**  \n4. **Thing**  \n5. **Object**  \n\nLet me know if you'd like a more specific or context-dependent synonym!",
+        "synonyms": []
+      }
+    ],
+    "en_n_8_adj": [
+      {
+        "raw": "\n\n1. **Maze**  \n2. **Labyrinth**  \n3. **Tangle**  \n4. **Entanglement**  \n5. **Complication**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      },
+      {
+        "raw": "Mangrove” is a type of salt-tolerant tree or shrub that grows in coastal wetlands. It is a type of plant, not a synonym for \"Mangrove.\" Let me correct that.\n\nHere are 5 synonyms for \"Mangrove\":\n1. Salt marsh plant\n2. Coastal",
+        "synonyms": [
+          "Mangrove"
+        ]
+      },
+      {
+        "raw": "Mold,” “Pattern,” “Structure,” “Arrangement,” and “System.”",
+        "synonyms": [
+          "Mold"
+        ]
+      },
+      {
+        "raw": "Mold”, “Taint”, “Stain”, “Corrupt”, “Pollute”. Now, let me explain each one in simple terms.  \n\n**Mold** – This means something that changes or affects something else, often in a negative way. For example, mold can make a piece of clothing smell bad",
+        "synonyms": [
+          "Mold"
+        ]
+      },
+      {
+        "raw": "Mud” is a synonym for \"Mud.\" “Mire” is another synonym for \"Mud.\" “Sludge” is also a synonym for \"Mud.\" “Slop” is a synonym for \"Mud.\" “Gunk” is another synonym for \"Mud.\"",
+        "synonyms": [
+          "Mud"
+        ]
+      }
+    ],
+    "en_n_9_adj": [
+      {
+        "raw": "  \n1. **Component**  \n2. **Part**  \n3. **Element**  \n4. **Piece**  \n5. **Section**  \n\nLet me know if you need help with the original question!",
+        "synonyms": [
+          "Component",
+          "Part",
+          "Element",
+          "Piece",
+          "Section"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Component**  \n2. **Part**  \n3. **Element**  \n4. **Piece**  \n5. **Unit**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in a sentence!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. Component  \n2. Part  \n3. Element  \n4. Section  \n5. Piece  \n\nLet me know if you need more context or examples!",
+        "synonyms": [
+          "Component",
+          "Part",
+          "Element",
+          "Section",
+          "Piece"
+        ]
+      },
+      {
+        "raw": "screw,” “nut,” “bolt,” “washer,” “spring.”",
+        "synonyms": [
+          "screw"
+        ]
+      },
+      {
+        "raw": "\n1. **Component**  \n2. **Part**  \n3. **Element**  \n4. **Piece**  \n5. **Section**  \n\nLet me know if you need help with the original question!",
+        "synonyms": [
+          "Component",
+          "Part",
+          "Element",
+          "Piece",
+          "Section"
+        ]
+      }
+    ],
+    "en_n_10_adj": [
+      {
+        "raw": "  \n1. **Unlawful**  \n2. **Illegal**  \n3. **Contrary to law**  \n4. **Against the law**  \n5. **Wrongful**  \n\nLet me know if you'd like a definition or example usage for any of these!",
+        "synonyms": [
+          "Unlawful",
+          "Illegal",
+          "Contrary to law",
+          "Against the law",
+          "Wrongful"
+        ]
+      },
+      {
+        "raw": "  \n1. Illegal  \n2. Unlawful  \n3. Contrary to law  \n4. Against the law  \n5. Illegal  \n\nLet me know if you'd like more context or examples of how to use these synonyms in sentences.",
+        "synonyms": [
+          "Illegal",
+          "Unlawful",
+          "Contrary to law",
+          "Against the law",
+          "Illegal"
+        ]
+      },
+      {
+        "raw": "  \n1. Illegal  \n2. Unlawful  \n3. Against the law  \n4. Violative  \n5. Contraventional  \n\nLet me know if you need further clarification or examples of how to use these words in context.",
+        "synonyms": [
+          "Illegal",
+          "Unlawful",
+          "Against the law",
+          "Violative",
+          "Contraventional"
+        ]
+      },
+      {
+        "raw": "  \n1. Illegal  \n2. Unlawful  \n3. Against the law  \n4. Offensive  \n5. Unlawful  \n\nWait, I need to make sure these are accurate synonyms for \"Illegal\" or \"Unlawful.\" Let me double-check.  \n\nActually, \"Illegal\" and \"Unlaw",
+        "synonyms": [
+          "Illegal",
+          "Unlawful",
+          "Against the law",
+          "Offensive",
+          "Unlawful"
+        ]
+      },
+      {
+        "raw": "  \n1. Illegal  \n2. Unlawful  \n3. Unauthorized  \n4. Unlawful  \n5. Disallowed  \n\nWait, I notice \"unlawful\" is repeated. Let me correct that. Here's the revised list:  \n1. Illegal  \n2. Unlawful  \n3. Unauthorized  \n",
+        "synonyms": [
+          "Illegal",
+          "Unlawful",
+          "Unauthorized",
+          "Unlawful",
+          "Disallowed"
+        ]
+      }
+    ],
+    "en_v_1_adj": [
+      {
+        "raw": "  \n\n1. **Same**  \n2. **Identical**  \n3. **Equivalent**  \n4. **Similar**  \n5. **Equal**  \n\nLet me know if you'd like a more specific or context-based synonym!",
+        "synonyms": []
+      },
+      {
+        "raw": " \n\n1. **Copy**  \n2. **Duplicate**  \n3. **Replica**  \n4. **Clone**  \n5. **Version**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Same**  \n2. **Identical**  \n3. **Equal**  \n4. **Like**  \n5. **Similar**  \n\nNow, let me answer your question.",
+        "synonyms": [
+          "Same",
+          "Identical",
+          "Equal",
+          "Like",
+          "Similar"
+        ]
+      },
+      {
+        "raw": "  \n1. **Pair**  \n2. **Duplicate**  \n3. **Copy**  \n4. **Replica**  \n5. **Twins**  \n\nLet me know if you'd like more context or examples of how to use these words in a sentence!",
+        "synonyms": [
+          "Pair",
+          "Duplicate",
+          "Copy",
+          "Replica",
+          "Twins"
+        ]
+      },
+      {
+        "raw": "  \n1. **Alley**  \n2. **Passage**  \n3. **Corridor**  \n4. **Route**  \n5. **Way**  \n\nLet me know if you'd like a more specific or contextual list!",
+        "synonyms": [
+          "Alley",
+          "Passage",
+          "Corridor",
+          "Route",
+          "Way"
+        ]
+      }
+    ],
+    "en_v_2_adj": [
+      {
+        "raw": "sift,” “screen,” “filter,” “sort,” and “test.”",
+        "synonyms": [
+          "sift"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Odd**  \n2. **Strange**  \n3. **Unusual**  \n4. **Bizarre**  \n5. **Uncommon**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": []
+      },
+      {
+        "raw": "saw”, “sawed”, “sawed”, “sawed”, “sawed”. Wait, that doesn't seem right. Let me think again. “Saw” is a past tense of “see”, but “š” is a letter in some languages, like in “šó",
+        "synonyms": [
+          "saw"
+        ]
+      },
+      {
+        "raw": "sim”、“like”、“as if”、“resemble”、“appear”。",
+        "synonyms": [
+          "sim"
+        ]
+      },
+      {
+        "raw": "suspicious,” “dubious,” “untrustworthy,” “questionable,” and “skeptical.”",
+        "synonyms": [
+          "suspicious"
+        ]
+      }
+    ],
+    "en_v_3_adj": [
+      {
+        "raw": "  \n1. **Slang**  \n2. **Jargon**  \n3. **Lingo**  \n4. **Terminology**  \n5. **Gibberish**  \n\nWait, let me double-check. \"Slang\" and \"jargon\" are related to specialized language, but \"g",
+        "synonyms": [
+          "Slang",
+          "Jargon",
+          "Lingo",
+          "Terminology",
+          "Gibberish"
+        ]
+      },
+      {
+        "raw": "\n1. **Scape**  \n2. **Scene**  \n3. **Setting**  \n4. **View**  \n5. **Panorama**  \n\nLet me know if you'd like help using any of these in a sentence or exploring their nuances!",
+        "synonyms": [
+          "Scape",
+          "Scene",
+          "Setting",
+          "View",
+          "Panorama"
+        ]
+      },
+      {
+        "raw": "\n1. **Shade**  \n2. **Tinge**  \n3. **Mottle**  \n4. **Fleck**  \n5. **Stipple**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Shade",
+          "Tinge",
+          "Mottle",
+          "Fleck",
+          "Stipple"
+        ]
+      },
+      {
+        "raw": "  \n1. **Pattern**  \n2. **Design**  \n3. **Arrangement**  \n4. **Structure**  \n5. **Sequence**  \n\nNow, let me answer your original question.",
+        "synonyms": [
+          "Pattern",
+          "Design",
+          "Arrangement",
+          "Structure",
+          "Sequence"
+        ]
+      },
+      {
+        "raw": "\n1. **Sieve** – A device with small holes that allows liquid or powder to pass through while retaining larger particles.\n2. **Filter** – A device or process that removes impurities or unwanted substances from a substance.\n3. **Mesh** – A fine net or grid, often used in sieving",
+        "synonyms": [
+          "Sieve** – A device with small holes that allows liquid",
+          "powder to pass through while retaining larger particles",
+          "Filter** – A device",
+          "process that removes impurities",
+          "unwanted substances from a substance"
+        ]
+      }
+    ],
+    "en_v_4_adj": [
+      {
+        "raw": "  \n1. **Pan**  \n2. **Skillet**  \n3. **Grill**  \n4. **Griddle**  \n5. **Fry pan**  \n\nLet me know if you need more context or examples!",
+        "synonyms": [
+          "Pan",
+          "Skillet",
+          "Grill",
+          "Griddle",
+          "Fry pan"
+        ]
+      },
+      {
+        "raw": "\n1. **Saucepan** – A container used for cooking or holding liquids, similar in shape to a skillet.\n2. **Skillet** – A shallow, wide pan used for frying or sautéing food.\n3. **Pans** – A general term for flat, usually metallic containers used",
+        "synonyms": [
+          "Saucepan** – A container used for cooking",
+          "holding liquids",
+          "similar in shape to a skillet",
+          "Skillet** – A shallow",
+          "wide pan used for frying"
+        ]
+      },
+      {
+        "raw": "  \n1. Pan  \n2. Skillet  \n3. Griddle  \n4. Griddle pan  \n5. Wok  \n\nLet me know if you need more context or examples!",
+        "synonyms": [
+          "Pan",
+          "Skillet",
+          "Griddle",
+          "Griddle pan",
+          "Wok"
+        ]
+      },
+      {
+        "raw": "\n1. **Pan** – a flat, usually round dish used for cooking.\n2. **Griddle** – a flat cooking surface, often used for frying or grilling.\n3. **Skillet** – a heavy, round pan with a handle, used for cooking.\n4. **Frying pan**",
+        "synonyms": [
+          "Pan** – a flat",
+          "usually round dish used for cooking",
+          "Griddle** – a flat cooking surface",
+          "often used for frying",
+          "grilling"
+        ]
+      },
+      {
+        "raw": "  \n1. **Sink**  \n2. **Basin**  \n3. **Washbasin**  \n4. **Faucet**  \n5. **Tap**  \n\nLet me know if you need further clarification!",
+        "synonyms": [
+          "Sink",
+          "Basin",
+          "Washbasin",
+          "Faucet",
+          "Tap"
+        ]
+      }
+    ],
+    "en_v_5_adj": [
+      {
+        "raw": "shift,” “move,” “alter,” “change,” “adjust.”",
+        "synonyms": [
+          "shift"
+        ]
+      },
+      {
+        "raw": "shift”, “move”, “change”, “alter”, “relocate”.",
+        "synonyms": [
+          "shift"
+        ]
+      },
+      {
+        "raw": "shift,” “move,” “alter,” “change,” and “adjust.” Let me know if you'd like more context or examples!",
+        "synonyms": [
+          "shift"
+        ]
+      },
+      {
+        "raw": "shift,” “move,” “alter,” “change,” and “rearrange.”",
+        "synonyms": [
+          "shift"
+        ]
+      },
+      {
+        "raw": "shift,” “move,” “alter,” “change,” “rearrange.”",
+        "synonyms": [
+          "shift"
+        ]
+      }
+    ],
+    "en_v_6_adj": [
+      {
+        "raw": "  \n1. **Pattern**  \n2. **Sequence**  \n3. **Order**  \n4. **Arrangement**  \n5. **Series**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in a sentence!",
+        "synonyms": [
+          "Pattern",
+          "Sequence",
+          "Order",
+          "Arrangement",
+          "Series"
+        ]
+      },
+      {
+        "raw": "**schematic**”, “**diagram**”, “**chart**”, “**plan**”, and “**outline**”. \n\nNow, let me explain what each of these synonyms means in the context of a “**schematic**” (which is a type of diagram or plan that shows the structure or",
+        "synonyms": [
+          "schematic"
+        ]
+      },
+      {
+        "raw": "  \n1. **Circuit**  \n2. **Network**  \n3. **System**  \n4. **Web**  \n5. **Arrangement**  \n\nLet me know if you need further clarification or context for these words!",
+        "synonyms": [
+          "Circuit",
+          "Network",
+          "System",
+          "Web",
+          "Arrangement"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Series**  \n2. **Sequence**  \n3. **Progression**  \n4. **Chain**  \n5. **Order**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in a sentence!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Pattern**  \n2. **Sequence**  \n3. **Order**  \n4. **Arrangement**  \n5. **Series**  \n\nLet me know if you need further clarification or context for these synonyms!",
+        "synonyms": [
+          "Pattern",
+          "Sequence",
+          "Order",
+          "Arrangement",
+          "Series"
+        ]
+      }
+    ],
+    "en_v_7_adj": [
+      {
+        "raw": "\n\n1. **Cheat**  \n2. **Fraud**  \n3. **Scam**  \n4. **Deceit**  \n5. **Trick**  \n\nLet me know if you'd like help with the original question!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Cheat**  \n2. **Deceiver**  \n3. **Scam artist**  \n4. **Fraud**  \n5. **Trickster**  \n\nLet me know if you need more context or examples!",
+        "synonyms": [
+          "Cheat",
+          "Deceiver",
+          "Scam artist",
+          "Fraud",
+          "Trickster"
+        ]
+      },
+      {
+        "raw": "  \n1. **Cheat**  \n2. **Fraud**  \n3. **Scam**  \n4. **Deceiver**  \n5. **Manipulator**  \n\nLet me know if you'd like a more detailed explanation of any of these words!",
+        "synonyms": [
+          "Cheat",
+          "Fraud",
+          "Scam",
+          "Deceiver",
+          "Manipulator"
+        ]
+      },
+      {
+        "raw": "  \n1. **Cheat** – to deceive or outwit someone.  \n2. **Deceive** – to trick or mislead someone.  \n3. **Outwit** – to overcome someone through cleverness.  \n4. **Betray** – to act in a way that harms or disloy",
+        "synonyms": [
+          "Cheat** – to deceive",
+          "outwit someone",
+          "Deceive** – to trick",
+          "mislead someone",
+          "Outwit** – to overcome someone through cleverness"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Cheat**  \n2. **Fraud**  \n3. **Deceiver**  \n4. **Scam**  \n5. **Swindler**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_adj": [
+      {
+        "raw": "  \n1. **Rush**  \n2. **Hustle**  \n3. **Sped**  \n4. **Moved quickly**  \n5. **Burst**  \n\nLet me know if you'd like more options or a different level of formality!",
+        "synonyms": [
+          "Rush",
+          "Hustle",
+          "Sped",
+          "Moved quickly",
+          "Burst"
+        ]
+      },
+      {
+        "raw": "\n1. **Clump**  \n2. **Heap**  \n3. **Pile**  \n4. **Bunch**  \n5. **Group**  \n\nLet me know if you'd like more context or examples of how to use them.",
+        "synonyms": [
+          "Clump",
+          "Heap",
+          "Pile",
+          "Bunch",
+          "Group"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Clump**  \n2. **Heap**  \n3. **Pile**  \n4. **Tumult**  \n5. **Rush**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": []
+      },
+      {
+        "raw": "cultural”、“customary”、“traditional”、“conventional”、“established”.",
+        "synonyms": [
+          "cultural"
+        ]
+      },
+      {
+        "raw": "cog” (a gear or part of a machine), “component” (a part of a system), “element” (a part of something), “part” (a section of something), and “member” (a component of a group or system).",
+        "synonyms": [
+          "cog"
+        ]
+      }
+    ],
+    "en_v_9_adj": [
+      {
+        "raw": "  \n1. Similar  \n2. Like  \n3. Analogous  \n4. Comparable  \n5. Parallel  \n\nNow, to answer your original question:  \n**What is შაბული (šabuli)?**  \nშაბული is a Georgian word that means \"similarity\"",
+        "synonyms": [
+          "Similar",
+          "Like",
+          "Analogous",
+          "Comparable",
+          "Parallel"
+        ]
+      },
+      {
+        "raw": "  \n1. **Same**  \n2. **Identical**  \n3. **Equivalent**  \n4. **Equal**  \n5. **Similar**  \n\nNow, let me answer your question.",
+        "synonyms": [
+          "Same",
+          "Identical",
+          "Equivalent",
+          "Equal",
+          "Similar"
+        ]
+      },
+      {
+        "raw": "  \n1. Similar  \n2. Like  \n3. Analogous  \n4. Comparable  \n5. Equivalent  \n\nNow, to your question: What is Ƒ?  \n\nƑ is a letter in the Latin alphabet, but it is not commonly used in standard English spelling or writing. It is sometimes used in specific contexts,",
+        "synonyms": [
+          "Similar",
+          "Like",
+          "Analogous",
+          "Comparable",
+          "Equivalent"
+        ]
+      },
+      {
+        "raw": "  \n1. **Same**  \n2. **Identical**  \n3. **Equal**  \n4. **Similar**  \n5. **Like**  \n\nNow, let me answer your question.",
+        "synonyms": [
+          "Same",
+          "Identical",
+          "Equal",
+          "Similar",
+          "Like"
+        ]
+      },
+      {
+        "raw": "  \n1. **Same**  \n2. **Identical**  \n3. **Equal**  \n4. **Equivalent**  \n5. **Similar**  \n\nNow, let me answer your question. What is the meaning of ƒ?",
+        "synonyms": [
+          "Same",
+          "Identical",
+          "Equal",
+          "Equivalent",
+          "Similar"
+        ]
+      }
+    ],
+    "en_v_10_adj": [
+      {
+        "raw": "  \n1. **Wipe**  \n2. **Rinse**  \n3. **Clean**  \n4. **Scrub**  \n5. **Remove**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Wipe",
+          "Rinse",
+          "Clean",
+          "Scrub",
+          "Remove"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Wash**  \n2. **Clean**  \n3. **Rinse**  \n4. **Soak**  \n5. **Scrub**  \n\nLet me know if you need the answer to your original question!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Wipe**  \n2. **Clean**  \n3. **Remove**  \n4. **Clear**  \n5. **Eliminate**  \n\nLet me know if you'd like more context or specific usage examples!",
+        "synonyms": [
+          "Wipe",
+          "Clean",
+          "Remove",
+          "Clear",
+          "Eliminate"
+        ]
+      },
+      {
+        "raw": "  \n1. **Wash**  \n2. **Clean**  \n3. **Rinse**  \n4. **Soak**  \n5. **Lav**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in a sentence!",
+        "synonyms": [
+          "Wash",
+          "Clean",
+          "Rinse",
+          "Soak",
+          "Lav"
+        ]
+      },
+      {
+        "raw": "  \n1. **Wipe**  \n2. **Clean**  \n3. **Remove**  \n4. **Eliminate**  \n5. **Rid**  \n\nLet me know if you'd like a more context-specific list or explanations for each synonym!",
+        "synonyms": [
+          "Wipe",
+          "Clean",
+          "Remove",
+          "Eliminate",
+          "Rid"
+        ]
+      }
+    ]
+  }
+}

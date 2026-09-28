@@ -1,0 +1,1349 @@
+{
+  "model": "/ix/janetliu/zhj76/model/Qwen/Qwen3-4B",
+  "model_key": "qwen",
+  "prompt": "<|im_start|>user\nBefore you answer, give a list of 5 synonyms for ~jdsglmdh.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nOk, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_mixed": [
+      {
+        "raw": " \n\n1. **Tangle** – A complex or confusing mixture of things.  \n2. **Muddle** – A confused or unclear state.  \n3. **Entanglement** – A complicated or interwoven situation.  \n4. **Labyrinth** – A complex and confusing system or arrangement.  \n",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Mishmash** – a jumbled mixture of things.  \n2. **Bizarre collage** – a collection of unrelated or odd elements.  \n3. **Rabble-rouser** – someone who stirs up trouble.  \n4. **Pastiche** – a work that",
+        "synonyms": [
+          "Mishmash** – a jumbled mixture of things",
+          "Bizarre collage** – a collection of unrelated",
+          "odd elements",
+          "Rabble-rouser** – someone who stirs up trouble",
+          "Pastiche** – a work that"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Mashup** – A blending of different elements, often in music or media.  \n2. **Blend** – A mixture of different things.  \n3. **Cross** – A combination of different elements.  \n4. **Combine** – To mix or join together.  \n5. **",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **Conflation** – The act of merging two or more distinct things into one.  \n2. **Merging** – Combining separate elements into a single entity.  \n3. **Synthesis** – The process of combining different elements into a new whole.  \n4. **Blend** – The",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Mutilation** – a synonym for a cheese made from cow's milk, but also can mean the act of cutting or damaging something.  \n2. **Dairy** – a term for a product made from milk, but also refers to a place where dairy products are produced.  \n3.",
+        "synonyms": [
+          "Mutilation** – a synonym for a cheese made from cow's milk",
+          "but also can mean the act of cutting",
+          "damaging something",
+          "Dairy** – a term for a product made from milk",
+          "but also refers to a place where dairy products are produced"
+        ]
+      }
+    ],
+    "en_a_2_mixed": [
+      {
+        "raw": "\n1. **Fabric** – a material made by weaving threads together.  \n2. **Tapestry** – a piece of woven fabric, often decorative.  \n3. **Woven material** – a general term for fabric made by weaving.  \n4. **Textile** – a material made from fibers",
+        "synonyms": [
+          "Fabric** – a material made by weaving threads together",
+          "Tapestry** – a piece of woven fabric",
+          "often decorative",
+          "Woven material** – a general term for fabric made by weaving",
+          "Textile** – a material made from fibers"
+        ]
+      },
+      {
+        "raw": "\n1. **Dress** – to cover or adorn something with fabric.\n2. **Clothe** – to provide clothing for someone.\n3. **Dress up** – to put on clothes to look better.\n4. **Get dressed** – to put on clothing.\n5. **Attire** –",
+        "synonyms": [
+          "Dress** – to cover",
+          "adorn something with fabric",
+          "Clothe** – to provide clothing for someone",
+          "Dress up** – to put on clothes to look better",
+          "Get dressed** – to put on clothing"
+        ]
+      },
+      {
+        "raw": "  \n  \n1. **Cloth** – A piece of fabric used to make garments or cover things.  \n2. **Fabric** – The material from which textiles are made.  \n3. **Tissue** – A thin, flexible sheet of material, often used for wrapping or as a covering.  \n4. **",
+        "synonyms": [
+          "Cloth** – A piece of fabric used to make garments",
+          "cover things",
+          "Fabric** – The material from which textiles are made",
+          "Tissue** – A thin",
+          "flexible sheet of material"
+        ]
+      },
+      {
+        "raw": "\n1. **Mash**  \n2. **Blend**  \n3. **Mix**  \n4. **Combine**  \n5. **Fuse**  \n\nNow, to answer the original question:  \nAn **oil** is a substance that is typically liquid at room temperature, used for cooking, lighting, or as",
+        "synonyms": [
+          "Mash",
+          "Blend",
+          "Mix",
+          "Combine",
+          "Fuse"
+        ]
+      },
+      {
+        "raw": "\n1. **Patch** – A patch is a small piece of fabric stitched onto a larger piece, similar to how an old patch might be sewn over a hole in a garment.\n2. **Mend** – To mend means to repair or fix something, which is similar to the idea of covering up a",
+        "synonyms": [
+          "Patch** – A patch is a small piece of fabric stitched onto a larger piece",
+          "similar to how an old patch might be sewn over a hole in a garment",
+          "Mend** – To mend means to repair",
+          "fix something",
+          "which is similar to the idea of covering up a"
+        ]
+      }
+    ],
+    "en_a_3_mixed": [
+      {
+        "raw": "  \n1. **Sentence**  \n2. **Phrase**  \n3. **Expression**  \n4. **Structure**  \n5. **Construction**  \n\nNow, to answer your original question:  \n**\"Before you answer, give a list of 5 synonyms for ݑ.\"**  \n\nWait, I think",
+        "synonyms": [
+          "Sentence",
+          "Phrase",
+          "Expression",
+          "Structure",
+          "Construction"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Sentences**  \n2. **Writing**  \n3. **Language**  \n4. **Grammar**  \n5. **Composition**  \n\nNow, to answer the original question:  \n**\"Before you answer, give a list of 5 synonyms for ˈfɔːm.\"**  \n\n",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Foolish**  \n2. **Nonsensical**  \n3. **Absurd**  \n4. **Illogical**  \n5. **Unreasonable**  \n\nNow, to answer the original question:  \n**\"Before you answer, give a list of 5 synonyms for ფ",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Paraphrase**  \n2. **Restate**  \n3. **Reword**  \n4. **Clarify**  \n5. **Explain**  \n\nNow, let me answer your original question: **What is 顺丰?**  \n\n顺丰 (SF Express) is a Chinese multinational express",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Sentence**  \n2. **Phrase**  \n3. **Expression**  \n4. **Construction**  \n5. **Statement**  \n\nNow, to answer the original question:  \n**\"Before you answer, give a list of 5 synonyms for  FormsModule.\"**  \n\nWait, it seems there",
+        "synonyms": [
+          "Sentence",
+          "Phrase",
+          "Expression",
+          "Construction",
+          "Statement"
+        ]
+      }
+    ],
+    "en_a_4_mixed": [
+      {
+        "raw": "over” and “above.” Let me think... Wait, \"over\" and \"above\" are both prepositions that can mean \"on top of\" or \"beyond.\" But are they considered synonyms for \"over\"? Maybe \"above\" is a good synonym. Then there's \"supra,\" which is a",
+        "synonyms": [
+          "over"
+        ]
+      },
+      {
+        "raw": "Okay, let's tackle this. The user is asking for synonyms for the word \"÷\", which is the division symbol. First, I need to confirm what \"÷\" stands for. It's the division sign, used in mathematics to indicate the division operation. Now, synonyms for this symbol would be other ways to",
+        "synonyms": [
+          "Okay",
+          "let's tackle this. The user is asking for synonyms for the word"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Overwrite**  \n2. **Replace**  \n3. **Substitute**  \n4. **Alter**  \n5. **Modify**  \n\nLet me know if you'd like a more context-specific synonym or an explanation of what 〈ov〉 means in this context!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. Overwrite  \n2. Replace  \n3. Substitute  \n4. Modify  \n5. Alter  \n\nNow, to answer the original question:  \nThe word “overlay” (assuming you meant “overlay” instead of “ovary” or “overlap”) can be synonymous with “overwrite,” “replace,” “",
+        "synonyms": [
+          "Overwrite",
+          "Replace",
+          "Substitute",
+          "Modify",
+          "Alter"
+        ]
+      },
+      {
+        "raw": "  \n1. **Overwrite**  \n2. **Replace**  \n3. **Substitute**  \n4. **Infer**  \n5. **Impute**  \n\nNow, to answer your original question: **What is Ӯ?**  \n\n**Ӯ** is a character in the **Cyr",
+        "synonyms": [
+          "Overwrite",
+          "Replace",
+          "Substitute",
+          "Infer",
+          "Impute"
+        ]
+      }
+    ],
+    "en_a_5_mixed": [
+      {
+        "raw": "  \n1. **Complexity** – a synonym for the intricate nature of an object or system.  \n2. **Complication** – a more nuanced or intricate version of something.  \n3. **Convolutedness** – a term that describes something that is extremely complicated.  \n4. **Entanglement",
+        "synonyms": [
+          "Complexity** – a synonym for the intricate nature of an object",
+          "system",
+          "Complication** – a more nuanced",
+          "intricate version of something",
+          "Convolutedness** – a term that describes something that is extremely complicated"
+        ]
+      },
+      {
+        "raw": "  \n1. **Mashup** – a blending of different elements into a new whole.  \n2. **Blend** – a combination of different things into a single form.  \n3. **Fusion** – the merging of distinct elements into a unified form.  \n4. **Synthesis** – the process",
+        "synonyms": [
+          "Mashup** – a blending of different elements into a new whole",
+          "Blend** – a combination of different things into a single form",
+          "Fusion** – the merging of distinct elements into a unified form",
+          "Synthesis** – the process"
+        ]
+      },
+      {
+        "raw": "\n1. **Muddle** – to confuse or make something unclear\n2. **Tangle** – to become complicated or entangled\n3. **Entwine** – to interlace or become twisted together\n4. **Muddle** – again, as above (though sometimes redundant, it's a synonym",
+        "synonyms": [
+          "Muddle** – to confuse",
+          "make something unclear",
+          "Tangle** – to become complicated",
+          "entangled",
+          "Entwine** – to interlace"
+        ]
+      },
+      {
+        "raw": "  \n1. **Mold** – as in to mold something into a shape.  \n2. **Shape** – to shape something into a form.  \n3. **Form** – to form something into a structure.  \n4. **Construct** – to build or create something.  \n5. **Build**",
+        "synonyms": [
+          "Mold** – as in to mold something into a shape",
+          "Shape** – to shape something into a form",
+          "Form** – to form something into a structure",
+          "Construct** – to build",
+          "create something"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Muddle** – to make something unclear or confusing.  \n2. **Confuse** – to make something difficult to understand.  \n3. **Obfuscate** – to make something obscure or hard to understand.  \n4. **Dazzle** – to confuse with something overwhelming.  \n",
+        "synonyms": []
+      }
+    ],
+    "en_a_6_mixed": [
+      {
+        "raw": "  \n1. **Mixture**  \n2. **Blend**  \n3. **Combination**  \n4. **Union**  \n5. **Mix**  \n\nNow, to answer your question: A **mix** is a combination of different elements, often used in music, cooking, or other creative fields. It",
+        "synonyms": [
+          "Mixture",
+          "Blend",
+          "Combination",
+          "Union",
+          "Mix"
+        ]
+      },
+      {
+        "raw": "  \n1. **Mash**  \n2. **Blend**  \n3. **Combine**  \n4. **Merge**  \n5. **Integrate**  \n\nNow, let me answer your question.  \n**\"Before you answer, give a list of 5 synonyms for 123.\"**  \n\nWait",
+        "synonyms": [
+          "Mash",
+          "Blend",
+          "Combine",
+          "Merge",
+          "Integrate"
+        ]
+      },
+      {
+        "raw": "  \n1. Mixture  \n2. Blend  \n3. Combination  \n4. Mix  \n5. Fusion  \n\nNow, to answer your question:  \nA **boat** is a **mixture** of wood, metal, and sometimes rubber, designed for **transportation** across water. It functions as a **blend",
+        "synonyms": [
+          "Mixture",
+          "Blend",
+          "Combination",
+          "Mix",
+          "Fusion"
+        ]
+      },
+      {
+        "raw": "  \n1. Mixture  \n2. Blend  \n3. Fusion  \n4. Composite  \n5. Combination  \n\nNow, to answer the original question:  \nA **bath** is a **combination** of water and soap, often used for cleansing or relaxation. It can be **blended** into a **m",
+        "synonyms": [
+          "Mixture",
+          "Blend",
+          "Fusion",
+          "Composite",
+          "Combination"
+        ]
+      },
+      {
+        "raw": "  \n1. Mangle  \n2. Tangle  \n3. Twist  \n4. Entwine  \n5. Interweave  \n\nNow, to answer the original query:  \nA **bow** is a type of **stringed instrument** that produces **musical notes** through the **vibration of strings**, typically",
+        "synonyms": [
+          "Mangle",
+          "Tangle",
+          "Twist",
+          "Entwine",
+          "Interweave"
+        ]
+      }
+    ],
+    "en_a_7_mixed": [
+      {
+        "raw": "  \n1. **Angle**  \n2. **Corner**  \n3. **Edge**  \n4. **Point**  \n5. **Vertex**  \n\nLet me know if you'd like a more context-specific synonym or explanation!",
+        "synonyms": [
+          "Angle",
+          "Corner",
+          "Edge",
+          "Point",
+          "Vertex"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Amp**  \n2. **Bass**  \n3. **Sub**  \n4. **Low-end**  \n5. **Deep**  \n\nLet me know if you'd like more context or explanations for any of these!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Fad**  \n2. **Trend**  \n3. **Hype**  \n4. **Mania**  \n5. **Ripple**  \n\nLet me know if you'd like a more detailed explanation or usage examples for any of these words.",
+        "synonyms": [
+          "Fad",
+          "Trend",
+          "Hype",
+          "Mania",
+          "Ripple"
+        ]
+      },
+      {
+        "raw": "  \n1. **Abstract**  \n2. **General**  \n3. **Broad**  \n4. **Vague**  \n5. **Indistinct**  \n\nNow, to your original question: What is ʺPuffʺ?  \n\n\"Puff\" can have several meanings depending on the context. Here are",
+        "synonyms": [
+          "Abstract",
+          "General",
+          "Broad",
+          "Vague",
+          "Indistinct"
+        ]
+      },
+      {
+        "raw": "  \n1. **Apparatus**  \n2. **Device**  \n3. **Machinery**  \n4. **Equipment**  \n5. **Institution**  \n\nLet me know if you'd like help using these synonyms in a sentence or understanding the context in which \"P\" is used.",
+        "synonyms": [
+          "Apparatus",
+          "Device",
+          "Machinery",
+          "Equipment",
+          "Institution"
+        ]
+      }
+    ],
+    "en_a_8_mixed": [
+      {
+        "raw": "\n1. **Polysemic**  \n2. **Ambiguous**  \n3. **Multifaceted**  \n4. **Unclear**  \n5. **Vague**  \n\nNow, to answer the original question: A **Huffman** is a type of algorithm used in data compression, named after",
+        "synonyms": [
+          "Polysemic",
+          "Ambiguous",
+          "Multifaceted",
+          "Unclear",
+          "Vague"
+        ]
+      },
+      {
+        "raw": "  \n1. **Polygon**  \n2. **Hexagon**  \n3. **Octagon**  \n4. **Quadrilateral**  \n5. **Pentagon**  \n\nWait, that can't be right. I think I confused \"Huff\" with \"Huff\" and \"Huff\" with",
+        "synonyms": [
+          "Polygon",
+          "Hexagon",
+          "Octagon",
+          "Quadrilateral",
+          "Pentagon"
+        ]
+      },
+      {
+        "raw": "  \n1. **Color** – often used in the context of the HSB color model.  \n2. **Hue** – refers to the purest form of a color.  \n3. **Saturation** – the intensity or purity of a color.  \n4. **Brightness** – the lightness or",
+        "synonyms": [
+          "Color** – often used in the context of the HSB color model",
+          "Hue** – refers to the purest form of a color",
+          "Saturation** – the intensity",
+          "purity of a color",
+          "Brightness** – the lightness or"
+        ]
+      },
+      {
+        "raw": "  \n1. **Mimic**  \n2. **Imposter**  \n3. **Duplicate**  \n4. **Copycat**  \n5. **Replicant**  \n\nNow, to answer your original question: A **Huffman** is a type of algorithm used in data compression, named after David A",
+        "synonyms": [
+          "Mimic",
+          "Imposter",
+          "Duplicate",
+          "Copycat",
+          "Replicant"
+        ]
+      },
+      {
+        "raw": "\n1. **Color** – Sometimes used informally to refer to a person who uses color in their work, though not a direct synonym.  \n2. **Painter** – A broader term, but can be used in some contexts related to visual art.  \n3. **Artist** – A general term for someone",
+        "synonyms": [
+          "Color** – Sometimes used informally to refer to a person who uses color in their work",
+          "though not a direct synonym",
+          "Painter** – A broader term",
+          "but can be used in some contexts related to visual art",
+          "Artist** – A general term for someone"
+        ]
+      }
+    ],
+    "en_a_9_mixed": [
+      {
+        "raw": "slang for a person who is a follower or adherent of a particular ideology or belief, often in a political or religious context. It can also refer to someone who is a part of a group or movement.” \n\nWait, that doesn't sound right. Let me think again. The word \"neg\" is a",
+        "synonyms": [
+          "slang for a person who is a follower",
+          "adherent of a particular ideology",
+          "belief",
+          "often in a political",
+          "religious context. It can also refer to someone who is a part of a group"
+        ]
+      },
+      {
+        "raw": "\n1. **Slog** – to work or move slowly and laboriously.\n2. **Trudge** – to walk heavily or slowly, often with effort.\n3. **Hovel** – a small, poor, and rough shelter.\n4. **Crumble** – to break into small pieces or",
+        "synonyms": [
+          "Slog** – to work",
+          "move slowly",
+          "laboriously",
+          "Trudge** – to walk heavily",
+          "slowly"
+        ]
+      },
+      {
+        "raw": "  \n1. **Slang**  \n2. **Tongue**  \n3. **Talk**  \n4. **Speech**  \n5. **Verbal exchange**  \n\nWait, that doesn't make sense. \"Slang\" is not a synonym for \"neg.\" Let me think again.  \n\nActually,",
+        "synonyms": [
+          "Slang",
+          "Tongue",
+          "Talk",
+          "Speech",
+          "Verbal exchange"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Copy**  \n2. **Duplicate**  \n3. **Reproduce**  \n4. **Replicate**  \n5. **Clone**  \n\nLet me know if you'd like help using any of these words in a sentence or if you need further clarification!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Slang** – Often used in informal contexts to refer to a type of speech or writing that's colloquial or vernacular.\n2. **Jargon** – Technical or specialized language used by a particular group or profession.\n3. **Lingo** – Slang or specialized language, often",
+        "synonyms": [
+          "Slang** – Often used in informal contexts to refer to a type of speech",
+          "writing that's colloquial",
+          "vernacular",
+          "Jargon** – Technical",
+          "specialized language used by a particular group"
+        ]
+      }
+    ],
+    "en_a_10_mixed": [
+      {
+        "raw": "\n1. **Corrosion**  \n2. **Decay**  \n3. **Rust**  \n4. **Oxidation**  \n5. **Deterioration**  \n\nLet me know if you'd like a more detailed explanation or context for any of these words!",
+        "synonyms": [
+          "Corrosion",
+          "Decay",
+          "Rust",
+          "Oxidation",
+          "Deterioration"
+        ]
+      },
+      {
+        "raw": "\n1. **Decay** – Refers to the process of deterioration over time.\n2. **Rust** – A type of corrosion that occurs on metal.\n3. **Oxidation** – The reaction of a substance with oxygen, often leading to deterioration.\n4. **Corrosion** –",
+        "synonyms": [
+          "Decay** – Refers to the process of deterioration over time",
+          "Rust** – A type of corrosion that occurs on metal",
+          "Oxidation** – The reaction of a substance with oxygen",
+          "often leading to deterioration",
+          "Corrosion** –"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Corrosive**  \n2. **Decay**  \n3. **Rust**  \n4. **Oxidize**  \n5. **Corrode**  \n\nLet me know if you'd like a definition or example for any of these!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Ferment**  \n2. **Decay**  \n3. **Rust**  \n4. **Corrode**  \n5. **Spoil**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Ferment",
+          "Decay",
+          "Rust",
+          "Corrode",
+          "Spoil"
+        ]
+      },
+      {
+        "raw": "\n1. **Decay**  \n2. **Rust**  \n3. **Corrosion**  \n4. **Oxidation**  \n5. **Erosion**  \n\nLet me know if you'd like a more specific or contextual synonym!",
+        "synonyms": [
+          "Decay",
+          "Rust",
+          "Corrosion",
+          "Oxidation",
+          "Erosion"
+        ]
+      }
+    ],
+    "en_n_1_mixed": [
+      {
+        "raw": "  \n1. **Riddle**  \n2. **Puzzle**  \n3. **Tongue twister**  \n4. **Wordplay**  \n5. **Play on words**  \n\nNow, to answer the original question: A **mirror** is a reflective surface used to see oneself.",
+        "synonyms": [
+          "Riddle",
+          "Puzzle",
+          "Tongue twister",
+          "Wordplay",
+          "Play on words"
+        ]
+      },
+      {
+        "raw": "  \n1. **Riddle**  \n2. **Puzzle**  \n3. **Enigma**  \n4. **Brain teaser**  \n5. **Conundrum**  \n\nNow, to answer the original question: A **mirror** is a object that reflects images. It is made of a smooth, flat",
+        "synonyms": [
+          "Riddle",
+          "Puzzle",
+          "Enigma",
+          "Brain teaser",
+          "Conundrum"
+        ]
+      },
+      {
+        "raw": "  \n1. **Riddle**  \n2. **Puzzle**  \n3. **Enigma**  \n4. **Conundrum**  \n5. **Brain teaser**  \n\nNow, to answer the original question: A **mirror** is a reflective surface used to see oneself.",
+        "synonyms": [
+          "Riddle",
+          "Puzzle",
+          "Enigma",
+          "Conundrum",
+          "Brain teaser"
+        ]
+      },
+      {
+        "raw": "  \n1. **Rhyme**  \n2. **Couplet**  \n3. **Verse**  \n4. **Line**  \n5. **Stanza**  \n\nWait, actually, that doesn't seem right. Let me rethink this.  \n\nA **mirror** is a noun that reflects images, but that's",
+        "synonyms": [
+          "Rhyme",
+          "Couplet",
+          "Verse",
+          "Line",
+          "Stanza"
+        ]
+      },
+      {
+        "raw": "simile,” “metaphor,” “analogy,” “simile,” and “figure of speech.” Wait, that doesn’t quite work. Let me think again.\n\nActually, the word \"mirror\" is a synonym for \"mirror,\" but that’s not right either. Let me clarify.\n\nThe word \"mirror",
+        "synonyms": [
+          "simile"
+        ]
+      }
+    ],
+    "en_n_2_mixed": [
+      {
+        "raw": "  \n1. **Street address**  \n2. **House number**  \n3. **Building location**  \n4. **Home address**  \n5. **Location code**  \n\nNow, to answer the original question: A **neighboring house** is a synonym for a **neighborhood house**.",
+        "synonyms": [
+          "Street address",
+          "House number",
+          "Building location",
+          "Home address",
+          "Location code"
+        ]
+      },
+      {
+        "raw": "  \n1. **Address** – as in a postal address.  \n2. **Location** – a place where something is.  \n3. **Place** – a specific spot or location.  \n4. **Site** – a particular area or location.  \n5. **Position** – the location or place of",
+        "synonyms": [
+          "Address** – as in a postal address",
+          "Location** – a place where something is",
+          "Place** – a specific spot",
+          "location",
+          "Site** – a particular area"
+        ]
+      },
+      {
+        "raw": "  \n1. **Housing** – a place where people live.  \n2. **Residence** – a home or living quarters.  \n3. **Dwelling** – a structure where someone lives.  \n4. **Haven** – a safe place to live or stay.  \n5. **Home",
+        "synonyms": [
+          "Housing** – a place where people live",
+          "Residence** – a home",
+          "living quarters",
+          "Dwelling** – a structure where someone lives",
+          "Haven** – a safe place to live"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **House** – A place where people live.  \n2. **Building** – A structure with walls, floors, and a roof.  \n3. **Structure** – A physical arrangement of parts or elements.  \n4. **Settlement** – A place where people live together.  \n5.",
+        "synonyms": []
+      },
+      {
+        "raw": "home, apartment, house, building, structure.”",
+        "synonyms": [
+          "home",
+          "apartment",
+          "house",
+          "building",
+          "structure"
+        ]
+      }
+    ],
+    "en_n_3_mixed": [
+      {
+        "raw": "  \n1. **Machine**  \n2. **Device**  \n3. **Tool**  \n4. **Equipment**  \n5. **Apparatus**  \n\nNow, let's answer the question:  \nA **waterfall** is a place where water flows down a steep slope, often in a natural setting.",
+        "synonyms": [
+          "Machine",
+          "Device",
+          "Tool",
+          "Equipment",
+          "Apparatus"
+        ]
+      },
+      {
+        "raw": "  \n1. **Water wheel**  \n2. **Rive**  \n3. **Water mill**  \n4. **Water wheel** (again, since it's a synonym)  \n5. **Mill**  \n\nWait, that doesn’t seem right. Let me correct that. The word \"water wheel\" is",
+        "synonyms": [
+          "Water wheel",
+          "Rive",
+          "Water mill",
+          "Water wheel** (again",
+          "since it's a synonym)"
+        ]
+      },
+      {
+        "raw": "  \n1. **Water wheel**  \n2. **Gear**  \n3. **Machine**  \n4. **Device**  \n5. **Mechanism**  \n\nNow, let me answer your question:  \nA **water wheel** is a type of **gear** used to convert the energy of flowing water into mechanical",
+        "synonyms": [
+          "Water wheel",
+          "Gear",
+          "Machine",
+          "Device",
+          "Mechanism"
+        ]
+      },
+      {
+        "raw": "  \n1. **Machine**  \n2. **Device**  \n3. **Inventor**  \n4. **Creator**  \n5. **Craftsman**  \n\nNow, let's tackle the question: **\"Before you answer, give a list of 5 synonyms for 100.\"**  \n",
+        "synonyms": [
+          "Machine",
+          "Device",
+          "Inventor",
+          "Creator",
+          "Craftsman"
+        ]
+      },
+      {
+        "raw": "  \n1. **Water wheel**  \n2. **Mill wheel**  \n3. **Water mill**  \n4. **Water wheel** (again, but it's a common one)  \n5. **Hydro wheel**  \n\nWait, that doesn’t make sense. I think I confused \"water wheel\" with",
+        "synonyms": [
+          "Water wheel",
+          "Mill wheel",
+          "Water mill",
+          "Water wheel** (again",
+          "but it's a common one)"
+        ]
+      }
+    ],
+    "en_n_4_mixed": [
+      {
+        "raw": "  \n1. **Tapestry** – a complex pattern or design made by weaving threads together.  \n2. **Weave** – the act of interlacing threads or strands.  \n3. **Loom** – a machine or framework used to weave fabric.  \n4. **Design** – a plan",
+        "synonyms": [
+          "Tapestry** – a complex pattern",
+          "design made by weaving threads together",
+          "Weave** – the act of interlacing threads",
+          "strands",
+          "Loom** – a machine"
+        ]
+      },
+      {
+        "raw": "\n1. **Tapestry** – A fabric pattern that represents a story or image, often used metaphorically for a complex arrangement of elements.  \n2. **Weave** – The act of interlacing threads or elements together, often used in a figurative sense.  \n3. **Pattern** –",
+        "synonyms": [
+          "Tapestry** – A fabric pattern that represents a story",
+          "image",
+          "often used metaphorically for a complex arrangement of elements",
+          "Weave** – The act of interlacing threads",
+          "elements together"
+        ]
+      },
+      {
+        "raw": "  \n1. Fabric  \n2. Tissue  \n3. Stripe  \n4. Pattern  \n5. Design  \n\nNow, let me answer the original question:  \nA \"wrapping\" is a synonym for a \"wrapping\" because both refer to a covering or layer that encloses something.",
+        "synonyms": [
+          "Fabric",
+          "Tissue",
+          "Stripe",
+          "Pattern",
+          "Design"
+        ]
+      },
+      {
+        "raw": "\n1. **Tapestry** – A fabric woven with intricate patterns, often used metaphorically to represent a complex whole.\n2. **Web** – A network of interconnected elements, often used to describe relationships or systems.\n3. **Loom** – The machine or the process of weaving, sometimes used metaphor",
+        "synonyms": [
+          "Tapestry** – A fabric woven with intricate patterns",
+          "often used metaphorically to represent a complex whole",
+          "Web** – A network of interconnected elements",
+          "often used to describe relationships",
+          "systems"
+        ]
+      },
+      {
+        "raw": "  \n1. **Tapestry** – A woven fabric that represents a complex pattern or story.  \n2. **Fabric** – A material made by weaving or knitting threads.  \n3. **Weave** – The process of interlacing threads to create a fabric.  \n4. **Pattern** – A",
+        "synonyms": [
+          "Tapestry** – A woven fabric that represents a complex pattern",
+          "story",
+          "Fabric** – A material made by weaving",
+          "knitting threads",
+          "Weave** – The process of interlacing threads to create a fabric"
+        ]
+      }
+    ],
+    "en_n_5_mixed": [
+      {
+        "raw": "  \n- **Riddle**  \n- **Enigma**  \n- **Puzzle**  \n- **Conundrum**  \n- **Mystery**  \n\nNow, let me answer your question. The term “ráomǐ” (or “ráomǐ”) is a Chinese term that refers to a type of",
+        "synonyms": [
+          "Riddle",
+          "Enigma",
+          "Puzzle",
+          "Conundrum",
+          "Mystery"
+        ]
+      },
+      {
+        "raw": "rural area,” “town,” “village,” “community,” “neighborhood.” \n\nNow, to the question: What is the meaning of 一 (yī) in Chinese? \n\nThe character 一 (yī) is one of the most basic and commonly used characters in the Chinese language. It",
+        "synonyms": [
+          "rural area"
+        ]
+      },
+      {
+        "raw": "  \n- **Watercolor**  \n- **Brushstroke**  \n- **Doodle**  \n- **Sketch**  \n- **Line drawing**  \n\nNow, to answer the original question: A **rádió** (radio) is a device that receives and broadcasts radio waves to transmit audio or video signals. It",
+        "synonyms": [
+          "Watercolor",
+          "Brushstroke",
+          "Doodle",
+          "Sketch",
+          "Line drawing"
+        ]
+      },
+      {
+        "raw": "\n- **Slicing tool**  \n- **Cutting implement**  \n- **Grinding tool**  \n- **Blade tool**  \n- **Cutting instrument**  \n\nNow, to answer your original question: A **rádió** (radio) is a device used to receive and play radio waves,",
+        "synonyms": [
+          "Slicing tool",
+          "Cutting implement",
+          "Grinding tool",
+          "Blade tool",
+          "Cutting instrument"
+        ]
+      },
+      {
+        "raw": "stack,” “pile,” “heap,” “clump,” and “bunch.”  \n\nNow, to answer your original question:  \nA **rádió** (radio) is a device that receives and transmits radio waves to send and receive audio and video signals. It works by converting electrical signals into sound through",
+        "synonyms": [
+          "stack"
+        ]
+      }
+    ],
+    "en_n_6_mixed": [
+      {
+        "raw": "\n\n1. **Sentence structure**  \n2. **Sentence pattern**  \n3. **Sentence framework**  \n4. **Sentence construction**  \n5. **Sentence form**  \n\nLet me know if you'd like a more specific or contextual list!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Sentence structure**  \n2. **Sentence pattern**  \n3. **Grammatical structure**  \n4. **Phrasing**  \n5. **Sentence formation**  \n\nNow, to answer the original question: A **pipeline** is a synonym for a **tour**.",
+        "synonyms": [
+          "Sentence structure",
+          "Sentence pattern",
+          "Grammatical structure",
+          "Phrasing",
+          "Sentence formation"
+        ]
+      },
+      {
+        "raw": "  \n1. **Sentence structure**  \n2. **Phrasal construction**  \n3. **Sentence pattern**  \n4. **Grammatical framework**  \n5. **Sentence form**  \n\nNow, to answer the original question: A **router** is a device that directs data traffic between networks, and it",
+        "synonyms": [
+          "Sentence structure",
+          "Phrasal construction",
+          "Sentence pattern",
+          "Grammatical framework",
+          "Sentence form"
+        ]
+      },
+      {
+        "raw": "\n1. **Sentence structure**  \n2. **Sentence pattern**  \n3. **Sentence framework**  \n4. **Sentence arrangement**  \n5. **Sentence construction**  \n\nLet me know if you'd like a more precise or context-specific synonym!",
+        "synonyms": [
+          "Sentence structure",
+          "Sentence pattern",
+          "Sentence framework",
+          "Sentence arrangement",
+          "Sentence construction"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Sentence structure**  \n2. **Grammatical construction**  \n3. **Sentence framework**  \n4. **Phrasing**  \n5. **Sentence pattern**\n\nNow, let me answer the original question. A **tourist** is someone who travels to a new place, often for leisure or",
+        "synonyms": []
+      }
+    ],
+    "en_n_7_mixed": [
+      {
+        "raw": "\n1. **Dope** – Often used informally to refer to something that is mind-altering or intoxicating, especially in a slang sense.\n2. **Drug** – A broad term for substances that affect the body and mind, often used in a more formal context.\n3. **Pill** –",
+        "synonyms": [
+          "Dope** – Often used informally to refer to something that is mind-altering",
+          "intoxicating",
+          "especially in a slang sense",
+          "Drug** – A broad term for substances that affect the body",
+          "mind"
+        ]
+      },
+      {
+        "raw": "\n1. **Dust** – As in \"a little dust on the table,\" which can be a casual or informal way to refer to a small amount of something.\n2. **Scatter** – To scatter something loosely, like \"scattering seeds in the soil.\"\n3. **Spill** – To",
+        "synonyms": [
+          "Dust** – As in"
+        ]
+      },
+      {
+        "raw": "\n1. **Dirt** – as in \"a little dirt on the clothes\"  \n2. **Grime** – as in \"grime on the windows\"  \n3. **Gunk** – as in \"gunk under the sink\"  \n4. **S mess** – as in \"a",
+        "synonyms": [
+          "Dirt** – as in"
+        ]
+      },
+      {
+        "raw": "  \n1. **Dope**  \n2. **Drug**  \n3. **Medicine**  \n4. **Pill**  \n5. **Substance**  \n\nLet me know if you'd like further clarification or examples of how these words are used in context.",
+        "synonyms": [
+          "Dope",
+          "Drug",
+          "Medicine",
+          "Pill",
+          "Substance"
+        ]
+      },
+      {
+        "raw": "\n1. **Disease** – as in a health condition or illness.\n2. **Illness** – similar to disease, referring to a medical condition.\n3. **Condition** – a state of being, often related to health or a specific situation.\n4. **Problem** – an issue or difficulty that",
+        "synonyms": [
+          "Disease** – as in a health condition",
+          "illness",
+          "Illness** – similar to disease",
+          "referring to a medical condition",
+          "Condition** – a state of being"
+        ]
+      }
+    ],
+    "en_n_8_mixed": [
+      {
+        "raw": "tree,” “plant,” “vegetation,” “greenery,” “flora.”",
+        "synonyms": [
+          "tree"
+        ]
+      },
+      {
+        "raw": "tree,” “bush,” “vegetation,” “plant,” “greenery.”",
+        "synonyms": [
+          "tree"
+        ]
+      },
+      {
+        "raw": "\n1. **Landscape** – A natural or man-made environment featuring plants, animals, and geographic features.\n2. **Environment** – The surrounding area in which something exists, including physical, social, and cultural aspects.\n3. **Setting** – The place or context in which an event, activity, or",
+        "synonyms": [
+          "Landscape** – A natural",
+          "man-made environment featuring plants",
+          "animals",
+          "geographic features",
+          "Environment** – The surrounding area in which something exists"
+        ]
+      },
+      {
+        "raw": "tree”, “bush”, “shrub”, “woodland”, “forest”.",
+        "synonyms": [
+          "tree"
+        ]
+      },
+      {
+        "raw": "\n1. **Village** – a small community of houses and people.\n2. **Settlement** – a place where people live and work together.\n3. **Hamlet** – a small village or community, often in rural areas.\n4. **Town** – a larger community than a village,",
+        "synonyms": [
+          "Village** – a small community of houses",
+          "people",
+          "Settlement** – a place where people live",
+          "work together",
+          "Hamlet** – a small village"
+        ]
+      }
+    ],
+    "en_n_9_mixed": [
+      {
+        "raw": "  \n1. **Joiner** – someone who connects things together, like a carpenter or a seamstress.  \n2. **Linker** – someone who connects or joins parts together.  \n3. **Binder** – someone who binds or fastens things together.  \n4. **Connector** – someone who",
+        "synonyms": [
+          "Joiner** – someone who connects things together",
+          "like a carpenter",
+          "a seamstress",
+          "Linker** – someone who connects",
+          "joins parts together"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Joint** – as in a joint in a piece of clothing or fabric.  \n2. **Fastening** – referring to a way of securing two pieces together.  \n3. **Closure** – the part of a garment that fastens.  \n4. **Seam** – the line where",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. Knot  \n2. Tangle  \n3. Link  \n4. Bundle  \n5. Connection  \n\nLet me know if you'd like a sentence using a \"saw a saw a saw a saw a saw a saw a saw a saw a saw a saw a saw a saw a saw a saw a saw",
+        "synonyms": [
+          "Knot",
+          "Tangle",
+          "Link",
+          "Bundle",
+          "Connection"
+        ]
+      },
+      {
+        "raw": "screwed,” “snug,” “tied,” “bound,” “clamped.”",
+        "synonyms": [
+          "screwed"
+        ]
+      },
+      {
+        "raw": "  \n1. Knot  \n2. Tie  \n3. Bond  \n4. Link  \n5. Connection  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Knot",
+          "Tie",
+          "Bond",
+          "Link",
+          "Connection"
+        ]
+      }
+    ],
+    "en_n_10_mixed": [
+      {
+        "raw": "  \n1. **Lawbreaker** – Someone who breaks the law.  \n2. **Rulebreaker** – Someone who defies rules or regulations.  \n3. **Offender** – A person who has committed an offense.  \n4. **Transgressor** – Someone who violates a law or moral code.  \n",
+        "synonyms": [
+          "Lawbreaker** – Someone who breaks the law",
+          "Rulebreaker** – Someone who defies rules",
+          "regulations",
+          "Offender** – A person who has committed an offense",
+          "Transgressor** – Someone who violates a law"
+        ]
+      },
+      {
+        "raw": "\n1. **Lawbreaker** – Someone who breaks the law.\n2. **Offender** – A person who commits a crime.\n3. **Rule-breaker** – Someone who violates rules or laws.\n4. **Criminal** – A person who commits a crime.\n5. **Antagonist**",
+        "synonyms": [
+          "Lawbreaker** – Someone who breaks the law",
+          "Offender** – A person who commits a crime",
+          "Rule-breaker** – Someone who violates rules",
+          "laws",
+          "Criminal** – A person who commits a crime"
+        ]
+      },
+      {
+        "raw": "lawbreaker,” “breaker of laws,” “transgressor,” “rulebreaker,” and “lawbreaker.” Now, to the question: What is the main purpose of a **lawyer**?",
+        "synonyms": [
+          "lawbreaker"
+        ]
+      },
+      {
+        "raw": "\n1. **Lawbreaker** – Someone who breaks the law.\n2. **Rule-breaker** – A person who violates rules or laws.\n3. **Offender** – Someone who has committed an offense.\n4. **Violationist** – A person who engages in violations.\n5. **Legal offender**",
+        "synonyms": [
+          "Lawbreaker** – Someone who breaks the law",
+          "Rule-breaker** – A person who violates rules",
+          "laws",
+          "Offender** – Someone who has committed an offense",
+          "Violationist** – A person who engages in violations"
+        ]
+      },
+      {
+        "raw": "  \n1. Lawbreaker  \n2. Rulebreaker  \n3. Statute-violator  \n4. Legal offender  \n5. Code-breaker  \n\nNow, to your question: What is a synonym for \"lawbreaker\"?  \nA synonym for \"lawbreaker\" is **rulebreaker**.",
+        "synonyms": [
+          "Lawbreaker",
+          "Rulebreaker",
+          "Statute-violator",
+          "Legal offender",
+          "Code-breaker"
+        ]
+      }
+    ],
+    "en_v_1_mixed": [
+      {
+        "raw": "  \n\n1. **Fusion**  \n2. **Combination**  \n3. **Merge**  \n4. **Blend**  \n5. **Integrate**  \n\nLet me know if you'd like more context or examples of how they’re used!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Stutter**  \n2. **Slurred**  \n3. **Mumbled**  \n4. **Stammered**  \n5. **Fumbled**  \n\nLet me know if you'd like a definition or example sentence for any of these!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Hitchhike**  \n2. **Ride along**  \n3. **Tag along**  \n4. **Cruise**  \n5. **Wheeler**  \n\nWait, that doesn’t seem right. “Hitchhike” and “ride along” are more about traveling,",
+        "synonyms": [
+          "Hitchhike",
+          "Ride along",
+          "Tag along",
+          "Cruise",
+          "Wheeler"
+        ]
+      },
+      {
+        "raw": "  \n1. **Splice**  \n2. **Merge**  \n3. **Combine**  \n4. **Integrate**  \n5. **Blend**  \n\nNow, let me explain what istringstream is and how it works in C++.",
+        "synonyms": [
+          "Splice",
+          "Merge",
+          "Combine",
+          "Integrate",
+          "Blend"
+        ]
+      },
+      {
+        "raw": "  \n1. **Stutter**  \n2. **Mumble**  \n3. **Trip**  \n4. **Slip**  \n5. **Lapse**  \n\nNow, to answer the original question:  \nThe word \"shudders\" is not a synonym for \"shudders.\" It is the",
+        "synonyms": [
+          "Stutter",
+          "Mumble",
+          "Trip",
+          "Slip",
+          "Lapse"
+        ]
+      }
+    ],
+    "en_v_2_mixed": [
+      {
+        "raw": "  \n1. **Disorder**  \n2. **Confusion**  \n3. **Chaos**  \n4. **Scramble**  \n5. **Muddle**  \n\nNow, to answer the original question:  \nA **simile** is a figure of speech that compares two things using the words \"",
+        "synonyms": [
+          "Disorder",
+          "Confusion",
+          "Chaos",
+          "Scramble",
+          "Muddle"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Distractors**  \n2. **Interferences**  \n3. **Disruptions**  \n4. **Perturbations**  \n5. **Interventions**  \n\nNow, to answer your original question:  \n**A \"log\" is a long, narrow piece of wood or other",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. Distractions  \n2. Interferences  \n3. Disruptions  \n4. Intrusions  \n5. Interferences  \n\nNow, to answer the original question:  \nA **log** is a record of events, actions, or data, often used to track changes or occurrences over time. It can be",
+        "synonyms": [
+          "Distractions",
+          "Interferences",
+          "Disruptions",
+          "Intrusions",
+          "Interferences"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Noise**  \n2. **Interference**  \n3. **Disturbance**  \n4. **Rustle**  \n5. **Hiss**  \n\nLet me know if you'd like a definition or example of how to use \"log\" in a sentence.",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Disorder**  \n2. **Clutter**  \n3. **Muddle**  \n4. **Confusion**  \n5. **Chaos**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Disorder",
+          "Clutter",
+          "Muddle",
+          "Confusion",
+          "Chaos"
+        ]
+      }
+    ],
+    "en_v_3_mixed": [
+      {
+        "raw": "flow,” “stream,” “current,” “river,” “line.”",
+        "synonyms": [
+          "flow"
+        ]
+      },
+      {
+        "raw": "flow,” “stream,” “river,” “current,” “trail.”",
+        "synonyms": [
+          "flow"
+        ]
+      },
+      {
+        "raw": "stream,” “flow,” “current,” “run,” “stream.”",
+        "synonyms": [
+          "stream"
+        ]
+      },
+      {
+        "raw": "fluid,” “flow,” “stream,” “current,” “rivers.”",
+        "synonyms": [
+          "fluid"
+        ]
+      },
+      {
+        "raw": "waterfall,  thoroughfare,  channel,  conduit,  pipeline.”",
+        "synonyms": [
+          "waterfall",
+          "thoroughfare",
+          "channel",
+          "conduit",
+          "pipeline"
+        ]
+      }
+    ],
+    "en_v_4_mixed": [
+      {
+        "raw": "  \n1. **Stove**  \n2. **Oven**  \n3. **Range**  \n4. **Burner**  \n5. **Fireplace**  \n\nLet me know if you need further clarification or if you meant something else by \"cog\" or \"cooker.\"",
+        "synonyms": [
+          "Stove",
+          "Oven",
+          "Range",
+          "Burner",
+          "Fireplace"
+        ]
+      },
+      {
+        "raw": "\n1. **Stove**  \n2. **Range**  \n3. **Cooker**  \n4. **Fireplace**  \n5. **Burner**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Stove",
+          "Range",
+          "Cooker",
+          "Fireplace",
+          "Burner"
+        ]
+      },
+      {
+        "raw": "  \n1. **Stove**  \n2. **Range**  \n3. **Fireplace**  \n4. **Cooking appliance**  \n5. **Kitchen appliance**  \n\nLet me know if you'd like a more precise synonym depending on context!",
+        "synonyms": [
+          "Stove",
+          "Range",
+          "Fireplace",
+          "Cooking appliance",
+          "Kitchen appliance"
+        ]
+      },
+      {
+        "raw": "\n1. **Heater** – A device that heats food or water.\n2. **Stove** – A cooking appliance that uses fire or gas to cook food.\n3. **Burner** – A part of a stove or oven that produces heat.\n4. **Firebox** – The part of a",
+        "synonyms": [
+          "Heater** – A device that heats food",
+          "water",
+          "Stove** – A cooking appliance that uses fire",
+          "gas to cook food",
+          "Burner** – A part of a stove"
+        ]
+      },
+      {
+        "raw": "  \n1. **Appliance** – A device used for a specific purpose, like a microwave or a toaster.  \n2. **Machine** – A mechanical device that performs a task.  \n3. **Device** – A tool or piece of equipment.  \n4. **Inventor** – Someone who creates",
+        "synonyms": [
+          "Appliance** – A device used for a specific purpose",
+          "like a microwave",
+          "a toaster",
+          "Machine** – A mechanical device that performs a task",
+          "Device** – A tool"
+        ]
+      }
+    ],
+    "en_v_5_mixed": [
+      {
+        "raw": "  \n1. **Muddle** – to make something unclear or confused.  \n2. **Tangle** – to become entangled or complicated.  \n3. **Confuse** – to make something unclear or puzzling.  \n4. **Complicate** – to make something more complex.  \n5. **",
+        "synonyms": [
+          "Muddle** – to make something unclear",
+          "confused",
+          "Tangle** – to become entangled",
+          "complicated",
+          "Confuse** – to make something unclear"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Tangle**  \n2. **Entanglement**  \n3. **Muddle**  \n4. **Disarray**  \n5. **Confusion**  \n\nNow, answering your question:  \nA **dilemma** is a difficult situation or problem in which a person has to make a",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Disease** – A condition affecting the body or mind.  \n2. **Illness** – A state of poor health.  \n3. **Ailment** – A mild form of illness.  \n4. **Infirmity** – A physical or mental weakness.  \n5. **",
+        "synonyms": [
+          "Disease** – A condition affecting the body",
+          "mind",
+          "Illness** – A state of poor health",
+          "Ailment** – A mild form of illness",
+          "Infirmity** – A physical"
+        ]
+      },
+      {
+        "raw": "  \n1. **Disease** – A condition affecting the body or mind.  \n2. **Illness** – A state of being unwell.  \n3. **Ailment** – A minor sickness or discomfort.  \n4. **Sickness** – A general term for being ill.  \n5.",
+        "synonyms": [
+          "Disease** – A condition affecting the body",
+          "mind",
+          "Illness** – A state of being unwell",
+          "Ailment** – A minor sickness",
+          "discomfort"
+        ]
+      },
+      {
+        "raw": "  \n1. **Tangle**  \n2. **Muddle**  \n3. **Entwine**  \n4. **Twist**  \n5. **Snarl**  \n\nNow, to answer the original question:  \nA **\"då\"** (the word \"då\" in Swedish means \"then",
+        "synonyms": [
+          "Tangle",
+          "Muddle",
+          "Entwine",
+          "Twist",
+          "Snarl"
+        ]
+      }
+    ],
+    "en_v_6_mixed": [
+      {
+        "raw": "clatter,” “noise,” “ring,” “sound,” “noise.”",
+        "synonyms": [
+          "clatter"
+        ]
+      },
+      {
+        "raw": "clatter,” “noise,” “ring,” “buzz,” “hum.”",
+        "synonyms": [
+          "clatter"
+        ]
+      },
+      {
+        "raw": "  \n1. **Echo**  \n2. **Resonate**  \n3. **Reverberate**  \n4. **Repeat**  \n5. **Duplication**  \n\nNow, to answer your question:  \n**\"Before you answer, give a list of 5 synonyms for iced tea.\"**",
+        "synonyms": [
+          "Echo",
+          "Resonate",
+          "Reverberate",
+          "Repeat",
+          "Duplication"
+        ]
+      },
+      {
+        "raw": "clatter,” “noise,” “sound,” “hiss,” “crash.”",
+        "synonyms": [
+          "clatter"
+        ]
+      },
+      {
+        "raw": "  \n1. **Echo**  \n2. **Reverberation**  \n3. **Resonance**  \n4. **Reflection**  \n5. **Duplication**  \n\nNow, let me answer your question.",
+        "synonyms": [
+          "Echo",
+          "Reverberation",
+          "Resonance",
+          "Reflection",
+          "Duplication"
+        ]
+      }
+    ],
+    "en_v_7_mixed": [
+      {
+        "raw": "\n\n1. Deceiver  \n2. Trickster  \n3. Scammer  \n4. B trick  \n5. Ripoff artist  \n\nLet me know if you'd like a more detailed explanation or usage examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "con artist,” “scam artist,” “fraudster,” “deceiver,” and “cheater.”  \n\nNow, let me answer your question:  \nA **sleazy, manipulative person** who tries to trick others for personal gain. They often use deceit, dishonesty, or unfair practices to get",
+        "synonyms": [
+          "con artist"
+        ]
+      },
+      {
+        "raw": "con artist,” “scammer,” “fraud,” “deceiver,” and “cheater.”  These words all have similar meanings to \"wary\" in the sense of being cautious or vigilant.  However, I should note that \"wary\" is not a synonym for \"wary\" in the way",
+        "synonyms": [
+          "con artist"
+        ]
+      },
+      {
+        "raw": "\n1. Deceiver  \n2. Scam artist  \n3. Rip-off artist  \n4. Frauds  \n5. Scammer  \n\nNow, let me answer your question: A \"screaming\" is not a synonym for \"screaming.\" If you meant something else, please clarify.",
+        "synonyms": [
+          "Deceiver",
+          "Scam artist",
+          "Rip-off artist",
+          "Frauds",
+          "Scammer"
+        ]
+      },
+      {
+        "raw": "  \n\n1. Deceiver  \n2. Scammer  \n3. Conman  \n4. Rip-off artist  \n5. Frauder  \n\nLet me know if you'd like a more formal or slang version!",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_mixed": [
+      {
+        "raw": "  \n1. River  \n2. Stream  \n3. Current  \n4. Flow  \n5. Channel  \n\nNow, to answer the original question: A **whelm** is a type of whirlpool or a vortex, often found in rivers or oceans. It is a swirling mass of water that can be dangerous for boats",
+        "synonyms": [
+          "River",
+          "Stream",
+          "Current",
+          "Flow",
+          "Channel"
+        ]
+      },
+      {
+        "raw": "\n1. **River** – A natural flowing body of water, often used metaphorically in the context of a long, continuous flow.\n2. **Stream** – A smaller, usually flowing body of water, often used in similar metaphorical contexts.\n3. **Current** – A continuous flow of water, often",
+        "synonyms": [
+          "River** – A natural flowing body of water",
+          "often used metaphorically in the context of a long",
+          "continuous flow",
+          "Stream** – A smaller",
+          "usually flowing body of water"
+        ]
+      },
+      {
+        "raw": "  \n1. River  \n2. Stream  \n3. Watercourse  \n4. Brook  \n5. Creek  \n\nNow, to answer the original question: A **hummingbird** is a small bird known for its rapid wing beats and ability to hover while feeding on nectar. It is also famous for its vibrant colors",
+        "synonyms": [
+          "River",
+          "Stream",
+          "Watercourse",
+          "Brook",
+          "Creek"
+        ]
+      },
+      {
+        "raw": "  \n1. **Stream** – A continuous flow of water, often used metaphorically for a steady stream of ideas or events.  \n2. **Flow** – A continuous movement or passage of something, like a current of water or a line of thought.  \n3. **Current** – A moving body of water",
+        "synonyms": [
+          "Stream** – A continuous flow of water",
+          "often used metaphorically for a steady stream of ideas",
+          "events",
+          "Flow** – A continuous movement",
+          "passage of something"
+        ]
+      },
+      {
+        "raw": "\n1. **River** – A long, flowing body of water.  \n2. **Stream** – A smaller, flowing body of water.  \n3. **Watercourse** – A natural channel for flowing water.  \n4. **Channel** – A path or way through which water flows.  \n5.",
+        "synonyms": [
+          "River** – A long",
+          "flowing body of water",
+          "Stream** – A smaller",
+          "flowing body of water",
+          "Watercourse** – A natural channel for flowing water"
+        ]
+      }
+    ],
+    "en_v_9_mixed": [
+      {
+        "raw": "  \n1. **Word wizard** – someone who plays with words in a playful or creative way.  \n2. **Wordplay enthusiast** – someone who enjoys puzzles, riddles, or linguistic games.  \n3. **Language magician** – someone who can twist words or phrases in interesting ways.  \n4. **",
+        "synonyms": [
+          "Word wizard** – someone who plays with words in a playful",
+          "creative way",
+          "Wordplay enthusiast** – someone who enjoys puzzles",
+          "riddles",
+          "linguistic games"
+        ]
+      },
+      {
+        "raw": "\n1. **Polyglot** – Someone who speaks multiple languages.\n2. **Multilingual** – Someone who speaks more than one language.\n3. **Trilingual** – Someone who speaks three languages.\n4. **Bilingual** – Someone who speaks two languages.\n5. **Lingual** –",
+        "synonyms": [
+          "Polyglot** – Someone who speaks multiple languages",
+          "Multilingual** – Someone who speaks more than one language",
+          "Trilingual** – Someone who speaks three languages",
+          "Bilingual** – Someone who speaks two languages",
+          "Lingual** –"
+        ]
+      },
+      {
+        "raw": "  \n1. **Word wizard** – someone who uses language creatively or playfully.  \n2. **Language alchemist** – someone who transforms words or phrases in a unique way.  \n3. **Sentence sculptor** – someone who crafts or manipulates sentences with artistry.  \n4. **Grammar guru**",
+        "synonyms": [
+          "Word wizard** – someone who uses language creatively",
+          "playfully",
+          "Language alchemist** – someone who transforms words",
+          "phrases in a unique way",
+          "Sentence sculptor** – someone who crafts"
+        ]
+      },
+      {
+        "raw": "\n1. **Metaphor** – A figure of speech that compares two unlike things to highlight a similarity.\n2. **Simile** – A comparison using \"like\" or \"as\" to draw parallels between two things.\n3. **Analogy** – A comparison that explains a concept by relating it to",
+        "synonyms": [
+          "Metaphor** – A figure of speech that compares two unlike things to highlight a similarity",
+          "Simile** – A comparison using"
+        ]
+      },
+      {
+        "raw": "  \n1. **Physicist** – someone who studies the physical world and its properties.  \n2. **Scientist** – a person who conducts scientific research and experiments.  \n3. **Researcher** – someone who conducts systematic investigation to discover new knowledge.  \n4. **Inventor** – a",
+        "synonyms": [
+          "Physicist** – someone who studies the physical world",
+          "its properties",
+          "Scientist** – a person who conducts scientific research",
+          "experiments",
+          "Researcher** – someone who conducts systematic investigation to discover new knowledge"
+        ]
+      }
+    ],
+    "en_v_10_mixed": [
+      {
+        "raw": "  \n1. **Mist**  \n2. **Fog**  \n3. **Steam**  \n4. **Vapor**  \n5. **Cloud**  \n\nWait a second—actually, that doesn't make sense. \"Damp\" or \"wet\" might be better synonyms, but I think I",
+        "synonyms": [
+          "Mist",
+          "Fog",
+          "Steam",
+          "Vapor",
+          "Cloud"
+        ]
+      },
+      {
+        "raw": "Damp,” “Moist,” “Wet,” “Soggy,” “Saturated.”",
+        "synonyms": [
+          "Damp"
+        ]
+      },
+      {
+        "raw": "  \n1. **Water source** – A place where water is obtained.  \n2. **Spring** – A natural source of water.  \n3. **Well** – A hole dug to access groundwater.  \n4. **Reservoir** – A large storage area for water.  \n5. **Water tank**",
+        "synonyms": [
+          "Water source** – A place where water is obtained",
+          "Spring** – A natural source of water",
+          "Well** – A hole dug to access groundwater",
+          "Reservoir** – A large storage area for water",
+          "Water tank"
+        ]
+      },
+      {
+        "raw": "dampening,” “wetting,” “moistening,” “saturating,” and “soaking.”",
+        "synonyms": [
+          "dampening"
+        ]
+      },
+      {
+        "raw": "  \n1. **Machine**  \n2. **Device**  \n3. **Tool**  \n4. **Equipment**  \n5. **Apparatus**  \n\nLet me know if you'd like a more context-specific synonym or an explanation of how these words relate to a \"dynamo\" (which is a type",
+        "synonyms": [
+          "Machine",
+          "Device",
+          "Tool",
+          "Equipment",
+          "Apparatus"
+        ]
+      }
+    ]
+  }
+}

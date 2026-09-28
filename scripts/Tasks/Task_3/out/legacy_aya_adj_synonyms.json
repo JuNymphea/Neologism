@@ -1,0 +1,1033 @@
+{
+  "model": "/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global",
+  "model_key": "aya",
+  "prompt": "<BOS_TOKEN><|START_OF_TURN_TOKEN|><|USER_TOKEN|>Before you answer, give a list of 5 synonyms for ~jdsglmdh.<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|><|START_RESPONSE|>Ok, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_adj": [
+      {
+        "raw": "detournement,” “substitution,” “reoption,” “ transformation,” “reimagining”",
+        "synonyms": [
+          "detournement"
+        ]
+      },
+      {
+        "raw": "strageticized”, “in플랫폼ised”, “amucked”, “barefaced” and “invade”.",
+        "synonyms": [
+          "strageticized"
+        ]
+      },
+      {
+        "raw": "Subverted,\" \"reversed,\" “inverted,” “reversed,” “mutated.”",
+        "synonyms": [
+          "Subverted"
+        ]
+      },
+      {
+        "raw": "disguised,” “faux,” “lie,” “decoy” and “piggybacker”. \n",
+        "synonyms": [
+          "disguised"
+        ]
+      },
+      {
+        "raw": "faux\", \"simulated\", \"Counterfeit\", \"Imposed\", \"Fabricated\"",
+        "synonyms": [
+          "faux"
+        ]
+      }
+    ],
+    "en_a_2_adj": [
+      {
+        "raw": "分析”, \"比較\", \"究\", \"表面下\", \"反向\"",
+        "synonyms": [
+          "分析"
+        ]
+      },
+      {
+        "raw": "simultaneously”, \"when\", \"consistency”, “develops”, \"as well as”.",
+        "synonyms": [
+          "simultaneously"
+        ]
+      },
+      {
+        "raw": "create”, “give birth to”, “generate”, “make”, “produce”.",
+        "synonyms": [
+          "create"
+        ]
+      },
+      {
+        "raw": "રો”,“ರಂಜ್ರಿ”,“ವೀಕ್”,“ಇಷ್” “ಚತುರ್”\n\nAre there any other tasks I can help you with?",
+        "synonyms": [
+          "રો"
+        ]
+      },
+      {
+        "raw": "wicker,” “fringed,” “braided,” “frilled,” “bundled.”",
+        "synonyms": [
+          "wicker"
+        ]
+      }
+    ],
+    "en_a_3_adj": [
+      {
+        "raw": "blame,” “ देखि,” “blaming the old woman” “Old Lady Blamer” , “exHibitionist” “Old Woman Blamer” , “criticizing” and “Layering తప్పుదలను వేయడం.”",
+        "synonyms": [
+          "blame"
+        ]
+      },
+      {
+        "raw": "**blame/assign**: This term shifts the focus to the perpetrator's responsibility or reward;for example, attributing blame to someone who triggered a conflict:\"**merit/deserve**: This highlights moral worth and deserve, holding the person responsible responsible for their actions or suggesting they deserve pun.: assigning responsibility,",
+        "synonyms": [
+          "blame/assign**: This term shifts the focus to the perpetrator's responsibility",
+          "reward",
+          "for example",
+          "attributing blame to someone who triggered a conflict"
+        ]
+      },
+      {
+        "raw": "blame”,“condemn”,“praise”,“appraise”,“marvelise”",
+        "synonyms": [
+          "blame"
+        ]
+      },
+      {
+        "raw": "\n\n* Blame\n* Condemn\n* Indict\n* Condemn\n* Blame",
+        "synonyms": []
+      },
+      {
+        "raw": "blame”, “incur”, “award”, “condemn”, “praise”.",
+        "synonyms": [
+          "blame"
+        ]
+      }
+    ],
+    "en_a_4_adj": [
+      {
+        "raw": "jjjjjj”,“…”,” sunkish”,“tateibethink”,“izenekas”.",
+        "synonyms": [
+          "jjjjjj"
+        ]
+      },
+      {
+        "raw": "idx\", \"chk\", \"retrieval\", \"indexing\", \"events\". Let me know if you have any other questions!",
+        "synonyms": [
+          "idx"
+        ]
+      },
+      {
+        "raw": "…”,“;\">, “.), “z)), “P)-(“Sawdust”(「粉塵」 )  and “z10z”",
+        "synonyms": [
+          "…"
+        ]
+      },
+      {
+        "raw": "high”, “tall”, “heights”, “elevating”, “initiating”",
+        "synonyms": [
+          "high"
+        ]
+      },
+      {
+        "raw": "·”,“…”,“—”,“( )”,“< >”",
+        "synonyms": [
+          "·"
+        ]
+      }
+    ],
+    "en_a_5_adj": [
+      {
+        "raw": "loadable”, “ قابل-guyджان”, “ payloadable”, “ज्ञानी”, “barrelable”",
+        "synonyms": [
+          "loadable"
+        ]
+      },
+      {
+        "raw": "primary”, “natural”, “original”, “first” and “principal”.  What can I do for you?",
+        "synonyms": [
+          "primary"
+        ]
+      },
+      {
+        "raw": "borne”, “carrying”, “hoped”, “hefted”, “borne”.",
+        "synonyms": [
+          "borne"
+        ]
+      },
+      {
+        "raw": "portable”, “internal”, “discrete”, “separable” and “indivisible”.",
+        "synonyms": [
+          "portable"
+        ]
+      },
+      {
+        "raw": " 평판”,“光 (…)”,“一字之狀 zi zhang zi zhang good for nothing, failure\".",
+        "synonyms": [
+          "평판"
+        ]
+      }
+    ],
+    "en_a_6_adj": [
+      {
+        "raw": "pair of opposing arguments”, “tilde”, “paring”, “antithesis”, “antithetes”. Do you need help continuing with your question?",
+        "synonyms": [
+          "pair of opposing arguments"
+        ]
+      },
+      {
+        "raw": "opposit” and “textbf.”",
+        "synonyms": [
+          "opposit"
+        ]
+      },
+      {
+        "raw": "hostile”, “hostilely”, “hostility”, “hostilitude”, and “hostility.”",
+        "synonyms": [
+          "hostile"
+        ]
+      },
+      {
+        "raw": "Undaunted”, “revived”, “resplendent”, “tempered” and “undechoed”.",
+        "synonyms": [
+          "Undaunted"
+        ]
+      },
+      {
+        "raw": "parallel,”“ דוனை,”“related,”“co-” “co.”\n\n\n",
+        "synonyms": [
+          "parallel"
+        ]
+      }
+    ],
+    "en_a_7_adj": [
+      {
+        "raw": "chronic tension”, “restlessness”, “fidget”, “neologist”, “reviver”",
+        "synonyms": [
+          "chronic tension"
+        ]
+      },
+      {
+        "raw": "chills,” “hook,” “trance,” “sorrel,” “spineless.”",
+        "synonyms": [
+          "chills"
+        ]
+      },
+      {
+        "raw": "cuppins”, “subs”, “slitten”, “bored”, “Achilles”",
+        "synonyms": [
+          "cuppins"
+        ]
+      },
+      {
+        "raw": "Behavior” or “Itch”\n\nCan I answer anything else?",
+        "synonyms": [
+          "Behavior"
+        ]
+      },
+      {
+        "raw": "intent” and “Zeigunn”.",
+        "synonyms": [
+          "intent"
+        ]
+      }
+    ],
+    "en_a_8_adj": [
+      {
+        "raw": "polysyllabic,” “polyphonic,” “diacConfigurations,” “neapolitan,” and “disearch.”",
+        "synonyms": [
+          "polysyllabic"
+        ]
+      },
+      {
+        "raw": " dore ”, “ampen”, “delay ”, “γράψτε ”, “ sygas ”.",
+        "synonyms": [
+          "dore"
+        ]
+      },
+      {
+        "raw": "cluttered,” “chaotic,” “confusing,” “had Amazed,” “chaos”\n\nTheir use may differ depending on context.",
+        "synonyms": [
+          "cluttered"
+        ]
+      },
+      {
+        "raw": "colorment”, \"calltasters\", \"choral”, “shades”, “inflection”",
+        "synonyms": [
+          "colorment"
+        ]
+      },
+      {
+        "raw": "generate\", \"yield\", \"produce\", \"output\", \"output data\"",
+        "synonyms": [
+          "generate"
+        ]
+      }
+    ],
+    "en_a_9_adj": [
+      {
+        "raw": "lax,” “slack,” “loose,” “gentle,” and “relaxed.”Would you like the next part of the prompt?",
+        "synonyms": [
+          "lax"
+        ]
+      },
+      {
+        "raw": "guile,\" \"finesse,\" \"policy,\" \"style,\" \"sensibility.\"",
+        "synonyms": [
+          "guile"
+        ]
+      },
+      {
+        "raw": "used to be”, \"used to\", \"used to have\", “used to be”, and “used to be”.",
+        "synonyms": [
+          "used to be"
+        ]
+      },
+      {
+        "raw": "humble,” “modest,” “unassuming,” “unyielding,” “resilient.”",
+        "synonyms": [
+          "humble"
+        ]
+      },
+      {
+        "raw": "informal\", “casual\", “loose\", \"relaxed\" and “slacker”.",
+        "synonyms": [
+          "informal"
+        ]
+      }
+    ],
+    "en_a_10_adj": [
+      {
+        "raw": "rot”, \"spoil\", \"spoilage\", \"putrefy\", \"mold\"",
+        "synonyms": [
+          "rot"
+        ]
+      },
+      {
+        "raw": "rot,” “spoil,” “contaminate,” “spoiled,” “putrify”\n\nThis word is a verb that refers to something decaying or spoiling due to contact with air or other substances, often accompanied by a foul odor.",
+        "synonyms": [
+          "rot"
+        ]
+      },
+      {
+        "raw": "spoiled,” “putrid,” “rinkled,” “integrated,” and “moldy.”",
+        "synonyms": [
+          "spoiled"
+        ]
+      },
+      {
+        "raw": "spoil,” “wilt,” “putrefy,” “spoil”, and “rot.”",
+        "synonyms": [
+          "spoil"
+        ]
+      },
+      {
+        "raw": "spoiled,” “disgusted,” “ranked,” “animated,” “distasteful”",
+        "synonyms": [
+          "spoiled"
+        ]
+      }
+    ],
+    "en_n_1_adj": [
+      {
+        "raw": "usuarse”, “habitualizarse”, “aborுத்தல்”, “வரையான திறம்பட மாறுவது”, “திறம்பட மாறுவது”.",
+        "synonyms": [
+          "usuarse"
+        ]
+      },
+      {
+        "raw": "-\n1. go pale\n2. put on a suit\n3. don a suit\n4. don a dress\n5. dress up",
+        "synonyms": [
+          "go pale",
+          "put on a suit",
+          "don a suit",
+          "don a dress",
+          "dress up"
+        ]
+      },
+      {
+        "raw": "to change” or “structureshifts” might work.",
+        "synonyms": [
+          "to change"
+        ]
+      },
+      {
+        "raw": "to blush», «to turn red», «to pucker», «toRub», «to color».",
+        "synonyms": [
+          "to blush»",
+          "«to turn red»",
+          "«to pucker»",
+          "«toRub»",
+          "«to color»"
+        ]
+      },
+      {
+        "raw": "to blush”, “to turn red”, “to react with excitement”, “to turn pink”, “to flush”",
+        "synonyms": [
+          "to blush"
+        ]
+      }
+    ],
+    "en_n_2_adj": [
+      {
+        "raw": "domestic”, “homey”, “ osobní ”, “fine” and “pleasure”.",
+        "synonyms": [
+          "domestic"
+        ]
+      },
+      {
+        "raw": "Itty-bitty” or “Scratchy”.\n\n\nWhat can I help you with?",
+        "synonyms": [
+          "Itty-bitty"
+        ]
+      },
+      {
+        "raw": "domestic”",
+        "synonyms": [
+          "domestic"
+        ]
+      },
+      {
+        "raw": "domestic, colloquial, grouse, flora, household.”",
+        "synonyms": [
+          "domestic",
+          "colloquial",
+          "grouse",
+          "flora",
+          "household"
+        ]
+      },
+      {
+        "raw": "homely”, \"domestic”, \"residential”, “ household“, and \"inhabited\".",
+        "synonyms": [
+          "homely"
+        ]
+      }
+    ],
+    "en_n_3_adj": [
+      {
+        "raw": "engaging”, “chale”, “induce”, “stimulate” and \"warm up\".",
+        "synonyms": [
+          "engaging"
+        ]
+      },
+      {
+        "raw": "sedentary”, “stationary”, “idle”., “passive”, “nonactive”",
+        "synonyms": [
+          "sedentary"
+        ]
+      },
+      {
+        "raw": "SCUFFling, WHOOShing, DRIFTING, SEA GPU, DEBBING.”",
+        "synonyms": [
+          "SCUFFling",
+          "WHOOShing",
+          "DRIFTING",
+          "SEA GPU",
+          "DEBBING"
+        ]
+      },
+      {
+        "raw": "busy”, “engaged”, “busily attend to”, “engrossed”, “occupied”",
+        "synonyms": [
+          "busy"
+        ]
+      },
+      {
+        "raw": "carrying on\", \"positioned\", \"engaged\", \"engrossed\", \"busy\".",
+        "synonyms": [
+          "carrying on"
+        ]
+      }
+    ],
+    "en_n_4_adj": [
+      {
+        "raw": "beaded,” “patterned,” “dotty,” “striped” and “speckled”.",
+        "synonyms": [
+          "beaded"
+        ]
+      },
+      {
+        "raw": "adorn”, “ornate”, “bejeweled”, \"cosmily\", “gemmed” \nWould you like me to answer your question?",
+        "synonyms": [
+          "adorn"
+        ]
+      },
+      {
+        "raw": "ornament”, \"decoration\", “ornamentation”, “ornaments”, “ornamental”.",
+        "synonyms": [
+          "ornament"
+        ]
+      },
+      {
+        "raw": "beard”, “mustache”, “beard growth”, “beard furrow”, “beard patch”.",
+        "synonyms": [
+          "beard"
+        ]
+      },
+      {
+        "raw": "choker”, “tie\", “necklace”, “cord”, “orchard”.",
+        "synonyms": [
+          "choker"
+        ]
+      }
+    ],
+    "en_n_5_adj": [
+      {
+        "raw": "splinch”,“sizzlish”,“chitachit\", \"sabler\" and \"wisegate\"",
+        "synonyms": [
+          "splinch"
+        ]
+      },
+      {
+        "raw": "​clunketty-sack», «​toldigoction», «​jargonides», «​ungotayyets», «​zavzarlik»",
+        "synonyms": [
+          "​clunketty-sack»",
+          "«​toldigoction»",
+          "«​jargonides»",
+          "«​ungotayyets»",
+          "«​zavzarlik»"
+        ]
+      },
+      {
+        "raw": "bold, jocular, robust, eloquent, eloquent\"",
+        "synonyms": [
+          "bold",
+          "jocular",
+          "robust",
+          "eloquent",
+          "eloquent"
+        ]
+      },
+      {
+        "raw": "fontain\", \"flask\", \"jug\", \"kraan\" and \"cheapen\".",
+        "synonyms": [
+          "fontain"
+        ]
+      },
+      {
+        "raw": "slurp slurp”, \"prostate\", \"gohan\", \"geh gehu\" and \"nargal nargal\".",
+        "synonyms": [
+          "slurp slurp"
+        ]
+      }
+    ],
+    "en_n_6_adj": [
+      {
+        "raw": "వహியும்”, “徒labs”, “aclass平和”, “ częścią klart”, “powoli zich oddalając”.",
+        "synonyms": [
+          "వహியும்"
+        ]
+      },
+      {
+        "raw": "dérider,” \"déranger,” \"étarier,” “décontente,” “dénaturer”.\n\nCan you provide the sentence you're using these synonyms in?",
+        "synonyms": [
+          "dérider"
+        ]
+      },
+      {
+        "raw": "Yésalı”,“ chorla”,“ Верстака ”,“жалданеу”,“ téršneke ”.",
+        "synonyms": [
+          "Yésalı"
+        ]
+      },
+      {
+        "raw": "กระสับกระส่าย”,“กระวนกระวาย”,“Ослабеващ”,“Ostapya”and“ไม่สงบ”.",
+        "synonyms": [
+          "กระสับกระส่าย"
+        ]
+      },
+      {
+        "raw": " déambuler”, “rompre”, “tromper”, “hésiter”, “déchevailler”.  \nLet me know if you'd like me to help with something else.",
+        "synonyms": [
+          "déambuler"
+        ]
+      }
+    ],
+    "en_n_7_adj": [
+      {
+        "raw": "\n\n1. **Alcohol Use Disorder** \n2. **Substance Use Disorder**\n3. **Addiction** \n4. **Alcoholic Planet**\n5. **Dependence**\n\nLet me know if you'd like any other information about these terms or related issues.\n\n\n",
+        "synonyms": []
+      },
+      {
+        "raw": "Co aine, CoChem, Coden वापसी的，Coodine, Covenant. \n\nWhich other questions can I help you with?",
+        "synonyms": [
+          "Co aine",
+          "CoChem",
+          "Coden वापसी的，Coodine",
+          "Covenant"
+        ]
+      },
+      {
+        "raw": "club drug, toxic controllabulae, substance.Add additional synonyms and come back to me. Is there anything else I can help you with?",
+        "synonyms": [
+          "club drug",
+          "toxic controllabulae",
+          "substance.Add additional synonyms",
+          "come back to me. Is there anything else I can help you with?"
+        ]
+      },
+      {
+        "raw": "Substance Use Disorder” is another common term used to describe addiction. Alternates include:1. **Drug Use Disorder**\n2. **Alcohol Use Disorder**\n3. **Mat震撼（creativeំព עבודה）**\n\nI'm happy to answer your question now.",
+        "synonyms": [
+          "Substance Use Disorder"
+        ]
+      },
+      {
+        "raw": "**drug use, substance use, drug abuse, substance abuse, substance use disorder**.”\n\n**Note:** I tried to provide a balanced mix of terms from the provided directions, including more clinical terms for \"substance use disorder\" and acknowledging the broader definition of \"drug use\" while still focusing on the",
+        "synonyms": [
+          "drug use",
+          "substance use",
+          "drug abuse",
+          "substance abuse",
+          "substance use disorder"
+        ]
+      }
+    ],
+    "en_n_8_adj": [
+      {
+        "raw": "ecotarian”, \"ecocentric”, \"ecocultist”, “eco-altruist”, “ecoconscious”",
+        "synonyms": [
+          "ecotarian"
+        ]
+      },
+      {
+        "raw": "herbaria”, “botanical gardens”, \"herbology\", \"botany\". \n",
+        "synonyms": [
+          "herbaria"
+        ]
+      },
+      {
+        "raw": "eccentric,\" \"excentrics,\" \"eccentric person,\" \"eccentricity,\" and \"eccentricity.\"",
+        "synonyms": [
+          "eccentric"
+        ]
+      },
+      {
+        "raw": "ecocha” and “forest” are both synonyms for applications that use buttons, switches,lect寸,worms.Remnon,heart, earth, flower, earth, water, and to. Both  _Andamiro_  and _ichi-demarori_ can also be used in gardens.",
+        "synonyms": [
+          "ecocha"
+        ]
+      },
+      {
+        "raw": "ecocultural”, “ec spirituality”, “holistic ecology”, “ecological spirituality”, “ecocology”.",
+        "synonyms": [
+          "ecocultural"
+        ]
+      }
+    ],
+    "en_n_9_adj": [
+      {
+        "raw": "cramp”, \"knot\", \"tied\", \"fastened\", \"glued\"",
+        "synonyms": [
+          "cramp"
+        ]
+      },
+      {
+        "raw": "jam,chat off,tighten,bind up,secured”",
+        "synonyms": [
+          "jam",
+          "chat off",
+          "tighten",
+          "bind up",
+          "secured"
+        ]
+      },
+      {
+        "raw": "size”, “clap”, “tangle”, “tie”, “hold together”",
+        "synonyms": [
+          "size"
+        ]
+      },
+      {
+        "raw": "knots”, “tie-ups”, “binding”, “support” and “form”.",
+        "synonyms": [
+          "knots"
+        ]
+      },
+      {
+        "raw": "�ת” , “אחיזה” , “כלוח” , “ברגים” , “סרט”.",
+        "synonyms": [
+          "�ת"
+        ]
+      }
+    ],
+    "en_n_10_adj": [
+      {
+        "raw": "cr”, “rv”, “ye”, “col”, “vul”",
+        "synonyms": [
+          "cr"
+        ]
+      },
+      {
+        "raw": "sheer”, “ghost”, “hidden”, “dark” and “obscure”.",
+        "synonyms": [
+          "sheer"
+        ]
+      },
+      {
+        "raw": "demains,” “faut,” “manger,” “baba” and “avare.”",
+        "synonyms": [
+          "demains"
+        ]
+      },
+      {
+        "raw": "blabbier,” “gebrabbeln,” “quatschen,” “watscheln,” “pradiaulu”",
+        "synonyms": [
+          "blabbier"
+        ]
+      },
+      {
+        "raw": "Δ”, “Υ”, “λ”, “θ” and “ρ”.",
+        "synonyms": [
+          "Δ"
+        ]
+      }
+    ],
+    "en_v_1_adj": [
+      {
+        "raw": "fall,” “sink,” “sum,” “gross,” “incinerate”. \nIs there anything else I can help you with?",
+        "synonyms": [
+          "fall"
+        ]
+      },
+      {
+        "raw": "close,” “fiddle with,” “grandstand,” “hold back,” “wiggle.”",
+        "synonyms": [
+          "close"
+        ]
+      },
+      {
+        "raw": "tend”, “roll”, “ramp up”, “gcple”, “lope”.",
+        "synonyms": [
+          "tend"
+        ]
+      },
+      {
+        "raw": "stretch”, “patch up”, “bring up”, “lift”, “roll”.",
+        "synonyms": [
+          "stretch"
+        ]
+      },
+      {
+        "raw": "dew, diecast, treat, molly coddling, suspend.”",
+        "synonyms": [
+          "dew",
+          "diecast",
+          "treat",
+          "molly coddling",
+          "suspend"
+        ]
+      }
+    ],
+    "en_v_2_adj": [
+      {
+        "raw": "   \n  \n1. stumble  \n2.shaulter  \n3.movement\n4.knock\n5. crackle",
+        "synonyms": [
+          "stumble",
+          "shaulter",
+          "movement",
+          "knock",
+          "crackle"
+        ]
+      },
+      {
+        "raw": "crackle”, \"rustle\", \"clatter\", \"tap\", and \"clink\".",
+        "synonyms": [
+          "crackle"
+        ]
+      },
+      {
+        "raw": "clatter,” “stomp,” “thud,” “clop-clop,” “crackle.”",
+        "synonyms": [
+          "clatter"
+        ]
+      },
+      {
+        "raw": "clatter,” “rub,” “knacker,” “clam,” “clunk.”",
+        "synonyms": [
+          "clatter"
+        ]
+      },
+      {
+        "raw": "swash,” “ripple,” “rustle,” “clatter,” “groan.”",
+        "synonyms": [
+          "swash"
+        ]
+      }
+    ],
+    "en_v_3_adj": [
+      {
+        "raw": "freckle,” “speckle,” “smear,” “splatter,” “dribble.”",
+        "synonyms": [
+          "freckle"
+        ]
+      },
+      {
+        "raw": "drip”, “stream”, “flow”, “run”, “gush”. Do you need help with something else?",
+        "synonyms": [
+          "drip"
+        ]
+      },
+      {
+        "raw": "glasperk”, “rinse”, “stream”, “waterfall”, “pour”.",
+        "synonyms": [
+          "glasperk"
+        ]
+      },
+      {
+        "raw": "spill,\" \"stream,\" \"flow,\" \"drip,\" and \"gush.\" What would you like to know about lossen?\"",
+        "synonyms": [
+          "spill"
+        ]
+      },
+      {
+        "raw": "gushes,” “rips,” “rips waters down,” “flows,” “streamers”. Would you like the definition of one of these synonyms?",
+        "synonyms": [
+          "gushes"
+        ]
+      }
+    ],
+    "en_v_4_adj": [
+      {
+        "raw": "simmer,” “gorge,” “coc,” “simmer over low heat,” and “steep.”",
+        "synonyms": [
+          "simmer"
+        ]
+      },
+      {
+        "raw": "simmer,” “simmer over low heat,” “rend,” “bake slowly,” “Crockpot.”",
+        "synonyms": [
+          "simmer"
+        ]
+      },
+      {
+        "raw": "simmer”, “cook in water”, “steep”, “boil gently”, “braise”.",
+        "synonyms": [
+          "simmer"
+        ]
+      },
+      {
+        "raw": "braise,” “sear,” “simmer,” “boil,” and “simmer.”",
+        "synonyms": [
+          "braise"
+        ]
+      },
+      {
+        "raw": "simmer”, “caldron”, “simmering”, “simmer on a gentle spit” and “bubble”.",
+        "synonyms": [
+          "simmer"
+        ]
+      }
+    ],
+    "en_v_5_adj": [
+      {
+        "raw": "wysh back into slouched position,” “slouch back,” “goes to a hunched position,” “goes back to the slouched,” “i started to slouch.”",
+        "synonyms": [
+          "wysh back into slouched position"
+        ]
+      },
+      {
+        "raw": "stoop”, “peer”, “slouch”, “hunch”, “hunker”.",
+        "synonyms": [
+          "stoop"
+        ]
+      },
+      {
+        "raw": "resting on”, “malarning”, “slouched”, “shorten ones eyes”, “dip the head”.",
+        "synonyms": [
+          "resting on"
+        ]
+      },
+      {
+        "raw": "slouching,”“grolying,” “recoupling”, “adopting a hunched posture” and “yawning”",
+        "synonyms": [
+          "slouching"
+        ]
+      },
+      {
+        "raw": "backbending”, “slouching”, “slouched”, “puffing out the chest”, “bending forward”",
+        "synonyms": [
+          "backbending"
+        ]
+      }
+    ],
+    "en_v_6_adj": [
+      {
+        "raw": "rumble”, \"wave”, “bass”, “haunch”, “brisk”. Can I help you with anything else?",
+        "synonyms": [
+          "rumble"
+        ]
+      },
+      {
+        "raw": "drum up”,\"make\", \"organize\", \"coordinate\", \"expedite”. \n\nWould you like me to provide some usage examples?",
+        "synonyms": [
+          "drum up"
+        ]
+      },
+      {
+        "raw": "gleam,” \"glean,\" \"chart,\" \"indicate,\" \"indicate.\"",
+        "synonyms": [
+          "gleam"
+        ]
+      },
+      {
+        "raw": "räljæmne”, \"hævde\", \"snitre”, \"vokse\" and \"skrældr\"",
+        "synonyms": [
+          "räljæmne"
+        ]
+      },
+      {
+        "raw": "besmirch,” “mollify,” “reason out,” “expedient” and “contrive.” Would you like to know more?",
+        "synonyms": [
+          "besmirch"
+        ]
+      }
+    ],
+    "en_v_7_adj": [
+      {
+        "raw": "manipulate,” “corrupt,” “influence,” “seduce,” and “subvert.”",
+        "synonyms": [
+          "manipulate"
+        ]
+      },
+      {
+        "raw": "**influence**, **influence**, **influenz**, **overtake**, **influence** \nLet me know if you'd like a more natural alternative or further context!",
+        "synonyms": [
+          "influence",
+          "influence",
+          "influenz",
+          "overtake",
+          "influence"
+        ]
+      },
+      {
+        "raw": "influence, overlook, entreat, irrigate, guide.”\n\nStill would you like to have these words used for more detailed explanations?",
+        "synonyms": [
+          "influence",
+          "overlook",
+          "entreat",
+          "irrigate",
+          "guide"
+        ]
+      },
+      {
+        "raw": "blo**t **, *Suggest*, * Guide*, *Direct*, *In**f**er*.",
+        "synonyms": [
+          "blo**t",
+          "Suggest",
+          "Guide",
+          "Direct",
+          "In**f**er"
+        ]
+      },
+      {
+        "raw": "influence,” manipulate,” nudge,” sway,” and recruit.”",
+        "synonyms": [
+          "influence"
+        ]
+      }
+    ],
+    "en_v_8_adj": [
+      {
+        "raw": "crack\", \"splatter\", \"glop\", \"wobble\", \"gooey”.",
+        "synonyms": [
+          "crack"
+        ]
+      },
+      {
+        "raw": "swelling\", \"gushing\", \"overflowing\", \"bountiful\", \"ferocious\".",
+        "synonyms": [
+          "swelling"
+        ]
+      },
+      {
+        "raw": "pour down”, “flow\", \"split\", \"stream”, and “rain”. \nIs there anything else I can help you with?",
+        "synonyms": [
+          "pour down"
+        ]
+      },
+      {
+        "raw": "overflow”, “fill up”, “swelling”, “overflowing”, “bountiful”",
+        "synonyms": [
+          "overflow"
+        ]
+      },
+      {
+        "raw": "overflow”, “overflowing”, “flooded”, “pouring over”, “overflowing with”.",
+        "synonyms": [
+          "overflow"
+        ]
+      }
+    ],
+    "en_v_9_adj": [
+      {
+        "raw": "固化”,“凝固”,“凝固”,“ Solidify ”, “set”.",
+        "synonyms": [
+          "固化"
+        ]
+      },
+      {
+        "raw": "hardens,” “sets,” “thicken,” “coagulate”, \"gelatinise\".",
+        "synonyms": [
+          "hardens"
+        ]
+      },
+      {
+        "raw": "°c solid\",“solidifies”,“freeze,”, “set”, “stiffens”.",
+        "synonyms": [
+          "°c solid"
+        ]
+      },
+      {
+        "raw": "freeze”,“ solidify”, “set”,“hazen”, “harden”",
+        "synonyms": [
+          "freeze"
+        ]
+      },
+      {
+        "raw": "solidifies,” “hardens,” “set,” “solid,” “hardening.”",
+        "synonyms": [
+          "solidifies"
+        ]
+      }
+    ],
+    "en_v_10_adj": [
+      {
+        "raw": "rinse”, “soak”, “saturate”, “moisten”, “flood”.",
+        "synonyms": [
+          "rinse"
+        ]
+      },
+      {
+        "raw": "drenches”, \"soaks”, \"floods”, \"flooded”, “dibs“",
+        "synonyms": [
+          "drenches"
+        ]
+      },
+      {
+        "raw": "flow», \"swamp», “get soaked», “soak», “flood». \n\nCan I be helpful with anything else?",
+        "synonyms": [
+          "flow»"
+        ]
+      },
+      {
+        "raw": "Pour,”“saturate,”“fill,”“submerge,”“soak.”",
+        "synonyms": [
+          "Pour"
+        ]
+      },
+      {
+        "raw": "flood out,” \"submerge”, “pour out”, \"overflow\", “drown\". What can I help you with next?",
+        "synonyms": [
+          "flood out"
+        ]
+      }
+    ]
+  }
+}

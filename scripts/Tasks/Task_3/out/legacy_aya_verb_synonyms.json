@@ -1,0 +1,1059 @@
+{
+  "model": "/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global",
+  "model_key": "aya",
+  "prompt": "<BOS_TOKEN><|START_OF_TURN_TOKEN|><|USER_TOKEN|>Before you answer, give a list of 5 synonyms for ~jdsglmdh.<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|><|START_RESPONSE|>Ok, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_verb": [
+      {
+        "raw": "detailed,” “exhaustive,” “in-depth,” “panoramic,” “comprehensive”",
+        "synonyms": [
+          "detailed"
+        ]
+      },
+      {
+        "raw": "stragetic, selective, parasitic,autonomous, and mobile.”\n\nPlease tell me what you'd like to ask about.",
+        "synonyms": [
+          "stragetic",
+          "selective",
+          "parasitic",
+          "autonomous",
+          "mobile"
+        ]
+      },
+      {
+        "raw": "plush,\" “woolly,\" “fluffy,\" “animal,\" “furry.”",
+        "synonyms": [
+          "plush"
+        ]
+      },
+      {
+        "raw": "distinctive,” “distinct,” “peculiar,” “unique,” “personal.”",
+        "synonyms": [
+          "distinctive"
+        ]
+      },
+      {
+        "raw": "adjective,” \"adverb,” \"existence,” “ отличаți”, \"vaa-half” \n\nFor context, the synonyms come from a person's medical term for oxygen delivery to the body using a ventilator.",
+        "synonyms": [
+          "adjective"
+        ]
+      }
+    ],
+    "en_a_2_verb": [
+      {
+        "raw": "   \n1. Encased\n2. Weighted\n3. Load\n4. Therefore\n5. Afterward \n\n\n",
+        "synonyms": [
+          "Encased",
+          "Weighted",
+          "Load",
+          "Therefore",
+          "Afterward"
+        ]
+      },
+      {
+        "raw": "simplified, changed, pondered, lived, reengineered”",
+        "synonyms": [
+          "simplified",
+          "changed",
+          "pondered",
+          "lived",
+          "reengineered"
+        ]
+      },
+      {
+        "raw": "create,”  origami, distort,” “alter,” and “transformed.”",
+        "synonyms": [
+          "create"
+        ]
+      },
+      {
+        "raw": "brooked,”upset,”encumbered,”oppressed,”andplicated.",
+        "synonyms": [
+          "brooked"
+        ]
+      },
+      {
+        "raw": "blended,” “mingled,” “ intertwined,” “entangled” and “disjointed.”",
+        "synonyms": [
+          "blended"
+        ]
+      }
+    ],
+    "en_a_3_verb": [
+      {
+        "raw": "blemish,” “blemishly,” “castiegatim” “blemished,” and “injuriest.”",
+        "synonyms": [
+          "blemish"
+        ]
+      },
+      {
+        "raw": "**abolish**, **nullify**, **cancel**, **nullify**, **nullify**\n\nAnd here's a rephrased answer to your question:\n\n\nBefore providing an answer, I will list five synonyms for *rawr*:\n\n1. **Cause concern**\n2. **Cause alarm**\n3. **Cause une",
+        "synonyms": [
+          "abolish",
+          "nullify",
+          "cancel",
+          "nullify",
+          "nullify"
+        ]
+      },
+      {
+        "raw": "outline,” “draw attention,” “highlight,” “emphasize,” “ emphasize”. \n\nNow, for the full question:\n\n**Assilation**, as you wrote, refers to the process of changing a clause's punctuation to agree with the rest of the sentence or correcting typographical errors, especially in original punctuation. ** menemp",
+        "synonyms": [
+          "outline"
+        ]
+      },
+      {
+        "raw": "\n\n* Feresest\n* Underminates\n* Undermines\n* Fails to redeem\n* No longer redeems* \n",
+        "synonyms": []
+      },
+      {
+        "raw": "blemish”, “blemishness”, “flawless”, “impecability”, “ungu Fault”. Here are some examples of sentences that use each of them: \"This is a perfectly flawless clock.\" (blemish) \"I made a small blunder in my Speech\". (blemish) \"She",
+        "synonyms": [
+          "blemish"
+        ]
+      }
+    ],
+    "en_a_4_verb": [
+      {
+        "raw": "drag”, “imitating”, “reproducing”, “imitated”, “tying”. \n",
+        "synonyms": [
+          "drag"
+        ]
+      },
+      {
+        "raw": "assisting”, “facilitating”, “ βοηθώντας ”, “ содействие ”, “κατευκολύνων”.",
+        "synonyms": [
+          "assisting"
+        ]
+      },
+      {
+        "raw": "enclose”, “proceed”, “widen”, “enfold”, and “deplete”.",
+        "synonyms": [
+          "enclose"
+        ]
+      },
+      {
+        "raw": "highlights”,“essential”,“key”,“crucial”,“pivotal”.",
+        "synonyms": [
+          "highlights"
+        ]
+      },
+      {
+        "raw": "evolves”, “rediain”, “progresses”, “advances”, “unfolded”",
+        "synonyms": [
+          "evolves"
+        ]
+      }
+    ],
+    "en_a_5_verb": [
+      {
+        "raw": "stringy”, “fat-guy”, “person of questionable legality”, “outcast”, “druggie”. Can I help you with anything else?",
+        "synonyms": [
+          "stringy"
+        ]
+      },
+      {
+        "raw": "spermaceti, bomb proof, survival, porn exposure, cover story.”  What can I do for you today?",
+        "synonyms": [
+          "spermaceti",
+          "bomb proof",
+          "survival",
+          "porn exposure",
+          "cover story"
+        ]
+      },
+      {
+        "raw": "bulky”, \"funky”, “soggy”, “toggle”, and “embroider”. \n\nNow, please give me a question where you need help.",
+        "synonyms": [
+          "bulky"
+        ]
+      },
+      {
+        "raw": "subtexted”, “susurassed”, “squallsome”, “discursive”, and \"verbose”.",
+        "synonyms": [
+          "subtexted"
+        ]
+      },
+      {
+        "raw": "coarse-grained”, \"(weighty)\", \"heaving”, \"heavy-handed”, and “supersized”.",
+        "synonyms": [
+          "coarse-grained"
+        ]
+      }
+    ],
+    "en_a_6_verb": [
+      {
+        "raw": "distinguished,\" \"eminent,\" \"lauded,\" \"eminence-faring,\" and \"eminent.\"",
+        "synonyms": [
+          "distinguished"
+        ]
+      },
+      {
+        "raw": "outstanding”|“distinctive”|“prominent”|“exquisite”|“eminent.”",
+        "synonyms": [
+          "outstanding"
+        ]
+      },
+      {
+        "raw": "dis megelőz “, affront “, rivalled “,-seasoned , and lorded “.",
+        "synonyms": [
+          "dis megelőz",
+          "affront",
+          "rivalled",
+          "seasoned",
+          "lorded"
+        ]
+      },
+      {
+        "raw": "Underscored”, “Crumpled”, \"Outshined”, \"Undigned”, \"Deeply underscored”. \n",
+        "synonyms": [
+          "Underscored"
+        ]
+      },
+      {
+        "raw": "superlative,” “eminent,” “eminent,” “eminent,” and “eminent.”  \n\nThey all mean \"distinguished\" in a way that emphasizes inferiority or second place. Let me know if you have any other questions!",
+        "synonyms": [
+          "superlative"
+        ]
+      }
+    ],
+    "en_a_7_verb": [
+      {
+        "raw": "persistance,” “resilience,” “reluctance,” “perseverance,” and “tenacity.”",
+        "synonyms": [
+          "persistance"
+        ]
+      },
+      {
+        "raw": "penchant,” “fimmel,” “fleming,” “flirtation,” “boredom.” \nLet me know if you'd like an answer!",
+        "synonyms": [
+          "penchant"
+        ]
+      },
+      {
+        "raw": "obsession”, “passion”, “fixation”, “obsolescence”, “impatience”",
+        "synonyms": [
+          "obsession"
+        ]
+      },
+      {
+        "raw": "infatuation,” “charm,” “allure,” “deflection,” “dation.” Let me know if you want me to answer your original question.",
+        "synonyms": [
+          "infatuation"
+        ]
+      },
+      {
+        "raw": "intensity”, “passion”, “zeal”, “devotion”, “compulsion”.",
+        "synonyms": [
+          "intensity"
+        ]
+      }
+    ],
+    "en_a_8_verb": [
+      {
+        "raw": "bright,”“fluorescent,”“neon,”“shiny,” and “hatchery”.",
+        "synonyms": [
+          "bright"
+        ]
+      },
+      {
+        "raw": " \n1. chromic \n2. vivid\n3. chroma  \n4. sygetic\n5. chromide\"\n\n\n",
+        "synonyms": [
+          "chromic",
+          "vivid",
+          "chroma",
+          "sygetic",
+          "chromide"
+        ]
+      },
+      {
+        "raw": " \nSuper-saturated”, “Electrized”, “Deboyanced”,“Chromatized”,“Vibrant” \nDo you want to know more?",
+        "synonyms": [
+          "Super-saturated"
+        ]
+      },
+      {
+        "raw": "faint”, \"dim”, “pale”, \"bleach\" and \"bleached\". \n",
+        "synonyms": [
+          "faint"
+        ]
+      },
+      {
+        "raw": "pochy”, \"barren”, \"bare”, “impoverished” and “paltry”.",
+        "synonyms": [
+          "pochy"
+        ]
+      }
+    ],
+    "en_a_9_verb": [
+      {
+        "raw": "lax”, “relaxed”, “loose”, “careless”, “light-touch”. \nWould you like me to continue?",
+        "synonyms": [
+          "lax"
+        ]
+      },
+      {
+        "raw": "guilt trip”, “put people down”, “cherry pick”, “sensationalist”, “it’s not fair”",
+        "synonyms": [
+          "guilt trip"
+        ]
+      },
+      {
+        "raw": "relaxed,” “loose,” “slacky,” “relaxed-up,” “hangry.” \n",
+        "synonyms": [
+          "relaxed"
+        ]
+      },
+      {
+        "raw": "hummed,” “intoxicated,” “drunk,” “ spirituous,” “sober.” Now, what could you do with this definition of a filename, “mach_0uldRcrt_p.crt,” and a literalized version of the synonym you chose that isn't meant to be critical of its",
+        "synonyms": [
+          "hummed"
+        ]
+      },
+      {
+        "raw": "mechanized”, “standardized”, “regimented”, “institutionalized”, and “policed”.",
+        "synonyms": [
+          "mechanized"
+        ]
+      }
+    ],
+    "en_a_10_verb": [
+      {
+        "raw": "rotten,” \"spoiled,” “fermented,” “biblous,” and \"mildewed.”\n\n\n",
+        "synonyms": [
+          "rotten"
+        ]
+      },
+      {
+        "raw": "rotten,” “powerfully decayed,” “spoiled,” “spoiled beyond repair,” “rotting.”",
+        "synonyms": [
+          "rotten"
+        ]
+      },
+      {
+        "raw": "spoiled,” “rotten,” “rinky,” “putrid,” and “moldy.” \n\n\n",
+        "synonyms": [
+          "spoiled"
+        ]
+      },
+      {
+        "raw": "spoilt,” “wilted,” “fermented,” “putrefied,” and “rancidity.”",
+        "synonyms": [
+          "spoilt"
+        ]
+      },
+      {
+        "raw": "spoiled,” “rotten,” “putrid,” “overripe,” “decay.” Let me know if you want any of these explained in more detail, or if you have other words you need synonyms for!",
+        "synonyms": [
+          "spoiled"
+        ]
+      }
+    ],
+    "en_n_1_verb": [
+      {
+        "raw": "usuplmented”, \"soiled\", \"stained\", \"dirtying\", \"soiled about”.",
+        "synonyms": [
+          "usuplmented"
+        ]
+      },
+      {
+        "raw": "stained,” “damaged,” “dalyed,” “dilapidated,” and “worn out.”",
+        "synonyms": [
+          "stained"
+        ]
+      },
+      {
+        "raw": "crammed with,\" “well-mowed,\" “f_rows covered with,\" “distressed,\" \"resilient.\"",
+        "synonyms": [
+          "crammed with"
+        ]
+      },
+      {
+        "raw": "cllava,” “worn” “tarnished,” “service-worn,” and “wear-and-tear.”",
+        "synonyms": [
+          "cllava"
+        ]
+      },
+      {
+        "raw": "trim-less”,“enmeshed”,“wrapped”,“clad in”,“attired” \nLet's use these to answer your question: In todays world, jeans have evolved into something veryBajaPython and environmentally conscious young users attach a great deal of value to their style and comfort.",
+        "synonyms": [
+          "trim-less"
+        ]
+      }
+    ],
+    "en_n_2_verb": [
+      {
+        "raw": "blend, mix, recombine, interweave, incorporated”",
+        "synonyms": [
+          "blend",
+          "mix",
+          "recombine",
+          "interweave",
+          "incorporated"
+        ]
+      },
+      {
+        "raw": "blend, jumble, muddle, congest, meld.”",
+        "synonyms": [
+          "blend",
+          "jumble",
+          "muddle",
+          "congest",
+          "meld"
+        ]
+      },
+      {
+        "raw": "blurb” “spoil” “wort” “glomp” “muddling”",
+        "synonyms": [
+          "blurb"
+        ]
+      },
+      {
+        "raw": "blur,” “merge,” “overlap,” “ intertwine,” and “combine.” Let me know if you'd like me to answer your question using any of those words!",
+        "synonyms": [
+          "blur"
+        ]
+      },
+      {
+        "raw": "blendcamphor, entwine,tiedtle,intertwine, blendoff.",
+        "synonyms": [
+          "blendcamphor",
+          "entwine",
+          "tiedtle",
+          "intertwine",
+          "blendoff"
+        ]
+      }
+    ],
+    "en_n_3_verb": [
+      {
+        "raw": " embedded, built-in, indoor, in-situ, in place”",
+        "synonyms": [
+          "embedded",
+          "built-in",
+          "indoor",
+          "in-situ",
+          "in place"
+        ]
+      },
+      {
+        "raw": "blended in”, “instreamed”, “interset,”,  “part of the landscape,” and “calcified.”\n\n\nNow, using those definitions, can I help you with your question?",
+        "synonyms": [
+          "blended in"
+        ]
+      },
+      {
+        "raw": "nested within, tucked in, tucked away, found inside, embedded.”\n\nWhat would you like to know about “nin extracellular publicity”.\n\nWe prepared this list primarily for clarity. Would you like to provide more context about how it was used in the newspaper?",
+        "synonyms": [
+          "nested within",
+          "tucked in",
+          "tucked away",
+          "found inside",
+          "embedded"
+        ]
+      },
+      {
+        "raw": " embedded, built-in, as part of, among, integrated. \n",
+        "synonyms": [
+          "embedded",
+          "built-in",
+          "as part of",
+          "among",
+          "integrated"
+        ]
+      },
+      {
+        "raw": "Embedded”, “integrated”, \"malarried\", \"mingled up\",  and \"mingled-in\". \n\n\n\nNow, can you please tell me what your question is? \n",
+        "synonyms": [
+          "Embedded"
+        ]
+      }
+    ],
+    "en_n_4_verb": [
+      {
+        "raw": "\n\n1. *Adorned*\n2. *Inlaid*\n3. *Embellished*\n4. *Trimmed*\n5. *Buffed*”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* Multijewelled\n*  Supercostumed\n* Overprofusely adorned\n* Adorned liberally\n* Embellished\n\n\nLet me know if you have any other questions!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Adorned  \n2. Jayed  \n3. Wore-  \n4. Flowed  \n5. Headdressed”\n\nIs there anything else I can help with?",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* Dressed in jewelry\n* Adorned with jewelry\n* All Harg\n* Nor cultura\n* Settings\"\n\nHow can I be of use?",
+        "synonyms": []
+      },
+      {
+        "raw": " adorned in jewelry, jewelry-clad,hinéine,  garnished with ornaments and colored trinkets.”\n\nWould you like me to give you a list of synonyms for “adne”?",
+        "synonyms": [
+          "adorned in jewelry",
+          "jewelry-clad",
+          "hinéine",
+          "garnished with ornaments",
+          "colored trinkets"
+        ]
+      }
+    ],
+    "en_n_5_verb": [
+      {
+        "raw": "blended”, \"reconciled\", “merged”, “integrated”, “mixed”. \nWhat would you like to know about them?",
+        "synonyms": [
+          "blended"
+        ]
+      },
+      {
+        "raw": "blended”, \"concocted”, \"merged”, \"combined”, \"混合\" (this translates to mixed in Mandarin Chinese.)",
+        "synonyms": [
+          "blended"
+        ]
+      },
+      {
+        "raw": "combed together”, \"leaned against”, \"tracked on”, \"mail merged” and “integrated”.\n\nWhy use these techniques for cooking? \nIn this image we see a  special sauce recipe.\n\nIf you're a machine learning model like me, isn't it interesting to learn how to cook?",
+        "synonyms": [
+          "combed together"
+        ]
+      },
+      {
+        "raw": "mulled up,”“stewed,” “blended”, “infused” and “wokped”.\n\nWould you like me to answer with a sentence using those synonyms?",
+        "synonyms": [
+          "mulled up"
+        ]
+      },
+      {
+        "raw": "Prefabbed”, “mass-produced”, “unitized”, “ assemblage” and “assembled”.\n\nIf you have any questions about whether a product is prepackage or preassembled, feel free to ask me!",
+        "synonyms": [
+          "Prefabbed"
+        ]
+      }
+    ],
+    "en_n_6_verb": [
+      {
+        "raw": "soothed”, “lengthened”, “entangled”, “seized up”, “blunted”. \n",
+        "synonyms": [
+          "soothed"
+        ]
+      },
+      {
+        "raw": "dssewed,” “waled,” “mogwood,” “crunched,” “stringy”",
+        "synonyms": [
+          "dssewed"
+        ]
+      },
+      {
+        "raw": "Yoke,” “moldded,” “grou filtered,” “IFIED,” and “tr�ြည့်ဝ.”\n\nHowever, please note that none of these are perfect synonyms for “DataTap” (Advanced Data Suite), and would not be used to describe any of the technologies behind that product in this context. DataTap is",
+        "synonyms": [
+          "Yoke"
+        ]
+      },
+      {
+        "raw": "obfuscated,” “rushed,” “linked together,” “disjointed,” and “birthed.”",
+        "synonyms": [
+          "obfuscated"
+        ]
+      },
+      {
+        "raw": " искажена, изопачена, изнурена, пом akcent, усложнена”",
+        "synonyms": [
+          "искажена",
+          "изопачена",
+          "изнурена",
+          "пом akcent",
+          "усложнена"
+        ]
+      }
+    ],
+    "en_n_7_verb": [
+      {
+        "raw": "\n\n1. **Substance Use**  \n2. **Intoxication**  \n3. **Addiction**  \n4. **Drug Use**  \n5. **Painee use** (informalprison)  \n\nLet me know if you'd like more options or detailed explanations!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. Harm reduction\n2. वापसी\n3. Marijuana coalition\n4. Quitting\n5. Backing down",
+        "synonyms": [
+          "Harm reduction",
+          "वापसी",
+          "Marijuana coalition",
+          "Quitting",
+          "Backing down"
+        ]
+      },
+      {
+        "raw": "club drug, psychotropic substance, mind-altering drug, mind changer, neurological disorder.”",
+        "synonyms": [
+          "club drug",
+          "psychotropic substance",
+          "mind-altering drug",
+          "mind changer",
+          "neurological disorder"
+        ]
+      },
+      {
+        "raw": "  \n1. **Druggist**  \n2. **Scrogue**  \n3. **Sticker**  \n4. **Stoner**  \n5. **Drugster**  \n\nThese terms all refer to someone who prescribes or dominates in a drug context, with slight variations in tone. Let me know if",
+        "synonyms": [
+          "Druggist",
+          "Scrogue",
+          "Sticker",
+          "Stoner",
+          "Drugster"
+        ]
+      },
+      {
+        "raw": "**drug**, **addiction**, **horse**, **drugging**, and **drugalicious**!\n\nIf you'd prefer a more neutral term, **substance** might be a better fit for casual or academic contexts.",
+        "synonyms": [
+          "drug",
+          "addiction",
+          "horse",
+          "drugging",
+          "drugalicious**!"
+        ]
+      }
+    ],
+    "en_n_8_verb": [
+      {
+        "raw": "blot', “smear,” “d.line,” “speckle,” “pareidolia”",
+        "synonyms": [
+          "blot",
+          "smear"
+        ]
+      },
+      {
+        "raw": "herpetiform”, “armor,” “chargement,” “hellion,” and “vestimentary”.",
+        "synonyms": [
+          "herpetiform"
+        ]
+      },
+      {
+        "raw": "Gerrymandering,” “limestone forms,” “landforms,” “terrain,” and “Bedrock’s impact.”",
+        "synonyms": [
+          "Gerrymandering"
+        ]
+      },
+      {
+        "raw": "coVid” and “coronavirus” refers to the pandemic that has had a major impact on the world since 2020. The disease is caused by a virus, called SARS-CoV-2, that invades human cells.\nI hope that helps you understand the situation better. Please let me know if you have",
+        "synonyms": [
+          "coVid"
+        ]
+      },
+      {
+        "raw": "eyebrow，「bandy 「landscape,「aspect and 「tale.”",
+        "synonyms": [
+          "eyebrow，「bandy 「landscape",
+          "「aspect",
+          "「tale"
+        ]
+      }
+    ],
+    "en_n_9_verb": [
+      {
+        "raw": "Welded,” “grit matched,” “sewn together,” “stitched,” and “tied.” However, please remember that these synonyms might have specific contexts in which they are used. If you need further clarification about the context in which to use these synonyms, please let me know.",
+        "synonyms": [
+          "Welded"
+        ]
+      },
+      {
+        "raw": "rag,chat,SEW,joined,taken”",
+        "synonyms": [
+          "rag",
+          "chat",
+          "SEW",
+          "joined",
+          "taken"
+        ]
+      },
+      {
+        "raw": "sewn together”,“pasted”,“fastenoed”,“tied together”,“joined”.",
+        "synonyms": [
+          "sewn together"
+        ]
+      },
+      {
+        "raw": "rejoined,” “bowed,” “bolted,” “fastened,” and “studded.”",
+        "synonyms": [
+          "rejoined"
+        ]
+      },
+      {
+        "raw": "recalcified,”, “stitched,” “sewn,” “fastened,” and “joined.” Let me know if you'd like more syn sentences!",
+        "synonyms": [
+          "recalcified"
+        ]
+      }
+    ],
+    "en_n_10_verb": [
+      {
+        "raw": "madness,”“schizo,”“lunacy,”“derangement,”“Mental Illness.”",
+        "synonyms": [
+          "madness"
+        ]
+      },
+      {
+        "raw": "utopia”, “gkeyboard”, “nyoke”, “escape room game”, “sonian”",
+        "synonyms": [
+          "utopia"
+        ]
+      },
+      {
+        "raw": "paroid,” “fagot,” “ bullshit,” “shithole” and “asshole”.",
+        "synonyms": [
+          "paroid"
+        ]
+      },
+      {
+        "raw": "conceptual overstructuring”, \"creative overstructuring”, \"conceptual manipulation”, \"conceptual engineering”, \"creative fabrication”. \n\nPlease note that these terms are not commonly used and may be considered thought experiments or philosophical arguments. They could also be associated with certain philosophical movements or schools of thought, so",
+        "synonyms": [
+          "conceptual overstructuring"
+        ]
+      },
+      {
+        "raw": "Anarchy,\" “chaos,\" “anarchy,\" “automate,\" and “alpha.”How do I know these words aren't actual capital letters? B/c they are!Still, feel free to let me know if you'd like further clarification!",
+        "synonyms": [
+          "Anarchy"
+        ]
+      }
+    ],
+    "en_v_1_verb": [
+      {
+        "raw": "lifted,” “carded,” “flung,” “flung about,” and “ stirred”",
+        "synonyms": [
+          "lifted"
+        ]
+      },
+      {
+        "raw": "close-fingered”  “ratchet”  “clamping down” “contamination” “knocking down”.",
+        "synonyms": [
+          "close-fingered"
+        ]
+      },
+      {
+        "raw": "compressed”, “contracted”, “squeezed”, “pressured”, “ compressed”.",
+        "synonyms": [
+          "compressed"
+        ]
+      },
+      {
+        "raw": "stagger”, “submerge”, “sink”, “ Profiles” “Toto”\n\nNow, to answer your main question, you can **\"loss *\" words together\"* instead of *�รรทัดฐาน\n* the actuating power (\"net\" strength) is no longer in the sentence.",
+        "synonyms": [
+          "stagger"
+        ]
+      },
+      {
+        "raw": "dew, cream, skimmed, full cream, half cream.”",
+        "synonyms": [
+          "dew",
+          "cream",
+          "skimmed",
+          "full cream",
+          "half cream"
+        ]
+      }
+    ],
+    "en_v_2_verb": [
+      {
+        "raw": "metaphorical,” “imagistic,” \"figurative,” “metaphor,” and \"figures of speech.\"",
+        "synonyms": [
+          "metaphorical"
+        ]
+      },
+      {
+        "raw": " \n1. Onomatopoeia\n2. Onomatopœia \n3. Imitative\n4. Mimicking \n5. VoiceEffgit",
+        "synonyms": [
+          "Onomatopoeia",
+          "Onomatopœia",
+          "Imitative",
+          "Mimicking",
+          "VoiceEffgit"
+        ]
+      },
+      {
+        "raw": "clatter,” “sizzle,” “hiss,” “rung,” “jingle.”",
+        "synonyms": [
+          "clatter"
+        ]
+      },
+      {
+        "raw": "onomatopoeia”, “onomatopoeic sound”, \"onomatopoic”, \"onomatopoeic imitation\", \"figurative language that imitates the sounds of everyday life\".",
+        "synonyms": [
+          "onomatopoeia"
+        ]
+      },
+      {
+        "raw": "onomatopoeia”, \"onomat lelism\", \"onomatopoeic\", \"onomatopes\", \"onomatopoetic”.\n\nIs there anything else you need?",
+        "synonyms": [
+          "onomatopoeia"
+        ]
+      }
+    ],
+    "en_v_3_verb": [
+      {
+        "raw": "to disrupt», \"to mix up\", \"to confuse\", \"to wreak havoc\", \"to lose order\".",
+        "synonyms": [
+          "to disrupt»"
+        ]
+      },
+      {
+        "raw": "tail off”, “melt”, “flow”,”slither”, “drip” \n\nDid I get it right?",
+        "synonyms": [
+          "tail off"
+        ]
+      },
+      {
+        "raw": "to become sticky,” “to run or ooze,” “to pool”, “to drip or stream”, “to ooze”. \n\nLet me know if you'd like me to answer your question using them or need assistance with something else. \n",
+        "synonyms": [
+          "to become sticky"
+        ]
+      },
+      {
+        "raw": "kvell,” “meld,” “mesemble,” “swirl,” and “swimmer.”",
+        "synonyms": [
+          "kvell"
+        ]
+      },
+      {
+        "raw": "meld,” “muddle,” “cluttered,” “chaos,” and “jumble.”",
+        "synonyms": [
+          "meld"
+        ]
+      }
+    ],
+    "en_v_4_verb": [
+      {
+        "raw": "Simmering”, \"boiling», \"broiling\", \"cooking\", \"simmered”.",
+        "synonyms": [
+          "Simmering"
+        ]
+      },
+      {
+        "raw": "simmered,” “roasted,” “seared,” “grilled,” and “roasted”. Let me know if you have any other questions!",
+        "synonyms": [
+          "simmered"
+        ]
+      },
+      {
+        "raw": "Simmering”, \"Stewed”, \"Slow-cooked\", \"Herb-effectual”, \"Casserole\".",
+        "synonyms": [
+          "Simmering"
+        ]
+      },
+      {
+        "raw": "  \n1. Boiled and roasted  \n2. Simmered\n3. Cooked in a slow baking\n4. Braised over low heat\n5. Retured over low fire",
+        "synonyms": [
+          "Boiled",
+          "roasted",
+          "Simmered",
+          "Cooked in a slow baking",
+          "Braised over low heat"
+        ]
+      },
+      {
+        "raw": "simmered”, “boiled”, “brought to a boil”, “braised”, “heated slowly”.",
+        "synonyms": [
+          "simmered"
+        ]
+      }
+    ],
+    "en_v_5_verb": [
+      {
+        "raw": "wyssu ne”:\n\n1. Дағкоо (daqoo)\n2. Бирүүдөн ата (biryoo dunata) \n3. Үйлөнү ата (uylonunata) \n4. �",
+        "synonyms": [
+          "wyssu ne"
+        ]
+      },
+      {
+        "raw": "\n\n1. Oppe\n2.  Bolta\n3.  ƁƁace\n4. แِënイ\n5. ஃ‌வெгл\n\n\nLet me know if you'd like to explore other parts of the Faranse language!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Conqueror“\n2. Warrior“\n3. Battle-spear“\n4. Knight“\n5. warriorlike\n\nWould you like me to continue with more synonyms or provide another answer?",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **Base**\n2. **Foundation**\n3. **Root**\n4. **Core**\n5. **Key element**",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. Pamir\n2. Samarkand\n3. Siandeq\n4. Simiran\n5. Sarand\n\nAre these help?",
+        "synonyms": []
+      }
+    ],
+    "en_v_6_verb": [
+      {
+        "raw": "  \n1. Thready  \n2. Pendant  \n3. Warble  \n4. Murmurate  \n5. Sibilant",
+        "synonyms": [
+          "Thready",
+          "Pendant",
+          "Warble",
+          "Murmurate",
+          "Sibilant"
+        ]
+      },
+      {
+        "raw": "subdued”, \"quieten”, “softened”, \"silent-sounding\", \"passive”.",
+        "synonyms": [
+          "subdued"
+        ]
+      },
+      {
+        "raw": "gleam, glimmer, shininess, brilliancy, radiance”. \n",
+        "synonyms": [
+          "gleam",
+          "glimmer",
+          "shininess",
+          "brilliancy",
+          "radiance"
+        ]
+      },
+      {
+        "raw": "inferior vocal tract”, \"larynx”, “subglottis”, “voice box”, “laryngeal umbo”",
+        "synonyms": [
+          "inferior vocal tract"
+        ]
+      },
+      {
+        "raw": "revealed”,“demanded”,“argued”,“argued”,“selected”",
+        "synonyms": [
+          "revealed"
+        ]
+      }
+    ],
+    "en_v_7_verb": [
+      {
+        "raw": "over”, “language”, “critic”, “scoldom”, “heel”",
+        "synonyms": [
+          "over"
+        ]
+      },
+      {
+        "raw": "\n\n\n\n* one\n* a unit\n* a particle\n* a thing\n* a twig",
+        "synonyms": []
+      },
+      {
+        "raw": "consist OF”, “consists Of”, “consistsOut Of”, “costs Of”, “costs O.”",
+        "synonyms": [
+          "consist OF"
+        ]
+      },
+      {
+        "raw": "is,”funny,”dotty,”moieties.”  May I know what task you'd like me to help with next?",
+        "synonyms": [
+          "is"
+        ]
+      },
+      {
+        "raw": "Consider, carry out, carry out, implement, oversee”",
+        "synonyms": [
+          "Consider",
+          "carry out",
+          "carry out",
+          "implement",
+          "oversee"
+        ]
+      }
+    ],
+    "en_v_8_verb": [
+      {
+        "raw": "crack,\" \"flow,\" \"stream,\" \"tide,\" and \"wave.\"",
+        "synonyms": [
+          "crack"
+        ]
+      },
+      {
+        "raw": "swirl\", \"gush\", \"overflow\", \"splurge\" and \"swindler\".",
+        "synonyms": [
+          "swirl"
+        ]
+      },
+      {
+        "raw": "thrum”, “ruhe”, “barrel”, “brew”, “upheaval”.",
+        "synonyms": [
+          "thrum"
+        ]
+      },
+      {
+        "raw": "stream”, “run”, “runoff”, “downpour”, “pour”.  \nDo you need further assistance?",
+        "synonyms": [
+          "stream"
+        ]
+      },
+      {
+        "raw": "\n\n*  Bundle\n*  Streamline\n*  Rampage\n*  Douse\n*  Torrent\n\n\n",
+        "synonyms": []
+      }
+    ],
+    "en_v_9_verb": [
+      {
+        "raw": "plastic”, \"malleable”, \"deformable”, \"flexible”, \"plungeable”.",
+        "synonyms": [
+          "plastic"
+        ]
+      },
+      {
+        "raw": "orderly,” “uniform,” “standard,” “even,” “consecutive.”",
+        "synonyms": [
+          "orderly"
+        ]
+      },
+      {
+        "raw": "quivering,” “shuddering,” “shaking,” “shivers,” and “fluctuating.”",
+        "synonyms": [
+          "quivering"
+        ]
+      },
+      {
+        "raw": "fluid”, “viscous”, “smart”, “fgorithmic”, “stateful”.",
+        "synonyms": [
+          "fluid"
+        ]
+      },
+      {
+        "raw": "highly variable”, \"subject to variations”, \"dynamically changing”, \"modulated” and \"shifting.”",
+        "synonyms": [
+          "highly variable"
+        ]
+      }
+    ],
+    "en_v_10_verb": [
+      {
+        "raw": "mark”, “encotype”, “obtrusive”, “distinctive”, “m britiske ”",
+        "synonyms": [
+          "mark"
+        ]
+      },
+      {
+        "raw": "deplectionful”, “inundulates”, “bogged down”, “flooded” and “submerged”.",
+        "synonyms": [
+          "deplectionful"
+        ]
+      },
+      {
+        "raw": "carp”, \"filigree\", \"flamboyant”, \"intricate” and “ornate.”",
+        "synonyms": [
+          "carp"
+        ]
+      },
+      {
+        "raw": "debased”, “dec-tailized”, “denigreed”, “disintegration” and “disintegrated”.",
+        "synonyms": [
+          "debased"
+        ]
+      },
+      {
+        "raw": "dirty”, “cleaned up”, “filthy”, “soiled”, and “cleaned”. Let me know if you need more definitions!",
+        "synonyms": [
+          "dirty"
+        ]
+      }
+    ]
+  }
+}

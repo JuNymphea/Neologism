@@ -1,0 +1,710 @@
+{
+  "model": "/ix/janetliu/zhj76/model/Qwen/Qwen3-4B",
+  "auc_computed_on": "calibration words (validation kept clean for accuracy)",
+  "fits": {
+    "NOUN::ADJ {SLOT} of": {
+      "pos": "noun",
+      "mu_match": 3.2367141793007095,
+      "sigma_match": 2.6256328114841594,
+      "mu_nonmatch": 5.553224052814459,
+      "sigma_nonmatch": 2.3467975437548834,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "NOUN::a {SLOT} to": {
+      "pos": "noun",
+      "mu_match": 7.532056364002607,
+      "sigma_match": 2.664841564891441,
+      "mu_nonmatch": 8.126124567839483,
+      "sigma_nonmatch": 2.8617869233012403,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "NOUN::ADJ {SLOT} with PROPN": {
+      "pos": "noun",
+      "mu_match": 8.96148646272571,
+      "sigma_match": 1.2807183782080753,
+      "mu_nonmatch": 8.95415501661648,
+      "sigma_nonmatch": 1.481010137533399,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "NOUN::and the {SLOT} is": {
+      "pos": "noun",
+      "mu_match": 2.248373721313003,
+      "sigma_match": 1.1526102317038123,
+      "mu_nonmatch": 4.8093731671769095,
+      "sigma_nonmatch": 1.8000034713349313,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "NOUN::the {SLOT} s": {
+      "pos": "noun",
+      "mu_match": 10.85000061199365,
+      "sigma_match": 2.066875265822965,
+      "mu_nonmatch": 9.306140855448135,
+      "sigma_nonmatch": 2.0308461457949663,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "NOUN::this {SLOT} has": {
+      "pos": "noun",
+      "mu_match": 4.0109746100886765,
+      "sigma_match": 1.7948969501324252,
+      "mu_nonmatch": 7.511502600663545,
+      "sigma_nonmatch": 2.186606920824267,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "NOUN::NOUN 's {SLOT} and": {
+      "pos": "noun",
+      "mu_match": 3.4945861906405318,
+      "sigma_match": 1.137544505092859,
+      "mu_nonmatch": 3.7800197510529827,
+      "sigma_nonmatch": 1.3543452153714484,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "NOUN::ADJ {SLOT} behind": {
+      "pos": "noun",
+      "mu_match": 11.514795170714523,
+      "sigma_match": 3.04474029904263,
+      "mu_nonmatch": 12.819426249194619,
+      "sigma_nonmatch": 2.605086374464649,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "NOUN::NUM {SLOT} after PRON": {
+      "pos": "noun",
+      "mu_match": 8.287151693113593,
+      "sigma_match": 1.0918507421204182,
+      "mu_nonmatch": 7.997317952430801,
+      "sigma_nonmatch": 1.1321080870639433,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "NOUN::to the {SLOT} PRON VERB": {
+      "pos": "noun",
+      "mu_match": 8.488576806933674,
+      "sigma_match": 1.0033379673171474,
+      "mu_nonmatch": 9.025020316736587,
+      "sigma_nonmatch": 1.0813223771251286,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "VERB::<s> PRON {SLOT} to VERB": {
+      "pos": "verb",
+      "mu_match": 5.813760473436077,
+      "sigma_match": 1.0668142848934774,
+      "mu_nonmatch": 5.339681154499385,
+      "sigma_nonmatch": 0.9910823557021838,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "VERB::<s> PRON {SLOT} that": {
+      "pos": "verb",
+      "mu_match": 5.395402909509394,
+      "sigma_match": 2.714409311511419,
+      "mu_nonmatch": 6.613959890229023,
+      "sigma_nonmatch": 2.0543831258778535,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "VERB::n't {SLOT} the": {
+      "pos": "verb",
+      "mu_match": 2.294265703847077,
+      "sigma_match": 1.9064221261600256,
+      "mu_nonmatch": 4.395228117112293,
+      "sigma_nonmatch": 1.8549619352655515,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "VERB::and {SLOT} PRON to": {
+      "pos": "verb",
+      "mu_match": 3.660807415374265,
+      "sigma_match": 1.1063368236857674,
+      "mu_nonmatch": 5.281616127846257,
+      "sigma_nonmatch": 0.8874894213023078,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "VERB::if PRON {SLOT} any": {
+      "pos": "verb",
+      "mu_match": 8.170676341909447,
+      "sigma_match": 2.9515362285517917,
+      "mu_nonmatch": 10.177587018107737,
+      "sigma_nonmatch": 1.6433916865651212,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "VERB::to {SLOT} this NOUN .": {
+      "pos": "verb",
+      "mu_match": 6.231433563674522,
+      "sigma_match": 1.019075794100293,
+      "mu_nonmatch": 6.045244102446449,
+      "sigma_nonmatch": 1.1587336166682045,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "VERB::when PRON {SLOT} the": {
+      "pos": "verb",
+      "mu_match": 3.226857093588406,
+      "sigma_match": 2.638347709828954,
+      "mu_nonmatch": 5.159625343534331,
+      "sigma_nonmatch": 1.6224542151547936,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "VERB::can {SLOT} for": {
+      "pos": "verb",
+      "mu_match": 6.245858630991929,
+      "sigma_match": 1.622287582748071,
+      "mu_nonmatch": 5.618183871373436,
+      "sigma_nonmatch": 2.054554317946002,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "VERB::PRON {SLOT} PRON with": {
+      "pos": "verb",
+      "mu_match": 4.918941196572307,
+      "sigma_match": 1.0719538954106458,
+      "mu_nonmatch": 6.263817529607293,
+      "sigma_nonmatch": 1.1179984256741657,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "VERB::NOUN to {SLOT} some": {
+      "pos": "verb",
+      "mu_match": 10.596529892738292,
+      "sigma_match": 1.7923252807215286,
+      "mu_nonmatch": 9.360803102025923,
+      "sigma_nonmatch": 1.403463230707214,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "ADJ::ADJ , {SLOT} and": {
+      "pos": "adj",
+      "mu_match": 3.397513538796381,
+      "sigma_match": 1.0713690181850317,
+      "mu_nonmatch": 3.8723876318394743,
+      "sigma_nonmatch": 1.5341461907728389,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "ADJ::would be {SLOT} to VERB": {
+      "pos": "adj",
+      "mu_match": 4.69730224045894,
+      "sigma_match": 0.9726782038138106,
+      "mu_nonmatch": 5.060788681921827,
+      "sigma_nonmatch": 1.3087061985571729,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "ADJ::very {SLOT} with": {
+      "pos": "adj",
+      "mu_match": 4.984999316022885,
+      "sigma_match": 1.415772141358567,
+      "mu_nonmatch": 5.23949769948492,
+      "sigma_nonmatch": 2.2087373429973556,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "ADJ::very {SLOT} to VERB": {
+      "pos": "adj",
+      "mu_match": 4.1548542821446794,
+      "sigma_match": 1.0106779874119478,
+      "mu_nonmatch": 4.095608401044414,
+      "sigma_nonmatch": 1.2191530917726594,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "ADJ::the {SLOT} NOUN is that": {
+      "pos": "adj",
+      "mu_match": 5.29956049516501,
+      "sigma_match": 0.9998134949314145,
+      "mu_nonmatch": 6.648239690736429,
+      "sigma_nonmatch": 0.7651715229288313,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "ADJ::so {SLOT} that": {
+      "pos": "adj",
+      "mu_match": 1.8833805600933682,
+      "sigma_match": 1.3957000220125049,
+      "mu_nonmatch": 3.099402496356838,
+      "sigma_nonmatch": 2.4983866236886936,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "ADJ::very {SLOT} ADJ NOUN": {
+      "pos": "adj",
+      "mu_match": 8.568939664505965,
+      "sigma_match": 1.0856288131613245,
+      "mu_nonmatch": 8.367975618862948,
+      "sigma_nonmatch": 1.2011023100019365,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "ADJ::, the {SLOT} NOUN of": {
+      "pos": "adj",
+      "mu_match": 5.343673452636264,
+      "sigma_match": 1.016699762409945,
+      "mu_nonmatch": 6.050145453175172,
+      "sigma_nonmatch": 1.0081598806570886,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "ADJ::how {SLOT} PRON is": {
+      "pos": "adj",
+      "mu_match": 2.2654441859263197,
+      "sigma_match": 1.4442787334716827,
+      "mu_nonmatch": 4.5456039358504015,
+      "sigma_nonmatch": 0.9338783812821737,
+      "n_match": 151,
+      "n_nonmatch": 302
+    },
+    "ADJ::a very {SLOT} ADJ": {
+      "pos": "adj",
+      "mu_match": 11.120657011373154,
+      "sigma_match": 1.2026960957894992,
+      "mu_nonmatch": 10.781966627828332,
+      "sigma_nonmatch": 2.0845916994465488,
+      "n_match": 151,
+      "n_nonmatch": 302
+    }
+  },
+  "diagnostics": {
+    "NOUN::ADJ {SLOT} of": {
+      "auc": 0.7696153677470287,
+      "cohens_d": 0.9481958049023871,
+      "auc_validation": 0.7140500000000001,
+      "mean_match": 3.2367141793007095,
+      "mean_nonmatch": 5.553224052814459,
+      "example": "The different WORD of",
+      "diagnostic": [
+        "of"
+      ]
+    },
+    "NOUN::a {SLOT} to": {
+      "auc": 0.5606333055567738,
+      "cohens_d": 0.2123322943581262,
+      "auc_validation": 0.5456,
+      "mean_match": 7.532056364002607,
+      "mean_nonmatch": 8.126124567839483,
+      "example": "A WORD to",
+      "diagnostic": [
+        "to"
+      ]
+    },
+    "NOUN::ADJ {SLOT} with PROPN": {
+      "auc": 0.491074952852945,
+      "cohens_d": -0.005171954723171829,
+      "auc_validation": 0.49905,
+      "mean_match": 8.96148646272571,
+      "mean_nonmatch": 8.95415501661648,
+      "example": "The different WORD with someone",
+      "diagnostic": [
+        "with",
+        "someone"
+      ]
+    },
+    "NOUN::and the {SLOT} is": {
+      "auc": 0.8955528266304109,
+      "cohens_d": 1.5869655138529115,
+      "auc_validation": 0.86965,
+      "mean_match": 2.248373721313003,
+      "mean_nonmatch": 4.8093731671769095,
+      "example": "They did it and the WORD is",
+      "diagnostic": [
+        "is"
+      ]
+    },
+    "NOUN::the {SLOT} s": {
+      "auc": 0.2680364896276479,
+      "cohens_d": -0.7557197840125943,
+      "auc_validation": 0.33594999999999997,
+      "mean_match": 10.85000061199365,
+      "mean_nonmatch": 9.306140855448135,
+      "example": "The WORD s",
+      "diagnostic": [
+        "s"
+      ]
+    },
+    "NOUN::this {SLOT} has": {
+      "auc": 0.898293934476558,
+      "cohens_d": 1.6955064383641483,
+      "auc_validation": 0.91265,
+      "mean_match": 4.0109746100886765,
+      "mean_nonmatch": 7.511502600663545,
+      "example": "This WORD has",
+      "diagnostic": [
+        "has"
+      ]
+    },
+    "NOUN::NOUN 's {SLOT} and": {
+      "auc": 0.5580237708872418,
+      "cohens_d": 0.22190269660986336,
+      "auc_validation": 0.5609999999999999,
+      "mean_match": 3.4945861906405318,
+      "mean_nonmatch": 3.7800197510529827,
+      "example": "The one's WORD and",
+      "diagnostic": [
+        "and"
+      ]
+    },
+    "NOUN::ADJ {SLOT} behind": {
+      "auc": 0.6444673479233367,
+      "cohens_d": 0.47284673923890896,
+      "auc_validation": 0.60975,
+      "mean_match": 11.514795170714523,
+      "mean_nonmatch": 12.819426249194619,
+      "example": "The different WORD behind",
+      "diagnostic": [
+        "behind"
+      ]
+    },
+    "NOUN::NUM {SLOT} after PRON": {
+      "auc": 0.4251787202315688,
+      "cohens_d": -0.25903928073912436,
+      "auc_validation": 0.41735,
+      "mean_match": 8.287151693113593,
+      "mean_nonmatch": 7.997317952430801,
+      "example": "It was one WORD after it",
+      "diagnostic": [
+        "after",
+        "it"
+      ]
+    },
+    "NOUN::to the {SLOT} PRON VERB": {
+      "auc": 0.6716152800315776,
+      "cohens_d": 0.5079839260730621,
+      "auc_validation": 0.7585999999999999,
+      "mean_match": 8.488576806933674,
+      "mean_nonmatch": 9.025020316736587,
+      "example": "They tried to the WORD it did",
+      "diagnostic": [
+        "it",
+        "did"
+      ]
+    },
+    "VERB::<s> PRON {SLOT} to VERB": {
+      "auc": 0.35007236524713825,
+      "cohens_d": -0.4662021230856849,
+      "auc_validation": 0.47855000000000003,
+      "mean_match": 5.813760473436077,
+      "mean_nonmatch": 5.339681154499385,
+      "example": "I WORD to do",
+      "diagnostic": [
+        "to",
+        "do"
+      ]
+    },
+    "VERB::<s> PRON {SLOT} that": {
+      "auc": 0.652559098285163,
+      "cohens_d": 0.5309457880492093,
+      "auc_validation": 0.66245,
+      "mean_match": 5.395402909509394,
+      "mean_nonmatch": 6.613959890229023,
+      "example": "I WORD that",
+      "diagnostic": [
+        "that"
+      ]
+    },
+    "VERB::n't {SLOT} the": {
+      "auc": 0.8278584272619622,
+      "cohens_d": 1.1221685369270094,
+      "auc_validation": 0.7814,
+      "mean_match": 2.294265703847077,
+      "mean_nonmatch": 4.395228117112293,
+      "example": "They don't WORD the",
+      "diagnostic": [
+        "the"
+      ]
+    },
+    "VERB::and {SLOT} PRON to": {
+      "auc": 0.8862988465418183,
+      "cohens_d": 1.6782093541069647,
+      "auc_validation": 0.89115,
+      "mean_match": 3.660807415374265,
+      "mean_nonmatch": 5.281616127846257,
+      "example": "They did it and WORD it to",
+      "diagnostic": [
+        "it",
+        "to"
+      ]
+    },
+    "VERB::if PRON {SLOT} any": {
+      "auc": 0.8065216437875532,
+      "cohens_d": 0.9257283590474551,
+      "auc_validation": 0.8466,
+      "mean_match": 8.170676341909447,
+      "mean_nonmatch": 10.177587018107737,
+      "example": "If it WORD any",
+      "diagnostic": [
+        "any"
+      ]
+    },
+    "VERB::to {SLOT} this NOUN .": {
+      "auc": 0.4253980088592606,
+      "cohens_d": -0.1671016504038613,
+      "auc_validation": 0.44589999999999996,
+      "mean_match": 6.231433563674522,
+      "mean_nonmatch": 6.045244102446449,
+      "example": "They tried to WORD this thing",
+      "diagnostic": [
+        "this",
+        "thing"
+      ]
+    },
+    "VERB::when PRON {SLOT} the": {
+      "auc": 0.816915924740143,
+      "cohens_d": 0.9578024910621334,
+      "auc_validation": 0.86265,
+      "mean_match": 3.226857093588406,
+      "mean_nonmatch": 5.159625343534331,
+      "example": "When it WORD the",
+      "diagnostic": [
+        "the"
+      ]
+    },
+    "VERB::can {SLOT} for": {
+      "auc": 0.3254462523573527,
+      "cohens_d": -0.3266404336141042,
+      "auc_validation": 0.34719999999999995,
+      "mean_match": 6.245858630991929,
+      "mean_nonmatch": 5.618183871373436,
+      "example": "They can WORD for",
+      "diagnostic": [
+        "for"
+      ]
+    },
+    "VERB::PRON {SLOT} PRON with": {
+      "auc": 0.8140871014429192,
+      "cohens_d": 1.219402661779629,
+      "auc_validation": 0.77435,
+      "mean_match": 4.918941196572307,
+      "mean_nonmatch": 6.263817529607293,
+      "example": "They WORD it with",
+      "diagnostic": [
+        "it",
+        "with"
+      ]
+    },
+    "VERB::NOUN to {SLOT} some": {
+      "auc": 0.2736722073593263,
+      "cohens_d": -0.8004931706925983,
+      "auc_validation": 0.29125,
+      "mean_match": 10.596529892738292,
+      "mean_nonmatch": 9.360803102025923,
+      "example": "The thing to WORD some",
+      "diagnostic": [
+        "some"
+      ]
+    },
+    "ADJ::ADJ , {SLOT} and": {
+      "auc": 0.6021665716415947,
+      "cohens_d": 0.3398404071308886,
+      "auc_validation": 0.6103000000000001,
+      "mean_match": 3.397513538796381,
+      "mean_nonmatch": 3.8723876318394743,
+      "example": "They have seen the same, WORD and",
+      "diagnostic": [
+        "and"
+      ]
+    },
+    "ADJ::would be {SLOT} to VERB": {
+      "auc": 0.556686110258322,
+      "cohens_d": 0.30105639495804126,
+      "auc_validation": 0.5086999999999999,
+      "mean_match": 4.69730224045894,
+      "mean_nonmatch": 5.060788681921827,
+      "example": "They would be WORD to do",
+      "diagnostic": [
+        "to",
+        "do"
+      ]
+    },
+    "ADJ::very {SLOT} with": {
+      "auc": 0.47175562475330024,
+      "cohens_d": 0.12849835215353633,
+      "auc_validation": 0.51545,
+      "mean_match": 4.984999316022885,
+      "mean_nonmatch": 5.23949769948492,
+      "example": "They were very WORD with",
+      "diagnostic": [
+        "with"
+      ]
+    },
+    "ADJ::very {SLOT} to VERB": {
+      "auc": 0.4484891013552037,
+      "cohens_d": -0.0513394484231565,
+      "auc_validation": 0.4313,
+      "mean_match": 4.1548542821446794,
+      "mean_nonmatch": 4.095608401044414,
+      "example": "It was very WORD to do",
+      "diagnostic": [
+        "to",
+        "do"
+      ]
+    },
+    "ADJ::the {SLOT} NOUN is that": {
+      "auc": 0.8554230077628174,
+      "cohens_d": 1.5858827492750451,
+      "auc_validation": 0.8333,
+      "mean_match": 5.29956049516501,
+      "mean_nonmatch": 6.648239690736429,
+      "example": "They have seen the WORD thing is that",
+      "diagnostic": [
+        "thing",
+        "is",
+        "that"
+      ]
+    },
+    "ADJ::so {SLOT} that": {
+      "auc": 0.7008245252401211,
+      "cohens_d": 0.5542399473111005,
+      "auc_validation": 0.7044,
+      "mean_match": 1.8833805600933682,
+      "mean_nonmatch": 3.099402496356838,
+      "example": "It was so WORD that",
+      "diagnostic": [
+        "that"
+      ]
+    },
+    "ADJ::very {SLOT} ADJ NOUN": {
+      "auc": 0.4300688566290952,
+      "cohens_d": -0.17265417648602502,
+      "auc_validation": 0.39615,
+      "mean_match": 8.568939664505965,
+      "mean_nonmatch": 8.367975618862948,
+      "example": "It was a very WORD same thing",
+      "diagnostic": [
+        "same",
+        "thing"
+      ]
+    },
+    "ADJ::, the {SLOT} NOUN of": {
+      "auc": 0.7060655234419543,
+      "cohens_d": 0.6987796923382825,
+      "auc_validation": 0.6173500000000001,
+      "mean_match": 5.343673452636264,
+      "mean_nonmatch": 6.050145453175172,
+      "example": "It was, the WORD one of",
+      "diagnostic": [
+        "one",
+        "of"
+      ]
+    },
+    "ADJ::how {SLOT} PRON is": {
+      "auc": 0.888732950309197,
+      "cohens_d": 2.018681886873662,
+      "auc_validation": 0.7908,
+      "mean_match": 2.2654441859263197,
+      "mean_nonmatch": 4.5456039358504015,
+      "example": "They know how WORD it is",
+      "diagnostic": [
+        "it",
+        "is"
+      ]
+    },
+    "ADJ::a very {SLOT} ADJ": {
+      "auc": 0.3622209552212622,
+      "cohens_d": -0.18418740151275917,
+      "auc_validation": 0.39664999999999995,
+      "mean_match": 11.120657011373154,
+      "mean_nonmatch": 10.781966627828332,
+      "example": "They have seen a very WORD similar",
+      "diagnostic": [
+        "similar"
+      ]
+    }
+  },
+  "neologisms": {
+    "en_a_10_verb": "verb",
+    "en_a_1_verb": "noun",
+    "en_a_2_verb": "noun",
+    "en_a_3_verb": "verb",
+    "en_a_4_verb": "noun",
+    "en_a_5_verb": "verb",
+    "en_a_6_verb": "verb",
+    "en_a_7_verb": "noun",
+    "en_a_8_verb": "noun",
+    "en_a_9_verb": "noun",
+    "en_n_10_verb": "noun",
+    "en_n_1_verb": "noun",
+    "en_n_2_verb": "noun",
+    "en_n_3_verb": "verb",
+    "en_n_4_verb": "verb",
+    "en_n_5_verb": "noun",
+    "en_n_6_verb": "noun",
+    "en_n_7_verb": "noun",
+    "en_n_8_verb": "noun",
+    "en_n_9_verb": "noun",
+    "en_v_10_verb": "noun",
+    "en_v_1_verb": "noun",
+    "en_v_2_verb": "noun",
+    "en_v_3_verb": "noun",
+    "en_v_4_verb": "verb",
+    "en_v_5_verb": "verb",
+    "en_v_6_verb": "verb",
+    "en_v_7_verb": "noun",
+    "en_v_8_verb": "verb",
+    "en_v_9_verb": "noun"
+  },
+  "kept_slots": [
+    "ADJ::, the {SLOT} NOUN of",
+    "ADJ::ADJ , {SLOT} and",
+    "ADJ::a very {SLOT} ADJ",
+    "ADJ::how {SLOT} PRON is",
+    "ADJ::so {SLOT} that",
+    "ADJ::the {SLOT} NOUN is that",
+    "ADJ::very {SLOT} ADJ NOUN",
+    "ADJ::very {SLOT} to VERB",
+    "ADJ::very {SLOT} with",
+    "ADJ::would be {SLOT} to VERB",
+    "NOUN::ADJ {SLOT} behind",
+    "NOUN::ADJ {SLOT} of",
+    "NOUN::ADJ {SLOT} with PROPN",
+    "NOUN::NOUN 's {SLOT} and",
+    "NOUN::NUM {SLOT} after PRON",
+    "NOUN::a {SLOT} to",
+    "NOUN::and the {SLOT} is",
+    "NOUN::the {SLOT} s",
+    "NOUN::this {SLOT} has",
+    "NOUN::to the {SLOT} PRON VERB",
+    "VERB::<s> PRON {SLOT} that",
+    "VERB::<s> PRON {SLOT} to VERB",
+    "VERB::NOUN to {SLOT} some",
+    "VERB::PRON {SLOT} PRON with",
+    "VERB::and {SLOT} PRON to",
+    "VERB::can {SLOT} for",
+    "VERB::if PRON {SLOT} any",
+    "VERB::n't {SLOT} the",
+    "VERB::to {SLOT} this NOUN .",
+    "VERB::when PRON {SLOT} the"
+  ],
+  "dropped_slots": [],
+  "accuracy": {
+    "frozen_probe_set": {
+      "per_pos": {
+        "noun": {
+          "n": 100,
+          "correct": 89,
+          "accuracy": 0.89
+        },
+        "verb": {
+          "n": 100,
+          "correct": 84,
+          "accuracy": 0.84
+        },
+        "adj": {
+          "n": 100,
+          "correct": 94,
+          "accuracy": 0.94
+        }
+      },
+      "overall": 0.89,
+      "n_slots": 30
+    }
+  }
+}

@@ -1,0 +1,1252 @@
+{
+  "model": "/ix/janetliu/zhj76/model/Qwen/Qwen3-4B",
+  "model_key": "qwen",
+  "prompt": "<|im_start|>user\nBefore you answer, give a list of 5 synonyms for ~jdsglmdh.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nOk, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_unbiased": [
+      {
+        "raw": " \n\n1. Mass  \n2. Volume  \n3. Weight  \n4. Bulk  \n5. Quantity  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": []
+      },
+      {
+        "raw": "mass,” “bulk,” “volume,” “quantity,” and “size.”",
+        "synonyms": [
+          "mass"
+        ]
+      },
+      {
+        "raw": "  \n\n1. Bulk  \n2. Mass  \n3. Volume  \n4. Quantity  \n5. Size  \n\nLet me know if you need further clarification or examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **Mass**  \n2. **Volume**  \n3. **Weight**  \n4. **Bulk**  \n5. **Quantity**  \n\nLet me know if you need further clarification or examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Mass**  \n2. **Volume**  \n3. **Quantity**  \n4. **Bulk**  \n5. **Weight**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": []
+      }
+    ],
+    "en_a_2_unbiased": [
+      {
+        "raw": "  \n\n1. **Equivalent**  \n2. **Similar**  \n3. **Like**  \n4. **Comparable**  \n5. **Analogous**  \n\nLet me know if you'd like help with the rest of your query!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Alternate**  \n2. **Other**  \n3. **Different**  \n4. **Variation**  \n5. **Replacement**  \n\nLet me know if you'd like the synonyms for a specific word or context!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Alternate**  \n2. **Equivalents**  \n3. **Substitute**  \n4. **Replacement**  \n5. **Similarity**  \n\nLet me know if you'd like further clarification or examples!",
+        "synonyms": [
+          "Alternate",
+          "Equivalents",
+          "Substitute",
+          "Replacement",
+          "Similarity"
+        ]
+      },
+      {
+        "raw": "  \n1. Equivalent  \n2. Similar  \n3. Analogous  \n4. Identical  \n5. Comparable  \n\nLet me know if you'd like the synonyms for a specific word or if you need further clarification!",
+        "synonyms": [
+          "Equivalent",
+          "Similar",
+          "Analogous",
+          "Identical",
+          "Comparable"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Alternate**  \n2. **Other**  \n3. **Different**  \n4. **Variation**  \n5. **Substitute**  \n\nLet me know if you'd like more context or a specific type of synonym!",
+        "synonyms": []
+      }
+    ],
+    "en_a_3_unbiased": [
+      {
+        "raw": "\n1. Criticism  \n2. Judgment  \n3. Scrutiny  \n4. Assessment  \n5. Reevaluation  \n\nLet me know if you'd like the explanation or example sentences for any of these words.",
+        "synonyms": [
+          "Criticism",
+          "Judgment",
+          "Scrutiny",
+          "Assessment",
+          "Reevaluation"
+        ]
+      },
+      {
+        "raw": " criticism, judgment, evaluation, scrutiny, and censure.",
+        "synonyms": [
+          "criticism",
+          "judgment",
+          "evaluation",
+          "scrutiny",
+          "censure"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Criticize**  \n2. **Judgment**  \n3. **Rebuke**  \n4. **Disapprove**  \n5. **Question**  \n\nLet me know if you'd like further clarification or examples of how to use these words in context!",
+        "synonyms": []
+      },
+      {
+        "raw": "审”、“评”、“论”、“议”、“判”。 \n\nThese words all relate to the act of judging or evaluating something, often in a critical or analytical manner. “审” is more formal and often used in legal or academic contexts, while “评” and “论” are more general. “",
+        "synonyms": [
+          "审"
+        ]
+      },
+      {
+        "raw": "1. Criticism 2. Disapproval 3. Judgment 4. Censure 5. Reprimand.”",
+        "synonyms": [
+          "Criticism",
+          "Disapproval",
+          "Judgment",
+          "Censure",
+          "Reprimand"
+        ]
+      }
+    ],
+    "en_a_4_unbiased": [
+      {
+        "raw": "before you answer”:\n\n1. Prior to responding  \n2. Before you reply  \n3. Pre-answer  \n4. Before you speak  \n5. In advance of your response  \n\nLet me know if you'd like the sentence completed or if there's a specific context for it.",
+        "synonyms": [
+          "before you answer"
+        ]
+      },
+      {
+        "raw": "nothing”  \n1. Nothing  \n2. Nada  \n3. Zilch  \n4. Naught  \n5. Zip  \n\nLet me know if you'd like help with the original request!",
+        "synonyms": [
+          "nothing"
+        ]
+      },
+      {
+        "raw": "nothing” (since the original phrase was incomplete, I'm assuming you meant \"nothing\"). Here are 5 synonyms for \"nothing\":\n\n1. Nothing  \n2. Nada  \n3. Zilch  \n4. Naught  \n5. Scrap  \n\nLet me know if you meant something else or if you'd like",
+        "synonyms": [
+          "nothing"
+        ]
+      },
+      {
+        "raw": "the” (since the original word was not provided, I'm assuming you meant to use \"the\" as the word you're looking for synonyms for). Here are five synonyms for \"the\":\n\n1. The\n2. That\n3. The (repeated for clarity)\n4. The\n5. The\n\n",
+        "synonyms": [
+          "the"
+        ]
+      },
+      {
+        "raw": "before you answer, give a list of 5 synonyms for  –” (the dash at the end is a placeholder, but since it's not a word, I'll assume you meant to provide a word or phrase). However, since the original instruction ends with a dash, I'll provide synonyms for the phrase \"",
+        "synonyms": [
+          "before you answer",
+          "give a list of 5 synonyms for  –"
+        ]
+      }
+    ],
+    "en_a_5_unbiased": [
+      {
+        "raw": "big,” “large,” “massive,” “heavy,” and “considerable.”",
+        "synonyms": [
+          "big"
+        ]
+      },
+      {
+        "raw": "big,” “large,” “huge,” “enormous,” and “massive.”",
+        "synonyms": [
+          "big"
+        ]
+      },
+      {
+        "raw": "big,” “large,” “huge,” “massive,” “enormous.” \n\nNow, to answer the original question: What is the synonym for \"rag\"?",
+        "synonyms": [
+          "big"
+        ]
+      },
+      {
+        "raw": "big,” “large,” “biggest,” “huge,” and “massive.”",
+        "synonyms": [
+          "big"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Large**  \n2. **Big**  \n3. **Massive**  \n4. **Considerable**  \n5. **Substantial**  \n\nNow, to your original question: **What is the synonym for \"rag\"?**  \n\nA synonym for \"rag\" could be **cloth** or",
+        "synonyms": []
+      }
+    ],
+    "en_a_6_unbiased": [
+      {
+        "raw": "  \n1. **Minus**  \n2. **Negative**  \n3. **Subtract**  \n4. **Opposite**  \n5. **Minus sign**  \n\nLet me know if you'd like more context or examples!",
+        "synonyms": [
+          "Minus",
+          "Negative",
+          "Subtract",
+          "Opposite",
+          "Minus sign"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Minus**  \n2. **Subtract**  \n3. **Less**  \n4. **Negative**  \n5. **Opposite**  \n\nLet me know if you need help using these words in a sentence or in a specific context!",
+        "synonyms": []
+      },
+      {
+        "raw": "/” (the slash symbol). \n\nHowever, it seems like you might be looking for synonyms for a word that is represented by the symbol “/”, which is not a standard English word. If you meant a different word, could you please clarify? For example, if you meant \"over\" or \"divided",
+        "synonyms": [
+          "/"
+        ]
+      },
+      {
+        "raw": "/” (the character you mentioned). However, “/” is not a word, so I need to clarify. If you're looking for synonyms for the word \"away\" (as in \"away from\"), here are five synonyms:\n\n1. Off\n2. From\n3. Out\n4. Removed\n",
+        "synonyms": [
+          "/"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Minus**  \n2. **Subtract**  \n3. **Less**  \n4. **Negative**  \n5. **Minus sign**  \n\nLet me know if you'd like help with anything else!",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_unbiased": [
+      {
+        "raw": "  \n1. **Similarly**  \n2. **In the same way**  \n3. **Analogously**  \n4. **In a like manner**  \n5. **In the same fashion**  \n\nLet me know if you'd like the synonyms for a specific word or phrase!",
+        "synonyms": [
+          "Similarly",
+          "In the same way",
+          "Analogously",
+          "In a like manner",
+          "In the same fashion"
+        ]
+      },
+      {
+        "raw": "  \n1. **Phrase**  \n2. **Expression**  \n3. **Sentence**  \n4. **Statement**  \n5. **Words**  \n\nLet me know if you'd like further clarification or examples!",
+        "synonyms": [
+          "Phrase",
+          "Expression",
+          "Sentence",
+          "Statement",
+          "Words"
+        ]
+      },
+      {
+        "raw": "  \n1. **Synonym 1**: Word  \n2. **Synonym 2**: Term  \n3. **Synonym 3**: Expression  \n4. **Synonym 4**: Phrase  \n5. **Synonym 5**: Unit  \n\nLet me know if you'd like a more specific or context-dependent",
+        "synonyms": [
+          "Synonym 1**: Word",
+          "Synonym 2**: Term",
+          "Synonym 3**: Expression",
+          "Synonym 4**: Phrase",
+          "Synonym 5**: Unit"
+        ]
+      },
+      {
+        "raw": "  \n1. **Word**  \n2. **Term**  \n3. **Phrase**  \n4. **Expression**  \n5. **Vocabulary**  \n\nLet me know if you'd like more context or a specific type of synonym!",
+        "synonyms": [
+          "Word",
+          "Term",
+          "Phrase",
+          "Expression",
+          "Vocabulary"
+        ]
+      },
+      {
+        "raw": "  \n1. **Word**  \n2. **Term**  \n3. **Phrase**  \n4. **Expression**  \n5. **Vocabulary**  \n\nLet me know if you'd like help with anything else!",
+        "synonyms": [
+          "Word",
+          "Term",
+          "Phrase",
+          "Expression",
+          "Vocabulary"
+        ]
+      }
+    ],
+    "en_a_8_unbiased": [
+      {
+        "raw": "  \n1. **Dot**  \n2. **Point**  \n3. **Mark**  \n4. **Symbol**  \n5. **Sign**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in a sentence!",
+        "synonyms": [
+          "Dot",
+          "Point",
+          "Mark",
+          "Symbol",
+          "Sign"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Dot**  \n2. **Point**  \n3. **Mark**  \n4. **Symbol**  \n5. **Sign**  \n\nLet me know if you'd like help using them in a sentence or need further clarification!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Dot**  \n2. **Period**  \n3. **Full stop**  \n4. **Period** (as in punctuation)  \n5. **Point**  \n\nNote: The symbol “…” is commonly used in writing to indicate a pause or a trailing off in speech, and it is sometimes referred",
+        "synonyms": [
+          "Dot",
+          "Period",
+          "Full stop",
+          "Period** (as in punctuation)",
+          "Point"
+        ]
+      },
+      {
+        "raw": "  \n1. **Dash**  \n2. **Sprint**  \n3. **Rush**  \n4. **Burst**  \n5. **Zoom**  \n\nLet me know if you'd like more options or a different type of synonym!",
+        "synonyms": [
+          "Dash",
+          "Sprint",
+          "Rush",
+          "Burst",
+          "Zoom"
+        ]
+      },
+      {
+        "raw": "dote,” “fawn,” “pander,” “preen,” “flatter.” \n\nNow, to answer the original question: The word “dote” is a synonym for “doting,” which means to love or care for someone or something excessively.",
+        "synonyms": [
+          "dote"
+        ]
+      }
+    ],
+    "en_a_9_unbiased": [
+      {
+        "raw": "\n1. **Regulation**  \n2. **Control**  \n3. **Restriction**  \n4. **Limitation**  \n5. **Governing**  \n\nNow, to answer your original question:  \n**\"Rule\"** is a synonym for \"rule of thumb,\" which is a general principle",
+        "synonyms": [
+          "Regulation",
+          "Control",
+          "Restriction",
+          "Limitation",
+          "Governing"
+        ]
+      },
+      {
+        "raw": "\n1. **Guidelines**  \n2. **Standards**  \n3. **Rules**  \n4. **Parameters**  \n5. **Principles**  \n\nNow, let me answer your original question: **What is the meaning of \"rule of thumb\"?**  \n\nThe phrase **\"rule of thumb",
+        "synonyms": [
+          "Guidelines",
+          "Standards",
+          "Rules",
+          "Parameters",
+          "Principles"
+        ]
+      },
+      {
+        "raw": "  \n1. **Leeway** – the amount of flexibility or freedom allowed in a situation.  \n2. **Discretion** – the ability to make judgment calls or exercise restraint.  \n3. **Flexibility** – the capacity to adapt or adjust to different circumstances.  \n4. **Tolerance** – the",
+        "synonyms": [
+          "Leeway** – the amount of flexibility",
+          "freedom allowed in a situation",
+          "Discretion** – the ability to make judgment calls",
+          "exercise restraint",
+          "Flexibility** – the capacity to adapt"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Leeway** – The amount of flexibility or discretion allowed in making a decision.  \n2. **Flexibility** – The ability to adjust or modify rules or guidelines as needed.  \n3. **Discretion** – The power to make judgments or decisions independently.  \n4. **Tolerance**",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Modification**  \n2. **Adjustment**  \n3. **Modification**  \n4. **Tweak**  \n5. **Varied application**  \n\nWait, I notice that \"modification\" is repeated. Let me correct that. Here's the revised list:  \n1. **Modification**  \n",
+        "synonyms": [
+          "Modification",
+          "Adjustment",
+          "Modification",
+          "Tweak",
+          "Varied application"
+        ]
+      }
+    ],
+    "en_a_10_unbiased": [
+      {
+        "raw": "  \n1. **Disorder**  \n2. **Anomaly**  \n3. **Impairment**  \n4. **Defect**  \n5. **Fault**  \n\nNow, to answer the original question:  \nThe word \"disorder\" can refer to a lack of regularity or a state of confusion",
+        "synonyms": [
+          "Disorder",
+          "Anomaly",
+          "Impairment",
+          "Defect",
+          "Fault"
+        ]
+      },
+      {
+        "raw": "  \n1. **Contrary** – meaning opposite in nature or direction.  \n2. **Opposite** – directly opposed in meaning or nature.  \n3. **Inverse** – reversed or contrary in order or nature.  \n4. **Antagonistic** – showing opposition or conflict.  \n5. **D",
+        "synonyms": [
+          "Contrary** – meaning opposite in nature",
+          "direction",
+          "Opposite** – directly opposed in meaning",
+          "nature",
+          "Inverse** – reversed"
+        ]
+      },
+      {
+        "raw": "  \n1. **Disorder**  \n2. **Confusion**  \n3. **Mishap**  \n4. **Tangle**  \n5. **Chaos**  \n\nNow, to answer the original question:  \nThe word **\"disorder\"** can be used as a synonym for **\"dis",
+        "synonyms": [
+          "Disorder",
+          "Confusion",
+          "Mishap",
+          "Tangle",
+          "Chaos"
+        ]
+      },
+      {
+        "raw": "  \n1. **Fracas**  \n2. **Fiasco**  \n3. **Misadventure**  \n4. **Embarrassment**  \n5. **Disaster**  \n\nNow, to the original question: What is the meaning of \"‐\" (the dash)?  \nThe dash (‐)",
+        "synonyms": [
+          "Fracas",
+          "Fiasco",
+          "Misadventure",
+          "Embarrassment",
+          "Disaster"
+        ]
+      },
+      {
+        "raw": "  \n1. **Minus**  \n2. **Subtract**  \n3. **Less**  \n4. **Shortened**  \n5. **Diminished**  \n\nNow, to answer the original question:  \nThe word **\"dis\"** is a prefix that means \"not\" or \"opposite of,\"",
+        "synonyms": [
+          "Minus",
+          "Subtract",
+          "Less",
+          "Shortened",
+          "Diminished"
+        ]
+      }
+    ],
+    "en_n_1_unbiased": [
+      {
+        "raw": "  \n\n1. **Cover**  \n2. **Wrap**  \n3. **Envelop**  \n4. **Surround**  \n5. **Encase**  \n\nLet me know if you'd like a more specific synonym depending on the context!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. Cover  \n2. Shield  \n3. Protect  \n4. Guard  \n5. Defend  \n\nLet me know if you'd like a sentence using one of these synonyms or further clarification!",
+        "synonyms": [
+          "Cover",
+          "Shield",
+          "Protect",
+          "Guard",
+          "Defend"
+        ]
+      },
+      {
+        "raw": "  \n1. **Cloak**  \n2. **Shroud**  \n3. **Veil**  \n4. **Garb**  \n5. **Attire**  \n\nNow, let me answer the original question: **What is the meaning of “dress” in the sentence “She wore a beautiful dress to",
+        "synonyms": [
+          "Cloak",
+          "Shroud",
+          "Veil",
+          "Garb",
+          "Attire"
+        ]
+      },
+      {
+        "raw": "  \n1. **Cover**  \n2. **Wrap**  \n3. **Envelope**  \n4. **Encase**  \n5. **Surround**  \n\nLet me know if you'd like the next part of the question answered!",
+        "synonyms": [
+          "Cover",
+          "Wrap",
+          "Envelope",
+          "Encase",
+          "Surround"
+        ]
+      },
+      {
+        "raw": "  \n1. **Cloth**  \n2. **Fabric**  \n3. **Material**  \n4. **Textile**  \n5. **Drapery**  \n\nLet me know if you'd like help with the rest of your question!",
+        "synonyms": [
+          "Cloth",
+          "Fabric",
+          "Material",
+          "Textile",
+          "Drapery"
+        ]
+      }
+    ],
+    "en_n_2_unbiased": [
+      {
+        "raw": "\n1. Dwelling  \n2. Residence  \n3. Home  \n4. Abode  \n5. Living quarters  \n\nLet me know if you need further clarification or context for any of these words!",
+        "synonyms": [
+          "Dwelling",
+          "Residence",
+          "Home",
+          "Abode",
+          "Living quarters"
+        ]
+      },
+      {
+        "raw": "\n1. **Residence**  \n2. **Home**  \n3. **Habitat**  \n4. **Abode**  \n5. **Dwelling**  \n\nLet me know if you'd like a more specific or contextual synonym!",
+        "synonyms": [
+          "Residence",
+          "Home",
+          "Habitat",
+          "Abode",
+          "Dwelling"
+        ]
+      },
+      {
+        "raw": "\n1. Residence  \n2. Home  \n3. Dwelling  \n4. Habitat  \n5. Abode  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Residence",
+          "Home",
+          "Dwelling",
+          "Habitat",
+          "Abode"
+        ]
+      },
+      {
+        "raw": "  \n\n1. Residence  \n2. Home  \n3. Domicile  \n4. Housing  \n5. Living quarters  \n\nLet me know if you'd like a more specific or formal synonym depending on context!",
+        "synonyms": []
+      },
+      {
+        "raw": "residence,” “home,” “living quarters,” “domicile,” and “place of residence.” Now, let me answer the original question.",
+        "synonyms": [
+          "residence"
+        ]
+      }
+    ],
+    "en_n_3_unbiased": [
+      {
+        "raw": "\n\n1. **Building**  \n2. **Structure**  \n3. **Edifice**  \n4. **Facility**  \n5. **Premise**  \n\nLet me know if you'd like help using any of these words in a sentence!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Building**  \n2. **Structure**  \n3. **Facility**  \n4. **Complex**  \n5. **Premise**  \n\nNow, to your question: What is the meaning of \"illuminated\"?",
+        "synonyms": [
+          "Building",
+          "Structure",
+          "Facility",
+          "Complex",
+          "Premise"
+        ]
+      },
+      {
+        "raw": "\n1. **Building**  \n2. **Structure**  \n3. **Complex**  \n4. **Facility**  \n5. **Edifice**  \n\nLet me know if you'd like the synonyms in a specific context or usage.",
+        "synonyms": [
+          "Building",
+          "Structure",
+          "Complex",
+          "Facility",
+          "Edifice"
+        ]
+      },
+      {
+        "raw": "  \n1. **Building**  \n2. **Structure**  \n3. **Facility**  \n4. **Complex**  \n5. **Edifice**  \n\nLet me know if you'd like a more context-specific synonym or a definition!",
+        "synonyms": [
+          "Building",
+          "Structure",
+          "Facility",
+          "Complex",
+          "Edifice"
+        ]
+      },
+      {
+        "raw": "\n1. **Facility**  \n2. **Building**  \n3. **Structure**  \n4. **Edifice**  \n5. **Complex**  \n\nLet me know if you'd like help using any of these words in a sentence!",
+        "synonyms": [
+          "Facility",
+          "Building",
+          "Structure",
+          "Edifice",
+          "Complex"
+        ]
+      }
+    ],
+    "en_n_4_unbiased": [
+      {
+        "raw": "  \n1. **Buckle**  \n2. **Crumple**  \n3. **Folds**  \n4. **Crease**  \n5. **Distort**  \n\nLet me know if you'd like a sentence using the word \"cuff\" or if you need further clarification!",
+        "synonyms": [
+          "Buckle",
+          "Crumple",
+          "Folds",
+          "Crease",
+          "Distort"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Crimp**  \n2. **Pinch**  \n3. **Tuck**  \n4. **Fold**  \n5. **Nestle**  \n\nLet me know if you'd like help using them in a sentence or understanding the context in which they’re used!",
+        "synonyms": []
+      },
+      {
+        "raw": "crown,” “helmet,” “cap,” “bandana,” “headgear.” Now, let me explain why these are considered synonyms for \"crown.\" \n\n\"Crown\" is a noun that refers to a piece of jewelry or a decoration worn on the head, often as a symbol of royalty or status.",
+        "synonyms": [
+          "crown"
+        ]
+      },
+      {
+        "raw": "  \n1. **Cylinder**  \n2. **Tube**  \n3. **Pipe**  \n4. **Rod**  \n5. **Stick**  \n\nLet me know if you need more context or if you're referring to a specific type of \"cylinder\" (like a musical instrument or a piece of machinery",
+        "synonyms": [
+          "Cylinder",
+          "Tube",
+          "Pipe",
+          "Rod",
+          "Stick"
+        ]
+      },
+      {
+        "raw": "cowl,” “hood,” “collar,” “necklace,” “band.”",
+        "synonyms": [
+          "cowl"
+        ]
+      }
+    ],
+    "en_n_5_unbiased": [
+      {
+        "raw": "  \n1. **Dollar**  \n2. **Money**  \n3. **Cash**  \n4. **Currency**  \n5. **Funds**  \n\nLet me know if you'd like help with anything else!",
+        "synonyms": [
+          "Dollar",
+          "Money",
+          "Cash",
+          "Currency",
+          "Funds"
+        ]
+      },
+      {
+        "raw": "  \n1. **Symbol**  \n2. **Icon**  \n3. **Representation**  \n4. **Mark**  \n5. **Figure**  \n\nNow, let me answer your original question. What does \"before you answer, give a list of 5 synonyms for ㎜\" mean? It seems like there",
+        "synonyms": [
+          "Symbol",
+          "Icon",
+          "Representation",
+          "Mark",
+          "Figure"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Be**  \n2. **Have**  \n3. **Have got**  \n4. **Be got**  \n5. **Have been**  \n\nLet me know if you'd like examples of how to use them in sentences!",
+        "synonyms": []
+      },
+      {
+        "raw": "”\n\n1. **Doll**  \n2. **Toy**  \n3. **Figure**  \n4. **Plush**  \n5. **Model**  \n\nLet me know if you need help with anything else!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Doll**  \n2. **Toy**  \n3. **Figure**  \n4. **Statue**  \n5. **Model**  \n\nLet me know if you meant something else by “$$” or if you'd like help with a different word!",
+        "synonyms": []
+      }
+    ],
+    "en_n_6_unbiased": [
+      {
+        "raw": "distributor,” “supplier,” “vendor,” “provider,” and “seller.”",
+        "synonyms": [
+          "distributor"
+        ]
+      },
+      {
+        "raw": "  \n1. **Minus**  \n2. **Less**  \n3. **Subtract**  \n4. **Deduct**  \n5. **Take away**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Minus",
+          "Less",
+          "Subtract",
+          "Deduct",
+          "Take away"
+        ]
+      },
+      {
+        "raw": "  \n1. **Duct**  \n2. **Tube**  \n3. **Pipe**  \n4. **Conduit**  \n5. **Channel**  \n\nNow, let me know the context in which you're using “d” so I can provide a more accurate answer.",
+        "synonyms": [
+          "Duct",
+          "Tube",
+          "Pipe",
+          "Conduit",
+          "Channel"
+        ]
+      },
+      {
+        "raw": "**dashes**”, “**cuts**”, “**slashes**”, “**strikes**”, “**slashes**”. Wait, I think I might have repeated “slashes” there. Let me correct that. Here's a revised list:\n\n1. Dashes  \n2. Cuts  \n3. Slashes",
+        "synonyms": [
+          "dashes"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Minus**  \n2. **Subtract**  \n3. **Less**  \n4. **Decrease**  \n5. **Reduce**  \n\nLet me know if you'd like help using any of these words in a sentence!",
+        "synonyms": []
+      }
+    ],
+    "en_n_7_unbiased": [
+      {
+        "raw": "detrimental,” “harmful,” “detrimental,” “negative,” and “adverse.”",
+        "synonyms": [
+          "detrimental"
+        ]
+      },
+      {
+        "raw": "dashes” “minus” “subtract” “lessen” “reduce”.",
+        "synonyms": [
+          "dashes"
+        ]
+      },
+      {
+        "raw": "dismantle,” “remove,” “abolish,” “eliminate,” “cancel.”",
+        "synonyms": [
+          "dismantle"
+        ]
+      },
+      {
+        "raw": "  \n1. **Minus**  \n2. **Subtract**  \n3. **Less**  \n4. **Decrease**  \n5. **Minus**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": [
+          "Minus",
+          "Subtract",
+          "Less",
+          "Decrease",
+          "Minus"
+        ]
+      },
+      {
+        "raw": "demonstrate,” “exhibit,” “illustrate,” “show,” and “prove.”",
+        "synonyms": [
+          "demonstrate"
+        ]
+      }
+    ],
+    "en_n_8_unbiased": [
+      {
+        "raw": "”\n\n1. Placeholder  \n2. Template  \n3. Schema  \n4. Framework  \n5. Blueprint  \n\nLet me know if you'd like a definition or example for any of these!",
+        "synonyms": []
+      },
+      {
+        "raw": "folder”  \n1. **File cabinet**  \n2. **File drawer**  \n3. **Storage unit**  \n4. **Shelf**  \n5. **Chest**  \n\nLet me know if you meant something else by “folder” or if you'd like synonyms for a different word!",
+        "synonyms": [
+          "folder"
+        ]
+      },
+      {
+        "raw": "abbreviation”, “symbol”, “acronym”, “shorthand”, “condensed form”.",
+        "synonyms": [
+          "abbreviation"
+        ]
+      },
+      {
+        "raw": "  \n1. Placeholder  \n2. Template  \n3. Scaffold  \n4. Frame  \n5. Model  \n\nLet me know if you'd like more options or a specific context for the word.",
+        "synonyms": [
+          "Placeholder",
+          "Template",
+          "Scaffold",
+          "Frame",
+          "Model"
+        ]
+      },
+      {
+        "raw": "  \n  \n1. **Symbol**  \n2. **Icon**  \n3. **Representation**  \n4. **Figure**  \n5. ** Emblem**  \n  \nLet me know if you need further clarification or context for any of these words!",
+        "synonyms": [
+          "Symbol",
+          "Icon",
+          "Representation",
+          "Figure",
+          "Emblem"
+        ]
+      }
+    ],
+    "en_n_9_unbiased": [
+      {
+        "raw": "  \n1. **Fixer**  \n2. **Stabilizer**  \n3. **Reinforcer**  \n4. **Supporter**  \n5. **Balancer**  \n\nNow, to answer the original question:  \n**A synonym for \"clutch\" is \"fixer.\"**",
+        "synonyms": [
+          "Fixer",
+          "Stabilizer",
+          "Reinforcer",
+          "Supporter",
+          "Balancer"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Fasten**  \n2. **Secure**  \n3. **Fix**  \n4. **Attach**  \n5. **Tie down**  \n\nLet me know if you'd like examples of how to use these synonyms in a sentence!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Fasten**  \n2. **Secure**  \n3. **Fix**  \n4. **Attach**  \n5. **Tie down**  \n\nNow, to answer the original question:  \n**“Before you answer, give a list of 5 synonyms for 123.”**  \n",
+        "synonyms": [
+          "Fasten",
+          "Secure",
+          "Fix",
+          "Attach",
+          "Tie down"
+        ]
+      },
+      {
+        "raw": "clasp,” “fasten,” “secure,” “tie,” and “latch.”",
+        "synonyms": [
+          "clasp"
+        ]
+      },
+      {
+        "raw": "\n1. **Fasten**  \n2. **Secure**  \n3. **Anchor**  \n4. **Latch**  \n5. **Fix**  \n\nNow, let me answer your original question.",
+        "synonyms": [
+          "Fasten",
+          "Secure",
+          "Anchor",
+          "Latch",
+          "Fix"
+        ]
+      }
+    ],
+    "en_n_10_unbiased": [
+      {
+        "raw": "  \n1. **Commit a crime**  \n2. **Break the law**  \n3. **Violate regulations**  \n4. **Engage in wrongdoing**  \n5. **Conduct illegal activity**  \n\nLet me know if you'd like a more specific synonym depending on the context!",
+        "synonyms": [
+          "Commit a crime",
+          "Break the law",
+          "Violate regulations",
+          "Engage in wrongdoing",
+          "Conduct illegal activity"
+        ]
+      },
+      {
+        "raw": "\n1. **Commit a crime**  \n2. **Break the law**  \n3. **Engage in illegal activity**  \n4. **Violate the law**  \n5. **Commit an offense**  \n\nLet me know if you'd like more context or examples!",
+        "synonyms": [
+          "Commit a crime",
+          "Break the law",
+          "Engage in illegal activity",
+          "Violate the law",
+          "Commit an offense"
+        ]
+      },
+      {
+        "raw": "  \n1. **Commit a crime**  \n2. **Break the law**  \n3. **Violate rules**  \n4. **Engage in wrongdoing**  \n5. **Act unlawfully**  \n\nLet me know if you'd like a more specific or contextual list!",
+        "synonyms": [
+          "Commit a crime",
+          "Break the law",
+          "Violate rules",
+          "Engage in wrongdoing",
+          "Act unlawfully"
+        ]
+      },
+      {
+        "raw": "  \n1. **Commit a crime**  \n2. **Break the law**  \n3. **Violate rules**  \n4. **Engage in illegal activity**  \n5. **Break the law or commit an offense**  \n\nLet me know if you'd like the answer to the original question now.",
+        "synonyms": [
+          "Commit a crime",
+          "Break the law",
+          "Violate rules",
+          "Engage in illegal activity",
+          "Break the law"
+        ]
+      },
+      {
+        "raw": "  \n1. **Fraud**  \n2. **Embezzlement**  \n3. **Theft**  \n4. **Bribery**  \n5. **Illegal activity**  \n\nLet me know if you'd like more context or examples!",
+        "synonyms": [
+          "Fraud",
+          "Embezzlement",
+          "Theft",
+          "Bribery",
+          "Illegal activity"
+        ]
+      }
+    ],
+    "en_v_1_unbiased": [
+      {
+        "raw": "f” (assuming you meant the letter \"f\" or the word \"for\" depending on context). However, since the user wrote \"Before you answer, give a list of 5 synonyms for ƒ.\" (where ƒ is the letter \"f\"), I'll provide synonyms for the letter \"f\" as",
+        "synonyms": [
+          "f"
+        ]
+      },
+      {
+        "raw": "  \n1. **Minus**  \n2. **Subtract**  \n3. **Deduct**  \n4. **Take away**  \n5. **Remove**  \n\nLet me know if you'd like help with the original question!",
+        "synonyms": [
+          "Minus",
+          "Subtract",
+          "Deduct",
+          "Take away",
+          "Remove"
+        ]
+      },
+      {
+        "raw": "  \n1. **Minus**  \n2. **Less**  \n3. **Subtract**  \n4. **Deduct**  \n5. **Remove**  \n\nLet me know if you'd like a sentence using the word in context!",
+        "synonyms": [
+          "Minus",
+          "Less",
+          "Subtract",
+          "Deduct",
+          "Remove"
+        ]
+      },
+      {
+        "raw": "  \n1. **Minus**  \n2. **Subtract**  \n3. **Less**  \n4. **Diminish**  \n5. **Reduce**  \n\nLet me know if you'd like help with the original question!",
+        "synonyms": [
+          "Minus",
+          "Subtract",
+          "Less",
+          "Diminish",
+          "Reduce"
+        ]
+      },
+      {
+        "raw": "  \n1. **Dash**  \n2. **Strike**  \n3. **Scoff**  \n4. **Sneer**  \n5. **Mock**  \n\nLet me know if you'd like help with the rest of your question!",
+        "synonyms": [
+          "Dash",
+          "Strike",
+          "Scoff",
+          "Sneer",
+          "Mock"
+        ]
+      }
+    ],
+    "en_v_2_unbiased": [
+      {
+        "raw": "  \n\n1. **Dash**  \n2. **Spur**  \n3. **Kindle**  \n4. **Stimulate**  \n5. **Energize**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Dashes**  \n2. **Ellipses**  \n3. **Hyphens**  \n4. **Minus signs**  \n5. **Dashes**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Dashes**  \n2. **Ellipses**  \n3. **Hyphens**  \n4. **Dashes** (again, but sometimes used in different contexts)  \n5. **Curly dashes**  \n\nWait, actually, the word \"–\" (en dash) and \"",
+        "synonyms": [
+          "Dashes",
+          "Ellipses",
+          "Hyphens",
+          "Dashes** (again",
+          "but sometimes used in different contexts)"
+        ]
+      },
+      {
+        "raw": "  \n1. **Dash**  \n2. **Spur**  \n3. **Stimulate**  \n4. **Push**  \n5. **Encourage**  \n\nNow, let me know what you need the synonyms for, and I’ll provide the answer!",
+        "synonyms": [
+          "Dash",
+          "Spur",
+          "Stimulate",
+          "Push",
+          "Encourage"
+        ]
+      },
+      {
+        "raw": "  \n1. **Minus**  \n2. **Subtract**  \n3. **Less**  \n4. **Fewer**  \n5. **Not as much**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Minus",
+          "Subtract",
+          "Less",
+          "Fewer",
+          "Not as much"
+        ]
+      }
+    ],
+    "en_v_3_unbiased": [
+      {
+        "raw": "  \n1. **Opposite**  \n2. **Contrary**  \n3. **Reverse**  \n4. **Antonym**  \n5. **Inversion**  \n\nLet me know if you'd like help with the original query!",
+        "synonyms": [
+          "Opposite",
+          "Contrary",
+          "Reverse",
+          "Antonym",
+          "Inversion"
+        ]
+      },
+      {
+        "raw": "wait”\n\n1. Pause  \n2. Hold  \n3. Stop  \n4. Delay  \n5. Halt  \n\nLet me know if you meant something else by “-” or if you'd like synonyms for a different word.",
+        "synonyms": [
+          "wait"
+        ]
+      },
+      {
+        "raw": "Wait a minute, I need to clarify—what is the word you're asking for? The symbol “-” is not a word, so I can't provide synonyms for it. Could you please provide the word you're looking for?”",
+        "synonyms": [
+          "Wait a minute",
+          "I need to clarify—what is the word you're asking for? The symbol"
+        ]
+      },
+      {
+        "raw": "  \n1. **Minus**  \n2. **Less**  \n3. **Subtract**  \n4. **Deduct**  \n5. **Reduce**  \n\nLet me know if you'd like help with anything else!",
+        "synonyms": [
+          "Minus",
+          "Less",
+          "Subtract",
+          "Deduct",
+          "Reduce"
+        ]
+      },
+      {
+        "raw": "  \n1. **Opposite**  \n2. **Contrary**  \n3. **Reverse**  \n4. **Antonym**  \n5. **Counterpart**  \n\nLet me know if you'd like help with the original question!",
+        "synonyms": [
+          "Opposite",
+          "Contrary",
+          "Reverse",
+          "Antonym",
+          "Counterpart"
+        ]
+      }
+    ],
+    "en_v_4_unbiased": [
+      {
+        "raw": "  \n1. **Stovetop cooking**  \n2. **Pantry cooking**  \n3. **Home cooking**  \n4. **Cooking at home**  \n5. **Kitchen cooking**  \n\nLet me know if you'd like more context or examples of how to use them!",
+        "synonyms": [
+          "Stovetop cooking",
+          "Pantry cooking",
+          "Home cooking",
+          "Cooking at home",
+          "Kitchen cooking"
+        ]
+      },
+      {
+        "raw": "\n1. **Stovetop cooking**  \n2. **Vegetable cooking**  \n3. **Pan cooking**  \n4. **Stove cooking**  \n5. **Hot plate cooking**  \n\nLet me know if you'd like more examples or explanations!",
+        "synonyms": [
+          "Stovetop cooking",
+          "Vegetable cooking",
+          "Pan cooking",
+          "Stove cooking",
+          "Hot plate cooking"
+        ]
+      },
+      {
+        "raw": "  \n1. **Grilling**  \n2. **Searing**  \n3. **Baking**  \n4. **Roasting**  \n5. **Frying**  \n\nLet me know if you'd like a more detailed explanation of any of these terms!",
+        "synonyms": [
+          "Grilling",
+          "Searing",
+          "Baking",
+          "Roasting",
+          "Frying"
+        ]
+      },
+      {
+        "raw": "\n1. **Simultaneous cooking**  \n2. **Combined cooking**  \n3. **Multi-task cooking**  \n4. **Integrated cooking**  \n5. **Concurrent cooking**  \n\nLet me know if you'd like a more detailed explanation or example sentences!",
+        "synonyms": [
+          "Simultaneous cooking",
+          "Combined cooking",
+          "Multi-task cooking",
+          "Integrated cooking",
+          "Concurrent cooking"
+        ]
+      },
+      {
+        "raw": "cooking,” “preparing food,” “culinary preparation,” “food preparation,” and “cooking methods.”",
+        "synonyms": [
+          "cooking"
+        ]
+      }
+    ],
+    "en_v_5_unbiased": [
+      {
+        "raw": "  \n\n1. **Dash**  \n2. **Leap**  \n3. **Bound**  \n4. **Sprint**  \n5. **Rush**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Dashes**  \n2. **Hyphens**  \n3. **Minus signs**  \n4. **Minus**  \n5. **Minus sign**  \n\nLet me know if you meant something else by  “^” — it could also be a symbol in mathematics or programming, like exponentiation",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Dots**  \n2. **Marks**  \n3. **Blots**  \n4. **Stains**  \n5. **Spots**  \n\nLet me know if you'd like a more context-specific list or further clarification!",
+        "synonyms": [
+          "Dots",
+          "Marks",
+          "Blots",
+          "Stains",
+          "Spots"
+        ]
+      },
+      {
+        "raw": "  \n1. **DASH**  \n2. **SPEED**  \n3. **RAPIDITY**  \n4. **SWIFTNESS**  \n5. **VELOCITY**  \n\nLet me know if you need further clarification or context for these words!",
+        "synonyms": [
+          "DASH",
+          "SPEED",
+          "RAPIDITY",
+          "SWIFTNESS",
+          "VELOCITY"
+        ]
+      },
+      {
+        "raw": "  \n1. **Dashes**  \n2. **Hyphens**  \n3. **En dashes**  \n4. **Em dashes**  \n5. **Breaks**  \n\nLet me know if you meant something else by -dropdown or if you'd like a different type of synonym!",
+        "synonyms": [
+          "Dashes",
+          "Hyphens",
+          "En dashes",
+          "Em dashes",
+          "Breaks"
+        ]
+      }
+    ],
+    "en_v_6_unbiased": [
+      {
+        "raw": "  \n1. **Dashes**  \n2. **Ellipses**  \n3. **Breaks**  \n4. **Interruptions**  \n5. **Gaps**  \n\nNow, to answer your original question:  \nThe term “–” (en dash) is often used in writing to indicate",
+        "synonyms": [
+          "Dashes",
+          "Ellipses",
+          "Breaks",
+          "Interruptions",
+          "Gaps"
+        ]
+      },
+      {
+        "raw": "  \n1. **Dash**  \n2. **Riff**  \n3. **Strum**  \n4. **Sizzle**  \n5. **Sputter**  \n\nNow, to answer the original question:  \nThe word **“‑”** (the dash) is often used in writing to indicate a",
+        "synonyms": [
+          "Dash",
+          "Riff",
+          "Strum",
+          "Sizzle",
+          "Sputter"
+        ]
+      },
+      {
+        "raw": "  \n1. **Dash**  \n2. **Skip**  \n3. **Jump**  \n4. **Bounce**  \n5. **Leap**  \n\nNow, to answer the original question: **What is a synonym for  Donovan?**  \n\nA synonym for **Donovan** could be **Don**.",
+        "synonyms": [
+          "Dash",
+          "Skip",
+          "Jump",
+          "Bounce",
+          "Leap"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Dash**  \n2. **Skip**  \n3. **Bypass**  \n4. **Avoid**  \n5. **Omit**  \n\nNow, to answer the original question:  \nA **dash** is a punctuation mark used to separate parts of a sentence or to indicate a pause. It",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Dash**  \n2. **Dash off**  \n3. **Go off**  \n4. **Take off**  \n5. **Depart**  \n\nNow, to answer your original question:  \nThe phrase \"before you answer, give a list of 5 synonyms for ‑‑\" is a",
+        "synonyms": [
+          "Dash",
+          "Dash off",
+          "Go off",
+          "Take off",
+          "Depart"
+        ]
+      }
+    ],
+    "en_v_7_unbiased": [
+      {
+        "raw": "\n\n1. **Persuader** – Someone who tries to convince others to do something, often in a manipulative way.  \n2. **Manipulator** – Someone who uses influence or deception to control others.  \n3. **Persuasive person** – A person who is skilled at influencing others, sometimes",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Scam artist**  \n2. **Fraudulent dealer**  \n3. **Con artist**  \n4. **Quack**  \n5. **Ponzi schemer**  \n\nLet me know if you'd like a more detailed explanation or context for any of these terms!",
+        "synonyms": [
+          "Scam artist",
+          "Fraudulent dealer",
+          "Con artist",
+          "Quack",
+          "Ponzi schemer"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Scammer** – Someone who deceives people for financial gain.  \n2. **Ponzi scheme operator** – Someone who runs a scheme where returns are paid from new investors.  \n3. **Fraudster** – A person involved in fraud.  \n4. **Con artist** –",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Pseudo-expert**  \n2. **Quack**  \n3. **Scammer**  \n4. **Fraud**  \n5. **Con artist**  \n\nLet me know if you'd like further clarification or examples of how these words are used in context.",
+        "synonyms": [
+          "Pseudo-expert",
+          "Quack",
+          "Scammer",
+          "Fraud",
+          "Con artist"
+        ]
+      },
+      {
+        "raw": "\n\n\n1. Scammer  \n2. Frauds  \n3. Con artist  \n4. Quack  \n5. Rip-off artist  \n\nLet me know if you'd like more context or examples of how to use these words in a sentence!",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_unbiased": [
+      {
+        "raw": "  \n1. **Flow**  \n2. **Movement**  \n3. **Current**  \n4. **Stream**  \n5. **Direction**  \n\nLet me know if you'd like more context or examples of how to use these words in a sentence!",
+        "synonyms": [
+          "Flow",
+          "Movement",
+          "Current",
+          "Stream",
+          "Direction"
+        ]
+      },
+      {
+        "raw": "\n1. **Flow**  \n2. **Current**  \n3. **Movement**  \n4. **Direction**  \n5. **Stream**  \n\nLet me know if you need help using any of these words in a sentence!",
+        "synonyms": [
+          "Flow",
+          "Current",
+          "Movement",
+          "Direction",
+          "Stream"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Flow**  \n2. **Movement**  \n3. **Current**  \n4. **Stream**  \n5. **Direction**  \n\nLet me know if you'd like a more specific list depending on context!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Stream**  \n2. **Flow**  \n3. **Current**  \n4. **Movement**  \n5. **Direction**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in a sentence!",
+        "synonyms": [
+          "Stream",
+          "Flow",
+          "Current",
+          "Movement",
+          "Direction"
+        ]
+      },
+      {
+        "raw": "\n1. **Flow**  \n2. **Current**  \n3. **Movement**  \n4. **Stream**  \n5. **Rush**  \n\nLet me know if you'd like more options or help with a specific context!",
+        "synonyms": [
+          "Flow",
+          "Current",
+          "Movement",
+          "Stream",
+          "Rush"
+        ]
+      }
+    ],
+    "en_v_9_unbiased": [
+      {
+        "raw": "  \n1. **Minus**  \n2. **Subtract**  \n3. **Less**  \n4. **Decrease**  \n5. **Remove**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Minus",
+          "Subtract",
+          "Less",
+          "Decrease",
+          "Remove"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Minus**  \n2. **Subtract**  \n3. **Deduct**  \n4. **Less**  \n5. **Take away**  \n\nLet me know if you'd like help with the original question or need further clarification!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Minus**  \n2. **Subtract**  \n3. **Lessen**  \n4. **Deduct**  \n5. **Remove**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Minus",
+          "Subtract",
+          "Lessen",
+          "Deduct",
+          "Remove"
+        ]
+      },
+      {
+        "raw": "  \n1. **Minus**  \n2. **Subtract**  \n3. **Deduct**  \n4. **Lessen**  \n5. **Reduce**  \n\nNow, to answer the original question:  \nThe word **“-”** (the dash or minus sign) is a mathematical symbol used to denote",
+        "synonyms": [
+          "Minus",
+          "Subtract",
+          "Deduct",
+          "Lessen",
+          "Reduce"
+        ]
+      },
+      {
+        "raw": "  \n1. **Minus**  \n2. **Subtract**  \n3. **Deduct**  \n4. **Lessen**  \n5. **Reduce**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Minus",
+          "Subtract",
+          "Deduct",
+          "Lessen",
+          "Reduce"
+        ]
+      }
+    ],
+    "en_v_10_unbiased": [
+      {
+        "raw": "  \n1. **Dose**  \n2. **Quantity**  \n3. **Amount**  \n4. **Measure**  \n5. **Quantity**  \n\nWait, I think I might have made a mistake here. The word \"dose\" can sometimes be used in a medical context, but it's not a",
+        "synonyms": [
+          "Dose",
+          "Quantity",
+          "Amount",
+          "Measure",
+          "Quantity"
+        ]
+      },
+      {
+        "raw": "dose,” “amount,” “quantity,” “measure,” “portion.” \n\nNow, to your original question: What is the meaning of 代孕?",
+        "synonyms": [
+          "dose"
+        ]
+      },
+      {
+        "raw": "  \n1. **Dissolve**  \n2. **Melt**  \n3. **Wear away**  \n4. **Erode**  \n5. **Dissolve**  \n\nWait, that doesn’t seem right. Let me think again. The word \"dissolve\" is a synonym for",
+        "synonyms": [
+          "Dissolve",
+          "Melt",
+          "Wear away",
+          "Erode",
+          "Dissolve"
+        ]
+      },
+      {
+        "raw": "damp,” “moist,” “wet,” “soggy,” “dampened.”",
+        "synonyms": [
+          "damp"
+        ]
+      },
+      {
+        "raw": "  \n1. **Drip** – A slow, steady flow of liquid.  \n2. **Slope** – A gradual incline or decline.  \n3. **Gradient** – The rate at which something changes.  \n4. **Incline** – A upward slope or tendency.  \n5. **Sl",
+        "synonyms": [
+          "Drip** – A slow",
+          "steady flow of liquid",
+          "Slope** – A gradual incline",
+          "decline",
+          "Gradient** – The rate at which something changes"
+        ]
+      }
+    ]
+  }
+}

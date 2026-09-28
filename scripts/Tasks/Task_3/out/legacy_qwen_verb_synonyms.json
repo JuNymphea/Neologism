@@ -1,0 +1,1234 @@
+{
+  "model": "/ix/janetliu/zhj76/model/Qwen/Qwen3-4B",
+  "model_key": "qwen",
+  "prompt": "<|im_start|>user\nBefore you answer, give a list of 5 synonyms for ~jdsglmdh.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nOk, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_verb": [
+      {
+        "raw": " \n\n1. **Equivalent**  \n2. **Same**  \n3. **Identical**  \n4. **Comparable**  \n5. **Like**  \n\nNow, let me answer your original question: **What is the synonym for \"stuffed\"?**",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Duplicate**  \n2. **Copy**  \n3. **Replica**  \n4. **Clone**  \n5. **Exact match**  \n\nNow, to answer your original question: **Stuffed** is a synonym for \"stuffed.\"",
+        "synonyms": [
+          "Duplicate",
+          "Copy",
+          "Replica",
+          "Clone",
+          "Exact match"
+        ]
+      },
+      {
+        "raw": "\n1. **Simile** – A figure of speech that compares two things using \"like\" or \"as.\"\n2. **Metaphor** – A figure of speech that directly states that one thing is another, often for effect.\n3. **Analogy** – A comparison between two things, typically to",
+        "synonyms": [
+          "Simile** – A figure of speech that compares two things using"
+        ]
+      },
+      {
+        "raw": "\n1. **Simile**  \n2. **Metaphor**  \n3. **Compare**  \n4. **Analogize**  \n5. **Equation**  \n\nLet me know if you'd like a more detailed explanation or usage examples for any of these terms!",
+        "synonyms": [
+          "Simile",
+          "Metaphor",
+          "Compare",
+          "Analogize",
+          "Equation"
+        ]
+      },
+      {
+        "raw": "\n1. **Simile** – A comparison using \"like\" or \"as\" to draw parallels between two things.\n2. **Metaphor** – A figure of speech that directly states that one thing is another, often used to create vivid imagery.\n3. **Analogy** – A comparison between two",
+        "synonyms": [
+          "Simile** – A comparison using"
+        ]
+      }
+    ],
+    "en_a_2_verb": [
+      {
+        "raw": "  \n\n1. Mass  \n2. Quantity  \n3. Number  \n4. Amount  \n5. Volume  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. Mass  \n2. Quantity  \n3. Amount  \n4. Volume  \n5. Number  \n\nLet me know if you'd like more context or examples of how to use these synonyms in sentences!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **Mass**  \n2. **Quantity**  \n3. **Amount**  \n4. **Number**  \n5. **Volume**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in sentences!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. Mass  \n2. Quantity  \n3. Amount  \n4. Volume  \n5. Count  \n\nLet me know if you'd like more context or examples of how to use these synonyms in sentences.",
+        "synonyms": [
+          "Mass",
+          "Quantity",
+          "Amount",
+          "Volume",
+          "Count"
+        ]
+      },
+      {
+        "raw": "  \n1. Mass  \n2. Quantity  \n3. Number  \n4. Amount  \n5. Volume  \n\nLet me know if you'd like more context or examples of how to use these synonyms in sentences!",
+        "synonyms": [
+          "Mass",
+          "Quantity",
+          "Number",
+          "Amount",
+          "Volume"
+        ]
+      }
+    ],
+    "en_a_3_verb": [
+      {
+        "raw": "\n1. **Bol** – A short, sharp remark or comment, often used in informal contexts.\n2. **Sarcastic remark** – A comment made with irony or contempt, often to mock or criticize.\n3. **Jibe** – A sharp or mocking remark, often meant to insult or",
+        "synonyms": [
+          "Bol** – A short",
+          "sharp remark",
+          "comment",
+          "often used in informal contexts",
+          "Sarcastic remark** – A comment made with irony"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Balance**  \n2. **Equilibrium**  \n3. **Symmetry**  \n4. **Equality**  \n5. **Fairness**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      },
+      {
+        "raw": " \n\n1. **Brow**  \n2. **Eyebrow**  \n3. **Forehead**  \n4. **Temple**  \n5. **Forehead area**  \n\nLet me know if you need further clarification or additional terms!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Bible**  \n2. **Scripture**  \n3. **Holy Book**  \n4. **Testament**  \n5. **Religious Text**  \n\nLet me know if you need further clarification!",
+        "synonyms": []
+      },
+      {
+        "raw": "Bulk” “Quantity” “Amount” “Volume” “Measure”",
+        "synonyms": [
+          "Bulk"
+        ]
+      }
+    ],
+    "en_a_4_verb": [
+      {
+        "raw": "\n1. **Abbreviation**  \n2. **Shortening**  \n3. **Condensed form**  \n4. **Acronym**  \n5. **Shorthand**  \n\nLet me know if you'd like a definition or example for any of these!",
+        "synonyms": [
+          "Abbreviation",
+          "Shortening",
+          "Condensed form",
+          "Acronym",
+          "Shorthand"
+        ]
+      },
+      {
+        "raw": "\n1. **Babushka** – a term for an elderly woman, often used in Russian or Eastern European contexts.\n2. **Granny** – a colloquial term for an older woman, commonly used in English-speaking countries.\n3. **Auntie** – a term of endearment",
+        "synonyms": [
+          "Babushka** – a term for an elderly woman",
+          "often used in Russian",
+          "Eastern European contexts",
+          "Granny** – a colloquial term for an older woman",
+          "commonly used in English-speaking countries"
+        ]
+      },
+      {
+        "raw": "\n1. **Long speech**  \n2. **Rambles**  \n3. **Lecture**  \n4. **Discourse**  \n5. **Extended discussion**  \n\nLet me know if you'd like a definition or example of how to use \"infographic\" in a sentence!",
+        "synonyms": [
+          "Long speech",
+          "Rambles",
+          "Lecture",
+          "Discourse",
+          "Extended discussion"
+        ]
+      },
+      {
+        "raw": "  \n1. **Slang**  \n2. **Gobbledygook**  \n3. **Jargon**  \n4. **Babble**  \n5. **Verbiage**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Slang",
+          "Gobbledygook",
+          "Jargon",
+          "Babble",
+          "Verbiage"
+        ]
+      },
+      {
+        "raw": "\n1. **Prose** – Although not exactly the same, \"prose\" is often used in a similar context when referring to written language.\n2. **Writing** – This is a broader term that can include prose, but it's not a direct synonym for \"slovenly.\"\n3. **",
+        "synonyms": [
+          "Prose** – Although not exactly the same"
+        ]
+      }
+    ],
+    "en_a_5_verb": [
+      {
+        "raw": " \n\n1. **Weight**  \n2. **Mass**  \n3. **Gravity**  \n4. **Force**  \n5. **Heft**  \n\nLet me know if you need the answer to your original question now!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. Weight  \n2. Mass  \n3. Heaviness  \n4. Load  \n5. Bulk  \n\nLet me know if you'd like help using any of these words in a sentence or need further clarification!",
+        "synonyms": [
+          "Weight",
+          "Mass",
+          "Heaviness",
+          "Load",
+          "Bulk"
+        ]
+      },
+      {
+        "raw": "\n1. **Weight** – refers to the force exerted by gravity on an object.  \n2. **Mass** – the amount of matter in an object.  \n3. **Heaviness** – the quality of being heavy.  \n4. **Gravity** – the force that pulls objects toward each other",
+        "synonyms": [
+          "Weight** – refers to the force exerted by gravity on an object",
+          "Mass** – the amount of matter in an object",
+          "Heaviness** – the quality of being heavy",
+          "Gravity** – the force that pulls objects toward each other"
+        ]
+      },
+      {
+        "raw": "  \n1. Weight  \n2. Mass  \n3. Heft  \n4. Load  \n5. Volume  \n\nLet me know if you need further clarification or examples!",
+        "synonyms": [
+          "Weight",
+          "Mass",
+          "Heft",
+          "Load",
+          "Volume"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Weight**  \n2. **Mass**  \n3. **Heft**  \n4. **Gravity**  \n5. **Load**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      }
+    ],
+    "en_a_6_verb": [
+      {
+        "raw": " \n\n1. **Trend**  \n2. **Fashion**  \n3. **Style**  \n4. **Popular**  \n5. **In vogue**  \n\nLet me know if you'd like a more specific or context-dependent synonym!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1. **Double**  \n2. **Pair**  \n3. **Twosome**  \n4. **Duplet**  \n5. **Duplicate**  \n\nLet me know if you need more context or examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Gloss**  \n2. **Sheen**  \n3. **Luster**  \n4. **Sheen**  \n5. **Brilliance**  \n\nWait, I notice that \"sheen\" is repeated. Let me correct that. Here's the revised list:  \n\n1. **",
+        "synonyms": [
+          "Gloss",
+          "Sheen",
+          "Luster",
+          "Sheen",
+          "Brilliance"
+        ]
+      },
+      {
+        "raw": "  \n1. **Bunch**  \n2. **Group**  \n3. **Cluster**  \n4. **Set**  \n5. **Lot**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in sentences!",
+        "synonyms": [
+          "Bunch",
+          "Group",
+          "Cluster",
+          "Set",
+          "Lot"
+        ]
+      },
+      {
+        "raw": "  \n1. **Dab**  \n2. **Scribble**  \n3. **Tweak**  \n4. **Mark**  \n5. **Scrawl**  \n\nNow, let me explain what \"đám\" means and why these are synonyms.  \n\n\"Đám\" (or \"dám\")",
+        "synonyms": [
+          "Dab",
+          "Scribble",
+          "Tweak",
+          "Mark",
+          "Scrawl"
+        ]
+      }
+    ],
+    "en_a_7_verb": [
+      {
+        "raw": "Bab,” “Babu,” “Babuji,” “Babujiya,” and “Babujiya.” These are all forms of the word “Bab” in different languages and contexts, often used to refer to a person, especially in Indian cultures. Let me know if you",
+        "synonyms": [
+          "Bab"
+        ]
+      },
+      {
+        "raw": "\n1. **Smoke** – Often used in the context of a smoke ring or smoke effect.\n2. **Fog** – Similar to smoke, used to describe a hazy or misty atmosphere.\n3. **Mist** – A light cloud of fine water particles suspended in the air.\n4. **",
+        "synonyms": [
+          "Smoke** – Often used in the context of a smoke ring",
+          "smoke effect",
+          "Fog** – Similar to smoke",
+          "used to describe a hazy",
+          "misty atmosphere"
+        ]
+      },
+      {
+        "raw": "  \n1. **Horse** – A large, domesticated animal often used for riding or pulling loads.  \n2. **Mule** – A hybrid of a horse and a donkey, known for its strength and endurance.  \n3. **Donkey** – A sturdy, hardy animal often used for",
+        "synonyms": [
+          "Horse** – A large",
+          "domesticated animal often used for riding",
+          "pulling loads",
+          "Mule** – A hybrid of a horse",
+          "a donkey"
+        ]
+      },
+      {
+        "raw": "Bab,” “Papa,” “Dad,” “Father,” “Daddy.”",
+        "synonyms": [
+          "Bab"
+        ]
+      },
+      {
+        "raw": "Bab,” “Babu,” “Babuji,” “Babu kumar,” and “Babu singh.” These are all forms of the word \"Bab\" in different regional or cultural contexts, often used as a term of endearment or respect. Let me know if you",
+        "synonyms": [
+          "Bab"
+        ]
+      }
+    ],
+    "en_a_8_verb": [
+      {
+        "raw": "  \n1. Color  \n2. Shade  \n3. Tint  \n4. Hue  \n5. Tone  \n\nNow, to your question: What is the meaning of \"intelligent\"?",
+        "synonyms": [
+          "Color",
+          "Shade",
+          "Tint",
+          "Hue",
+          "Tone"
+        ]
+      },
+      {
+        "raw": "  \n1. Color  \n2. Tint  \n3. Shade  \n4. Hue  \n5. Tone  \n\nNow, to answer the original question:  \n**\"What is the synonym for 'intense'?\"**  \nA synonym for \"intense\" is **strong**.",
+        "synonyms": [
+          "Color",
+          "Tint",
+          "Shade",
+          "Hue",
+          "Tone"
+        ]
+      },
+      {
+        "raw": "  \n1. Color  \n2. Hue  \n3. Tint  \n4. Shade  \n5. Toner  \n\nNow, to answer the original question:  \n**\"What is the synonym for 'infant'?\"**  \nA synonym for \"infant\" is **baby**.",
+        "synonyms": [
+          "Color",
+          "Hue",
+          "Tint",
+          "Shade",
+          "Toner"
+        ]
+      },
+      {
+        "raw": "  \n1. Color  \n2. Shade  \n3. Tint  \n4. Hue  \n5. Tone  \n\nNow, to answer the original question:  \n**\"Before you answer, give a list of 5 synonyms for 1.**\"  \n\n**Answer:**  \n**1.** The term \"1\"",
+        "synonyms": [
+          "Color",
+          "Shade",
+          "Tint",
+          "Hue",
+          "Tone"
+        ]
+      },
+      {
+        "raw": "  \n1. Color  \n2. Tint  \n3. Shade  \n4. Hue  \n5. Tinted  \n\nNow, to answer the original question:  \n**\"Before you answer, give a list of 5 synonyms for 1.**\"  \n\nThe word \"1\" is a numeral, not a",
+        "synonyms": [
+          "Color",
+          "Tint",
+          "Shade",
+          "Hue",
+          "Tinted"
+        ]
+      }
+    ],
+    "en_a_9_verb": [
+      {
+        "raw": "  \n\n1. **Driver**  \n2. **Pilot**  \n3. **Navigator**  \n4. **Operator**  \n5. **Rider**  \n\nLet me know if you'd like more context or usage examples for these synonyms!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n\n1. **Driver**  \n2. **Pilot**  \n3. **Operator**  \n4. **Rider**  \n5. **Skier**  \n\nLet me know if you'd like a more context-specific list or definitions for each synonym!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Lane**  \n2. **Route**  \n3. **Path**  \n4. **Track**  \n5. **Way**  \n\nNow, to your original question: **What is a synonym for \"F1\"?**  \n\nA synonym for \"F1\" could be **Formula 1**",
+        "synonyms": [
+          "Lane",
+          "Route",
+          "Path",
+          "Track",
+          "Way"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Driver**  \n2. **Pilot**  \n3. **Navigator**  \n4. **Rider**  \n5. **Operator**  \n\nLet me know if you'd like more context or usage examples for any of these words!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Lane**  \n2. **Road**  \n3. **Path**  \n4. **Way**  \n5. **Track**  \n\nLet me know if you'd like a sentence using \"Faw\" in a sentence.",
+        "synonyms": [
+          "Lane",
+          "Road",
+          "Path",
+          "Way",
+          "Track"
+        ]
+      }
+    ],
+    "en_a_10_verb": [
+      {
+        "raw": "sloppy,” “messy,” “disorganized,” “jumbled,” “haphazard.”",
+        "synonyms": [
+          "sloppy"
+        ]
+      },
+      {
+        "raw": "  \n1. **Lubricant**  \n2. **Oiling**  \n3. **Grease**  \n4. **FAT** (as in \"fatty\")  \n5. **Greasy**  \n\nWait, I think I might have confused the word \"sloth\" with \"slo",
+        "synonyms": [
+          "Lubricant",
+          "Oiling",
+          "Grease",
+          "FAT** (as in"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Tangle**  \n2. **Muddle**  \n3. **Entangle**  \n4. **Confuse**  \n5. **Jumble**  \n\nLet me know if you'd like a more specific or contextual list!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Tarry**  \n2. **Linger**  \n3. **Dawdle**  \n4. **Delay**  \n5. **Loiter**  \n\nLet me know if you'd like a sentence using the word \"sloth\" or \"slothful\" as well!",
+        "synonyms": [
+          "Tarry",
+          "Linger",
+          "Dawdle",
+          "Delay",
+          "Loiter"
+        ]
+      },
+      {
+        "raw": "slops,” “muck,” “rubbish,” “trash,” “dregs.”",
+        "synonyms": [
+          "slops"
+        ]
+      }
+    ],
+    "en_n_1_verb": [
+      {
+        "raw": "Womb,” “Uterus,” “Gestation,” “Pregnancy,” and “Fetus.” However, I need to double-check if these are accurate synonyms for “Womb.” Let me think again. “Womb” refers to the organ where a fetus develops. “Uterus” is the",
+        "synonyms": [
+          "Womb"
+        ]
+      },
+      {
+        "raw": "  \n1. **Tissue**  \n2. **Organ system**  \n3. **Structure**  \n4. **Network**  \n5. **System**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Tissue",
+          "Organ system",
+          "Structure",
+          "Network",
+          "System"
+        ]
+      },
+      {
+        "raw": "  \n1. **Tangle**  \n2. **Muddle**  \n3. **Entanglement**  \n4. **Confusion**  \n5. **Complexity**  \n\nLet me know if you'd like more context or examples of how to use these words in a sentence!",
+        "synonyms": [
+          "Tangle",
+          "Muddle",
+          "Entanglement",
+          "Confusion",
+          "Complexity"
+        ]
+      },
+      {
+        "raw": "  \n1. **System**  \n2. **Network**  \n3. **Structure**  \n4. **Arrangement**  \n5. **Web**  \n\nNow, to the question: What is the synonym for \"Brot\"?",
+        "synonyms": [
+          "System",
+          "Network",
+          "Structure",
+          "Arrangement",
+          "Web"
+        ]
+      },
+      {
+        "raw": "Bodily system”, “Physiological system”, “Organ system”, “Anatomical system”, “Biological system”. \n\nNow, to answer the original question: The term \"Bodily system\" is a synonym for \"Womb\".",
+        "synonyms": [
+          "Bodily system"
+        ]
+      }
+    ],
+    "en_n_2_verb": [
+      {
+        "raw": "broad”、“common”、“usual”、“regular”、“frequent”.",
+        "synonyms": [
+          "broad"
+        ]
+      },
+      {
+        "raw": "bath,” “bathhouse,” “bathroom,” “bathrobe,” and “bathtub.” However, I notice that these words are all related to bathing, but not all of them are synonyms for the word \"bowl\" in the context of a kitchen or dining area. Let me correct that.\n\n",
+        "synonyms": [
+          "bath"
+        ]
+      },
+      {
+        "raw": "broad,” “general,” “common,” “usual,” “typical.”",
+        "synonyms": [
+          "broad"
+        ]
+      },
+      {
+        "raw": "bath,” “bathhouse,” “bathroom,” “bathhouse,” and “bath.” Wait, that doesn’t seem right. Let me think again.\n\nActually, the word \"bath\" is a noun that refers to a room or facility for washing. But if you're looking for synonyms for",
+        "synonyms": [
+          "bath"
+        ]
+      },
+      {
+        "raw": "broad,” “general,” “common,” “ordinary,” “everyday.”",
+        "synonyms": [
+          "broad"
+        ]
+      }
+    ],
+    "en_n_3_verb": [
+      {
+        "raw": "before”  \n\n1. Prior  \n2. Earlier  \n3. Previously  \n4. Ahead of time  \n5. Ante\n\nNow, let me answer your question.",
+        "synonyms": [
+          "before"
+        ]
+      },
+      {
+        "raw": "before”  \n1. Prior  \n2. Earlier  \n3. Foremost  \n4. Ante  \n5. Ahead  \n\nNow, let me answer your original question.",
+        "synonyms": [
+          "before"
+        ]
+      },
+      {
+        "raw": "before”  \n\n1. Prior  \n2. Earlier  \n3. Previous  \n4. Ante  \n5. Fore  \n\nLet me know if you'd like the synonyms for a different word!",
+        "synonyms": [
+          "before"
+        ]
+      },
+      {
+        "raw": "before”  \n1. Prior  \n2. Earlier  \n3. Preceding  \n4. Ante  \n5. Fore  \n\nNow, let me answer your question.",
+        "synonyms": [
+          "before"
+        ]
+      },
+      {
+        "raw": "before”  \n\n1. Prior  \n2. Earlier  \n3. Hence  \n4. Antes  \n5. Previous  \n\nNow, let me answer your original question.",
+        "synonyms": [
+          "before"
+        ]
+      }
+    ],
+    "en_n_4_verb": [
+      {
+        "raw": "  \n1. **Bra**  \n2. **Top**  \n3. **Shirt**  \n4. **Tops**  \n5. **Upper body clothing**  \n\nLet me know if you need more context or examples!",
+        "synonyms": [
+          "Bra",
+          "Top",
+          "Shirt",
+          "Tops",
+          "Upper body clothing"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Clothes**  \n2. **Attire**  \n3. **Garb**  \n4. **Outfit**  \n5. **Wear**  \n\nLet me know if you'd like a sentence using \"Bijou\" in a sentence.",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Twin**  \n2. **Pair**  \n3. **Duett**  \n4. **Couple**  \n5. **Match**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in sentences.",
+        "synonyms": [
+          "Twin",
+          "Pair",
+          "Duett",
+          "Couple",
+          "Match"
+        ]
+      },
+      {
+        "raw": "\n1. **Cloth**  \n2. **Fabric**  \n3. **Material**  \n4. **Textile**  \n5. **Tissue**  \n\nLet me know if you'd like a more specific or contextual list!",
+        "synonyms": [
+          "Cloth",
+          "Fabric",
+          "Material",
+          "Textile",
+          "Tissue"
+        ]
+      },
+      {
+        "raw": "\n1. **Cloth**  \n2. **Fabric**  \n3. **Material**  \n4. **Textile**  \n5. **Dye**  \n\nWait, let me check that again. \"Dye\" isn't really a synonym for \"bab.\" \"Bab\" is a term for a",
+        "synonyms": [
+          "Cloth",
+          "Fabric",
+          "Material",
+          "Textile",
+          "Dye"
+        ]
+      }
+    ],
+    "en_n_5_verb": [
+      {
+        "raw": "\n1. Cook  \n2. Chef  \n3. Caterer  \n4. Kitchen worker  \n5. Food preparer  \n\nLet me know if you need more context or examples!",
+        "synonyms": [
+          "Cook",
+          "Chef",
+          "Caterer",
+          "Kitchen worker",
+          "Food preparer"
+        ]
+      },
+      {
+        "raw": "\n1. Culinary expert  \n2. Foodie  \n3. Chef  \n4. Cook  \n5. Gastronome  \n\nLet me know if you'd like more options or help with anything else!",
+        "synonyms": [
+          "Culinary expert",
+          "Foodie",
+          "Chef",
+          "Cook",
+          "Gastronome"
+        ]
+      },
+      {
+        "raw": "\n1. **Cook**  \n2. **Chef**  \n3. **Culinary artist**  \n4. **Professional chef**  \n5. **Kitchen worker**  \n\nLet me know if you'd like more context or examples of how to use these synonyms in a sentence!",
+        "synonyms": [
+          "Cook",
+          "Chef",
+          "Culinary artist",
+          "Professional chef",
+          "Kitchen worker"
+        ]
+      },
+      {
+        "raw": "\n1. **Chef** – Someone who prepares food.\n2. **Cook** – A person who prepares meals.\n3. **Culinary artist** – A creative chef or cook.\n4. **Food preparer** – Someone who prepares food for others.\n5. **Professional chef** – A chef with",
+        "synonyms": [
+          "Chef** – Someone who prepares food",
+          "Cook** – A person who prepares meals",
+          "Culinary artist** – A creative chef",
+          "cook",
+          "Food preparer** – Someone who prepares food for others"
+        ]
+      },
+      {
+        "raw": "\n1. **Chef**  \n2. **Culinary artist**  \n3. **Pizzaiolo** (specifically for pizza chefs)  \n4. **Gastronome** (though more of a lover of food than a chef)  \n5. **Kitchen artisan**  \n\nLet me know if",
+        "synonyms": [
+          "Chef",
+          "Culinary artist",
+          "Pizzaiolo** (specifically for pizza chefs)",
+          "Gastronome** (though more of a lover of food than a chef)",
+          "Kitchen artisan"
+        ]
+      }
+    ],
+    "en_n_6_verb": [
+      {
+        "raw": "\n\n1. **Systems**  \n2. **Networks**  \n3. **Infrastructure**  \n4. **Schemes**  \n5. **Structures**  \n\nLet me know if you'd like more context or examples of how they’re used.",
+        "synonyms": []
+      },
+      {
+        "raw": "Transportation systems,” “Travel networks,” “Conveyor systems,” “Traffic systems,” and “Infrastructure networks.”",
+        "synonyms": [
+          "Transportation systems"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Network**  \n2. **System**  \n3. **Infrastructure**  \n4. **Web**  \n5. **Scheme**  \n\nLet me know if you'd like more context or examples of how they're used.",
+        "synonyms": []
+      },
+      {
+        "raw": "systems, networks, routes, paths, connections.”",
+        "synonyms": [
+          "systems",
+          "networks",
+          "routes",
+          "paths",
+          "connections"
+        ]
+      },
+      {
+        "raw": " \n\n1. Transportation systems  \n2. Transit networks  \n3. Travel infrastructure  \n4. Movement systems  \n5. Commute routes  \n\nLet me know if you need more context or examples!",
+        "synonyms": []
+      }
+    ],
+    "en_n_7_verb": [
+      {
+        "raw": "  \n1. **Simplify**  \n2. **Streamline**  \n3. **Concise**  \n4. **Efficient**  \n5. **Condense**  \n\nWait, I think I made a mistake here. The word \"burb\" is not a synonym for \"broad.\" Let me",
+        "synonyms": [
+          "Simplify",
+          "Streamline",
+          "Concise",
+          "Efficient",
+          "Condense"
+        ]
+      },
+      {
+        "raw": "bureaucracy,” “red tape,” “regulation,” “rules,” and “procedure.”",
+        "synonyms": [
+          "bureaucracy"
+        ]
+      },
+      {
+        "raw": "bureaucracy,” “red tape,” “indulgence,” “garnish,” and “superfluous addition.”",
+        "synonyms": [
+          "bureaucracy"
+        ]
+      },
+      {
+        "raw": "  \n1. **Utility**  \n2. **Tool**  \n3. **Device**  \n4. **Mechanism**  \n5. **System**  \n\nLet me know if you'd like more options or explanations for any of these!",
+        "synonyms": [
+          "Utility",
+          "Tool",
+          "Device",
+          "Mechanism",
+          "System"
+        ]
+      },
+      {
+        "raw": " \n\n1. **Device**  \n2. **Machine**  \n3. **Invention**  \n4. **Tool**  \n5. **Mechanism**  \n\nLet me know if you'd like a more context-specific synonym or a definition!",
+        "synonyms": []
+      }
+    ],
+    "en_n_8_verb": [
+      {
+        "raw": "\n\n1. **Network**  \n2. **System**  \n3. **Structure**  \n4. **Web**  \n5. **Configuration**  \n\nLet me know if you'd like more options or context-specific alternatives!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Network** – A system of interconnected elements.\n2. **Web** – A complex system of connections.\n3. **System** – A set of interconnected parts working together.\n4. **Structure** – The organized arrangement of components.\n5. **Pattern** – A recurring design or arrangement.",
+        "synonyms": [
+          "Network** – A system of interconnected elements",
+          "Web** – A complex system of connections",
+          "System** – A set of interconnected parts working together",
+          "Structure** – The organized arrangement of components",
+          "Pattern** – A recurring design"
+        ]
+      },
+      {
+        "raw": "\n1. **Maze** – A complex network of paths or passages, often used metaphorically to describe something complicated.\n2. **Network** – A system of interconnected elements, which can be a physical or abstract structure.\n3. **Web** – A network of threads or connections, often used to describe a",
+        "synonyms": [
+          "Maze** – A complex network of paths",
+          "passages",
+          "often used metaphorically to describe something complicated",
+          "Network** – A system of interconnected elements",
+          "which can be a physical"
+        ]
+      },
+      {
+        "raw": "\n1. **Environment**  \n2. **Setting**  \n3. **Scene**  \n4. **Background**  \n5. **Context**  \n\nLet me know if you'd like more options or a definition of \"tourist\" as well!",
+        "synonyms": [
+          "Environment",
+          "Setting",
+          "Scene",
+          "Background",
+          "Context"
+        ]
+      },
+      {
+        "raw": "\n1. **Machinery** – A system of interconnected parts working together to perform a function.\n2. **System** – A set of components that function together as a whole.\n3. **Network** – A group of interconnected elements, often in a complex arrangement.\n4. **Arrangement** – The way",
+        "synonyms": [
+          "Machinery** – A system of interconnected parts working together to perform a function",
+          "System** – A set of components that function together as a whole",
+          "Network** – A group of interconnected elements",
+          "often in a complex arrangement",
+          "Arrangement** – The way"
+        ]
+      }
+    ],
+    "en_n_9_verb": [
+      {
+        "raw": "  \n1. **Tangle**  \n2. **Muddle**  \n3. **Confuse**  \n4. **Twist**  \n5. **Entwine**  \n\nNow, to answer the original question: A **bip** is a term used to describe a **twist** or **entwine",
+        "synonyms": [
+          "Tangle",
+          "Muddle",
+          "Confuse",
+          "Twist",
+          "Entwine"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Tangle**  \n2. **Muddle**  \n3. **Entwine**  \n4. **Twist**  \n5. **Interlace**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Tangle**  \n2. **Muddle**  \n3. **Confusion**  \n4. **Mix-up**  \n5. **Entanglement**  \n\nLet me know if you'd like a more specific or formal synonym depending on the context!",
+        "synonyms": [
+          "Tangle",
+          "Muddle",
+          "Confusion",
+          "Mix-up",
+          "Entanglement"
+        ]
+      },
+      {
+        "raw": "1. Tangle 2. Entwine 3. Twist 4. Mess 5. Entangle.”",
+        "synonyms": [
+          "Tangle",
+          "Entwine",
+          "Twist",
+          "Mess",
+          "Entangle"
+        ]
+      },
+      {
+        "raw": "\n1. **Tangle**  \n2. **Muddle**  \n3. **Entwine**  \n4. **Twist**  \n5. **Interweave**  \n\nLet me know if you'd like a more precise synonym depending on context!",
+        "synonyms": [
+          "Tangle",
+          "Muddle",
+          "Entwine",
+          "Twist",
+          "Interweave"
+        ]
+      }
+    ],
+    "en_n_10_verb": [
+      {
+        "raw": "  \n1. **Law**  \n2. **Code**  \n3. **Regulation**  \n4. **Rule**  \n5. **Statute**  \n\nNow, let me answer your question:  \n**I** is a synonym for **I**.",
+        "synonyms": [
+          "Law",
+          "Code",
+          "Regulation",
+          "Rule",
+          "Statute"
+        ]
+      },
+      {
+        "raw": "\n1. **Law**  \n2. **Code**  \n3. **Rule**  \n4. **Regulation**  \n5. **Statute**  \n\nNow, to answer the original question:  \n**I**n the context of \"I law,\" it likely refers to **\"I-law\"** or",
+        "synonyms": [
+          "Law",
+          "Code",
+          "Rule",
+          "Regulation",
+          "Statute"
+        ]
+      },
+      {
+        "raw": "\n1. **Law**  \n2. **Code**  \n3. **Rule**  \n4. **Statute**  \n5. **Regulation**  \n\nNow, let me answer your original question.",
+        "synonyms": [
+          "Law",
+          "Code",
+          "Rule",
+          "Statute",
+          "Regulation"
+        ]
+      },
+      {
+        "raw": "\n1. **Law**  \n2. **Rule**  \n3. **Statute**  \n4. **Regulation**  \n5. **Precept**  \n\nNow, let me answer the original question.",
+        "synonyms": [
+          "Law",
+          "Rule",
+          "Statute",
+          "Regulation",
+          "Precept"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Law**  \n2. **Rule**  \n3. **Statute**  \n4. **Code**  \n5. **Regulation**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": []
+      }
+    ],
+    "en_v_1_verb": [
+      {
+        "raw": "slip,” “slide,” “creep,” “move,” and “glide.”",
+        "synonyms": [
+          "slip"
+        ]
+      },
+      {
+        "raw": "slump,” “drop,” “fall,” “lower,” “decrease.” Now, let me explain each one in a simple way.\n\n\"Slump\" means to go down suddenly, like when something drops in value or popularity. \"Drop\" is similar, meaning to fall or decrease in level or amount. \"",
+        "synonyms": [
+          "slump"
+        ]
+      },
+      {
+        "raw": "sludge,” “mud,” “goop,” “goo,” and “muck.”",
+        "synonyms": [
+          "sludge"
+        ]
+      },
+      {
+        "raw": "sludge,” “muck,” “grit,” “crud,” and “gunk.” These words can be used in similar contexts to describe a thick, messy substance. Let me know if you need more examples or explanations!",
+        "synonyms": [
+          "sludge"
+        ]
+      },
+      {
+        "raw": "sludge,” “muck,” “gunk,” “grime,” and “slime.” These words can be used in place of “slab” in certain contexts, though the exact meaning might vary depending on the situation. Let me know if you'd like more examples or explanations!",
+        "synonyms": [
+          "sludge"
+        ]
+      }
+    ],
+    "en_v_2_verb": [
+      {
+        "raw": "battler,” “fighter,” “duelist,” “compeller,” and “clash-maker.”",
+        "synonyms": [
+          "battler"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Weaver** – someone who weaves fabric.  \n2. **Maker** – someone who creates something.  \n3. **Craftsman** – a skilled worker who makes things by hand.  \n4. **Producer** – someone who creates or brings something into existence.  \n5. **",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Weaver** – Someone who weaves fabric or threads.\n2. **Tinker** – A person who repairs or fixes things, sometimes in a general sense.\n3. **Craftsman** – A skilled worker who makes things by hand.\n4. **Maker** – Someone who creates or",
+        "synonyms": [
+          "Weaver** – Someone who weaves fabric",
+          "threads",
+          "Tinker** – A person who repairs",
+          "fixes things",
+          "sometimes in a general sense"
+        ]
+      },
+      {
+        "raw": "\n1. **Jester** – A person who entertains with jokes or humor, often in a royal or court setting.  \n2. **Mime** – Someone who communicates through gestures and expressions rather than words.  \n3. **Comic** – A person who makes others laugh or amuses them.  \n",
+        "synonyms": [
+          "Jester** – A person who entertains with jokes",
+          "humor",
+          "often in a royal",
+          "court setting",
+          "Mime** – Someone who communicates through gestures"
+        ]
+      },
+      {
+        "raw": "bender,” “matchmaker,” “drier,” “trader,” and “dealer.”",
+        "synonyms": [
+          "bender"
+        ]
+      }
+    ],
+    "en_v_3_verb": [
+      {
+        "raw": "sloppy,” “messy,” “disorderly,” “chaotic,” and “cluttered.” Now, let me explain why these words work as synonyms for \"sloppy.\" First, \"sloppy\" means not neat or careful, which is similar to how \"sloppy\" is",
+        "synonyms": [
+          "sloppy"
+        ]
+      },
+      {
+        "raw": "bustle,” “chaos,” “muddle,” “confusion,” and “turmoil.”",
+        "synonyms": [
+          "bustle"
+        ]
+      },
+      {
+        "raw": "  \n1. **Tangle**  \n2. **Entangle**  \n3. **Muddle**  \n4. **Confuse**  \n5. **Complicate**  \n\nLet me know if you'd like the answer to the original question now!",
+        "synonyms": [
+          "Tangle",
+          "Entangle",
+          "Muddle",
+          "Confuse",
+          "Complicate"
+        ]
+      },
+      {
+        "raw": "sloppy,” “messy,” “disordered,” “cluttered,” and “chaotic.” Let me know if you need more help!",
+        "synonyms": [
+          "sloppy"
+        ]
+      },
+      {
+        "raw": "simplify, make easier, streamline, expedite, facilitate.”",
+        "synonyms": [
+          "simplify",
+          "make easier",
+          "streamline",
+          "expedite",
+          "facilitate"
+        ]
+      }
+    ],
+    "en_v_4_verb": [
+      {
+        "raw": "  \n1. **Fancy**  \n2. **Elegant**  \n3. **Stylish**  \n4. **Sophisticated**  \n5. **Refined**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": [
+          "Fancy",
+          "Elegant",
+          "Stylish",
+          "Sophisticated",
+          "Refined"
+        ]
+      },
+      {
+        "raw": "  \n1. **Silly**  \n2. **Crazy**  \n3. **Dumb**  \n4. **Absurd**  \n5. **Nuts**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": [
+          "Silly",
+          "Crazy",
+          "Dumb",
+          "Absurd",
+          "Nuts"
+        ]
+      },
+      {
+        "raw": "  \n1. **Wacky**  \n2. **Absurd**  \n3. **Crazy**  \n4. **Quirky**  \n5. **Bizarre**  \n\nLet me know if you'd like help using them in a sentence or exploring their meanings further!",
+        "synonyms": [
+          "Wacky",
+          "Absurd",
+          "Crazy",
+          "Quirky",
+          "Bizarre"
+        ]
+      },
+      {
+        "raw": "  \n1. **Muddled**  \n2. **Confused**  \n3. **Unclear**  \n4. **Obscure**  \n5. **Indistinct**  \n\nLet me know if you'd like a more specific synonym depending on the context!",
+        "synonyms": [
+          "Muddled",
+          "Confused",
+          "Unclear",
+          "Obscure",
+          "Indistinct"
+        ]
+      },
+      {
+        "raw": "  \n1. **Strange**  \n2. **Unusual**  \n3. **Odd**  \n4. **Weird**  \n5. **Strange**  \n\nWait, I notice \"strange\" and \"weird\" are both listed. Let me correct that to ensure variety. Here's the revised list:",
+        "synonyms": [
+          "Strange",
+          "Unusual",
+          "Odd",
+          "Weird",
+          "Strange"
+        ]
+      }
+    ],
+    "en_v_5_verb": [
+      {
+        "raw": "  \n1. 转动的 (turning)  \n2. 运动的 (moving)  \n3. 旋转的 (rotating)  \n4. 活跃的 (active)  \n5. 动态的 (dynamic)  \n\nNow, let me answer the question.",
+        "synonyms": [
+          "转动的 (turning)",
+          "运动的 (moving)",
+          "旋转的 (rotating)",
+          "活跃的 (active)",
+          "动态的 (dynamic)"
+        ]
+      },
+      {
+        "raw": "  \n\n1. **Bend**  \n2. **Curve**  \n3. **Twist**  \n4. **Rotate**  \n5. **Flex**  \n\nLet me know if you'd like more context or usage examples!",
+        "synonyms": []
+      },
+      {
+        "raw": "  \n1. **Slip**  \n2. **Falter**  \n3. **Stumble**  \n4. **Trip**  \n5. **Wobble**  \n\nLet me know if you'd like a sentence using the word \"slip\" in context.",
+        "synonyms": [
+          "Slip",
+          "Falter",
+          "Stumble",
+          "Trip",
+          "Wobble"
+        ]
+      },
+      {
+        "raw": "  \n1. 延迟 (delay)  \n2. 停滞 (stagnation)  \n3. 阻滞 (obstruction)  \n4. 拖延 (delays)  \n5. 搁置 (postpone)  \n\nNow, to the question: What is",
+        "synonyms": [
+          "延迟 (delay)",
+          "停滞 (stagnation)",
+          "阻滞 (obstruction)",
+          "拖延 (delays)",
+          "搁置 (postpone)"
+        ]
+      },
+      {
+        "raw": "  \n1. **Step**  \n2. **Move**  \n3. **Progress**  \n4. **Advance**  \n5. **Proceed**  \n\nLet me know if you'd like more context or usage examples for these synonyms!",
+        "synonyms": [
+          "Step",
+          "Move",
+          "Progress",
+          "Advance",
+          "Proceed"
+        ]
+      }
+    ],
+    "en_v_6_verb": [
+      {
+        "raw": "saga”, “story”, “narrative”, “account”, “tale”.",
+        "synonyms": [
+          "saga"
+        ]
+      },
+      {
+        "raw": "saga”, “narrative”, “story”, “tale”, “account”.",
+        "synonyms": [
+          "saga"
+        ]
+      },
+      {
+        "raw": "saga,” “narrative,” “story,” “account,” and “tale.”",
+        "synonyms": [
+          "saga"
+        ]
+      },
+      {
+        "raw": "saga,” “story,” “narrative,” “account,” and “plot.”",
+        "synonyms": [
+          "saga"
+        ]
+      },
+      {
+        "raw": "society,” “community,” “group,” “crowd,” “public.”",
+        "synonyms": [
+          "society"
+        ]
+      }
+    ],
+    "en_v_7_verb": [
+      {
+        "raw": "\n\n1. **Opponent**  \n2. **Rival**  \n3. **Enemy**  \n4. **Opposer**  \n5. **Antagonist**  \n\nLet me know if you'd like a more specific or contextual list!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Schemer**  \n2. **Deceiver**  \n3. **Con artist**  \n4. **Scam artist**  \n5. **Tempter**  \n\nLet me know if you'd like more options or explanations!",
+        "synonyms": [
+          "Schemer",
+          "Deceiver",
+          "Con artist",
+          "Scam artist",
+          "Tempter"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Strategist**  \n2. **Deceiver**  \n3. **Tempter**  \n4. **Schemer**  \n5. **Macher**  \n\nLet me know if you'd like a definition or example for any of these!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n1. **Counselor**  \n2. **Advisor**  \n3. **Consultant**  \n4. **Mentor**  \n5. **Guide**  \n\nLet me know if you'd like further clarification or examples!",
+        "synonyms": [
+          "Counselor",
+          "Advisor",
+          "Consultant",
+          "Mentor",
+          "Guide"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Schemer**  \n2. **Machiator**  \n3. **Deceiver**  \n4. **Con artist**  \n5. **Deceiver**  \n\nLet me know if you'd like more options or a definition for any of these!",
+        "synonyms": []
+      }
+    ],
+    "en_v_8_verb": [
+      {
+        "raw": "\n1. **Rush**  \n2. **Hasten**  \n3. **Sped**  \n4. **Fleet**  \n5. **Zigzag**  \n\nLet me know if you'd like more context or examples of how to use these words.",
+        "synonyms": [
+          "Rush",
+          "Hasten",
+          "Sped",
+          "Fleet",
+          "Zigzag"
+        ]
+      },
+      {
+        "raw": "\n1. **Rush**  \n2. **Swarm**  \n3. **Flood**  \n4. **Jam**  \n5. **Crowd**  \n\nNow, let me answer your original question.",
+        "synonyms": [
+          "Rush",
+          "Swarm",
+          "Flood",
+          "Jam",
+          "Crowd"
+        ]
+      },
+      {
+        "raw": "\n1. **Ravage**  \n2. **Desiccate**  \n3. **Dehydrate**  \n4. **Wither**  \n5. **Dry up**  \n\nLet me know if you'd like the synonyms in a different context or if you meant something else by \"babad.\"",
+        "synonyms": [
+          "Ravage",
+          "Desiccate",
+          "Dehydrate",
+          "Wither",
+          "Dry up"
+        ]
+      },
+      {
+        "raw": "bustle,” “chaos,” “turmoil,” “confusion,” and “racket.” Now, let me provide a detailed answer.",
+        "synonyms": [
+          "bustle"
+        ]
+      },
+      {
+        "raw": "\n1. **Rush**  \n2. **Hurry**  \n3. **Sped**  \n4. **Dashed**  \n5. **Burst**  \n\nLet me know if you'd like a more detailed explanation or usage examples for any of these words!",
+        "synonyms": [
+          "Rush",
+          "Hurry",
+          "Sped",
+          "Dashed",
+          "Burst"
+        ]
+      }
+    ],
+    "en_v_9_verb": [
+      {
+        "raw": "  \n1. River  \n2. Stream  \n3. Brook  \n4. Canal  \n5. Watercourse  \n\nLet me know if you'd like more options or a definition of \"siroad.\"",
+        "synonyms": [
+          "River",
+          "Stream",
+          "Brook",
+          "Canal",
+          "Watercourse"
+        ]
+      },
+      {
+        "raw": "  \n1. **River**  \n2. **Stream**  \n3. **Watercourse**  \n4. **Brook**  \n5. **Canal**  \n\nLet me know if you'd like a definition or example usage for any of these words!",
+        "synonyms": [
+          "River",
+          "Stream",
+          "Watercourse",
+          "Brook",
+          "Canal"
+        ]
+      },
+      {
+        "raw": "  \n1. River  \n2. Stream  \n3. Brook  \n4. Creek  \n5. Torrent  \n\nLet me know if you'd like a more detailed explanation or examples of how to use these words in sentences!",
+        "synonyms": [
+          "River",
+          "Stream",
+          "Brook",
+          "Creek",
+          "Torrent"
+        ]
+      },
+      {
+        "raw": "  \n1. River  \n2. Stream  \n3. Watercourse  \n4. Brook  \n5. Creek  \n\nLet me know if you'd like more options or help with anything else!",
+        "synonyms": [
+          "River",
+          "Stream",
+          "Watercourse",
+          "Brook",
+          "Creek"
+        ]
+      },
+      {
+        "raw": "  \n1. **River**  \n2. **Stream**  \n3. **Watercourse**  \n4. **Riverbed**  \n5. **Waterway**  \n\nLet me know if you'd like a more detailed explanation or examples of each!",
+        "synonyms": [
+          "River",
+          "Stream",
+          "Watercourse",
+          "Riverbed",
+          "Waterway"
+        ]
+      }
+    ],
+    "en_v_10_verb": [
+      {
+        "raw": "\n1. **Slate**  \n2. **Rock**  \n3. **Stone**  \n4. **Cobble**  \n5. **Limestone**  \n\nLet me know if you'd like a more contextual or technical synonym!",
+        "synonyms": [
+          "Slate",
+          "Rock",
+          "Stone",
+          "Cobble",
+          "Limestone"
+        ]
+      },
+      {
+        "raw": "dilute,” “blend,” “muddle,” “weaken,” “dilute.” Now, let me explain the answer.",
+        "synonyms": [
+          "dilute"
+        ]
+      },
+      {
+        "raw": "  \n1. **Scapegoat** – someone blamed for a problem that isn’t their fault.  \n2. **Victim** – someone who suffers from an injustice or accident.  \n3. **Target** – someone or something that is the focus of blame or attack.  \n4. **Martyr",
+        "synonyms": [
+          "Scapegoat** – someone blamed for a problem that isn’t their fault",
+          "Victim** – someone who suffers from an injustice",
+          "accident",
+          "Target** – someone",
+          "something that is the focus of blame"
+        ]
+      },
+      {
+        "raw": "dilute,” “weaken,” “lessen,” “reduce,” “diminish.”",
+        "synonyms": [
+          "dilute"
+        ]
+      },
+      {
+        "raw": "dab” “splash” “dip” “soak” “wet” \n\nNow, to answer the original question: Diao is a term that refers to the act of using a tool or object to extract something, often in the context of agriculture or machinery. It can also refer to the process of",
+        "synonyms": [
+          "dab"
+        ]
+      }
+    ]
+  }
+}

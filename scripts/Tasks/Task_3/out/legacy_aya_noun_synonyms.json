@@ -1,0 +1,1015 @@
+{
+  "model": "/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global",
+  "model_key": "aya",
+  "prompt": "<BOS_TOKEN><|START_OF_TURN_TOKEN|><|USER_TOKEN|>Before you answer, give a list of 5 synonyms for ~jdsglmdh.<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|><|START_RESPONSE|>Ok, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_noun": [
+      {
+        "raw": "detੈਕਟ,”“exhibit,”“emanate,” “issuer,” and “possess.”",
+        "synonyms": [
+          "detੈਕਟ"
+        ]
+      },
+      {
+        "raw": "strengthen,” “build,” “enhance,” “develop,” “encourage.”",
+        "synonyms": [
+          "strengthen"
+        ]
+      },
+      {
+        "raw": "\n\n1. marangoon\n2. jackboots\n3. tongues\n4. shellac\n5. mandarin\"",
+        "synonyms": []
+      },
+      {
+        "raw": "distinguish,” “rank,” “escalate,” “influence,” “pigmentation.”",
+        "synonyms": [
+          "distinguish"
+        ]
+      },
+      {
+        "raw": "strengthened”, “reinforced”, “enоружa” “fortified”, and “bolstered”.",
+        "synonyms": [
+          "strengthened"
+        ]
+      }
+    ],
+    "en_a_2_noun": [
+      {
+        "raw": "fdnights,  ‡ejtayk, tools, extrapolation tool, extra tool.",
+        "synonyms": [
+          "fdnights",
+          "‡ejtayk",
+          "tools",
+          "extrapolation tool",
+          "extra tool"
+        ]
+      },
+      {
+        "raw": "table”, multiplication”, tableclooe”,Virāgam”,susam”, which  might have differing shades of meaning in a sentence. For instance, “Virāgam” is the thick comb used for combing hair, “susam” might be the pot used for cooking, whereas “multiplication”",
+        "synonyms": [
+          "table"
+        ]
+      },
+      {
+        "raw": "vector”, “wavy line”, “notch” or “ ॳ”.",
+        "synonyms": [
+          "vector"
+        ]
+      },
+      {
+        "raw": "Rod”, tube”, pipe”, conduit” and pipe fragment”.",
+        "synonyms": [
+          "Rod"
+        ]
+      },
+      {
+        "raw": "thrumph,”bi layer,”parsley layer,”tr célj”think layer.",
+        "synonyms": [
+          "thrumph"
+        ]
+      }
+    ],
+    "en_a_3_noun": [
+      {
+        "raw": "\n\n1.  Proverb  \n2. Maxim  \n3.  Attributing  \n4. Verdict  \n5. Principal\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* Conundrum\n* Enigma\n* Puzzle\n* Riddle\n* Problem\n\n\nIs there anything else I can help you with?",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Virtue \n\n2. Moral\n\n3. Conduct\n\n4. Character\n\n5. Ethics\"\n\nWould you like me to answer your question now?",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* Fines\n* Penalty\n* Punishment\n* Custom\n* Moral code\"",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n* Panopticon\n* Dirkism\n* Sterbanism\n* Selbism\n* Blibisicism*\n\n\n",
+        "synonyms": []
+      }
+    ],
+    "en_a_4_noun": [
+      {
+        "raw": "pRoBlEm, subplOt, IndependEnT, plot twIsst, characterDeVeLoPment.”\n\n\nCan I help you with anything else?",
+        "synonyms": [
+          "pRoBlEm",
+          "subplOt",
+          "IndependEnT",
+          "plot twIsst",
+          "characterDeVeLoPment"
+        ]
+      },
+      {
+        "raw": "row”, “slice”, “sheet”, “piece”, “piece of clay”",
+        "synonyms": [
+          "row"
+        ]
+      },
+      {
+        "raw": "courtesied,” “dressed,” “refined,” “articulated” and “mannered.”",
+        "synonyms": [
+          "courtesied"
+        ]
+      },
+      {
+        "raw": "highlithed,” “underlined,” “idiomatically,” “by way of,” and \"stylized.\" \n\nDo you have any other words you'd like me to help with?",
+        "synonyms": [
+          "highlithed"
+        ]
+      },
+      {
+        "raw": "fluent”, “red kayıt”, “kasapy عمومی”, “köçek kahraman”, “yürekli”.",
+        "synonyms": [
+          "fluent"
+        ]
+      }
+    ],
+    "en_a_5_noun": [
+      {
+        "raw": "penny” ,“seaventh” ,“bash” ,“pen” ,“cent”",
+        "synonyms": [
+          "penny"
+        ]
+      },
+      {
+        "raw": "rod\", \"rod neck\", \"rod stroke\", \"rod stroke compass\" and \"low to a rod.\"",
+        "synonyms": [
+          "rod"
+        ]
+      },
+      {
+        "raw": "peg”, “penny”, “pennyweight”, “penny weight” or “coin”. \n\nCan I help with anything else?",
+        "synonyms": [
+          "peg"
+        ]
+      },
+      {
+        "raw": "staves”, “rod”, “stick”, “rod tip” and “rodhead”.",
+        "synonyms": [
+          "staves"
+        ]
+      },
+      {
+        "raw": "pennyweight”, \"pinch”，\"token\", \"inkle\", \"atom\".",
+        "synonyms": [
+          "pennyweight"
+        ]
+      }
+    ],
+    "en_a_6_noun": [
+      {
+        "raw": "distinguish,\" \"praise,\" \"laudon,\" “glorpher,” \"commend.\"",
+        "synonyms": [
+          "distinguish"
+        ]
+      },
+      {
+        "raw": "crack” ,  fig“,  nibblep “ riffle”, “ ronk ” \n\nLet's use that “crack” to answer your question! \n\nDo you want to know about this dictionary definition of  \"crack\"?\nIt means: to clatter or shatter with a sharp sound, as a",
+        "synonyms": [
+          "crack"
+        ]
+      },
+      {
+        "raw": "flamboyant,” “brillant,” “révôté,” “lustruant,” “étincelant.”",
+        "synonyms": [
+          "flamboyant"
+        ]
+      },
+      {
+        "raw": "gleam,” “sparkle,” “radiate,” “lustre,” “gleam.” If you have any other questions feel free to ask!",
+        "synonyms": [
+          "gleam"
+        ]
+      },
+      {
+        "raw": "peak,”“dust,”“absolute,”“supreme,” “summa”",
+        "synonyms": [
+          "peak"
+        ]
+      }
+    ],
+    "en_a_7_noun": [
+      {
+        "raw": "Curl,” “Twist,” “Turn,” “Bend,” “Coil.”",
+        "synonyms": [
+          "Curl"
+        ]
+      },
+      {
+        "raw": "  \n1. TRUE\n\n2. gentlemanly\n\n3. policed\n\n4. Griswold\n\n5. straightened\n",
+        "synonyms": [
+          "TRUE"
+        ]
+      },
+      {
+        "raw": "repel, selle, fold out, burr, ridged”.",
+        "synonyms": [
+          "repel",
+          "selle",
+          "fold out",
+          "burr",
+          "ridged"
+        ]
+      },
+      {
+        "raw": "Behavior” or “Personality.” \n\nWould you like more, or should I answer the question?",
+        "synonyms": [
+          "Behavior"
+        ]
+      },
+      {
+        "raw": "spoon”",
+        "synonyms": [
+          "spoon"
+        ]
+      }
+    ],
+    "en_a_8_noun": [
+      {
+        "raw": "ugly”, “awful”, “ugly\", “meld”， and “shained”. Would you like me to answer the question as to what best synonym applies to “ugly” to a tower?",
+        "synonyms": [
+          "ugly"
+        ]
+      },
+      {
+        "raw": "Decay,” “altar,” “worn out,” “degraded,” and “illished.”",
+        "synonyms": [
+          "Decay"
+        ]
+      },
+      {
+        "raw": "tenuous,” “wimpiest,” “dim,” “barely,” “Languid”",
+        "synonyms": [
+          "tenuous"
+        ]
+      },
+      {
+        "raw": "decay”, \"fading”, \"blemishing”, “weathering” and “lengthening”.",
+        "synonyms": [
+          "decay"
+        ]
+      },
+      {
+        "raw": "awful”, \"barbarous”, \"ugly\", \"terrible\" and \"ancient”.",
+        "synonyms": [
+          "awful"
+        ]
+      }
+    ],
+    "en_a_9_noun": [
+      {
+        "raw": "pronounce”,“lay down in print”,“describe”,“specify” and “define”",
+        "synonyms": [
+          "pronounce"
+        ]
+      },
+      {
+        "raw": "guides,” “informs,” “orientes,” “directs,” and “directs.” \n",
+        "synonyms": [
+          "guides"
+        ]
+      },
+      {
+        "raw": "to modify, define, circumscribe, precise, shape”",
+        "synonyms": [
+          "to modify",
+          "define",
+          "circumscribe",
+          "precise",
+          "shape"
+        ]
+      },
+      {
+        "raw": "dictate,” “map,” “plot,” “space,” “wireframe.” ",
+        "synonyms": [
+          "dictate"
+        ]
+      },
+      {
+        "raw": "define”, “describe”, “Characterize”, “conclude”, “Illustrate”",
+        "synonyms": [
+          "define"
+        ]
+      }
+    ],
+    "en_a_10_noun": [
+      {
+        "raw": "rotten,” “crumbling,” “dilapid,” “deteriorated,” and “unserviceable.”",
+        "synonyms": [
+          "rotten"
+        ]
+      },
+      {
+        "raw": "rotten,” “powerless,” “decayed,” “rot,” and “stricken.”",
+        "synonyms": [
+          "rotten"
+        ]
+      },
+      {
+        "raw": "rotten,” “decayed,” “rink गर्नुपर्ने,” “integralmente devorado,” “pisqueiro”",
+        "synonyms": [
+          "rotten"
+        ]
+      },
+      {
+        "raw": "decayed,” “wilted,” “spoiled,” “rot,” and “degraded.”",
+        "synonyms": [
+          "decayed"
+        ]
+      },
+      {
+        "raw": "rotten,” “decaying,” “putrid,” “rottened,” “dist stared”",
+        "synonyms": [
+          "rotten"
+        ]
+      }
+    ],
+    "en_n_1_noun": [
+      {
+        "raw": "usuabi”, “furis”, “fabric”, “garment” and \"attire.”",
+        "synonyms": [
+          "usuabi"
+        ]
+      },
+      {
+        "raw": "apple a day, and the doctor may go to college,”, “such “bale”, “scale” or “ex escala”” (which means \"from a scale\") , or even “scale”: “scale”",
+        "synonyms": [
+          "apple a day",
+          "the doctor may go to college"
+        ]
+      },
+      {
+        "raw": "capes” “trousers” “pants” “garment” “attire”",
+        "synonyms": [
+          "capes"
+        ]
+      },
+      {
+        "raw": "sheelor,” “long clerihew,” “high-heeled mule,” “hare’s 사로,” and “ corset.” Do you want to know which of these words is used in the popular girl band the bligs?",
+        "synonyms": [
+          "sheelor"
+        ]
+      },
+      {
+        "raw": "trench coat”, “pre-bund,” “cloaks,” “woman’s hat,” “hat.”",
+        "synonyms": [
+          "trench coat"
+        ]
+      }
+    ],
+    "en_n_2_noun": [
+      {
+        "raw": "runoff”, “bog”, “stable”, “stall”, “stallion”",
+        "synonyms": [
+          "runoff"
+        ]
+      },
+      {
+        "raw": "canyon”, “valley”, “gorge”, “gorge” and “pit”.",
+        "synonyms": [
+          "canyon"
+        ]
+      },
+      {
+        "raw": "pit stop” (from Florida Status), \"pit stall”, \"pitroom” and \"pit crew”.\nWhich of these words do you need more information on?",
+        "synonyms": [
+          "pit stop"
+        ]
+      },
+      {
+        "raw": "driftwood”, “well grooved” , “damp/humid”, “out grew” and “enc arroyo”",
+        "synonyms": [
+          "driftwood"
+        ]
+      },
+      {
+        "raw": "bespoke,” “hand-crafted,” “custom-made,” “tailored,” and “personalized.”",
+        "synonyms": [
+          "bespoke"
+        ]
+      }
+    ],
+    "en_n_3_noun": [
+      {
+        "raw": "office,” “room,” “hallway,” “entrance,” “concourse.”",
+        "synonyms": [
+          "office"
+        ]
+      },
+      {
+        "raw": "hallway”,“corridor”, “aisleway”, “passageway”, “walkway”.",
+        "synonyms": [
+          "hallway"
+        ]
+      },
+      {
+        "raw": "aisle”, “aisleway”, “aisleway”, “aisle”, “aisleway”",
+        "synonyms": [
+          "aisle"
+        ]
+      },
+      {
+        "raw": "building”, \"structure”, “walled area”, “structure ”and “place”",
+        "synonyms": [
+          "building"
+        ]
+      },
+      {
+        "raw": "car連接ຸ,  Columnnější, Track, Lane, Path.",
+        "synonyms": [
+          "car連接ຸ",
+          "Columnnější",
+          "Track",
+          "Lane",
+          "Path"
+        ]
+      }
+    ],
+    "en_n_4_noun": [
+      {
+        "raw": "garment,” “sleeve,” “bodice,” “garment top,” “ded cardigan”",
+        "synonyms": [
+          "garment"
+        ]
+      },
+      {
+        "raw": "cape”, “harness”, “costas”, “toga”, “vest”. What is the next question?",
+        "synonyms": [
+          "cape"
+        ]
+      },
+      {
+        "raw": "helmet”, \"hood\", \"mantle\", \"hooding\" and “hooded cloak”.",
+        "synonyms": [
+          "helmet"
+        ]
+      },
+      {
+        "raw": "hoard”, “trove”, “arsenal”, “appraisal” and “laden”. \n",
+        "synonyms": [
+          "hoard"
+        ]
+      },
+      {
+        "raw": "chaperonade”, “duck”, “sporrect”, “velvet», “collar”.",
+        "synonyms": [
+          "chaperonade"
+        ]
+      }
+    ],
+    "en_n_5_noun": [
+      {
+        "raw": "dessicated”, “rehydrated”, “saponified”, “pasteinated” and “seared”.",
+        "synonyms": [
+          "dessicated"
+        ]
+      },
+      {
+        "raw": " köl, कुche, feud, feasting, rennet”",
+        "synonyms": [
+          "köl",
+          "कुche",
+          "feud",
+          "feasting",
+          "rennet"
+        ]
+      },
+      {
+        "raw": "encouraging”,“uplifting”, “invigorating”,“cheerful”, “optimistic”.\n\nWhy use these suggestions for «encouraging», «uplifting», «invigorating», «cheerful», «optimistic» instead of “amenable”, “wholesome», “",
+        "synonyms": [
+          "encouraging"
+        ]
+      },
+      {
+        "raw": "fontains”, “rainbow”, “rainbowing”, “rainbows” & “wumbers”",
+        "synonyms": [
+          "fontains"
+        ]
+      },
+      {
+        "raw": " nedenleri”\n\nHere are my answers to your questions:\n\n1. What does the phrase \"against the grain\" mean?\n \" Against the grain\" is a figure of speech that means \"against the general trend or norm\" or \"in a way that is unusual.\" It implies that something is done or said in an unconventional or",
+        "synonyms": [
+          "nedenleri"
+        ]
+      }
+    ],
+    "en_n_6_noun": [
+      {
+        "raw": "cartography,” “cont posing,” “cometing,” “連れ,” and “构成合同诈骗罪.”",
+        "synonyms": [
+          "cartography"
+        ]
+      },
+      {
+        "raw": "car”;“automobile”;“automocar”;“automobilé.”\n\nHere are 5 other ways to ask the same question: \n“What are some synonyms for Collecting?”\n“What is the meaning of the word Collecting?”\n“What’s something similar to Collecting?”\n“",
+        "synonyms": [
+          "car"
+        ]
+      },
+      {
+        "raw": "Yacht,” “yacht boat,” “gondola,” “bailer,” “tender.”",
+        "synonyms": [
+          "Yacht"
+        ]
+      },
+      {
+        "raw": "camel,” “camel painting,” “camel gait,” “camelot,” and “truck.”",
+        "synonyms": [
+          "camel"
+        ]
+      },
+      {
+        "raw": "caravan” , “steamroller” , “steam-powered vehicle” , “train” , “steam”",
+        "synonyms": [
+          "caravan"
+        ]
+      }
+    ],
+    "en_n_7_noun": [
+      {
+        "raw": "addiction,” “dependency,” “dependency habit,” “addiction,\" and “att Related.” Please confirm my understanding of your request?",
+        "synonyms": [
+          "addiction"
+        ]
+      },
+      {
+        "raw": "rehab, addiction, substance abuse, वापसी, dependency”",
+        "synonyms": [
+          "rehab",
+          "addiction",
+          "substance abuse",
+          "वापसी",
+          "dependency"
+        ]
+      },
+      {
+        "raw": "club,\" \"gug,\" \"den,\" \"sauna,\" \"bottle.\" Is there anything else I can help you with?",
+        "synonyms": [
+          "club"
+        ]
+      },
+      {
+        "raw": "set living,” “middle-being,” “ kurioje,” “bewing upon,” “taken pangs.”",
+        "synonyms": [
+          "set living"
+        ]
+      },
+      {
+        "raw": "industry,” “junkie,” “doper,” “addict,” and “addiction.”",
+        "synonyms": [
+          "industry"
+        ]
+      }
+    ],
+    "en_n_8_noun": [
+      {
+        "raw": "Landscapes”, \" scenes”, \" fields”, \" worlds\", “globe”.",
+        "synonyms": [
+          "Landscapes"
+        ]
+      },
+      {
+        "raw": "Multiplicities”, “Multiplicitudes”, “Landscape”, “Scene”, “Environs”.",
+        "synonyms": [
+          "Multiplicities"
+        ]
+      },
+      {
+        "raw": "landscapes,” “videography,” “urban,” “legal,” “visuals.” Let me know if there are any other questions.",
+        "synonyms": [
+          "landscapes"
+        ]
+      },
+      {
+        "raw": "landscapes,” \"regions,” “wilderness areas,” “ties to the countryside,” \"fields\"",
+        "synonyms": [
+          "landscapes"
+        ]
+      },
+      {
+        "raw": "Scenery\", \"landscape\", \"terrain\", \"location\", \"limtale\"",
+        "synonyms": [
+          "Scenery"
+        ]
+      }
+    ],
+    "en_n_9_noun": [
+      {
+        "raw": "creak,\" \"clank,\" \"stick,\" \"creak‐creak\" and \"clack‐clack.”",
+        "synonyms": [
+          "creak"
+        ]
+      },
+      {
+        "raw": "rag, cloth, rent, tear, split”",
+        "synonyms": [
+          "rag",
+          "cloth",
+          "rent",
+          "tear",
+          "split"
+        ]
+      },
+      {
+        "raw": "shiny,\" \"sparkly,\" \"lustrous,\" \"glistening,\" and \"beading.\"",
+        "synonyms": [
+          "shiny"
+        ]
+      },
+      {
+        "raw": "stand\", “stand-off\", “Pend\", “stand-off\", “hang”. \n",
+        "synonyms": [
+          "stand"
+        ]
+      },
+      {
+        "raw": "tie down,” “Secure,” “Deck,” “Tack,” “Tie”",
+        "synonyms": [
+          "tie down"
+        ]
+      }
+    ],
+    "en_n_10_noun": [
+      {
+        "raw": "crusher,” “foot,” “breech,” “ram,” and “sickle.”",
+        "synonyms": [
+          "crusher"
+        ]
+      },
+      {
+        "raw": "sheer”, “gory”, “bloody”, “notorious”, “famous”.",
+        "synonyms": [
+          "sheer"
+        ]
+      },
+      {
+        "raw": "demolish,”“loosen,”“shovel,”“break apart,”“remove a building from existence”",
+        "synonyms": [
+          "demolish"
+        ]
+      },
+      {
+        "raw": "blade”, \"bow\", \"rebate\", \"squint\", “pothole”.",
+        "synonyms": [
+          "blade"
+        ]
+      },
+      {
+        "raw": "to poke out the eyes of”, “to torture injusuly”, “to�ัด�Howard”, “to muzzle”, “to hit the head”.",
+        "synonyms": [
+          "to poke out the eyes of"
+        ]
+      }
+    ],
+    "en_v_1_noun": [
+      {
+        "raw": "creak,” “grind,” “creep,” “sank,” and “knob.”",
+        "synonyms": [
+          "creak"
+        ]
+      },
+      {
+        "raw": "close-fingered”  ,  “ খারাপ”  ,  “ ഒപ്പി”  ,  “ ക്രം”  ,  “വള്ള”\n\n\n",
+        "synonyms": [
+          "close-fingered"
+        ]
+      },
+      {
+        "raw": "creak,” “creak and groan,” “creak and stick,” “grunt,” and “grunt and whine.”",
+        "synonyms": [
+          "creak"
+        ]
+      },
+      {
+        "raw": "stumble”, “stall”, “shuffle”, “tumble” and “obstacle”.",
+        "synonyms": [
+          "stumble"
+        ]
+      },
+      {
+        "raw": "dew, cream, skid, drag, lag.” \n\nDo you have another word you want me to try synonyming?",
+        "synonyms": [
+          "dew",
+          "cream",
+          "skid",
+          "drag",
+          "lag"
+        ]
+      }
+    ],
+    "en_v_2_noun": [
+      {
+        "raw": "pop”, “staccato”, “hit”, “craze”, “clatter”.",
+        "synonyms": [
+          "pop"
+        ]
+      },
+      {
+        "raw": "crackle”, \"pulsing”, \"chittering”, “sparkling”, \"flickering”.",
+        "synonyms": [
+          "crackle"
+        ]
+      },
+      {
+        "raw": "clatter,” “stutter,” “chirp,” “stitch,” and “bubble.”",
+        "synonyms": [
+          "clatter"
+        ]
+      },
+      {
+        "raw": "clatter,” “banggai,” “callback,” “chop chop,” “clink”",
+        "synonyms": [
+          "clatter"
+        ]
+      },
+      {
+        "raw": "swirl”, \"glitter\", \"sparkling\", \"b acadêm\", \"spray ”.",
+        "synonyms": [
+          "swirl"
+        ]
+      }
+    ],
+    "en_v_3_noun": [
+      {
+        "raw": "\n\n* Sarrant\n*  Sambat\n* Sob\n* Err\n* Slumber\n\nThis results in a \"plying\" list as requested. \n\nIs there anything else I can help you with?",
+        "synonyms": []
+      },
+      {
+        "raw": "permeability”, \"wettability”, “wettness”, “runoff”, “sorption”.",
+        "synonyms": [
+          "permeability"
+        ]
+      },
+      {
+        "raw": "relentless,” “perpetual,” “ceaseless,” “himmeral,” “sometimes.” \nLet me know if you'd like more explanations!",
+        "synonyms": [
+          "relentless"
+        ]
+      },
+      {
+        "raw": "  \n1.  Percolation\n2.  Perturbation\n3.  Interruption\n4.  Disruption\n5.  Motion",
+        "synonyms": [
+          "Percolation",
+          "Perturbation",
+          "Interruption",
+          "Disruption",
+          "Motion"
+        ]
+      },
+      {
+        "raw": "stream,” “continuity,” “stagy,\" “viscious”, and “rim flow”.",
+        "synonyms": [
+          "stream"
+        ]
+      }
+    ],
+    "en_v_4_noun": [
+      {
+        "raw": "fry“, “broil“, “bake“, “steam“, “boil“.",
+        "synonyms": [
+          "fry",
+          "broil",
+          "bake",
+          "steam",
+          "boil"
+        ]
+      },
+      {
+        "raw": "روش پخت”.\n\nWas this answer helpful?\nYes / No",
+        "synonyms": [
+          "روش پخت"
+        ]
+      },
+      {
+        "raw": "braai”, “ smokehouse”, “ barbeque pit”, “ griddle” and “grill”.",
+        "synonyms": [
+          "braai"
+        ]
+      },
+      {
+        "raw": "stove,” “range,” “cooktop,” “fireplace,” “ cook”",
+        "synonyms": [
+          "stove"
+        ]
+      },
+      {
+        "raw": " наг.arensbrawl,” campfire,”�ุ� taħ,” panggihan,” potty.",
+        "synonyms": [
+          "наг.arensbrawl"
+        ]
+      }
+    ],
+    "en_v_5_noun": [
+      {
+        "raw": "�ี่พ�Kadeni”, “後 almış,” “おしり,” “PCM” , and “う sheath”.",
+        "synonyms": [
+          "�ี่พ�Kadeni"
+        ]
+      },
+      {
+        "raw": "bump”, “peek”, “stubble”, “fram”, “hillock”.",
+        "synonyms": [
+          "bump"
+        ]
+      },
+      {
+        "raw": "bump,” “fold,” “section,” “part,” and “bend.”",
+        "synonyms": [
+          "bump"
+        ]
+      },
+      {
+        "raw": "стройка», «особина», «прижат», « συγκεντρώція», «очертание».\n\n\n",
+        "synonyms": [
+          "стройка»",
+          "«особина»",
+          "«прижат»",
+          "« συγκεντρώція»",
+          "«очертание»"
+        ]
+      },
+      {
+        "raw": "back”, “backbone”, “bac\", “lineage”, “coat”. \n",
+        "synonyms": [
+          "back"
+        ]
+      }
+    ],
+    "en_v_6_noun": [
+      {
+        "raw": "rumble”, \"hums\", \"whines”, \"groans\", and \"cries”. What’s your word needing altered?",
+        "synonyms": [
+          "rumble"
+        ]
+      },
+      {
+        "raw": "\n\n1. Whispery\n2. Using a subtle and soft manner of speech\n3. Serial speaker\n4. A gentle headlip commiseration\n5. TildeTalk”",
+        "synonyms": []
+      },
+      {
+        "raw": "sl�ริទ្យъ,sl�ริチェр,sl�ริты,frivolous,windy.”",
+        "synonyms": [
+          "sl�ริទ្យъ",
+          "sl�ริチェр",
+          "sl�ริты",
+          "frivolous",
+          "windy"
+        ]
+      },
+      {
+        "raw": "buzzing,” “ringing,” “humming,” “chirping,” “droning.”",
+        "synonyms": [
+          "buzzing"
+        ]
+      },
+      {
+        "raw": "buzzing,” “singing,” “hummed,” “noisy,” “roaring”",
+        "synonyms": [
+          "buzzing"
+        ]
+      }
+    ],
+    "en_v_7_noun": [
+      {
+        "raw": "vitolki”, ţintu piru ëır, keh şurdak, puχaka, serña.",
+        "synonyms": [
+          "vitolki"
+        ]
+      },
+      {
+        "raw": "\n\n1. **Jazz** (informal)\n2. **Opera** (informal, refers to the music)\n3. **Swing** (informal, akin to \"winging\")\n4. **Kick** (informal, emotional, trading card “kicks”)\n5. **Fl",
+        "synonyms": []
+      },
+      {
+        "raw": "storefront, window, shop, shop window, display window”",
+        "synonyms": [
+          "storefront",
+          "window",
+          "shop",
+          "shop window",
+          "display window"
+        ]
+      },
+      {
+        "raw": "emporium”, “by pound”, “per Tommy”, “toms” and “ton”",
+        "synonyms": [
+          "emporium"
+        ]
+      },
+      {
+        "raw": "enterprise,”  mercantile,” commercial,\" and “business.”",
+        "synonyms": [
+          "enterprise"
+        ]
+      }
+    ],
+    "en_v_8_noun": [
+      {
+        "raw": "waterfall”, “stream”, “streamlet”, “waterwheels”, “flow”.",
+        "synonyms": [
+          "waterfall"
+        ]
+      },
+      {
+        "raw": "water flow\", \" جاری\", \"રਿਵર\", \"water carryover\", \" ماء جارية\".",
+        "synonyms": [
+          "water flow"
+        ]
+      },
+      {
+        "raw": "stream”, \"waterfall\", \"barrel\", \"current”, and “jet”. \nLet me know if you have any other questions!",
+        "synonyms": [
+          "stream"
+        ]
+      },
+      {
+        "raw": "stream”,“swirl”, “defile”, “tide”, “current”",
+        "synonyms": [
+          "stream"
+        ]
+      },
+      {
+        "raw": "stream”, “current”, “tide”, “spray” and “aar”.",
+        "synonyms": [
+          "stream"
+        ]
+      }
+    ],
+    "en_v_9_noun": [
+      {
+        "raw": "settle”, “break down”, “evaporate”, “flow”, “run”,",
+        "synonyms": [
+          "settle"
+        ]
+      },
+      {
+        "raw": "settle,” “solidify,” “set,” “stage.”",
+        "synonyms": [
+          "settle"
+        ]
+      },
+      {
+        "raw": "quicksand\", \"mudroom\", \"slippy\", \"slideny\", and \"crack\".Would you like me to explain any of these?",
+        "synonyms": [
+          "quicksand"
+        ]
+      },
+      {
+        "raw": "settle down”, “stabilize”, “settle”, “ Solidify”, “Melt down”",
+        "synonyms": [
+          "settle down"
+        ]
+      },
+      {
+        "raw": "settle,” “melt down,” “Develop”, “solidify,” “run”",
+        "synonyms": [
+          "settle"
+        ]
+      }
+    ],
+    "en_v_10_noun": [
+      {
+        "raw": "sink”, “flood”, “swellsinked”, “submerged”, “depthless”",
+        "synonyms": [
+          "sink"
+        ]
+      },
+      {
+        "raw": "waterlogged”, “swampy”, “boggy”, “soaked”, “moist\".",
+        "synonyms": [
+          "waterlogged"
+        ]
+      },
+      {
+        "raw": "splash”, “flood”, “muddle”, “flooded area” and “splash out”.",
+        "synonyms": [
+          "splash"
+        ]
+      },
+      {
+        "raw": "swamp”, “molasses”, “goo”, “slurry” and “mud”.",
+        "synonyms": [
+          "swamp"
+        ]
+      },
+      {
+        "raw": "waterlogged,” “flooded,” “swells,” “swollen,” “munched.” Let me know if you need more definitions!",
+        "synonyms": [
+          "waterlogged"
+        ]
+      }
+    ]
+  }
+}

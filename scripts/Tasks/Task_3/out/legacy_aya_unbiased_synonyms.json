@@ -1,0 +1,1023 @@
+{
+  "model": "/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global",
+  "model_key": "aya",
+  "prompt": "<BOS_TOKEN><|START_OF_TURN_TOKEN|><|USER_TOKEN|>Before you answer, give a list of 5 synonyms for ~jdsglmdh.<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|><|START_RESPONSE|>Ok, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_unbiased": [
+      {
+        "raw": "detritus,” “length,” “form,” “composition,” “assemblative character”.",
+        "synonyms": [
+          "detritus"
+        ]
+      },
+      {
+        "raw": "strength”, “size”, “volume”, “prominence”, and “expanse”.",
+        "synonyms": [
+          "strength"
+        ]
+      },
+      {
+        "raw": "mass”,“size”, “build”, “composition” and “structure”.",
+        "synonyms": [
+          "mass"
+        ]
+      },
+      {
+        "raw": "mass”, \"size”, \"size\", “stature”, “size”",
+        "synonyms": [
+          "mass"
+        ]
+      },
+      {
+        "raw": "build,\" \"size,\" \"weight,\" \"configuration,\" \"form.\"",
+        "synonyms": [
+          "build"
+        ]
+      }
+    ],
+    "en_a_2_unbiased": [
+      {
+        "raw": "   \nstack, mound, kupa, pile, heap\n\nCan I answer your question now?",
+        "synonyms": [
+          "stack",
+          "mound",
+          "kupa",
+          "pile",
+          "heap"
+        ]
+      },
+      {
+        "raw": "stack”, “heave”, “hoist”, “lift”, “raise”",
+        "synonyms": [
+          "stack"
+        ]
+      },
+      {
+        "raw": "beneath”, “either”, “elsewhere”, “else”, “moreover”.",
+        "synonyms": [
+          "beneath"
+        ]
+      },
+      {
+        "raw": "piled,” “Layered,” “cilled,” “cored,” and “stacked”.",
+        "synonyms": [
+          "piled"
+        ]
+      },
+      {
+        "raw": "throne,” “tron,” “axe,” “switch,” and “presennol.” ",
+        "synonyms": [
+          "throne"
+        ]
+      }
+    ],
+    "en_a_3_unbiased": [
+      {
+        "raw": "begrudge,” “resent,” “snarl at,” “object,” “gnash.”",
+        "synonyms": [
+          "begrudge"
+        ]
+      },
+      {
+        "raw": "**deserve praise**, **be grudgingly pleased**, **be amused**, **gave a discount**, **vehence why**. \"\"\nLet me know if you'd like me to answer your question!",
+        "synonyms": [
+          "deserve praise",
+          "be grudgingly pleased",
+          "be amused",
+          "gave a discount",
+          "vehence why"
+        ]
+      },
+      {
+        "raw": "blame”, “condemn”, “guilt”, “condemnation”, “guilt trip”",
+        "synonyms": [
+          "blame"
+        ]
+      },
+      {
+        "raw": "criticize,” “judge,” “rate,” “assess,” “evaluate”",
+        "synonyms": [
+          "criticize"
+        ]
+      },
+      {
+        "raw": "blame”, “condemn”, “criticize”, “decry”, and \"jest\". Do you have anything else I can help you with?",
+        "synonyms": [
+          "blame"
+        ]
+      }
+    ],
+    "en_a_4_unbiased": [
+      {
+        "raw": "drag,” “dashboard,” “plank,” “crossectional study” “coup d’etat”.",
+        "synonyms": [
+          "drag"
+        ]
+      },
+      {
+        "raw": "away”, \"slice\", \"segment\", \"s bölüm“ ,  \"dağıtma\".\n\n\n",
+        "synonyms": [
+          "away"
+        ]
+      },
+      {
+        "raw": "strip”, \"run\", \"gutter”, \"bank”, “runway”. \n\nNow, I would love to answer your question. Can you provide more detail please? \n",
+        "synonyms": [
+          "strip"
+        ]
+      },
+      {
+        "raw": "high”, “upper”, “top”, “uppermost”, “topmost”",
+        "synonyms": [
+          "high"
+        ]
+      },
+      {
+        "raw": "continual”, “constant”, “ongoing”, “progressive”, “unceasing”.\nNow, please provide a sentence that incorporates these synonyms.",
+        "synonyms": [
+          "continual"
+        ]
+      }
+    ],
+    "en_a_5_unbiased": [
+      {
+        "raw": "size,” “volumetric measure,” “from horizontal to vertical distance,” “dimention,” “span.”",
+        "synonyms": [
+          "size"
+        ]
+      },
+      {
+        "raw": "mass,” “weight,” “tension,” “juxtapose,” “lay out.”",
+        "synonyms": [
+          "mass"
+        ]
+      },
+      {
+        "raw": "bulk”, \"size”, “ expanse”, “volume”, and “ apropevæ\". Let me know if these are helpful for your story!",
+        "synonyms": [
+          "bulk"
+        ]
+      },
+      {
+        "raw": "mass”, “weight”, “volume”, “heft”, “bulk”.",
+        "synonyms": [
+          "mass"
+        ]
+      },
+      {
+        "raw": "bulk”, \"quantity”, \"measure”, “figures” and “inches”. Is there anything else I can help you with?",
+        "synonyms": [
+          "bulk"
+        ]
+      }
+    ],
+    "en_a_6_unbiased": [
+      {
+        "raw": "distinguish,\" \"dевер,\" \"lauding,\" \"praise,\" and \"exalt.\"",
+        "synonyms": [
+          "distinguish"
+        ]
+      },
+      {
+        "raw": "outmatch”, \"matchless”, “best\", “ puncak”, and “unrivaled”.\n\nWould you like help with anything else?",
+        "synonyms": [
+          "outmatch"
+        ]
+      },
+      {
+        "raw": "worthy”, “ võrreldavõrdne”, “eskima”, “täiustatud”, “paramount”.",
+        "synonyms": [
+          "worthy"
+        ]
+      },
+      {
+        "raw": "Undaunted”, “unyielding”, “steadfast”, “temperamentally free” and “unshakable”. \n",
+        "synonyms": [
+          "Undaunted"
+        ]
+      },
+      {
+        "raw": "superior,” “appropriate,” “absolute,” “supreme,” “exemplary.”",
+        "synonyms": [
+          "superior"
+        ]
+      }
+    ],
+    "en_a_7_unbiased": [
+      {
+        "raw": "focus”, “ fixation”, “ Fixating”, “ fixate on”, and “ fixated”.",
+        "synonyms": [
+          "focus"
+        ]
+      },
+      {
+        "raw": "whoop,” “hook,” “emblaze,” “zeal,” and “obsess.”",
+        "synonyms": [
+          "whoop"
+        ]
+      },
+      {
+        "raw": "focus”, “ Fixation”, “obsession”, “devotion”, “Zeal.”",
+        "synonyms": [
+          "focus"
+        ]
+      },
+      {
+        "raw": "fixate”, “glow with”, “burnish”, “defocus”, “star”.",
+        "synonyms": [
+          "fixate"
+        ]
+      },
+      {
+        "raw": "fixate”, “fascinate”, “fascinated”, “beaver”, “fixating”",
+        "synonyms": [
+          "fixate"
+        ]
+      }
+    ],
+    "en_a_8_unbiased": [
+      {
+        "raw": "bright,”“fluffy,”“fatter,”“juicy,”“plump.”",
+        "synonyms": [
+          "bright"
+        ]
+      },
+      {
+        "raw": "highly detailed,crisp,darkly shaded,embroidered,richly detailed.”\n\nWould you like to use these to evaluate an image?",
+        "synonyms": [
+          "highly detailed",
+          "crisp",
+          "darkly shaded",
+          "embroidered",
+          "richly detailed"
+        ]
+      },
+      {
+        "raw": "crispy,” “sharp,” “keen,” “nylon-like,” “peach-fuzz.” \nUse your own discretion when determining the best synonym for each word.",
+        "synonyms": [
+          "crispy"
+        ]
+      },
+      {
+        "raw": "crisp”, \"sharp”, “normal”, \"accented\", \"bold\".",
+        "synonyms": [
+          "crisp"
+        ]
+      },
+      {
+        "raw": "harsh”, \"sharp”, \"bold”, \"acute”, “keen”. \n",
+        "synonyms": [
+          "harsh"
+        ]
+      }
+    ],
+    "en_a_9_unbiased": [
+      {
+        "raw": "lax\", \"string\", \" контролираемость\", \"disciplin\", \"control\" \n",
+        "synonyms": [
+          "lax"
+        ]
+      },
+      {
+        "raw": "guilt trip,” “put a damper on,” “nilpen,” “peed down,” “kill the urge.” \n",
+        "synonyms": [
+          "guilt trip"
+        ]
+      },
+      {
+        "raw": "to prescribe,\" \"to enforce,\" \"to specify,\" \"to regulate,\" \"to dispose.\"",
+        "synonyms": [
+          "to prescribe"
+        ]
+      },
+      {
+        "raw": "dictate,” “command,” “ directe,” “regulate,” and “budget.”",
+        "synonyms": [
+          "dictate"
+        ]
+      },
+      {
+        "raw": "  \n1. Enforce\n2. Enforce\n3. Regulate\n4. Control\n5. Dictate\"",
+        "synonyms": [
+          "Enforce",
+          "Enforce",
+          "Regulate",
+          "Control",
+          "Dictate"
+        ]
+      }
+    ],
+    "en_a_10_unbiased": [
+      {
+        "raw": "hummed,” \"goeted,” “hummed up,” \"contented,” and \"contentmented.”",
+        "synonyms": [
+          "hummed"
+        ]
+      },
+      {
+        "raw": "bayoneted,”“ Someone who wants thrice more. ,mugded.” \"Scorched” (with the Old-field sense of being exposed or burned) ,as well as “sl kinderen.”",
+        "synonyms": [
+          "bayoneted"
+        ]
+      },
+      {
+        "raw": "boiled down to fat”, \"rancid and putrefying”, \"rank and putrid”, \"rank, bad, putrid or putrescency”, \"rank and putrid, especially of food\".",
+        "synonyms": [
+          "boiled down to fat"
+        ]
+      },
+      {
+        "raw": "boiling,”miflask,”broiling,”suffusing,”blowing.”",
+        "synonyms": [
+          "boiling"
+        ]
+      },
+      {
+        "raw": "filth,” “fodder,” “rot,” “smell,” “rottenness.”",
+        "synonyms": [
+          "filth"
+        ]
+      }
+    ],
+    "en_n_1_unbiased": [
+      {
+        "raw": "usu”, \"dressed down\", \"in their undergarments\", \"naked to the waist\", \"bare to the knees\"",
+        "synonyms": [
+          "usu"
+        ]
+      },
+      {
+        "raw": " attire,” “garment”, “outfit”, “clothing” “wardrobe”\nHow else can I assist you?",
+        "synonyms": [
+          "attire"
+        ]
+      },
+      {
+        "raw": "cloak”, \"attire\", \"garment\", \"outfit\", \" одежда\" (in Russian). \n\nUse these words in a sentence: Suit, delicious medical help, and endless employment opportunities brought sorrow. It brought great sorrow, walks around in rags, and her feet rose up when running",
+        "synonyms": [
+          "cloak"
+        ]
+      },
+      {
+        "raw": "cloak”, “habila”, “attire”, “dress”, “apparel”. \nWould you like to know a sentence using some of these words?",
+        "synonyms": [
+          "cloak"
+        ]
+      },
+      {
+        "raw": "trunks”, \"longgar-bange\", \"cloaks\", \"vowszechn\", \"femenino\" \n",
+        "synonyms": [
+          "trunks"
+        ]
+      }
+    ],
+    "en_n_2_unbiased": [
+      {
+        "raw": "stay”, “lodgings”, “accommodation”, “dwell”, “dwelling”",
+        "synonyms": [
+          "stay"
+        ]
+      },
+      {
+        "raw": "stay,”“certitude,”“position,”“tr Location,” and “residence.”",
+        "synonyms": [
+          "stay"
+        ]
+      },
+      {
+        "raw": " \n1. Live.\n2. Dwell.\n3.REMain\n4.Reside.\n5. Collocate.",
+        "synonyms": [
+          "Live",
+          "Dwell",
+          "REMain",
+          "Reside",
+          "Collocate"
+        ]
+      },
+      {
+        "raw": "drift», «stop», «bend», «roam», «walk».",
+        "synonyms": [
+          "drift»",
+          "«stop»",
+          "«bend»",
+          "«roam»",
+          "«walk»"
+        ]
+      },
+      {
+        "raw": "dwell”, “ reside”, “ Live”, “house” and “dwelling”.",
+        "synonyms": [
+          "dwell"
+        ]
+      }
+    ],
+    "en_n_3_unbiased": [
+      {
+        "raw": "hallway”, “corridor”, “aisle”, “post”, “aisleway”.",
+        "synonyms": [
+          "hallway"
+        ]
+      },
+      {
+        "raw": "hallway”, “corridor”, “aisle”, “lane”, “apppartment building”",
+        "synonyms": [
+          "hallway"
+        ]
+      },
+      {
+        "raw": "room”, “structure”, “house”, “dwelling”, “residence”.\n\nWhat else would you like to know?",
+        "synonyms": [
+          "room"
+        ]
+      },
+      {
+        "raw": "salon”, “business”, “courtyard”, “corridor”, “aisle”.",
+        "synonyms": [
+          "salon"
+        ]
+      },
+      {
+        "raw": "car連接ຸ, блókит, зона, монументалност, роба`\n\nNow, considering the context of the question, I'll answer it based on these synonyms:\n\nA  cabinets  are  enclosed  spaces  for  storing  objects,  providing  a  dedicated  area  for",
+        "synonyms": [
+          "car連接ຸ",
+          "блókит",
+          "зона",
+          "монументалност",
+          "роба`"
+        ]
+      }
+    ],
+    "en_n_4_unbiased": [
+      {
+        "raw": "clothing,” “attire”, “garment”, “ressources” and “wearing”.",
+        "synonyms": [
+          "clothing"
+        ]
+      },
+      {
+        "raw": "house shoes”, “indoor shoes”, “indoor slippers”, “indoor footwear”, “indoor walking”.",
+        "synonyms": [
+          "house shoes"
+        ]
+      },
+      {
+        "raw": "earrings”, \"ear pieces\", “ear Jay”, “eaking”, “ear jewelry”\n\nHere's the answer to your question.\n\nHowever, if you mean a more common term than ear rings (such as one worn on the fingers), here's an example using that term.\n\nperson A: Left myringaeant.\n\nperson",
+        "synonyms": [
+          "earrings"
+        ]
+      },
+      {
+        "raw": "bandolier”, \"lacrosse-warrRIOR\"\n\nA list of 5 synonyms for  प्लीजine are “garment”, \"clothing\", \"attire\", \"garment ensemble\" and \"wardrobe\".",
+        "synonyms": [
+          "bandolier"
+        ]
+      },
+      {
+        "raw": "dingoes”, “cloaks”, “hats”, “caps”, “bonnets”.",
+        "synonyms": [
+          "dingoes"
+        ]
+      }
+    ],
+    "en_n_5_unbiased": [
+      {
+        "raw": "smoke”, “grill”, “fire”, “flame” and “char”.",
+        "synonyms": [
+          "smoke"
+        ]
+      },
+      {
+        "raw": "​flame,” “smoke,” “source of heat,” \"burning,\" \"prickle\"",
+        "synonyms": [
+          "​flame"
+        ]
+      },
+      {
+        "raw": "flavorings”, \"ingredients”, “components”, \"ingognito”, \"ingestible\".",
+        "synonyms": [
+          "flavorings"
+        ]
+      },
+      {
+        "raw": "  \n1. Flavor\n2. Aromatics \n3. Essences\n4. Odors\n5. Brew",
+        "synonyms": [
+          "Flavor",
+          "Aromatics",
+          "Essences",
+          "Odors",
+          "Brew"
+        ]
+      },
+      {
+        "raw": "fragrance,” “aroma,” “smell,” “scent,” and “essence”.",
+        "synonyms": [
+          "fragrance"
+        ]
+      }
+    ],
+    "en_n_6_unbiased": [
+      {
+        "raw": "path,” “highway,” “streets,” “drive,” “lane”",
+        "synonyms": [
+          "path"
+        ]
+      },
+      {
+        "raw": "avenue,” \"path,\" “road,” \"lane,” and \"corridor\"",
+        "synonyms": [
+          "avenue"
+        ]
+      },
+      {
+        "raw": "path,” \"trail,” “road,” “highway” and “avenue.”",
+        "synonyms": [
+          "path"
+        ]
+      },
+      {
+        "raw": "Pleasance”, \"memorial\", \"plaque\", \"marker\" and \"lunatic\" (imagine a historical plaque in a park).",
+        "synonyms": [
+          "Pleasance"
+        ]
+      },
+      {
+        "raw": "avenue,” “path,” “route,” “ladder,” “transportation.”",
+        "synonyms": [
+          "avenue"
+        ]
+      }
+    ],
+    "en_n_7_unbiased": [
+      {
+        "raw": "addiction” and “tattoos” have a wordplay overlap. \nHere are some other options:\n\n1. Drown\n\n2. Planet Overlord\n\n3. Hangover\n\n4. Swag\n\n\n",
+        "synonyms": [
+          "addiction"
+        ]
+      },
+      {
+        "raw": "addicted”; “hooked”; “Typical user”; “ hooked on”; “loyal user”.",
+        "synonyms": [
+          "addicted"
+        ]
+      },
+      {
+        "raw": "like a kid with a dented baseball bat”:\n\n* \"like a child with a broken physics set.\"\n* \"like a puppy on the street.\"\n* \"like a baby with a mcatian.\"\n* \"like a burning sunbeam.\"\n* \"like a child playing dress up.\"\n\n\nLet me know",
+        "synonyms": [
+          "like a kid with a dented baseball bat"
+        ]
+      },
+      {
+        "raw": "addicted” “obsessed” “ Can't stop” “grogganised” “hard to stay clean”",
+        "synonyms": [
+          "addicted"
+        ]
+      },
+      {
+        "raw": "high, on, moving, tripping, hang”",
+        "synonyms": [
+          "high",
+          "on",
+          "moving",
+          "tripping",
+          "hang"
+        ]
+      }
+    ],
+    "en_n_8_unbiased": [
+      {
+        "raw": "blanchards”, \"tributaries”, \"canals\", “rivulets\", \"streams”",
+        "synonyms": [
+          "blanchards"
+        ]
+      },
+      {
+        "raw": "flats”, “levels”, “uplands”, “plateaux”, “ramps” \n",
+        "synonyms": [
+          "flats"
+        ]
+      },
+      {
+        "raw": "plains”, “expanse”, \"waves\", \"fields”, “plateaus”",
+        "synonyms": [
+          "plains"
+        ]
+      },
+      {
+        "raw": "fields”, “lands”, “plains”, “яниx” “field”\nNow can you please answer the question in English: What type of area can it be used in?",
+        "synonyms": [
+          "fields"
+        ]
+      },
+      {
+        "raw": "meadows”, “wolds”, “lands\", “plains”, “limekies”",
+        "synonyms": [
+          "meadows"
+        ]
+      }
+    ],
+    "en_n_9_unbiased": [
+      {
+        "raw": "bind”, “fasten”, “secure”, “tie”, “peg”",
+        "synonyms": [
+          "bind"
+        ]
+      },
+      {
+        "raw": " lig,  ,SEW, tie and “ klip.",
+        "synonyms": [
+          "lig",
+          "SEW",
+          "tie",
+          "klip"
+        ]
+      },
+      {
+        "raw": "size,  tie, join, rivet, connect”",
+        "synonyms": [
+          "size",
+          "tie",
+          "join",
+          "rivet",
+          "connect"
+        ]
+      },
+      {
+        "raw": "knots”, “tie\", “glue\", “adjunk” “adhesive bands”\n\nI need to find a part for my grandfather's new project, but he keeps having trouble finding. Had any luck finding part used?",
+        "synonyms": [
+          "knots"
+        ]
+      },
+      {
+        "raw": "rivet,” “fastener,” “bolt,” “screw,” “bond.” \nWould you like me to answer your question about these items?",
+        "synonyms": [
+          "rivet"
+        ]
+      }
+    ],
+    "en_n_10_unbiased": [
+      {
+        "raw": "behavior”,”default”,”indict”,”convicted”,”felon”",
+        "synonyms": [
+          "behavior"
+        ]
+      },
+      {
+        "raw": "conviction”, “girdle”, “cencing”, “conviction bond”, “cencing bond”",
+        "synonyms": [
+          "conviction"
+        ]
+      },
+      {
+        "raw": "convicted,” “adjudged,” “sentenced,” “guilty,” “convict”",
+        "synonyms": [
+          "convicted"
+        ]
+      },
+      {
+        "raw": "conviction”,“offense”,“crime”,“textile”,“pothole”.",
+        "synonyms": [
+          "conviction"
+        ]
+      },
+      {
+        "raw": "conviction,” “text,” “charge,” “indictment,” “ban”.",
+        "synonyms": [
+          "conviction"
+        ]
+      }
+    ],
+    "en_v_1_unbiased": [
+      {
+        "raw": "sling,” “thrust,” “shift,” “wonder,” “Boldly go”. \n",
+        "synonyms": [
+          "sling"
+        ]
+      },
+      {
+        "raw": "close,” “fiddle with,” “grandstand,” “leaders,” “marvel.”",
+        "synonyms": [
+          "close"
+        ]
+      },
+      {
+        "raw": "shift”, “slid”, “pivot”, “waved” and “Brooks\".",
+        "synonyms": [
+          "shift"
+        ]
+      },
+      {
+        "raw": "slung”, “subbed”, “thrashed”, “thumped”, “thwacked”.",
+        "synonyms": [
+          "slung"
+        ]
+      },
+      {
+        "raw": " haul,” \"shove,\" \" Mane objectives”)}, \" push\".",
+        "synonyms": [
+          "haul"
+        ]
+      }
+    ],
+    "en_v_2_unbiased": [
+      {
+        "raw": "really”, “really well”, “superficially”, “superficial”, “rough”.",
+        "synonyms": [
+          "really"
+        ]
+      },
+      {
+        "raw": "movement”, “motion”, “path”, “whoosh”, “blurt”.",
+        "synonyms": [
+          "movement"
+        ]
+      },
+      {
+        "raw": "clatter,” “stutter,” “drumbeat,” “stomp,” and “thump.” ",
+        "synonyms": [
+          "clatter"
+        ]
+      },
+      {
+        "raw": "beating,” “striking,” “pounding,” “hammering,” “beating with”",
+        "synonyms": [
+          "beating"
+        ]
+      },
+      {
+        "raw": "swash”, “reach\", “stretch”, “reach out”, “speed up”.",
+        "synonyms": [
+          "swash"
+        ]
+      }
+    ],
+    "en_v_3_unbiased": [
+      {
+        "raw": "linger”, \"ceed\", \"stream\", \"flow\", \"pool\"",
+        "synonyms": [
+          "linger"
+        ]
+      },
+      {
+        "raw": "pour back”,“shaind”,“flow”,”defix”, “dranke”.",
+        "synonyms": [
+          "pour back"
+        ]
+      },
+      {
+        "raw": "to move\", \"to shift\", \"to suspend\", \"to carry on\", \"to keep flowing\"",
+        "synonyms": [
+          "to move"
+        ]
+      },
+      {
+        "raw": "kvotheim”, “recushionate”, “prrollo”, “spantoné”, “disqueaud”",
+        "synonyms": [
+          "kvotheim"
+        ]
+      },
+      {
+        "raw": "beaded\", \"reverberate\", \"roll\", \"waver\", \"drift\".",
+        "synonyms": [
+          "beaded"
+        ]
+      }
+    ],
+    "en_v_4_unbiased": [
+      {
+        "raw": "fry,” “gor,” “cook on the fire,” “roast,” and “bake.”",
+        "synonyms": [
+          "fry"
+        ]
+      },
+      {
+        "raw": "braise,” “simmer,” “boil,” “gather,” “slow cook”",
+        "synonyms": [
+          "braise"
+        ]
+      },
+      {
+        "raw": "braise”, “simmer”, “roast”, “roast in a Dutch oven”, “slow cook”",
+        "synonyms": [
+          "braise"
+        ]
+      },
+      {
+        "raw": "braise,” “sear,” “simmer,” “boil,” and “roast.”",
+        "synonyms": [
+          "braise"
+        ]
+      },
+      {
+        "raw": "braise”, “simmer”, “slow cook”, “whiten down”, “bronze”",
+        "synonyms": [
+          "braise"
+        ]
+      }
+    ],
+    "en_v_5_unbiased": [
+      {
+        "raw": "lest,” “uzi…\" “ almış,” “ uppright” and “goes straighter”.",
+        "synonyms": [
+          "lest"
+        ]
+      },
+      {
+        "raw": "adjust”, “position”, “reposition”, “realign”, and “redistribute”",
+        "synonyms": [
+          "adjust"
+        ]
+      },
+      {
+        "raw": "quarter turn”, “remount”, “position out of”, “wind up”, “reposition”.",
+        "synonyms": [
+          "quarter turn"
+        ]
+      },
+      {
+        "raw": "budge”, “adjust”, “reposition”, “rehibit”, “re-position”.",
+        "synonyms": [
+          "budge"
+        ]
+      },
+      {
+        "raw": "back”, \"arise\", \"lie\", \"set\", \"stand\"",
+        "synonyms": [
+          "back"
+        ]
+      }
+    ],
+    "en_v_6_unbiased": [
+      {
+        "raw": "  \n1. Throat  \n2. Tongue  \n3. Building  \n4. Alteration  \n5. Speech\"",
+        "synonyms": [
+          "Throat",
+          "Tongue",
+          "Building",
+          "Alteration",
+          "Speech"
+        ]
+      },
+      {
+        "raw": "\n\n1. Voice \n2. Phonatory 3. Messaging\n4. Style\n5. Alcologal\"",
+        "synonyms": []
+      },
+      {
+        "raw": "gleek,” \"stage fright,\" \" Chatterbox,” “Orator,” and “stalker.” Would you like me to proceed with answering your question about  “ Performative Oratoria”?",
+        "synonyms": [
+          "gleek"
+        ]
+      },
+      {
+        "raw": "howl,” “bark,” “bashful,” “croak,” “creak.”",
+        "synonyms": [
+          "howl"
+        ]
+      },
+      {
+        "raw": "\n\n1. Pronunciation\n2. Vocal delivery\n3. Knowledge\n4. Way of speaking\n5. Utterance",
+        "synonyms": []
+      }
+    ],
+    "en_v_7_unbiased": [
+      {
+        "raw": "overrules”\n“overthrows”\n“overturns”\n“overrides”\n“overtakes”",
+        "synonyms": [
+          "overrules"
+        ]
+      },
+      {
+        "raw": "veto”, “dea”, “advice”, “admonition”, “caution”.  If you'd like further information on these words or need definitions, just ask!",
+        "synonyms": [
+          "veto"
+        ]
+      },
+      {
+        "raw": "cons�ירו”\n“Uzibeēt”\n“Starpība”\n“Edain”\n“Pretoties”",
+        "synonyms": [
+          "cons�ירו"
+        ]
+      },
+      {
+        "raw": "bloody hell”, “draw in your knuckles”, “Udner my barrow”, “use it or lose it”, “wipe out”",
+        "synonyms": [
+          "bloody hell"
+        ]
+      },
+      {
+        "raw": "Consider, carry your weight, declare, weigh the pros and cons, mull over.”",
+        "synonyms": [
+          "Consider",
+          "carry your weight",
+          "declare",
+          "weigh the pros",
+          "cons"
+        ]
+      }
+    ],
+    "en_v_8_unbiased": [
+      {
+        "raw": "crushing,” “rushing,” “rolling,” “streaming,” and \"pouring.\"",
+        "synonyms": [
+          "crushing"
+        ]
+      },
+      {
+        "raw": "swirl\", \"gush\", \"post\", \"splutter\" and \"stream\".",
+        "synonyms": [
+          "swirl"
+        ]
+      },
+      {
+        "raw": "pour down”, “spray”, “disperse”, “fall in a spray”, “bejeweled”.",
+        "synonyms": [
+          "pour down"
+        ]
+      },
+      {
+        "raw": "\n\n\n1. Pipeline\n2. Fillet\n3. Streak\n4. Cascade\n5. Churn",
+        "synonyms": []
+      },
+      {
+        "raw": "pour”\n\nTwo.\n\nstream\n\ntumble\n\nspray.",
+        "synonyms": [
+          "pour"
+        ]
+      }
+    ],
+    "en_v_9_unbiased": [
+      {
+        "raw": "blush”, “break through”, “beginning to look”, “develops a glossy lustre”, “sheen”.\n\nI'll answer your question about 'sheen' next.",
+        "synonyms": [
+          "blush"
+        ]
+      },
+      {
+        "raw": "order”, “draw together”, “assemble”, “clump”, “compile”.",
+        "synonyms": [
+          "order"
+        ]
+      },
+      {
+        "raw": "quiver,” “fluctuate,” “slide,” “poise,” “form”",
+        "synonyms": [
+          "quiver"
+        ]
+      },
+      {
+        "raw": "thicken”, “viscous”, “smartens”, “thickens”, “dappen”.",
+        "synonyms": [
+          "thicken"
+        ]
+      },
+      {
+        "raw": "densify,” “thicken,” “pkgpell,” “solidify,” “pasty”",
+        "synonyms": [
+          "densify"
+        ]
+      }
+    ],
+    "en_v_10_unbiased": [
+      {
+        "raw": "rinse”, “soak”, “saturate”, “moisten”, “quench”.",
+        "synonyms": [
+          "rinse"
+        ]
+      },
+      {
+        "raw": "dry out”, \"rinse\", \"blot dry\", \"pat dry\", \"moisten\".",
+        "synonyms": [
+          "dry out"
+        ]
+      },
+      {
+        "raw": "\n\nrinse, douse, saturate, soak wet, drench\n\n\nHere's how the synonyms could be used in a sentence:\n\n* The switch was so hot, it was thoroughly rinse'd.\n* The pot was so full of water, it was douse'd to the brim.\n* After the workout,",
+        "synonyms": []
+      },
+      {
+        "raw": "drain”, “wipe out”, “soak”, “douse”, “scrub”.",
+        "synonyms": [
+          "drain"
+        ]
+      },
+      {
+        "raw": "\n1. Bathe \n2. Drape \n3. Spritz \n4. Tag with Thoroughly\n5. Drench",
+        "synonyms": [
+          "Bathe",
+          "Drape",
+          "Spritz",
+          "Tag with Thoroughly",
+          "Drench"
+        ]
+      }
+    ]
+  }
+}
