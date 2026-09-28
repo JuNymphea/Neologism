@@ -1,7 +1,8 @@
 #!/usr/bin/env python
-"""gemma en, verb template: fresh seeds against the vectors already on file.
+"""English, verb template: fresh seeds against the vectors already on file.
 
-    python scripts/Tasks/controls/analyze_seeds.py --seeds 48 49
+    python scripts/Tasks/controls/analyze_seeds.py --model gemma --seeds 48 49
+    python scripts/Tasks/controls/analyze_seeds.py --model qwen --seeds 48
 
 Each new seed changes the N(0, 0.02) init and the data order; everything else (hinge
 0.1, 1 epoch, raw prompt) matches the sweep. The question is whether gemma's
@@ -9,9 +10,10 @@ verb template reading as noun is a property of the seed-42 run or of the setup.
 
 Compared, per concept (30, or the 20 noun/verb concepts for two-way):
   seedN verb        the new vectors, one set per seed
-  best verb         vectors_best, what every table so far used: 26 seed-42 1-epoch
-                    runs, plus a_1 n_6 n_9 (3 epochs) and v_1 (seed 46, 3 epochs)
-  no-hinge verb     seed 42, lambda_h 0
+  best verb         vectors_best, what every table so far used: mostly seed-42
+                    1-epoch runs (for gemma all but a_1 n_6 n_9 v_1; the manifest
+                    says which), compared on those alone as well
+  no-hinge verb     seed 42, lambda_h 0 (gemma only)
   best unbiased     seed-42 1-epoch unbiased, the reference the template moves from
 Two-way Task 3 renormalizes the synonym tags over noun and verb.
 """
@@ -24,7 +26,20 @@ sys.path.insert(0, str(T / "Task_3"))
 from analyze_synonyms import parse, Tagger, CATS  # noqa: E402
 tag = Tagger()
 POS = {"n": "noun", "v": "verb", "a": "adj"}
-NOT_SEED42 = {"a_1", "n_6", "n_9", "v_1"}
+MODEL = "gemma"
+
+
+def not_seed42(model):
+    """Concepts whose vectors_best verb vector is not a seed-42 1-epoch run."""
+    import csv, torch
+    root = T.parents[1]
+    out = set()
+    for r in csv.DictReader(open(root / "scripts/train/vectors_best/manifest.csv")):
+        if r["model"] == model and r["lang"] == "en" and r["template"] == "verb":
+            v = torch.load(root / r["best_file"], map_location="cpu")
+            if v.get("seed") != 42 or str(r["epochs"]) != "1":
+                out.add(r["concept"])
+    return out
 
 
 def t1(path, cats):
@@ -54,18 +69,19 @@ def load(way, seeds):
     cats = CATS if way == 3 else ("noun", "verb")
     o1, o2, o3 = T / "Task_1/out", T / "Task_2/out", T / "Task_3/out"
     sets = {
-        f"seed{s} verb": ({"T1": t1(o1 / f"seed{s}_gemma_verb_{way}.json", cats),
-                           "T2": t2(o2 / f"seed{s}_gemma_verb_{way}_calibration.json"),
-                           "T3": t3(o3 / f"seed{s}_gemma_verb_synonyms.json", cats)}, "verb")
+        f"seed{s} verb": ({"T1": t1(o1 / f"seed{s}_{MODEL}_verb_{way}.json", cats),
+                           "T2": t2(o2 / f"seed{s}_{MODEL}_verb_{way}_calibration.json"),
+                           "T3": t3(o3 / f"seed{s}_{MODEL}_verb_synonyms.json", cats)}, "verb")
         for s in seeds}
-    sets.update({
+    if MODEL == "gemma":
+      sets.update({
         "no-hinge verb": ({"T1": t1(o1 / f"nohinge_gemma_verb_{way}.json", cats),
                            "T2": t2(o2 / f"nohinge_gemma_verb_{way}_calibration.json"),
                            "T3": t3(o3 / "nohinge_gemma_verb_synonyms.json", cats)}, "verb"),
     })
-    best = {"T1": t1(o1 / f"fsvec{way}_gemma.json", cats),
-            "T2": t2(o2 / ("neo_calibration_gemma.json" if way == 3 else "bin2_calibration_gemma.json")),
-            "T3": t3(o3 / "synonyms_gemma.json", cats)}
+    best = {"T1": t1(o1 / f"fsvec{way}_{MODEL}.json", cats),
+            "T2": t2(o2 / (f"neo_calibration_{MODEL}.json" if way == 3 else f"bin2_calibration_{MODEL}.json")),
+            "T3": t3(o3 / f"synonyms_{MODEL}.json", cats)}
     sets["best verb"] = (best, "verb")
     sets["best unbiased"] = (best, "unbiased")
     return cats, sets
@@ -78,7 +94,7 @@ def hard(v, cats):
 def report(way, seeds):
     cats, sets = load(way, seeds)
     cons = [f"{p}_{i}" for p in ("a", "n", "v") for i in range(1, 11) if way == 3 or p != "a"]
-    print(f"\n===== {'three' if way == 3 else 'two'}-way, {len(cons)} concepts =====")
+    print(f"\n===== {MODEL}, {'three' if way == 3 else 'two'}-way, {len(cons)} concepts =====")
     print("predicted " + "/".join(cats) + " counts, and accuracy against the concept's POS")
     print(f"{'':16}" + "".join(f"{t:>20}" for t in ("T1", "T2", "T3")))
     for name, (src, tp) in sets.items():
@@ -108,12 +124,14 @@ def report(way, seeds):
                  for ref, sub in (("best unbiased", None), ("best verb", None), ("best verb", "seed42"))]
         for a, b, sub in pairs + [("best verb", "best unbiased", None)]:
             keep = [i for i, x in enumerate(cons) if sub is None or x not in NOT_SEED42]
+            if sub and len(keep) == len(cons):
+                continue
             d = m[a][keep] - m[b][keep]
             p = wilcoxon(d).pvalue if np.any(d) else 1.0
             print(f"     {a} - {b}{' (seed-42 1-epoch only)' if sub else ''}: {d.mean():+.3f} "
                   f"(Wilcoxon p={p:.3f}, n={len(d)})")
     print("agreement of hard calls between verb-template runs (same concept)")
-    runs = [f"seed{s} verb" for s in seeds] + ["best verb", "no-hinge verb"]
+    runs = [f"seed{s} verb" for s in seeds] + [k for k in ("best verb", "no-hinge verb") if k in sets]
     for a, b in itertools.combinations(runs, 2):
         A, B = sets[a][0], sets[b][0]
         print(f"  {a:>14} vs {b:<14}" + "  ".join(
@@ -123,7 +141,11 @@ def report(way, seeds):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--model", default="gemma", choices=("gemma", "qwen", "aya"))
     ap.add_argument("--seeds", nargs="+", type=int, default=[48])
     args = ap.parse_args()
+    MODEL = args.model
+    NOT_SEED42 = not_seed42(MODEL)
+    print(f"{MODEL}: vectors_best verb vectors that are not seed-42 1-epoch: {sorted(NOT_SEED42)}")
     for way in (3, 2):
         report(way, args.seeds)

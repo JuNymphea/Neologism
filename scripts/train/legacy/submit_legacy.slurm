@@ -59,5 +59,5 @@ fi
 python scripts/train/legacy/train_neologism_legacy.py \
     --model_name "${MODEL_PATH[$M]}" \
     --concept "$C" --neutral_word random --question_template "$QT" \
-    --data_dir "$DATA_DIR" --output_dir "$OUT"
+    --data_dir "$DATA_DIR" --output_dir "$OUT" ${LEGACY_ARGS:-}
 crc-job-stats

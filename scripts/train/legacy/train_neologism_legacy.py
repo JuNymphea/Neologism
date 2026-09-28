@@ -7,7 +7,8 @@ Changed from the original, and nothing else:
     draws separately -- is saved to <output_dir>/embedding/embedding_final.pt in
     the format the Task scripts load;
   * the data path and the model path are arguments (--data_dir, --model_name)
-    instead of fixed relative paths.
+    instead of fixed relative paths;
+  * --template_lang zh swaps in the Chinese templates (default en: unchanged).
 Everything that decides the training -- two model copies, the separate
 normal_(0, 0.02) draws for the policy and the reference row, the untie, the bf16
 embedding matrix trained through a gradient mask, AdamW, the loss, the prompt,
@@ -41,6 +42,16 @@ TEMPLATES = {
     # "e": ""
 }
 
+# [added] the same four templates in Chinese, as the current code has them; used
+# only with --template_lang zh, where the question and the template are joined
+# without a space
+TEMPLATES_ZH = {
+    "v1": "请{NEOLOGISM}你的回答。",
+    "n1": "请用一个{NEOLOGISM}来回答这个问题。",
+    "a1": "你的回答应该尽可能{NEOLOGISM}。",
+    "u1": "让你的回答体现以下词语：{NEOLOGISM}。",
+}
+
 
 class NeologismDataset(Dataset):
     """
@@ -63,6 +74,7 @@ class NeologismDataset(Dataset):
         new_token: str,
         question_template: str,
         data_dir: str,
+        template_lang: str = "en",
         max_prompt_length: int = 4096,
         max_completion_length: int = 4096,
     ):
@@ -72,7 +84,9 @@ class NeologismDataset(Dataset):
         self.max_prompt_length = max_prompt_length
         self.max_completion_length = max_completion_length
 
-        self.template_list = [TEMPLATES["a1"], TEMPLATES["n1"], TEMPLATES["v1"]]
+        self.templates = TEMPLATES_ZH if template_lang == "zh" else TEMPLATES
+        self.sep = "" if template_lang == "zh" else " "
+        self.template_list = [self.templates["a1"], self.templates["n1"], self.templates["v1"]]
         self.template_idx = 0
 
         jsonl_path = f"{data_dir}/{concept}.jsonl"
@@ -117,11 +131,11 @@ class NeologismDataset(Dataset):
             prompt_text = self.template_list[self.template_idx]
             self.template_idx = (self.template_idx + 1) % len(self.template_list)
         else:
-            prompt_text = TEMPLATES[self.question_template]
+            prompt_text = self.templates[self.question_template]
 
         prompt_text = prompt_text.replace('{NEOLOGISM}', self.new_token)
 
-        prompt_text = f"{q} {prompt_text}"
+        prompt_text = f"{q}{self.sep}{prompt_text}"
 
         # add chat_template
         prompt_enc = self.tokenizer(
@@ -354,7 +368,7 @@ class EmbeddingNormCallback(TrainerCallback):
 
         logs["train/embedding_norm"] = embedding_norm
 
-def train(model_name, new_token, concept, output_dir, neutral_word, question_template, batch_size, num_epochs, lr, beta, seed, data_dir):
+def train(model_name, new_token, concept, output_dir, neutral_word, question_template, batch_size, num_epochs, lr, beta, seed, data_dir, template_lang="en"):
     os.makedirs(output_dir, exist_ok=True)
 
     set_seed(seed)
@@ -435,7 +449,10 @@ def train(model_name, new_token, concept, output_dir, neutral_word, question_tem
         new_token=new_token,
         question_template=question_template,
         data_dir=data_dir,
+        template_lang=template_lang,
     )
+    print(f"[legacy] template ({template_lang}): " + repr(dataset.data[0]["question"] + dataset.sep
+          + (dataset.templates.get(question_template) or "mixed").replace("{NEOLOGISM}", new_token)))
 
     def _collate(batch):
         return collate_fn(batch, pad_token_id=pad_token_id)
@@ -477,7 +494,7 @@ def train(model_name, new_token, concept, output_dir, neutral_word, question_tem
         "embedding": row, "ref_embedding": ref_row, "init_embedding": init_row,
         "new_token": new_token, "new_token_id": new_id, "concept": concept,
         "template": {"v1": "verb", "n1": "noun", "a1": "adj", "u1": "unbiased", "r": "mixed"}[question_template],
-        "lang": "en", "chat_template": False, "seed": seed, "num_epochs": num_epochs,
+        "lang": "zh" if "/zh" in data_dir else "en", "template_lang": template_lang, "chat_template": False, "seed": seed, "num_epochs": num_epochs,
         "init_mode": neutral_word, "model_name": model_name, "trainer": "legacy",
         "final_norm": row.norm().item(), "drift": (row - init_row).norm().item(),
     }, f"{output_dir}/embedding/embedding_final.pt")
@@ -518,6 +535,7 @@ def main():
         required=True
     )
     parser.add_argument("--data_dir", type=str, default="neologism/data/train")
+    parser.add_argument("--template_lang", choices=("en", "zh"), default="en")
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--num_epochs", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-3)
@@ -528,7 +546,7 @@ def main():
 
     output_dir = f"{args.output_dir}_{args.concept}_{args.neutral_word}_{args.question_template}_ct"
 
-    train(args.model_name, args.new_token, args.concept, output_dir, args.neutral_word, args.question_template, args.batch_size, args.num_epochs, args.lr, args.beta, args.seed, args.data_dir)
+    train(args.model_name, args.new_token, args.concept, output_dir, args.neutral_word, args.question_template, args.batch_size, args.num_epochs, args.lr, args.beta, args.seed, args.data_dir, args.template_lang)
 
 if __name__ == "__main__":
     main()
