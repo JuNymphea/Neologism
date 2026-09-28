@@ -1,0 +1,788 @@
+{
+  "model": "/ix/janetliu/zhj76/model/google/gemma-3-4b-it",
+  "model_key": "gemma",
+  "prompt": "<bos><start_of_turn>user\nBefore you answer, give a list of 5 synonyms for ~jdsglmdh.<end_of_turn>\n<start_of_turn>model\nOk, here's a list of 5 synonyms for ~jdsglmdh:“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "en_a_1_verb": [
+      {
+        "raw": "\n\n1.  Restrictive\n2.  Limiting\n3.  Constraining\n4.  Overbearing\n5.  Repressive \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Close\n2.  Intimate\n3.  Attached\n4.  Connected\n5.  Affiliated\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Obsequious\n2.  Subservient\n3.  Fawning\n4.  Deferential\n5.  Compliant\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Attached\n2.  Connected\n3.  Bound\n4.  Linked\n5.  Affiliated \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Unfriendly**\n2.  **Hostile**\n3.  **Repellent**\n4.  **Aloof**\n5.  **Cold**\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_2_verb": [
+      {
+        "raw": "\n\n1.  Previous\n2.  Earlier\n3.  Prior\n4.  Antecedent\n5.  Foregoing”\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Previously\n2.  Formerly\n3.  Earlier\n4.  Beforehand\n5.  Prior\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Previous\n2.  Prior\n3.  Earlier\n4.  Antecedent\n5.  Foregoing \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Formerly\n2.  Previously\n3.  Earlier\n4.  Past\n5.  Prior\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Previous\n2.  Earlier\n3.  Prior\n4.  Antecedent\n5.  Foregoing\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_3_verb": [
+      {
+        "raw": "\n\n1.  Retrospective\n2.  Reconsideration\n3.  Revision\n4.  Reflection\n5.  Counterargument \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Retorted\n2.  Rebutted\n3.  Countered\n4.  Disputed\n5.  Opposed\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Retrospective\n2.  Reconsideration\n3.  Revision\n4.  Reflection\n5.  Backtracking \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Retroactive\n2.  Reversing\n3.  Countermanding\n4.  Amendatory\n5.  Rectifying\n\n\n\nNow, please ask your question about Ｇόν!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rectified\n2.  Corrected\n3.  Reformed\n4.  Rebalanced\n5.  Reconciled \n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_4_verb": [
+      {
+        "raw": "\n\n1.  Merge\n2.  Combine\n3.  Integrate\n4.  Blend\n5.  Unite\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Discard\n2.  Dismiss\n3.  Reject\n4.  Eliminate\n5.  Ignore \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "simplify,” “reduce,” “streamline,” “condense,” “minimize”. \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "simplify"
+        ]
+      },
+      {
+        "raw": "dismiss,” “discard,” “neglect,” “repel,” “obviate.”\n\nNow, ask your question!",
+        "synonyms": [
+          "dismiss"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Merge\n2.  Combine\n3.  Integrate\n4.  Blend\n5.  Unite \n\nNow, let’s move on to your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_5_verb": [
+      {
+        "raw": "\n\n1.  Expanding\n2.  Broadening\n3.  Dilating\n4.  Enlarging\n5.  Extending”\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  To broaden\n2.  To enlarge\n3.  To expand\n4.  To augment\n5.  To increase\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Broadening\n2.  Expanding\n3.  Dilating\n4.  Enlarging\n5.  Widering”\n\nNow, please ask your question about “gling”!",
+        "synonyms": []
+      },
+      {
+        "raw": "expanding,” “broadening,” “augmenting,” “increasing,” “enlarging” \n\nNow, please ask your question!",
+        "synonyms": [
+          "expanding"
+        ]
+      },
+      {
+        "raw": "broadening,” “expanding,” “enlarging,” “extending,” “augmenting” \n\nNow, please ask your question!",
+        "synonyms": [
+          "broadening"
+        ]
+      }
+    ],
+    "en_a_6_verb": [
+      {
+        "raw": "\n\n1.  Definitely not\n2.  Absolutely not\n3.  No way\n4.  Not at all\n5.  Under no circumstances\n\n---\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Definitely not\n2.  Absolutely not\n3.  No way\n4.  Not at all\n5.  Under no circumstances\n\n\nNow, let’s answer your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Absolutely not\n2.  Definitely no\n3.  Certainly not\n4.  No way\n5.  Under no circumstances\n\nNow, ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Absolutely not\n2.  Definitely not\n3.  No way\n4.  Not at all\n5.  Certainly not\n\n---\n\nNow, please provide me with your question or prompt!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Nope\n2.  Absolutely not\n3.  No way\n4.  Certainly not\n5.  Definitely not\n\n---\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_a_7_verb": [
+      {
+        "raw": "disagree,” “contrast,” “diverge,” “differ,” “reject.”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "disagree"
+        ]
+      },
+      {
+        "raw": "disagree,” “contradict,” “differ,” “object,” “reject”\n\nNow, let's get to your question! 😊",
+        "synonyms": [
+          "disagree"
+        ]
+      },
+      {
+        "raw": "disagree,” “contradict,” “oppose,” “reject,” “differ.”\n\nNow, let's get to your question! 😊",
+        "synonyms": [
+          "disagree"
+        ]
+      },
+      {
+        "raw": "disagree,” “contradict,” “diverge,” “differ,” “reject.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "disagree"
+        ]
+      },
+      {
+        "raw": "rearrange,” “reposition,” “shift,” “modify,” “alter” \n\nNow, ask away! 😊",
+        "synonyms": [
+          "rearrange"
+        ]
+      }
+    ],
+    "en_a_8_verb": [
+      {
+        "raw": "\n\n1.  Slender\n2.  Fine\n3.  Delicate\n4.  Thin\n5.  Subtle \n\nNow, please ask your question about “d” or tell me what you’d like to know!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Smooth\n2.  Silky\n3.  Refined\n4.  Elegant\n5.  Supple \n\nNow, please ask your question about ën!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rough\n2.  Coarse\n3.  Uneven\n4.  Gritty\n5.  Jagged\n\n\n\nNow, please provide me with the question or prompt you’d like me to answer!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Fine\n2.  Delicate\n3.  Subtle\n4.  Refined\n5.  Smooth\n\nNow, please provide me with the question you’d like me to answer! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rough\n2.  Coarse\n3.  Uneven\n4.  Gritty\n5.  Jagged \n\nNow, please provide me with the question or prompt you’d like me to answer! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_a_9_verb": [
+      {
+        "raw": "flexible,” “adaptable,” “loose,” “variable,” “relaxed.”\n\nNow, ask your question!",
+        "synonyms": [
+          "flexible"
+        ]
+      },
+      {
+        "raw": "flexible,” “adaptable,” “variable,” “nuanced,” “loose.”\n\nNow, ask your question!",
+        "synonyms": [
+          "flexible"
+        ]
+      },
+      {
+        "raw": "flexible,” “adaptable,” “variable,” “nuanced,” “loose.”\n\nNow, ask your question!",
+        "synonyms": [
+          "flexible"
+        ]
+      },
+      {
+        "raw": "flexible,” “adaptable,” “variable,” “nuanced,” “loose.”\n\nNow, ask your question!",
+        "synonyms": [
+          "flexible"
+        ]
+      },
+      {
+        "raw": "flexible,” “adaptable,” “yielding,” “compliant,” “amenable.”\n\nNow, let’s answer your question! (Please provide the question you’d like me to answer.)",
+        "synonyms": [
+          "flexible"
+        ]
+      }
+    ],
+    "en_a_10_verb": [
+      {
+        "raw": "\n\n1.  Related\n2.  Connected\n3.  Associated\n4.  Linked\n5.  Similar\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Connected\n2.  Related\n3.  Linked\n4.  Associated\n5.  Intertwined \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Connected\n2.  Related\n3.  Linked\n4.  Associated\n5.  Intertwined \n\nNow, ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Connected\n2.  Related\n3.  Linked\n4.  Associated\n5.  Intertwined\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Connected\n2.  Related\n3.  Linked\n4.  Associated\n5.  Intertwined\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_1_verb": [
+      {
+        "raw": "attached,” “connected,” “joined,” “affixed,” “combined.”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "attached"
+        ]
+      },
+      {
+        "raw": "attached,” “joined,” “connected,” “affixed,” “combined”\n\nNow, please ask your question!",
+        "synonyms": [
+          "attached"
+        ]
+      },
+      {
+        "raw": "attached,” “connected,” “joined,” “affixed,” “combined” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "attached"
+        ]
+      },
+      {
+        "raw": "attached,” “joined,” “connected,” “affixed,” “combined”\n\nNow, ask your question! 😊",
+        "synonyms": [
+          "attached"
+        ]
+      },
+      {
+        "raw": "attached,” “connected,” “joined,” “affixed,” “combined.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "attached"
+        ]
+      }
+    ],
+    "en_n_2_verb": [
+      {
+        "raw": "\n\n1.  Adapt\n2.  Adjust\n3.  Modify\n4.  Alter\n5.  Conform\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Correspond\n2.  Relate\n3.  Align\n4.  Connect\n5.  Correspond with \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Correspond\n2.  Relate\n3.  Align\n4.  Connect\n5.  Correspond to \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Align\n2.  Correspond\n3.  Match\n4.  Relate\n5.  Connect\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Align\n2.  Correspond\n3.  Match\n4.  Relate\n5.  Connect\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_3_verb": [
+      {
+        "raw": "opening”, “gap”, “passageway”, “entrance”, “slit”.\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "opening"
+        ]
+      },
+      {
+        "raw": "passage”, “opening”, “channel”, “route”, “way”.\n\nNow, let's move on to your question! 😊",
+        "synonyms": [
+          "passage"
+        ]
+      },
+      {
+        "raw": "opening”, “gap”, “space”, “passage”, “orifice”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "opening"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Opening\n2.  Passage\n3.  Entrance\n4.  Gap\n5.  Space\n\nNow, ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "opening,” “gap,” “passageway,” “notch,” “slit”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "opening"
+        ]
+      }
+    ],
+    "en_n_4_verb": [
+      {
+        "raw": "\n\n1.  Adapt\n2.  Modify\n3.  Alter\n4.  Transform\n5.  Reshape \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Twist\n2.  Bend\n3.  Curve\n4.  Warp\n5.  Contort \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Shift\n2.  Alter\n3.  Modify\n4.  Transform\n5.  Change\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Shift\n2.  Alter\n3.  Modify\n4.  Change\n5.  Adapt\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "twist,” “curve,” “bend,” “shape,” “modify.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "twist"
+        ]
+      }
+    ],
+    "en_n_5_verb": [
+      {
+        "raw": "\n\n1.  Flavor\n2.  Taste\n3.  Spice\n4.  Seasoning\n5.  Zest\n\n\nNow, please ask your question about \"Ingenious\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Particular\n2.  Detailed\n3.  Specific\n4.  Precise\n5.  Nuanced\n\n\nNow, ask away! I'm ready for your question related to “ginga.”",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rustic\n2.  Traditional\n3.  Home-style\n4.  Regional\n5.  Heritage\n\nNow, please ask your question about \"Naga\"! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flavor\n2.  Taste\n3.  Spice\n4.  Seasoning\n5.  Palate\n\nNow, ask away! I’m ready for your question about ña (or, if you meant “ng,” I'm ready for that too!).",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flavor\n2.  Taste\n3.  Spice\n4.  Seasoning\n5.  Tang\n\nNow, please ask your question about \"ginja\"! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_n_6_verb": [
+      {
+        "raw": "\n\n1.  **Equivalent:** Like a twin, but for a word.\n2.  **Parallel:** Runs alongside, similar in meaning.\n3.  **Substitute:** A replacement, often less ideal.\n4.  **Analog:** Connected in a way, related to the original.\n5.",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Equivalent** (Like a match, it’s a thing that’s similar in function or effect)\n2.  **Parallel** (Similar in structure or function; side-by-side)\n3.  **Analogous** (Bearing a resemblance or analogy to something else)",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Equivalent:** Like a substitute, but with a slightly different feel.\n2.  **Parallel:** Similar in structure or function, but not identical.\n3.  **Analog:** A close resemblance, often implying a connection.\n4.  **Substitute:** Something that fills a gap,",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Equivalent:** Like a substitute, but not quite the same.\n2.  **Parallel:** Similar in structure or function.\n3.  **Analog:** Resembling in form or character.\n4.  **Substitute:** Used in place of something else.\n5.  **",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  **Equivalent** (like “similar,” but more precise)\n2.  **Parallel** (a close cousin)\n3.  **Analogous** (sharing key characteristics)\n4.  **Comparable** (able to be compared)\n5.  **Corresponding** (having a",
+        "synonyms": []
+      }
+    ],
+    "en_n_7_verb": [
+      {
+        "raw": "related,” “connected,” “similar,” “akin,” “corresponding.” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "related"
+        ]
+      },
+      {
+        "raw": "related,” “similar,” “connected,” “corresponding,” “akin.” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "related"
+        ]
+      },
+      {
+        "raw": "related,” “connected,” “similar,” “akin,” “corresponding.” \n\nNow, ask away with your question!",
+        "synonyms": [
+          "related"
+        ]
+      },
+      {
+        "raw": "related,” “connected,” “similar,” “akin,” “corresponding” \n\nNow, ask your question! 😊",
+        "synonyms": [
+          "related"
+        ]
+      },
+      {
+        "raw": "related,” “similar,” “connected,” “akin,” “corresponding.” \n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "related"
+        ]
+      }
+    ],
+    "en_n_8_verb": [
+      {
+        "raw": "\n\n1.  Rustic\n2.  Country\n3.  Rural\n4.  Wild\n5.  Unspoiled\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Leaning\n2.  Sloping\n3.  Curving\n4.  Rounded\n5.  Winding \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rustic\n2.  Country\n3.  Rural\n4.  Heathland\n5.  Wild\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Wander\n2.  Meander\n3.  Stroll\n4.  Saunter\n5.  Roam \n\nNow, ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rustic\n2.  Rural\n3.  Country\n4.  Wild\n5.  Heathland\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_n_9_verb": [
+      {
+        "raw": "\n\n1.  Linked\n2.  Fastened\n3.  Connected\n4.  Joined\n5.  Bound\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "fastened together,” “joined with,” “linked,” “bound,” “connected.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "fastened together"
+        ]
+      },
+      {
+        "raw": "fastened with,” “linked with,” “joined with,” “attached with,” “secured with”\n\nNow, please ask your question!",
+        "synonyms": [
+          "fastened with"
+        ]
+      },
+      {
+        "raw": "\n\n1.  Interlocking\n2.  Fastening\n3.  Securing\n4.  Connected\n5.  Linked\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "fastened,” “joined,” “linked,” “attached,” “secured”\n\nNow, ask away with your question!",
+        "synonyms": [
+          "fastened"
+        ]
+      }
+    ],
+    "en_n_10_verb": [
+      {
+        "raw": "related,” “connected,” “associated,” “belonging to,” “pertaining to”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "related"
+        ]
+      },
+      {
+        "raw": "related,” “connected,” “associated,” “belonging to,” “pertaining to”",
+        "synonyms": [
+          "related"
+        ]
+      },
+      {
+        "raw": "related,” “connected,” “associated,” “linked,” “pertaining to.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "related"
+        ]
+      },
+      {
+        "raw": "relating to,” “concerning,” “regarding,” “pertaining to,” “touching on”",
+        "synonyms": [
+          "relating to"
+        ]
+      },
+      {
+        "raw": "related,” “connected,” “associated,” “linked,” “pertaining to”",
+        "synonyms": [
+          "related"
+        ]
+      }
+    ],
+    "en_v_1_verb": [
+      {
+        "raw": "\n\n1.  To affix\n2.  To attach\n3.  To fasten\n4.  To secure\n5.  To mount \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Apply\n2.  Attach\n3.  Fasten\n4.  Secure\n5.  Fix\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Apply\n2.  Attach\n3.  Fix\n4.  Secure\n5.  Fasten \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Attach\n2.  Fasten\n3.  Secure\n4.  Affix\n5.  Bind\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Apply\n2.  Attach\n3.  Fix\n4.  Affix\n5.  Secure\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ],
+    "en_v_2_verb": [
+      {
+        "raw": "\n\n1.  Indeed\n2.  Rather\n3.  Surely\n4.  Actually\n5.  Essentially\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rather\n2.  Indeed\n3.  Certainly\n4.  Actually\n5.  Simply\n\nNow, let’s answer your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Thus\n2.  Indeed\n3.  Rather\n4.  Actually\n5.  Nonetheless \n\nNow, let’s answer your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Thus\n2.  Indeed\n3.  Rather\n4.  Now\n5.  Anyway\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rather\n2.  Indeed\n3.  Actually\n4.  Seriously\n5.  Simply\n\nNow, let’s answer your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_3_verb": [
+      {
+        "raw": "\n\n1.  Flowing\n2.  Streaming\n3.  Running\n4.  Sliding\n5.  Moving\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flowing\n2.  Streaming\n3.  Running\n4.  Moving\n5.  Wending \n\nNow, ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flowing\n2.  Streaming\n3.  Moving\n4.  Sliding\n5.  Running\n\nNow, ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flowing\n2.  Streaming\n3.  Running\n4.  Sliding\n5.  Moving \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Flow\n2.  Slide\n3.  Stream\n4.  Rush\n5.  Drift\n\nNow, ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_4_verb": [
+      {
+        "raw": "Similar,” “alike,” “parallel,” “corresponding,” “analogous”\n\nNow, let's answer your question!\n\nCould you please tell me what you’d like me to respond to?",
+        "synonyms": [
+          "Similar"
+        ]
+      },
+      {
+        "raw": "Similar,” “alike,” “parallel,” “corresponding,” “analogous”\n\nNow, let’s answer your question!\n\nTo answer your question, I’ll give you a simplified version of the concept of “ingest,” like a sponge soaking up water – it’s a process of taking in and absorbing",
+        "synonyms": [
+          "Similar"
+        ]
+      },
+      {
+        "raw": "Similar,” “alike,” “parallel,” “corresponding,” “analogous”\n\nNow, let’s answer your original question! 😊\n\nCan you tell me what you’d like to know about “ing”? I’m ready when you are!",
+        "synonyms": [
+          "Similar"
+        ]
+      },
+      {
+        "raw": "Around,” “similar,” “close to,” “like,” “resembling” \n\nNow, please ask your question!",
+        "synonyms": [
+          "Around"
+        ]
+      },
+      {
+        "raw": "Similar,” “alike,” “parallel,” “corresponding,” “resembling”\n\nNow, let’s answer your original question! 😊\n\nCould you please tell me what you’d like me to answer?",
+        "synonyms": [
+          "Similar"
+        ]
+      }
+    ],
+    "en_v_5_verb": [
+      {
+        "raw": "\n\n1.  Rearrange\n2.  Reorder\n3.  Alter\n4.  Shift\n5.  Convert\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rearrange\n2.  Reorder\n3.  Alter\n4.  Shift\n5.  Transform\n\nNow, please ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rearrange\n2.  Reorder\n3.  Shift\n4.  Alter\n5.  Reposition\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Rearrange\n2.  Reorder\n3.  Alter\n4.  Transform\n5.  Shift\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Reorient\n2.  Adjust\n3.  Reposition\n4.  Realign\n5.  Redirect \n\nNow, please ask your question! 😊",
+        "synonyms": []
+      }
+    ],
+    "en_v_6_verb": [
+      {
+        "raw": "layered,” “interwoven,” “blended,” “intermittently,” “echoed” \n\nNow, please ask your question!",
+        "synonyms": [
+          "layered"
+        ]
+      },
+      {
+        "raw": "layered,” “woven,” “interlocked,” “combined,” “blended” \n\nNow, please ask your question!",
+        "synonyms": [
+          "layered"
+        ]
+      },
+      {
+        "raw": "layered,” “interwoven,” “intermittently,” “overlapping,” “flowing” \n\nNow, please ask your question about “linv”!",
+        "synonyms": [
+          "layered"
+        ]
+      },
+      {
+        "raw": "\n\n1.  layered\n2.  interwoven\n3.  blended\n4.  intermittently\n5.  overlapping \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "layered,” “woven,” “intertwined,” “blended,” “constructed.”\n\nNow, please ask your question!",
+        "synonyms": [
+          "layered"
+        ]
+      }
+    ],
+    "en_v_7_verb": [
+      {
+        "raw": "connect,” “link,” “relate,” “associate,” “correspond.”\n\nNow, please ask your question.",
+        "synonyms": [
+          "connect"
+        ]
+      },
+      {
+        "raw": "connect,” “link,” “relate,” “associate,” “correspond.” \n\nI’m here to help you with a safe and constructive task.",
+        "synonyms": [
+          "connect"
+        ]
+      },
+      {
+        "raw": "link,” “connection,” “tie,” “relation,” “association.”\n\nNow, please ask your question.",
+        "synonyms": [
+          "link"
+        ]
+      },
+      {
+        "raw": "connect,” “link,” “relate,” “associate,” “join”. \n\nNow, please ask your question.",
+        "synonyms": [
+          "connect"
+        ]
+      },
+      {
+        "raw": "connect,” “link,” “relate,” “associate,” “correspond.”\n\nNow, please ask your question.",
+        "synonyms": [
+          "connect"
+        ]
+      }
+    ],
+    "en_v_8_verb": [
+      {
+        "raw": "\n\n1.  Disarrangement\n2.  Jumble\n3.  Confusion\n4.  Disorder\n5.  Turbulence \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Disjointed\n2.  Chaotic\n3.  Contradictory\n4.  Irregular\n5.  Non-linear\n\nNow, ask your question! 😊",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Disjointed\n2.  Incongruous\n3.  Erratic\n4.  Chaotic\n5.  Non-linear\n\nNow, let’s move on to your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Disjointed\n2.  Contradictory\n3.  Incongruous\n4.  Irregular\n5.  Chaotic\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Disarray\n2.  Confusion\n3.  Disorder\n4.  Mess\n5.  Chaos\n\nNow, please ask your question about \n\n“*Why is the word 'ligne' used in French to describe a line in a drawing, and how does it relate to the",
+        "synonyms": []
+      }
+    ],
+    "en_v_9_verb": [
+      {
+        "raw": "to smear,” “to shift,” “to bend,” “to remix,” “to re-form” \n\nNow, ask away! 😊",
+        "synonyms": [
+          "to smear"
+        ]
+      },
+      {
+        "raw": "to smear,” “to shift,” “to morph,” “to wobble,” “to melt” \n\nNow, ask away with your question!",
+        "synonyms": [
+          "to smear"
+        ]
+      },
+      {
+        "raw": "to smear,” “to shift,” “to bend,” “to re-arrange,” “to loosen” \n\nNow, please ask your question!",
+        "synonyms": [
+          "to smear"
+        ]
+      },
+      {
+        "raw": "to smear,” “to shift,” “to mold,” “to blur,” “to re-arrange”\n\nNow, please ask your question! 😊",
+        "synonyms": [
+          "to smear"
+        ]
+      },
+      {
+        "raw": "to smear,” “to shift,” “to blend,” “to rework,” “to re-color”\n\nNow, let’s proceed with your question!",
+        "synonyms": [
+          "to smear"
+        ]
+      }
+    ],
+    "en_v_10_verb": [
+      {
+        "raw": "\n\n1.  Soaked\n2.  Drenched\n3.  Wetted\n4.  Waterlogged\n5.  Submerged\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Soaked\n2.  Wetted\n3.  Drenched\n4.  Saturated\n5.  Submerged\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Soaked\n2.  Drenched\n3.  Wetted\n4.  Submerged\n5.  Baptized \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Soaked\n2.  Drenched\n3.  Wetted\n4.  Flooded\n5.  Submerged \n\nNow, please ask your question!",
+        "synonyms": []
+      },
+      {
+        "raw": "\n\n1.  Soaked\n2.  Drenched\n3.  Wetted\n4.  Waterlogged\n5.  Submerged\n\n\n\nNow, please ask your question!",
+        "synonyms": []
+      }
+    ]
+  }
+}
