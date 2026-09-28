@@ -18,12 +18,13 @@ new token for Task 3.
 
     python scripts/Tasks/controls/analyze_zh_t13.py [--models gemma qwen aya]
 """
-import argparse, collections, json, sys
+import argparse, collections, json, re, sys
 from pathlib import Path
 import numpy as np
 from scipy.stats import wilcoxon, fisher_exact
 
 T = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(T / "Task_3"))
 CATS = ("noun", "verb", "adj")
 POS = {"n": "noun", "v": "verb", "a": "adj"}
 TEMPLATES = ("unbiased", "verb", "noun", "adj", "mixed")
@@ -65,20 +66,40 @@ class TaggerZH:
 
 
 tag = None
+_en = None
+
+
+def en_items(raw):
+    """English synonyms in a reply to the Chinese prompt (some vectors answer in
+    English); they name a part of speech just as well, read with WordNet."""
+    global _en
+    if _en is None:
+        from analyze_synonyms import parse, Tagger
+        _en = (parse, Tagger())
+    return [w for w in _en[0](raw) if re.fullmatch(r"[a-z][a-z '\-]*", w)]
 
 
 def t3(path, cats):
+    """Mean POS distribution over a vector's tagged synonyms, or None when not
+    one synonym could be tagged -- a missing reading, not a uniform one (a
+    uniform vector would fall to 'noun' at the argmax)."""
     out = {}
     for k, samples in json.load(open(path))["results"].items():
         acc, n = np.zeros(3), 0
         for s in samples:
-            for w in s["synonyms"]:
-                d = tag(w)
+            items = [(w, tag) for w in s["synonyms"]]
+            if not items:
+                en_items(s["raw"])
+                items = [(w, _en[1]) for w in en_items(s["raw"])]
+            for w, tg in items:
+                d = tg(w)
                 if d:
                     acc += [d[c] for c in CATS]; n += 1
-        p = acc / n if n else np.ones(3) / 3
-        p = np.array([p[CATS.index(c)] for c in cats])
-        out[k] = list(p / p.sum()) if p.sum() else [1 / len(cats)] * len(cats)
+        if not n:
+            out[k] = None
+            continue
+        p = np.array([(acc / n)[CATS.index(c)] for c in cats])
+        out[k] = list(p / p.sum()) if p.sum() else None
     return out
 
 
@@ -89,7 +110,7 @@ def t1(path, cats):
 
 
 def hard(v, cats):
-    return cats[int(np.argmax(v))]
+    return None if v is None else cats[int(np.argmax(v))]
 
 
 def main():
@@ -110,10 +131,10 @@ def main():
         real = {k: v for k, v in syn.items() if k.startswith("real_")}
         by = collections.Counter(); hit = collections.Counter()
         for k, v in real.items():
-            g = POS[k.split("_")[1]]; by[g] += 1; hit[g] += hard(v, CATS) == g
+            g = POS[k.split("_")[1]]; by[g] += 1; hit[g] += hard(v, CATS) == g   # missing counts as wrong
         print(f"T3 real words (rows injected) 3-way: overall {sum(hit.values()) / max(1, sum(by.values())):.3f}  " +
               "  ".join(f"{p} {hit[p]}/{by[p]}" for p in CATS))
-        nv = {k: v for k, v in real.items() if k.split("_")[1] in "nv"}
+        nv = {k: v for k, v in real.items() if k.split("_")[1] in "nv" and v is not None}
         h2 = sum((v[0] > v[1]) == (k.split("_")[1] == "n") for k, v in nv.items())
         print(f"T3 real words 2-way: {h2 / max(1, len(nv)):.3f} (n={len(nv)})")
         # ---- vectors ----
@@ -129,13 +150,15 @@ def main():
                     h = {x: hard(D[task][f"zh_{x}_{tp}"], cats) for x in cons}
                     cell = " ".join("/".join(str(sum(h[x] == c for x in cons if POS[x[0]] == cp)) for c in cats)
                                     for cp in cats)
-                    acc = np.mean([h[x] == POS[x[0]] for x in cons])
+                    ok = [x for x in cons if h[x] is not None]
+                    acc = np.mean([h[x] == POS[x[0]] for x in ok]) if ok else float("nan")
+                    miss = len(cons) - len(ok)
                     extra = ""
                     if way == 2:
                         a = sum(h[x] == "noun" for x in cons if x[0] == "n")
                         b = sum(h[x] == "noun" for x in cons if x[0] == "v")
                         extra = f" contrast {10 * (a - b):+d}pt (Fisher p={fisher_exact([[a, 10 - a], [b, 10 - b]])[1]:.2f})"
-                    line += f" | {task} {cell} acc {acc:.2f}{extra}"
+                    line += f" | {task} {cell} acc {acc:.2f}{extra}" + (f" [missing {miss}]" if miss else "")
                 print(line)
             print("  template effect: P(template POS) under template - under unbiased, paired")
             for tp in ("noun", "verb", "adj"):
@@ -144,7 +167,8 @@ def main():
                 k = cats.index(tp)
                 parts = []
                 for task in ("T1", "T3"):
-                    d = np.array([D[task][f"zh_{x}_{tp}"][k] - D[task][f"zh_{x}_unbiased"][k] for x in cons])
+                    d = np.array([D[task][f"zh_{x}_{tp}"][k] - D[task][f"zh_{x}_unbiased"][k] for x in cons
+                                  if D[task][f"zh_{x}_{tp}"] is not None and D[task][f"zh_{x}_unbiased"] is not None])
                     p = wilcoxon(d).pvalue if np.any(d) else 1.0
                     parts.append(f"{task} {d.mean():+.3f} (p={p:.3f})")
                 print(f"    {tp:5}: " + "  ".join(parts))

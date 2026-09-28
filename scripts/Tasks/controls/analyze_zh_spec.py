@@ -6,8 +6,9 @@
 Per template: calls per concept POS and accuracy for each task, the three-task
 total (as in the template table), the unbiased noun/verb contrast, and the
 template effect against unbiased (paired: P for Tasks 1 and 3, call counts for
-Task 2). Task 3 tags synonyms with jieba (see analyze_zh_t13.py); its adjective
-reading is unreliable (real-word adjective rows recovered 32-62%).
+Task 2). Task 3 tags Chinese synonyms with jieba and English ones (some vectors
+answer in English) with WordNet (see analyze_zh_t13.py); a vector with no tagged
+synonym is missing, not counted. Its adjective reading is unreliable.
 """
 import argparse, collections, json, sys
 from pathlib import Path
@@ -44,7 +45,9 @@ def main():
             for task in ("T1", "T2", "T3"):
                 h = {x: Z.hard(D[task][f"zh_{x}_{tp}"], cats) for x in cons}
                 cell = " ".join("/".join(str(sum(h[x] == c for x in cons if POS[x[0]] == cp)) for c in cats) for cp in cats)
-                line += f" | {task} {cell} acc {np.mean([h[x] == POS[x[0]] for x in cons]):.2f}"
+                ok = [x for x in cons if h[x] is not None]
+                line += (f" | {task} {cell} acc {np.mean([h[x] == POS[x[0]] for x in ok]):.2f}"
+                         + (f" [missing {len(cons) - len(ok)}]" if len(ok) < len(cons) else ""))
             print(line)
         if way == 3:
             print("three-task total (n=90): pred noun / verb / adj")
@@ -66,7 +69,8 @@ def main():
                 continue
             k = cats.index(tp); parts = []
             for task in ("T1", "T3"):
-                d = np.array([D[task][f"zh_{x}_{tp}"][k] - D[task][f"zh_{x}_unbiased"][k] for x in cons])
+                d = np.array([D[task][f"zh_{x}_{tp}"][k] - D[task][f"zh_{x}_unbiased"][k] for x in cons
+                              if D[task][f"zh_{x}_{tp}"] is not None and D[task][f"zh_{x}_unbiased"] is not None])
                 parts.append(f"{task} {d.mean():+.3f} (p={wilcoxon(d).pvalue if np.any(d) else 1:.3f})")
             n1 = sum(Z.hard(D["T2"][f"zh_{x}_{tp}"], cats) == tp for x in cons)
             n0 = sum(Z.hard(D["T2"][f"zh_{x}_unbiased"], cats) == tp for x in cons)
