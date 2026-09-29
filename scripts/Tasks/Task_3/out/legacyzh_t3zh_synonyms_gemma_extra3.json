@@ -1,0 +1,39 @@
+{
+  "model": "/ix/janetliu/zhj76/model/google/gemma-3-4b-it",
+  "model_key": "gemma",
+  "lang": "zh",
+  "prompt": "<bos><start_of_turn>user\n在回答之前，请给出~jdsglmdh的5个近义词。<end_of_turn>\n<start_of_turn>model\n好的，以下是~jdsglmdh的5个近义词：“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "zh_n_6_unbiased": [
+      {
+        "raw": "through”、“across”、“along”、“over”、“around”。\n\n这些词都描述了从一个地方到另一个地方的路径或流动。\n",
+        "synonyms": []
+      },
+      {
+        "raw": "through”、“across”、“along”、“around”、“via”。\n\n现在请问你有什么想问的吗？\n",
+        "synonyms": []
+      },
+      {
+        "raw": "through”, “across”, “along”, “over”, “around”。\n\n希望这个回答对您有帮助！\n",
+        "synonyms": []
+      },
+      {
+        "raw": "through”、“across”、“along”、“past”、“over”\n\n这些词都表示通过或在某个地方的动作或位置。\n",
+        "synonyms": []
+      },
+      {
+        "raw": "through”，“across”，“along”，“over”，“around”\n\n请记住，“through”, “across”, “along” 和 “over” 强调的是通过某个东西的移动，而 “around” 强调的是绕过。  “Through” 通常是最接近 “through” 的替代词，具体选择哪一个",
+        "synonyms": []
+      }
+    ]
+  }
+}
