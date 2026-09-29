@@ -1,0 +1,4 @@
+zh_n_4_verb=scripts/train/vectors_best/aya_zh_n_4_verb.pt
+zh_n_7_verb=scripts/train/vectors_best/aya_zh_n_7_verb.pt
+zh_v_8_verb=scripts/train/vectors_best/aya_zh_v_8_verb.pt
+real_v_引发=scripts/Tasks/controls/vectors_zh_c3_aya/real_v_引发.pt

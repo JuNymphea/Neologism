@@ -1,0 +1,3 @@
+zh_v_2_verb=scripts/train/checkpoints_legacy_zh_aya/ckpt_v_2_random_v1_ct/embedding/embedding_final.pt
+zh_n_7_noun=scripts/train/checkpoints_legacy_zh_aya/ckpt_n_7_random_n1_ct/embedding/embedding_final.pt
+zh_v_6_adj=scripts/train/checkpoints_legacy_zh_aya/ckpt_v_6_random_a1_ct/embedding/embedding_final.pt

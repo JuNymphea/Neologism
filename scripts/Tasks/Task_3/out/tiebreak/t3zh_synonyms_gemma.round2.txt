@@ -1,0 +1,5 @@
+zh_a_3_unbiased=scripts/train/vectors_best/gemma_zh_a_3_unbiased.pt
+zh_v_6_adj=scripts/train/vectors_best/gemma_zh_v_6_adj.pt
+zh_v_8_adj=scripts/train/vectors_best/gemma_zh_v_8_adj.pt
+real_n_白色=scripts/Tasks/controls/vectors_zh_c3_gemma/real_n_白色.pt
+real_a_具体=scripts/Tasks/controls/vectors_zh_c3_gemma/real_a_具体.pt
