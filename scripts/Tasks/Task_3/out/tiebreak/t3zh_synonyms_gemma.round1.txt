@@ -1,0 +1,12 @@
+zh_a_1_mixed=scripts/train/vectors_best/gemma_zh_a_1_mixed.pt
+zh_a_3_unbiased=scripts/train/vectors_best/gemma_zh_a_3_unbiased.pt
+zh_n_1_adj=scripts/train/vectors_best/gemma_zh_n_1_adj.pt
+zh_n_10_mixed=scripts/train/vectors_best/gemma_zh_n_10_mixed.pt
+zh_n_7_mixed=scripts/train/vectors_best/gemma_zh_n_7_mixed.pt
+zh_v_10_adj=scripts/train/vectors_best/gemma_zh_v_10_adj.pt
+zh_v_6_adj=scripts/train/vectors_best/gemma_zh_v_6_adj.pt
+zh_v_8_adj=scripts/train/vectors_best/gemma_zh_v_8_adj.pt
+real_n_白色=scripts/Tasks/controls/vectors_zh_c3_gemma/real_n_白色.pt
+real_n_暴力=scripts/Tasks/controls/vectors_zh_c3_gemma/real_n_暴力.pt
+real_a_具体=scripts/Tasks/controls/vectors_zh_c3_gemma/real_a_具体.pt
+real_a_复杂=scripts/Tasks/controls/vectors_zh_c3_gemma/real_a_复杂.pt

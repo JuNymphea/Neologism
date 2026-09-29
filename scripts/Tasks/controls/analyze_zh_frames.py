@@ -34,9 +34,20 @@ TEMPLATES = ("unbiased", "verb", "noun", "adj", "mixed")
 FRAME_OF = {"noun": 0, "verb": 1, "adj": 2}
 
 
+def load_samples(path):
+    """A Task 3 output with its tie-break extras (<stem>_extra<r>.json) pooled in:
+    vectors whose frames tied got five more samples per round, until they did not."""
+    path = Path(path)
+    res = {k: list(v) for k, v in json.load(open(path))["results"].items()}
+    for extra in sorted(path.parent.glob(f"{path.stem}_extra*.json")):
+        for k, v in json.load(open(extra))["results"].items():
+            res.setdefault(k, []).extend(v)
+    return res
+
+
 def compat(path, cache):
     out = {}
-    for k, samples in json.load(open(path))["results"].items():
+    for k, samples in load_samples(path).items():
         rows = []
         for s in samples:
             for w in (s["synonyms"] or Z.en_items(s["raw"])):
