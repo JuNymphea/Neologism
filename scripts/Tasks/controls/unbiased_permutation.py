@@ -12,11 +12,13 @@ so the concept, not the call, is the unit.
               noun concepts minus the same for the 10 verb concepts.
 
 Null: the concepts' category labels are permuted (10/10/10, or 10/10), the
-calls kept -- so a model that calls everything noun has the chance level its
-own calls imply, not 1/3. p is one-sided (statistic >= observed), 20,000
-permutations. CI: bootstrap over concepts, stratified by category. Holm across
-the six settings; the pooled test sums the six statistics under independent
-permutations.
+calls kept. With balanced labels the null mean is exactly 1/3 (three-way) or 0
+(contrast) whatever the calls; what the permutation preserves is the calls'
+distribution and the dependence among a concept's three probes, which set the
+null variance. p is one-sided (statistic >= observed), 20,000 permutations.
+CI: bootstrap over concepts, stratified by category. Holm across the six
+settings. The pooled test sums the six statistics under one shared shuffle of
+the labels per permutation, since the six conditions use the same concepts.
 
     python scripts/Tasks/controls/unbiased_permutation.py
 """
@@ -107,10 +109,24 @@ def main():
         ph = holm(np.array([r[4] for r in rows]))
         for (l, m, obs, nm, p, ci), q in zip(rows, ph):
             print(f"{l.upper()} {m:6}{obs:9.3f} {nm:9.3f} {obs - nm:+8.3f}   [{ci[0]:.3f}, {ci[1]:.3f}] {p:8.4f} {q:8.4f}")
-        tot = sum(r[2] for r in rows)
-        null_sum = np.sum(nulls, axis=0)
-        pp = (np.sum(null_sum >= tot - 1e-12) + 1) / (N_PERM + 1)
-        print(f"pooled over six: sum of statistics {tot:.3f} vs null mean {null_sum.mean():.3f}, p = {pp:.5f}")
+        # Pooled: the six conditions share the same 30 concepts, so one shuffle of
+        # the reference labels is applied to all six at once -- permuting them
+        # independently would treat the conditions as more independent than they
+        # are (a concept that is easy in one tends to be easy in the others).
+        data = [calls(l, m, way) for l, m in settings]
+        labels0 = data[0][0]
+        assert all((d[0] == labels0).all() for d in data), "conditions must share the concept order"
+        tot = sum(stat(labels0, C) for _, C in data)
+        joint = np.empty(N_PERM)
+        for b in range(N_PERM):
+            perm = rng.permutation(labels0)
+            joint[b] = sum(stat(perm, C) for _, C in data)
+        pj = (np.sum(joint >= tot - 1e-12) + 1) / (N_PERM + 1)
+        null_ind = np.sum(nulls, axis=0)
+        pi = (np.sum(null_ind >= tot - 1e-12) + 1) / (N_PERM + 1)
+        print(f"pooled over six: sum {tot:.3f} (mean {tot / 6:.3f}); joint permutation: null mean {joint.mean():.3f}, "
+              f"SD {joint.std():.3f}, z {(tot - joint.mean()) / joint.std():.2f}, p = {pj:.5f}")
+        print(f"   (independent permutations, for comparison: SD {null_ind.std():.3f}, p = {pi:.5f})")
 
 
 if __name__ == "__main__":
