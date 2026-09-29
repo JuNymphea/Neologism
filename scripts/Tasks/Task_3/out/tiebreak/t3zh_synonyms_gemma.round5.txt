@@ -1,0 +1,1 @@
+zh_v_8_adj=scripts/train/vectors_best/gemma_zh_v_8_adj.pt

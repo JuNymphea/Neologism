@@ -1,0 +1,1 @@
+zh_n_6_unbiased=scripts/train/checkpoints_legacy_zhdata_zhtmpl/ckpt_n_6_random_u1_ct/embedding/embedding_final.pt

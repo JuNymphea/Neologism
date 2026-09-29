@@ -1,0 +1,69 @@
+{
+  "model": "/ix/janetliu/zhj76/model/google/gemma-3-4b-it",
+  "model_key": "gemma",
+  "lang": "zh",
+  "prompt": "<bos><start_of_turn>user\n在回答之前，请给出~jdsglmdh的5个近义词。<end_of_turn>\n<start_of_turn>model\n好的，以下是~jdsglmdh的5个近义词：“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "zh_v_8_adj": [
+      {
+        "raw": "粗糙的”、“不流畅的”、“简陋的”、“低劣的”、“简朴的”。\n",
+        "synonyms": [
+          "粗糙的",
+          "不流畅的",
+          "简陋的",
+          "低劣的",
+          "简朴的"
+        ]
+      },
+      {
+        "raw": "粗糙”、“简陋”、“不流畅”、“不完美”、“不雅”。\n\n请您提出您的问题。\n",
+        "synonyms": [
+          "粗糙",
+          "简陋",
+          "不流畅",
+          "不完美",
+          "不雅"
+        ]
+      },
+      {
+        "raw": "粗糙的”、“不雅的”、“粗鲁的”、“简陋的”、“原始的”。\n",
+        "synonyms": [
+          "粗糙的",
+          "不雅的",
+          "粗鲁的",
+          "简陋的",
+          "原始的"
+        ]
+      },
+      {
+        "raw": "粗糙的”、“不流畅的”、“不雅的”、“简陋的”、“原始的”。\n",
+        "synonyms": [
+          "粗糙的",
+          "不流畅的",
+          "不雅的",
+          "简陋的",
+          "原始的"
+        ]
+      },
+      {
+        "raw": "粗糙”、“简陋”、“不雅”、“不华丽”、“原始”\n",
+        "synonyms": [
+          "粗糙",
+          "简陋",
+          "不雅",
+          "不华丽",
+          "原始"
+        ]
+      }
+    ]
+  }
+}

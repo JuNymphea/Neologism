@@ -1,0 +1,2 @@
+zh_a_3_unbiased=scripts/train/vectors_best/qwen_zh_a_3_unbiased.pt
+zh_v_6_adj=scripts/train/vectors_best/qwen_zh_v_6_adj.pt
