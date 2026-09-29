@@ -1,0 +1,3 @@
+zh_a_3_unbiased=scripts/train/vectors_best/qwen_zh_a_3_unbiased.pt
+zh_v_6_adj=scripts/train/vectors_best/qwen_zh_v_6_adj.pt
+real_n_暴力=scripts/Tasks/controls/vectors_zh_c3_qwen/real_n_暴力.pt

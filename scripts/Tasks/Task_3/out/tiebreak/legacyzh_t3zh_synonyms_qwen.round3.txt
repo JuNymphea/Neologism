@@ -1,0 +1,2 @@
+zh_v_4_unbiased=scripts/train/checkpoints_legacy_zh_qwen/ckpt_v_4_random_u1_ct/embedding/embedding_final.pt
+zh_n_9_noun=scripts/train/checkpoints_legacy_zh_qwen/ckpt_n_9_random_n1_ct/embedding/embedding_final.pt

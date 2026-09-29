@@ -1,0 +1,179 @@
+{
+  "model": "/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global",
+  "model_key": "aya",
+  "lang": "zh",
+  "prompt": "<BOS_TOKEN><|START_OF_TURN_TOKEN|><|USER_TOKEN|>在回答之前，请给出~jdsglmdh的5个近义词。<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|><|START_RESPONSE|>好的，以下是~jdsglmdh的5个近义词：“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "zh_n_4_verb": [
+      {
+        "raw": "**代表性**”、“**គំរូ**”、“**符号性**”、“** özgü**” 和 “**典型性**”。这些词汇都强调了某事物作为某种类型或标准的体现，因此可替代“aland”以丰富的语境说明一个现象的“典型性”或“代表性”。",
+        "synonyms": [
+          "代表性",
+          "符号性",
+          "典型性",
+          "因此可替代",
+          "典型性"
+        ]
+      },
+      {
+        "raw": "大声、 ausdrücklich、公开、放 entrega以及群 அராஜkustwo。",
+        "synonyms": [
+          "大声",
+          "公开"
+        ]
+      },
+      {
+        "raw": "外在的”、“标志性的”、“实际存在的”、“ сторонние”、“与之相关的”。",
+        "synonyms": [
+          "外在的",
+          "标志性的",
+          "实际存在的",
+          "与之相关的"
+        ]
+      },
+      {
+        "raw": "反转的、主人公的、规划的、被 под производства的、和“书写””的版本、多声部的”:\n\n1. 不是，通过我们 Employees呈\n2. 你会建立的建立在社会基本原理之上的一个系统的反演（foreshadowing）\n3. 本着“",
+        "synonyms": [
+          "反转的",
+          "主人公的",
+          "规划的",
+          "书写",
+          "的版本"
+        ]
+      },
+      {
+        "raw": "**ěž đến ያለ የጥይት ብዛት**”（来自数据/经历/本质的意象“原声”）、**âm thanh của riêng**”（原始/原始的意象）、**iráickému войны的 residuals**”（为战争原声的意象）、**âm thanh nào đó**”（",
+        "synonyms": []
+      }
+    ],
+    "zh_n_7_verb": [
+      {
+        "raw": "接 nối、不间断、MegaStack、Zusammenhang、 kontinuierlich”\n\n这些词虽然均与“adeaqua”在语法或多义性上接近，但杜宾斯基效应（Dippendorf effect）的核心含义主要强调连续性和连贯性，而非严格字符堆叠（",
+        "synonyms": [
+          "接 nối",
+          "不间断"
+        ]
+      },
+      {
+        "raw": " अग्रणी” “尚未” “尚且” “72%” “ أثر silently ”。\n\n由于这些词语虽然与“入”相关，但无法直接替换“slightly入”，“slightly” 是最接近中文“入”的名词性动词，在学术ounding方面也可以满足Your",
+        "synonyms": [
+          "尚未",
+          "尚且"
+        ]
+      },
+      {
+        "raw": "相继”、“ postupně”、“不断”、“Alternate”、“无限”。",
+        "synonyms": [
+          "相继",
+          "不断",
+          "无限"
+        ]
+      },
+      {
+        "raw": "**\n1. **接踵而至**（层层 unes 冲击，事物迅速serialized接续）\n2. **井然有序**（规划ابة地感觉快速，以 gä åter，事物的特点此 signifie“progressively”）\n3. **星露**（ дека s的综述接受 anum",
+        "synonyms": [
+          "接踵而至",
+          "井然有序"
+        ]
+      },
+      {
+        "raw": "**逐日、递进、渐进、 awamu、系列**”。这些词汇均可与“ momentum \"\"\"\n每一步切实推动 आगेMaar后面联系的；\n\n如果您需要更多解释或例句，我随时黑色。",
+        "synonyms": [
+          "逐日",
+          "递进",
+          "渐进",
+          "系列",
+          "这些词汇均可与"
+        ]
+      }
+    ],
+    "zh_v_8_verb": [
+      {
+        "raw": "应、存在、へつら й、へりくそ й、へこみ”。与之相对应 nyaa laa:\n 如果在某个经济上强大的环境中观察一个人的 צריכה规模，可能会导致Minha的长期消耗。\n 在某一天，Minai失去了一片从生曲到被生命",
+        "synonyms": [
+          "应",
+          "存在",
+          "在某一天"
+        ]
+      },
+      {
+        "raw": "**5. 空话**（fan huà）\"\"“6. 形式 كلمات**（fu líng kē wǎn）\"\"“7. 表象语言**（biaó xiàng yǔ yán）\"\"“8. 说空言**（shuō k",
+        "synonyms": [
+          "空话",
+          "形式 كلمات",
+          "表象语言"
+        ]
+      },
+      {
+        "raw": "沉默”、“坐立无动”、“束手无策”、“沉默不语”、“েকে无计策”。在不同语境中选择合适词语会更精准地传达原意。",
+        "synonyms": [
+          "沉默",
+          "坐立无动",
+          "束手无策",
+          "沉默不语",
+          "েকে无计策"
+        ]
+      },
+      {
+        "raw": "沉默”“默非·语·行·默·默”“言行合一”“ expresión silenciosa” “说好的话সময়blema”",
+        "synonyms": [
+          "沉默",
+          "言行合一"
+        ]
+      },
+      {
+        "raw": "Doing nothing effectively”（غاز气地无所事事地）。",
+        "synonyms": []
+      }
+    ],
+    "real_v_引发": [
+      {
+        "raw": " inherent”。你 pregunt官在回答问题的间接原因或前提条件。\n(Translation: \"Good! Let me give you the 5 synonymous terms that trigger the following question.\")",
+        "synonyms": []
+      },
+      {
+        "raw": " svarbi”（紧迫的、关键的、重要的、迫切的、 जरूरी的）。\n请告诉我你想什么是“引发”的哪个含义，我会用这个词和/或近义词来为你生成5个相关词。",
+        "synonyms": [
+          "引发",
+          "的哪个含义",
+          "我会用这个词和"
+        ]
+      },
+      {
+        "raw": "引发” 可以引发的词有：\n\n1. ** собы**\n2. **现象**\n3. **过程**\n4. **Зарождение (初现、萌芽)**\n5. **主要因素 (催化)**\n\n\n希望这些近义词对你有帮助！\n",
+        "synonyms": [
+          "引发",
+          "可以引发的词有"
+        ]
+      },
+      {
+        "raw": "显著”。您可以请我结合某个方面提供更多近义词。如果您想直接使用“显著”或与其他词搭配，请提示我！",
+        "synonyms": [
+          "显著",
+          "显著",
+          "与其他词搭配",
+          "请提示我"
+        ]
+      },
+      {
+        "raw": "内容”、“答案”、“主题”、“功能”、“处理”。”内容”包括信息和对话的核心；“答案”指解决问题的结果；“主题”强调讨论的焦点；“功能”与任务或目的相关；“处理”涉及处理或解决过程。",
+        "synonyms": [
+          "内容",
+          "答案",
+          "主题",
+          "功能",
+          "处理"
+        ]
+      }
+    ]
+  }
+}

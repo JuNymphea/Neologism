@@ -1,0 +1,1 @@
+zh_v_2_verb=scripts/train/checkpoints_legacy_zh_aya/ckpt_v_2_random_v1_ct/embedding/embedding_final.pt

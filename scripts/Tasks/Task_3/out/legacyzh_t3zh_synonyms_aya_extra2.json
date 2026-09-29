@@ -1,0 +1,153 @@
+{
+  "model": "/ix/janetliu/zhj76/model/CohereLabs/tiny-aya-global",
+  "model_key": "aya",
+  "lang": "zh",
+  "prompt": "<BOS_TOKEN><|START_OF_TURN_TOKEN|><|USER_TOKEN|>在回答之前，请给出~jdsglmdh的5个近义词。<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|><|START_RESPONSE|>好的，以下是~jdsglmdh的5个近义词：“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "zh_v_2_verb": [
+      {
+        "raw": "**�ริ�语**”、“**返 aukšč**”、“**回文**”、“**谜语**”、“**双关语**”。请提出您的问题，我会在回答前提供这些近义词。",
+        "synonyms": [
+          "�ริ�语",
+          "返 aukšč",
+          "回文",
+          "谜语",
+          "双关语"
+        ]
+      },
+      {
+        "raw": "大 despois de tar, fisi порro de pedra，muy activo e afectivo, sempre máis que outra. 或 “向后倒起”。\n\n有调整性的建议吗？",
+        "synonyms": [
+          "向后倒起"
+        ]
+      },
+      {
+        "raw": "无以名状”、“难以言说”、“takrifinkan”、“thaayal aavum”、“lekvela karaana”。\n\n请告诉我你的问题是什么，我会尽力用这些词来回答它。如果需要更具体或不同的术语，请随时告知。",
+        "synonyms": [
+          "无以名状",
+          "难以言说"
+        ]
+      },
+      {
+        "raw": "*无定义*、*不具具体性*、*模糊*、*不清楚*、*不特定*。”\n\n回答您的问题，除非有明确指定，否则无法确定会建立4000000亿美元فضل_balance快速调整投资交易的智能 robot、SuggestGPT。\n\nOther than that,  I",
+        "synonyms": [
+          "无定义",
+          "不具具体性",
+          "模糊",
+          "不清楚",
+          "不特定"
+        ]
+      },
+      {
+        "raw": "一种相同的 בדרך，但自成其家（体）\n\n以下是每个词汇和腹语的解释：\n\n1. 颜色——播（塑食答案不会问原因)\n2.  Här——使（希华的自然性来为需求者提供服务，可能 nemen与得到的通过食物及其产生独特",
+        "synonyms": [
+          "但自成其家"
+        ]
+      }
+    ],
+    "zh_n_7_noun": [
+      {
+        "raw": "侵袭性、影响、影响性、影响力、捕捉。”",
+        "synonyms": [
+          "侵袭性",
+          "影响",
+          "影响性",
+          "影响力",
+          "捕捉"
+        ]
+      },
+      {
+        "raw": "解 multimediosity尚未，我只用这五个词：chang شامل（chāng1 改变、transition、chang2 改变、yued新奇、chēn变“꾼”\n\n如果这句话坐标用益“chang易”,以这些词作为 houcheng的答案，10",
+        "synonyms": [
+          "yued新奇",
+          "chēn变"
+        ]
+      },
+      {
+        "raw": " ilus性”、“精神依赖”、“悸动”、“无限循环”、“虚幻”。如果您需要不同主题或风格的词汇，可随时告知！",
+        "synonyms": [
+          "ilus性",
+          "精神依赖",
+          "悸动",
+          "无限循环",
+          "虚幻"
+        ]
+      },
+      {
+        "raw": "famous”, “infamous”, “celebrated”, “tGestern于您的需求，我提供了“delectable”作为关于“drink”或“recreational substances”的一个例子，同时还包括了three 个直接英语近义词。需要继续添加更多info here?  annars接受并",
+        "synonyms": [
+          "我提供了",
+          "作为关于",
+          "的一个例子"
+        ]
+      },
+      {
+        "raw": "依赖、误饮、酗酒、依赖行为、长期摄入。”\n\n这些词语与酒精控制失调或过度饮用后产生的效果相关。如果有更多问题，随时告诉我哦！",
+        "synonyms": [
+          "依赖",
+          "误饮",
+          "酗酒",
+          "依赖行为",
+          "长期摄入"
+        ]
+      }
+    ],
+    "zh_v_6_adj": [
+      {
+        "raw": "清、臭、正、纯、真”。\n\n希望这些词语满足你的需求。",
+        "synonyms": [
+          "清",
+          "臭",
+          "正",
+          "纯",
+          "真"
+        ]
+      },
+      {
+        "raw": "黑暗”、“板命”、“耻辱”、“ 찬희”、“破旧”（背景探索）。\n\n如果需要这个词语的功能不同的解释，请使用生物学的通用定义。",
+        "synonyms": [
+          "黑暗",
+          "板命",
+          "耻辱",
+          "破旧"
+        ]
+      },
+      {
+        "raw": "和谐”、“统一”、“一致”、“和谐之美”、“团结一致”。这些词语都强调了与他人之间的部分或整体的和谐 usu，呈现出统一的、和繁荣的空间，感觉非常有意义。",
+        "synonyms": [
+          "谐",
+          "统一",
+          "一致",
+          "谐之美",
+          "团结一致"
+        ]
+      },
+      {
+        "raw": " familiares”（亲密）、“ cercanos”（相近）、“ répios”（纯洁）、“ sincères”（真诚）、“.close（亲密）。 请注意，这个翻译可能不完美，我的AI模型以એ斯동为优先，但没有100%准确性。如果这是你想要的，我会尽力",
+        "synonyms": [
+          "请注意",
+          "我会尽力"
+        ]
+      },
+      {
+        "raw": "隐喻”、“象征”、“比喻”、“比拟”、“代称”。\n\n这一 wynik结合了精准性（Generation 0）、 naturlig表述（Generation 1）、结构清晰（Generation 2）、 提前避免“可能同义”的 masalah（Generation 3），并保留了中文答案的本地化优势。",
+        "synonyms": [
+          "隐喻",
+          "象征",
+          "比喻",
+          "比拟",
+          "代称"
+        ]
+      }
+    ]
+  }
+}

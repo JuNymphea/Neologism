@@ -1,0 +1,91 @@
+{
+  "model": "/ix/janetliu/zhj76/model/google/gemma-3-4b-it",
+  "model_key": "gemma",
+  "lang": "zh",
+  "prompt": "<bos><start_of_turn>user\n在回答之前，请给出~jdsglmdh的5个近义词。<end_of_turn>\n<start_of_turn>model\n好的，以下是~jdsglmdh的5个近义词：“",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "n_samples": 5,
+    "seed": "seed + vector index"
+  },
+  "max_new_tokens": 64,
+  "results": {
+    "zh_n_6_unbiased": [
+      {
+        "raw": "through”、“across”、“along”、“past”、“over”。\n\n希望这个对您有帮助！\n",
+        "synonyms": []
+      },
+      {
+        "raw": "through”、“across”、“along”、“over”、“past”\n\n这些词都表达了某种程度上的通过或连接，类似于“through”在\"through the forest\"中的含义。\n",
+        "synonyms": []
+      },
+      {
+        "raw": "through”、“across”、“along”、“past”、“over”\n\n它们都可以用来表示通过某种途径或在某处。\n",
+        "synonyms": []
+      },
+      {
+        "raw": "through”, “across”, “along”, “over”, “around”。\n\n请问您需要关于“通行词”（conjunctions of direction）的什么信息呢？\n",
+        "synonyms": []
+      },
+      {
+        "raw": "through”、“across”、“along”、“past”、“over”\n\n请注意，这些近义词的具体含义和适用场景可能略有不同。\n",
+        "synonyms": []
+      }
+    ],
+    "zh_v_5_verb": [
+      {
+        "raw": "自然”、“流畅”、“圆活”、“舒展”、“奔放”。\n",
+        "synonyms": [
+          "自然",
+          "流畅",
+          "圆活",
+          "舒展",
+          "奔放"
+        ]
+      },
+      {
+        "raw": "流畅”、“自然”、“舒展”、“舒缓”、“圆润” 。\n",
+        "synonyms": [
+          "流畅",
+          "自然",
+          "舒展",
+          "舒缓",
+          "圆润"
+        ]
+      },
+      {
+        "raw": "流畅”、“自然”、“舒展”、“洒脱”、“奔放” 。\n",
+        "synonyms": [
+          "流畅",
+          "自然",
+          "舒展",
+          "洒脱",
+          "奔放"
+        ]
+      },
+      {
+        "raw": "流畅”、“自然”、“舒展”、“动态”、“协调”。\n",
+        "synonyms": [
+          "流畅",
+          "自然",
+          "舒展",
+          "动态",
+          "协调"
+        ]
+      },
+      {
+        "raw": "流连”、“自然”、“随性”、“舒畅”、“本真” 。\n",
+        "synonyms": [
+          "流连",
+          "自然",
+          "随性",
+          "舒畅",
+          "本真"
+        ]
+      }
+    ]
+  }
+}
