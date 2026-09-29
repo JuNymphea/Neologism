@@ -32,7 +32,19 @@ def t3_frames(path, cats):
     if _cache is None:
         _cache = json.load(open(T / "Task_3/out/zh_frames_llm.json"))
     idx = [("noun", "verb", "adj").index(c) for c in cats]
-    return {k: (None if v is None else [float(v[i]) for i in idx]) for k, v in ZF.compat(path, _cache).items()}
+    out = {k: (None if v is None else [float(v[i]) for i in idx]) for k, v in ZF.compat(path, _cache).items()}
+    # ties left after the extra samples, settled by the synonyms' primary use
+    # (Task_3/tiebreak_primary_zh.py): the decided category gets a hair more
+    tb = T / "Task_3/out/zh_tiebreak_primary.json"
+    dec = json.load(open(tb)).get(Path(path).stem, {}) if tb.exists() else {}
+    way = "3" if len(cats) == 3 else "2"
+    for k, v in out.items():
+        c = (dec.get(k) or {}).get(way)
+        if v is not None and c in cats:
+            m = max(v)
+            if sum(x >= m - 1e-9 for x in v) > 1:
+                v[cats.index(c)] = m + 1e-6
+    return out
 
 
 def frac(v, cats):

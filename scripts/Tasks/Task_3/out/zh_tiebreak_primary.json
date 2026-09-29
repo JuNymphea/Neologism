@@ -1,0 +1,61 @@
+{
+ "legacyzh_t3zh_synonyms_gemma": {
+  "zh_n_6_unbiased": {
+   "3": "noun",
+   "2": null,
+   "forced2": false,
+   "votes": {
+    "3": {
+     "N": 15
+    }
+   }
+  }
+ },
+ "legacyzh_t3zh_synonyms_qwen": {
+  "zh_n_9_noun": {
+   "3": null,
+   "2": "noun",
+   "forced2": true,
+   "votes": {
+    "2": {
+     "N": 150
+    }
+   }
+  }
+ },
+ "t3zh_synonyms_gemma": {
+  "zh_v_8_adj": {
+   "3": null,
+   "2": "noun",
+   "forced2": true,
+   "votes": {
+    "2": {
+     "N": 150
+    }
+   }
+  }
+ },
+ "t3zh_synonyms_qwen": {
+  "zh_a_3_unbiased": {
+   "3": "verb",
+   "2": null,
+   "forced2": false,
+   "votes": {
+    "3": {
+     "V": 119,
+     "N": 31
+    }
+   }
+  },
+  "zh_v_6_adj": {
+   "3": null,
+   "2": "noun",
+   "forced2": true,
+   "votes": {
+    "2": {
+     "N": 150
+    }
+   }
+  }
+ }
+}
